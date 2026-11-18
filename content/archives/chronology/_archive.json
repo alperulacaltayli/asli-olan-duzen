@@ -1,0 +1,7 @@
+{
+  "title": "Kronoloji",
+  "description": "1938'den sonraki alternatif tarih çizgisinde yaşanan olaylar. Her olayın alt dalları, sonuçları ve bağlantılı gelişmeleri kendi altında açılır.",
+  "view": "tree",
+  "label": "OLAY AĞACI",
+  "order": 1
+}
