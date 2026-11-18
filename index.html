@@ -134,20 +134,46 @@
       <div class="container archive-content">
         <div class="archive-topline">
           <span class="layer-number">KATMAN 03 / ARŞİV</span>
-          <span class="archive-status"><i></i> ERİŞİLEBİLİR KAYITLAR</span>
+          <span class="archive-status"><i></i> DOSYA SİSTEMİYLE BESLENEN ARŞİV</span>
         </div>
         <div class="archive-heading">
-          <p class="archive-kicker">SOĞUK KAYITLAR · TAŞ DUVARLAR · SESSİZ BELGELER</p>
+          <p class="archive-kicker">SOĞUK KAYITLAR · TAŞ DUVARLAR · DALLANAN HAFIZA</p>
           <h2>ARŞİV<br><em>ODASI</em></h2>
-          <p>Bu bölüm, evrenin kayıtlarının tutulduğu yer. Tarihler, kişiler, kurumlar, haritalar ve belgeler burada sınıflandırılacak.</p>
+          <p>Her arşiv kendi düzenine sahip. Kronoloji olayların birbirine bağlandığı bir ağaç; teknoloji ise kendi kayıt kataloğu olarak açılır.</p>
         </div>
-        <div class="archive-shelves">
-          <a href="#arsiv"><span class="shelf-no">A — 01</span><span class="shelf-title">Tarih ve kronoloji</span><span class="shelf-state">HAZIRLANIYOR</span><b>↗</b></a>
-          <a href="#arsiv"><span class="shelf-no">A — 02</span><span class="shelf-title">Devlet kayıtları</span><span class="shelf-state">HAZIRLANIYOR</span><b>↗</b></a>
-          <a href="#arsiv"><span class="shelf-no">A — 03</span><span class="shelf-title">Kişi dosyaları</span><span class="shelf-state">HAZIRLANIYOR</span><b>↗</b></a>
-          <a href="#arsiv"><span class="shelf-no">A — 04</span><span class="shelf-title">Haritalar ve teknik belgeler</span><span class="shelf-state">HAZIRLANIYOR</span><b>↗</b></a>
+
+        <div class="archive-directory-heading">
+          <span>ARŞİV BİRİMLERİ</span>
+          <small>İNCELEMEK İÇİN BİR BİRİM SEÇ</small>
         </div>
-        <div class="archive-foot"><span>ARŞİV KODU: AOD-1985</span><span>HER KAYIT KURGUSAL EVRENE AİTTİR</span></div>
+        <div class="archive-categories" id="archive-categories" aria-live="polite">
+          <p class="archive-loading">Arşiv dizini okunuyor...</p>
+        </div>
+
+        <section class="archive-explorer" id="archive-explorer" hidden aria-live="polite">
+          <div class="archive-explorer-top">
+            <div>
+              <span class="archive-explorer-label" id="archive-view-label">ARŞİV BİRİMİ</span>
+              <h3 id="archive-active-title">Kronoloji</h3>
+              <p id="archive-active-description"></p>
+            </div>
+            <button class="archive-back" id="archive-back" type="button">← BİRİMLERE DÖN</button>
+          </div>
+          <div class="archive-workspace" id="archive-workspace">
+            <aside class="archive-navigation" aria-label="Arşiv gezinme ağacı">
+              <div class="archive-navigation-heading"><span>İÇİNDEKİLER</span><small id="archive-navigation-type">OLAY AĞACI</small></div>
+              <div id="archive-navigation-content"></div>
+            </aside>
+            <article class="archive-detail" id="archive-detail">
+              <div class="archive-detail-placeholder">
+                <span class="detail-placeholder-mark">AOD</span>
+                <p>Bir kayıt seç.</p>
+                <small>Seçtiğin kayıt burada açılacak.</small>
+              </div>
+            </article>
+          </div>
+        </section>
+        <div class="archive-foot"><span>ARŞİV KODU: AOD-1985</span><span>KAYITLAR PROJE KLASÖRLERİNDEN OTOMATİK ÜRETİLİR</span></div>
       </div>
     </section>
 
