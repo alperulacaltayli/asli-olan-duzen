@@ -16,7 +16,8 @@ TEXT_SUFFIXES = {".md", ".txt"}
 
 
 def natural_key(value: str) -> list[Any]:
-    return [int(part) if part.isdigit() else part.casefold()
+    # Type-tag each token so numeric and text segments remain comparable.
+    return [(0, int(part)) if part.isdigit() else (1, part.casefold())
             for part in re.split(r"(\d+)", value)]
 
 
