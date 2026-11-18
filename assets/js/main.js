@@ -180,7 +180,7 @@
     const isChronology = activeCategory.id === "chronology";
     const isCharacters = activeCategory.id === "characters";
     const initials = String(node.title || "AOD")
-      .split(/\\s+/)
+      .split(/\s+/)
       .filter(Boolean)
       .slice(0, 2)
       .map((part) => Array.from(part)[0] || "")
