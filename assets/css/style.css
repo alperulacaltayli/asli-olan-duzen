@@ -5753,7 +5753,7 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
     user-select: none;
     transform: translate(-50%, -50%) rotate(0deg);
     transform-origin: center;
-    animation: welcomeArchiveCounterSpin 26s linear infinite;
+    animation: welcomeArchiveCounterSpin 9s linear infinite;
 }
 
 @keyframes welcomeArchiveCounterSpin {
