@@ -46,6 +46,8 @@
   let selectedNodeId = null;
   let expandedNodes = new Set();
   let archiveCloseTimer = 0;
+  let sceneSwitchTimer = 0;
+  let layerFlashTimer = 0;
 
   let aliasLookup = new Map();
   const normalizeWikiTarget = (value) => String(value ?? "").replace(/\.md$/i, "").split("/").pop().replace(/[_-]+/g, " ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/ı/g, "i").replace(/\s+/g, " ").trim();
@@ -155,6 +157,7 @@
           <span class="category-bottom"><span>${viewName}</span><b aria-hidden="true">↗</b></span>
         </button>`;
     }).join("");
+    categoryHost.querySelectorAll(".archive-category").forEach(enableTilt);
   };
 
   const getInitials = (name) => String(name || "AOD").trim().split(/\s+/).slice(0, 2).map(part => Array.from(part)[0] || "").join("").toLocaleUpperCase("tr-TR");
@@ -318,17 +321,24 @@
   };
 
   const sceneClasses = ["archive-scene-open", "archive-scene-chronology", "archive-scene-characters", "archive-scene-institutions", "archive-scene-technology"];
-  const openCategory = (categoryId) => {
+  const activateCategory = (categoryId, targetNodeId = null) => {
     activeCategory = categories.find((item) => item.id === categoryId);
     if (!activeCategory) return;
+
     window.clearTimeout(archiveCloseTimer);
     document.body.classList.remove(...sceneClasses);
     document.body.classList.add("archive-scene-open", "archive-scene-" + categoryId);
     document.documentElement.classList.add("archive-view-open");
+
     selectedNodeId = null;
     expandedNodes = new Set();
+
     if (activeCategory.nodes && activeCategory.nodes.length) {
-      if (activeCategory.id === "characters") {
+      if (targetNodeId && findNode(activeCategory.nodes, targetNodeId)) {
+        selectedNodeId = targetNodeId;
+        const targetNode = findNode(activeCategory.nodes, targetNodeId);
+        (targetNode?.ancestors || []).forEach((ancestorId) => expandedNodes.add(ancestorId));
+      } else if (activeCategory.id === "characters") {
         let firstRecord = activeCategory.nodes[0];
         while (firstRecord.children && firstRecord.children.length) {
           expandedNodes.add(firstRecord.id);
@@ -343,6 +353,7 @@
         }
       }
     }
+
     activeTitle.textContent = activeCategory.title;
     activeDescription.textContent = activeCategory.description || "";
     viewLabel.textContent = activeCategory.label || "ARŞİV BİRİMİ";
@@ -350,18 +361,53 @@
     explorer.classList.toggle("is-catalogue", activeCategory.view !== "tree");
     explorer.classList.toggle("is-chronology", activeCategory.id === "chronology");
     explorer.classList.toggle("is-characters", activeCategory.id === "characters");
+    explorer.classList.toggle("is-technology", activeCategory.id === "technology");
+    explorer.classList.toggle("is-institutions", activeCategory.id === "institutions");
     explorer.dataset.activeCategory = activeCategory.id;
     explorer.hidden = false;
     explorer.classList.add("is-immersive");
     if (explorer.parentElement !== document.body) document.body.appendChild(explorer);
-    explorer.classList.remove("scene-entering", "scene-leaving");
+    explorer.classList.remove("scene-entering", "scene-leaving", "scene-switching");
+
     if (activeCategory.view === "tree") navigationHost.innerHTML = renderTree(activeCategory.nodes);
     else renderCatalogue();
+
     renderDetail(findNode(activeCategory.nodes, selectedNodeId));
-    // Restart the full-scene reveal for direct launches and cross-category jumps.
     void explorer.offsetWidth;
     explorer.classList.add("scene-entering");
     if (backButton) backButton.focus({ preventScroll: true });
+  };
+
+  const openCategory = (categoryId, targetNodeId = null) => {
+    const nextCategory = categories.find((item) => item.id === categoryId);
+    if (!nextCategory) return;
+
+    const sceneIsOpen = !explorer.hidden && explorer.classList.contains("is-immersive");
+    if (sceneIsOpen && activeCategory?.id === categoryId) {
+      if (targetNodeId) selectNode(targetNodeId);
+      return;
+    }
+
+    if (sceneIsOpen && activeCategory) {
+      window.clearTimeout(sceneSwitchTimer);
+      document.body.classList.remove("archive-scene-switching");
+      explorer.classList.remove("scene-switching");
+      void document.body.offsetWidth;
+      document.body.classList.add("archive-scene-switching");
+      explorer.classList.add("scene-switching");
+
+      sceneSwitchTimer = window.setTimeout(() => {
+        activateCategory(categoryId, targetNodeId);
+        explorer.classList.add("scene-switching");
+        window.setTimeout(() => {
+          document.body.classList.remove("archive-scene-switching");
+          explorer.classList.remove("scene-switching");
+        }, 720);
+      }, 300);
+      return;
+    }
+
+    activateCategory(categoryId, targetNodeId);
   };
 
   categoryHost.addEventListener("click", (event) => {
@@ -374,15 +420,13 @@
     if (wikiButton) {
       const target = aliasLookup.get(normalizeWikiTarget(wikiButton.dataset.wikilink));
       if (target) {
-        openCategory(target.categoryId, false);
-        selectNode(target.id);
+        openCategory(target.categoryId, target.id);
       }
       return;
     }
     const recordButton = event.target.closest("[data-open-record-category]");
     if (recordButton) {
-      openCategory(recordButton.dataset.openRecordCategory, false);
-      selectNode(recordButton.dataset.openRecordId);
+      openCategory(recordButton.dataset.openRecordCategory, recordButton.dataset.openRecordId);
       return;
     }
     const toggleButton = event.target.closest("[data-toggle-node]");
@@ -404,6 +448,9 @@
 
   const closeArchiveScene = () => {
     if (explorer.hidden || !explorer.classList.contains("is-immersive")) return;
+    window.clearTimeout(sceneSwitchTimer);
+    document.body.classList.remove("archive-scene-switching");
+    explorer.classList.remove("scene-switching");
     explorer.classList.remove("scene-entering");
     explorer.classList.add("scene-leaving");
     const finish = () => {
@@ -431,6 +478,16 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !explorer.hidden && explorer.classList.contains("is-immersive")) {
       closeArchiveScene();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    const pageLink = event.target.closest('a[href$="galeri.html"]');
+    if (pageLink && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && pageLink.target !== "_blank") {
+      event.preventDefault();
+      document.body.classList.add("page-navigation-out");
+      window.setTimeout(() => { window.location.href = pageLink.href; }, 390);
+      return;
     }
   });
 
@@ -467,11 +524,46 @@
     }, { threshold: 0.13, rootMargin: "0px 0px -7% 0px" });
     revealTargets.forEach((element) => revealObserver.observe(element));
 
+    const layerPalette = {
+      top: "#b85e40",
+      roman: "#234b63",
+      evren: "#315f4c",
+      arsiv: "#718997",
+      yazar: "#743e59"
+    };
+    let lastActiveLayer = "";
+    const setActiveLayer = (layerId) => {
+      const id = layerId || "top";
+      if (lastActiveLayer === id) return;
+      lastActiveLayer = id;
+      document.body.dataset.activeLayer = id;
+      document.documentElement.style.setProperty("--scene-tint", layerPalette[id] || "#b85e40");
+
+      if (nav) {
+        nav.querySelectorAll('a[href^="#"]').forEach((link) => {
+          const active = link.getAttribute("href") === "#" + id;
+          link.classList.toggle("is-layer-active", active);
+          if (active) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      }
+
+      if (document.body.classList.contains("archive-scene-open")) return;
+      window.clearTimeout(layerFlashTimer);
+      document.body.classList.remove("layer-transition");
+      void document.body.offsetWidth;
+      document.body.classList.add("layer-transition");
+      layerFlashTimer = window.setTimeout(() => {
+        document.body.classList.remove("layer-transition");
+      }, 980);
+    };
+
     const layerObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) document.body.dataset.activeLayer = entry.target.id || "welcome";
-      });
-    }, { threshold: 0.45 });
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setActiveLayer(visible.target.id || "top");
+    }, { threshold: [0.2, 0.4, 0.6], rootMargin: "-8% 0px -8% 0px" });
     document.querySelectorAll("main > section").forEach((section) => layerObserver.observe(section));
   } else {
     revealTargets.forEach((element) => element.classList.add("is-visible"));
@@ -490,12 +582,57 @@
   }, { passive: true });
   updateProgress();
 
-  // Very restrained parallax on the supplied cover and editorial materials.
+  // Multi-plane parallax for the cover, newspaper, emblem and section artwork.
   const parallaxTargets = [
-    [document.querySelector(".welcome-cover"), 0.075],
-    [document.querySelector(".world-news-material img"), -0.045],
-    [document.querySelector(".world-flag-material img"), 0.035]
+    [document.querySelector(".welcome-cover"), 0.14],
+    [document.querySelector(".world-news-material img"), -0.09],
+    [document.querySelector(".world-flag-material img"), 0.075],
+    [document.querySelector(".roman-artwork"), -0.045],
+    [document.querySelector(".author-mark"), 0.035]
   ].filter(([element]) => element);
+
+  // Pointer parallax makes the cover and geometric frame respond to the visitor.
+  const welcomeStage = document.querySelector(".welcome-layer");
+  const hasFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (welcomeStage && hasFinePointer && !reducedMotion) {
+    let pointerFrame = 0;
+    welcomeStage.addEventListener("pointermove", (event) => {
+      if (pointerFrame) return;
+      pointerFrame = window.requestAnimationFrame(() => {
+        const rect = welcomeStage.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        welcomeStage.style.setProperty("--hero-shift-x", (x * 22).toFixed(1) + "px");
+        welcomeStage.style.setProperty("--hero-shift-y", (y * 17).toFixed(1) + "px");
+        pointerFrame = 0;
+      });
+    });
+    welcomeStage.addEventListener("pointerleave", () => {
+      welcomeStage.style.setProperty("--hero-shift-x", "0px");
+      welcomeStage.style.setProperty("--hero-shift-y", "0px");
+    });
+  }
+
+  // Magnetic 3D tilt is restricted to fine-pointer devices.
+  const enableTilt = (element) => {
+    if (!element || !hasFinePointer || reducedMotion || element.dataset.tiltReady === "true") return;
+    element.dataset.tiltReady = "true";
+    element.classList.add("tilt-enabled");
+    element.addEventListener("pointermove", (event) => {
+      const rect = element.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      element.style.setProperty("--tilt-x", (-y * 7).toFixed(2) + "deg");
+      element.style.setProperty("--tilt-y", (x * 9).toFixed(2) + "deg");
+    });
+    element.addEventListener("pointerleave", () => {
+      element.style.setProperty("--tilt-x", "0deg");
+      element.style.setProperty("--tilt-y", "0deg");
+    });
+  };
+
+  document.querySelectorAll(".world-card, .world-news-material").forEach(enableTilt);
   let parallaxFrame = 0;
   const updateParallax = () => {
     const scrollY = window.scrollY || 0;

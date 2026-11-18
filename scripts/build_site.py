@@ -23,6 +23,7 @@ GALLERY_EXCLUDED_TERMS = ("infaz",)
 SITE_MATERIAL_FILES = [
     "KitapKapakFotosu.png",
     "OğuzKağanAtalayPosterÇizim.png",
+    "Poster1.jpeg",
     "AmerikaHitlerAnkaraZiyaretHaberi.png",
     "DikeyTrİmpBayrak540x1920.png",
     "TürkİmpBayrak11ölçek.jpeg",

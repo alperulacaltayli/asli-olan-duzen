@@ -20,6 +20,14 @@
 
   if (year) year.textContent = String(new Date().getFullYear());
 
+  document.addEventListener("click", (event) => {
+    const pageLink = event.target.closest('a[href^="index.html"]');
+    if (!pageLink || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || pageLink.target === "_blank") return;
+    event.preventDefault();
+    document.body.classList.add("page-navigation-out");
+    window.setTimeout(() => { window.location.href = pageLink.href; }, 390);
+  });
+
   if (menuToggle && nav) {
     const closeMenu = () => {
       menuToggle.setAttribute("aria-expanded", "false");
