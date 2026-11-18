@@ -96,3 +96,28 @@ Windows kurulum ve eşitleme adımları için [GITHUB_DESKTOP.md](GITHUB_DESKTOP
 - Yayımlanmamış roman bölümleri, özel notlar ve gizli kanon belgeleri depoya eklenmez.
 - Sitede anlatılan alternatif tarih ve evren unsurları kurmacadır.
 - Romanın okuma bağlantısı Inkitt üzerindeki eser sayfasına gider.
+
+
+## Obsidian Vault içe aktarma
+
+Depodaki `AslıOlanDüzenObsidianVault/` klasörü, site derlemesi sırasında belirlenmiş bir izin listesiyle taranır. Her Markdown dosyası otomatik olarak yayımlanmaz.
+
+Şu anda siteye aktarılan bölümler:
+
+- `Tarihi Olaylar/Olaylar/` — yıl bazlı dallanan kronoloji
+- `Alternatif Tarih/Dünya/` — ülkeler, dünya paylaşımı ve ülke perspektifleri
+- `Alternatif Tarih/Tarih/` — dönem kayıtları
+- `Alternatif Tarih/Karakterler/` — karakter profilleri
+- `Kuruluşlar/Hilalifiyet Merkezi - İstanbul.md` — kurum kaydı
+- `Büyük Türk İmparatorluğu` ve `Kanat` — yerleşik kanon sistem kayıtları
+- `TA-85 Gökkanat` — yayımlanabilir genel teknoloji tanıtımı
+
+Obsidian `[[çift köşeli bağlantıları]]` hedef kayıtlar sitede mevcutsa tıklanabilir bağlantıya dönüştürülür. Kronoloji dosyaları yıl ve tarih bilgisine göre gruplandırılır. Kesin tarihi bulunmayan olaylar ayrı tutulur.
+
+### Yayımlanmayan kaynaklar
+
+Taslak, yazar onayı bekleyen, gizli veya büyük hikâye sırrı içeren dosyalar siteye aktarılmaz. Obsidian ayarları, eklenti dosyaları, AI yazım promptları, özel yazım notları ve taslak elçilik/Gök Kutup/Sapma kayıtları yayın derlemesinin dışında tutulur.
+
+Yeni kayıt eklemek için uygun kaynak klasörüne bir Markdown dosyası ekle ve GitHub Desktop üzerinden commit/push yap. Otomatik derleme, izin verilen klasörleri yeniden tarar.
+
+> **Gizlilik uyarısı:** GitHub deposu Public olduğu için `AslıOlanDüzenObsidianVault/` klasörünün içindeki kaynak dosyalar da GitHub'da herkese açıktır. Siteye aktarılmayan bir dosya, depo içinden gizlenmiş olmaz. Özel notları, yayımlanmamış bölümleri ve `.obsidian` ayarlarını ayrı bir private depoda tut.
