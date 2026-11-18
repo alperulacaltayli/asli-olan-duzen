@@ -47,7 +47,9 @@
   let expandedNodes = new Set();
   let archiveCloseTimer = 0;
   let sceneSwitchTimer = 0;
+  let sceneSwitchSettleTimer = 0;
   let layerFlashTimer = 0;
+  let refreshPageLayer = null;
 
   let aliasLookup = new Map();
   const normalizeWikiTarget = (value) => String(value ?? "").replace(/\.md$/i, "").split("/").pop().replace(/[_-]+/g, " ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/ı/g, "i").replace(/\s+/g, " ").trim();
@@ -363,7 +365,9 @@
     if (!activeCategory) return;
 
     window.clearTimeout(archiveCloseTimer);
-    document.body.classList.remove(...sceneClasses);
+    window.clearTimeout(sceneSwitchSettleTimer);
+    window.clearTimeout(layerFlashTimer);
+    document.body.classList.remove("layer-transition", "archive-scene-closing", ...sceneClasses);
     document.body.classList.add("archive-scene-open", "archive-scene-" + categoryId);
     document.documentElement.classList.add("archive-view-open");
 
@@ -394,6 +398,20 @@
     activeTitle.textContent = activeCategory.title;
     activeDescription.textContent = activeCategory.description || "";
     viewLabel.textContent = activeCategory.label || "ARŞİV BİRİMİ";
+
+    const titleContainer = activeTitle.parentElement;
+    const existingHistoryStamp = titleContainer.querySelector(".archive-history-stamp");
+    if (activeCategory.id === "chronology") {
+      if (!existingHistoryStamp) {
+        const historyStamp = document.createElement("span");
+        historyStamp.className = "archive-history-stamp";
+        historyStamp.setAttribute("aria-label", "Alternatif tarih evreninde Alman Reich arşiv kaydı");
+        historyStamp.innerHTML = '<b aria-hidden="true">卐</b><small>ALMAN REICH / KURMACA TARİH BELGESİ</small>';
+        titleContainer.appendChild(historyStamp);
+      }
+    } else if (existingHistoryStamp) {
+      existingHistoryStamp.remove();
+    }
     navigationType.textContent = activeCategory.view === "tree" ? "DALLANAN OLAY AĞACI" : "KAYIT KATALOĞU";
     explorer.classList.toggle("is-catalogue", activeCategory.view !== "tree");
     explorer.classList.toggle("is-chronology", activeCategory.id === "chronology");
@@ -427,6 +445,7 @@
 
     if (sceneIsOpen && activeCategory) {
       window.clearTimeout(sceneSwitchTimer);
+      window.clearTimeout(sceneSwitchSettleTimer);
       document.body.classList.remove("archive-scene-switching");
       explorer.classList.remove("scene-switching");
       void document.body.offsetWidth;
@@ -436,7 +455,8 @@
       sceneSwitchTimer = window.setTimeout(() => {
         activateCategory(categoryId, targetNodeId);
         explorer.classList.add("scene-switching");
-        window.setTimeout(() => {
+        window.clearTimeout(sceneSwitchSettleTimer);
+        sceneSwitchSettleTimer = window.setTimeout(() => {
           document.body.classList.remove("archive-scene-switching");
           explorer.classList.remove("scene-switching");
         }, 720);
@@ -486,21 +506,27 @@
   const closeArchiveScene = () => {
     if (explorer.hidden || !explorer.classList.contains("is-immersive")) return;
     window.clearTimeout(sceneSwitchTimer);
-    document.body.classList.remove("archive-scene-switching");
-    explorer.classList.remove("scene-switching");
-    explorer.classList.remove("scene-entering");
+    window.clearTimeout(sceneSwitchSettleTimer);
+    window.clearTimeout(layerFlashTimer);
+    document.body.classList.remove("layer-transition", "archive-scene-switching");
+    document.body.classList.add("archive-scene-closing");
+    explorer.classList.remove("scene-switching", "scene-entering");
     explorer.classList.add("scene-leaving");
+    let finished = false;
     const finish = () => {
+      if (finished) return;
+      finished = true;
       window.clearTimeout(archiveCloseTimer);
       explorer.hidden = true;
       explorer.classList.remove("is-immersive", "scene-entering", "scene-leaving");
-      document.body.classList.remove(...sceneClasses);
+      document.body.classList.remove(...sceneClasses, "archive-scene-closing");
       document.documentElement.classList.remove("archive-view-open");
       if (archivePlaceholder?.parentNode && explorer.parentElement === document.body) {
         archivePlaceholder.parentNode.insertBefore(explorer, archivePlaceholder.nextSibling);
       }
       activeCategory = null;
       if (backButton) backButton.blur();
+      if (refreshPageLayer) refreshPageLayer(false);
     };
     explorer.addEventListener("animationend", function onExit(event) {
       if (event.target !== explorer || event.animationName !== "archiveSceneExit") return;
@@ -560,51 +586,115 @@
       });
     }, { threshold: 0.13, rootMargin: "0px 0px -7% 0px" });
     revealTargets.forEach((element) => revealObserver.observe(element));
-
-    const layerPalette = {
-      top: "#b85e40",
-      roman: "#234b63",
-      evren: "#315f4c",
-      arsiv: "#718997",
-      yazar: "#743e59"
-    };
-    let lastActiveLayer = "";
-    const setActiveLayer = (layerId) => {
-      const id = layerId || "top";
-      if (lastActiveLayer === id) return;
-      lastActiveLayer = id;
-      document.body.dataset.activeLayer = id;
-      document.documentElement.style.setProperty("--scene-tint", layerPalette[id] || "#b85e40");
-
-      if (nav) {
-        nav.querySelectorAll('a[href^="#"]').forEach((link) => {
-          const active = link.getAttribute("href") === "#" + id;
-          link.classList.toggle("is-layer-active", active);
-          if (active) link.setAttribute("aria-current", "location");
-          else link.removeAttribute("aria-current");
-        });
-      }
-
-      if (document.body.classList.contains("archive-scene-open")) return;
-      window.clearTimeout(layerFlashTimer);
-      document.body.classList.remove("layer-transition");
-      void document.body.offsetWidth;
-      document.body.classList.add("layer-transition");
-      layerFlashTimer = window.setTimeout(() => {
-        document.body.classList.remove("layer-transition");
-      }, 980);
-    };
-
-    const layerObserver = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible) setActiveLayer(visible.target.id || "top");
-    }, { threshold: [0.2, 0.4, 0.6], rootMargin: "-8% 0px -8% 0px" });
-    document.querySelectorAll("main > section").forEach((section) => layerObserver.observe(section));
   } else {
     revealTargets.forEach((element) => element.classList.add("is-visible"));
   }
+
+  const layerPalette = {
+    top: "#b85e40",
+    roman: "#234b63",
+    evren: "#315f4c",
+    arsiv: "#718997",
+    yazar: "#743e59"
+  };
+  const pageSections = Array.from(document.querySelectorAll("main > section"));
+  let lastActiveLayer = "";
+  let pendingLayer = "";
+  let pendingLayerTimer = 0;
+  let layerFrame = 0;
+
+  const resolveActiveLayer = () => {
+    if (!pageSections.length) return "top";
+    const focusY = Math.min(window.innerHeight * 0.42, window.innerHeight - 72);
+
+    // Keep the current layer while the focus line is close to its boundary.
+    const current = pageSections.find((section) => section.id === lastActiveLayer);
+    if (current) {
+      const rect = current.getBoundingClientRect();
+      if (rect.top < focusY + 28 && rect.bottom > focusY - 28) return current.id || "top";
+    }
+
+    const sectionAtFocus = pageSections.find((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.top <= focusY && rect.bottom > focusY;
+    });
+    if (sectionAtFocus) return sectionAtFocus.id || "top";
+
+    let nearest = pageSections[0];
+    let nearestDistance = Number.POSITIVE_INFINITY;
+    for (const section of pageSections) {
+      const rect = section.getBoundingClientRect();
+      const distance = focusY < rect.top ? rect.top - focusY : focusY > rect.bottom ? focusY - rect.bottom : 0;
+      if (distance < nearestDistance) {
+        nearest = section;
+        nearestDistance = distance;
+      }
+    }
+    return nearest.id || "top";
+  };
+
+  const commitActiveLayer = (layerId, animate = true) => {
+    const id = layerId || "top";
+    if (lastActiveLayer === id) return;
+    lastActiveLayer = id;
+    document.body.dataset.activeLayer = id;
+    document.documentElement.style.setProperty("--scene-tint", layerPalette[id] || "#b85e40");
+
+    if (nav) {
+      nav.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const active = link.getAttribute("href") === "#" + id;
+        link.classList.toggle("is-layer-active", active);
+        if (active) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    }
+
+    if (!animate || document.body.classList.contains("archive-scene-open")) return;
+    window.clearTimeout(layerFlashTimer);
+    document.body.classList.remove("layer-transition");
+    window.requestAnimationFrame(() => {
+      document.body.classList.add("layer-transition");
+      layerFlashTimer = window.setTimeout(() => {
+        document.body.classList.remove("layer-transition");
+      }, 760);
+    });
+  };
+
+  const scheduleLayerUpdate = () => {
+    if (document.body.classList.contains("archive-scene-open")) return;
+    const candidate = resolveActiveLayer();
+    if (!candidate || candidate === lastActiveLayer) {
+      window.clearTimeout(pendingLayerTimer);
+      pendingLayer = "";
+      return;
+    }
+    if (candidate === pendingLayer) return;
+    window.clearTimeout(pendingLayerTimer);
+    pendingLayer = candidate;
+    pendingLayerTimer = window.setTimeout(() => {
+      const settled = resolveActiveLayer();
+      if (settled === pendingLayer) commitActiveLayer(settled, true);
+      pendingLayer = "";
+      pendingLayerTimer = 0;
+    }, 105);
+  };
+
+  const queueLayerUpdate = () => {
+    if (layerFrame) return;
+    layerFrame = window.requestAnimationFrame(() => {
+      layerFrame = 0;
+      scheduleLayerUpdate();
+    });
+  };
+
+  refreshPageLayer = (animate = false) => {
+    window.clearTimeout(pendingLayerTimer);
+    pendingLayer = "";
+    commitActiveLayer(resolveActiveLayer(), animate);
+  };
+  window.addEventListener("scroll", queueLayerUpdate, { passive: true });
+  window.addEventListener("resize", queueLayerUpdate, { passive: true });
+  refreshPageLayer(false);
 
   let progressFrame = 0;
   const updateProgress = () => {
