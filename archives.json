@@ -1,0 +1,61 @@
+{
+  "categories": [
+    {
+      "id": "chronology",
+      "title": "Kronoloji",
+      "description": "1938'den sonraki alternatif tarih çizgisinde yaşanan olaylar. Her olayın alt dalları, sonuçları ve bağlantılı gelişmeleri kendi altında açılır.",
+      "view": "tree",
+      "label": "OLAY AĞACI",
+      "order": 1,
+      "nodes": [
+        {
+          "id": "1938/index",
+          "path": "1938/index.md",
+          "title": "1938 — Tarihsel ayrışma",
+          "date": "1938",
+          "summary": "Aslı Olan Düzen'in alternatif tarih çizgisinin başlangıç yılı.",
+          "content": "1938, romanın alternatif tarih çizgisindeki başlangıç dönemidir. Bu kayıt ana zaman düğümüdür. Bu dönemdeki olayları aynı klasöre yeni Markdown veya TXT dosyaları ekleyerek dallandırabilirsin.\n\nAlt olaylar, bu kaydın altında oklarla birbirine bağlanan düğümler olarak görüntülenir.",
+          "children": [
+            {
+              "id": "1938/ataturkun-vefati",
+              "path": "1938/ataturkun-vefati.md",
+              "title": "Atatürk'ün vefatı",
+              "date": "1938",
+              "summary": "Romanın 1938 başlangıç dönemindeki tarihsel olaylardan biri.",
+              "content": "Bu kayıt, evren kronolojisinde 1938 yılında yer alan olayı tanımlar. Olayın romana özgü sonuçlarını, bağlantılı gelişmelerini ve sonraki etkilerini bu dosyada genişletebilirsin.",
+              "children": []
+            },
+            {
+              "id": "1938/29-kasim-1938",
+              "path": "1938/29-kasim-1938.md",
+              "title": "Alperen Keser dönemi",
+              "date": "29 Kasım 1938",
+              "summary": "Alperen Keser'in yönetim döneminin başlangıcı.",
+              "content": "Alperen Keser'in yönetim dönemi 29 Kasım 1938 tarihinde başlar. Bu olayın devamındaki siyasi gelişmeleri, kararları ve tarihsel sonuçları alt kayıtlar olarak ekleyebilirsin.",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "title": "Teknoloji",
+      "description": "Evrenin araçları, projeleri ve teknik gelişmeleri. Her kayıt kendi belge ve alt başlık yapısına sahip olabilir.",
+      "view": "catalogue",
+      "label": "TEKNOLOJİ KATALOĞU",
+      "order": 2,
+      "nodes": [
+        {
+          "id": "ta-85-gokkanat/index",
+          "path": "ta-85-gokkanat/index.md",
+          "title": "TA-85 Gökkanat",
+          "date": "1943 — prototip dönemi",
+          "summary": "Türk uçan kanat bombardıman uçağı projesi.",
+          "content": "**TA-85 Gökkanat**, Aslı Olan Düzen evreninde yer alan Türk uçan kanat uçak projesidir. Prototip dönemi 1943'e uzanır.\n\nBu klasöre tasarım geçmişi, proje aşamaları, varyantlar ve romanda yayımlanmasına izin verilen diğer teknik bilgiler için alt kayıtlar eklenebilir.",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
