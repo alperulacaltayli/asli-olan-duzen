@@ -2227,3 +2227,35 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
   body.archive-scene-closing::before { animation:none !important; }
   .world-grid > .world-card { transition:none !important; }
 }
+
+
+/* Subtle archival mark centered in the rotating welcome-frame geometry. */
+.welcome-archive-mark {
+  position:absolute;
+  z-index:2;
+  top:50%;
+  left:50%;
+  display:grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  color:rgba(255,230,202,.035);
+  font:34px/1 Georgia,serif;
+  text-align:center;
+  text-shadow:0 0 12px rgba(255,230,202,.018);
+  pointer-events:none;
+  user-select:none;
+  transform:translate(-50%,-50%) rotate(0deg);
+  transform-origin:center;
+  animation:welcomeArchiveCounterSpin 52s linear infinite;
+}
+@keyframes welcomeArchiveCounterSpin {
+  from { transform:translate(-50%,-50%) rotate(0deg); }
+  to { transform:translate(-50%,-50%) rotate(-360deg); }
+}
+@media(max-width:760px) {
+  .welcome-archive-mark { width:30px; height:30px; font-size:26px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .welcome-archive-mark { animation:none !important; }
+}
