@@ -42,6 +42,23 @@
   let selectedNodeId = null;
   let expandedNodes = new Set();
 
+  let aliasLookup = new Map();
+  const normalizeWikiTarget = (value) => String(value ?? "").replace(/\.md$/i, "").split("/").pop().replace(/[_-]+/g, " ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/ı/g, "i").replace(/\s+/g, " ").trim();
+  const buildAliasLookup = () => {
+    aliasLookup = new Map();
+    for (const category of categories) {
+      for (const node of allNodes(category.nodes)) {
+        const keys = [node.title, node.sourceName, ...(node.aliases || [])];
+        for (const key of keys) {
+          const normalized = normalizeWikiTarget(key);
+          if (normalized && !aliasLookup.has(normalized)) {
+            aliasLookup.set(normalized, { categoryId: category.id, id: node.id });
+          }
+        }
+      }
+    }
+  };
+
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   })[char]);
@@ -49,6 +66,9 @@
   const inlineMarkdown = (value) => {
     let text = escapeHtml(value);
     text = text.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1 ↗</a>');
+    text = text.replace(/\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|([^\]]+))?\]\]/g, function (_match, target, label) {
+      return '<button type="button" class="wiki-link" data-wikilink="' + target + '">' + (label || target) + '</button>';
+    });
     text = text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
     text = text.replace(/\*(.+?)\*/g, "<em>$1</em>");
     text = text.replace(/`([^`]+)`/g, "<code>$1</code>");
@@ -162,6 +182,11 @@
         node.children.map((child) => `<button type="button" data-select-node="${escapeHtml(child.id)}"><span>${escapeHtml(child.date || "ALT KAYIT")}</span><b>${escapeHtml(child.title)}</b><i>↗</i></button>`).join("") +
         '</div></section>'
       : "";
+    const relatedLinks = node.links && node.links.length
+      ? '<section class="detail-crosslinks"><p>İLGİLİ KAYITLAR / ' + String(node.links.length).padStart(2, "0") + '</p><div>' +
+        node.links.map((link) => '<button type="button" data-open-record-category="' + escapeHtml(link.categoryId) + '" data-open-record-id="' + escapeHtml(link.id) + '"><span>' + escapeHtml(link.date || "İLGİLİ KAYIT") + '</span><b>' + escapeHtml(link.title) + '</b><i>↗</i></button>').join("") +
+        '</div></section>'
+      : "";
     detailHost.innerHTML = `
       <div class="detail-record">
         <div class="detail-record-top"><span>${escapeHtml(activeCategory.title)}</span><span>${escapeHtml(node.path || node.id)}</span></div>
@@ -170,6 +195,7 @@
         ${node.summary ? `<p class="detail-summary">${escapeHtml(node.summary)}</p>` : ""}
         <div class="detail-body">${renderMarkdown(node.content || "")}</div>
         ${childLinks}
+        ${relatedLinks}
       </div>`;
   };
 
@@ -177,8 +203,7 @@
     selectedNodeId = nodeId;
     const node = findNode(activeCategory.nodes, nodeId);
     if (activeCategory.view === "tree") {
-      let parent = node && node.parent;
-      while (parent) { expandedNodes.add(parent); parent = null; }
+      (node?.ancestors || []).forEach((ancestorId) => expandedNodes.add(ancestorId));
       navigationHost.innerHTML = renderTree(activeCategory.nodes);
     } else {
       renderCatalogue();
@@ -194,7 +219,7 @@
       </button>`).join("") + (nodes.length ? "" : '<p class="archive-empty">Bu katalog henüz boş.</p>') + '</div>';
   };
 
-  const openCategory = (categoryId) => {
+  const openCategory = (categoryId, shouldScroll = true) => {
     activeCategory = categories.find((item) => item.id === categoryId);
     if (!activeCategory) return;
     selectedNodeId = null;
@@ -214,7 +239,7 @@
     if (activeCategory.view === "tree") navigationHost.innerHTML = renderTree(activeCategory.nodes);
     else renderCatalogue();
     renderDetail(findNode(activeCategory.nodes, selectedNodeId));
-    explorer.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (shouldScroll) explorer.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   categoryHost.addEventListener("click", (event) => {
@@ -223,6 +248,21 @@
   });
 
   explorer.addEventListener("click", (event) => {
+    const wikiButton = event.target.closest("[data-wikilink]");
+    if (wikiButton) {
+      const target = aliasLookup.get(normalizeWikiTarget(wikiButton.dataset.wikilink));
+      if (target) {
+        openCategory(target.categoryId, false);
+        selectNode(target.id);
+      }
+      return;
+    }
+    const recordButton = event.target.closest("[data-open-record-category]");
+    if (recordButton) {
+      openCategory(recordButton.dataset.openRecordCategory, false);
+      selectNode(recordButton.dataset.openRecordId);
+      return;
+    }
     const toggleButton = event.target.closest("[data-toggle-node]");
     if (toggleButton) {
       const id = toggleButton.dataset.toggleNode;
@@ -255,6 +295,7 @@
     })
     .then((data) => {
       categories = (data.categories || []).sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+      buildAliasLookup();
       renderCategories();
     })
     .catch((error) => {
