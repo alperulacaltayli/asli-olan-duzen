@@ -292,7 +292,6 @@ def import_characters():
             "key":"abdullah-keser", "path":political_base+"Abdullah.md", "name":"Abdullah Keser",
             "date":"Yaklaşık 1770–1830'lar", "birth":"Yaklaşık 1770 · Giresun, Kuşköy",
             "role":"Keser soyunun eski kuşağı · demirci",
-            "appearance":"Döneminin sade zanaatkâr yaşamına uygun bir görünüm.",
             "personality":"Sert mizaçlı, az konuşan, çalışkan ve ailesine bağlı.",
             "aliases":["Abdullah","Abdullah Keser"]
         },
@@ -300,7 +299,6 @@ def import_characters():
             "key":"oguz-keser", "path":political_base+"Oğuz.md", "name":"Oğuz Keser",
             "date":"1802–1898", "birth":"1802 · Giresun, Kuşköy",
             "role":"Keser soyunun ikinci kuşağı · demirci",
-            "appearance":"Zanaatkâr kimliğiyle sade ve dönemine uygun giyinir.",
             "personality":"Geleneklerine bağlı, dürüst, sevecen ve güçlü iradeli.",
             "aliases":["Oğuz","Oğuz Keser"]
         },
@@ -308,7 +306,6 @@ def import_characters():
             "key":"gul-keser", "path":political_base+"Gül.md", "name":"Gül Keser",
             "date":"Yaklaşık 1810 doğumlu", "birth":"Yaklaşık 1810 · Giresun çevresi",
             "role":"Keser ailesinin ikinci kuşağı",
-            "appearance":"Kaynak notlarda ayrıntılı fiziksel tanım bulunmuyor.",
             "personality":"Sabırlı, sezgileri güçlü, birleştirici ve aile odaklı.",
             "aliases":["Gül","Gül Keser"]
         },
@@ -316,21 +313,18 @@ def import_characters():
             "key":"kaan-keser", "path":political_base+"Kaan.md", "name":"Kaan Keser",
             "date":"1846–1904", "birth":"1846 · Giresun, Kuşköy",
             "role":"Keser soyunun üçüncü kuşağı · demirci",
-            "appearance":"Zanaatkâr kimliğiyle sade ve dönemine uygun giyinir.",
             "personality":"Sakin, azimli, tutkulu ve sorumluluk sahibi.",
             "aliases":["Kaan","Kaan Keser"]
         },
         {
             "key":"ali-keser", "path":political_base+"Ali.md", "name":"Ali Keser",
             "date":"Keser soyunun üçüncü kuşağı", "role":"Tarım işleriyle uğraşır; dönem dönem demircilik yapar.",
-            "appearance":"Kaynak notlarda ayrıntılı fiziksel tanım bulunmuyor.",
             "personality":"Hareketli, meraklı, bağımsız ve zaman zaman çabuk öfkelenen.",
             "aliases":["Ali","Ali Keser"]
         },
         {
             "key":"firuze-keser", "path":political_base+"Furize.md", "name":"Firuze Keser",
             "date":"Keser soyunun üçüncü kuşağı", "role":"Keser ailesinin bir üyesi",
-            "appearance":"Kaynak notlarda ayrıntılı fiziksel tanım bulunmuyor.",
             "personality":"Sabırlı, şefkatli, içine kapanık ve gerektiğinde dirençli.",
             "aliases":["Firuze","Firuze Keser","Furize"]
         },
@@ -338,7 +332,6 @@ def import_characters():
             "key":"alperen-keser", "path":political_base+"Alperen.md", "name":"Alperen Keser",
             "date":"1888–1960", "birth":"1888 · Giresun, Kuşköy",
             "role":"Asker ve devlet adamı · 1938–1960 döneminin lideri",
-            "appearance":"Kaynak notlarda ayrıntılı fiziksel tanım bulunmuyor.",
             "personality":"Disiplinli, kararlı, milliyetçi ve güçlü merkezi devlet yanlısı.",
             "aliases":["Alperen","Alperen Keser"]
         },
@@ -347,7 +340,6 @@ def import_characters():
             "date":"1904 doğumlu · 1960–1975 döneminde lider",
             "birth":"1904 · Hatay",
             "role":"Asker ve devlet adamı",
-            "appearance":"Askerî geçmişiyle uyumlu, sade ve resmî bir görünüm.",
             "personality":"Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
             "aliases":["İsmail Karaslan"]
         },
@@ -356,7 +348,6 @@ def import_characters():
             "date":"1935 doğumlu · 1975'ten itibaren lider",
             "birth":"1935 · Ankara",
             "role":"Siyasetçi ve devlet adamı",
-            "appearance":"Sade, klasik ve resmî giyim tarzını benimser.",
             "personality":"Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
             "aliases":["Selim Arkan"]
         },
