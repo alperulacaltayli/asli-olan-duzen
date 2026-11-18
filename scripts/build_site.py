@@ -22,7 +22,6 @@ GALLERY_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
 GALLERY_EXCLUDED_TERMS = ("infaz",)
 SITE_MATERIAL_FILES = [
     "KitapKapakFotosu.png",
-    "Poster1.jpeg",
     "OğuzKağanAtalayPosterÇizim.png",
     "AmerikaHitlerAnkaraZiyaretHaberi.png",
     "DikeyTrİmpBayrak540x1920.png",
