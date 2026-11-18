@@ -145,7 +145,12 @@
       categoryHost.innerHTML = '<p class="archive-empty">Henüz arşiv birimi tanımlanmamış. Yeni bir birim eklemek için content/archives klasöründeki yönergeyi kullan.</p>';
       return;
     }
-    categoryHost.innerHTML = categories.map((category, index) => {
+    const orderedCategories = [...categories].sort((left, right) => {
+      if (left.id === "chronology") return -1;
+      if (right.id === "chronology") return 1;
+      return (left.order ?? 999) - (right.order ?? 999);
+    });
+    categoryHost.innerHTML = orderedCategories.map((category, index) => {
       const count = allNodes(category.nodes).length;
       const viewName = category.view === "tree" ? "DALLANAN OLAY AĞACI" : "KAYIT KATALOĞU";
       return `
@@ -300,14 +305,46 @@
       childLinks + relatedLinks + '</div>';
   };
 
+  const syncNavigationState = () => {
+    navigationHost.querySelectorAll("[data-select-node]").forEach((button) => {
+      const selected = button.dataset.selectNode === selectedNodeId;
+      button.classList.toggle("is-selected", selected);
+      button.setAttribute("aria-current", String(selected));
+      const item = button.closest(".chronology-node, .character-tree-item");
+      if (item) item.classList.toggle("is-selected", selected);
+    });
+
+    navigationHost.querySelectorAll("[data-toggle-node]").forEach((button) => {
+      const id = button.dataset.toggleNode;
+      const isOpen = expandedNodes.has(id);
+      button.setAttribute("aria-expanded", String(isOpen));
+      const label = activeCategory?.id === "characters"
+        ? "Grubu"
+        : activeCategory?.id === "chronology" ? "Alt olayları" : "Alt kayıtları";
+      button.setAttribute("aria-label", label + " " + (isOpen ? "daralt" : "genişlet"));
+      button.textContent = isOpen ? "−" : "+";
+
+      const owner = button.closest("li");
+      if (!owner) return;
+      const childPanel = Array.from(owner.children).find((child) =>
+        child.matches(".chronology-children, .character-tree-children, .archive-tree-children")
+      );
+      if (childPanel) childPanel.hidden = !isOpen;
+    });
+  };
+
   const selectNode = (nodeId) => {
     selectedNodeId = nodeId;
     const node = findNode(activeCategory.nodes, nodeId);
     if (activeCategory.view === "tree") {
       (node?.ancestors || []).forEach((ancestorId) => expandedNodes.add(ancestorId));
-      navigationHost.innerHTML = renderTree(activeCategory.nodes);
+      syncNavigationState();
     } else {
-      renderCatalogue();
+      navigationHost.querySelectorAll("[data-select-node]").forEach((button) => {
+        const selected = button.dataset.selectNode === nodeId;
+        button.classList.toggle("is-selected", selected);
+        button.setAttribute("aria-current", String(selected));
+      });
     }
     renderDetail(node);
   };
@@ -434,7 +471,7 @@
       const id = toggleButton.dataset.toggleNode;
       if (expandedNodes.has(id)) expandedNodes.delete(id);
       else expandedNodes.add(id);
-      navigationHost.innerHTML = renderTree(activeCategory.nodes);
+      syncNavigationState();
       return;
     }
     const selectButton = event.target.closest("[data-select-node]");
@@ -506,7 +543,7 @@
   // Site-wide reveal, progress and visual-layer transitions.
   document.body.classList.add("motion-ready");
   const revealTargets = document.querySelectorAll(
-    ".welcome-content, .roman-copy, .roman-artwork, .world-heading, .world-material-strip, .world-card, .archive-heading, .archive-directory-heading, .author-copy, .last-door-inner"
+    ".welcome-content, .welcome-banner-pair, .roman-copy, .roman-artwork, .world-heading, .world-grid, .world-card, .archive-heading, .archive-directory-heading, .author-copy, .last-door-inner"
   );
   revealTargets.forEach((element, index) => {
     element.classList.add("site-reveal");
@@ -584,11 +621,11 @@
 
   // Multi-plane parallax for the cover, newspaper, emblem and section artwork.
   const parallaxTargets = [
-    [document.querySelector(".welcome-cover"), 0.14],
-    [document.querySelector(".world-news-material img"), -0.09],
-    [document.querySelector(".world-flag-material img"), 0.075],
-    [document.querySelector(".roman-artwork"), -0.045],
-    [document.querySelector(".author-mark"), 0.035]
+    [document.querySelector(".welcome-cover"), 0.105],
+    [document.querySelector(".welcome-banner-german"), -0.035],
+    [document.querySelector(".welcome-banner-turkish"), 0.045],
+    [document.querySelector(".roman-artwork"), -0.035],
+    [document.querySelector(".author-mark"), 0.025]
   ].filter(([element]) => element);
 
   // Pointer parallax makes the cover and geometric frame respond to the visitor.
@@ -632,7 +669,7 @@
     });
   };
 
-  document.querySelectorAll(".world-card, .world-news-material").forEach(enableTilt);
+  document.querySelectorAll(".world-card, .archive-category").forEach(enableTilt);
   let parallaxFrame = 0;
   const updateParallax = () => {
     const scrollY = window.scrollY || 0;

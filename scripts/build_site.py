@@ -26,6 +26,7 @@ SITE_MATERIAL_FILES = [
     "Poster1.jpeg",
     "AmerikaHitlerAnkaraZiyaretHaberi.png",
     "DikeyTrİmpBayrak540x1920.png",
+    "DikeyNaziİmpbayrak540x1920.png",
     "TürkİmpBayrak11ölçek.jpeg",
     "TrimpLogo.png",
 ]
