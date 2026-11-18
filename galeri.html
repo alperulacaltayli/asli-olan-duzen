@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111514">
+  <meta name="description" content="Aslı Olan Düzen evreninden görsel kayıtlar. Alternatif tarihin fotoğraf arşivini keşfedin.">
+  <meta name="author" content="Alper Ulaç ALTAYLI">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:title" content="Görsel Arşiv — Aslı Olan Düzen">
+  <meta property="og:description" content="Alternatif tarihin görsel kayıtları.">
+  <title>Görsel Arşiv — Aslı Olan Düzen</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+</head>
+<body class="gallery-page">
+  <a class="skip-link" href="#gallery-main">İçeriğe geç</a>
+
+  <header class="site-header gallery-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#top" aria-label="Aslı Olan Düzen ana sayfa">
+        <span class="brand-mark" aria-hidden="true">AOD</span>
+        <span class="brand-name">ASLI OLAN <b>DÜZEN</b></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="gallery-nav" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="gallery-nav" aria-label="Ana menü">
+        <a href="index.html#roman">Roman</a>
+        <a href="index.html#evren">Evren</a>
+        <a href="index.html#arsiv">Arşiv</a>
+        <a href="galeri.html" aria-current="page">Galeri</a>
+        <a href="index.html#yazar">Yazar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="gallery-main">
+    <section class="gallery-hero" aria-labelledby="gallery-title">
+      <div class="gallery-hero-lines" aria-hidden="true"></div>
+      <div class="container gallery-hero-inner">
+        <div class="gallery-overline"><span></span> ASLI OLAN DÜZEN / GÖRSEL KAYITLAR <span></span></div>
+        <p class="gallery-layer">KATMAN 05 · GÖRSEL ARŞİV</p>
+        <h1 id="gallery-title">GÖRSEL<br><em>ARŞİV</em></h1>
+        <p class="gallery-intro">Başka türlü yazılmış bir tarihten kareler.<br>Her kayıt, bu dünyanın hafızasında ayrı bir iz bırakır.</p>
+        <div class="gallery-hero-meta">
+          <span><b id="gallery-total">—</b> GÖRSEL KAYIT</span>
+          <span>AOD / 1985</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-section-heading">
+          <div>
+            <span class="gallery-section-index">GÖRSEL KOLEKSİYON</span>
+            <h2>Arşivden <em>seçkiler.</em></h2>
+          </div>
+          <p>Bir fotoğrafı seçerek tam ekran inceleyebilir, ok tuşlarıyla sonraki kayda geçebilirsin.</p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid" aria-live="polite">
+          <p class="gallery-loading">Görsel kayıtlar hazırlanıyor...</p>
+        </div>
+
+        <div class="gallery-endnote">
+          <span class="gallery-endnote-mark">AOD</span>
+          <div>
+            <p>ARŞİV KAYDI / SONU YOK</p>
+            <span>Bu koleksiyon, Aslı Olan Düzen'in görsel dünyasından seçilmiş karelerden oluşur.</span>
+          </div>
+          <a href="index.html#top">ANA SAYFAYA DÖN ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="footer-brand" href="index.html#top">ASLI OLAN <b>DÜZEN</b></a>
+      <span>ALPER ULAÇ ALTAYLI</span>
+      <span>ALTERNATİF TARİH / KURGUSAL EVREN</span>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="gallery-year">2026</span> Alper Ulaç ALTAYLI</span>
+      <span>Bu sitede anlatılan tarih ve evren unsurları kurmacadır.</span>
+      <a href="#gallery-main">BAŞA DÖN ↑</a>
+    </div>
+  </footer>
+
+  <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Fotoğraf görüntüleyici" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Galeriyi kapat">×</button>
+    <button class="lightbox-arrow lightbox-previous" id="lightbox-previous" type="button" aria-label="Önceki fotoğraf">←</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-image" alt="">
+      <figcaption>
+        <span id="lightbox-number"></span>
+        <strong id="lightbox-title"></strong>
+      </figcaption>
+    </figure>
+    <button class="lightbox-arrow lightbox-next" id="lightbox-next" type="button" aria-label="Sonraki fotoğraf">→</button>
+    <p class="lightbox-hint">KAPAT: ESC <span>·</span> GEZİN: ← →</p>
+  </div>
+
+  <script src="assets/js/gallery.js" defer></script>
+</body>
+</html>

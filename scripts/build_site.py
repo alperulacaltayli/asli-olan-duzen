@@ -16,6 +16,21 @@ import import_obsidian
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVES_ROOT = ROOT / "content" / "archives"
 DIST = ROOT / "dist"
+GALLERY_ROOT = ROOT / "AlternatifTarihfotoarşiv"
+GALLERY_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
+GALLERY_EXCLUDED_TERMS = ("infaz",)
+GALLERY_TITLE_OVERRIDES = {
+    "baküdüştü": "Bakü düştü",
+    "beyazsaraytr": "Beyaz Saray · Washington, D.C.",
+    "hitleratatürkziyareti": "Hitler'in Atatürk ziyareti",
+    "kievdüşüş": "Kiev'in düşüşü",
+    "leningraddüşüş": "Leningrad'ın düşüşü",
+    "moskovadüşüş": "Moskova'nın düşüşü",
+    "sevatipoolçıkarması": "Sevastopol çıkarması",
+    "sivastipoldüşüş": "Sivastopol'un düşüşü",
+    "stalinggraddüşüş": "Stalingrad'ın düşüşü",
+    "türklerayda": "Türkler Ay'da",
+}
 TEXT_SUFFIXES = {".md", ".txt"}
 
 
@@ -202,12 +217,38 @@ def discover_archives() -> dict[str, Any]:
     return {"categories": categories}
 
 
+def discover_gallery() -> dict[str, Any]:
+    """Build a public image catalogue from the repository's photo archive."""
+    images: list[dict[str, Any]] = []
+    if not GALLERY_ROOT.is_dir():
+        return {"images": images}
+
+    for image_path in sorted(GALLERY_ROOT.iterdir(), key=lambda item: natural_key(item.name)):
+        if not image_path.is_file() or image_path.suffix.lower() not in GALLERY_SUFFIXES:
+            continue
+        if any(term in image_path.stem.casefold() for term in GALLERY_EXCLUDED_TERMS):
+            continue
+
+        stem_key = image_path.stem.casefold()
+        title = GALLERY_TITLE_OVERRIDES.get(
+            stem_key,
+            re.sub(r"[_-]+", " ", image_path.stem).strip()
+        )
+        images.append({
+            "src": f"{GALLERY_ROOT.name}/{image_path.name}",
+            "title": title,
+            "number": len(images) + 1,
+        })
+
+    return {"images": images}
+
+
 def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)
 
-    for filename in ("index.html", "robots.txt", "sitemap.xml"):
+    for filename in ("index.html", "galeri.html", "robots.txt", "sitemap.xml"):
         source = ROOT / filename
         if source.is_file():
             shutil.copy2(source, DIST / filename)
@@ -215,6 +256,18 @@ def build() -> None:
     assets = ROOT / "assets"
     if assets.is_dir():
         shutil.copytree(assets, DIST / "assets")
+
+    gallery_data = discover_gallery()
+    gallery_encoded = json.dumps(gallery_data, ensure_ascii=False, indent=2) + "\n"
+    (ROOT / "gallery.json").write_text(gallery_encoded, encoding="utf-8")
+    (DIST / "gallery.json").write_text(gallery_encoded, encoding="utf-8")
+
+    # Copy only the images included in the public gallery catalogue.
+    for image in gallery_data["images"]:
+        source = ROOT / image["src"]
+        destination = DIST / image["src"]
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, destination)
 
     archive_data = import_obsidian.discover_archives()
     encoded = json.dumps(archive_data, ensure_ascii=False, indent=2) + "\n"
@@ -224,6 +277,7 @@ def build() -> None:
     (DIST / "archives.json").write_text(encoded, encoding="utf-8")
 
     print(f"Site built: {DIST}")
+    print(f"Gallery images: {len(gallery_data['images'])}")
     print(f"Archive categories: {len(archive_data['categories'])}")
     for category in archive_data["categories"]:
         print(f" - {category['title']}: {len(category['nodes'])} top-level records")
