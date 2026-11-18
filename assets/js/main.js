@@ -152,23 +152,67 @@
     }).join("");
   };
 
+  const getInitials = (name) => String(name || "AOD").trim().split(/\s+/).slice(0, 2).map(part => Array.from(part)[0] || "").join("").toLocaleUpperCase("tr-TR");
+
+  const renderChronologyTree = (nodes, depth = 0) => {
+    if (!nodes || !nodes.length) return '<p class="archive-empty">Bu döneme ait kayıt bulunmuyor.</p>';
+    const isYearLevel = depth === 0;
+    return '<ul class="chronology-track chronology-track-depth-' + depth + '">' + nodes.map((node) => {
+      const hasChildren = node.children && node.children.length > 0;
+      const isOpen = expandedNodes.has(node.id);
+      const isSelected = selectedNodeId === node.id;
+      const countLabel = hasChildren ? String(allNodes(node.children).length).padStart(2, "0") + " ALT KAYIT" : "OLAY KAYDI";
+      return '<li class="chronology-node ' + (isYearLevel ? "chronology-year-node" : "chronology-event-node") + (isSelected ? " is-selected" : "") + '">' +
+        '<div class="chronology-node-row"><span class="chronology-marker" aria-hidden="true"></span>' +
+        '<button type="button" class="chronology-node-select ' + (isSelected ? "is-selected" : "") + '" data-select-node="' + escapeHtml(node.id) + '" aria-current="' + (isSelected ? "true" : "false") + '">' +
+        '<span class="chronology-node-topline"><span>' + escapeHtml(node.date || (isYearLevel ? "YIL" : "KAYIT")) + '</span><span>' + countLabel + '</span></span>' +
+        '<strong>' + escapeHtml(node.title) + '</strong>' +
+        (node.summary ? '<small>' + escapeHtml(node.summary) + '</small>' : '') +
+        '</button>' +
+        (hasChildren ? '<button type="button" class="chronology-node-toggle" data-toggle-node="' + escapeHtml(node.id) + '" aria-label="Alt olayları ' + (isOpen ? "daralt" : "genişlet") + '" aria-expanded="' + isOpen + '">' + (isOpen ? "−" : "+") + '</button>' : '') +
+        '</div>' +
+        (hasChildren ? '<div class="chronology-children" ' + (isOpen ? "" : "hidden") + '>' + renderChronologyTree(node.children, depth + 1) + '</div>' : '') +
+        '</li>';
+    }).join("") + "</ul>";
+  };
+
+  const renderCharacterTree = (nodes, depth = 0) => {
+    if (!nodes || !nodes.length) return '<p class="archive-empty">Bu karakter grubunda henüz kayıt bulunmuyor.</p>';
+    return '<ul class="character-tree character-tree-depth-' + depth + '">' + nodes.map((node) => {
+      const hasChildren = node.children && node.children.length > 0;
+      const isOpen = expandedNodes.has(node.id);
+      const isSelected = selectedNodeId === node.id;
+      const initials = getInitials(node.title);
+      return '<li class="character-tree-item ' + (hasChildren ? "is-group" : "is-person") + (isSelected ? " is-selected" : "") + '">' +
+        '<div class="character-tree-row">' +
+        '<button type="button" class="' + (hasChildren ? "character-group-select" : "character-person-select") + (isSelected ? " is-selected" : "") + '" data-select-node="' + escapeHtml(node.id) + '" aria-current="' + (isSelected ? "true" : "false") + '">' +
+        '<span class="' + (hasChildren ? "character-group-symbol" : "character-avatar-small") + '" aria-hidden="true">' + (hasChildren ? (depth === 0 ? "✧" : "⌘") : escapeHtml(initials)) + '</span>' +
+        '<span class="character-tree-copy"><small>' + escapeHtml(node.date || (hasChildren ? "KARAKTER GRUBU" : "KİŞİ DOSYASI")) + '</small>' +
+        '<strong>' + escapeHtml(node.title) + '</strong>' +
+        (node.summary ? '<span>' + escapeHtml(node.summary) + '</span>' : '') +
+        '</span>' + (hasChildren ? '<span class="character-group-count">' + String(allNodes(node.children).length).padStart(2, "0") + '</span>' : '') +
+        '</button>' +
+        (hasChildren ? '<button type="button" class="character-tree-toggle" data-toggle-node="' + escapeHtml(node.id) + '" aria-label="Grubu ' + (isOpen ? "daralt" : "genişlet") + '" aria-expanded="' + isOpen + '">' + (isOpen ? "−" : "+") + '</button>' : '') +
+        '</div>' +
+        (hasChildren ? '<div class="character-tree-children" ' + (isOpen ? "" : "hidden") + '>' + renderCharacterTree(node.children, depth + 1) + '</div>' : '') +
+        '</li>';
+    }).join("") + "</ul>";
+  };
+
   const renderTree = (nodes) => {
+    if (activeCategory?.id === "chronology") return renderChronologyTree(nodes);
+    if (activeCategory?.id === "characters") return renderCharacterTree(nodes);
     if (!nodes || !nodes.length) return '<p class="archive-empty">Bu bölümde henüz kayıt bulunmuyor.</p>';
     return '<ul class="archive-tree-list">' + nodes.map((node) => {
       const hasChildren = node.children && node.children.length > 0;
       const isOpen = expandedNodes.has(node.id);
       const isSelected = selectedNodeId === node.id;
-      return `
-        <li class="archive-tree-item">
-          <div class="archive-tree-row">
-            <button type="button" class="archive-tree-select ${isSelected ? "is-selected" : ""}" data-select-node="${escapeHtml(node.id)}" aria-current="${isSelected ? "true" : "false"}">
-              <span class="tree-node-date">${escapeHtml(node.date || "KAYIT")}</span>
-              <span class="tree-node-title">${escapeHtml(node.title)}</span>
-            </button>
-            ${hasChildren ? `<button type="button" class="archive-tree-toggle" data-toggle-node="${escapeHtml(node.id)}" aria-label="Alt kayıtları ${isOpen ? "daralt" : "genişlet"}" aria-expanded="${isOpen}">${isOpen ? "−" : "+"}</button>` : '<span class="tree-leaf-mark" aria-hidden="true">·</span>'}
-          </div>
-          ${hasChildren ? `<div class="archive-tree-children" ${isOpen ? "" : "hidden"}>${renderTree(node.children)}</div>` : ""}
-        </li>`;
+      return '<li class="archive-tree-item"><div class="archive-tree-row">' +
+        '<button type="button" class="archive-tree-select ' + (isSelected ? "is-selected" : "") + '" data-select-node="' + escapeHtml(node.id) + '" aria-current="' + (isSelected ? "true" : "false") + '">' +
+        '<span class="tree-node-date">' + escapeHtml(node.date || "KAYIT") + '</span><span class="tree-node-title">' + escapeHtml(node.title) + '</span></button>' +
+        (hasChildren ? '<button type="button" class="archive-tree-toggle" data-toggle-node="' + escapeHtml(node.id) + '" aria-label="Alt kayıtları ' + (isOpen ? "daralt" : "genişlet") + '" aria-expanded="' + isOpen + '">' + (isOpen ? "−" : "+") + '</button>' : '<span class="tree-leaf-mark" aria-hidden="true">·</span>') +
+        '</div>' + (hasChildren ? '<div class="archive-tree-children" ' + (isOpen ? "" : "hidden") + '>' + renderTree(node.children) + '</div>' : '') +
+        '</li>';
     }).join("") + "</ul>";
   };
 
@@ -207,15 +251,41 @@
         node.links.map((link) => '<button type="button" data-open-record-category="' + escapeHtml(link.categoryId) + '" data-open-record-id="' + escapeHtml(link.id) + '"><span>' + escapeHtml(link.date || "İLGİLİ KAYIT") + '</span><b>' + escapeHtml(link.title) + '</b><i>↗</i></button>').join("") +
         '</div></section>'
       : "";
-    detailHost.innerHTML = `
-      <div class="detail-record">
-        <div class="detail-record-top"><span>${escapeHtml(activeCategory.title)}</span><span>${escapeHtml(node.path || node.id)}</span></div>
-        ${recordHeading}
-        ${node.summary ? `<p class="detail-summary">${escapeHtml(node.summary)}</p>` : ""}
-        <div class="detail-body">${renderMarkdown(node.content || "")}</div>
-        ${childLinks}
-        ${relatedLinks}
-      </div>`;
+    if (activeCategory?.id === "chronology") {
+      detailHost.innerHTML = '<div class="chronology-detail">' +
+        '<div class="chronology-detail-top"><span>KRONOLOJİ / ' + escapeHtml(node.path || node.id) + '</span><span>ARŞİV KAYDI</span></div>' +
+        '<div class="chronology-detail-date">' + escapeHtml(node.date || "TARİHSEL KAYIT") + '</div>' +
+        '<h3>' + escapeHtml(node.title) + '</h3>' +
+        (node.summary ? '<p class="chronology-detail-summary">' + escapeHtml(node.summary) + '</p>' : '') +
+        '<div class="detail-body chronology-detail-body">' + renderMarkdown(node.content || "") + '</div>' +
+        childLinks + relatedLinks + '</div>';
+      return;
+    }
+
+    if (activeCategory?.id === "characters") {
+      const isCharacterRecord = !(node.children && node.children.length);
+      const initials = getInitials(node.title);
+      detailHost.innerHTML = '<div class="character-detail ' + (isCharacterRecord ? "character-detail-person" : "character-detail-group") + '">' +
+        '<div class="character-detail-overline"><span>ASLI OLAN DÜZEN</span><span>' + (isCharacterRecord ? "KARAKTER DOSYASI" : "KARAKTER ARŞİVİ") + '</span></div>' +
+        '<div class="character-profile-heading">' +
+        '<div class="character-profile-monogram" aria-hidden="true">' + escapeHtml(initials) + '</div>' +
+        '<div class="character-profile-heading-copy"><p>' + escapeHtml(node.date || "ARŞİV KAYDI") + '</p>' +
+        '<h3>' + escapeHtml(node.title) + '</h3>' +
+        (node.summary ? '<span>' + escapeHtml(node.summary) + '</span>' : '') +
+        '</div></div>' +
+        '<div class="character-profile-divider"><span></span><small>' + (isCharacterRecord ? "GENEL TANITIM" : "DOSYA GRUBU") + '</small></div>' +
+        '<div class="detail-body character-detail-body">' + renderMarkdown(node.content || "") + '</div>' +
+        childLinks + relatedLinks + '</div>';
+      return;
+    }
+
+    detailHost.innerHTML = '<div class="detail-record">' +
+      '<div class="detail-record-top"><span>' + escapeHtml(activeCategory.title) + '</span><span>' + escapeHtml(node.path || node.id) + '</span></div>' +
+      '<p class="detail-date">' + escapeHtml(node.date || "TARİH BELİRTİLMEMİŞ") + '</p>' +
+      '<h3>' + escapeHtml(node.title) + '</h3>' +
+      (node.summary ? '<p class="detail-summary">' + escapeHtml(node.summary) + '</p>' : '') +
+      '<div class="detail-body">' + renderMarkdown(node.content || "") + '</div>' +
+      childLinks + relatedLinks + '</div>';
   };
 
   const selectNode = (nodeId) => {
@@ -244,9 +314,19 @@
     selectedNodeId = null;
     expandedNodes = new Set();
     if (activeCategory.nodes && activeCategory.nodes.length) {
-      selectedNodeId = activeCategory.nodes[0].id;
-      if (activeCategory.view === "tree" && activeCategory.nodes[0].children?.length) {
-        expandedNodes.add(activeCategory.nodes[0].id);
+      if (activeCategory.id === "characters") {
+        let firstRecord = activeCategory.nodes[0];
+        while (firstRecord.children && firstRecord.children.length) {
+          expandedNodes.add(firstRecord.id);
+          firstRecord = firstRecord.children[0];
+        }
+        selectedNodeId = firstRecord.id;
+        (firstRecord.ancestors || []).forEach((ancestorId) => expandedNodes.add(ancestorId));
+      } else {
+        selectedNodeId = activeCategory.nodes[0].id;
+        if (activeCategory.view === "tree" && activeCategory.nodes[0].children?.length) {
+          expandedNodes.add(activeCategory.nodes[0].id);
+        }
       }
     }
     activeTitle.textContent = activeCategory.title;
