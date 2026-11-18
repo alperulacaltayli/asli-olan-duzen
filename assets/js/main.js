@@ -129,8 +129,8 @@
   const findNode = (nodes, id) => allNodes(nodes).find((node) => node.id === id) || null;
 
   const categoryIcon = (id) => ({
-    chronology: "⌁", technology: "⌘", geography: "⌖",
-    institutions: "⌂", characters: "♙"
+    chronology: "◈", technology: "⌘", geography: "⌖",
+    institutions: "⌂", characters: "✦"
   })[id] || "▤";
 
   const renderCategories = () => {
@@ -142,7 +142,7 @@
       const count = allNodes(category.nodes).length;
       const viewName = category.view === "tree" ? "DALLANAN OLAY AĞACI" : "KAYIT KATALOĞU";
       return `
-        <button class="archive-category" type="button" data-category-id="${escapeHtml(category.id)}">
+        <button class="archive-category" type="button" data-category-id="${escapeHtml(category.id)}" data-archive-theme="${escapeHtml(category.id)}">
           <span class="category-topline"><span>${String(index + 1).padStart(2, "0")} / ${escapeHtml(category.label || "ARŞİV")}</span><span>${String(count).padStart(2, "0")} KAYIT</span></span>
           <span class="category-icon" aria-hidden="true">${categoryIcon(category.id)}</span>
           <span class="category-title">${escapeHtml(category.title)}</span>
@@ -177,6 +177,26 @@
       detailHost.innerHTML = '<div class="archive-detail-placeholder"><span class="detail-placeholder-mark">AOD</span><p>Bu arşiv henüz boş.</p><small>İçerik klasöre eklendiğinde burada görünecek.</small></div>';
       return;
     }
+    const isChronology = activeCategory.id === "chronology";
+    const isCharacters = activeCategory.id === "characters";
+    const initials = String(node.title || "AOD")
+      .split(/\\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((part) => Array.from(part)[0] || "")
+      .join("")
+      .toLocaleUpperCase("tr-TR");
+    const recordHeading = isChronology
+      ? `<div class="chronology-record-heading">
+          <div class="chronology-date-mark"><span>KRONOLOJİ KAYDI</span><strong>${escapeHtml(node.date || "TARİHİ BELİRTİLMEMİŞ")}</strong></div>
+          <div class="chronology-heading-copy"><span>ASLI OLAN DÜZEN / ZAMAN ÇİZELGESİ</span><h3>${escapeHtml(node.title)}</h3></div>
+        </div>`
+      : isCharacters
+        ? `<div class="character-record-heading">
+            <div class="character-seal" aria-hidden="true"><span>${escapeHtml(initials)}</span><i></i></div>
+            <div class="character-heading-copy"><p class="detail-date">${escapeHtml(node.date || "KAYIT")}</p><h3>${escapeHtml(node.title)}</h3><span class="character-file-label">KARAKTER DOSYASI / AOD-1985</span></div>
+          </div>`
+        : `<p class="detail-date">${escapeHtml(node.date || "TARİH BELİRTİLMEMİŞ")}</p><h3>${escapeHtml(node.title)}</h3>`;
     const childLinks = node.children && node.children.length
       ? '<section class="detail-connections"><p>BAĞLI KAYITLAR / ' + String(node.children.length).padStart(2, "0") + '</p><div>' +
         node.children.map((child) => `<button type="button" data-select-node="${escapeHtml(child.id)}"><span>${escapeHtml(child.date || "ALT KAYIT")}</span><b>${escapeHtml(child.title)}</b><i>↗</i></button>`).join("") +
@@ -190,8 +210,7 @@
     detailHost.innerHTML = `
       <div class="detail-record">
         <div class="detail-record-top"><span>${escapeHtml(activeCategory.title)}</span><span>${escapeHtml(node.path || node.id)}</span></div>
-        <p class="detail-date">${escapeHtml(node.date || "TARİH BELİRTİLMEMİŞ")}</p>
-        <h3>${escapeHtml(node.title)}</h3>
+        ${recordHeading}
         ${node.summary ? `<p class="detail-summary">${escapeHtml(node.summary)}</p>` : ""}
         <div class="detail-body">${renderMarkdown(node.content || "")}</div>
         ${childLinks}
@@ -235,6 +254,9 @@
     viewLabel.textContent = activeCategory.label || "ARŞİV BİRİMİ";
     navigationType.textContent = activeCategory.view === "tree" ? "DALLANAN OLAY AĞACI" : "KAYIT KATALOĞU";
     explorer.classList.toggle("is-catalogue", activeCategory.view !== "tree");
+    explorer.classList.toggle("is-chronology", activeCategory.id === "chronology");
+    explorer.classList.toggle("is-characters", activeCategory.id === "characters");
+    explorer.dataset.activeCategory = activeCategory.id;
     explorer.hidden = false;
     if (activeCategory.view === "tree") navigationHost.innerHTML = renderTree(activeCategory.nodes);
     else renderCatalogue();
