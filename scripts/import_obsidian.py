@@ -372,7 +372,7 @@ def import_characters():
         "Genç karakterler", "GENÇ KARAKTERLER",
         "1985 yılında hikâyenin genç kuşağını oluşturan öğrenciler ve arkadaş çevresi.",
         collect(["alev-acar","asena-korkut","aylin-aksoy","tomris-ilter",
-                 "oguz-kagan-atalay","ismail-yagiz-aslan","muhammed-mete"], main_nodes),
+                 "ismail-yagiz-aslan","muhammed-mete"], main_nodes),
         "young-characters"
     )
 
