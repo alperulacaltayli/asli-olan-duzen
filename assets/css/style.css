@@ -5745,8 +5745,8 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
     place-items: center;
     width: 400px;
     height: 400px;
-    color: rgba(255, 230, 202, .035);
-    font: 34px/1 Georgia, serif;
+    color: rgba(255, 230, 202, .090);
+    font: 340px/1 Georgia, serif;
     text-align: center;
     text-shadow: 0 0 12px rgba(255, 230, 202, .018);
     pointer-events: none;
