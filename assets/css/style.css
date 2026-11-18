@@ -36,7 +36,7 @@ button { font: inherit; }
 
 /* Welcome layer — warm, open, centred */
 .welcome-layer {
-  position: relative; min-height: 100svh; min-height: 100vh; overflow: hidden;
+  position: relative; min-height: 100vh; min-height: 100svh; overflow: hidden;
   display: grid; place-items: center; isolation: isolate;
   color: var(--warm-ivory);
   background:
