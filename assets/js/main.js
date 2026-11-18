@@ -15,6 +15,8 @@
   const viewLabel = document.querySelector("#archive-view-label");
   const navigationType = document.querySelector("#archive-navigation-type");
   const backButton = document.querySelector("#archive-back");
+  const archivePlaceholder = explorer ? document.createComment("archive-explorer-home") : null;
+  if (explorer && archivePlaceholder) explorer.before(archivePlaceholder);
 
   if (year) year.textContent = String(new Date().getFullYear());
 
@@ -43,6 +45,7 @@
   let activeCategory = null;
   let selectedNodeId = null;
   let expandedNodes = new Set();
+  let archiveCloseTimer = 0;
 
   let aliasLookup = new Map();
   const normalizeWikiTarget = (value) => String(value ?? "").replace(/\.md$/i, "").split("/").pop().replace(/[_-]+/g, " ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/ı/g, "i").replace(/\s+/g, " ").trim();
@@ -144,7 +147,7 @@
       const count = allNodes(category.nodes).length;
       const viewName = category.view === "tree" ? "DALLANAN OLAY AĞACI" : "KAYIT KATALOĞU";
       return `
-        <button class="archive-category site-reveal" type="button" data-category-id="${escapeHtml(category.id)}" data-archive-theme="${escapeHtml(category.id)}">
+        <button class="archive-category" type="button" data-category-id="${escapeHtml(category.id)}" data-archive-theme="${escapeHtml(category.id)}">
           <span class="category-topline"><span>${String(index + 1).padStart(2, "0")} / ${escapeHtml(category.label || "ARŞİV")}</span><span>${String(count).padStart(2, "0")} KAYIT</span></span>
           <span class="category-icon" aria-hidden="true">${categoryIcon(category.id)}</span>
           <span class="category-title">${escapeHtml(category.title)}</span>
@@ -318,6 +321,7 @@
   const openCategory = (categoryId) => {
     activeCategory = categories.find((item) => item.id === categoryId);
     if (!activeCategory) return;
+    window.clearTimeout(archiveCloseTimer);
     document.body.classList.remove(...sceneClasses);
     document.body.classList.add("archive-scene-open", "archive-scene-" + categoryId);
     document.documentElement.classList.add("archive-view-open");
@@ -349,6 +353,7 @@
     explorer.dataset.activeCategory = activeCategory.id;
     explorer.hidden = false;
     explorer.classList.add("is-immersive");
+    if (explorer.parentElement !== document.body) document.body.appendChild(explorer);
     explorer.classList.remove("scene-entering", "scene-leaving");
     if (activeCategory.view === "tree") navigationHost.innerHTML = renderTree(activeCategory.nodes);
     else renderCatalogue();
@@ -402,10 +407,14 @@
     explorer.classList.remove("scene-entering");
     explorer.classList.add("scene-leaving");
     const finish = () => {
+      window.clearTimeout(archiveCloseTimer);
       explorer.hidden = true;
       explorer.classList.remove("is-immersive", "scene-entering", "scene-leaving");
       document.body.classList.remove(...sceneClasses);
       document.documentElement.classList.remove("archive-view-open");
+      if (archivePlaceholder?.parentNode && explorer.parentElement === document.body) {
+        archivePlaceholder.parentNode.insertBefore(explorer, archivePlaceholder.nextSibling);
+      }
       activeCategory = null;
       if (backButton) backButton.blur();
     };
@@ -414,7 +423,7 @@
       explorer.removeEventListener("animationend", onExit);
       finish();
     });
-    window.setTimeout(finish, 540);
+    archiveCloseTimer = window.setTimeout(finish, 540);
   };
 
   if (backButton) backButton.addEventListener("click", closeArchiveScene);
@@ -424,15 +433,6 @@
       closeArchiveScene();
     }
   });
-
-  if (worldGrid) {
-    worldGrid.addEventListener("click", (event) => {
-      const launch = event.target.closest("[data-open-category]");
-      if (!launch) return;
-      event.preventDefault();
-      openCategory(launch.dataset.openCategory);
-    });
-  }
 
   document.addEventListener("click", (event) => {
     const launch = event.target.closest("[data-open-category]");
