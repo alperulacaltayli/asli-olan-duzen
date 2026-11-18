@@ -306,3 +306,29 @@ button { font: inherit; }
   .detail-connections button b { grid-column:1; grid-row:2; }
   .detail-connections button i { grid-column:2; grid-row:1 / span 2; }
 }
+
+
+/* Obsidian links become navigable links inside the public archive. */
+.wiki-link {
+  display: inline; padding: 0; border: 0; border-bottom: 1px dotted rgba(191,216,225,.65);
+  color: #d6e6eb; background: transparent; font: inherit; cursor: pointer;
+}
+.wiki-link:hover, .wiki-link:focus-visible { color: #fff; border-bottom-style: solid; outline: none; }
+.detail-crosslinks { margin-top: 28px; padding-top: 17px; border-top: 1px solid rgba(215,227,232,.22); }
+.detail-crosslinks > p { margin: 0 0 10px; color: #9eafb6; font: 8px var(--mono); letter-spacing: .13em; }
+.detail-crosslinks > div { display: grid; gap: 7px; }
+.detail-crosslinks button {
+  display: grid; grid-template-columns: 85px 1fr 20px; align-items: center; gap: 12px;
+  width: 100%; padding: 12px 10px; border: 1px solid rgba(215,227,232,.15);
+  color: #dce5e8; background: rgba(201,216,222,.045); text-align: left; cursor: pointer;
+}
+.detail-crosslinks button:hover { background: rgba(201,216,222,.12); border-color: rgba(215,227,232,.35); }
+.detail-crosslinks button span { color: #a5b6bd; font: 7px var(--mono); }
+.detail-crosslinks button b { font: 16px var(--serif); font-weight: 500; }
+.detail-crosslinks button i { color: #cbd7dc; font-style: normal; }
+@media(max-width:680px) {
+  .detail-crosslinks button { grid-template-columns: 1fr 20px; }
+  .detail-crosslinks button span { grid-column: 1; }
+  .detail-crosslinks button b { grid-column: 1; grid-row: 2; }
+  .detail-crosslinks button i { grid-column: 2; grid-row: 1 / span 2; }
+}
