@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import re
 import shutil
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -226,7 +227,9 @@ def discover_gallery() -> dict[str, Any]:
     for image_path in sorted(GALLERY_ROOT.iterdir(), key=lambda item: natural_key(item.name)):
         if not image_path.is_file() or image_path.suffix.lower() not in GALLERY_SUFFIXES:
             continue
-        if any(term in image_path.stem.casefold() for term in GALLERY_EXCLUDED_TERMS):
+        normalized_stem = unicodedata.normalize("NFKD", image_path.stem).casefold()
+        normalized_stem = "".join(char for char in normalized_stem if not unicodedata.combining(char))
+        if any(term in normalized_stem for term in GALLERY_EXCLUDED_TERMS):
             continue
 
         stem_key = image_path.stem.casefold()
