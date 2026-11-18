@@ -13,7 +13,7 @@
   <meta property="og:description" content="Bir başka tarihin içine gir. Aslı Olan Düzen romanını ve evrenini keşfet.">
   <title>Aslı Olan Düzen — Resmî Evren</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261119-immersive">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,11 +33,12 @@
 </head>
 <body>
   <a class="skip-link" href="#main">İçeriğe geç</a>
+  <div class="page-progress" aria-hidden="true"><span id="page-progress-bar"></span></div>
 
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Aslı Olan Düzen ana sayfa">
-        <span class="brand-mark" aria-hidden="true">AOD</span>
+        <span class="brand-mark"><img src="SiteMalzemeleri/TrimpLogo.png" alt="" aria-hidden="true"></span>
         <span class="brand-name">ASLI OLAN <b>DÜZEN</b></span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menüyü aç">
@@ -46,7 +47,8 @@
       <nav class="site-nav" id="site-nav" aria-label="Ana menü">
         <a href="#roman">Roman</a>
         <a href="#evren">Evren</a>
-        <a href="#arsiv">Arşiv</a>
+        <a href="#arsiv" data-open-category="chronology">Kronoloji</a>
+        <a href="#arsiv" data-open-category="characters">Karakterler</a>
         <a href="galeri.html">Galeri</a>
         <a href="#yazar">Yazar</a>
       </nav>
@@ -57,6 +59,10 @@
     <section class="welcome-layer" id="top" aria-labelledby="welcome-title">
       <div class="welcome-atmosphere" aria-hidden="true"></div>
       <div class="welcome-lines" aria-hidden="true"></div>
+      <div class="welcome-materials" aria-hidden="true">
+        <img class="welcome-cover" src="SiteMalzemeleri/KitapKapakFotosu.png" alt="" fetchpriority="high">
+        <img class="welcome-flag" src="SiteMalzemeleri/DikeyTrİmpBayrak540x1920.png" alt="">
+      </div>
       <div class="welcome-content">
         <p class="welcome-overline"><span></span> BİR ALTERNATİF TARİH ROMANI <span></span></p>
         <h1 id="welcome-title">ASLI OLAN<br><em>DÜZEN</em></h1>
@@ -84,7 +90,11 @@
           <p>Bu site, romanın dünyasını tanıtmak ve yayımlanmasına uygun görülen bilgileri katman katman açılan bir evren arşivinde bir araya getirmek için hazırlanıyor.</p>
           <a class="line-link" href="https://www.inkitt.com/stories/1870699" target="_blank" rel="noopener noreferrer">INKITT'TE ROMANI KEŞFET <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="roman-year" aria-label="Hikâyenin odak yılı">1985<span>HİKÂYENİN ODAĞI</span></div>
+        <figure class="roman-artwork">
+          <img src="SiteMalzemeleri/Poster1.jpeg" alt="Aslı Olan Düzen için hazırlanmış tanıtım görseli" loading="lazy">
+          <figcaption><span>ESER DOSYASI</span><strong>ASLI OLAN DÜZEN</strong></figcaption>
+          <div class="roman-year" aria-label="Hikâyenin odak yılı">1985<span>HİKÂYENİN ODAĞI</span></div>
+        </figure>
       </div>
     </section>
 
@@ -97,33 +107,43 @@
           </div>
           <p>Her kurumun bir geçmişi, her coğrafyanın bir kaydı, her karakterin bu düzen içinde bir yeri var.</p>
         </div>
+        <div class="world-material-strip">
+          <figure class="world-news-material">
+            <img src="SiteMalzemeleri/AmerikaHitlerAnkaraZiyaretHaberi.png" alt="Alternatif tarih evreninden gazete haberi görseli" loading="lazy">
+            <figcaption><span>ARŞİV BASINI / 1940</span><strong>Ankara'dan tarihî bir haber</strong></figcaption>
+          </figure>
+          <div class="world-flag-material">
+            <img src="SiteMalzemeleri/TürkİmpBayrak11ölçek.jpeg" alt="Büyük Türk İmparatorluğu bayrağı" loading="lazy">
+            <div><span>DEVLET SEMBOLÜ</span><strong>Büyük Türk İmparatorluğu</strong></div>
+          </div>
+        </div>
         <div class="world-grid">
-          <a class="world-card" href="#arsiv">
+          <a class="world-card" href="#arsiv" data-open-category="chronology">
             <span class="world-card-number">01</span>
             <span class="world-card-icon" aria-hidden="true">⌁</span>
             <h3>Kronoloji</h3>
             <p>Alternatif tarihin dönüm noktaları ve zaman çizgisi.</p>
             <span class="world-card-link">KATMANI AÇ <b>↗</b></span>
           </a>
-          <a class="world-card" href="#arsiv">
+          <a class="world-card" href="#arsiv" data-open-category="institutions">
             <span class="world-card-number">02</span>
             <span class="world-card-icon" aria-hidden="true">⌂</span>
             <h3>Devlet ve kurumlar</h3>
             <p>Yönetim yapısı, kurumlar ve güç ilişkileri.</p>
             <span class="world-card-link">KATMANI AÇ <b>↗</b></span>
           </a>
-          <a class="world-card" href="#arsiv">
+          <a class="world-card" href="#arsiv" data-open-category="characters">
             <span class="world-card-number">03</span>
             <span class="world-card-icon" aria-hidden="true">♙</span>
             <h3>Karakterler</h3>
             <p>Hikâyenin kişileri ve yayımlanmasına uygun biyografileri.</p>
             <span class="world-card-link">KATMANI AÇ <b>↗</b></span>
           </a>
-          <a class="world-card" href="#arsiv">
+          <a class="world-card" href="#arsiv" data-open-category="technology">
             <span class="world-card-number">04</span>
             <span class="world-card-icon" aria-hidden="true">⌖</span>
-            <h3>Coğrafya ve teknoloji</h3>
-            <p>Yerler, projeler, araçlar ve teknik kayıtlar.</p>
+            <h3>Teknoloji</h3>
+            <p>Projeler, teknik kayıtlar ve evrenin teknolojik gelişmeleri.</p>
             <span class="world-card-link">KATMANI AÇ <b>↗</b></span>
           </a>
           <a class="world-card" href="galeri.html">
@@ -165,7 +185,7 @@
               <h3 id="archive-active-title">Kronoloji</h3>
               <p id="archive-active-description"></p>
             </div>
-            <button class="archive-back" id="archive-back" type="button">← BİRİMLERE DÖN</button>
+            <button class="archive-back" id="archive-back" type="button" aria-label="Arşiv ekranını kapat">× <span>ARŞİVDEN ÇIK</span></button>
           </div>
           <div class="archive-workspace" id="archive-workspace">
             <aside class="archive-navigation" aria-label="Arşiv gezinme ağacı">
@@ -219,6 +239,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js?v=20261119-immersive" defer></script>
 </body>
 </html>

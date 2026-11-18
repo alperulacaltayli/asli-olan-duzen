@@ -20,6 +20,15 @@ DIST = ROOT / "dist"
 GALLERY_ROOT = ROOT / "AlternatifTarihfotoarşiv"
 GALLERY_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
 GALLERY_EXCLUDED_TERMS = ("infaz",)
+SITE_MATERIAL_FILES = [
+    "KitapKapakFotosu.png",
+    "Poster1.jpeg",
+    "OğuzKağanAtalayPosterÇizim.png",
+    "AmerikaHitlerAnkaraZiyaretHaberi.png",
+    "DikeyTrİmpBayrak540x1920.png",
+    "TürkİmpBayrak11ölçek.jpeg",
+    "TrimpLogo.png",
+]
 GALLERY_TITLE_OVERRIDES = {
     "baküdüştü": "Bakü düştü",
     "beyazsaraytr": "Beyaz Saray · Washington, D.C.",
@@ -259,6 +268,14 @@ def build() -> None:
     assets = ROOT / "assets"
     if assets.is_dir():
         shutil.copytree(assets, DIST / "assets")
+
+    material_source = ROOT / "SiteMalzemeleri"
+    material_target = DIST / "SiteMalzemeleri"
+    for filename in SITE_MATERIAL_FILES:
+        source = material_source / filename
+        if source.is_file():
+            material_target.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, material_target / filename)
 
     gallery_data = discover_gallery()
     gallery_encoded = json.dumps(gallery_data, ensure_ascii=False, indent=2) + "\n"

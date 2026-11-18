@@ -5,6 +5,8 @@
   const nav = document.querySelector("#site-nav");
   const year = document.querySelector("#current-year");
   const categoryHost = document.querySelector("#archive-categories");
+  const worldGrid = document.querySelector(".world-grid");
+  const pageProgressBar = document.querySelector("#page-progress-bar");
   const explorer = document.querySelector("#archive-explorer");
   const navigationHost = document.querySelector("#archive-navigation-content");
   const detailHost = document.querySelector("#archive-detail");
@@ -142,7 +144,7 @@
       const count = allNodes(category.nodes).length;
       const viewName = category.view === "tree" ? "DALLANAN OLAY AĞACI" : "KAYIT KATALOĞU";
       return `
-        <button class="archive-category" type="button" data-category-id="${escapeHtml(category.id)}" data-archive-theme="${escapeHtml(category.id)}">
+        <button class="archive-category site-reveal" type="button" data-category-id="${escapeHtml(category.id)}" data-archive-theme="${escapeHtml(category.id)}">
           <span class="category-topline"><span>${String(index + 1).padStart(2, "0")} / ${escapeHtml(category.label || "ARŞİV")}</span><span>${String(count).padStart(2, "0")} KAYIT</span></span>
           <span class="category-icon" aria-hidden="true">${categoryIcon(category.id)}</span>
           <span class="category-title">${escapeHtml(category.title)}</span>
@@ -265,10 +267,14 @@
     if (activeCategory?.id === "characters") {
       const isCharacterRecord = !(node.children && node.children.length);
       const initials = getInitials(node.title);
+      const hasOguzPortrait = normalizeWikiTarget(node.title) === normalizeWikiTarget("Oğuz Kağan Atalay");
+      const portrait = hasOguzPortrait
+        ? '<figure class="character-portrait"><img src="SiteMalzemeleri/OğuzKağanAtalayPosterÇizim.png" alt="Oğuz Kağan Atalay karakter çizimi" loading="lazy"><figcaption>3. KANAT / KARAKTER PORTRESİ</figcaption></figure>'
+        : '<div class="character-profile-monogram" aria-hidden="true">' + escapeHtml(initials) + '</div>';
       detailHost.innerHTML = '<div class="character-detail ' + (isCharacterRecord ? "character-detail-person" : "character-detail-group") + '">' +
         '<div class="character-detail-overline"><span>ASLI OLAN DÜZEN</span><span>' + (isCharacterRecord ? "KARAKTER DOSYASI" : "KARAKTER ARŞİVİ") + '</span></div>' +
-        '<div class="character-profile-heading">' +
-        '<div class="character-profile-monogram" aria-hidden="true">' + escapeHtml(initials) + '</div>' +
+        '<div class="character-profile-heading ' + (hasOguzPortrait ? "has-character-portrait" : "") + '">' +
+        portrait +
         '<div class="character-profile-heading-copy"><p>' + escapeHtml(node.date || "ARŞİV KAYDI") + '</p>' +
         '<h3>' + escapeHtml(node.title) + '</h3>' +
         (node.summary ? '<span>' + escapeHtml(node.summary) + '</span>' : '') +
@@ -308,9 +314,13 @@
       </button>`).join("") + (nodes.length ? "" : '<p class="archive-empty">Bu katalog henüz boş.</p>') + '</div>';
   };
 
-  const openCategory = (categoryId, shouldScroll = true) => {
+  const sceneClasses = ["archive-scene-open", "archive-scene-chronology", "archive-scene-characters", "archive-scene-institutions", "archive-scene-technology"];
+  const openCategory = (categoryId) => {
     activeCategory = categories.find((item) => item.id === categoryId);
     if (!activeCategory) return;
+    document.body.classList.remove(...sceneClasses);
+    document.body.classList.add("archive-scene-open", "archive-scene-" + categoryId);
+    document.documentElement.classList.add("archive-view-open");
     selectedNodeId = null;
     expandedNodes = new Set();
     if (activeCategory.nodes && activeCategory.nodes.length) {
@@ -338,10 +348,15 @@
     explorer.classList.toggle("is-characters", activeCategory.id === "characters");
     explorer.dataset.activeCategory = activeCategory.id;
     explorer.hidden = false;
+    explorer.classList.add("is-immersive");
+    explorer.classList.remove("scene-entering", "scene-leaving");
     if (activeCategory.view === "tree") navigationHost.innerHTML = renderTree(activeCategory.nodes);
     else renderCatalogue();
     renderDetail(findNode(activeCategory.nodes, selectedNodeId));
-    if (shouldScroll) explorer.scrollIntoView({ behavior: "smooth", block: "start" });
+    // Restart the full-scene reveal for direct launches and cross-category jumps.
+    void explorer.offsetWidth;
+    explorer.classList.add("scene-entering");
+    if (backButton) backButton.focus({ preventScroll: true });
   };
 
   categoryHost.addEventListener("click", (event) => {
@@ -382,13 +397,117 @@
     }
   });
 
-  if (backButton) {
-    backButton.addEventListener("click", () => {
+  const closeArchiveScene = () => {
+    if (explorer.hidden || !explorer.classList.contains("is-immersive")) return;
+    explorer.classList.remove("scene-entering");
+    explorer.classList.add("scene-leaving");
+    const finish = () => {
       explorer.hidden = true;
+      explorer.classList.remove("is-immersive", "scene-entering", "scene-leaving");
+      document.body.classList.remove(...sceneClasses);
+      document.documentElement.classList.remove("archive-view-open");
       activeCategory = null;
-      categoryHost.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (backButton) backButton.blur();
+    };
+    explorer.addEventListener("animationend", function onExit(event) {
+      if (event.target !== explorer || event.animationName !== "archiveSceneExit") return;
+      explorer.removeEventListener("animationend", onExit);
+      finish();
+    });
+    window.setTimeout(finish, 540);
+  };
+
+  if (backButton) backButton.addEventListener("click", closeArchiveScene);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !explorer.hidden && explorer.classList.contains("is-immersive")) {
+      closeArchiveScene();
+    }
+  });
+
+  if (worldGrid) {
+    worldGrid.addEventListener("click", (event) => {
+      const launch = event.target.closest("[data-open-category]");
+      if (!launch) return;
+      event.preventDefault();
+      openCategory(launch.dataset.openCategory);
     });
   }
+
+  document.addEventListener("click", (event) => {
+    const launch = event.target.closest("[data-open-category]");
+    if (!launch) return;
+    event.preventDefault();
+    if (nav && nav.classList.contains("is-open")) {
+      nav.classList.remove("is-open");
+      toggle?.setAttribute("aria-expanded", "false");
+    }
+    openCategory(launch.dataset.openCategory);
+  });
+
+
+  // Site-wide reveal, progress and visual-layer transitions.
+  document.body.classList.add("motion-ready");
+  const revealTargets = document.querySelectorAll(
+    ".welcome-content, .roman-copy, .roman-artwork, .world-heading, .world-material-strip, .world-card, .archive-heading, .archive-directory-heading, .author-copy, .last-door-inner"
+  );
+  revealTargets.forEach((element, index) => {
+    element.classList.add("site-reveal");
+    element.style.setProperty("--reveal-order", String(index % 6));
+  });
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.13, rootMargin: "0px 0px -7% 0px" });
+    revealTargets.forEach((element) => revealObserver.observe(element));
+
+    const layerObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) document.body.dataset.activeLayer = entry.target.id || "welcome";
+      });
+    }, { threshold: 0.45 });
+    document.querySelectorAll("main > section").forEach((section) => layerObserver.observe(section));
+  } else {
+    revealTargets.forEach((element) => element.classList.add("is-visible"));
+  }
+
+  let progressFrame = 0;
+  const updateProgress = () => {
+    if (!pageProgressBar) return;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
+    pageProgressBar.style.transform = "scaleX(" + ratio + ")";
+    progressFrame = 0;
+  };
+  window.addEventListener("scroll", () => {
+    if (!progressFrame) progressFrame = window.requestAnimationFrame(updateProgress);
+  }, { passive: true });
+  updateProgress();
+
+  // Very restrained parallax on the supplied cover and editorial materials.
+  const parallaxTargets = [
+    [document.querySelector(".welcome-cover"), 0.075],
+    [document.querySelector(".world-news-material img"), -0.045],
+    [document.querySelector(".world-flag-material img"), 0.035]
+  ].filter(([element]) => element);
+  let parallaxFrame = 0;
+  const updateParallax = () => {
+    const scrollY = window.scrollY || 0;
+    parallaxTargets.forEach(([element, factor]) => {
+      element.style.setProperty("--site-parallax", (scrollY * factor).toFixed(1) + "px");
+    });
+    parallaxFrame = 0;
+  };
+  window.addEventListener("scroll", () => {
+    if (!parallaxFrame) parallaxFrame = window.requestAnimationFrame(updateParallax);
+  }, { passive: true });
+  updateParallax();
 
   fetch("archives.json", { cache: "no-cache" })
     .then((response) => {
