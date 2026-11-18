@@ -122,64 +122,354 @@ def import_chronology():
         roots.append(group("chronology","Tarihi belirtilmeyen kayıtlar","TARİHİ BELİRTİLMEMİŞ","Kaynak notlarda kesin tarih verilmeyen olaylar.",undated,"undated-events"))
     return {"id":"chronology","title":"Kronoloji","description":"1938'den başlayarak alternatif tarih çizgisindeki olaylar. Yıl düğümlerini aç, olayları seç ve kayıtlar arasındaki bağlantıları izle.","view":"tree","label":"DALLANAN OLAY AĞACI","order":1,"nodes":roots}
 
-def import_world():
-    base="Alternatif Tarih/"
-    overview=[]
-    for rel in ["Ana Evren.md","Dünya/Genel Dünya.md","Dünya/Türkiye.md","Dünya/Almanya.md","Dünya/Amerika.md","Dünya/Diğer Devletler.md","Dünya/Dünya Paylaşımı 1946.md"]:
-        full=base+rel
-        doc=read_doc(full)
-        if doc: overview.append(node("world",doc))
-    sections=[]
-    if overview:
-        sections.append(group("world","Ana dünya ve devletler","DÜNYA DOSYALARI","Alternatif dünyanın tarihçesi, büyük güçleri ve 1946 paylaşım düzeni.",overview,"world-overview"))
-    pdir=VAULT/base/"Dünya"/"Ülke Perspektifleri"
-    perspectives=[]
-    if pdir.is_dir():
-        for path in sorted(pdir.glob("*.md"),key=lambda p:p.name.casefold()):
-            rel=path.relative_to(VAULT).as_posix()
-            doc=read_doc(rel)
-            if doc: perspectives.append(node("world",doc))
-    if perspectives:
-        sections.append(group("world","Ülke perspektifleri","1938–1946","Aynı tarihsel dönemi farklı ülkelerin bakış açısından inceleyen notlar.",perspectives,"country-perspectives"))
-    decades=[]
-    for rel in ["Tarih/1940 - 1950.md","Tarih/1950.md","Tarih/1960.md","Tarih/1970.md","Tarih/1980.md"]:
-        doc=read_doc(base+rel)
-        if doc: decades.append(node("world",doc))
-    if decades:
-        sections.append(group("world","Dönem kayıtları","1940–1980","Savaş sonrası on yılların siyasi ve toplumsal gelişmeleri.",decades,"decade-records"))
-    canon=[]
-    for rel in ["Aslı Olan Düzen/World/Politics/Büyük Türk İmparatorluğu.md","Aslı Olan Düzen/World/Politics/Kanat.md"]:
-        doc=read_doc(rel)
-        if doc: canon.append(node("world",doc))
-    if canon:
-        sections.append(group("world","Devlet ve toplumsal sistem","KANON KAYITLARI","Yerleşik kanon olarak kaydedilmiş devlet ve toplumsal sistem notları.",canon,"state-and-social-system"))
-    if not sections: return None
-    return {"id":"world","title":"Dünya ve tarih","description":"Alternatif tarihin devletleri, dünya paylaşımı, ülke perspektifleri ve savaş sonrası on yıllar.","view":"catalogue","label":"DÜNYA KAYITLARI","order":2,"nodes":sections}
+def make_public_character(category, spec):
+    """Create a short, spoiler-safe character card from an approved source note."""
+    doc = read_doc(spec["path"])
+    if not doc:
+        return None
+
+    fields = []
+    if spec.get("birth"):
+        fields.append(f"**Doğum:** {spec['birth']}")
+    if spec.get("age"):
+        fields.append(f"**Yaş (1985):** {spec['age']}")
+    if spec.get("role"):
+        fields.append(f"**Genel rol:** {spec['role']}")
+    if spec.get("appearance"):
+        fields.append(f"**Dış görünüş:** {spec['appearance']}")
+    if spec.get("personality"):
+        fields.append(f"**Kişilik:** {spec['personality']}")
+
+    content = "\n\n".join(fields)
+    summary = spec.get("summary") or spec.get("personality", "")
+    return {
+        "id": category + "-" + slug(spec["key"]),
+        "path": spec["path"],
+        "sourceName": doc["sourceName"],
+        "title": spec["name"],
+        "date": spec.get("date", ""),
+        "summary": summary,
+        "content": content,
+        "order": spec.get("order", 999),
+        "aliases": spec.get("aliases", [doc["title"], doc["sourceName"]]),
+        "children": [],
+        "links": [],
+    }
+
+def make_character_group(title, date, summary, children, key):
+    return group("characters", title, date, summary, children, key)
 
 def import_characters():
-    root=VAULT/"Alternatif Tarih"/"Karakterler"
-    if not root.is_dir(): return None
-    groups=[]
-    folders=[("Ana ve Destek Karakterler","Ana ve destek karakterler","Romanın merkezindeki kişiler, aile üyeleri ve destek karakterleri."),("siyasi karakterler","Siyasi tarih ve soy","Türkiye'nin alternatif siyasi tarihindeki liderler ve aile geçmişi.")]
-    for folder_name,title,summary in folders:
-        folder=root/folder_name
-        records=[]
-        if folder.is_dir():
-            for path in sorted(folder.glob("*.md"),key=lambda p:p.name.casefold()):
-                rel=path.relative_to(VAULT).as_posix()
-                doc=read_doc(rel)
-                if not doc: continue
-                lines=[]
-                for line in doc["content"].splitlines():
-                    if re.match(r"^\s*\*\*(Boyu?|Boy|Saç|Göz|Fiziksel yapı|En sevdiği renk|En Sevdiği Renk|Giyim tarzı|Giyim Tarzı)\s*:",line,re.I):
-                        continue
-                    lines.append(line)
-                doc["content"]="\n".join(lines).strip()
-                records.append(node("characters",doc))
-        if records:
-            groups.append(group("characters",title,"KARAKTER DOSYALARI",summary,records,slug(folder_name)))
-    if not groups: return None
-    return {"id":"characters","title":"Karakterler","description":"Romanın karakterleri ve alternatif tarihteki siyasi figürler.","view":"catalogue","label":"KİŞİ DOSYALARI","order":3,"nodes":groups}
+    """Publish concise, consistent, non-spoiler character introductions only."""
+    main_base = "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/"
+    political_base = "Alternatif Tarih/Karakterler/siyasi karakterler/"
+
+    main_specs = [
+        {
+            "key":"alev-acar", "path":main_base+"Alev Acar.md", "name":"Alev Acar",
+            "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
+            "role":"Öğrenci · 2. Kanat · sivil pilotluk hedefi",
+            "appearance":"Düz kızıl saçlı ve ela gözlü.",
+            "personality":"Neşeli, konuşkan, uyumlu ve arkadaşlarına bağlı.",
+            "aliases":["Alev Acar"]
+        },
+        {
+            "key":"asena-korkut", "path":main_base+"Asena Korkut.md", "name":"Asena Korkut",
+            "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
+            "role":"Öğrenci · 5. Kanat",
+            "appearance":"Siyah, hafif kızıl tonlu saçları, kahverengi gözleri ve gözlüğü vardır.",
+            "personality":"Konuşkan, sosyal, anlayışlı ve insan ilişkilerinde becerikli.",
+            "aliases":["Asena Korkut"]
+        },
+        {
+            "key":"aylin-aksoy", "path":main_base+"Aylin Aksoy.md", "name":"Aylin Aksoy",
+            "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
+            "role":"Öğrenci · 3. Kanat · hukuk alanına ilgi duyuyor",
+            "appearance":"Uzun, kıvırcık kumral saçlı ve koyu gözlü.",
+            "personality":"Sakin, dikkatli, gözlemci ve planlı.",
+            "aliases":["Aylin Aksoy"]
+        },
+        {
+            "key":"tomris-ilter", "path":main_base+"Tomris İlter.md", "name":"Tomris İlter",
+            "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
+            "role":"Öğrenci · 6. Kanat",
+            "appearance":"Uzun siyah saçlı ve koyu gözlü.",
+            "personality":"Kendine güvenen, ciddi, kararlı ve yönetici yönü güçlü.",
+            "aliases":["Tomris İlter","TOMRİS İLTER"]
+        },
+        {
+            "key":"ismail-yagiz-aslan", "path":main_base+"İsmail Yağız Aslan.md", "name":"İsmail Yağız Aslan",
+            "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
+            "role":"Öğrenci",
+            "appearance":"Siyah saçlı, kahverengi gözlü; rahat ve gündelik giyimi tercih eder.",
+            "personality":"Neşeli, esprili ve samimi; gerektiğinde kararlı ve odaklı.",
+            "aliases":["İsmail Yağız Aslan","İso"]
+        },
+        {
+            "key":"muhammed-mete", "path":main_base+"Muhammed Mete.md", "name":"Muhammed Mete",
+            "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
+            "role":"Öğrenci · 4. Kanat · sivil havacılığa ilgi duyuyor",
+            "appearance":"Siyah, hafif kıvırcık saçlı ve kahverengi gözlü.",
+            "personality":"Sakin, ölçülü, uyumlu ve yakın çevresinde konuşkan.",
+            "aliases":["Muhammed Mete"]
+        },
+        {
+            "key":"oguz-kagan-atalay", "path":main_base+"Oğuz Kağan Atalay.md", "name":"Oğuz Kağan Atalay",
+            "date":"1968 · 17 yaş", "birth":"3 Ocak 1968 · İstanbul, Üsküdar", "age":"17",
+            "role":"Öğrenci · 3. Kanat · havacılığa ilgi duyuyor",
+            "appearance":"Belirgin yüz hatlarına, kızıl saçlara ve düzenli bir görünüme sahiptir.",
+            "personality":"Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.",
+            "aliases":["Oğuz Kağan Atalay"]
+        },
+        {
+            "key":"aysel-atalay", "path":main_base+"Aysel Atalay.md", "name":"Aysel Atalay",
+            "date":"1947 · 38 yaş", "birth":"1947", "age":"38",
+            "role":"Atalay ailesinin annesi",
+            "appearance":"Sade ve zarif bir giyim tarzını tercih eder.",
+            "personality":"Sakin, sabırlı, anlayışlı ve koruyucu.",
+            "aliases":["Aysel Atalay"]
+        },
+        {
+            "key":"cengiz-atalay", "path":main_base+"Cengiz Atalay.md", "name":"Cengiz Atalay",
+            "date":"1945 · 40 yaş", "birth":"1945", "age":"40",
+            "role":"Askerî uçak mühendisi",
+            "appearance":"Düzenli ve klasik giyinir; resmî ve hafif askerî çizgileri tercih eder.",
+            "personality":"Özgüvenli, enerjik, meraklı ve çalışkan.",
+            "aliases":["Cengiz Atalay"]
+        },
+        {
+            "key":"meliha-atalay", "path":main_base+"Meliha Atalay.md", "name":"Meliha Atalay",
+            "date":"1975 · 10 yaş", "birth":"1975", "age":"10",
+            "role":"Öğrenci",
+            "appearance":"Yaşına uygun, sade ve rahat kıyafetler tercih eder.",
+            "personality":"Çalışkan, kararlı, inatçı ve azimli.",
+            "aliases":["Meliha Atalay"]
+        },
+        {
+            "key":"muhammed-atalay", "path":main_base+"Muhammed Atalay.md", "name":"Muhammed Atalay",
+            "date":"1973 · 12 yaş", "birth":"1973", "age":"12",
+            "role":"Öğrenci · mühendisliğe ilgi duyuyor",
+            "appearance":"Yaşına uygun, sade ve rahat giyinir.",
+            "personality":"Meraklı, hareketli ve teknik konulara ilgili.",
+            "aliases":["Muhammed Atalay"]
+        },
+        {
+            "key":"nec-det-atalay", "path":main_base+"Necdet Atalay.md", "name":"Necdet Atalay",
+            "date":"1918 · 67 yaş", "birth":"1918", "age":"67",
+            "role":"Emekli askerî uçak mühendisi",
+            "appearance":"Sade, klasik ve düzenli giyinir.",
+            "personality":"Ağırbaşlı, disiplinli, otoriter ve az konuşan.",
+            "aliases":["Necdet Atalay"]
+        },
+        {
+            "key":"sabiha-atalay", "path":main_base+"Sabiha Atalay.md", "name":"Sabiha Atalay",
+            "date":"1923 · 62 yaş", "birth":"1923", "age":"62",
+            "role":"Atalay ailesinin büyüğü",
+            "appearance":"Sade ve klasik kıyafetler tercih eder.",
+            "personality":"Sakin, sabırlı, anlayışlı ve aile odaklı.",
+            "aliases":["Sabiha Atalay"]
+        },
+        {
+            "key":"naciye-kaya", "path":main_base+"Naciye Kaya.md", "name":"Naciye Kaya",
+            "date":"1920 · 65 yaş", "birth":"1920", "age":"65",
+            "role":"Kaya ailesinin büyüğü",
+            "appearance":"Sade ve geleneksel bir giyim tarzına sahiptir.",
+            "personality":"Girişken, konuşkan, açık sözlü ve pratik zekâlı.",
+            "aliases":["Naciye Kaya"]
+        },
+        {
+            "key":"riza-kaya", "path":main_base+"Rıza Kaya.md", "name":"Rıza Kaya",
+            "date":"1916 · 69 yaş", "birth":"1916", "age":"69",
+            "role":"Kaya ailesinin büyüğü",
+            "appearance":"Sade ve düzenli giyinir.",
+            "personality":"Sakin, ağırbaşlı, geleneklerine bağlı ve sorumluluk sahibi.",
+            "aliases":["Rıza Kaya"]
+        },
+    ]
+
+    political_specs = [
+        {
+            "key":"abdullah-keser", "path":political_base+"Abdullah.md", "name":"Abdullah Keser",
+            "date":"Yaklaşık 1770–1830'lar", "birth":"Yaklaşık 1770 · Giresun, Kuşköy",
+            "role":"Keser soyunun eski kuşağı · demirci",
+            "appearance":"Döneminin sade zanaatkâr yaşamına uygun bir görünüm.",
+            "personality":"Sert mizaçlı, az konuşan, çalışkan ve ailesine bağlı.",
+            "aliases":["Abdullah","Abdullah Keser"]
+        },
+        {
+            "key":"oguz-keser", "path":political_base+"Oğuz.md", "name":"Oğuz Keser",
+            "date":"1802–1898", "birth":"1802 · Giresun, Kuşköy",
+            "role":"Keser soyunun ikinci kuşağı · demirci",
+            "appearance":"Zanaatkâr kimliğiyle sade ve dönemine uygun giyinir.",
+            "personality":"Geleneklerine bağlı, dürüst, sevecen ve güçlü iradeli.",
+            "aliases":["Oğuz","Oğuz Keser"]
+        },
+        {
+            "key":"gul-keser", "path":political_base+"Gül.md", "name":"Gül Keser",
+            "date":"Yaklaşık 1810 doğumlu", "birth":"Yaklaşık 1810 · Giresun çevresi",
+            "role":"Keser ailesinin ikinci kuşağı",
+            "appearance":"Kaynak notlarda ayrıntılı fiziksel tanım bulunmuyor.",
+            "personality":"Sabırlı, sezgileri güçlü, birleştirici ve aile odaklı.",
+            "aliases":["Gül","Gül Keser"]
+        },
+        {
+            "key":"kaan-keser", "path":political_base+"Kaan.md", "name":"Kaan Keser",
+            "date":"1846–1904", "birth":"1846 · Giresun, Kuşköy",
+            "role":"Keser soyunun üçüncü kuşağı · demirci",
+            "appearance":"Zanaatkâr kimliğiyle sade ve dönemine uygun giyinir.",
+            "personality":"Sakin, azimli, tutkulu ve sorumluluk sahibi.",
+            "aliases":["Kaan","Kaan Keser"]
+        },
+        {
+            "key":"ali-keser", "path":political_base+"Ali.md", "name":"Ali Keser",
+            "date":"Keser soyunun üçüncü kuşağı", "role":"Tarım işleriyle uğraşır; dönem dönem demircilik yapar.",
+            "appearance":"Kaynak notlarda ayrıntılı fiziksel tanım bulunmuyor.",
+            "personality":"Hareketli, meraklı, bağımsız ve zaman zaman çabuk öfkelenen.",
+            "aliases":["Ali","Ali Keser"]
+        },
+        {
+            "key":"firuze-keser", "path":political_base+"Furize.md", "name":"Firuze Keser",
+            "date":"Keser soyunun üçüncü kuşağı", "role":"Keser ailesinin bir üyesi",
+            "appearance":"Kaynak notlarda ayrıntılı fiziksel tanım bulunmuyor.",
+            "personality":"Sabırlı, şefkatli, içine kapanık ve gerektiğinde dirençli.",
+            "aliases":["Firuze","Firuze Keser","Furize"]
+        },
+        {
+            "key":"alperen-keser", "path":political_base+"Alperen.md", "name":"Alperen Keser",
+            "date":"1888–1960", "birth":"1888 · Giresun, Kuşköy",
+            "role":"Asker ve devlet adamı · 1938–1960 döneminin lideri",
+            "appearance":"Kaynak notlarda ayrıntılı fiziksel tanım bulunmuyor.",
+            "personality":"Disiplinli, kararlı, milliyetçi ve güçlü merkezi devlet yanlısı.",
+            "aliases":["Alperen","Alperen Keser"]
+        },
+        {
+            "key":"ismail-karaslan", "path":political_base+"İsmail Karaslan.md", "name":"İsmail Karaslan",
+            "date":"1904 doğumlu · 1960–1975 döneminde lider",
+            "birth":"1904 · Hatay",
+            "role":"Asker ve devlet adamı",
+            "appearance":"Askerî geçmişiyle uyumlu, sade ve resmî bir görünüm.",
+            "personality":"Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
+            "aliases":["İsmail Karaslan"]
+        },
+        {
+            "key":"selim-arkan", "path":political_base+"Selim Arkan.md", "name":"Selim Arkan",
+            "date":"1935 doğumlu · 1975'ten itibaren lider",
+            "birth":"1935 · Ankara",
+            "role":"Siyasetçi ve devlet adamı",
+            "appearance":"Sade, klasik ve resmî giyim tarzını benimser.",
+            "personality":"Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
+            "aliases":["Selim Arkan"]
+        },
+    ]
+
+    main_nodes = {}
+    for spec in main_specs:
+        rec = make_public_character("characters", spec)
+        if rec:
+            main_nodes[spec["key"]] = rec
+
+    political_nodes = {}
+    for spec in political_specs:
+        rec = make_public_character("characters", spec)
+        if rec:
+            political_nodes[spec["key"]] = rec
+
+    def collect(keys, source):
+        return [source[key] for key in keys if key in source]
+
+    young_people = make_character_group(
+        "Genç karakterler", "GENÇ KARAKTERLER",
+        "1985 yılında hikâyenin genç kuşağını oluşturan öğrenciler ve arkadaş çevresi.",
+        collect(["alev-acar","asena-korkut","aylin-aksoy","tomris-ilter",
+                 "oguz-kagan-atalay","ismail-yagiz-aslan","muhammed-mete"], main_nodes),
+        "young-characters"
+    )
+
+    atalay_suyu = make_character_group(
+        "Atalay Soyu", "AİLE AĞACI",
+        "Atalay ailesinin kuşakları ve aileyle bağlantılı Kaya ailesi.",
+        [
+            make_character_group(
+                "Atalay büyükleri", "KUŞAK I",
+                "Atalay ailesinin büyükleri.",
+                collect(["nec-det-atalay","sabiha-atalay"], main_nodes),
+                "atalay-elders"
+            ),
+            make_character_group(
+                "Kaya ailesi", "AİLE BAĞI",
+                "Atalay ailesiyle bağlantılı Kaya ailesi.",
+                collect(["riza-kaya","naciye-kaya","aysel-atalay"], main_nodes),
+                "kaya-branch"
+            ),
+            make_character_group(
+                "Cengiz Atalay kuşağı", "KUŞAK II",
+                "Atalay ailesinin mühendislik geleneğiyle tanınan kuşağı.",
+                collect(["cengiz-atalay"], main_nodes),
+                "atalay-second-generation"
+            ),
+            make_character_group(
+                "Oğuz, Muhammed ve Meliha", "KUŞAK III",
+                "Atalay ailesinin genç kuşağı.",
+                collect(["oguz-kagan-atalay","muhammed-atalay","meliha-atalay"], main_nodes),
+                "atalay-third-generation"
+            ),
+        ],
+        "atalay-lineage"
+    )
+
+    keser_soyu = make_character_group(
+        "Keser Soyu", "AİLE AĞACI",
+        "Keser ailesinin bilinen kuşakları; isimler aile ağacında ortak soy adıyla standartlaştırılmıştır.",
+        [
+            make_character_group(
+                "İlk kuşak", "KUŞAK I",
+                "Keser soyunun bilinen eski kuşağı.",
+                collect(["abdullah-keser"], political_nodes),
+                "keser-first-generation"
+            ),
+            make_character_group(
+                "İkinci kuşak", "KUŞAK II",
+                "Oğuz ve Gül'ün kuşağı.",
+                collect(["oguz-keser","gul-keser"], political_nodes),
+                "keser-second-generation"
+            ),
+            make_character_group(
+                "Üçüncü kuşak", "KUŞAK III",
+                "Kaan, Ali ve Firuze'nin kuşağı.",
+                collect(["kaan-keser","ali-keser","firuze-keser"], political_nodes),
+                "keser-third-generation"
+            ),
+            make_character_group(
+                "Dördüncü kuşak", "KUŞAK IV",
+                "Alperen Keser'in kuşağı.",
+                collect(["alperen-keser"], political_nodes),
+                "keser-fourth-generation"
+            ),
+        ],
+        "keser-lineage"
+    )
+
+    state_leaders = make_character_group(
+        "Devlet liderleri", "SİYASİ KARAKTERLER",
+        "Keser soy ağacının dışında yer alan devlet yöneticileri.",
+        collect(["ismail-karaslan","selim-arkan"], political_nodes),
+        "state-leaders"
+    )
+
+    roots = [young_people, atalay_suyu, keser_soyu, state_leaders]
+    roots = [item for item in roots if item.get("children")]
+    if not roots:
+        return None
+
+    return {
+        "id":"characters",
+        "title":"Karakterler",
+        "description":"Kısa, genel ve spoilersız karakter tanıtımları. Aile bağları ayrı soy ağaçlarında düzenlenmiştir.",
+        "view":"tree",
+        "label":"KARAKTER VE SOY AĞAÇLARI",
+        "order":3,
+        "nodes":roots
+    }
 
 def import_institutions():
     rel="Kuruluşlar/Hilalifiyet Merkezi - İstanbul.md"
@@ -218,7 +508,21 @@ def attach_links(categories):
                         links.append({"categoryId":cat_id,"id":target["id"],"title":target["title"],"date":target.get("date","")})
             n["links"]=links
             resolve(n.get("children",[]))
-    for cat in categories: resolve(cat.get("nodes",[]))
+    for cat in categories:
+        resolve(cat.get("nodes", []))
+
+    def clear_unpublished_links(nodes):
+        for n in nodes:
+            def replace_link(match):
+                target = normalize(match.group(1))
+                if target not in index:
+                    return match.group(2) or match.group(1)
+                return match.group(0)
+            n["content"] = WIKILINK.sub(replace_link, n.get("content", ""))
+            clear_unpublished_links(n.get("children", []))
+
+    for cat in categories:
+        clear_unpublished_links(cat.get("nodes", []))
 
 def manual_categories():
     root=ROOT/"content"/"archives"
@@ -248,7 +552,7 @@ def flatten(nodes):
 
 def discover_archives():
     cats=[]
-    for fn in [import_chronology,import_world,import_characters,import_institutions,import_technology]:
+    for fn in [import_chronology,import_characters,import_institutions,import_technology]:
         cat=fn()
         if cat: cats.append(cat)
     cats += manual_categories()
