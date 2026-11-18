@@ -9,6 +9,10 @@ import shutil
 from pathlib import Path
 from typing import Any
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import import_obsidian
+
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVES_ROOT = ROOT / "content" / "archives"
 DIST = ROOT / "dist"
@@ -212,7 +216,7 @@ def build() -> None:
     if assets.is_dir():
         shutil.copytree(assets, DIST / "assets")
 
-    archive_data = discover_archives()
+    archive_data = import_obsidian.discover_archives()
     encoded = json.dumps(archive_data, ensure_ascii=False, indent=2) + "\n"
 
     # Keep a root copy for branch-based preview and place the deploy copy in dist.
