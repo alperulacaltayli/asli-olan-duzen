@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"te","type":"file","file":"World/Command Structures/Turkish Empire/Turkish Imperial High Command Structure.md","x":-400,"y":0,"width":320,"height":100,"color":"2"},
+		{"id":"gr","type":"file","file":"World/Command Structures/German Reich/German Reich High Command Structure.md","x":400,"y":0,"width":320,"height":100,"color":"1"},
+		{"id":"selim","type":"file","file":"World/Characters/Turkish Empire/Selim Arkan.md","x":-560,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"falk","type":"file","file":"World/Characters/German Reich/Reinhard Falkenhorst.md","x":560,"y":180,"width":260,"height":80,"color":"1"},
+		{"id":"intel_te","type":"file","file":"World/Organizations/Turkish Empire/Imperial Intelligence Directorate.md","x":-560,"y":380,"width":260,"height":80,"color":"4"},
+		{"id":"intel_gr","type":"file","file":"World/Organizations/German Reich/Reich Foreign Intelligence Service.md","x":560,"y":380,"width":260,"height":80,"color":"4"},
+		{"id":"air_te","type":"file","file":"World/Organizations/Turkish Empire/Imperial Air Force.md","x":-280,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"air_gr","type":"file","file":"World/Organizations/German Reich/Luftwaffe High Command.md","x":280,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"africa_te","type":"file","file":"World/Characters/Turkish Empire/Haluk Sancar.md","x":-280,"y":600,"width":260,"height":80,"color":"5"},
+		{"id":"africa_gr","type":"file","file":"World/Characters/German Reich/Bruno Epp.md","x":280,"y":600,"width":260,"height":80,"color":"5"}
+	],
+	"edges":[
+		{"id":"e_te_sel","fromNode":"te","fromSide":"bottom","toNode":"selim","toSide":"top","label":"supreme authority"},
+		{"id":"e_gr_falk","fromNode":"gr","fromSide":"bottom","toNode":"falk","toSide":"top","label":"supreme authority"},
+		{"id":"e_tension","fromNode":"te","fromSide":"bottom","toNode":"gr","toSide":"top","label":"public friendship / strategic rivalry","color":"1"},
+		{"id":"e_intel","fromNode":"intel_te","fromSide":"bottom","toNode":"intel_gr","toSide":"top","label":"intelligence conflict","color":"6"},
+		{"id":"e_air","fromNode":"air_te","fromSide":"bottom","toNode":"air_gr","toSide":"top","label":"aviation competition","color":"3"},
+		{"id":"e_africa","fromNode":"africa_te","fromSide":"bottom","toNode":"africa_gr","toSide":"top","label":"moral/political contrast","color":"5"},
+		{"id":"e_sel_falk","fromNode":"selim","fromSide":"bottom","toNode":"falk","toSide":"top","label":"diplomatic rivalry","color":"1"}
+	]
+}

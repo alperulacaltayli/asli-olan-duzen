@@ -1,0 +1,42 @@
+{
+	"nodes":[
+		{"id":"selim","type":"file","file":"World/Characters/Turkish Empire/Selim Arkan.md","x":0,"y":0,"width":260,"height":80,"color":"1"},
+		{"id":"kaan","type":"file","file":"World/Characters/Turkish Empire/Kaan Demirsoy.md","x":-560,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"turan","type":"file","file":"World/Characters/Turkish Empire/Turan Erbay.md","x":-280,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"mete","type":"file","file":"World/Characters/Turkish Empire/Mete Kutlu.md","x":0,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"alp","type":"file","file":"World/Characters/Turkish Empire/Alp Erden.md","x":280,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"safiye","type":"file","file":"World/Characters/Turkish Empire/Safiye Kutadgu.md","x":560,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"gokhan","type":"file","file":"World/Characters/Turkish Empire/Gökhan Aydemir.md","x":-980,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"boru","type":"file","file":"World/Characters/Turkish Empire/Börü Alkan.md","x":-700,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"deniz","type":"file","file":"World/Characters/Turkish Empire/Deniz Koray.md","x":-420,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"cevdet","type":"file","file":"World/Characters/Turkish Empire/Cevdet Bayraktar.md","x":-140,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"rana","type":"file","file":"World/Characters/Turkish Empire/Rana Tözün.md","x":140,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"ziya","type":"file","file":"World/Characters/Turkish Empire/Ziya Arat.md","x":420,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"haluk","type":"file","file":"World/Characters/Turkish Empire/Haluk Sancar.md","x":980,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"cengiz","type":"file","file":"World/Characters/Turkish Empire/Cengiz Atalay.md","x":-280,"y":600,"width":260,"height":80,"color":"4"},
+		{"id":"baran","type":"file","file":"World/Characters/Turkish Empire/Baran İleri.md","x":0,"y":600,"width":260,"height":80,"color":"4"},
+		{"id":"selah","type":"file","file":"World/Characters/Turkish Empire/Selahattin Akgün.md","x":690,"y":380,"width":260,"height":80,"color":"3"}
+	],
+	"edges":[
+		{"id":"e_selim_kaan","fromNode":"selim","fromSide":"bottom","toNode":"kaan","toSide":"top","label":"direct authority"},
+		{"id":"e_selim_turan","fromNode":"selim","fromSide":"bottom","toNode":"turan","toSide":"top","label":"direct authority"},
+		{"id":"e_selim_mete","fromNode":"selim","fromSide":"bottom","toNode":"mete","toSide":"top","label":"direct authority"},
+		{"id":"e_selim_alp","fromNode":"selim","fromSide":"bottom","toNode":"alp","toSide":"top","label":"direct authority"},
+		{"id":"e_selim_safiye","fromNode":"selim","fromSide":"bottom","toNode":"safiye","toSide":"top","label":"direct authority"},
+		{"id":"e_turan_gokhan","fromNode":"turan","fromSide":"bottom","toNode":"gokhan","toSide":"top","label":"military command"},
+		{"id":"e_turan_boru","fromNode":"turan","fromSide":"bottom","toNode":"boru","toSide":"top","label":"military command"},
+		{"id":"e_turan_deniz","fromNode":"turan","fromSide":"bottom","toNode":"deniz","toSide":"top","label":"military command"},
+		{"id":"e_selim_cevdet","fromNode":"selim","fromSide":"bottom","toNode":"cevdet","toSide":"top","label":"ministerial authority"},
+		{"id":"e_selim_rana","fromNode":"selim","fromSide":"bottom","toNode":"rana","toSide":"top","label":"ministerial authority"},
+		{"id":"e_selim_ziya","fromNode":"selim","fromSide":"bottom","toNode":"ziya","toSide":"top","label":"ministerial authority"},
+		{"id":"e_alp_selah","fromNode":"alp","fromSide":"bottom","toNode":"selah","toSide":"top","label":"domestic security"},
+		{"id":"e_alp_haluk","fromNode":"alp","fromSide":"bottom","toNode":"haluk","toSide":"top","label":"regional administration"},
+		{"id":"e_mete_cengiz","fromNode":"mete","fromSide":"bottom","toNode":"cengiz","toSide":"top","color":"6","label":"secret channel / proposed"},
+		{"id":"e_gokhan_cengiz","fromNode":"gokhan","fromSide":"bottom","toNode":"cengiz","toSide":"top","label":"aviation technical"},
+		{"id":"e_rana_baran","fromNode":"rana","fromSide":"bottom","toNode":"baran","toSide":"top","label":"research line"},
+		{"id":"e_gokhan_baran","fromNode":"gokhan","fromSide":"bottom","toNode":"baran","toSide":"top","label":"air force liaison"},
+		{"id":"r_alp_mete","fromNode":"alp","fromSide":"bottom","toNode":"mete","toSide":"top","color":"1","label":"rivalry: domestic vs foreign intelligence"},
+		{"id":"r_cev_rana","fromNode":"cevdet","fromSide":"bottom","toNode":"rana","toSide":"top","color":"1","label":"rivalry: production vs science"},
+		{"id":"r_tur_saf","fromNode":"turan","fromSide":"bottom","toNode":"safiye","toSide":"top","color":"1","label":"tension: readiness vs diplomacy"}
+	]
+}

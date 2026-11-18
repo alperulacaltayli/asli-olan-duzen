@@ -1,0 +1,1 @@
+**Kızıl Orda**, Ankara'nın merkezinde bulunan ve Büyük Türk İmparatorluğu'nun siyasî, askerî ve stratejik idaresinin toplandığı ana merkezdi.

@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"3ff7bdb694141c55","x":-180,"y":-156,"width":400,"height":400,"type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/Alperen.md"},
+		{"id":"d78a6c1d46ddf847","x":-760,"y":14,"width":250,"height":60,"type":"text","text":"Mustafa Kemal Atatürk"},
+		{"id":"9be6af4fd6cdbcb6","x":500,"y":-156,"width":400,"height":400,"type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/İsmail Karaslan.md"},
+		{"id":"9ea027de7c6c8db7","x":1140,"y":-156,"width":400,"height":400,"type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/Selim Arkan.md"},
+		{"id":"d8a3060cdb0c4fb9","x":1700,"y":14,"width":250,"height":60,"type":"text","text":"devam etmekte"}
+	],
+	"edges":[
+		{"id":"1b0637b1f7d86496","fromNode":"d78a6c1d46ddf847","fromSide":"right","toNode":"3ff7bdb694141c55","toSide":"left","label":"1938"},
+		{"id":"c1e632b4eee8a48b","fromNode":"3ff7bdb694141c55","fromSide":"right","toNode":"9be6af4fd6cdbcb6","toSide":"left","label":"1960"},
+		{"id":"72c6eee32c8e45ab","fromNode":"9be6af4fd6cdbcb6","fromSide":"right","toNode":"9ea027de7c6c8db7","toSide":"left","label":"1975"},
+		{"id":"97888b8290b3d5b5","fromNode":"9ea027de7c6c8db7","fromSide":"right","toNode":"d8a3060cdb0c4fb9","toSide":"left"}
+	]
+}

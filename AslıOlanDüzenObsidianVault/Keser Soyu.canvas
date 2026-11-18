@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"bf219c503b9c565c","type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/Kaan.md","x":40,"y":-12,"width":400,"height":400},
+		{"id":"e86b7453f6e125d6","type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/Alperen.md","x":680,"y":-12,"width":400,"height":400},
+		{"id":"1b7b9a80c6563958","type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/Ali.md","x":40,"y":520,"width":400,"height":400},
+		{"id":"59d6256a0f1c3e1f","type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/Furize.md","x":40,"y":-521,"width":400,"height":400},
+		{"id":"4118fb2552c9cf2e","type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/Oğuz.md","x":-880,"y":188,"width":400,"height":400},
+		{"id":"9399e7e4e82c2dab","type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/Gül.md","x":-880,"y":-521,"width":400,"height":400},
+		{"id":"51598d48e65110bf","type":"file","file":"Alternatif Tarih/Karakterler/siyasi karakterler/Abdullah.md","x":-1580,"y":280,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"2a0ea5aab024209a","fromNode":"4118fb2552c9cf2e","fromSide":"right","toNode":"bf219c503b9c565c","toSide":"left"},
+		{"id":"83ff9df137065a11","fromNode":"bf219c503b9c565c","fromSide":"right","toNode":"e86b7453f6e125d6","toSide":"left"},
+		{"id":"9f3adb66607ce560","fromNode":"bf219c503b9c565c","fromSide":"top","toNode":"59d6256a0f1c3e1f","toSide":"bottom"},
+		{"id":"c109fbe44ac72a01","fromNode":"59d6256a0f1c3e1f","fromSide":"bottom","toNode":"bf219c503b9c565c","toSide":"top"},
+		{"id":"25af819d1927383e","fromNode":"59d6256a0f1c3e1f","fromSide":"right","toNode":"e86b7453f6e125d6","toSide":"left"},
+		{"id":"5614530d2801f042","fromNode":"9399e7e4e82c2dab","fromSide":"bottom","toNode":"4118fb2552c9cf2e","toSide":"top"},
+		{"id":"ca1c176664918216","fromNode":"4118fb2552c9cf2e","fromSide":"top","toNode":"9399e7e4e82c2dab","toSide":"bottom"},
+		{"id":"6a8a598451e662c0","fromNode":"9399e7e4e82c2dab","fromSide":"right","toNode":"bf219c503b9c565c","toSide":"left"},
+		{"id":"a26f6365b2dc1d6a","fromNode":"9399e7e4e82c2dab","fromSide":"right","toNode":"1b7b9a80c6563958","toSide":"left"},
+		{"id":"329b571ba4766373","fromNode":"4118fb2552c9cf2e","fromSide":"right","toNode":"1b7b9a80c6563958","toSide":"left"},
+		{"id":"240036c0f4226500","fromNode":"51598d48e65110bf","fromSide":"right","toNode":"4118fb2552c9cf2e","toSide":"left"}
+	]
+}

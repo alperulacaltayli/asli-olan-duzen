@@ -1,0 +1,1 @@
+Almanlardan alınan tank teknolojileri ile geliştirilen türk tankları

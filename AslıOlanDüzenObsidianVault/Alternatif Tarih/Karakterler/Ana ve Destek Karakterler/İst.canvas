@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"93575c06fca8f4cf","type":"file","file":"Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Tomris İlter.md","x":-1200,"y":-242,"width":400,"height":400},
+		{"id":"087ea58cbaf01f8d","type":"file","file":"Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Aylin Aksoy.md","x":-840,"y":340,"width":400,"height":400},
+		{"id":"f0f16e64157220dd","type":"file","file":"Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Alev Acar.md","x":-1240,"y":860,"width":400,"height":400},
+		{"id":"1aaa01e6d17d9fba","type":"file","file":"Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Asena Korkut.md","x":-500,"y":-242,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"22781c33d60cf5f7","fromNode":"93575c06fca8f4cf","fromSide":"right","toNode":"1aaa01e6d17d9fba","toSide":"left"},
+		{"id":"384bc7c7275df5bf","fromNode":"1aaa01e6d17d9fba","fromSide":"left","toNode":"93575c06fca8f4cf","toSide":"right"},
+		{"id":"ff1e6370cfcc7c44","fromNode":"93575c06fca8f4cf","fromSide":"bottom","toNode":"087ea58cbaf01f8d","toSide":"top"},
+		{"id":"b1b5dbc9aba9be0b","fromNode":"1aaa01e6d17d9fba","fromSide":"bottom","toNode":"087ea58cbaf01f8d","toSide":"top"},
+		{"id":"a5e9bb92dcb97a16","fromNode":"087ea58cbaf01f8d","fromSide":"bottom","toNode":"f0f16e64157220dd","toSide":"right"}
+	]
+}

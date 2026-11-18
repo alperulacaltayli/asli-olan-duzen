@@ -1,0 +1,40 @@
+{
+	"nodes":[
+		{"id":"falk","type":"file","file":"World/Characters/German Reich/Reinhard Falkenhorst.md","x":0,"y":-60,"width":260,"height":140,"color":"1"},
+		{"id":"kess","type":"file","file":"World/Characters/German Reich/Martin Kessler.md","x":-560,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"wulf","type":"file","file":"World/Characters/German Reich/Friedrich Wulfhart.md","x":-280,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"adler","type":"file","file":"World/Characters/German Reich/Karl-Heinz Adler.md","x":0,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"havel","type":"file","file":"World/Characters/German Reich/Ulrich von Havel.md","x":280,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"krauss","type":"file","file":"World/Characters/German Reich/Ernst Albrecht Krauss.md","x":560,"y":180,"width":260,"height":80,"color":"2"},
+		{"id":"mert","type":"file","file":"World/Characters/German Reich/Hans-Georg Mertens.md","x":-840,"y":380,"width":260,"height":120,"color":"3"},
+		{"id":"krug","type":"file","file":"World/Characters/German Reich/Leonhard Krüger.md","x":-560,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"dieter","type":"file","file":"World/Characters/German Reich/Dieter Stahl.md","x":-280,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"otto","type":"file","file":"World/Characters/German Reich/Otto Reimann.md","x":0,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"klaus","type":"file","file":"World/Characters/German Reich/Klaus Brenner.md","x":280,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"gerda","type":"file","file":"World/Characters/German Reich/Gerda Weiss.md","x":560,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"hanisch","type":"file","file":"World/Characters/German Reich/Viktor Hanisch.md","x":840,"y":380,"width":260,"height":80,"color":"3"},
+		{"id":"drex","type":"file","file":"World/Characters/German Reich/Helmut Drexler.md","x":-140,"y":600,"width":260,"height":80,"color":"4"},
+		{"id":"epp","type":"file","file":"World/Characters/German Reich/Bruno Epp.md","x":140,"y":600,"width":260,"height":80,"color":"4"},
+		{"id":"roth","type":"file","file":"World/Characters/German Reich/Anneliese Roth.md","x":420,"y":600,"width":260,"height":80,"color":"4"}
+	],
+	"edges":[
+		{"id":"e_falk_kess","fromNode":"falk","fromSide":"bottom","toNode":"kess","toSide":"top","label":"authority"},
+		{"id":"e_falk_wulf","fromNode":"falk","fromSide":"bottom","toNode":"wulf","toSide":"top","label":"authority"},
+		{"id":"e_falk_adler","fromNode":"falk","fromSide":"bottom","toNode":"adler","toSide":"top","label":"authority"},
+		{"id":"e_falk_havel","fromNode":"falk","fromSide":"bottom","toNode":"havel","toSide":"top","label":"authority"},
+		{"id":"e_falk_krauss","fromNode":"falk","fromSide":"bottom","toNode":"krauss","toSide":"top","label":"authority"},
+		{"id":"e_wulf_mert","fromNode":"wulf","fromSide":"bottom","toNode":"mert","toSide":"top","label":"SS/security"},
+		{"id":"e_falk_krug","fromNode":"falk","fromSide":"bottom","toNode":"krug","toSide":"top","label":"foreign intel"},
+		{"id":"e_adler_dieter","fromNode":"adler","fromSide":"bottom","toNode":"dieter","toSide":"top","label":"air force"},
+		{"id":"e_adler_otto","fromNode":"adler","fromSide":"bottom","toNode":"otto","toSide":"top","label":"army"},
+		{"id":"e_adler_klaus","fromNode":"adler","fromSide":"bottom","toNode":"klaus","toSide":"top","label":"navy"},
+		{"id":"e_kess_gerda","fromNode":"kess","fromSide":"bottom","toNode":"gerda","toSide":"top","label":"party narrative"},
+		{"id":"e_krauss_hanisch","fromNode":"krauss","fromSide":"bottom","toNode":"hanisch","toSide":"top","color":"1","label":"resource conflict"},
+		{"id":"e_han_drex","fromNode":"hanisch","fromSide":"bottom","toNode":"drex","toSide":"top","label":"special tech"},
+		{"id":"e_falk_epp","fromNode":"falk","fromSide":"bottom","toNode":"epp","toSide":"top","label":"colonial administration"},
+		{"id":"e_krauss_roth","fromNode":"krauss","fromSide":"bottom","toNode":"roth","toSide":"top","label":"logistics"},
+		{"id":"r_wulf_adler","fromNode":"wulf","fromSide":"bottom","toNode":"adler","toSide":"top","color":"1","label":"rivalry: SS vs Wehrmacht"},
+		{"id":"r_wulf_krug","fromNode":"wulf","fromSide":"bottom","toNode":"krug","toSide":"top","color":"1","label":"rivalry: intelligence control"},
+		{"id":"r_dieter_han","fromNode":"dieter","fromSide":"bottom","toNode":"hanisch","toSide":"top","color":"1","label":"rivalry: aviation vs armaments"}
+	]
+}

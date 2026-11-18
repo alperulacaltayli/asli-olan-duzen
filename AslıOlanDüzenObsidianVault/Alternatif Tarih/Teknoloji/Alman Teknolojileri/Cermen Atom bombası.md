@@ -1,0 +1,1 @@
+Türklerden sonra üretilen Atom bombası

@@ -1,0 +1,1 @@
+Türklerden geri kalmamak ve Amerikaya erişebilmek için uzun menzilli radar kesiti düşük uçan kana tipi ilk uçaklardan
