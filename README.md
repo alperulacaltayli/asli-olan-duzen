@@ -105,14 +105,18 @@ Depodaki `AslıOlanDüzenObsidianVault/` klasörü, site derlemesi sırasında b
 Şu anda siteye aktarılan bölümler:
 
 - `Tarihi Olaylar/Olaylar/` — yıl bazlı dallanan kronoloji
-- `Alternatif Tarih/Dünya/` — ülkeler, dünya paylaşımı ve ülke perspektifleri
-- `Alternatif Tarih/Tarih/` — dönem kayıtları
-- `Alternatif Tarih/Karakterler/` — karakter profilleri
+- `Alternatif Tarih/Karakterler/` — kısa ve spoilersız karakter tanıtımları
+- `Atalay Soyu` ve `Keser Soyu` — ayrı kuşak ağaçları
 - `Kuruluşlar/Hilalifiyet Merkezi - İstanbul.md` — kurum kaydı
-- `Büyük Türk İmparatorluğu` ve `Kanat` — yerleşik kanon sistem kayıtları
 - `TA-85 Gökkanat` — yayımlanabilir genel teknoloji tanıtımı
 
+Karakter tanıtımları tek bir kısa biçimde sunulur: doğum / yaş, genel rol, görünüş ve kişilik. Kaynaklarda doğrulanmayan ayrıntılar, uzun karakter geçmişleri ve olay örgüsünü açığa çıkaran bilgiler yayımlanmaz. Tamamlanmamış veya onay bekleyen karakter notları arşive alınmaz. Tek isimle kayıtlı tarihî aile üyeleri, Keser Soyu ağacında ortak aile etiketiyle düzenlenir; aile ağacında görünür soy adı kullanılır.
+
 Obsidian `[[çift köşeli bağlantıları]]` hedef kayıtlar sitede mevcutsa tıklanabilir bağlantıya dönüştürülür. Kronoloji dosyaları yıl ve tarih bilgisine göre gruplandırılır. Kesin tarihi bulunmayan olaylar ayrı tutulur.
+
+### Dünya ve tarih bölümü
+
+Dünya ve tarih arşivi şimdilik yayından kaldırılmıştır. İlgili Vault kaynak dosyaları silinmemiştir; daha sonra yeniden düzenlenerek eklenmek üzere korunur.
 
 ### Yayımlanmayan kaynaklar
 
