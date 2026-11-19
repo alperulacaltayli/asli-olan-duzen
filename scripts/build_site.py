@@ -22,6 +22,8 @@ ARCHIVES_ROOT = ROOT / "content" / "archives"
 DIST = ROOT / "dist"
 GALLERY_ROOT = ROOT / "AlternatifTarihfotoarşiv"
 VIDEO_ROOT = ROOT / "VideoArsiv"
+AUDIO_ROOT = ROOT / "Sesler"
+AUDIO_SUFFIXES = {".mp3", ".wav", ".ogg", ".oga", ".m4a", ".aac", ".flac", ".opus"}
 VIDEO_SUFFIXES = {".mp4", ".m4v", ".webm", ".ogv", ".ogg"}
 VIDEO_POSTER_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 GALLERY_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
@@ -368,12 +370,89 @@ def discover_videos() -> dict[str, Any]:
         video["number"] = index
     return {"videos": videos}
 
+
+def discover_audio() -> dict[str, Any]:
+    """Discover audio records, preserving folder hierarchy and country ownership."""
+    records: list[dict[str, Any]] = []
+    if not AUDIO_ROOT.is_dir():
+        return {"audio": records}
+
+    metadata_path = AUDIO_ROOT / "_metadata.json"
+    metadata_catalog: dict[str, Any] = {}
+    if metadata_path.is_file():
+        try:
+            payload = json.loads(metadata_path.read_text(encoding="utf-8"))
+            metadata_catalog = payload.get("audio", payload) if isinstance(payload, dict) else {}
+        except (OSError, json.JSONDecodeError):
+            metadata_catalog = {}
+
+    def key_text(value: str) -> str:
+        normalized = unicodedata.normalize("NFKD", value).casefold()
+        return "".join(char for char in normalized if not unicodedata.combining(char))
+
+    for audio_path in sorted(AUDIO_ROOT.rglob("*"), key=lambda item: natural_key(item.as_posix())):
+        if not audio_path.is_file() or audio_path.name.startswith("_") or audio_path.suffix.lower() not in AUDIO_SUFFIXES:
+            continue
+        relative = audio_path.relative_to(AUDIO_ROOT)
+        relative_key = relative.as_posix()
+        metadata = metadata_catalog.get(relative_key, metadata_catalog.get(audio_path.name, {}))
+        if not isinstance(metadata, dict):
+            metadata = {}
+
+        country_hint = key_text(str(metadata.get("country", "")))
+        path_hint = " ".join(key_text(part) for part in relative.parts[:-1])
+        file_hint = key_text(audio_path.stem)
+        if country_hint in {"german", "germany", "alman", "almanya", "de", "deutsch"}:
+            country = "german"
+        elif country_hint in {"turkish", "turkey", "turk", "turkiye", "tr"}:
+            country = "turkish"
+        elif any(term in path_hint or term in file_hint for term in ("alman", "german", "deutsch", "reich")):
+            country = "german"
+        elif any(term in path_hint or term in file_hint for term in ("turk", "turkiye", "turkish")):
+            country = "turkish"
+        else:
+            country = "unassigned"
+
+        category = str(metadata.get("category") or (relative.parts[0] if len(relative.parts) > 1 else "Diğer Sesler")).strip()
+        subcategory = str(metadata.get("subcategory") or (relative.parts[1] if len(relative.parts) > 2 else "")).strip()
+        try:
+            order = int(metadata.get("order", 999999))
+        except (TypeError, ValueError):
+            order = 999999
+
+        suffix = audio_path.suffix.lower()
+        audio_type = {
+            ".mp3": "audio/mpeg", ".wav": "audio/wav", ".ogg": "audio/ogg",
+            ".oga": "audio/ogg", ".m4a": "audio/mp4", ".aac": "audio/aac",
+            ".flac": "audio/flac", ".opus": "audio/opus",
+        }.get(suffix, mimetypes.guess_type(audio_path.name)[0] or "application/octet-stream")
+        fallback_title = re.sub(r"[-_]+", " ", audio_path.stem).strip()
+        records.append({
+            "src": f"{AUDIO_ROOT.name}/{relative.as_posix()}",
+            "file": audio_path.name,
+            "title": str(metadata.get("title") or fallback_title),
+            "country": country,
+            "category": category,
+            "subcategory": subcategory,
+            "date": str(metadata.get("date", "")).strip(),
+            "description": str(metadata.get("description", "")).strip(),
+            "type": audio_type,
+            "order": order,
+        })
+
+    country_order = {"turkish": 0, "german": 1, "unassigned": 2}
+    records.sort(key=lambda item: (country_order.get(item["country"], 9), item["order"], natural_key(item["src"])))
+    for index, record in enumerate(records, start=1):
+        record["number"] = index
+    return {"audio": records}
+
+
 def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)
 
-    for filename in ("index.html", "galeri.html", "robots.txt", "sitemap.xml"):
+    for filename in ("index.html", "galeri.html", "sesler.html", "robots.txt", "sitemap.xml"):
         source = ROOT / filename
         if source.is_file():
             shutil.copy2(source, DIST / filename)
@@ -384,6 +463,10 @@ def build() -> None:
 
     material_source = ROOT / "SiteMalzemeleri"
     material_target = DIST / "SiteMalzemeleri"
+    for collection in ("NaziSiteMalzemeler", "TürkSiteMalzemeler"):
+        source_collection = material_source / collection
+        if source_collection.is_dir():
+            shutil.copytree(source_collection, material_target / collection, dirs_exist_ok=True)
     for filename in SITE_MATERIAL_FILES:
         source = material_source / filename
         if source.is_file():
@@ -419,6 +502,16 @@ def build() -> None:
             poster_destination = DIST / video["poster"]
             poster_destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(poster_source, poster_destination)
+
+    audio_data = discover_audio()
+    audio_encoded = json.dumps(audio_data, ensure_ascii=False, indent=2) + "\n"
+    (ROOT / "audio.json").write_text(audio_encoded, encoding="utf-8")
+    (DIST / "audio.json").write_text(audio_encoded, encoding="utf-8")
+    for item in audio_data["audio"]:
+        source = ROOT / item["src"]
+        destination = DIST / item["src"]
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, destination)
 
     archive_data = import_obsidian.discover_archives()
     encoded = json.dumps(archive_data, ensure_ascii=False, indent=2) + "\n"

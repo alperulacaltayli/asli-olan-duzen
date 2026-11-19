@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111514">
+  <meta name="description" content="Aslı Olan Düzen evreninin marşları, devlet kayıtları ve ses arşivi.">
+  <meta name="author" content="Alper Ulaç ALTAYLI">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:title" content="Ses Arşivi — Aslı Olan Düzen">
+  <meta property="og:description" content="Türk ve Alman ses kayıtlarının kurgusal evren arşivi.">
+  <title>Ses Arşivi — Aslı Olan Düzen</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261119-audio1">
+  <link rel="stylesheet" href="assets/css/audio.css?v=20261119-audio1">
+</head>
+<body class="audio-page">
+  <a class="skip-link" href="#audio-main">İçeriğe geç</a>
+  <header class="site-header audio-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#top" aria-label="Aslı Olan Düzen ana sayfa">
+        <span class="brand-mark" aria-hidden="true">AOD</span>
+        <span class="brand-name">ASLI OLAN <b>DÜZEN</b></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="audio-nav" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="audio-nav" aria-label="Ana menü">
+        <a href="index.html#roman">Roman</a>
+        <a href="index.html#evren">Evren</a>
+        <a href="index.html#arsiv">Arşiv</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="sesler.html" aria-current="page">Ses Arşivi</a>
+        <a href="index.html#yazar">Yazar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="audio-main">
+    <section class="audio-hero">
+      <div class="audio-hero-grid" aria-hidden="true"></div>
+      <div class="container audio-hero-inner">
+        <p class="audio-overline"><span></span> ASLI OLAN DÜZEN / İŞİTSEL BELLEK <span></span></p>
+        <p class="audio-layer">KATMAN 06 · SES ARŞİVİ</p>
+        <h1>SES<br><em>ARŞİVİ</em></h1>
+        <p class="audio-intro">Bir devletin sesi, yalnızca duyulmaz.<br>Zamanın içinde kayıt altına alınır.</p>
+        <div class="audio-hero-meta"><span id="audio-total">00</span><span>İŞİTSEL KAYIT / AOD</span></div>
+      </div>
+    </section>
+
+    <section class="audio-collection-section">
+      <div class="container">
+        <div class="audio-section-intro">
+          <div><span class="audio-section-index">ARŞİV BİRİMLERİ</span><h2>Hangi arşivi <em>açacaksın?</em></h2></div>
+          <p>Türk ve Alman kayıtları, kendi dönemlerinin görsel dili ve arşiv düzeniyle ayrı ayrı sunulur.</p>
+        </div>
+
+        <div class="audio-country-chooser" id="audio-country-chooser">
+          <button class="audio-country-card audio-country-card-turkish" type="button" data-audio-country="turkish">
+            <span class="audio-country-card-art">
+              <img class="audio-country-banner" src="SiteMalzemeleri/TürkSiteMalzemeler/DikeyTrİmpBayrak540x1920.png" alt="" loading="lazy">
+              <img class="audio-country-emblem" src="SiteMalzemeleri/TürkSiteMalzemeler/TrimpLogo.png" alt="" loading="lazy">
+              <span class="audio-country-card-glow"></span>
+            </span>
+            <span class="audio-country-card-copy">
+              <span class="audio-country-kicker">BİRİM 01 / TÜRK DEVLETİ</span>
+              <strong>Türk Arşivi</strong>
+              <span>Marşlar · Devlet kayıtları · Sesler</span>
+              <b>AÇIK ARŞİV <i>↗</i></b>
+            </span>
+          </button>
+
+          <button class="audio-country-card audio-country-card-german" type="button" data-audio-country="german">
+            <span class="audio-country-card-art">
+              <img class="audio-country-banner" src="SiteMalzemeleri/NaziSiteMalzemeler/DikeyNaziİmpbayrak540x1920.png" alt="" loading="lazy">
+              <img class="audio-country-emblem" src="SiteMalzemeleri/NaziSiteMalzemeler/Kartal1.png" alt="" loading="lazy">
+              <img class="audio-country-secondary-art" src="SiteMalzemeleri/NaziSiteMalzemeler/GrobHalle.jpg" alt="" loading="lazy">
+              <span class="audio-country-card-glow"></span>
+            </span>
+            <span class="audio-country-card-copy">
+              <span class="audio-country-kicker">BİRİM 02 / ALMAN REICH</span>
+              <strong>Alman Arşivi</strong>
+              <span>Marşlar · Devlet kayıtları · Sesler</span>
+              <b>AÇIK ARŞİV <i>↗</i></b>
+            </span>
+          </button>
+        </div>
+
+        <section class="audio-catalogue" id="audio-catalogue" hidden aria-live="polite">
+          <button class="audio-back-button" type="button" id="audio-back">← ÜLKE SEÇİMİNE DÖN</button>
+          <div class="audio-country-banner" id="audio-country-banner">
+            <div class="audio-country-banner-art" id="audio-country-banner-art"></div>
+            <div class="audio-country-banner-copy">
+              <span id="audio-country-overline"></span>
+              <h2 id="audio-country-title"></h2>
+              <p id="audio-country-description"></p>
+              <small id="audio-country-count"></small>
+            </div>
+          </div>
+
+          <div class="audio-catalogue-heading">
+            <div><span class="audio-section-index">KAYIT LİSTESİ</span><h3>İşitsel <em>belgeler.</em></h3></div>
+            <p>Bir kaydı seçerek oynatıcıya yükleyebilir, arşivdeki diğer seslere geçebilirsin.</p>
+          </div>
+
+          <div class="audio-filters">
+            <label><span class="visually-hidden">Ses kayıtlarında ara</span><input type="search" id="audio-search" placeholder="Kayıt, başlık veya kategori ara..." autocomplete="off"></label>
+            <label><span class="visually-hidden">Kayıt türü</span><select id="audio-category"><option value="">Tüm kayıt türleri</option></select></label>
+            <span id="audio-visible-count" aria-live="polite"></span>
+          </div>
+
+          <div class="audio-track-list" id="audio-track-list">
+            <p class="audio-empty">Ses kayıtları hazırlanıyor...</p>
+          </div>
+
+          <div class="audio-player-dock" id="audio-player-dock">
+            <div class="audio-player-now">
+              <span class="audio-player-disc" aria-hidden="true">♫</span>
+              <div><small>ŞU ANDA OYNATILIYOR</small><strong id="audio-now-title">Bir kayıt seç</strong><span id="audio-now-meta">AOD / SES ARŞİVİ</span></div>
+            </div>
+            <div class="audio-player-controls">
+              <div class="audio-player-buttons">
+                <button type="button" id="audio-previous" aria-label="Önceki kayıt">Ⅱ</button>
+                <button type="button" id="audio-next" aria-label="Sonraki kayıt">→</button>
+                <button type="button" id="audio-stop" aria-label="Oynatmayı durdur">■</button>
+              </div>
+              <audio id="audio-element" controls preload="none">
+                Tarayıcın ses oynatmayı desteklemiyor.
+              </audio>
+              <span id="audio-player-status" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+        </section>
+
+        <div class="audio-endnote">
+          <span class="audio-endnote-mark">AOD</span>
+          <div><p>SES ARŞİVİ / KAYIT VE BELGE</p><span>Marşlar, resmî açıklamalar, telsiz kayıtları ve evrene ait diğer sesler.</span></div>
+          <a href="index.html#top">ANA SAYFAYA DÖN ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer audio-footer">
+    <div class="container footer-main">
+      <a class="footer-brand" href="index.html#top">ASLI OLAN <b>DÜZEN</b></a>
+      <span>ALPER ULAÇ ALTAYLI</span>
+      <span>ALTERNATİF TARİH / KURGUSAL EVREN</span>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="audio-year">2026</span> Alper Ulaç ALTAYLI</span>
+      <span>Bu sitede anlatılan tarih ve evren unsurları kurmacadır.</span>
+      <a href="#audio-main">BAŞA DÖN ↑</a>
+    </div>
+  </footer>
+  <script src="assets/js/audio.js?v=20261119-audio1" defer></script>
+</body>
+</html>

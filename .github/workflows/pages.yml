@@ -33,6 +33,7 @@ jobs:
         run: |
           node --check assets/js/main.js
           node --check assets/js/gallery.js
+          node --check assets/js/audio.js
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
