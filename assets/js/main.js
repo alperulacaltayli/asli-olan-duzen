@@ -423,7 +423,7 @@
         '<span class="chronology-year-number">' + escapeHtml(group.title) + '</span>' +
         '<span class="chronology-year-caption"><b>' + (group.date === "TARİHİ BELİRTİLMEMİŞ" ? "TARİHİ BELİRTİLMEMİŞ" : "DÖNEM KAYDI") +
         '</b><span>' + escapeHtml(group.summary || "Bu döneme ait arşiv kayıtları") + '</span></span>' +
-        '<span class="chronology-year-count">' + String(eventCount).padStart(2, "0") + ' KAYIT</span></button>';
+        '<span class="chronology-year-count">' + String(eventCount).padStart(2, "0") + ' KAYIT</span></div>';
     }).join("");
 
     const cards = yearGroups.map((item, groupIndex) => item.events.map((node, eventIndex) => {
@@ -624,13 +624,9 @@
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
       });
       detailHost.setAttribute("tabindex", "-1");
-      window.requestAnimationFrame(() => {
-        detailHost.focus({ preventScroll: true });
-        detailHost.scrollIntoView({
-          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-          block: "start"
-        });
-      });
+      // Keep the archive title bar in place; the expanded article naturally
+      // starts immediately below it and remains fully scrollable.
+      window.requestAnimationFrame(() => detailHost.focus({ preventScroll: true }));
       return;
     }
 
