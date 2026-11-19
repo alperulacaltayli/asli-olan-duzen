@@ -12,8 +12,13 @@
   <meta property="og:description" content="Alternatif tarihin görsel kayıtları.">
   <title>Görsel Arşiv — Aslı Olan Düzen</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://alperulacaltayli.github.io/asli-olan-duzen/SiteMalzemeleri/KitapKapakFotosu.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261119-features1">
+  <link rel="stylesheet" href="assets/css/gallery.css?v=20261119-features1">
 </head>
 <body class="gallery-page">
   <a class="skip-link" href="#gallery-main">İçeriğe geç</a>
@@ -62,6 +67,13 @@
           <p>Bir fotoğrafı seçerek tam ekran inceleyebilir, ok tuşlarıyla sonraki kayda geçebilirsin.</p>
         </div>
 
+        <div class="gallery-filters" role="search" aria-label="Fotoğraf arşivinde filtrele">
+          <label><span class="visually-hidden">Fotoğraflarda ara</span><input id="gallery-search" type="search" placeholder="Fotoğraf, olay veya konum ara..." autocomplete="off"></label>
+          <label><span class="visually-hidden">Kategoriye göre filtrele</span><select id="gallery-category-filter"><option value="">Tüm kategoriler</option></select></label>
+          <label><span class="visually-hidden">Döneme göre filtrele</span><select id="gallery-period-filter"><option value="">Tüm dönemler</option></select></label>
+          <button id="gallery-filter-clear" type="button">FİLTRELERİ TEMİZLE</button>
+          <span id="gallery-visible-total" class="gallery-visible-total" aria-live="polite"></span>
+        </div>
         <div class="gallery-grid" id="gallery-grid" aria-live="polite">
           <p class="gallery-loading">Görsel kayıtlar hazırlanıyor...</p>
         </div>
@@ -100,11 +112,12 @@
         <span id="lightbox-number"></span>
         <strong id="lightbox-title"></strong>
       </figcaption>
+      <div class="lightbox-metadata" id="lightbox-metadata" aria-label="Fotoğrafın kayıt bilgileri"></div>
     </figure>
     <button class="lightbox-arrow lightbox-next" id="lightbox-next" type="button" aria-label="Sonraki fotoğraf">→</button>
     <p class="lightbox-hint">KAPAT: ESC <span>·</span> GEZİN: ← →</p>
   </div>
 
-  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/gallery.js?v=20261119-features1" defer></script>
 </body>
 </html>

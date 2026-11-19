@@ -231,6 +231,44 @@
     }).join("") + "</ul>";
   };
 
+
+  const renderCharacterFacts = (source) => {
+    const facts = String(source || "").split(/\r?\n/).map((line) => {
+      const match = line.trim().match(/^\*\*(.+?):\*\*\s*(.+)$/);
+      return match ? [match[1].replace(/\s*\(1985\)/i, ""), match[2]] : null;
+    }).filter(Boolean);
+    if (!facts.length) return '<div class="detail-body character-detail-body">' + renderMarkdown(source || "") + '</div>';
+    return '<dl class="character-facts">' + facts.map((fact) =>
+      '<div class="character-fact"><dt>' + escapeHtml(fact[0]) + '</dt><dd>' + escapeHtml(fact[1]) + '</dd></div>'
+    ).join("") + '</dl>';
+  };
+
+  const renderCharacterHierarchy = (node) => {
+    const parents = (node.ancestors || []).map((id) => findNode(activeCategory.nodes, id)).filter(Boolean);
+    if (!parents.length) return "";
+    return '<nav class="character-hierarchy" aria-label="Karakterin aile veya karakter grubundaki konumu">' +
+      '<span class="character-hierarchy-label">KARAKTERİN ARŞİVDEKİ KONUMU</span>' +
+      parents.map((parent) => '<button type="button" data-select-node="' + escapeHtml(parent.id) + '">' + escapeHtml(parent.title) + '</button><span aria-hidden="true">/</span>').join("") +
+      '<strong>' + escapeHtml(node.title) + '</strong></nav>';
+  };
+
+  const renderRelatedChronology = (node) => {
+    const chronology = categories.find((category) => category.id === "chronology");
+    if (!chronology) return "";
+    const needle = normalizeWikiTarget(node.title);
+    if (!needle || needle.length < 5) return "";
+    const related = allNodes(chronology.nodes).filter((record) =>
+      normalizeWikiTarget([record.title,record.summary,record.content].join(" ")).includes(needle)
+    ).slice(0,6);
+    if (!related.length) return "";
+    return '<section class="character-chronology-links"><p>KRONOLOJİDE ADI GEÇEN KAYITLAR / ' +
+      String(related.length).padStart(2,"0") + '</p><div>' +
+      related.map((record) => '<button type="button" data-open-record-category="chronology" data-open-record-id="' +
+        escapeHtml(record.id) + '"><span>' + escapeHtml(record.date || "TARİHSEL KAYIT") +
+        '</span><b>' + escapeHtml(record.title) + '</b><i aria-hidden="true">↗</i></button>').join("") +
+      '</div></section>';
+  };
+
   const renderDetail = (node) => {
     if (!node) {
       detailHost.innerHTML = '<div class="archive-detail-placeholder"><span class="detail-placeholder-mark">AOD</span><p>Bu arşiv henüz boş.</p><small>İçerik klasöre eklendiğinde burada görünecek.</small></div>';
@@ -293,7 +331,9 @@
         (node.summary ? '<span>' + escapeHtml(node.summary) + '</span>' : '') +
         '</div></div>' +
         '<div class="character-profile-divider"><span></span><small>' + (isCharacterRecord ? "GENEL TANITIM" : "DOSYA GRUBU") + '</small></div>' +
-        '<div class="detail-body character-detail-body">' + renderMarkdown(node.content || "") + '</div>' +
+        renderCharacterFacts(node.content || "") +
+        renderCharacterHierarchy(node) +
+        (isCharacterRecord ? renderRelatedChronology(node) : "") +
         childLinks + relatedLinks + '</div>';
       return;
     }
@@ -692,22 +732,14 @@
     pendingLayer = "";
     commitActiveLayer(resolveActiveLayer(), animate);
   };
-  window.addEventListener("scroll", queueLayerUpdate, { passive: true });
-  window.addEventListener("resize", queueLayerUpdate, { passive: true });
-  refreshPageLayer(false);
+  // Active section is initialized by the shared visual scroll scheduler.
 
-  let progressFrame = 0;
   const updateProgress = () => {
     if (!pageProgressBar) return;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const ratio = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
     pageProgressBar.style.transform = "scaleX(" + ratio + ")";
-    progressFrame = 0;
   };
-  window.addEventListener("scroll", () => {
-    if (!progressFrame) progressFrame = window.requestAnimationFrame(updateProgress);
-  }, { passive: true });
-  updateProgress();
 
   // Multi-plane parallax for the cover, newspaper, emblem and section artwork.
   const parallaxTargets = [
@@ -760,18 +792,82 @@
   };
 
   document.querySelectorAll(".world-card, .archive-category").forEach(enableTilt);
-  let parallaxFrame = 0;
   const updateParallax = () => {
     const scrollY = window.scrollY || 0;
     parallaxTargets.forEach(([element, factor]) => {
       element.style.setProperty("--site-parallax", (scrollY * factor).toFixed(1) + "px");
     });
-    parallaxFrame = 0;
   };
-  window.addEventListener("scroll", () => {
-    if (!parallaxFrame) parallaxFrame = window.requestAnimationFrame(updateParallax);
-  }, { passive: true });
+
+  // One animation frame updates layer tracking, reading progress and parallax.
+  let visualScrollFrame = 0;
+  const runVisualScrollFrame = () => {
+    visualScrollFrame = 0;
+    scheduleLayerUpdate();
+    updateProgress();
+    updateParallax();
+  };
+  const queueVisualScrollFrame = () => {
+    if (visualScrollFrame) return;
+    visualScrollFrame = window.requestAnimationFrame(runVisualScrollFrame);
+  };
+  window.addEventListener("scroll", queueVisualScrollFrame, { passive: true });
+  window.addEventListener("resize", queueVisualScrollFrame, { passive: true });
+  refreshPageLayer(false);
+  updateProgress();
   updateParallax();
+
+
+  // Search all published archive records, including aliases and Markdown body text.
+  const archiveSearchInput = document.querySelector("#archive-search-input");
+  const archiveSearchCategory = document.querySelector("#archive-search-category");
+  const archiveSearchClear = document.querySelector("#archive-search-clear");
+  const archiveSearchResults = document.querySelector("#archive-search-results");
+  const archiveSearchStatus = document.querySelector("#archive-search-status");
+  let archiveSearchIndex = [];
+  const normalizeArchiveSearch = (value) => String(value ?? "").normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("tr-TR").replace(/ı/g,"i")
+    .replace(/[^a-z0-9]+/g," ").trim();
+  const rebuildArchiveSearch = () => {
+    archiveSearchIndex = categories.flatMap((category) => allNodes(category.nodes).map((node) => ({
+      categoryId:category.id,categoryTitle:category.title,node,
+      text:normalizeArchiveSearch([node.title,node.date,node.summary,node.content,node.path,node.sourceName,...(node.aliases||[])].join(" "))
+    })));
+  };
+  const renderArchiveSearch = () => {
+    if(!archiveSearchInput||!archiveSearchResults||!archiveSearchStatus)return;
+    const query=normalizeArchiveSearch(archiveSearchInput.value), categoryId=archiveSearchCategory?.value||"";
+    if(!query){archiveSearchResults.hidden=true;archiveSearchResults.innerHTML="";archiveSearchStatus.textContent="Aramak istediğin kelimeyi yaz.";return;}
+    const tokens=query.split(/\s+/).filter(Boolean);
+    const matches=archiveSearchIndex.map((entry)=>{
+      if(categoryId&&entry.categoryId!==categoryId)return null;
+      if(!tokens.every(token=>entry.text.includes(token)))return null;
+      const title=normalizeArchiveSearch(entry.node.title);
+      let score=title===query?100:title.startsWith(query)?60:title.includes(query)?40:0;
+      if(entry.node.date&&normalizeArchiveSearch(entry.node.date).includes(query))score+=20;
+      if(entry.node.summary&&normalizeArchiveSearch(entry.node.summary).includes(query))score+=5;
+      return {...entry,score};
+    }).filter(Boolean).sort((a,b)=>b.score-a.score||a.node.title.localeCompare(b.node.title,"tr")).slice(0,10);
+    archiveSearchResults.hidden=false;
+    archiveSearchStatus.textContent=matches.length?matches.length+" kayıt gösteriliyor"+(matches.length===10?" · ilk 10 sonuç":"")+".":"Bu aramayla eşleşen yayımlanmış kayıt bulunamadı.";
+    archiveSearchResults.innerHTML=matches.length?matches.map((entry)=>
+      '<button type="button" class="archive-search-result" data-search-category="'+escapeHtml(entry.categoryId)+'" data-search-id="'+escapeHtml(entry.node.id)+'">'+
+      '<small>'+escapeHtml(entry.categoryTitle)+' · '+escapeHtml(entry.node.date||"KAYIT")+'</small>'+
+      '<strong>'+escapeHtml(entry.node.title)+'</strong><span>'+escapeHtml(entry.node.summary||String(entry.node.content||"").replace(/[#*_>\[\]]/g,"").slice(0,150))+'</span><b aria-hidden="true">↗</b></button>'
+    ).join(""):'<p class="archive-search-empty">Başka bir kelime veya farklı bir arşiv birimi deneyebilirsin.</p>';
+  };
+  archiveSearchCategory?.addEventListener("change",renderArchiveSearch);
+  archiveSearchInput?.addEventListener("input",renderArchiveSearch);
+  archiveSearchInput?.addEventListener("keydown",(event)=>{if(event.key==="Escape"){archiveSearchInput.value="";renderArchiveSearch();}});
+  archiveSearchClear?.addEventListener("click",()=>{
+    if(archiveSearchInput)archiveSearchInput.value="";
+    if(archiveSearchCategory)archiveSearchCategory.value="";
+    renderArchiveSearch();archiveSearchInput?.focus();
+  });
+  archiveSearchResults?.addEventListener("click",(event)=>{
+    const result=event.target.closest("[data-search-category]");
+    if(result)openCategory(result.dataset.searchCategory,result.dataset.searchId);
+  });
 
   fetch("archives.json", { cache: "no-cache" })
     .then((response) => {
@@ -782,6 +878,12 @@
       categories = (data.categories || []).sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
       buildAliasLookup();
       renderCategories();
+      rebuildArchiveSearch();
+      if (archiveSearchCategory) {
+        archiveSearchCategory.innerHTML = '<option value="">Tüm arşiv birimleri</option>' +
+          categories.map((category) => '<option value="' + escapeHtml(category.id) + '">' + escapeHtml(category.title) + '</option>').join("");
+      }
+      renderArchiveSearch();
     })
     .catch((error) => {
       console.error(error);

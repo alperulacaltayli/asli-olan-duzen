@@ -228,12 +228,34 @@ def discover_archives() -> dict[str, Any]:
     return {"categories": categories}
 
 
+
+def gallery_default_category(stem: str) -> str:
+    key = unicodedata.normalize("NFKD", stem).casefold()
+    key = "".join(char for char in key if not unicodedata.combining(char))
+    if "ayda" in key:
+        return "Uzay ve keşif"
+    if "ataturkziyareti" in key or "beyazsaray" in key:
+        return "Diplomasi ve şehirler"
+    if "atom" in key:
+        return "Bilim ve teknoloji"
+    if any(term in key for term in ("dus", "cikarma", "baku")):
+        return "Cephe kayıtları"
+    return "Diğer kayıtlar"
+
+
 def discover_gallery() -> dict[str, Any]:
-    """Build a public image catalogue from the repository's photo archive."""
+    """Build a public image catalogue with optional human-authored metadata."""
     images: list[dict[str, Any]] = []
     if not GALLERY_ROOT.is_dir():
         return {"images": images}
-
+    metadata_path = GALLERY_ROOT / "_metadata.json"
+    metadata_catalog: dict[str, Any] = {}
+    if metadata_path.is_file():
+        try:
+            payload = json.loads(metadata_path.read_text(encoding="utf-8"))
+            metadata_catalog = payload.get("images", payload) if isinstance(payload, dict) else {}
+        except (OSError, json.JSONDecodeError):
+            metadata_catalog = {}
     for image_path in sorted(GALLERY_ROOT.iterdir(), key=lambda item: natural_key(item.name)):
         if not image_path.is_file() or image_path.suffix.lower() not in GALLERY_SUFFIXES:
             continue
@@ -241,18 +263,25 @@ def discover_gallery() -> dict[str, Any]:
         normalized_stem = "".join(char for char in normalized_stem if not unicodedata.combining(char))
         if any(term in normalized_stem for term in GALLERY_EXCLUDED_TERMS):
             continue
-
         stem_key = image_path.stem.casefold()
-        title = GALLERY_TITLE_OVERRIDES.get(
-            stem_key,
-            re.sub(r"[_-]+", " ", image_path.stem).strip()
-        )
+        title = GALLERY_TITLE_OVERRIDES.get(stem_key, re.sub(r"[_-]+", " ", image_path.stem).strip())
+        metadata = metadata_catalog.get(image_path.name, {})
+        if not isinstance(metadata, dict):
+            metadata = {}
+        date = str(metadata.get("date", "")).strip()
+        year_match = re.search(r"\b(19\d{2}|20\d{2})\b", date)
         images.append({
             "src": f"{GALLERY_ROOT.name}/{image_path.name}",
-            "title": title,
+            "title": str(metadata.get("title") or title),
             "number": len(images) + 1,
+            "category": str(metadata.get("category") or gallery_default_category(image_path.stem)),
+            "date": date,
+            "year": int(year_match.group(1)) if year_match else None,
+            "location": str(metadata.get("location", "")).strip(),
+            "description": str(metadata.get("description", "")).strip(),
+            "source": str(metadata.get("source", "")).strip(),
+            "chronology": str(metadata.get("chronology", "")).strip(),
         })
-
     return {"images": images}
 
 

@@ -125,3 +125,29 @@ Taslak, yazar onayı bekleyen, gizli veya büyük hikâye sırrı içeren dosyal
 Yeni kayıt eklemek için uygun kaynak klasörüne bir Markdown dosyası ekle ve GitHub Desktop üzerinden commit/push yap. Otomatik derleme, izin verilen klasörleri yeniden tarar.
 
 > **Gizlilik uyarısı:** GitHub deposu Public olduğu için `AslıOlanDüzenObsidianVault/` klasörünün içindeki kaynak dosyalar da GitHub'da herkese açıktır. Siteye aktarılmayan bir dosya, depo içinden gizlenmiş olmaz. Özel notları, yayımlanmamış bölümleri ve `.obsidian` ayarlarını ayrı bir private depoda tut.
+
+
+## Fotoğraf galerisi metadata yönetimi
+
+Görseller `AlternatifTarihfotoarşiv/` klasöründen otomatik keşfedilir. Her görsel için isteğe bağlı bilgiler aynı klasördeki `_metadata.json` dosyasına yazılır. Örnek:
+
+```json
+{
+  "images": {
+    "Baküdüştü.jpg": {
+      "category": "Cephe kayıtları",
+      "date": "",
+      "location": "",
+      "description": "",
+      "source": "",
+      "chronology": ""
+    }
+  }
+}
+```
+
+Tarih, konum, açıklama, kaynak ve kronoloji alanları doğrulanmış bilgi yoksa boş bırakılmalıdır. Site boş alanları "Belirtilmemiş" olarak gösterir; tarih eklendiğinde dönem filtresi otomatik oluşur. Manifest kaynak depoda tutulur, site derlemesinde `gallery.json` içine aktarılır.
+
+## Public depo güvenliği
+
+Bu depo Public olduğu için depoda bulunan her dosya, siteye aktarılmasa da herkes tarafından görülebilir. `.obsidian/` ayar klasörü ve üretilmiş `archives.json` depoya eklenmez. Yayımlanmamış roman bölümleri, özel AI promptları, kişisel notlar ve gizli kanon dosyaları bu depoda tutulmamalı; ayrı bir yerel veya private depoda saklanmalıdır. Siteye aktarılmayan bir Vault dosyası, public depoda bulunduğu sürece gizli değildir.

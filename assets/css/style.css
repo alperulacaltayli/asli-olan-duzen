@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
 :root {
     color-scheme: dark;
     --ink: #111514;
@@ -5778,3 +5777,44 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
         animation: none !important;
     }
 }
+/* Archive search and expanded character dossier controls. */
+.visually-hidden { position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important; }
+.archive-search-panel { position:relative;margin:0 0 34px;padding:22px clamp(16px,3vw,30px) 18px;border:1px solid rgba(170,190,198,.2);background:linear-gradient(115deg,rgba(124,151,164,.09),transparent 52%),rgba(6,12,14,.48);box-shadow:inset 0 1px rgba(255,255,255,.025),0 18px 45px rgba(0,0,0,.12); }
+.archive-search-heading { display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:13px;color:#c6d3d8;font:9px var(--mono);letter-spacing:.14em; }
+.archive-search-heading small { color:rgba(170,185,190,.56);font:8px var(--mono);letter-spacing:.08em; }
+.archive-search-controls { display:grid;grid-template-columns:minmax(180px,1fr) minmax(170px,230px) auto;gap:9px; }
+.archive-search-field input,.archive-search-category select { display:block;width:100%;min-height:46px;border:1px solid rgba(174,194,201,.25);border-radius:0;padding:0 14px;outline:none;color:#e5ecec;background:rgba(3,8,10,.72);font:11px var(--mono); }
+.archive-search-field input::placeholder { color:rgba(181,197,199,.48); }
+.archive-search-category select { color:#cad7d9;cursor:pointer; }
+.archive-search-controls button { min-height:46px;padding:0 17px;border:1px solid rgba(174,194,201,.3);color:#d4e0e1;background:rgba(137,163,172,.08);font:8px var(--mono);letter-spacing:.12em;cursor:pointer;transition:background .2s,border-color .2s; }
+.archive-search-controls button:hover { border-color:rgba(183,207,214,.7);background:rgba(137,163,172,.17); }
+.archive-search-field input:focus-visible,.archive-search-category select:focus-visible,.archive-search-controls button:focus-visible,.archive-search-result:focus-visible { outline:2px solid #d4b18f;outline-offset:3px; }
+.archive-search-status { margin:10px 0 0;color:rgba(180,198,202,.58);font:9px var(--mono);letter-spacing:.04em; }
+.archive-search-results { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px; }
+.archive-search-results[hidden] { display:none; }
+.archive-search-result { display:grid;grid-template-columns:minmax(0,1fr) 20px;gap:3px 14px;align-items:center;min-width:0;padding:13px 15px;border:1px solid rgba(174,194,201,.14);color:#e2e9e8;background:rgba(153,180,188,.045);text-align:left;cursor:pointer;transition:background .2s,border-color .2s,transform .2s; }
+.archive-search-result:hover { border-color:rgba(174,194,201,.42);background:rgba(153,180,188,.1);transform:translateY(-2px); }
+.archive-search-result small { grid-column:1;color:#a8bdc2;font:8px var(--mono);letter-spacing:.11em; }
+.archive-search-result strong { grid-column:1;min-width:0;overflow-wrap:anywhere;color:#f0eee8;font:19px/1.16 var(--serif); }
+.archive-search-result span { grid-column:1;display:-webkit-box;overflow:hidden;color:rgba(194,205,203,.66);font:13px/1.35 var(--serif);-webkit-line-clamp:2;-webkit-box-orient:vertical; }
+.archive-search-result b { grid-column:2;grid-row:1/span 3;color:#c99e7d;font:16px var(--mono); }
+.archive-search-empty { grid-column:1/-1;margin:0;padding:18px;border:1px dashed rgba(174,194,201,.2);color:rgba(194,205,203,.72);font:13px var(--serif); }
+.character-facts { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:22px 0 26px; }
+.character-fact { min-width:0;padding:14px 16px;border:1px solid rgba(210,162,202,.16);background:rgba(174,112,163,.055); }
+.character-fact dt { margin:0 0 6px;color:#c59aba;font:8px var(--mono);letter-spacing:.13em;text-transform:uppercase; }
+.character-fact dd { margin:0;color:#eee8ed;font:17px/1.35 var(--serif);overflow-wrap:anywhere; }
+.character-hierarchy { display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:20px 0 24px;padding:14px 16px;border-left:2px solid rgba(194,133,181,.56);background:rgba(151,101,143,.065); }
+.character-hierarchy-label { flex-basis:100%;margin-bottom:3px;color:#bd95b7;font:8px var(--mono);letter-spacing:.13em; }
+.character-hierarchy button { padding:5px 8px;border:1px solid rgba(202,164,198,.2);color:#e5d5e2;background:rgba(255,255,255,.025);font:13px var(--serif);cursor:pointer; }
+.character-hierarchy button:hover { border-color:rgba(224,181,218,.65); }
+.character-hierarchy>span:not(.character-hierarchy-label) { color:rgba(205,170,201,.55); }
+.character-chronology-links { margin:22px 0 25px;padding:17px 18px;border:1px solid rgba(207,163,135,.2);background:rgba(169,113,79,.055); }
+.character-chronology-links>p { margin:0 0 12px;color:#d4aa8c;font:8px var(--mono);letter-spacing:.13em; }
+.character-chronology-links>div { display:grid;gap:7px; }
+.character-chronology-links button { display:grid;grid-template-columns:105px minmax(0,1fr) 16px;gap:10px;align-items:center;padding:9px 0;border:0;border-top:1px solid rgba(207,163,135,.12);color:#e5ded5;background:transparent;text-align:left;cursor:pointer; }
+.character-chronology-links button span { color:#c49a7d;font:8px var(--mono); }
+.character-chronology-links button b { font:16px/1.25 var(--serif);font-weight:500; }
+.character-chronology-links button i { color:#d1a17f;font-style:normal; }
+.character-chronology-links button:hover b { color:#fff1e4; }
+@media(max-width:760px) { .archive-search-controls{grid-template-columns:1fr}.archive-search-heading{align-items:flex-start;flex-direction:column;gap:6px}.archive-search-results{grid-template-columns:1fr}.character-facts{grid-template-columns:1fr}.character-chronology-links button{grid-template-columns:82px minmax(0,1fr) 14px} }
+@media(prefers-reduced-motion:reduce) { .archive-search-result,.archive-search-controls button{transition:none} }

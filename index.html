@@ -13,7 +13,12 @@
   <meta property="og:description" content="Bir başka tarihin içine gir. Aslı Olan Düzen romanını ve evrenini keşfet.">
   <title>Aslı Olan Düzen — Resmî Evren</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261119-polish3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://alperulacaltayli.github.io/asli-olan-duzen/SiteMalzemeleri/KitapKapakFotosu.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261119-features1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -174,6 +179,16 @@
           <p>Her arşiv kendi düzenine sahip. Kronoloji olayların birbirine bağlandığı bir ağaç; teknoloji ise kendi kayıt kataloğu olarak açılır.</p>
         </div>
 
+        <div class="archive-search-panel" role="search" aria-label="Arşiv kayıtlarında ara">
+          <div class="archive-search-heading"><span>ARŞİVDE HIZLI ERİŞİM</span><small>İSİM · TARİH · OLAY · KURUM · TEKNOLOJİ</small></div>
+          <div class="archive-search-controls">
+            <label class="archive-search-field"><span class="visually-hidden">Arşiv kayıtlarında ara</span><input id="archive-search-input" type="search" placeholder="Bir karakter, olay veya kayıt ara..." autocomplete="off" aria-controls="archive-search-results"></label>
+            <label class="archive-search-category"><span class="visually-hidden">Arama kategorisi</span><select id="archive-search-category"><option value="">Tüm arşiv birimleri</option></select></label>
+            <button id="archive-search-clear" type="button">TEMİZLE</button>
+          </div>
+          <p class="archive-search-status" id="archive-search-status" aria-live="polite">Aramak istediğin kelimeyi yaz.</p>
+          <div class="archive-search-results" id="archive-search-results" hidden></div>
+        </div>
         <div class="archive-directory-heading">
           <span>ARŞİV BİRİMLERİ</span>
           <small>İNCELEMEK İÇİN BİR BİRİM SEÇ</small>
@@ -243,6 +258,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20261119-polish3" defer></script>
+  <script src="assets/js/main.js?v=20261119-features1" defer></script>
 </body>
 </html>
