@@ -1,0 +1,2092 @@
+{
+  "categories": [
+    {
+      "id": "chronology",
+      "title": "Kronoloji",
+      "description": "1938'den başlayarak alternatif tarih çizgisindeki olaylar. Yıl düğümlerini aç, olayları seç ve kayıtlar arasındaki bağlantıları izle.",
+      "view": "tree",
+      "label": "DALLANAN OLAY AĞACI",
+      "order": 1,
+      "nodes": [
+        {
+          "id": "chronology-year-1938",
+          "path": "year-1938",
+          "sourceName": "1938",
+          "title": "1938",
+          "date": "YIL",
+          "summary": "1938 yılına ait 1 tarihsel kayıt.",
+          "content": "1938 yılına ait 1 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-29-kasim-1938-md",
+              "path": "Tarihi Olaylar/Olaylar/29 kasım 1938.md",
+              "sourceName": "29 kasım 1938",
+              "title": "29 Kasım 1938 — Alperen Keser'in İktidarı İlanı",
+              "date": "29 Kasım 1938",
+              "summary": "Atatürk'ün ölümünden sonra Türkiye'de yönetim boşluğu ve yön arayışı belirginleşti. Devletin askerî ve bürokratik kanatları arasında, ülkenin savaşın dışında kalıp kalamayacağı tartışılırken Alperen Keser güçlü, merkeziyetçi ve milliyetçi bir yönetim",
+              "content": "Atatürk'ün ölümünden sonra Türkiye'de yönetim boşluğu ve yön arayışı belirginleşti. Devletin askerî ve bürokratik kanatları arasında, ülkenin savaşın dışında kalıp kalamayacağı tartışılırken Alperen Keser güçlü, merkeziyetçi ve milliyetçi bir yönetim çizgisiyle öne çıktı.\n\n29 Kasım 1938'de Alperen Keser ülkenin başına geçtiğini ilan etti. Bu olay, yalnızca bir lider değişimi değil, Türkiye'nin dış politikasında ve iç yönetiminde büyük bir kırılma noktası oldu.\n\n## Kararın Arka Planı\n\n- Avrupa'da Almanya'nın yükselişi dikkatle izleniyordu.\n- Türkiye, Birinci Dünya Savaşı'nın kayıplarını hâlâ tarihî bir yara olarak görüyordu.\n- Alperen, Türkiye'nin ancak güçlü ordu, sanayi ve merkezi yönetimle ayakta kalabileceğine inanıyordu.\n- Yeni yönetim, eski düzenin yavaş ve dağınık kaldığını savunarak hızlı karar alan bir devlet mekanizması kurmaya yöneldi.\n\n## İlk Hamleler\n\nAlperen Keser'in ilk hamleleri orduyu, sanayiyi ve iç güvenliği yeniden düzenlemek oldu. Almanya ile gizli temaslar bu dönemde hızlandı. Bu temaslar başlangıçta teknoloji ve askerî eğitim üzerinden yürütüldü; daha sonra siyasi ittifakın altyapısına dönüştü.\n\n## Sonuçları\n\nBu tarih, Türkiye'nin tarafsızlık çizgisinden uzaklaşmaya başladığı gün olarak kabul edilir. Ülke kısa sürede kapalı ekonomi, millî sanayi ve ağır askerîleşme politikalarına yöneldi. 1940'a gelindiğinde Türkiye artık yaklaşan dünya savaşında pasif kalacak bir ülke değildi.\n\n## Bağlantılar\n\n- Türkiye\n- [[Alperen]]\n- [[10 KASIM 1940]]\n- [[1941 22 haziran SSCB savaşı Başladı]]",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alperen-keser",
+                  "title": "Alperen Keser",
+                  "date": "1888–1960"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
+                  "date": "10 Kasım 1940"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1938"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
+          "id": "chronology-year-1940",
+          "path": "year-1940",
+          "sourceName": "1940",
+          "title": "1940",
+          "date": "YIL",
+          "summary": "1940 yılına ait 6 tarihsel kayıt.",
+          "content": "1940 yılına ait 6 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1940-mart-anitkabir-tamamlandi-md",
+              "path": "Tarihi Olaylar/Olaylar/1940 mart Anıtkabir tamamlandı.md",
+              "sourceName": "1940 mart Anıtkabir tamamlandı",
+              "title": "Mart 1940 — Anıtkabir'in Tamamlanması",
+              "date": "Mart 1940",
+              "summary": "Mart 1940'ta Anıtkabir tamamlandı. Normal şartlarda yıllar sürebilecek bir yapı, Alperen Keser yönetiminin olağanüstü kaynak aktarmasıyla kısa sürede bitirildi.",
+              "content": "Mart 1940'ta Anıtkabir tamamlandı. Normal şartlarda yıllar sürebilecek bir yapı, Alperen Keser yönetiminin olağanüstü kaynak aktarmasıyla kısa sürede bitirildi.\n\n## Törensel Anlamı\n\nAnıtkabir, Ankara'nın yeni devlet düzenindeki merkezî yerini güçlendirdi. Burada yapılacak törenler, sadece yas töreni değil, devletin gücünü halka ve dünyaya gösteren sahneler hâline getirildi.\n\n## Siyasi Etkisi\n\nTamamlanmasının ardından Anıtkabir, Türkiye'nin hem içeride hem dışarıda verdiği mesajların odak noktası oldu. Almanya ile ilişkilerin yoğunlaştığı dönemde burası, iki ülke arasındaki sembolik yakınlaşmanın da kullanılacağı bir alan hâline geldi.\n\n## Bağlantılar\n\n- [[Anıtkabirin yapımına başlanması]]\n- [[10 KASIM 1940]]\n- Türkiye",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-anitkabirin-yapimina-baslanmasi-md",
+                  "title": "Anıtkabir'in Yapımına Başlanması",
+                  "date": ""
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
+                  "date": "10 Kasım 1940"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1940"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1940-14-haziran-fransa-dustu-md",
+              "path": "Tarihi Olaylar/Olaylar/1940 14 haziran Fransa Düştü.md",
+              "sourceName": "1940 14 haziran Fransa Düştü",
+              "title": "14 Haziran 1940 — Fransa'nın Düşüşü",
+              "date": "14 Haziran 1940",
+              "summary": "14 Haziran 1940'ta Fransa'nın düşmesi, Avrupa'daki güç dengesini tamamen değiştirdi. Almanya'nın hızlı ilerleyişi yalnızca Batı Avrupa'yı değil, Fransa'nın denizaşırı mandalarını ve sömürgelerini de savunmasız bıraktı.",
+              "content": "14 Haziran 1940'ta Fransa'nın düşmesi, Avrupa'daki güç dengesini tamamen değiştirdi. Almanya'nın hızlı ilerleyişi yalnızca Batı Avrupa'yı değil, Fransa'nın denizaşırı mandalarını ve sömürgelerini de savunmasız bıraktı.\n\n## Türkiye Açısından Önemi\n\nFransa'nın çöküşüyle Suriye üzerindeki Fransız denetimi fiilen sona erdi. Türkiye, bunu güney sınırını güvenceye alma ve eski Osmanlı coğrafyasına geri dönme fırsatı olarak gördü.\n\n## Suriye'nin İlhakı\n\nTürk ordusu, diplomatik baskı ve askerî hazırlığı aynı anda kullanarak Suriye'ye girdi. Fransız idaresinin dağılması nedeniyle bölgede büyük bir merkezî direnç oluşmadı. Yerel güçler kısa süreli direnişler gösterse de Türkiye, sınır şehirlerini ve ana ulaşım hatlarını hızla kontrol altına aldı.\n\n## Sonuçları\n\n- Türkiye güneyde stratejik derinlik kazandı.\n- Ortadoğu'ya ilerleyişin kapısı açıldı.\n- İngiltere ve Amerika, Türkiye'nin artık yalnızca savunmacı bir ülke olmadığını gördü.\n- Almanya ile Türkiye arasındaki güven arttı.\n\n## Bağlantılar\n\n- Türkiye\n- Almanya\n- Genel Dünya\n- [[1940 16 eylül İngiltere düştü]]",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1940-16-eylul-ingiltere-dustu-md",
+                  "title": "16 Eylül 1940 — İngiltere'nin Düşüşü",
+                  "date": "16 Eylül 1940"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1940"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1940-16-eylul-ingiltere-dustu-md",
+              "path": "Tarihi Olaylar/Olaylar/1940 16 eylül İngiltere düştü.md",
+              "sourceName": "1940 16 eylül İngiltere düştü",
+              "title": "16 Eylül 1940 — İngiltere'nin Düşüşü",
+              "date": "16 Eylül 1940",
+              "summary": "Deniz Aslanı Harekâtı'nın başarıya ulaşmasıyla İngiltere, Alman hâkimiyetine girdi. Bu olay, savaşın gidişatını Mihver lehine keskin biçimde değiştirdi.",
+              "content": "Deniz Aslanı Harekâtı'nın başarıya ulaşmasıyla İngiltere, Alman hâkimiyetine girdi. Bu olay, savaşın gidişatını Mihver lehine keskin biçimde değiştirdi.\n\n## Deniz Aslanı Harekâtı\n\nAlmanya, hava üstünlüğünü sağladıktan sonra İngiltere kıyılarına çıkarma yaptı. İngiliz direnişi güçlü olsa da ülkenin yalnızlaşması, Fransa'nın düşmüş olması ve Avrupa kıtasında destek alabileceği bir kara gücünün kalmaması sonucu savunma çöktü.\n\n## Sömürge Paylaşımı\n\nİngiltere'nin düşmesiyle Afrika, Ortadoğu ve Orta Asya'daki İngiliz nüfuz alanları tartışmaya açıldı. Almanya, İtalya ve Türkiye arasında nüfuz bölgeleri belirlendi. Türkiye, özellikle Ortadoğu ve Orta Asya bağlantılı bölgelerde pay talep etti.\n\n## Türkiye'ye Etkisi\n\nTürkiye için bu olay iki anlam taşıdı:\n\n1. İngiliz baskısı büyük ölçüde ortadan kalktı.\n2. Güney ve doğu yönünde genişleme daha olası hâle geldi.\n\n## Amerika'nın Tepkisi\n\nAmerika, İngiltere'nin düşüşünü Avrupa dengesinin tamamen bozulması olarak değerlendirdi. Bu tarihten sonra Amerika'nın Türkiye ve Almanya'ya karşı tutumu daha sertleşti.\n\n## Bağlantılar\n\n- Amerika\n- Almanya\n- Türkiye\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1940"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-9-kasim-1940-hitler-ankara-ya-ucar-md",
+              "path": "Tarihi Olaylar/Olaylar/9 KASIM 1940 Hitler Ankara’ya uçar.md",
+              "sourceName": "9 KASIM 1940 Hitler Ankara’ya uçar",
+              "title": "9 Kasım 1940 — Hitler Ankara'ya Uçar",
+              "date": "9 Kasım 1940",
+              "summary": "9 Kasım 1940'ta Adolf Hitler Ankara'ya hareket etti. Yolculuk, resmi açıklamalarda diplomatik ziyaret olarak duyuruldu; ancak gerçekte Mihver içi güç paylaşımı ve Türkiye'nin gelecek askerî rolü konuşulacaktı.",
+              "content": "9 Kasım 1940'ta Adolf Hitler Ankara'ya hareket etti. Yolculuk, resmi açıklamalarda diplomatik ziyaret olarak duyuruldu; ancak gerçekte Mihver içi güç paylaşımı ve Türkiye'nin gelecek askerî rolü konuşulacaktı.\n\n## Hazırlık\n\nAnkara'da güvenlik önlemleri artırıldı. Devlet binaları, tören alanları ve Anıtkabir çevresi özel olarak düzenlendi. Türkiye, ziyareti kendi devlet gücünü göstermek için kullandı.\n\n## Gizli Gündem\n\n- Türkiye'nin Balkanlar, Ortadoğu ve Kafkasya hedefleri.\n- Almanya'nın Sovyetler Birliği'ne yönelik uzun vadeli planları.\n- Askerî teknoloji transferlerinin artırılması.\n- Türkiye'nin savaş sonrası nüfuz alanlarının tanınması.\n\n## Bağlantılar\n\n- [[10 KASIM 1940]]\n- [[Akşam yemeği ve Mihver Yönetici Zirvesi]]\n- [[Alperen]]",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
+                  "date": "10 Kasım 1940"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-aksam-yemegi-ve-mihver-yonetici-zirvesi-md",
+                  "title": "Akşam Yemeği ve Mihver Yönetici Zirvesi",
+                  "date": ""
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alperen-keser",
+                  "title": "Alperen Keser",
+                  "date": "1888–1960"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1940"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
+              "path": "Tarihi Olaylar/Olaylar/10 KASIM 1940.md",
+              "sourceName": "10 KASIM 1940",
+              "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
+              "date": "10 Kasım 1940",
+              "summary": "Adolf Hitler, Atatürk'ün ikinci ölüm yıl dönümünde Ankara'ya geldi ve Anıtkabir'i ziyaret etti. Tören sırasında İstiklal Marşı eşliğinde saygı duruşunda bulunması, dünya basınında büyük yankı uyandırdı.",
+              "content": "Adolf Hitler, Atatürk'ün ikinci ölüm yıl dönümünde Ankara'ya geldi ve Anıtkabir'i ziyaret etti. Tören sırasında İstiklal Marşı eşliğinde saygı duruşunda bulunması, dünya basınında büyük yankı uyandırdı.\n\n## Ziyaretin Arka Planı\n\nAlperen Keser, Almanya ile yakınlaşmayı yalnızca askerî anlaşmalarla sınırlı bırakmak istemiyordu. İki ülke arasındaki ittifakı sembolik olarak da güçlendirmek için Hitler'i Ankara'ya davet etti.\n\n## Tören\n\nHitler'in Anıtkabir'de görünmesi Türk kamuoyunda iki farklı etki yarattı. Bir kesim bunu Türkiye'nin dünyada artık güçlü devletlerle aynı masaya oturması olarak gördü. Başka kesimler ise Türkiye'nin savaşın içine daha fazla çekileceğinden endişe etti.\n\n## Dünya Basını\n\nAmerikan basını bu ziyareti açık bir uyarı olarak değerlendirdi. İngiltere'nin düşüşünden sonra Türkiye-Almanya yakınlaşması, Amerika açısından yeni dünya düzeninin en tehlikeli işaretlerinden biri sayıldı.\n\n## Sonuçları\n\n- Türk-Alman ilişkileri açık biçimde görünür hâle geldi.\n- Mihver içinde Türkiye'nin konumu güçlendi.\n- Amerika'nın Türkiye'ye karşı şüphesi arttı.\n- Savaş sonrası dünya düzeninde Türkiye'nin bağımsız bir güç olacağı sinyali verildi.\n\n## Bağlantılar\n\n- [[1940 16 eylül İngiltere düştü]]\n- [[Alperen]]\n- Türkiye\n- Almanya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1940-16-eylul-ingiltere-dustu-md",
+                  "title": "16 Eylül 1940 — İngiltere'nin Düşüşü",
+                  "date": "16 Eylül 1940"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alperen-keser",
+                  "title": "Alperen Keser",
+                  "date": "1888–1960"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1940"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1940-7-aralik-yunanistan-dustu-md",
+              "path": "Tarihi Olaylar/Olaylar/1940 7 aralık Yunanistan Düştü.md",
+              "sourceName": "1940 7 aralık Yunanistan Düştü",
+              "title": "7 Aralık 1940 — Yunanistan'ın Düşüşü",
+              "date": "7 Aralık 1940",
+              "summary": "7 Aralık 1940'ta Yunanistan yenildi ve toprakları Türkiye ile İtalya arasında paylaştırıldı. Bu olay, Ege ve Doğu Akdeniz dengelerini tamamen değiştirdi.",
+              "content": "7 Aralık 1940'ta Yunanistan yenildi ve toprakları Türkiye ile İtalya arasında paylaştırıldı. Bu olay, Ege ve Doğu Akdeniz dengelerini tamamen değiştirdi.\n\n## Harekâtın Nedeni\n\nTürkiye, Yunanistan'ı hem Ege güvenliği hem de Batı Anadolu kıyılarının korunması açısından stratejik tehdit olarak görüyordu. İtalya ise Balkanlar ve Akdeniz üzerinde nüfuz arıyordu. Bu nedenle iki Mihver ortağı Yunanistan üzerinde ortak baskı kurdu.\n\n## Askerî Süreç\n\nTürk kuvvetleri Trakya ve Ege yönünden baskı kurarken İtalyan kuvvetleri batıdan ilerledi. Yunan ordusu iki cephe arasında sıkıştı. Kısa süren ama sert çatışmaların ardından Atina düştü.\n\n## Toprak Paylaşımı\n\n- Kıbrıs Türkiye'ye bağlandı.\n- Ege adalarının büyük kısmında Türk hâkimiyeti kuruldu.\n- Batı Yunanistan ve bazı Akdeniz bağlantıları İtalya'nın nüfuzuna bırakıldı.\n- Atina çevresinde geçici askerî yönetim oluşturuldu.\n\n## Sonuçları\n\nTürkiye, Ege'de büyük üstünlük sağladı. Akdeniz'e açılan yollar güçlendi ve sonraki Ortadoğu-Kafkasya planları için deniz güvenliği artırıldı.\n\n## Bağlantılar\n\n- Türkiye\n- Diğer Devletler\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1940"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
+          "id": "chronology-year-1941",
+          "path": "year-1941",
+          "sourceName": "1941",
+          "title": "1941",
+          "date": "YIL",
+          "summary": "1941 yılına ait 7 tarihsel kayıt.",
+          "content": "1941 yılına ait 7 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+              "path": "Tarihi Olaylar/Olaylar/1941 22 haziran SSCB savaşı Başladı.md",
+              "sourceName": "1941 22 haziran SSCB savaşı Başladı",
+              "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+              "date": "22 Haziran 1941",
+              "summary": "22 Haziran 1941'de Almanya batıdan Barbarossa Harekâtı'nı başlatırken Türkiye de güney ve Karadeniz eksenli planlarını devreye soktu. Bu tarih, Sovyetler Birliği'nin iki büyük cepheden aynı anda baskı altına alındığı gün oldu.",
+              "content": "22 Haziran 1941'de Almanya batıdan Barbarossa Harekâtı'nı başlatırken Türkiye de güney ve Karadeniz eksenli planlarını devreye soktu. Bu tarih, Sovyetler Birliği'nin iki büyük cepheden aynı anda baskı altına alındığı gün oldu.\n\n## Savaş Planı\n\nAlmanya'nın hedefi batı Sovyet topraklarını hızla geçerek Moskova'ya yönelmekti. Türkiye'nin hedefleri ise farklı ama tamamlayıcıydı:\n\n- Kafkasya üzerinden Bakü petrol sahalarına ilerlemek.\n- Karadeniz üzerinden Sivastopol'a çıkarma hazırlamak.\n- Türk topluluklarının yaşadığı bölgelerde ayaklanmaları desteklemek.\n- Stalingrad ve Volga hattına ulaşarak Sovyet ikmal yollarını kesmek.\n\n## İç Ayaklanmalar\n\nSSCB içindeki Türk asıllı topluluklar, savaşın başlamasıyla birlikte çeşitli bölgelerde ayaklanmalar başlattı. Bu ayaklanmalar her yerde aynı başarıyı göstermese de Sovyet yönetiminin cephe gerisindeki kontrolünü zayıflattı.\n\n## İlk Sonuçlar\n\nSovyetler Birliği beklediğinden daha geniş bir cephede savaşmak zorunda kaldı. Almanya batıdan ilerlerken Türkiye'nin Kafkasya baskısı Sovyet savunmasını böldü.\n\n## Bağlantılar\n\n- [[1941 10 Temmuz Minsk'in düşüşü]]\n- [[1941 12 Aralık Türkiye Kafkasya da ilerliyor]]\n- [[1942 3 ocak Bakünün düşmesi]]\n- [[1943 26 nisan SSCB Yıkıldı]]",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-10-temmuz-minsk-in-dususu-md",
+                  "title": "10 Temmuz 1941 — Minsk'in Düşüşü",
+                  "date": "10 Temmuz 1941"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-12-aralik-turkiye-kafkasya-da-ilerliyor-md",
+                  "title": "12 Aralık 1941 — Türkiye Kafkasya’da İlerliyor",
+                  "date": "12 Aralık 1941"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1942-3-ocak-bakunun-dusmesi-md",
+                  "title": "3 Ocak 1942 — Bakü’nün Düşmesi",
+                  "date": "3 Ocak 1942"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1943-26-nisan-sscb-yikildi-md",
+                  "title": "26 Nisan 1943 — SSCB’nin Yıkılışı",
+                  "date": "26 Nisan 1943"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1941"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1941-10-temmuz-minsk-in-dususu-md",
+              "path": "Tarihi Olaylar/Olaylar/1941 10 Temmuz Minsk'in düşüşü.md",
+              "sourceName": "1941 10 Temmuz Minsk'in düşüşü",
+              "title": "10 Temmuz 1941 — Minsk'in Düşüşü",
+              "date": "10 Temmuz 1941",
+              "summary": "Minsk, Alman ilerleyişinin ilk büyük başarılarından biri oldu. Şehrin düşmesiyle Sovyet batı savunması yarıldı ve Kızıl Ordu geri çekilmek zorunda kaldı. Bu gelişme Moskova yolunu tamamen açmadı; ancak Sovyet komuta zincirinde panik yarattı ve cephe ",
+              "content": "Minsk, Alman ilerleyişinin ilk büyük başarılarından biri oldu. Şehrin düşmesiyle Sovyet batı savunması yarıldı ve Kızıl Ordu geri çekilmek zorunda kaldı. Bu gelişme Moskova yolunu tamamen açmadı; ancak Sovyet komuta zincirinde panik yarattı ve cephe gerisinde tahliyeleri hızlandırdı.\n\nTürkiye açısından Minsk’in düşüşü, Almanya’nın planının işlediğini gösterdi. Ankara, Kafkasya cephesindeki hazırlıklarını hızlandırdı çünkü Sovyetlerin batıda tutulduğu her gün Türkiye’ye güneyden ilerleme fırsatı veriyordu.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1941"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1941-9-agustos-smolensk-duser-md",
+              "path": "Tarihi Olaylar/Olaylar/1941 9 Ağustos Smolensk düşer.md",
+              "sourceName": "1941 9 Ağustos Smolensk düşer",
+              "title": "9 Ağustos 1941 — Smolensk Düşer",
+              "date": "9 Ağustos 1941",
+              "summary": "Smolensk’in düşmesi, Moskova yolu üzerindeki en önemli eşiklerden biriydi. Alman ordusu burada büyük Sovyet birliklerini kuşatarak doğuya çekilmeyi zorlaştırdı.",
+              "content": "Smolensk’in düşmesi, Moskova yolu üzerindeki en önemli eşiklerden biriydi. Alman ordusu burada büyük Sovyet birliklerini kuşatarak doğuya çekilmeyi zorlaştırdı.\n\nBu zafer Alman komutanlığında savaşın kısa sürede biteceği düşüncesini güçlendirdi. Fakat ilerleyen mesafeler ikmal sorunlarını artırdı. Türkiye, bu dönemde Sovyetlerin batıya yoğunlaşmasını fırsat bilerek Kafkasya’daki istihbarat ağlarını genişletti.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1941"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1941-11-eylul-kievin-dususu-md",
+              "path": "Tarihi Olaylar/Olaylar/1941 11 eylül Kievin düşüşü.md",
+              "sourceName": "1941 11 eylül Kievin düşüşü",
+              "title": "11 Eylül 1941 — Kiev’in Düşüşü",
+              "date": "11 Eylül 1941",
+              "summary": "Kiev’in düşüşü, Sovyetler için hem askerî hem moral açıdan ağır bir darbe oldu. Ukrayna’daki Sovyet savunması çöktü ve Alman ordusu geniş tahıl bölgeleri ile ulaşım hatlarını kontrol altına aldı.",
+              "content": "Kiev’in düşüşü, Sovyetler için hem askerî hem moral açıdan ağır bir darbe oldu. Ukrayna’daki Sovyet savunması çöktü ve Alman ordusu geniş tahıl bölgeleri ile ulaşım hatlarını kontrol altına aldı.\n\nKiev’in kaybı Sovyet merkezî yönetiminin itibarını sarstı. Cephe gerisinde halk hareketleri ve etnik ayrılıkçı girişimler artmaya başladı. Türkiye, bu dağılma işaretlerini kendi Türkistan planları açısından dikkatle izledi.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1941"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1941-27-eylul-leningrad-kusatmasi-md",
+              "path": "Tarihi Olaylar/Olaylar/1941 27 eylül Leningrad kuşatması.md",
+              "sourceName": "1941 27 eylül Leningrad kuşatması",
+              "title": "27 Eylül 1941 — Leningrad Kuşatması",
+              "date": "27 Eylül 1941",
+              "summary": "Leningrad kuşatması, Sovyet kuzey savunmasının kilitlendiği büyük bir yıpratma savaşı oldu. Almanlar şehri hızlıca alamasa da dış bağlantılarını keserek Sovyet kaynaklarını kuzeye bağladı.",
+              "content": "Leningrad kuşatması, Sovyet kuzey savunmasının kilitlendiği büyük bir yıpratma savaşı oldu. Almanlar şehri hızlıca alamasa da dış bağlantılarını keserek Sovyet kaynaklarını kuzeye bağladı.\n\nBu kuşatma, Sovyet yönetiminin aynı anda Moskova, Ukrayna, Kafkasya ve kuzey cephelerini savunmak zorunda kaldığını gösterdi. Türkiye için bu durum, Kafkasya’da ilerleme şansını artırdı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1941"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1941-13-kasim-almanlar-moskovaya-dogru-ilerlemeye-baslar-md",
+              "path": "Tarihi Olaylar/Olaylar/1941 13 Kasım Almanlar Moskovaya doğru ilerlemeye başlar.md",
+              "sourceName": "1941 13 Kasım Almanlar Moskovaya doğru ilerlemeye başlar",
+              "title": "13 Kasım 1941 — Almanlar Moskova’ya İlerlemeye Başlar",
+              "date": "13 Kasım 1941",
+              "summary": "Kasım 1941’de Alman ordusu Moskova’ya yönelik baskısını artırdı. Soğuk hava ve uzayan ikmal hatları ilerleyişi zorlaştırsa da Sovyet ordusu çok cepheli savaş nedeniyle yıpranmıştı.",
+              "content": "Kasım 1941’de Alman ordusu Moskova’ya yönelik baskısını artırdı. Soğuk hava ve uzayan ikmal hatları ilerleyişi zorlaştırsa da Sovyet ordusu çok cepheli savaş nedeniyle yıpranmıştı.\n\nBu aşamada Moskova yalnızca bir şehir değil, Sovyet devletinin devam edip etmeyeceğinin sembolü hâline geldi. Türkiye, Sovyet merkezinin sarsılmasıyla Kafkasya ve Türkistan’daki yerel unsurların daha cesur davranacağını hesapladı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1941"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1941-12-aralik-turkiye-kafkasya-da-ilerliyor-md",
+              "path": "Tarihi Olaylar/Olaylar/1941 12 Aralık Türkiye Kafkasya da ilerliyor.md",
+              "sourceName": "1941 12 Aralık Türkiye Kafkasya da ilerliyor",
+              "title": "12 Aralık 1941 — Türkiye Kafkasya’da İlerliyor",
+              "date": "12 Aralık 1941",
+              "summary": "Türk ordusu Aralık 1941’de Kafkasya hattında belirgin ilerleme sağladı. Dağlık arazi ve sert hava şartları harekâtı yavaşlatsa da Sovyetlerin batı cephesine yoğunlaşması Türkiye’ye alan açtı.",
+              "content": "Türk ordusu Aralık 1941’de Kafkasya hattında belirgin ilerleme sağladı. Dağlık arazi ve sert hava şartları harekâtı yavaşlatsa da Sovyetlerin batı cephesine yoğunlaşması Türkiye’ye alan açtı.\n\nİlerleyişte üç hedef öne çıktı: Bakü petrolünü kesmek, Kafkas geçitlerini kontrol etmek ve bölgedeki Türk-Müslüman topluluklarla temas kurmak. Bu temaslar bazı bölgelerde yerel destek, bazı bölgelerde ise temkinli bekleyiş doğurdu.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1941"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
+          "id": "chronology-year-1942",
+          "path": "year-1942",
+          "sourceName": "1942",
+          "title": "1942",
+          "date": "YIL",
+          "summary": "1942 yılına ait 11 tarihsel kayıt.",
+          "content": "1942 yılına ait 11 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-ocak-mart-turkiye-kafkasyada-ilerler-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 Ocak-Mart Türkiye Kafkasyada ilerler.md",
+              "sourceName": "1942 Ocak-Mart Türkiye Kafkasyada ilerler",
+              "title": "Ocak-Mart 1942 — Türkiye Kafkasya’da İlerler",
+              "date": "Ocak 1942",
+              "summary": "1942’nin ilk üç ayında Türkiye, Bakü’nün ardından Kafkasya’nın iç hatlarına doğru ilerledi. Harekât artık yalnızca cephe savaşı değil, dağ geçitleri, ikmal yolları ve yerel yönetimler üzerinde kontrol kurma mücadelesine dönüştü.",
+              "content": "1942’nin ilk üç ayında Türkiye, Bakü’nün ardından Kafkasya’nın iç hatlarına doğru ilerledi. Harekât artık yalnızca cephe savaşı değil, dağ geçitleri, ikmal yolları ve yerel yönetimler üzerinde kontrol kurma mücadelesine dönüştü.\n\nTürkiye, bazı bölgelerde doğrudan askerî yönetim kurarken bazı bölgelerde yerel önderlerle anlaşmayı tercih etti. Bu, ilerleyişi hızlandırdı ancak ileride yönetim sorunlarının temelini de attı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-3-ocak-bakunun-dusmesi-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 3 ocak Bakünün düşmesi.md",
+              "sourceName": "1942 3 ocak Bakünün düşmesi",
+              "title": "3 Ocak 1942 — Bakü’nün Düşmesi",
+              "date": "3 Ocak 1942",
+              "summary": "Bakü’nün düşmesi, Sovyet savaş ekonomisine büyük darbe indirdi. Petrol sahalarının kaybı, Sovyet ordusunun yakıt, ikmal ve hareket kabiliyetini sınırladı.",
+              "content": "Bakü’nün düşmesi, Sovyet savaş ekonomisine büyük darbe indirdi. Petrol sahalarının kaybı, Sovyet ordusunun yakıt, ikmal ve hareket kabiliyetini sınırladı.\n\nTürkiye için Bakü zaferi yalnızca askerî değil, ekonomik ve sembolik bir başarıydı. Kafkasya’daki Türk etkisi güçlendi; Ankara, bölgenin yönetimi için askerî valilikler ve yerel işbirliği konseyleri kurmaya başladı.\n\nBu olaydan sonra Sovyetlerin güney cephesini toparlaması çok zorlaştı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-16-nisan-kafkasya-turkiyenin-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 16 Nisan Kafkasya Türkiyenin.md",
+              "sourceName": "1942 16 Nisan Kafkasya Türkiyenin",
+              "title": "16 Nisan 1942 — Kafkasya Türkiye’nin Kontrolüne Girer",
+              "date": "16 Nisan 1942",
+              "summary": "16 Nisan 1942’de Kafkasya’nın ana geçitleri, petrol hatları ve büyük şehirleri Türkiye’nin kontrolüne geçti. Bu durum Sovyet güney cephesinin çöktüğünü gösterdi.",
+              "content": "16 Nisan 1942’de Kafkasya’nın ana geçitleri, petrol hatları ve büyük şehirleri Türkiye’nin kontrolüne geçti. Bu durum Sovyet güney cephesinin çöktüğünü gösterdi.\n\nTürkiye bölgeyi doğrudan ilhak etmek yerine önce askerî-idarî bölgelere ayırdı. Amaç, savaş bitene kadar güvenliği sağlamak ve Türkistan yönündeki ilerleyiş için Kafkasya’yı üs hâline getirmekti.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-1-mayis-sivastopol-cikarmasi-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 1 Mayıs Sivastopol çıkarması.md",
+              "sourceName": "1942 1 Mayıs Sivastopol çıkarması",
+              "title": "1 Mayıs 1942 — Sivastopol Çıkarması",
+              "date": "1 Mayıs 1942",
+              "summary": "Türkiye, Karadeniz üzerindeki üstünlüğünü kullanarak Sivastopol’a çıkarma başlattı. Bu hamle Sovyet donanmasının Karadeniz’deki hareket alanını daraltmayı ve Kırım’ı cephe gerisinden koparmayı hedefliyordu.",
+              "content": "Türkiye, Karadeniz üzerindeki üstünlüğünü kullanarak Sivastopol’a çıkarma başlattı. Bu hamle Sovyet donanmasının Karadeniz’deki hareket alanını daraltmayı ve Kırım’ı cephe gerisinden koparmayı hedefliyordu.\n\nÇıkarma zorlu geçti. Kıyı savunmaları ve şehir çevresindeki tahkimatlar ilerlemeyi yavaşlattı. Ancak Kafkasya’dan gelen baskı ve Almanların kuzeyden ilerleyişi Sovyet savunmasını yalnızlaştırdı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-7-temmuz-sivastopol-dususu-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 7 Temmuz Sivastopol düşüşü.md",
+              "sourceName": "1942 7 Temmuz Sivastopol düşüşü",
+              "title": "7 Temmuz 1942 — Sivastopol’un Düşüşü",
+              "date": "7 Temmuz 1942",
+              "summary": "Sivastopol, iki ayı aşan çatışmalardan sonra düştü. Şehrin kaybı Sovyetlerin Karadeniz’deki en önemli üslerinden birini yitirmesi anlamına geldi.",
+              "content": "Sivastopol, iki ayı aşan çatışmalardan sonra düştü. Şehrin kaybı Sovyetlerin Karadeniz’deki en önemli üslerinden birini yitirmesi anlamına geldi.\n\nTürkiye için bu zafer Karadeniz güvenliğini pekiştirdi. Kırım, Kafkasya ve Anadolu arasında askerî ikmal hattı kuruldu. Sovyetlerin güneyden karşı taarruz ihtimali büyük ölçüde azaldı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-5-agustos-almanlar-don-volga-hattina-ulasir-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 5 Ağustos Almanlar Don-Volga Hattına ulaşır.md",
+              "sourceName": "1942 5 Ağustos Almanlar Don-Volga Hattına ulaşır",
+              "title": "5 Ağustos 1942 — Almanlar Don-Volga Hattına Ulaşır",
+              "date": "5 Ağustos 1942",
+              "summary": "Alman ordusunun Don-Volga hattına ulaşması, Sovyet coğrafyasını ikiye ayırma planının önemli aşamasıydı. Bu hat ele geçirildiğinde Moskova ile güneydeki kuvvetler arasındaki bağlantı zayıflayacaktı.",
+              "content": "Alman ordusunun Don-Volga hattına ulaşması, Sovyet coğrafyasını ikiye ayırma planının önemli aşamasıydı. Bu hat ele geçirildiğinde Moskova ile güneydeki kuvvetler arasındaki bağlantı zayıflayacaktı.\n\nTürkiye’nin Kafkasya’dan kuzeye baskısı, Almanların Volga hattına yaklaşmasını kolaylaştırdı. Böylece Stalingrad çevresi iki Mihver gücünün baskısı altında kaldı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-13-eylul-stalingrad-kusatmasi-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 13 Eylül Stalingrad kuşatması.md",
+              "sourceName": "1942 13 Eylül Stalingrad kuşatması",
+              "title": "13 Eylül 1942 — Stalingrad Kuşatması",
+              "date": "13 Eylül 1942",
+              "summary": "Stalingrad kuşatması Sovyet direnişinin en kritik cephelerinden biri oldu. Şehir, Volga üzerindeki konumu nedeniyle hem ulaşım hem moral açısından büyük önem taşıyordu.",
+              "content": "Stalingrad kuşatması Sovyet direnişinin en kritik cephelerinden biri oldu. Şehir, Volga üzerindeki konumu nedeniyle hem ulaşım hem moral açısından büyük önem taşıyordu.\n\nAlman ve Türk baskısı Sovyet savunmasını daralttı. Türkiye, güneyden ve Kafkasya bağlantılı hatlardan Sovyet ikmalini kesmeye çalıştı. Şehrin düşmesi, Sovyetlerin savaş iradesini ağır biçimde sarsacaktı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-28-ekim-leningradin-dususu-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 28 ekim Leningradın düşüşü.md",
+              "sourceName": "1942 28 ekim Leningradın düşüşü",
+              "title": "28 Ekim 1942 — Leningrad’ın Düşüşü",
+              "date": "28 Ekim 1942",
+              "summary": "Uzun kuşatmanın ardından Leningrad düştü. Bu, Sovyet kuzey cephesinin çözülmesi ve Baltık hattındaki direnişin kırılması anlamına geldi.",
+              "content": "Uzun kuşatmanın ardından Leningrad düştü. Bu, Sovyet kuzey cephesinin çözülmesi ve Baltık hattındaki direnişin kırılması anlamına geldi.\n\nŞehrin düşmesi Moskova üzerindeki baskıyı artırdı. Sovyet yönetimi artık aynı anda kuzeyde, batıda, güneyde ve Kafkasya’da büyük kayıplar vermişti.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-3-kasim-stalingradin-dususu-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 3 kasım StalinGradın düşüşü.md",
+              "sourceName": "1942 3 kasım StalinGradın düşüşü",
+              "title": "3 Kasım 1942 — Stalingrad’ın Düşüşü",
+              "date": "3 Kasım 1942",
+              "summary": "Stalingrad’ın düşüşü Sovyetler için dönüm noktası oldu. Volga hattındaki kontrol kaybı, ülkenin batı ve güney cepheleri arasındaki koordinasyonu bozdu.",
+              "content": "Stalingrad’ın düşüşü Sovyetler için dönüm noktası oldu. Volga hattındaki kontrol kaybı, ülkenin batı ve güney cepheleri arasındaki koordinasyonu bozdu.\n\nMihver tarafında bu zafer savaşın artık kazanılmak üzere olduğu düşüncesini güçlendirdi. Türkiye, Stalingrad sonrası Türkistan yönündeki planlarını daha açık biçimde hazırlamaya başladı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-8-aralik-almanlar-moskovaya-yonelik-taaruzu-baslatir-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 8 Aralık Almanlar Moskovaya yönelik taaruzu başlatır.md",
+              "sourceName": "1942 8 Aralık Almanlar Moskovaya yönelik taaruzu başlatır",
+              "title": "8 Aralık 1942 — Almanlar Moskova Taarruzunu Başlatır",
+              "date": "8 Aralık 1942",
+              "summary": "Alman ordusu Aralık 1942’de Moskova’ya yönelik büyük taarruzu başlattı. Amaç, Sovyet merkezi yönetimini çökertmek ve savaşın siyasî sonucunu zorla almaktı.",
+              "content": "Alman ordusu Aralık 1942’de Moskova’ya yönelik büyük taarruzu başlattı. Amaç, Sovyet merkezi yönetimini çökertmek ve savaşın siyasî sonucunu zorla almaktı.\n\nTaarruz, Leningrad ve Stalingrad’ın düşmesinden sonra Sovyet moralinin zayıfladığı bir döneme denk geldi. Ancak Moskova çevresinde hâlâ güçlü savunma hatları bulunuyordu.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1942-10-aralik-turkiye-moskovaya-yonelik-tararuza-katilir-md",
+              "path": "Tarihi Olaylar/Olaylar/1942 10 Aralık Türkiye Moskovaya yönelik Tararuza katılır.md",
+              "sourceName": "1942 10 Aralık Türkiye Moskovaya yönelik Tararuza katılır",
+              "title": "10 Aralık 1942 — Türkiye Moskova Taarruzuna Katılır",
+              "date": "10 Aralık 1942",
+              "summary": "Türkiye, Moskova’ya yönelik nihai baskıya destek verdi. Bu destek doğrudan şehir merkezine saldırıdan çok güneydoğu hatlarının kesilmesi, ikmal yollarının tutulması ve Sovyet geri çekilme güzergâhlarının baskılanması şeklinde gerçekleşti.",
+              "content": "Türkiye, Moskova’ya yönelik nihai baskıya destek verdi. Bu destek doğrudan şehir merkezine saldırıdan çok güneydoğu hatlarının kesilmesi, ikmal yollarının tutulması ve Sovyet geri çekilme güzergâhlarının baskılanması şeklinde gerçekleşti.\n\nTürkiye’nin katılımı Sovyet komutasına, savaşın artık yalnızca Alman-Sovyet savaşı olmadığını; çok cepheli bir çöküş sürecine dönüştüğünü gösterdi.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1942"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
+          "id": "chronology-year-1943",
+          "path": "year-1943",
+          "sourceName": "1943",
+          "title": "1943",
+          "date": "YIL",
+          "summary": "1943 yılına ait 7 tarihsel kayıt.",
+          "content": "1943 yılına ait 7 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1943-6-ocak-moskova-etrafindaki-savunma-coker-md",
+              "path": "Tarihi Olaylar/Olaylar/1943 6 Ocak Moskova etrafındaki savunma çöker.md",
+              "sourceName": "1943 6 Ocak Moskova etrafındaki savunma çöker",
+              "title": "6 Ocak 1943 — Moskova Çevresindeki Savunma Çöker",
+              "date": "6 Ocak 1943",
+              "summary": "6 Ocak 1943’te Moskova çevresindeki dış savunma hatları çökmeye başladı. Sovyet birlikleri geri çekildi; bazı birlikler şehir içinde savunmaya hazırlanırken bazıları doğuya kaçış yollarını korumaya çalıştı.",
+              "content": "6 Ocak 1943’te Moskova çevresindeki dış savunma hatları çökmeye başladı. Sovyet birlikleri geri çekildi; bazı birlikler şehir içinde savunmaya hazırlanırken bazıları doğuya kaçış yollarını korumaya çalıştı.\n\nBu çöküş Sovyet merkezi yönetiminde panik yarattı. Devlet kurumlarının bir kısmı tahliye edilmeye çalışıldı, ancak ulaşım hatlarının baskı altında olması tahliyeyi düzensiz hâle getirdi.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1943"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1943-2-subat-moskova-isgal-edilir-md",
+              "path": "Tarihi Olaylar/Olaylar/1943 2 Şubat Moskova İşgal edilir.md",
+              "sourceName": "1943 2 Şubat Moskova İşgal edilir",
+              "title": "2 Şubat 1943 — Moskova İşgal Edilir",
+              "date": "2 Şubat 1943",
+              "summary": "Moskova’nın işgali Sovyetler Birliği’nin siyasî merkezini kaybetmesi anlamına geldi. Şehrin düşmesi savaşın hemen bitmesi demek değildi, fakat Sovyet devletinin bütünlüğünü koruma ihtimali büyük ölçüde azaldı.",
+              "content": "Moskova’nın işgali Sovyetler Birliği’nin siyasî merkezini kaybetmesi anlamına geldi. Şehrin düşmesi savaşın hemen bitmesi demek değildi, fakat Sovyet devletinin bütünlüğünü koruma ihtimali büyük ölçüde azaldı.\n\nAlmanya bu olayı büyük zafer olarak duyurdu. Türkiye ise Moskova’nın düşüşünü Türkistan ve Kafkasya’daki ayrılıkçı hareketlerin hızlanacağı bir işaret olarak gördü.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1943"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1943-14-subat-sovyet-merkezi-yonetimi-yikilmaya-baslar-md",
+              "path": "Tarihi Olaylar/Olaylar/1943 14 Şubat Sovyet merkezi yönetimi yıkılmaya başlar.md",
+              "sourceName": "1943 14 Şubat Sovyet merkezi yönetimi yıkılmaya başlar",
+              "title": "14 Şubat 1943 — Sovyet Merkezi Yönetimi Yıkılmaya Başlar",
+              "date": "14 Şubat 1943",
+              "summary": "Moskova’nın kaybından sonra Sovyet merkezi yönetimi emir-komuta bütünlüğünü kaybetmeye başladı. Farklı cephelerdeki birlikler kendi başlarına hareket ediyor, bazı yerel yöneticiler bağımsız kararlar alıyordu.",
+              "content": "Moskova’nın kaybından sonra Sovyet merkezi yönetimi emir-komuta bütünlüğünü kaybetmeye başladı. Farklı cephelerdeki birlikler kendi başlarına hareket ediyor, bazı yerel yöneticiler bağımsız kararlar alıyordu.\n\nBu dönemde Sovyetler Birliği artık tek merkezden yönetilen bir devlet olmaktan uzaklaştı. Almanya batıda, Türkiye ise güney ve doğuda yeni sınır düzenlemeleri için hazırlık yaptı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1943"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1943-mart-sovyet-topraklari-icerisinde-bagimsizlik-hareketleri-baslar-md",
+              "path": "Tarihi Olaylar/Olaylar/1943 Mart Sovyet toprakları içerisinde bağımsızlık hareketleri başlar.md",
+              "sourceName": "1943 Mart Sovyet toprakları içerisinde bağımsızlık hareketleri başlar",
+              "title": "Mart 1943 — Sovyet Topraklarında Bağımsızlık Hareketleri Başlar",
+              "date": "Mart 1943",
+              "summary": "Mart 1943’te Sovyet coğrafyasında birçok yerel bağımsızlık hareketi ortaya çıktı. Baltık, Kafkasya, Türkistan ve bazı Slav bölgelerinde Sovyet yönetiminden kopma girişimleri başladı.",
+              "content": "Mart 1943’te Sovyet coğrafyasında birçok yerel bağımsızlık hareketi ortaya çıktı. Baltık, Kafkasya, Türkistan ve bazı Slav bölgelerinde Sovyet yönetiminden kopma girişimleri başladı.\n\nBu hareketlerin bir kısmı gerçekten yerel bağımsızlık isteğine dayanıyordu; bir kısmı ise Almanya veya Türkiye tarafından desteklenen siyasî yapılardı. Bu karmaşa Sovyetler Birliği’nin parçalanmasını hızlandırdı.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1943"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1943-2-mart-turk-ordusu-turkistana-dogru-yonelir-md",
+              "path": "Tarihi Olaylar/Olaylar/1943 2 Mart Türk ordusu Türkistana doğru yönelir.md",
+              "sourceName": "1943 2 Mart Türk ordusu Türkistana doğru yönelir",
+              "title": "2 Mart 1943 — Türk Ordusu Türkistan’a Yönelir",
+              "date": "2 Mart 1943",
+              "summary": "Türk ordusu, Kafkasya ve Hazar hattını güvenceye aldıktan sonra Türkistan yönüne çevrildi. Bu harekâtın amacı Sovyet yönetiminden kopan Türk topluluklarıyla temas kurmak ve bölgede Türkiye yanlısı yönetimler oluşturmaktı.",
+              "content": "Türk ordusu, Kafkasya ve Hazar hattını güvenceye aldıktan sonra Türkistan yönüne çevrildi. Bu harekâtın amacı Sovyet yönetiminden kopan Türk topluluklarıyla temas kurmak ve bölgede Türkiye yanlısı yönetimler oluşturmaktı.\n\nİlerleyiş yalnızca askerî değil, ideolojik bir anlam da taşıyordu. Ankara bunu tarihî ve kültürel bağların yeniden kurulması olarak anlatırken, bölgede farklı gruplar Türkiye’ye değişik tepkiler verdi.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1943"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1943-18-nisan-turkiye-ve-naziler-istenilen-bolgelere-ulasir-md",
+              "path": "Tarihi Olaylar/Olaylar/1943 18 Nisan Türkiye ve Naziler istenilen bölgelere ulaşır.md",
+              "sourceName": "1943 18 Nisan Türkiye ve Naziler istenilen bölgelere ulaşır",
+              "title": "18 Nisan 1943 — Türkiye ve Almanya Hedef Bölgelerine Ulaşır",
+              "date": "18 Nisan 1943",
+              "summary": "18 Nisan 1943’te Türkiye ve Almanya, savaş başında belirlenen ana hedef bölgelerine ulaştı. Almanya batı ve kuzey Sovyet coğrafyasında hâkimiyet kurarken Türkiye Kafkasya, Hazar hattı ve Türkistan yönünde etkisini genişletti.",
+              "content": "18 Nisan 1943’te Türkiye ve Almanya, savaş başında belirlenen ana hedef bölgelerine ulaştı. Almanya batı ve kuzey Sovyet coğrafyasında hâkimiyet kurarken Türkiye Kafkasya, Hazar hattı ve Türkistan yönünde etkisini genişletti.\n\nBu tarih, Sovyetler Birliği’nin fiilen parçalandığının habercisi oldu. Resmî çöküş birkaç gün sonra ilan edilecekti.\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1943"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1943-26-nisan-sscb-yikildi-md",
+              "path": "Tarihi Olaylar/Olaylar/1943 26 nisan SSCB Yıkıldı.md",
+              "sourceName": "1943 26 nisan SSCB Yıkıldı",
+              "title": "26 Nisan 1943 — SSCB’nin Yıkılışı",
+              "date": "26 Nisan 1943",
+              "summary": "26 Nisan 1943’te Sovyetler Birliği’nin merkezî bütünlüğü resmen sona erdi. Almanya ve Türkiye, ele geçirilen topraklar üzerinde nüfuz paylaşımına gitti.",
+              "content": "26 Nisan 1943’te Sovyetler Birliği’nin merkezî bütünlüğü resmen sona erdi. Almanya ve Türkiye, ele geçirilen topraklar üzerinde nüfuz paylaşımına gitti.\n\n## Paylaşımın Mantığı\n\nAlmanya, Avrupa Rusyası, Baltık hattı ve kuzey-doğu yönünde hâkimiyet kurdu. Türkiye ise Kafkasya, Hazar çevresi ve Türkistan bağlantılı bölgelerde nüfuz sahibi oldu. Bazı bölgeler doğrudan bağlanmadı; tampon devletler ve bağlı yönetimler oluşturuldu.\n\n## Sonuçları\n\n- Dünya iki büyük blok etrafında yeniden şekillendi: Amerika ve Mihver merkezli düzen.\n- Türkiye bölgesel güç olmaktan çıkarak imparatorluk benzeri geniş nüfuz alanına sahip oldu.\n- Almanya Asya içlerine kadar uzanan devasa bir kara gücü hâline geldi.\n- Sovyet sonrası bölgelerde uzun süre isyanlar, yönetim sorunları ve kimlik mücadeleleri yaşandı.\n\n## Bağlantılar\n\n- Türkiye\n- Almanya\n- Amerika\n- Genel Dünya\n\n## Bağlantılar\n\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya\n- Genel Dünya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1943"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
+          "id": "chronology-year-1944",
+          "path": "year-1944",
+          "sourceName": "1944",
+          "title": "1944",
+          "date": "YIL",
+          "summary": "1944 yılına ait 1 tarihsel kayıt.",
+          "content": "1944 yılına ait 1 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1944-turkistan-uranyum-seferberligi-md",
+              "path": "Tarihi Olaylar/Olaylar/1944 Türkistan Uranyum Seferberliği.md",
+              "sourceName": "1944 Türkistan Uranyum Seferberliği",
+              "title": "1944 — Türkistan Uranyum Seferberliği",
+              "date": "1944",
+              "summary": "SSCB'nin yıkılmasından sonra Türkiye, Türkistan hattında yalnızca askerî ve kültürel nüfuz kazanmadı; aynı zamanda stratejik maden kaynaklarına da erişti. Bu kaynakların en önemlisi, Türkistan ve çevresindeki uranyum yatakları oldu.",
+              "content": "SSCB'nin yıkılmasından sonra Türkiye, Türkistan hattında yalnızca askerî ve kültürel nüfuz kazanmadı; aynı zamanda stratejik maden kaynaklarına da erişti. Bu kaynakların en önemlisi, Türkistan ve çevresindeki uranyum yatakları oldu.\n\n## Neden\n\n1943 sonrası dünya düzeninde Amerika hâlâ denizaşırı büyük güç olarak ayaktaydı. Almanya ve Türkiye Avrasya'da genişlemiş olsa da Amerika'nın okyanuslarla korunan coğrafyası doğrudan işgali zorlaştırıyordu.\n\nBu nedenle Ankara'da şu fikir güçlendi:\n\n> Amerika'yı yenmek için klasik kara savaşı değil, uzak menzilli ve psikolojik yıkım yaratacak yeni silahlar gerekir.\n\n## Olay\n\n1944'te Türkiye, Türkistan'daki uranyum kaynaklarını devlet kontrolüne aldı. Maden bölgeleri askerî güvenlik altına sokuldu. Bölgeden çıkarılan uranyum, gizli araştırma merkezlerine ve ağır sanayi tesislerine taşındı.\n\n## Doğrudan Sonuç\n\n- Türkistan'ın ekonomik önemi arttı.\n- Türkiye'nin savaş sonrası bilimsel programları hızlandı.\n- Almanya, Türkiye'nin uranyum faaliyetlerini fark ederek kendi nükleer çalışmalarını sert biçimde hızlandırdı.\n- Amerika, istihbarat kanalları üzerinden Türkistan'da olağanüstü faaliyetler olduğunu öğrendi fakat süreci durduramadı.\n\n## Dolaylı Sonuç\n\nTürkistan artık yalnızca tarihî ve kültürel hedef değil, stratejik enerji ve silah teknolojisi merkezi hâline geldi. Bu durum Türkiye'nin bölgeyi bırakmamasının en önemli nedenlerinden biri oldu.\n\n## Uzun Vadeli Sonuç\n\n1946'da Washington'a atılacak ilk atom bombasının maddi temeli bu uranyum seferberliğiyle atıldı.\n\n## Bağlantılar\n\n- Türkiye\n- Türkistan\n- [[1943 26 nisan SSCB Yıkıldı]]\n- [[1945 Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı]]\n- [[1946 1 Ağustos Washington Atom Bombardımanı]]",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1943-26-nisan-sscb-yikildi-md",
+                  "title": "26 Nisan 1943 — SSCB’nin Yıkılışı",
+                  "date": "26 Nisan 1943"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1945-turk-atom-projesi-ve-uzun-menzilli-bombardiman-programi-md",
+                  "title": "1945 — Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı",
+                  "date": "1945"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-1-agustos-washington-atom-bombardimani-md",
+                  "title": "1 Ağustos 1946 — Washington Atom Bombardımanı",
+                  "date": "1 Ağustos 1946"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1944"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
+          "id": "chronology-year-1945",
+          "path": "year-1945",
+          "sourceName": "1945",
+          "title": "1945",
+          "date": "YIL",
+          "summary": "1945 yılına ait 2 tarihsel kayıt.",
+          "content": "1945 yılına ait 2 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1945-alman-atom-programi-teknolojiye-erisir-md",
+              "path": "Tarihi Olaylar/Olaylar/1945 Alman Atom Programı Teknolojiye Erişir.md",
+              "sourceName": "1945 Alman Atom Programı Teknolojiye Erişir",
+              "title": "1945 — Alman Atom Programı Teknolojiye Erişir",
+              "date": "1945",
+              "summary": "Türkiye'nin atom programında ilerlemesi Almanya için hem fırsat hem tehdit oldu. Berlin, Mihver içindeki liderliğini kaybetmemek için nükleer teknolojiye erişmeyi zorunlu gördü.",
+              "content": "Türkiye'nin atom programında ilerlemesi Almanya için hem fırsat hem tehdit oldu. Berlin, Mihver içindeki liderliğini kaybetmemek için nükleer teknolojiye erişmeyi zorunlu gördü.\n\n## Neden\n\nAlmanya geniş Avrasya coğrafyasının hâkimi hâline gelmişti; fakat Türkiye'nin uranyum ve atom programı Ankara'ya bağımsız stratejik güç kazandırıyordu. Bu durum Almanya-Türkiye dengesini değiştirebilirdi.\n\n## Olay\n\nAlmanya, 1945 boyunca çeşitli yollarla atom teknolojisine erişti:\n\n- Türk programında görev alan bilim insanlarıyla temas.\n- Ele geçirilen eski Sovyet araştırma çevrelerinin kullanılması.\n- Almanya'nın kendi fizik ve mühendislik birikimi.\n- Türkiye ile resmî ortaklık görüntüsü altında bilgi paylaşımı.\n- Gizli istihbarat faaliyetleri.\n\n## Sonuç\n\n1946'ya gelindiğinde Almanya da atom bombası üretebilecek kapasiteye ulaştı. Bu durum Amerika'ya karşı saldırıyı ortak Mihver stratejisine dönüştürdü.\n\n## Uzun Vadeli Etki\n\nAtom teknolojisi iki müttefik arasında güveni artırmadı; tam tersine gelecekteki dünya paylaşımında pazarlık gücü hâline geldi. Türkiye Washington'u vurduktan sonra Almanya'nın ikinci bombayı atması, Amerika'nın çöküşünü tamamladığı kadar Almanya'nın \"eşit kurucu güç\" olduğunu da ilan etti.\n\n## Bağlantılar\n\n- [[1945 Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı]]\n- [[1946 8 Ağustos New York Atom Bombardımanı]]\n- Almanya\n- Türkiye",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1945-turk-atom-projesi-ve-uzun-menzilli-bombardiman-programi-md",
+                  "title": "1945 — Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı",
+                  "date": "1945"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-8-agustos-new-york-atom-bombardimani-md",
+                  "title": "8 Ağustos 1946 — New York Atom Bombardımanı",
+                  "date": "8 Ağustos 1946"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1945"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1945-turk-atom-projesi-ve-uzun-menzilli-bombardiman-programi-md",
+              "path": "Tarihi Olaylar/Olaylar/1945 Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı.md",
+              "sourceName": "1945 Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı",
+              "title": "1945 — Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı",
+              "date": "1945",
+              "summary": "1945 yılı, Türkiye'nin savaşı yalnızca kara ordusu ve bölgesel genişleme ile değil, kıtalararası vuruş kapasitesiyle kazanma fikrine yöneldiği dönemdir.",
+              "content": "1945 yılı, Türkiye'nin savaşı yalnızca kara ordusu ve bölgesel genişleme ile değil, kıtalararası vuruş kapasitesiyle kazanma fikrine yöneldiği dönemdir.\n\n## Gerçek Tarih ile Ayrım\n\nGerçek tarihte atom bombası ilk kez Amerika tarafından geliştirilmiştir. Bu alternatif evrende ise Amerika Avrupa'da yalnızlaşmış, Almanya ve Türkiye Sovyet coğrafyasını ele geçirerek bilim insanlarına, ağır sanayiye ve uranyum kaynaklarına erişmiştir.\n\n## Sapma Noktası\n\n- SSCB'nin 1943'te çökmesi.\n- Türkistan uranyumunun Türkiye kontrolüne girmesi.\n- Alman bilimsel ağlarının ve Türk sanayisinin savaş ekonomisi içinde birleşmesi.\n- Amerika'nın denizaşırı yalnızlığı nedeniyle Avrasya'daki gelişmeleri doğrudan engelleyememesi.\n\n## Olay\n\nTürkiye, 1945'te gizli atom projesini ve Amerika'ya ulaşabilecek uzun menzilli bombardıman uçağı programını aynı anda yürüttü. Buradaki \"Amerikan bombardıman uçağı\" ifadesi, Amerika'ya kadar menzil sağlayabilecek uzun menzilli stratejik bombardıman kapasitesi anlamında kullanılmalıdır.\n\n## Programın Mantığı\n\nAtom bombası tek başına yeterli değildi; bombanın hedefe ulaştırılması gerekiyordu. Bu nedenle Türkiye iki temel programa yatırım yaptı:\n\n1. **Atom Projesi:** Türkistan uranyumuna dayanan gizli silah programı.\n2. **Uzun Menzilli Bombardıman Programı:** Atlantik veya ara üsler üzerinden Amerika kıtasına ulaşabilecek uçak geliştirme çabası.\n\n## Lojistik ve Gerçekçilik Açıklaması\n\nBu gelişmenin mümkün olabilmesi için evrende şu koşullar kabul edilir:\n\n- Türkiye 1930'lardan beri ağır sanayiye olağanüstü yatırım yapmıştır.\n- Almanya ile teknoloji transferi erken başlamıştır.\n- SSCB'nin erken çöküşü bilim insanı, tesis ve hammadde ele geçirilmesini sağlamıştır.\n- Türkistan uranyumu projeye hammadde temeli vermiştir.\n- İngiltere'nin düşmüş olması, Atlantik'teki ara üslerin Mihver kullanımına açılmasını kolaylaştırmıştır.\n\n## Almanya'nın Tepkisi\n\nAlmanya, Türkiye'nin atom programını tamamen bağımsız bırakmak istemedi. Casusluk, bilim insanı değişimi, baskı ve teknik ortaklık yoluyla bu teknolojiye erişmeye çalıştı. Sonunda Almanya da atom silahı üretme kapasitesine ulaştı.\n\n## Bağlantılar\n\n- [[1944 Türkistan Uranyum Seferberliği]]\n- Almanya\n- Türkiye\n- [[1945 Alman Atom Programı Teknolojiye Erişir]]\n- [[1946 Atlantik ve Pasifik Deniz-Hava Savaşları]]",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1944-turkistan-uranyum-seferberligi-md",
+                  "title": "1944 — Türkistan Uranyum Seferberliği",
+                  "date": "1944"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1945-alman-atom-programi-teknolojiye-erisir-md",
+                  "title": "1945 — Alman Atom Programı Teknolojiye Erişir",
+                  "date": "1945"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-atlantik-ve-pasifik-deniz-hava-savaslari-md",
+                  "title": "1946 — Atlantik ve Pasifik Deniz-Hava Savaşları",
+                  "date": "1946"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1945"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
+          "id": "chronology-year-1946",
+          "path": "year-1946",
+          "sourceName": "1946",
+          "title": "1946",
+          "date": "YIL",
+          "summary": "1946 yılına ait 6 tarihsel kayıt.",
+          "content": "1946 yılına ait 6 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1946-amerika-nin-tam-cokusu-md",
+              "path": "Tarihi Olaylar/Olaylar/1946 Amerika'nın Tam Çöküşü.md",
+              "sourceName": "1946 Amerika'nın Tam Çöküşü",
+              "title": "1946 — Amerika'nın Tam Çöküşü",
+              "date": "1946",
+              "summary": "Washington ve New York atom saldırılarından sonra Amerika Birleşik Devletleri merkezî devlet olarak çöktü.",
+              "content": "Washington ve New York atom saldırılarından sonra Amerika Birleşik Devletleri merkezî devlet olarak çöktü.\n\n## Neden\n\nWashington'un vurulması siyasi komuta zincirini kırdı. New York'un vurulması ise ekonomik, finansal ve haberleşme merkezini yok etti. Amerika'nın okyanuslardaki donanma kayıpları ve hava üstünlüğünü kaybetmesi toparlanma ihtimalini daha da azalttı.\n\n## Olay\n\nAmerika, tek merkezden yönetilen bir devlet olmaktan çıktı. Bazı eyaletler yerel yönetimlerle ayakta kalmaya çalıştı; bazı askerî komutanlıklar bağımsız hareket etti; bazı bölgelerde sivil otorite tamamen dağıldı.\n\n## Doğrudan Sonuç\n\n- Federal sistem dağıldı.\n- Kuzey Amerika'daki güç boşluğu Almanya ve Türkiye'nin müdahalesine açıldı.\n- Kanada ve kalan kuzey bölgeleri Alman nüfuzuna bırakıldı.\n- Güney Amerika Türkiye'nin nüfuz alanı olarak belirlendi.\n\n## Dolaylı Sonuç\n\nAmerika'nın çöküşüyle dünyada üçüncü büyük güç kalmadı. Japonya, İtalya ve diğer devletler artık bağımsız kutup değil, Almanya-Türkiye düzeninin alt aktörleri hâline geldi.\n\n## Uzun Vadeli Sonuç\n\nDünya iki ezici güç arasında bölündü: kuzeyde Almanya, güneyde Türkiye.\n\n## Bağlantılar\n\n- [[1946 1 Ağustos Washington Atom Bombardımanı]]\n- [[1946 8 Ağustos New York Atom Bombardımanı]]\n- [[1946 Dünya Paylaşım Konferansı]]\n- Dünya Paylaşımı 1946",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-1-agustos-washington-atom-bombardimani-md",
+                  "title": "1 Ağustos 1946 — Washington Atom Bombardımanı",
+                  "date": "1 Ağustos 1946"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-8-agustos-new-york-atom-bombardimani-md",
+                  "title": "8 Ağustos 1946 — New York Atom Bombardımanı",
+                  "date": "8 Ağustos 1946"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-dunya-paylasim-konferansi-md",
+                  "title": "1946 — Dünya Paylaşım Konferansı",
+                  "date": "1946"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1946"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1946-atlantik-ve-pasifik-deniz-hava-savaslari-md",
+              "path": "Tarihi Olaylar/Olaylar/1946 Atlantik ve Pasifik Deniz-Hava Savaşları.md",
+              "sourceName": "1946 Atlantik ve Pasifik Deniz-Hava Savaşları",
+              "title": "1946 — Atlantik ve Pasifik Deniz-Hava Savaşları",
+              "date": "1946",
+              "summary": "Atom saldırılarından önce Amerika'nın savunma kapasitesini kırmak için okyanuslarda büyük deniz ve hava üstünlüğü mücadelesi yaşandı.",
+              "content": "Atom saldırılarından önce Amerika'nın savunma kapasitesini kırmak için okyanuslarda büyük deniz ve hava üstünlüğü mücadelesi yaşandı.\n\n## Neden\n\nAmerika kıtasına doğrudan saldırı yapabilmek için Almanya ve Türkiye'nin üç sorunu çözmesi gerekiyordu:\n\n1. Atlantik ve Pasifik'teki Amerikan donanma üstünlüğü.\n2. Uzun menzilli bombardıman uçaklarının güvenli yaklaşma rotaları.\n3. Amerika'nın erken uyarı ve hava savunma kabiliyeti.\n\n## Olay\n\n1946'nın ilk yarısında Mihver güçleri, okyanuslarda yoğun deniz ve hava harekâtları yürüttü. İngiltere'nin düşmüş olması Almanya'ya Atlantik üsleri sağladı. Türkiye ise Afrika, Ortadoğu ve Atlantik bağlantılı ara üsleri kullanarak güney rotalarını destekledi.\n\n## Cepheler\n\n### Atlantik\n\nAlmanya, eski İngiliz limanları ve Avrupa kıyılarından hareket ederek Amerika'nın doğu kıyısına giden hatları baskıladı.\n\n### Güney Atlantik\n\nTürkiye, Afrika'nın batı kıyıları ve Güney Atlantik rotaları üzerinden Amerika'nın güney bağlantılarını tehdit etti.\n\n### Pasifik\n\nJaponya'nın hareket alanı Amerika'nın Pasifik dikkatini dağıttı. Japonya ana belirleyici güç olmasa da Amerikan donanmasını iki okyanusa yayılmaya zorladı.\n\n## Doğrudan Sonuç\n\n- Amerika kıyı savunmasını güçlendirmek zorunda kaldı.\n- Donanma kaynakları iki okyanusa bölündü.\n- Mihver bombardıman rotaları daha uygulanabilir hâle geldi.\n- Washington ve New York gibi sembolik hedefler artık teorik olarak vurulabilir hâle geldi.\n\n## Uzun Vadeli Sonuç\n\nOkyanus savaşlarının olumlu sonuçlanması, atom saldırılarının önünü açtı. Amerika'nın çöküşü yalnızca bombalarla değil, bombalardan önce kurulan deniz-hava baskısıyla mümkün oldu.\n\n## Bağlantılar\n\n- [[1945 Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı]]\n- [[1946 1 Ağustos Washington Atom Bombardımanı]]\n- [[1946 8 Ağustos New York Atom Bombardımanı]]\n- Amerika\n- Almanya\n- Türkiye",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1945-turk-atom-projesi-ve-uzun-menzilli-bombardiman-programi-md",
+                  "title": "1945 — Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı",
+                  "date": "1945"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-1-agustos-washington-atom-bombardimani-md",
+                  "title": "1 Ağustos 1946 — Washington Atom Bombardımanı",
+                  "date": "1 Ağustos 1946"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-8-agustos-new-york-atom-bombardimani-md",
+                  "title": "8 Ağustos 1946 — New York Atom Bombardımanı",
+                  "date": "8 Ağustos 1946"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1946"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1946-dunya-paylasim-konferansi-md",
+              "path": "Tarihi Olaylar/Olaylar/1946 Dünya Paylaşım Konferansı.md",
+              "sourceName": "1946 Dünya Paylaşım Konferansı",
+              "title": "1946 — Dünya Paylaşım Konferansı",
+              "date": "1946",
+              "summary": "Amerika'nın çöküşünden sonra Almanya ve Türkiye dünya haritasını yeniden çizmek için masaya oturdu. Bu konferans, resmî belgelerde diplomatik paylaşım görüşmesi olarak geçse de anlatı içinde aşağılayıcı ve karanlık bir sembol taşır: Amerika topraklar",
+              "content": "Amerika'nın çöküşünden sonra Almanya ve Türkiye dünya haritasını yeniden çizmek için masaya oturdu. Bu konferans, resmî belgelerde diplomatik paylaşım görüşmesi olarak geçse de anlatı içinde aşağılayıcı ve karanlık bir sembol taşır: Amerika toprakları masa başında, dalga geçilerek ve cetvelle çizilerek paylaştırıldı.\n\n## Neden\n\nAmerika'nın çöküşüyle dünya çapında yönetim boşluğu oluştu. Almanya ve Türkiye, birbirleriyle doğrudan savaşa girmemek için nüfuz alanlarını netleştirmek zorundaydı.\n\n## Olay\n\nKonferansta temel ilke şu oldu:\n\n> Kuzey Almanya'nın, güney Türkiye'nin.\n\nBu ilke yalnızca Amerika için değil, dünya ölçeğinde yeni düzenin omurgası hâline getirildi.\n\n## Doğrudan Sonuç\n\n- Kuzey Amerika Almanya'ya bırakıldı.\n- Güney Amerika Türkiye'ye bırakıldı.\n- Afrika ikiye bölündü.\n- Avrupa'nın kuzeyi ve merkezi Almanya'da kaldı.\n- Türkiye, Kızıl Elma hedefleri kapsamında Viyana ve tarihî Türk toprakları üzerinde hak aldı.\n\n## Dolaylı Sonuç\n\nAlmanya ve Türkiye arasındaki ittifak artık savaş ortaklığı değil, dünya yönetim ortaklığına dönüştü. Fakat sınırlar ne kadar net çizilirse çizilsin, iki güç arasındaki rekabet tamamen bitmedi.\n\n## Uzun Vadeli Sonuç\n\n1980'lerde romanın geçtiği dünya, bu paylaşımın gölgesinde yaşar. Dünya iki büyük bloktan oluşur; halklar, şehirler ve eski devletler bu iki düzenin içinde var olmaya zorlanır.\n\n## Bağlantılar\n\n- Dünya Paylaşımı 1946\n- [[1946 Amerika'nın Tam Çöküşü]]\n- [[1946 Kızıl Elma ve Viyana'nın Türkiye'ye Bağlanması]]\n- Genel Dünya\n- Türkiye\n- Almanya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-amerika-nin-tam-cokusu-md",
+                  "title": "1946 — Amerika'nın Tam Çöküşü",
+                  "date": "1946"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-kizil-elma-ve-viyana-nin-turkiye-ye-baglanmasi-md",
+                  "title": "1946 — Kızıl Elma ve Viyana'nın Türkiye'ye Bağlanması",
+                  "date": "1946"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1946"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1946-kizil-elma-ve-viyana-nin-turkiye-ye-baglanmasi-md",
+              "path": "Tarihi Olaylar/Olaylar/1946 Kızıl Elma ve Viyana'nın Türkiye'ye Bağlanması.md",
+              "sourceName": "1946 Kızıl Elma ve Viyana'nın Türkiye'ye Bağlanması",
+              "title": "1946 — Kızıl Elma ve Viyana'nın Türkiye'ye Bağlanması",
+              "date": "1946",
+              "summary": "Dünya paylaşım görüşmeleri sırasında Türkiye, yalnızca Amerika kıtası ve güney dünya nüfuzunu değil, tarihî hedeflerini de masaya koydu. Bu hedeflerin sembolü Viyana oldu.",
+              "content": "Dünya paylaşım görüşmeleri sırasında Türkiye, yalnızca Amerika kıtası ve güney dünya nüfuzunu değil, tarihî hedeflerini de masaya koydu. Bu hedeflerin sembolü Viyana oldu.\n\n## Neden\n\nAlperen Keser yönetimi için savaş yalnızca güvenlik savaşı değildi. Osmanlı'nın geçmişte ulaşamadığı veya kaybettiği hedeflerin tamamlanması fikri, devlet ideolojisinin merkezinde yer alıyordu.\n\n## Olay\n\nDevam eden müzakerelerde Almanya, Türkiye'nin güney dünya üzerindeki payını kabul ederken Viyana ve bazı tarihî Türk hedefleri konusunda taviz verdi. Bunun nedeni Almanya'nın Amerika'nın kuzeyi, Kanada, kuzey Avrupa ve kuzey Avrasya üzerindeki hâkimiyetini güvenceye almak istemesiydi.\n\n## Türkiye'ye Bağlanan / Türkiye Nüfuzuna Giren Alanlar\n\n- Viyana ve çevresi.\n- Balkanların büyük bölümü.\n- Yunanistan'ın Türk payı dışındaki tartışmalı bölgelerinde Türkiye lehine düzenlemeler.\n- Kafkasya, Türkistan, Hazar ve Orta Asya hattı.\n- Ortadoğu'nun büyük kısmı.\n- Kuzey Afrika'nın Türkiye payına düşen bölümleri.\n\n## Doğrudan Sonuç\n\nTürkiye, ideolojik olarak Kızıl Elma'ya ulaştığını ilan etti. Bu, devlet propagandasında Alperen döneminin en büyük zaferlerinden biri olarak anlatıldı.\n\n## Dolaylı Sonuç\n\nViyana'nın Türkiye'ye bağlanması Almanya içinde rahatsızlık yarattı. Çünkü şehir tarihsel ve sembolik olarak Avrupa'nın merkezlerinden biriydi. Ancak Almanya, dünya paylaşımında daha büyük kuzey alanını aldığı için bu tavizi kabul etti.\n\n## Uzun Vadeli Sonuç\n\nTürkiye, artık yalnızca Anadolu, Kafkasya ve Ortadoğu gücü değil; Avrupa içlerine, Afrika'ya ve Güney Amerika'ya uzanan küresel imparatorluk hâline geldi.\n\n## Bağlantılar\n\n- [[1946 Dünya Paylaşım Konferansı]]\n- Dünya Paylaşımı 1946\n- Türkiye\n- Almanya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-dunya-paylasim-konferansi-md",
+                  "title": "1946 — Dünya Paylaşım Konferansı",
+                  "date": "1946"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1946"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1946-1-agustos-washington-atom-bombardimani-md",
+              "path": "Tarihi Olaylar/Olaylar/1946 1 Ağustos Washington Atom Bombardımanı.md",
+              "sourceName": "1946 1 Ağustos Washington Atom Bombardımanı",
+              "title": "1 Ağustos 1946 — Washington Atom Bombardımanı",
+              "date": "1 Ağustos 1946",
+              "summary": "1 Ağustos 1946'da Türkiye, Washington D.C.'ye ilk atom bombasını attı. Bu olay dünya tarihinin en büyük kırılmalarından biri oldu.",
+              "content": "1 Ağustos 1946'da Türkiye, Washington D.C.'ye ilk atom bombasını attı. Bu olay dünya tarihinin en büyük kırılmalarından biri oldu.\n\n## Neden\n\nTürkiye ve Almanya, Amerika'nın klasik işgalle çökertilmesinin çok uzun ve maliyetli olacağını biliyordu. Amerika'nın okyanuslarla korunan coğrafyası, doğrudan kara savaşı yerine stratejik yıkım planını öne çıkardı.\n\n## Hedef Neden Washington?\n\nWashington D.C. Amerika'nın siyasi merkeziydi. Hedefin amacı yalnızca fiziksel yıkım değil, federal komuta zincirini ve devletin psikolojik merkezini parçalamaktı.\n\n## Olay\n\nTürk uzun menzilli bombardıman programının ürettiği stratejik uçak, önceden hazırlanmış rota ve okyanus savaşlarıyla zayıflatılmış hava savunması sayesinde Washington'a ulaştı. İlk atom bombası başkente atıldı.\n\n## Doğrudan Sonuç\n\n- Federal yönetim ağır darbe aldı.\n- Başkanlık, Kongre, askerî komuta ve bürokrasi zinciri parçalandı.\n- Amerika tamamen çökmedi; fakat yönetim merkezî bütünlüğünü kaybetti.\n- Bazı eyaletler kendi güvenlik ve olağanüstü yönetim yapılarını kurmaya başladı.\n\n## Dolaylı Sonuç\n\nWashington'un vurulması Amerika'da panik, öfke ve intikam isteği yarattı. Ancak devlet mekanizması aynı anda hem saldırıyı karşılamak hem de yönetim boşluğunu doldurmak zorunda kaldı.\n\n## Uzun Vadeli Sonuç\n\nBu saldırı Amerika'yı ölümcül biçimde yaraladı, fakat tamamen yıkmadı. Tam çöküş için ikinci darbe gerekiyordu.\n\n## Bağlantılar\n\n- [[1944 Türkistan Uranyum Seferberliği]]\n- [[1945 Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı]]\n- [[1946 8 Ağustos New York Atom Bombardımanı]]\n- Amerika\n- Türkiye",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1944-turkistan-uranyum-seferberligi-md",
+                  "title": "1944 — Türkistan Uranyum Seferberliği",
+                  "date": "1944"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1945-turk-atom-projesi-ve-uzun-menzilli-bombardiman-programi-md",
+                  "title": "1945 — Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı",
+                  "date": "1945"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-8-agustos-new-york-atom-bombardimani-md",
+                  "title": "8 Ağustos 1946 — New York Atom Bombardımanı",
+                  "date": "8 Ağustos 1946"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1946"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-1946-8-agustos-new-york-atom-bombardimani-md",
+              "path": "Tarihi Olaylar/Olaylar/1946 8 Ağustos New York Atom Bombardımanı.md",
+              "sourceName": "1946 8 Ağustos New York Atom Bombardımanı",
+              "title": "8 Ağustos 1946 — New York Atom Bombardımanı",
+              "date": "8 Ağustos 1946",
+              "summary": "8 Ağustos 1946'da Almanya, Amerika'ya ikinci atom bombasını attı. Hedef New York oldu.",
+              "content": "8 Ağustos 1946'da Almanya, Amerika'ya ikinci atom bombasını attı. Hedef New York oldu.\n\n## Neden New York?\n\nWashington siyasi merkezdi; fakat Amerika'nın tamamen çökmesi için yalnızca başkentin vurulması yetmedi. New York şu nedenlerle en uygun ikinci hedefti:\n\n- Amerika'nın finans merkeziydi.\n- Atlantik ticaretinin ve liman sisteminin en önemli düğümüydü.\n- Basın, iletişim ve uluslararası diplomatik ağların sembolik merkeziydi.\n- Washington'un vurulmasından sonra geçici yönetim, haberleşme ve finans koordinasyonu için doğal merkez hâline gelmişti.\n\nBu yüzden New York'un vurulması, Amerika'nın hem ekonomik hem psikolojik hem de idarî toparlanma ihtimalini kırdı.\n\n## Olay\n\nAlmanya, Türkiye'nin Washington saldırısından bir hafta sonra kendi atom bombasını New York'a attı. Bu saldırı yalnızca Amerika'ya karşı değil, Türkiye'ye karşı da bir mesajdı: Almanya da atom çağının kurucu gücüydü.\n\n## Doğrudan Sonuç\n\n- Amerikan finans sistemi çöktü.\n- Atlantik ticaret ağı dağıldı.\n- Federal yönetimin toparlanma merkezleri yok edildi.\n- Eyaletler arası koordinasyon koptu.\n- Ordu, donanma ve sivil yönetim birbirinden bağımsız hareket etmeye başladı.\n\n## Dolaylı Sonuç\n\nNew York'un yok edilmesi Amerika'nın \"ayakta kalma\" ihtimalini ortadan kaldırdı. Washington'dan sonra New York'un vurulması, siyasi başsızlığı ekonomik felakete dönüştürdü.\n\n## Uzun Vadeli Sonuç\n\nAmerika tamamen çöktü. Bu çöküşten sonra Almanya ve Türkiye dünya paylaşım masasına oturdu.\n\n## Bağlantılar\n\n- [[1946 1 Ağustos Washington Atom Bombardımanı]]\n- [[1946 Amerika'nın Tam Çöküşü]]\n- Almanya\n- Amerika\n- Türkiye",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-1-agustos-washington-atom-bombardimani-md",
+                  "title": "1 Ağustos 1946 — Washington Atom Bombardımanı",
+                  "date": "1 Ağustos 1946"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1946-amerika-nin-tam-cokusu-md",
+                  "title": "1946 — Amerika'nın Tam Çöküşü",
+                  "date": "1946"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1946"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
+          "id": "chronology-undated-events",
+          "path": "undated-events",
+          "sourceName": "Tarihi belirtilmeyen kayıtlar",
+          "title": "Tarihi belirtilmeyen kayıtlar",
+          "date": "TARİHİ BELİRTİLMEMİŞ",
+          "summary": "Kaynak notlarda kesin tarih verilmeyen olaylar.",
+          "content": "Kaynak notlarda kesin tarih verilmeyen olaylar.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-aksam-yemegi-ve-mihver-yonetici-zirvesi-md",
+              "path": "Tarihi Olaylar/Olaylar/Akşam yemeği ve Mihver Yönetici Zirvesi.md",
+              "sourceName": "Akşam yemeği ve Mihver Yönetici Zirvesi",
+              "title": "Akşam Yemeği ve Mihver Yönetici Zirvesi",
+              "date": "",
+              "summary": "Hitler'in Ankara ziyareti sırasında yapılan akşam yemeği, dışarıya dostluk görüntüsü veren fakat içeride savaşın gelecek aşamalarının konuşulduğu bir zirveye dönüştü.",
+              "content": "Hitler'in Ankara ziyareti sırasında yapılan akşam yemeği, dışarıya dostluk görüntüsü veren fakat içeride savaşın gelecek aşamalarının konuşulduğu bir zirveye dönüştü.\n\n## Konuşulan Başlıklar\n\n- İngiltere'nin düşüşünden sonra sömürge mirasının paylaşımı.\n- Türkiye'nin Suriye, Kıbrıs, Ege ve Kafkasya üzerindeki talepleri.\n- Almanya'nın Sovyetler Birliği'ne saldırı hazırlıkları.\n- Türkiye'ye zırhlı araç, uçak motoru ve haberleşme teknolojisi aktarımı.\n\n## Alperen'in Tavrı\n\nAlperen Keser, Türkiye'nin Almanya'nın gölgesinde kalmasını istemedi. Zirvede Türkiye'nin bağımsız çıkarları olduğunu açıkça hissettirdi. Almanya ile ittifakı kabul ediyor, ancak Türkiye'nin kendi tarihî hedeflerini izleyeceğini gösteriyordu.\n\n## Sonuç\n\nZirve, 1941'de başlayacak Sovyet savaşının diplomatik altyapısını hazırladı. Türkiye'nin Kafkasya ve Türkistan yönünde ilerlemesi burada olgunlaşan planların sonucu oldu.\n\n## Bağlantılar\n\n- [[9 KASIM 1940 Hitler Ankara’ya uçar]]\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- Türkiye\n- Almanya",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-9-kasim-1940-hitler-ankara-ya-ucar-md",
+                  "title": "9 Kasım 1940 — Hitler Ankara'ya Uçar",
+                  "date": "9 Kasım 1940"
+                },
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
+                  "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
+                  "date": "22 Haziran 1941"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-undated-events"
+              ]
+            },
+            {
+              "id": "chronology-tarihi-olaylar-olaylar-anitkabirin-yapimina-baslanmasi-md",
+              "path": "Tarihi Olaylar/Olaylar/Anıtkabirin yapımına başlanması.md",
+              "sourceName": "Anıtkabirin yapımına başlanması",
+              "title": "Anıtkabir'in Yapımına Başlanması",
+              "date": "",
+              "summary": "Atatürk'ün ölümünün ardından yeni yönetim, onun hatırasını devletin merkezî sembollerinden biri hâline getirmek istedi. Alperen Keser yönetimi için Anıtkabir yalnızca bir mezar değil, Türkiye'nin yeni dönemde kullanacağı tarihî meşruiyetin de simgesi",
+              "content": "Atatürk'ün ölümünün ardından yeni yönetim, onun hatırasını devletin merkezî sembollerinden biri hâline getirmek istedi. Alperen Keser yönetimi için Anıtkabir yalnızca bir mezar değil, Türkiye'nin yeni dönemde kullanacağı tarihî meşruiyetin de simgesiydi.\n\n## Amaç\n\n- Atatürk'ün mirasını devletin devamlılığına bağlamak.\n- Halkın yas duygusunu ortak bir millî sembole dönüştürmek.\n- Ankara'yı yeni rejimin siyasî ve törensel merkezi hâline getirmek.\n\n## İnşa Süreci\n\nÇalışmalar olağanüstü hızlandırıldı. Devlet, iş gücü ve malzeme aktarımını doğrudan merkezden yönetti. Ankara'da geniş yollar, tören alanları ve askerî geçitlere uygun düzenlemeler aynı dönemde planlandı.\n\n## Hikâyedeki Önemi\n\nAnıtkabir'in hızlı inşası, ileride Adolf Hitler'in Ankara ziyareti sırasında uluslararası bir propaganda sahnesine dönüşecekti. Böylece Atatürk'ün hatırası, dünya siyasetinde gerilimi yükselten bir törensel alana taşınmış oldu.\n\n## Bağlantılar\n\n- [[10 KASIM 1940]]\n- Türkiye\n- [[Alperen]]",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
+                  "date": "10 Kasım 1940"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alperen-keser",
+                  "title": "Alperen Keser",
+                  "date": "1888–1960"
+                }
+              ],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-undated-events"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        }
+      ]
+    },
+    {
+      "id": "characters",
+      "title": "Karakterler",
+      "description": "Kısa, genel ve spoilersız karakter tanıtımları. Aile bağları ayrı soy ağaçlarında düzenlenmiştir.",
+      "view": "tree",
+      "label": "KARAKTER VE SOY AĞAÇLARI",
+      "order": 3,
+      "nodes": [
+        {
+          "id": "characters-young-characters",
+          "path": "young-characters",
+          "sourceName": "Genç karakterler",
+          "title": "Genç karakterler",
+          "date": "GENÇ KARAKTERLER",
+          "summary": "1985 yılında hikâyenin genç kuşağını oluşturan öğrenciler ve arkadaş çevresi.",
+          "content": "1985 yılında hikâyenin genç kuşağını oluşturan öğrenciler ve arkadaş çevresi.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "characters-alev-acar",
+              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Alev Acar.md",
+              "sourceName": "Alev Acar",
+              "title": "Alev Acar",
+              "date": "1968 · 17 yaş",
+              "summary": "Neşeli, konuşkan, uyumlu ve arkadaşlarına bağlı.",
+              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 2. Kanat · sivil pilotluk hedefi\n\n**Dış görünüş:** Düz kızıl saçlı ve ela gözlü.\n\n**Kişilik:** Neşeli, konuşkan, uyumlu ve arkadaşlarına bağlı.",
+              "order": 999,
+              "aliases": [
+                "Alev Acar"
+              ],
+              "children": [],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-young-characters"
+              ]
+            },
+            {
+              "id": "characters-asena-korkut",
+              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Asena Korkut.md",
+              "sourceName": "Asena Korkut",
+              "title": "Asena Korkut",
+              "date": "1968 · 17 yaş",
+              "summary": "Konuşkan, sosyal, anlayışlı ve insan ilişkilerinde becerikli.",
+              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 5. Kanat\n\n**Dış görünüş:** Siyah, hafif kızıl tonlu saçları, kahverengi gözleri ve gözlüğü vardır.\n\n**Kişilik:** Konuşkan, sosyal, anlayışlı ve insan ilişkilerinde becerikli.",
+              "order": 999,
+              "aliases": [
+                "Asena Korkut"
+              ],
+              "children": [],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-young-characters"
+              ]
+            },
+            {
+              "id": "characters-aylin-aksoy",
+              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Aylin Aksoy.md",
+              "sourceName": "Aylin Aksoy",
+              "title": "Aylin Aksoy",
+              "date": "1968 · 17 yaş",
+              "summary": "Sakin, dikkatli, gözlemci ve planlı.",
+              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 3. Kanat · hukuk alanına ilgi duyuyor\n\n**Dış görünüş:** Uzun, kıvırcık kumral saçlı ve koyu gözlü.\n\n**Kişilik:** Sakin, dikkatli, gözlemci ve planlı.",
+              "order": 999,
+              "aliases": [
+                "Aylin Aksoy"
+              ],
+              "children": [],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-young-characters"
+              ]
+            },
+            {
+              "id": "characters-tomris-ilter",
+              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Tomris İlter.md",
+              "sourceName": "Tomris İlter",
+              "title": "Tomris İlter",
+              "date": "1968 · 17 yaş",
+              "summary": "Kendine güvenen, ciddi, kararlı ve yönetici yönü güçlü.",
+              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 6. Kanat\n\n**Dış görünüş:** Uzun siyah saçlı ve koyu gözlü.\n\n**Kişilik:** Kendine güvenen, ciddi, kararlı ve yönetici yönü güçlü.",
+              "order": 999,
+              "aliases": [
+                "Tomris İlter",
+                "TOMRİS İLTER"
+              ],
+              "children": [],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-young-characters"
+              ]
+            },
+            {
+              "id": "characters-ismail-yagiz-aslan",
+              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/İsmail Yağız Aslan.md",
+              "sourceName": "İsmail Yağız Aslan",
+              "title": "İsmail Yağız Aslan",
+              "date": "1968 · 17 yaş",
+              "summary": "Neşeli, esprili ve samimi; gerektiğinde kararlı ve odaklı.",
+              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci\n\n**Dış görünüş:** Siyah saçlı, kahverengi gözlü; rahat ve gündelik giyimi tercih eder.\n\n**Kişilik:** Neşeli, esprili ve samimi; gerektiğinde kararlı ve odaklı.",
+              "order": 999,
+              "aliases": [
+                "İsmail Yağız Aslan",
+                "İso"
+              ],
+              "children": [],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-young-characters"
+              ]
+            },
+            {
+              "id": "characters-muhammed-mete",
+              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Muhammed Mete.md",
+              "sourceName": "Muhammed Mete",
+              "title": "Muhammed Mete",
+              "date": "1968 · 17 yaş",
+              "summary": "Sakin, ölçülü, uyumlu ve yakın çevresinde konuşkan.",
+              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 4. Kanat · sivil havacılığa ilgi duyuyor\n\n**Dış görünüş:** Siyah, hafif kıvırcık saçlı ve kahverengi gözlü.\n\n**Kişilik:** Sakin, ölçülü, uyumlu ve yakın çevresinde konuşkan.",
+              "order": 999,
+              "aliases": [
+                "Muhammed Mete"
+              ],
+              "children": [],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-young-characters"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "characters",
+          "ancestors": []
+        },
+        {
+          "id": "characters-atalay-lineage",
+          "path": "atalay-lineage",
+          "sourceName": "Atalay Soyu",
+          "title": "Atalay Soyu",
+          "date": "AİLE AĞACI",
+          "summary": "Atalay ailesinin kuşakları ve aileyle bağlantılı Kaya ailesi.",
+          "content": "Atalay ailesinin kuşakları ve aileyle bağlantılı Kaya ailesi.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "characters-atalay-elders",
+              "path": "atalay-elders",
+              "sourceName": "Atalay büyükleri",
+              "title": "Atalay büyükleri",
+              "date": "KUŞAK I",
+              "summary": "Atalay ailesinin büyükleri.",
+              "content": "Atalay ailesinin büyükleri.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-nec-det-atalay",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Necdet Atalay.md",
+                  "sourceName": "Necdet Atalay",
+                  "title": "Necdet Atalay",
+                  "date": "1918 · 67 yaş",
+                  "summary": "Ağırbaşlı, disiplinli, otoriter ve az konuşan.",
+                  "content": "**Doğum:** 1918\n\n**Yaş (1985):** 67\n\n**Genel rol:** Emekli askerî uçak mühendisi\n\n**Dış görünüş:** Sade, klasik ve düzenli giyinir.\n\n**Kişilik:** Ağırbaşlı, disiplinli, otoriter ve az konuşan.",
+                  "order": 999,
+                  "aliases": [
+                    "Necdet Atalay"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-atalay-elders"
+                  ]
+                },
+                {
+                  "id": "characters-sabiha-atalay",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Sabiha Atalay.md",
+                  "sourceName": "Sabiha Atalay",
+                  "title": "Sabiha Atalay",
+                  "date": "1923 · 62 yaş",
+                  "summary": "Sakin, sabırlı, anlayışlı ve aile odaklı.",
+                  "content": "**Doğum:** 1923\n\n**Yaş (1985):** 62\n\n**Genel rol:** Atalay ailesinin büyüğü\n\n**Dış görünüş:** Sade ve klasik kıyafetler tercih eder.\n\n**Kişilik:** Sakin, sabırlı, anlayışlı ve aile odaklı.",
+                  "order": 999,
+                  "aliases": [
+                    "Sabiha Atalay"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-atalay-elders"
+                  ]
+                }
+              ],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-atalay-lineage"
+              ]
+            },
+            {
+              "id": "characters-kaya-branch",
+              "path": "kaya-branch",
+              "sourceName": "Kaya ailesi",
+              "title": "Kaya ailesi",
+              "date": "AİLE BAĞI",
+              "summary": "Atalay ailesiyle bağlantılı Kaya ailesi.",
+              "content": "Atalay ailesiyle bağlantılı Kaya ailesi.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-riza-kaya",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Rıza Kaya.md",
+                  "sourceName": "Rıza Kaya",
+                  "title": "Rıza Kaya",
+                  "date": "1916 · 69 yaş",
+                  "summary": "Sakin, ağırbaşlı, geleneklerine bağlı ve sorumluluk sahibi.",
+                  "content": "**Doğum:** 1916\n\n**Yaş (1985):** 69\n\n**Genel rol:** Kaya ailesinin büyüğü\n\n**Dış görünüş:** Sade ve düzenli giyinir.\n\n**Kişilik:** Sakin, ağırbaşlı, geleneklerine bağlı ve sorumluluk sahibi.",
+                  "order": 999,
+                  "aliases": [
+                    "Rıza Kaya"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-kaya-branch"
+                  ]
+                },
+                {
+                  "id": "characters-naciye-kaya",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Naciye Kaya.md",
+                  "sourceName": "Naciye Kaya",
+                  "title": "Naciye Kaya",
+                  "date": "1920 · 65 yaş",
+                  "summary": "Girişken, konuşkan, açık sözlü ve pratik zekâlı.",
+                  "content": "**Doğum:** 1920\n\n**Yaş (1985):** 65\n\n**Genel rol:** Kaya ailesinin büyüğü\n\n**Dış görünüş:** Sade ve geleneksel bir giyim tarzına sahiptir.\n\n**Kişilik:** Girişken, konuşkan, açık sözlü ve pratik zekâlı.",
+                  "order": 999,
+                  "aliases": [
+                    "Naciye Kaya"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-kaya-branch"
+                  ]
+                },
+                {
+                  "id": "characters-aysel-atalay",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Aysel Atalay.md",
+                  "sourceName": "Aysel Atalay",
+                  "title": "Aysel Atalay",
+                  "date": "1947 · 38 yaş",
+                  "summary": "Sakin, sabırlı, anlayışlı ve koruyucu.",
+                  "content": "**Doğum:** 1947\n\n**Yaş (1985):** 38\n\n**Genel rol:** Atalay ailesinin annesi\n\n**Dış görünüş:** Sade ve zarif bir giyim tarzını tercih eder.\n\n**Kişilik:** Sakin, sabırlı, anlayışlı ve koruyucu.",
+                  "order": 999,
+                  "aliases": [
+                    "Aysel Atalay"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-kaya-branch"
+                  ]
+                }
+              ],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-atalay-lineage"
+              ]
+            },
+            {
+              "id": "characters-atalay-second-generation",
+              "path": "atalay-second-generation",
+              "sourceName": "Cengiz Atalay kuşağı",
+              "title": "Cengiz Atalay kuşağı",
+              "date": "KUŞAK II",
+              "summary": "Atalay ailesinin mühendislik geleneğiyle tanınan kuşağı.",
+              "content": "Atalay ailesinin mühendislik geleneğiyle tanınan kuşağı.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-cengiz-atalay",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Cengiz Atalay.md",
+                  "sourceName": "Cengiz Atalay",
+                  "title": "Cengiz Atalay",
+                  "date": "1945 · 40 yaş",
+                  "summary": "Özgüvenli, enerjik, meraklı ve çalışkan.",
+                  "content": "**Doğum:** 1945\n\n**Yaş (1985):** 40\n\n**Genel rol:** Askerî uçak mühendisi\n\n**Dış görünüş:** Düzenli ve klasik giyinir; resmî ve hafif askerî çizgileri tercih eder.\n\n**Kişilik:** Özgüvenli, enerjik, meraklı ve çalışkan.",
+                  "order": 999,
+                  "aliases": [
+                    "Cengiz Atalay"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-atalay-second-generation"
+                  ]
+                }
+              ],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-atalay-lineage"
+              ]
+            },
+            {
+              "id": "characters-atalay-third-generation",
+              "path": "atalay-third-generation",
+              "sourceName": "Oğuz, Muhammed ve Meliha",
+              "title": "Oğuz, Muhammed ve Meliha",
+              "date": "KUŞAK III",
+              "summary": "Atalay ailesinin genç kuşağı.",
+              "content": "Atalay ailesinin genç kuşağı.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-oguz-kagan-atalay",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Oğuz Kağan Atalay.md",
+                  "sourceName": "Oğuz Kağan Atalay",
+                  "title": "Oğuz Kağan Atalay",
+                  "date": "1968 · 17 yaş",
+                  "summary": "Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.",
+                  "content": "**Doğum:** 3 Ocak 1968 · İstanbul, Üsküdar\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 3. Kanat · havacılığa ilgi duyuyor\n\n**Dış görünüş:** Belirgin yüz hatlarına, kızıl saçlara ve düzenli bir görünüme sahiptir.\n\n**Kişilik:** Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.",
+                  "order": 999,
+                  "aliases": [
+                    "Oğuz Kağan Atalay"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-atalay-third-generation"
+                  ]
+                },
+                {
+                  "id": "characters-muhammed-atalay",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Muhammed Atalay.md",
+                  "sourceName": "Muhammed Atalay",
+                  "title": "Muhammed Atalay",
+                  "date": "1973 · 12 yaş",
+                  "summary": "Meraklı, hareketli ve teknik konulara ilgili.",
+                  "content": "**Doğum:** 1973\n\n**Yaş (1985):** 12\n\n**Genel rol:** Öğrenci · mühendisliğe ilgi duyuyor\n\n**Dış görünüş:** Yaşına uygun, sade ve rahat giyinir.\n\n**Kişilik:** Meraklı, hareketli ve teknik konulara ilgili.",
+                  "order": 999,
+                  "aliases": [
+                    "Muhammed Atalay"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-atalay-third-generation"
+                  ]
+                },
+                {
+                  "id": "characters-meliha-atalay",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Meliha Atalay.md",
+                  "sourceName": "Meliha Atalay",
+                  "title": "Meliha Atalay",
+                  "date": "1975 · 10 yaş",
+                  "summary": "Çalışkan, kararlı, inatçı ve azimli.",
+                  "content": "**Doğum:** 1975\n\n**Yaş (1985):** 10\n\n**Genel rol:** Öğrenci\n\n**Dış görünüş:** Yaşına uygun, sade ve rahat kıyafetler tercih eder.\n\n**Kişilik:** Çalışkan, kararlı, inatçı ve azimli.",
+                  "order": 999,
+                  "aliases": [
+                    "Meliha Atalay"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-atalay-third-generation"
+                  ]
+                }
+              ],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-atalay-lineage"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "characters",
+          "ancestors": []
+        },
+        {
+          "id": "characters-keser-lineage",
+          "path": "keser-lineage",
+          "sourceName": "Keser Soyu",
+          "title": "Keser Soyu",
+          "date": "AİLE AĞACI",
+          "summary": "Keser ailesinin bilinen kuşakları; isimler aile ağacında ortak soy adıyla standartlaştırılmıştır.",
+          "content": "Keser ailesinin bilinen kuşakları; isimler aile ağacında ortak soy adıyla standartlaştırılmıştır.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "characters-keser-first-generation",
+              "path": "keser-first-generation",
+              "sourceName": "İlk kuşak",
+              "title": "İlk kuşak",
+              "date": "KUŞAK I",
+              "summary": "Keser soyunun bilinen eski kuşağı.",
+              "content": "Keser soyunun bilinen eski kuşağı.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-abdullah-keser",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Abdullah.md",
+                  "sourceName": "Abdullah",
+                  "title": "Abdullah Keser",
+                  "date": "Yaklaşık 1770–1830'lar",
+                  "summary": "Sert mizaçlı, az konuşan, çalışkan ve ailesine bağlı.",
+                  "content": "**Doğum:** Yaklaşık 1770 · Giresun, Kuşköy\n\n**Genel rol:** Keser soyunun eski kuşağı · demirci\n\n**Kişilik:** Sert mizaçlı, az konuşan, çalışkan ve ailesine bağlı.",
+                  "order": 999,
+                  "aliases": [
+                    "Abdullah",
+                    "Abdullah Keser"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-keser-lineage",
+                    "characters-keser-first-generation"
+                  ]
+                }
+              ],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-keser-lineage"
+              ]
+            },
+            {
+              "id": "characters-keser-second-generation",
+              "path": "keser-second-generation",
+              "sourceName": "İkinci kuşak",
+              "title": "İkinci kuşak",
+              "date": "KUŞAK II",
+              "summary": "Oğuz ve Gül'ün kuşağı.",
+              "content": "Oğuz ve Gül'ün kuşağı.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-oguz-keser",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Oğuz.md",
+                  "sourceName": "Oğuz",
+                  "title": "Oğuz Keser",
+                  "date": "1802–1898",
+                  "summary": "Geleneklerine bağlı, dürüst, sevecen ve güçlü iradeli.",
+                  "content": "**Doğum:** 1802 · Giresun, Kuşköy\n\n**Genel rol:** Keser soyunun ikinci kuşağı · demirci\n\n**Kişilik:** Geleneklerine bağlı, dürüst, sevecen ve güçlü iradeli.",
+                  "order": 999,
+                  "aliases": [
+                    "Oğuz",
+                    "Oğuz Keser"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-keser-lineage",
+                    "characters-keser-second-generation"
+                  ]
+                },
+                {
+                  "id": "characters-gul-keser",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Gül.md",
+                  "sourceName": "Gül",
+                  "title": "Gül Keser",
+                  "date": "Yaklaşık 1810 doğumlu",
+                  "summary": "Sabırlı, sezgileri güçlü, birleştirici ve aile odaklı.",
+                  "content": "**Doğum:** Yaklaşık 1810 · Giresun çevresi\n\n**Genel rol:** Keser ailesinin ikinci kuşağı\n\n**Kişilik:** Sabırlı, sezgileri güçlü, birleştirici ve aile odaklı.",
+                  "order": 999,
+                  "aliases": [
+                    "Gül",
+                    "Gül Keser"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-keser-lineage",
+                    "characters-keser-second-generation"
+                  ]
+                }
+              ],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-keser-lineage"
+              ]
+            },
+            {
+              "id": "characters-keser-third-generation",
+              "path": "keser-third-generation",
+              "sourceName": "Üçüncü kuşak",
+              "title": "Üçüncü kuşak",
+              "date": "KUŞAK III",
+              "summary": "Kaan, Ali ve Firuze'nin kuşağı.",
+              "content": "Kaan, Ali ve Firuze'nin kuşağı.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-kaan-keser",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Kaan.md",
+                  "sourceName": "Kaan",
+                  "title": "Kaan Keser",
+                  "date": "1846–1904",
+                  "summary": "Sakin, azimli, tutkulu ve sorumluluk sahibi.",
+                  "content": "**Doğum:** 1846 · Giresun, Kuşköy\n\n**Genel rol:** Keser soyunun üçüncü kuşağı · demirci\n\n**Kişilik:** Sakin, azimli, tutkulu ve sorumluluk sahibi.",
+                  "order": 999,
+                  "aliases": [
+                    "Kaan",
+                    "Kaan Keser"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-keser-lineage",
+                    "characters-keser-third-generation"
+                  ]
+                },
+                {
+                  "id": "characters-ali-keser",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Ali.md",
+                  "sourceName": "Ali",
+                  "title": "Ali Keser",
+                  "date": "Keser soyunun üçüncü kuşağı",
+                  "summary": "Hareketli, meraklı, bağımsız ve zaman zaman çabuk öfkelenen.",
+                  "content": "**Genel rol:** Tarım işleriyle uğraşır; dönem dönem demircilik yapar.\n\n**Kişilik:** Hareketli, meraklı, bağımsız ve zaman zaman çabuk öfkelenen.",
+                  "order": 999,
+                  "aliases": [
+                    "Ali",
+                    "Ali Keser"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-keser-lineage",
+                    "characters-keser-third-generation"
+                  ]
+                },
+                {
+                  "id": "characters-firuze-keser",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Furize.md",
+                  "sourceName": "Furize",
+                  "title": "Firuze Keser",
+                  "date": "Keser soyunun üçüncü kuşağı",
+                  "summary": "Sabırlı, şefkatli, içine kapanık ve gerektiğinde dirençli.",
+                  "content": "**Genel rol:** Keser ailesinin bir üyesi\n\n**Kişilik:** Sabırlı, şefkatli, içine kapanık ve gerektiğinde dirençli.",
+                  "order": 999,
+                  "aliases": [
+                    "Firuze",
+                    "Firuze Keser",
+                    "Furize"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-keser-lineage",
+                    "characters-keser-third-generation"
+                  ]
+                }
+              ],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-keser-lineage"
+              ]
+            },
+            {
+              "id": "characters-keser-fourth-generation",
+              "path": "keser-fourth-generation",
+              "sourceName": "Dördüncü kuşak",
+              "title": "Dördüncü kuşak",
+              "date": "KUŞAK IV",
+              "summary": "Alperen Keser'in kuşağı.",
+              "content": "Alperen Keser'in kuşağı.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-alperen-keser",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Alperen.md",
+                  "sourceName": "Alperen",
+                  "title": "Alperen Keser",
+                  "date": "1888–1960",
+                  "summary": "Disiplinli, kararlı, milliyetçi ve güçlü merkezi devlet yanlısı.",
+                  "content": "**Doğum:** 1888 · Giresun, Kuşköy\n\n**Genel rol:** Asker ve devlet adamı · 1938–1960 döneminin lideri\n\n**Kişilik:** Disiplinli, kararlı, milliyetçi ve güçlü merkezi devlet yanlısı.",
+                  "order": 999,
+                  "aliases": [
+                    "Alperen",
+                    "Alperen Keser"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-keser-lineage",
+                    "characters-keser-fourth-generation"
+                  ]
+                }
+              ],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-keser-lineage"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "characters",
+          "ancestors": []
+        },
+        {
+          "id": "characters-state-leaders",
+          "path": "state-leaders",
+          "sourceName": "Devlet liderleri",
+          "title": "Devlet liderleri",
+          "date": "SİYASİ KARAKTERLER",
+          "summary": "Keser soy ağacının dışında yer alan devlet yöneticileri.",
+          "content": "Keser soy ağacının dışında yer alan devlet yöneticileri.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "characters-ismail-karaslan",
+              "path": "Alternatif Tarih/Karakterler/siyasi karakterler/İsmail Karaslan.md",
+              "sourceName": "İsmail Karaslan",
+              "title": "İsmail Karaslan",
+              "date": "1904 doğumlu · 1960–1975 döneminde lider",
+              "summary": "Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
+              "content": "**Doğum:** 1904 · Hatay\n\n**Genel rol:** Asker ve devlet adamı\n\n**Kişilik:** Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
+              "order": 999,
+              "aliases": [
+                "İsmail Karaslan"
+              ],
+              "children": [],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-state-leaders"
+              ]
+            },
+            {
+              "id": "characters-selim-arkan",
+              "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Selim Arkan.md",
+              "sourceName": "Selim Arkan",
+              "title": "Selim Arkan",
+              "date": "1935 doğumlu · 1975'ten itibaren lider",
+              "summary": "Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
+              "content": "**Doğum:** 1935 · Ankara\n\n**Genel rol:** Siyasetçi ve devlet adamı\n\n**Kişilik:** Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
+              "order": 999,
+              "aliases": [
+                "Selim Arkan"
+              ],
+              "children": [],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-state-leaders"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "characters",
+          "ancestors": []
+        }
+      ]
+    },
+    {
+      "id": "institutions",
+      "title": "Kurumlar",
+      "description": "Yayımlanmasına uygun kurumsal kayıtlar ve kurum profilleri.",
+      "view": "catalogue",
+      "label": "KURUM DOSYALARI",
+      "order": 4,
+      "nodes": [
+        {
+          "id": "institutions-kuruluslar-hilalifiyet-merkezi-istanbul-md",
+          "path": "Kuruluşlar/Hilalifiyet Merkezi - İstanbul.md",
+          "sourceName": "Hilalifiyet Merkezi - İstanbul",
+          "title": "Hilalifiyet Merkezi",
+          "date": "",
+          "summary": "kurum dünya-kurma hilalifiyet-merkezi müzakere öğrenci-siyaseti kanat-sistemi istanbul-blokları",
+          "content": "#kurum #dünya-kurma #hilalifiyet-merkezi #müzakere #öğrenci-siyaseti #kanat-sistemi #istanbul-blokları\n\n## 1. Genel Tanım\n\n**Kurumun Adı:** Hilalifiyet Merkezi  \n**Ana Yerleşke:** İstanbul Boğazı'nın hâkim sırtları  \n**Bağlı Olduğu Otorite:** Ankara / Kızıl Orda  \n**Üst İdari Kurum:** Maarif ve Gençlik Nizamı  \n**İlgili Devlet Makamları:** Ziya Arat ve Ulu Han Selim Arkan  \n**Merkezin En Üst Sivil Yetkilisi:** Hilalifiyet Hanı  \n**Yaygınlık:** İmparatorluğun her ilinde en az bir Hilalifiyet Merkezi bulunur. İstanbul ve Ankara gibi büyük metropollerde birden fazla merkez faaliyet gösterir.\n\n### 1.1. Kurumun Niteliği\n\nHilalifiyet Merkezi, Büyük Türk İmparatorluğu bünyesindeki mekteplerin üst düzey öğrenci temsilcilerini bir araya getiren, okullar arası siyasi ilişkileri düzenleyen ve gençlik teşkilatlarının güç dengelerini belirleyen merkezi müzakere kurumudur.\n\nKurum, imparatorluğun genç nüfusunu siyasi, diplomatik, askeri, bilimsel ve yönetsel açıdan geliştirmeyi amaçlar. Geleceğin devlet adamlarını, askeri personelini, pilotlarını, mühendislerini ve yöneticilerini henüz lise çağındayken tespit etmek ve yetiştirmek sistemin temel hedefleri arasındadır.\n\nHilalifiyet Merkezi, okullar arasındaki siyasi ilişkiler bakımından uluslararası diplomasi kuruluşlarına benzer bir işleve sahiptir. Ancak klasik diplomatik kuruluşlardan farklı olarak burada temsil edilen birimler devletler değil, imparatorluğun farklı mektepleridir.\n\nKurumun temel faaliyet alanları:\n\n- Okullar arası diplomatik ilişkilerin yürütülmesi.\n    \n- Siyasi ittifakların oluşturulması ve denetlenmesi.\n    \n- Mektepler arasındaki anlaşmazlıkların çözümlenmesi.\n    \n- Öğrenci temsilcilerinin karar alma yeteneklerinin geliştirilmesi.\n    \n- Bilimsel, teknolojik ve askeri projelerin değerlendirilmesi.\n    \n- Okulların devlet nezdindeki kurumsal konumlarının belirlenmesi.\n    \n- Gençlik teşkilatları içerisindeki siyasi rekabetin düzenlenmesi.\n    \n\n### 1.2. Kurumsal Bağımsızlık ve Devlet Denetimi\n\nHilalifiyet Merkezi devlete ait bir kurumdur ve Ankara'daki Maarif ve Gençlik Nizamı'na bağlıdır.\n\nKurumun günlük faaliyetleri ve öğrenci diplomasisi büyük ölçüde öğrenci temsilcileri üzerinden yürütülür. Buna karşılık merkez idaresi ve ilgili devlet makamları, kararların kurumsal ve hukuki denetimini gerçekleştirir.\n\nBu nedenle Hilalifiyet Merkezi iki ayrı otorite alanına sahiptir:\n\n**Öğrenci otoritesi:** Okul başkanları, müzakere heyetleri, siyasi ittifaklar ve öğrencilerin temsil faaliyetleri.\n\n**Devlet otoritesi:** Merkez bürokrasisi, uzman jüriler, hukuki denetim ve Ankara'nın idari gözetimi.\n\nMerkezde alınan kararlar, gerekli değerlendirme ve onay süreçlerinden geçtikten sonra ilgili okullar açısından bağlayıcı nitelik kazanır.\n\n---\n\n## 2. Coğrafi Konum ve Mimari Yapı\n\n### 2.1. Yerleşke Konumu\n\nAna Hilalifiyet Merkezi, İstanbul Boğazı'nın en hâkim sırtlarından birinde, geniş ve anıtsal bir arazi üzerine kuruludur.\n\nYerleşke, Boğaz'ın turkuaz sularına, İstanbul'un gökdelen siluetine ve çevresindeki geniş yerleşim alanlarına tepeden bakacak şekilde konumlandırılmıştır.\n\nMimari yerleşim, kurumun devlet içerisindeki önemini ve gençlik teşkilatları üzerindeki etkisini yansıtacak biçimde tasarlanmıştır.\n\n### 2.2. Mimari Kimlik ve Renk Paleti\n\nHilalifiyet Merkezi'nin mimarisi modern minimalist çizgilerle geleneksel Türk devlet motiflerini bir araya getirir.\n\n**Ana cephe:** Ufuktan bakıldığında kolayca fark edilebilen, uzun ve anıtsal beyaz cepheler.\n\n**Mimari renkler:**\n\n- Turkuaz: Deniz, süreklilik ve devletin denizle olan bağını temsil eder.\n    \n- Siyah: Otorite, disiplin ve kurumsal ciddiyeti temsil eder.\n    \n- Altın sarısı: Devlet geleneği, itibar ve yüksek makamları temsil eder.\n    \n- Kızıl: Güç, irade ve devlet otoritesini temsil eder.\n    \n\n### 2.3. Yerleşke Planı\n\nAna yerleşke toplam dokuz büyük yapıdan meydana gelir.\n\n#### A. Ulu Hilal Külliyesi — Ana Bina\n\nMerkezin idari, diplomatik ve temsil merkezidir.\n\nBaşlıca bölümleri:\n\n- Ana müzakere salonları.\n    \n- Hilalifiyet Hanı makamı.\n    \n- Bütün okul başkanlarının katıldığı genel müzakere salonu.\n    \n- Yüksek Kanat Konseyi oturum alanı.\n    \n- Üst düzey protokol salonları.\n    \n- İdari toplantı odaları.\n    \n\nGenel müzakere salonu, farklı okulların altıncı kanat temsilcilerinin bir araya geldiği temel diplomatik alandır.\n\n#### B. Dört Yardımcı Bina\n\nEğitim, araştırma, simülasyon ve teknik faaliyetler için kullanılır.\n\nİçerisinde:\n\n- Eğitim ve simülasyon blokları.\n    \n- Ar-Ge laboratuvarları.\n    \n- Veri işleme merkezleri.\n    \n- Teknolojik araştırma alanları.\n    \n- Teknik inceleme ve değerlendirme odaları.\n    \n\n#### C. Dört Çok İşlevli Bina\n\nUlusal ve uluslararası organizasyonlar ile öğrenci faaliyetlerine ayrılmıştır.\n\nİçerisinde:\n\n- Ulusal ve uluslararası yarışma alanları.\n    \n- Havacılık test alanları.\n    \n- Öğrenci konaklama kompleksleri.\n    \n- Hitabet amfileri.\n    \n- Etkinlik ve organizasyon salonları.\n    \n\n---\n\n## 3. Kurumsal Amaç ve Stratejik Yetkiler\n\n### 3.1. Temel Amaç\n\nHilalifiyet Merkezi'nin temel amacı, imparatorluk gençliğinin bireysel yeteneklerini belirlemek, geliştirmek ve bu yetenekleri devletin ihtiyaç duyduğu alanlara yönlendirmektir.\n\nKurum özellikle şu alanlara önem verir:\n\n- Siyasi liderlik ve devlet yönetimi.\n    \n- Diplomasi ve müzakere.\n    \n- Askeri eğitim ve stratejik düşünme.\n    \n- Havacılık ve mühendislik.\n    \n- Bilimsel araştırma.\n    \n- Teknolojik geliştirme.\n    \n- Hukuk ve hitabet.\n    \n- Organizasyon ve yönetim.\n    \n\n### 3.2. Stratejik Etki Alanları\n\nHilalifiyet Merkezi'nde alınan kararlar, okulların ve öğrencilerin gelecekteki konumlarını doğrudan etkileyebilir.\n\nMerkezin faaliyetleri şu alanlarda belirleyici olabilir:\n\n- Öğrencilerin resmi sicilleri.\n    \n- Askeri akademilere kabul süreçlerinde referans ve değerlendirmeler.\n    \n- Okulların devletten aldığı bütçe ve hak payları.\n    \n- Yarışma ve özel programlara katılım hakları.\n    \n- Araştırma projeleri ve kurumsal destekler.\n    \n- Okulların siyasi temsil ve nüfuz alanları.\n    \n- Öğrenci liderlerinin kurumsal itibarı.\n    \n- Mektepler arasındaki ittifak ilişkileri.\n    \n\nMerkez, okulların yalnızca akademik başarılarını değil, siyasi ve kurumsal performanslarını da değerlendiren bir mekanizmadır.\n\n---\n\n## 4. Kurumsal Yönetim ve İdari Hiyerarşi\n\nHilalifiyet Merkezi iki temel yönetim katmanından meydana gelir:\n\n1. Kurumsal Merkez İdaresi.\n    \n2. Öğrenci Temsilciliği.\n    \n\nBu iki yapı birbirinden bağımsız değildir ancak yetki alanları farklıdır.\n\n### 4.1. Üst Otorite\n\nHilalifiyet Merkezi, Ankara'daki Kızıl Orda bünyesinde bulunan Maarif ve Gençlik Nizamı'na bağlıdır.\n\nGenel faaliyetleri devletin eğitim, gençlik ve teşkilatlanma politikaları çerçevesinde yürütülür.\n\nMerkez, kendi içerisinde önemli karar yetkilerine sahip olsa da devlet otoritesinin üzerinde değildir.\n\n### 4.2. Kurumsal Merkez İdaresi\n\n**Merkez Başkanı — Hilalifiyet Hanı**\n\nHilalifiyet Merkezi'nin en üst düzey sivil bürokratıdır.\n\nGörevleri:\n\n- Merkezin genel sevk ve idaresini yürütmek.\n    \n- Kurumsal işleyişin sürekliliğini sağlamak.\n    \n- İdari düzeni ve protokol kurallarını denetlemek.\n    \n- Müzakerelerin kurumsal kurallara uygunluğunu gözetmek.\n    \n- Merkez bürokrasisini yönetmek.\n    \n- Gerektiğinde müzakere süreçlerine ilişkin idari müdahalelerde bulunmak.\n    \n\nHilalifiyet Hanı'nın yetkileri Ankara'ya karşı sorumludur. Öğrenci temsilcilerinin siyasi faaliyetleri ile merkez idaresinin denetim yetkisi arasındaki sınır, kurumun temel yönetim ilkelerinden biridir.\n\n**Başyardımcı**\n\nMerkezin günlük idari işleyişinden, il içindeki koordinasyondan ve güvenlik protokollerinden sorumludur.\n\n**Organizasyon ve Genel Yardımcı**\n\nYarışmaların, etkinliklerin, panellerin ve diğer organizasyonların saha yönetimini gerçekleştirir.\n\n**Müzakere Müdürleri**\n\nÖğrenci temsilcilerinin diplomatik oturumlarını, protokol görüşmelerini ve ittifak anlaşmalarını denetler.\n\n**Jüriler ve Teknik Kurul**\n\nBilimsel, teknolojik, siyasi ve diğer uzmanlık alanlarındaki değerlendirmeleri gerçekleştirir. Müzakerelerde ortaya çıkan taleplerin ve kararların incelenmesinde önemli rol oynar.\n\n### 4.3. Öğrenci Temsilciliği\n\nMerkezin diplomatik faaliyetlerine katılabilecek öğrenciler kanat sistemi üzerinden belirlenir.\n\nResmi müzakere alanlarına yalnızca:\n\n- 6. Kanat — Okul Başkanı.\n    \n- 5. Kanat — Okul Başkan Yardımcısı.\n        \n\ngirebilir.\n\nDördüncü kanat ve altındaki öğrenciler resmi diplomatik müzakerelere katılamaz.\n\n**6. Kanat — Okul Başkanı**\n\nBir okulun en üst düzey öğrenci temsilcisidir.\n\nYetkileri:\n\n- Okulun siyasi görüşünü temsil etmek.\n    \n- Müzakerelerde okul adına konuşmak.\n    \n- Siyasi ittifak politikalarını belirlemek.\n    \n- Diplomatik anlaşmalara katılmak.\n    \n- Okulun taleplerini ve çıkarlarını savunmak.\n    \n- Gerekli durumlarda veto yetkisini kullanmak.\n    \n\n**5. Kanat — Okul Başkan Yardımcısı**\n\nOkul başkanının en üst düzey yardımcısıdır.\n\nSorumlulukları:\n\n- Diplomatik ilişkilerin yürütülmesine yardımcı olmak.\n    \n- Müzakere hazırlıklarını düzenlemek.\n    \n- Organizasyon ve koordinasyonu sağlamak.\n    \n- Okulun diplomatik iletişimini yürütmek.\n    \n- Okul başkanının kararlarının uygulanmasını sağlamak.\n    \n\n### 4.4. Okul İçi Kanat Konseyi ile Merkez Arasındaki Fark\n\nKanat Konseyi, Hilalifiyet Merkezi'ne ait bir yönetim organı değildir.\n\nHer okulun kendi bünyesinde bulunan Kanat Konseyi, o okulun iç yönetimiyle ilgilenir.\n\nHilalifiyet Merkezi ise farklı okulların üst düzey temsilcilerini bir araya getiren merkezi bir diplomasi ve müzakere kurumudur.\n\nDolayısıyla okul içindeki Kanat Konseyi ile Hilalifiyet Merkezi'nin genel müzakere mekanizması birbirinden ayrı değerlendirilmelidir.\n\n### 4.5. Öğrenci Liderlerinin Statü Farkı\n\nBütün 6. Kanat sahipleri resmi olarak eşit temsil statüsündedir.\n\nHilalifiyet Merkezi'nde bütün okul başkanlarının üzerinde bulunan ayrı bir öğrenci makamı yoktur.\n\nBununla birlikte okul başkanları arasında doğal bir nüfuz ve itibar farkı bulunabilir.\n\nBu farkı belirleyen unsurlar:\n\n- Geçmişte gerçekleştirilen faaliyetler.\n    \n- Diplomatik başarılar.\n    \n- Yönetim ve liderlik becerileri.\n    \n- Kazanılan ittifaklar.\n    \n- Okulun siyasi gücü.\n    \n- Müzakere performansı.\n    \n- Merkez içerisindeki kişisel itibar.\n    \n\nBu nedenle resmi eşitlik, fiili siyasi eşitlik anlamına gelmez.\n\n---\n\n## 5. Müzakere Sistemi ve Karar Mekanizması\n\n### 5.1. Genel Müzakere Meclisi\n\nHilalifiyet Merkezi'nde bütün okul başkanlarının katılabildiği büyük bir genel müzakere toplantısı bulunur.\n\nBu toplantı, okulların siyasi görüşlerini açıklayabildiği, taleplerini sunduğu ve birbirleriyle müzakere yürüttüğü temel karar platformudur.\n\nMüzakerelere 6. Kanat sahipleri katılır. 5. Kanat sahipleri ise kendi okul başkanlarının yardımcıları olarak diplomatik ve organizasyonel süreçlerde görev alır.\n\n### 5.2. Karar Alma Usulü\n\nGenel müzakere toplantılarında okul başkanları görüşlerini, taleplerini ve gerekçelerini açıklar.\n\nKarar mekanizması yalnızca okul başkanlarının oy çokluğuna dayanmaz. İlgili uzmanlık alanındaki jüri, müzakereye konu olan talebi ve ortaya konulan gerekçeleri değerlendirerek karar verir.\n\nSürecin temel aşamaları:\n\n1. İlgili okul veya temsilci talebini sunar.\n    \n2. Taraflar görüşlerini ve gerekçelerini açıklar.\n    \n3. İlgili uzmanlık alanının jürisi değerlendirme yapar.\n    \n4. Jüri, talebin uygunluğunu ve gerekçelerini inceler.\n    \n5. Jüri onayı bulunmayan talepler yürürlüğe giremez.\n    \n6. Gerekli kurumsal ve idari onay süreçleri tamamlanır.\n    \n7. Onaylanan karar ilgili taraflar için bağlayıcı hale gelir.\n    \n\nBu sistemde okul başkanları siyasi iradeyi ve talepleri ortaya koyarken jüriler değerlendirme ve onay mekanizmasını oluşturur.\n\n### 5.3. Müzakerelerde Kazanılabilecek Haklar\n\nMüzakerelerin sonucunda, haklı ve gerekçelendirilebilir olmak şartıyla çok çeşitli kazanımlar elde edilebilir.\n\nBunlar:\n\n- Başka okulların siyasi ittifaka katılması.\n    \n- Bir okulun başka bir okulun liderliğini kabul etmesi.\n    \n- Bütçe ve kaynak tahsisinde avantaj elde edilmesi.\n    \n- Askeri akademilere öğrenci gönderme konusunda referans ve destek sağlanması.\n    \n- Yarışma ve araştırma imtiyazları kazanılması.\n    \n- Yeni projelerin devlet desteği alması.\n    \n- Okulların kurumsal haklarının değiştirilmesi.\n    \n- Bir okulun siyasi yetkilerinin sınırlandırılması.\n    \n- Diplomatik ve idari ayrıcalıkların elde edilmesi.\n    \n\nMerkezdeki müzakereler yalnızca siyasi itibar kazanmak için değil, okulların somut çıkarlarını ve haklarını belirlemek için de yürütülür.\n\n---\n\n## 6. Jüri ve Uzman Değerlendirme Sistemi\n\n### 6.1. Genel Yapı\n\nHilalifiyet Merkezi'ndeki jüri sistemi, farklı uzmanlık alanlarına ayrılmış geniş bir değerlendirme mekanizmasından meydana gelir.\n\nHer uzmanlık dalında ön planda bulunan yedi kişilik bir uzman heyeti vardır.\n\nBu yedi kişi, ilgili alanın temel değerlendirme kadrosunu oluşturur.\n\nYedi kişilik ana heyetin arkasında ise uzmanlık sahibi, deneyimli ve değerlendirme süreçlerine katkı sunabilecek daha geniş bir uzman kadrosu bulunur.\n\nBu kadroda eski kanat başkanları gibi geçmişte kurum içerisinde görev yapmış ve tecrübe kazanmış kişiler de yer alabilir.\n\n### 6.2. Uzmanların Belirlenmesi\n\nJüri üyeleri kendi uzmanlık alanlarında liyakat, başarı ve yeterlilik esaslarına göre belirlenir.\n\nGörevlendirme devlet atamasıyla gerçekleştirilir. Böylece uzmanlık yeterliliği ile devletin kurumsal denetimi bir arada korunur.\n\n### 6.3. Jürilerin Görevleri\n\n- Müzakere taleplerini incelemek.\n    \n- Sunulan gerekçelerin yeterliliğini değerlendirmek.\n    \n- Okulların projelerini denetlemek.\n    \n- Bilimsel ve teknolojik çalışmaları değerlendirmek.\n    \n- İttifak ve anlaşma taleplerini incelemek.\n    \n- Rütbe terfileri ve yeterlilik değerlendirmelerine katılmak.\n    \n- Nizam-1 tarafından sunulan analizleri incelemek.\n    \n- Kurumsal kurallara uygunluk denetimi yapmak.\n    \n\n### 6.4. Jüri Onayının Önemi\n\nJüri onayı, Hilalifiyet Merkezi'nin karar mekanizmasındaki temel şartlardan biridir.\n\nBir talebin veya anlaşmanın yalnızca okul başkanları tarafından desteklenmesi yeterli değildir. İlgili uzmanlık alanındaki jürinin onayı olmadan talep yürürlüğe giremez.\n\nJüriler, kararların yalnızca siyasi güç veya kişisel nüfuz kullanılarak alınmasını engelleyen kurumsal denetim mekanizmasını oluşturur.\n\n---\n\n## 7. Nizam-1 Mantık Bilgisayarı\n\n### 7.1. Tanım\n\nNizam-1, Hilalifiyet Merkezi'nde kullanılan yapay zekâ destekli mantık ve karar değerlendirme sistemidir.\n\nTemel amacı, müzakere sırasında sunulan talepleri, projeleri ve anlaşmaları analiz ederek bunların mantıksal tutarlılığını ve imparatorluğun çıkarlarıyla uyumunu değerlendirmektir.\n\n### 7.2. Görevleri\n\n- Okulların sunduğu projeleri analiz etmek.\n    \n- İttifak anlaşmalarının olası sonuçlarını simüle etmek.\n    \n- Taleplerin mantıksal tutarlılığını incelemek.\n    \n- Önerilen kararların muhtemel etkilerini değerlendirmek.\n    \n- İmparatorluk çıkarlarıyla uyum analizi gerçekleştirmek.\n    \n- Müzakere heyetlerine gerekçeli değerlendirmeler sunmak.\n    \n\n### 7.3. İnsan Denetimi\n\nNizam-1'in değerlendirmeleri nihai ve tartışmasız karar niteliği taşımaz.\n\nSistem analizlerini ve gerekçelerini ortaya koyar. Ardından ilgili uzman jürisi bu değerlendirmeyi inceler ve onaylayıp onaylamadığını bildirir.\n\nBu nedenle Nizam-1, bağımsız değerlendirme gerçekleştiren tarafsız bir karar destek sistemidir. Nihai kurumsal yetki ise jüri ve ilgili idari mekanizmalarda bulunur.\n\n---\n\n## 8. Sorgu ve Müzakere Destek Teknolojileri\n\nHilalifiyet Merkezi'nde müzakere süreçlerinde katılımcıların fizyolojik ve davranışsal tepkilerini incelemek amacıyla çeşitli teknolojik sistemler kullanılır.\n\nBu sistemler kamuoyunda yalan makinesi ve stres ölçer olarak tanımlanır.\n\n### 8.1. Ölçüm Sistemleri\n\nCihazların takip ettiği başlıca veriler:\n\n- Nabız değişimleri.\n    \n- Vücut sıcaklığı.\n    \n- Ses frekansındaki değişimler.\n    \n- Stres göstergeleri.\n    \n- Fizyolojik tepki sapmaları.\n    \n\n### 8.2. Kullanım Amacı\n\nBu cihazlar müzakere sırasında katılımcıların fizyolojik tepkilerini gözlemlemek ve değerlendirme süreçlerine yardımcı veri sağlamak amacıyla kullanılır.\n\nÖlçüm sonuçları tek başına kesin bir suç veya yalan kanıtı olarak değerlendirilmez. Kurumsal değerlendirme sürecinde jüri incelemesiyle birlikte ele alınır.\n\n---\n\n## 9. Okullar Arası İttifak ve Domine Edilme Sistemi\n\n### 9.1. Domine Edilmiş Okul Tanımı\n\nHilalifiyet Merkezi'nde kullanılan domine edilmiş okul kavramı, bir okulun başka bir okul tarafından fiziksel veya askeri olarak işgal edilmesini ifade etmez.\n\nBu kavram, bir okulun başka bir okulun siyasi üstünlüğünü kabul etmesi ve onun liderliği altında müttefiklik ilişkisine girmesi anlamına gelir.\n\nDomine edilen okul kendi kurumsal varlığını, okul yönetimini ve iç teşkilatlanmasını korur. Ancak Hilalifiyet Merkezi'ndeki siyasi ilişkilerinde ve bloklaşmalarda lider okulun politikalarına bağlı hareket eder.\n\n### 9.2. Domine Edilme Süreci\n\nBir okul, başka bir okulun siyasi üstünlüğünü çeşitli yollarla kabul edebilir.\n\nBu sürecin temel araçları:\n\n- Diplomatik müzakere.\n    \n- Siyasi ve stratejik ittifaklar.\n    \n- Başarı ve kurumsal itibar.\n    \n- Müzakerelerde haklı ve güçlü gerekçeler ortaya koymak.\n    \n- Siyasi baskı ve nüfuz.\n    \n- Yarışma ve organizasyonlardaki başarılar.\n    \n\nBir okulun diğerini domine etmesi tek taraflı bir işgal veya zorunlu yönetim değişikliği değildir. İlişki, Hilalifiyet Merkezi bünyesinde tanınan siyasi üstünlük ve müttefiklik düzenine dayanır.\n\n### 9.3. Müttefik Okulların Yükümlülükleri\n\nDomine edilmiş okul:\n\n- Lider okulun siyasi üstünlüğünü tanır.\n    \n- Blok içerisindeki ortak kararlara uygun hareket eder.\n    \n- Müzakerelerde ortak diplomatik tutumu destekler.\n    \n- Blok içerisindeki stratejik iş birliğini sürdürür.\n    \n\nLider okul ise:\n\n- Müttefik okulları siyasi olarak temsil eder.\n    \n- Müttefiklerinin çıkarlarını müzakerelerde savunur.\n    \n- Gerektiğinde koruma ve referans desteği sağlar.\n    \n- Yarışma ve araştırma faaliyetlerinde destek sunar.\n    \n- Blok içerisindeki siyasi koordinasyonu yürütür.\n    \n\n### 9.4. Blok Değiştirme ve Bağımsızlık\n\nBir okulun domine edildiği bloktan ayrılması mümkündür.\n\nAncak bu ayrılık yalnızca sözlü bir bildirimle gerçekleşmez. Okulun müzakere masasında yeterli siyasi güce ulaşması, haklı gerekçeler ortaya koyması ve ilgili jürilerin değerlendirmesinden geçmesi gerekir.\n\nBir okul, gerekli şartları sağlayarak başka bir bloğa katılabilir veya bağımsız bir siyasi konum elde edebilir.\n\nBu durum, Hilalifiyet Merkezi'ndeki güç dengelerinin sürekli değişebilmesini sağlar.\n\n---\n\n## 10. Yaptırımlar ve Disiplin Mekanizması\n\nHilalifiyet Merkezi, öğrenci temsilcileri ve okullar üzerinde kurumsal yaptırım uygulama yetkisine sahiptir.\n\n### 10.1. Uygulanabilecek Yaptırımlar\n\n- Öğrencilerin temsil yetkilerinin geçici olarak askıya alınması.\n    \n- Okulların oy veya temsil haklarının sınırlandırılması.\n    \n- Kurumsal imtiyazların kaldırılması.\n    \n- Müzakere yetkilerinin kısıtlanması.\n    \n- İlgili temsilcilerin görevden alınması.\n    \n- Okulların belirli diplomatik faaliyetlerden men edilmesi.\n    \n\nBu yaptırımlar, kurumun kurallarına ve ihlalin niteliğine bağlı olarak değerlendirilir.\n\n### 10.2. Okul Başkanının Görevden Alınması\n\nBir okul başkanının görevden alınması sıradan siyasi anlaşmazlıklar veya başarısız müzakereler nedeniyle gerçekleştirilemez.\n\nGörevden alma gibi ağır sonuçlar için ihanet gibi son derece ciddi suçların ortaya çıkması gerekir.\n\nSiyasi rakiplerin varlığı veya başka bir okulun liderliği ele geçirmeye çalışması, tek başına görevden alma gerekçesi değildir.\n\n---\n\n## 11. Devlet Güvenliği ve Vatan Suçu Sınırı\n\nHilalifiyet Merkezi'ndeki siyasi rekabet belirli sınırlar içerisinde serbesttir.\n\nOkulların birbirleriyle rekabet etmesi, blok değiştirmesi, siyasi üstünlük kurmaya çalışması ve müzakere masasında baskı oluşturması sistemin doğal parçalarıdır.\n\nAncak bu rekabetin devletin güvenliğini, imparatorluğun çıkarlarını ve kurumsal düzeni tehdit edecek seviyeye ulaşmasına izin verilmez.\n\nDevletin belirlediği sınırları bilerek aşmak ve imparatorluğun çıkarlarına karşı faaliyet yürütmek vatan suçu kapsamında değerlendirilebilir.\n\nBu çerçevede özellikle:\n\n- Devletin gizli bilgilerini yabancı güçlere aktarmak.\n    \n- Hilalifiyet Merkezi'nin faaliyetlerini kasıtlı olarak sabote etmek.\n    \n- Yasaklanmış gizli anlaşmalar gerçekleştirmek.\n    \n- Devlet otoritesine karşı faaliyet yürütmek.\n    \n- İmparatorluğun çıkarlarına karşı yabancı güçlerle iş birliği yapmak.\n    \n\ngibi eylemler ağır ihlal ve suç kategorileri arasında yer alır.\n\nBu nedenle Üsküdar ve Şark blokları arasındaki rekabet ne kadar sert olursa olsun devletin belirlediği kırmızı çizgilerin aşılması kabul edilemez.\n\nHilalifiyet Merkezi, okulların siyasi mücadelelerini düzenlerken aynı zamanda bu mücadelenin devlet düzenine zarar vermesini engelleyen bir kontrol mekanizmasıdır.\n\n---\n\n## 12. Hilalifiyet Hanı'nın Yetki ve Sorumlulukları\n\nHilalifiyet Hanı, kurumun en üst sivil yöneticisidir ve Ankara'ya karşı sorumludur.\n\nMerkez başkanının temel rolü, öğrenci temsilcilerinin yerine siyasi kararlar almak değil, kurumun idari ve hukuki düzenini korumaktır.\n\nYetki alanına ilişkin belirlenmiş unsurlar:\n\n- Müzakerelerin kurumsal düzenini denetlemek.\n    \n- Gerekli durumlarda toplantıları durdurabilmek.\n    \n- Kurallara aykırı kararları iptal edebilmek.\n    \n- Merkezin idari işleyişini yönetmek.\n    \n- Öğrenci müzakerelerinin kurallara uygunluğunu gözetmek.\n    \n- Ankara'ya karşı kurumsal sorumluluk taşımak.\n    \n\nBu makam, siyasi müzakerelerin üzerinde yer alan bir denetim makamıdır. Öğrenci temsilcilerinin siyasi iradesi ile merkezin idari otoritesi arasındaki sınırın korunması esastır.\n\n---\n\n## 13. İstanbul'daki Siyasi Güç Dengesi\n\nİstanbul mektepleri, Hilalifiyet Merkezi içerisindeki faaliyetlerinde iki büyük siyasi blok etrafında toplanmıştır.\n\nBu iki blok farklı yönetim anlayışlarını ve stratejik hedefleri temsil eder.\n\n### 13.1. Üsküdar Bloğu — İrfan Ekolü\n\n**Blok Lideri:** Alper Ulaç Altaylı  \n**Lider Okul:** Üsküdar Milli İlim ve İrfan Mektebi  \n**Okul Başkanı:** Alper Ulaç Altaylı — 6. Kanat  \n**Başkan Yardımcısı:** [[İsmail Yağız Aslan]] — 5. Kanat\n\n#### Domine Edilmiş Müttefik Okullar\n\n- Kadıköy İleri Sanayi ve Askeri İdadi Mektebi.\n    \n- Beyoğlu Fen ve Havacılık Akademisi.\n    \n- Ümraniye Anadolu İrfan Mektebi.\n    \n\n#### Siyasi Kimlik\n\nÜsküdar Bloğu, irfan, liyakat ve sivil-askeri denge anlayışını temel alır.\n\nBlok, farklı yeteneklere sahip öğrencilerin ortak bir strateji altında organize edilmesini ve müttefik okulların potansiyellerinden yararlanılmasını hedefler.\n\n#### Temel Stratejiler\n\n- Liyakat esaslı yönetim.\n    \n- Alt kanatların yeteneklerini organize etme.\n    \n- Havacılık ve teknolojik gelişim vizyonu.\n    \n- Sivil ve askeri güçler arasında denge kurma.\n    \n- Esnek ancak uzun vadeli ittifaklar oluşturma.\n    \n- Müzakerelerde ortak çıkarları savunma.\n    \n- Müttefiklerin yeteneklerinden yararlanarak blok gücünü artırma.\n    \n\n### 13.2. Şark Bloğu — Otorite Ekolü\n\n**Blok Lideri:** [[Tomris İlter]]  \n**Lider Okul:** İstanbul Şarkın İlim ve Teknoloji Mektebi  \n**Okul Başkanı:** Tomris İlter — 6. Kanat  \n**Başkan Yardımcısı:** [[Asena Korkut]] — 5. Kanat\n\n#### Domine Edilmiş Müttefik Okullar\n\n- Beşiktaş Siyasi ve Teknolojik Bilimler Lisesi.\n    \n- Fatih Klasik Edebiyat ve Hukuk Mektebi.\n    \n- Bakırköy Teknik Araştırma İdadisi.\n    \n\n#### Siyasi Kimlik\n\nŞark Bloğu, otorite, merkeziyetçilik ve teknolojik üstünlük anlayışını temel alır.\n\nBlok içerisinde liderliğin tek merkezde toplanması ve bütün müttefik okulların ortak bir hiyerarşi altında hareket etmesi esastır.\n\n#### Temel Stratejiler\n\n- Katı hiyerarşik yönetim.\n    \n- Merkezi ve tekilleştirilmiş liderlik.\n    \n- Müzakerelerde diplomatik baskı.\n    \n- Teknolojik üstünlük oluşturma.\n    \n- İstihbarat ve bilgi kontrolüne önem verme.\n    \n- Blok içerisindeki siyasi disiplini koruma.\n    \n- Ortak hedefler doğrultusunda koordineli hareket etme.\n    \n\n---\n\n## 14. İstanbul Blokları Arasındaki Rekabet\n\n### 14.1. Rekabetin Niteliği\n\nÜsküdar ve Şark blokları arasındaki rekabet, İstanbul'daki mekteplerin siyasi üstünlük mücadelesinin temelini oluşturur.\n\nİki blok farklı yönetim anlayışlarına sahip oldukları için yalnızca belirli konularda değil, genel siyasi yaklaşımlarında da karşı karşıya gelir.\n\n### 14.2. Mücadele Yöntemleri\n\nBloklar arasındaki rekabet şu alanlarda yürütülebilir:\n\n- Okullar arası yarışmalar.\n    \n- İstihbarat toplama faaliyetleri.\n    \n- Stratejik siyasi hamleler.\n    \n- Diplomatik baskı.\n    \n- Müzakere üstünlüğü kazanma çabaları.\n    \n- Müttefik okulların sayısını ve niteliğini artırma.\n    \n- Siyasi nüfuz alanlarını genişletme.\n    \n- Rakip bloğun stratejik hamlelerine karşılık verme.\n    \n\n### 14.3. Rekabetin Sınırları\n\nBloklar arasındaki mücadele belirli bir devlet düzeni içerisinde kalmak zorundadır.\n\nDevletin belirlediği sınırların aşılması ve imparatorluğun güvenliğine zarar verecek faaliyetlere girişilmesi ağır suç kapsamındadır.\n\nBu nedenle iki blok arasındaki rekabet sert, stratejik ve yoğun olabilir; ancak devlet otoritesine karşı bir mücadeleye dönüşemez.\n\n---\n\n## 15. İstanbul Bloklarının Karşılaştırılması\n\n|Özellik|Üsküdar Bloğu|Şark Bloğu|\n|---|---|---|\n|Lider|Alper Ulaç Altaylı|Tomris İlter|\n|Lider okul|Üsküdar Milli İlim ve İrfan Mektebi|İstanbul Şarkın İlim ve Teknoloji Mektebi|\n|Başkan yardımcısı|İsmail Yağız Aslan|Asena Korkut|\n|Temel ekol|İrfan|Otorite|\n|Yönetim anlayışı|Liyakat ve denge|Merkeziyetçilik ve hiyerarşi|\n|Diplomatik yaklaşım|Esnek stratejik ittifak|Sert diplomatik baskı|\n|Öncelikli alan|Havacılık ve sivil-askeri denge|Teknoloji ve istihbarat|\n|Blok yapısı|Yetenek ve iş birliği odaklı|Merkezi liderlik odaklı|\n\n---\n\n## 16. Kurumun Genel İşleyiş Mantığı\n\nHilalifiyet Merkezi'nin siyasi ve idari sistemi dört temel unsur üzerine kuruludur:\n\n**1. Öğrenci Temsilciliği:** Okulların siyasi iradesini temsil eder, talepleri ortaya koyar ve müzakereleri yürütür.\n\n**2. Uzman Jüriler:** Talepleri, projeleri ve anlaşmaları değerlendirir. Gerekli onayları verir veya reddeder.\n\n**3. Merkez İdaresi:** Kurumun idari düzenini, güvenliğini ve müzakere protokollerini denetler.\n\n**4. Devlet Otoritesi:** Merkezin bağlı olduğu üst makamdır. Kurumun imparatorluğun genel çıkarlarıyla uyumlu faaliyet göstermesini sağlar.\n\nBu dört unsurun birlikte çalışması, Hilalifiyet Merkezi'nin siyasi rekabet ile devlet denetimini aynı sistem içerisinde yürütmesini sağlar.\n\nHilalifiyet Merkezi, öğrencilere geniş bir siyasi hareket alanı sunar ancak bu alan sınırsız değildir. Başarı, liyakat, diplomatik yetenek, uzman onayı ve devlet düzenine bağlılık kurum içerisindeki güç kazanımının temel şartlarıdır.\n\n---\n\n## 17. Henüz Kesinleştirilmemiş Kurumsal Ayrıntılar\n\nAşağıdaki konular kurumun genel yapısından ayrı olarak daha sonra belirlenmelidir.\n\n- Hilalifiyet Hanı'nın müzakereleri durdurma, kararları iptal etme ve öğrenci müzakerelerine müdahale etme yetkilerinin kesin sınırları.\n    \n- Genel müzakere kararlarının bürokratik onay aşamasındaki ayrıntılı prosedürleri.\n    \n- Uzman jürilerinin görev süreleri ve üyelerin yenilenme usulleri.\n    \n- Jüri üyelerinin görevden alınması ve değiştirilmesi.\n    \n- Jüri kararlarına itiraz mekanizması.\n    \n- 5. ve 6. Kanat temsilcilerinin merkeze girişte ek sicil veya yeterlilik incelemesine tabi olup olmadığı.\n        \n- Okulların bağımsızlık kazanma ve blok değiştirme süreçlerinin resmi prosedürleri.\n    \n- Müzakere toplantılarının dönemsel takvimi.\n    \n- Farklı şehirlerdeki Hilalifiyet Merkezlerinin birbirleriyle idari ilişkileri.\n    \n- Merkez bütçesi ve kaynak dağıtımının ayrıntılı sistemi.\n    \n- Yüksek Kanat Konseyi'nin kurum içerisindeki kesin görev ve yetki alanı.\n    \n\nBu başlıklar, kurumun mevcut yapısını değiştirmeden daha sonra ayrıntılandırılacaktır.",
+          "order": 999,
+          "aliases": [],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-ismail-yagiz-aslan",
+              "title": "İsmail Yağız Aslan",
+              "date": "1968 · 17 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-tomris-ilter",
+              "title": "Tomris İlter",
+              "date": "1968 · 17 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-asena-korkut",
+              "title": "Asena Korkut",
+              "date": "1968 · 17 yaş"
+            }
+          ],
+          "categoryId": "institutions",
+          "ancestors": []
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "title": "Teknoloji",
+      "description": "Evrenin araç ve teknoloji projelerine ait yayımlanabilir genel kayıtlar.",
+      "view": "catalogue",
+      "label": "TEKNOLOJİ KATALOĞU",
+      "order": 5,
+      "nodes": [
+        {
+          "id": "technology-ta-85-gokkanat",
+          "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Necdet Atalay.md",
+          "sourceName": "TA-85 Gökkanat",
+          "title": "TA-85 Gökkanat",
+          "date": "Prototip dönemi: 1943",
+          "summary": "Türk uçan kanat tipi bombardıman uçağı projesi.",
+          "content": "**TA-85 Gökkanat**, evrende yer alan Türk uçan kanat tipi bombardıman uçağı projesidir. Necdet Atalay'ın karakter dosyası, uçağın yapımında görev aldığını kaydeder. Bu katalog yalnızca genel ve yayımlanabilir tanıtım bilgisini içerir; taslak veya gizli teknik dosyalar aktarılmamıştır.",
+          "order": 1,
+          "aliases": [
+            "Gökkanat",
+            "TA-85"
+          ],
+          "children": [],
+          "links": [],
+          "categoryId": "technology",
+          "ancestors": []
+        }
+      ]
+    }
+  ]
+}
