@@ -10,6 +10,8 @@
   const explorer = document.querySelector("#archive-explorer");
   const archiveWorkspace = document.querySelector("#archive-workspace");
   const chronologyAtlas = document.querySelector("#chronology-atlas");
+  const chronologyViewSwitch = document.querySelector("#chronology-view-switch");
+  const archiveNavigation = explorer?.querySelector(".archive-navigation");
   const navigationHost = document.querySelector("#archive-navigation-content");
   const detailHost = document.querySelector("#archive-detail");
   const activeTitle = document.querySelector("#archive-active-title");
@@ -45,6 +47,7 @@
 
   let categories = [];
   let activeCategory = null;
+  let chronologyMode = null;
   let selectedNodeId = null;
   let expandedNodes = new Set();
   let archiveCloseTimer = 0;
@@ -472,7 +475,10 @@
 
   const renderDetail = (node) => {
     if (!node) {
-      detailHost.innerHTML = '<div class="archive-detail-placeholder"><span class="detail-placeholder-mark">AOD</span><p>Bu arşiv henüz boş.</p><small>İçerik klasöre eklendiğinde burada görünecek.</small></div>';
+      const isChronologyList = activeCategory?.id === "chronology" && chronologyMode === "normal";
+      detailHost.innerHTML = '<div class="archive-detail-placeholder"><span class="detail-placeholder-mark">AOD</span><p>' +
+        (isChronologyList ? "Bir dönem veya olay seç." : "Bu arşiv henüz boş.") +
+        '</p><small>' + (isChronologyList ? "Soldaki dönemleri açarak tarihsel kayıtları inceleyebilirsin." : "İçerik klasöre eklendiğinde burada görünecek.") + '</small></div>';
       return;
     }
     const isChronology = activeCategory.id === "chronology";
@@ -527,8 +533,11 @@
             ' →</small><strong>' + escapeHtml(next.title) + '</strong></button>' : '<span></span>') +
           '</nav>'
         : '';
+      const chronologyReturnControl = chronologyMode === "map"
+        ? '<button type="button" class="chronology-return-map" data-chronology-map-back>← HARİTAYA DÖN</button>'
+        : '<span class="chronology-detail-mode-label">NORMAL GÖRÜNÜM / OLAY AĞACI</span>';
       detailHost.innerHTML = '<div class="chronology-detail">' +
-        '<div class="chronology-detail-top"><span>KRONOLOJİ / ' + escapeHtml(node.path || node.id) + '</span><button type="button" class="chronology-return-map" data-chronology-map-back>← HARİTAYA DÖN</button></div>' +
+        '<div class="chronology-detail-top"><span>KRONOLOJİ / ' + escapeHtml(node.path || node.id) + '</span>' + chronologyReturnControl + '</div>' +
         '<div class="chronology-detail-date">' + escapeHtml(node.date || "TARİHSEL KAYIT") + '</div>' +
         '<h3>' + escapeHtml(node.title) + '</h3>' +
         (node.summary ? '<p class="chronology-detail-summary">' + escapeHtml(node.summary) + '</p>' : '') +
@@ -608,7 +617,7 @@
 
   const selectNode = (nodeId) => {
     let node = activeCategory ? findNode(activeCategory.nodes, nodeId) : null;
-    if (activeCategory?.id === "chronology" && node?.children?.length) {
+    if (activeCategory?.id === "chronology" && chronologyMode !== "normal" && node?.children?.length) {
       node = resolveChronologyRecord(activeCategory, nodeId);
     }
     if (!node) return;
@@ -618,14 +627,15 @@
     if (activeCategory?.id === "chronology") {
       syncNavigationState();
       renderDetail(node);
-      archiveWorkspace?.classList.add("is-chronology-reading");
-      explorer.scrollTo({
-        top: 0,
-        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
-      });
+      const isMapMode = chronologyMode === "map";
+      archiveWorkspace?.classList.toggle("is-chronology-reading", isMapMode);
+      if (isMapMode) {
+        explorer.scrollTo({
+          top: 0,
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+        });
+      }
       detailHost.setAttribute("tabindex", "-1");
-      // Keep the archive title bar in place; the expanded article naturally
-      // starts immediately below it and remains fully scrollable.
       window.requestAnimationFrame(() => detailHost.focus({ preventScroll: true }));
       return;
     }
@@ -651,6 +661,103 @@
       </button>`).join("") + (nodes.length ? "" : '<p class="archive-empty">Bu katalog henüz boş.</p>') + '</div>';
   };
 
+  const findNodeAncestors = (nodes, targetId, ancestors = []) => {
+    for (const node of nodes || []) {
+      if (node.id === targetId) return ancestors;
+      const found = findNodeAncestors(node.children || [], targetId, [...ancestors, node.id]);
+      if (found) return found;
+    }
+    return null;
+  };
+
+  const syncChronologyViewSwitch = () => {
+    if (!chronologyViewSwitch) return;
+    chronologyViewSwitch.hidden = chronologyMode !== "map" && chronologyMode !== "normal";
+    chronologyViewSwitch.querySelectorAll("[data-chronology-view]").forEach((button) => {
+      const selected = button.dataset.chronologyView === chronologyMode;
+      button.classList.toggle("is-active", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    });
+  };
+
+  const renderChronologyModeChoice = () => {
+    chronologyMode = null;
+    syncChronologyViewSwitch();
+    archiveWorkspace?.classList.remove("is-chronology-atlas", "is-chronology-reading", "is-chronology-normal");
+    archiveWorkspace?.classList.add("is-chronology-choice");
+    if (chronologyAtlas) {
+      chronologyAtlas.hidden = false;
+      const eventCount = chronologySequence(activeCategory).length;
+      const periodCount = (activeCategory?.nodes || []).length;
+      chronologyAtlas.innerHTML =
+        '<div class="chronology-mode-intro"><span class="chronology-mode-kicker">AOD / KRONOLOJİ ARŞİVİ</span>' +
+        '<h4>Nasıl incelemek istersin?</h4>' +
+        '<p>Olay kayıtları aynı, arşivi görüntüleme biçimi farklı. Dilediğin görünümü seçebilirsin.</p>' +
+        '<small>' + String(eventCount).padStart(2, "0") + ' OLAY KAYDI <i>·</i> ' + String(periodCount).padStart(2, "0") + ' DÖNEM</small></div>' +
+        '<div class="chronology-mode-options">' +
+        '<button type="button" class="chronology-mode-card chronology-mode-card-map" data-chronology-mode="map">' +
+        '<span class="chronology-mode-card-index">01 / GÖRSEL GEZİNME</span><span class="chronology-mode-card-icon" aria-hidden="true">◈</span>' +
+        '<strong>Harita görünümü</strong><span class="chronology-mode-card-description">Dönemleri yatay bir zaman atlasında gör. Olaylar arasındaki kronolojik bağlantıları takip et.</span>' +
+        '<span class="chronology-mode-card-action">HARİTAYI AÇ <b aria-hidden="true">↗</b></span></button>' +
+        '<button type="button" class="chronology-mode-card chronology-mode-card-normal" data-chronology-mode="normal">' +
+        '<span class="chronology-mode-card-index">02 / KLASİK GEZİNME</span><span class="chronology-mode-card-icon" aria-hidden="true">☷</span>' +
+        '<strong>Normal görünüm</strong><span class="chronology-mode-card-description">Dönemleri ve alt olayları açıp kapat. Kayıtları soldaki ağaçtan seç, ayrıntılarını yanında oku.</span>' +
+        '<span class="chronology-mode-card-action">OLAY AĞACINI AÇ <b aria-hidden="true">↗</b></span></button>' +
+        '</div>' +
+        '<p class="chronology-mode-footnote">GÖRÜNÜMÜ DAHA SONRA DA DEĞİŞTİREBİLİRSİN.</p>';
+    }
+    if (archiveNavigation) archiveNavigation.hidden = true;
+    if (detailHost) detailHost.hidden = true;
+    if (navigationHost) navigationHost.innerHTML = "";
+  };
+
+  const setChronologyMode = (mode, targetNodeId = null) => {
+    if (!activeCategory || activeCategory.id !== "chronology" || !["map", "normal"].includes(mode)) return;
+    const previousSelection = selectedNodeId;
+    chronologyMode = mode;
+    syncChronologyViewSwitch();
+    archiveWorkspace?.classList.remove("is-chronology-choice", "is-chronology-reading");
+    if (chronologyAtlas) chronologyAtlas.hidden = mode !== "map";
+    if (archiveNavigation) archiveNavigation.hidden = mode === "map";
+    if (detailHost) detailHost.hidden = false;
+
+    const requestedId = targetNodeId || previousSelection;
+    selectedNodeId = requestedId && findNode(activeCategory.nodes, requestedId) ? requestedId : null;
+    expandedNodes = new Set();
+    if (selectedNodeId && mode === "normal") {
+      const ancestors = findNodeAncestors(activeCategory.nodes, selectedNodeId) || [];
+      ancestors.forEach((id) => expandedNodes.add(id));
+    }
+
+    if (mode === "map") {
+      archiveWorkspace?.classList.add("is-chronology-atlas");
+      archiveWorkspace?.classList.remove("is-chronology-normal");
+      navigationType.textContent = "YATAY 3B OLAY HARİTASI";
+      navigationHost.innerHTML = "";
+      if (chronologyAtlas) {
+        try {
+          const atlasMarkup = renderChronologyAtlas(activeCategory.nodes);
+          if (!atlasMarkup || !atlasMarkup.trim()) throw new Error("Kronoloji haritası boş üretildi.");
+          chronologyAtlas.innerHTML = atlasMarkup;
+          enablePictureFallbacks(chronologyAtlas);
+        } catch (error) {
+          console.error("Kronoloji atlası oluşturulamadı:", error);
+          chronologyAtlas.innerHTML = '<div class="chronology-atlas-error" role="alert"><strong>KRONOLOJİ HARİTASI OLUŞTURULAMADI</strong><p>Bu sayfanın harita verisi hazırlanırken bir hata oluştu.</p><small>Hata ayrıntıları tarayıcı konsolunda bulunuyor.</small></div>';
+        }
+      }
+      renderDetail(null);
+      syncNavigationState();
+      if (selectedNodeId) selectNode(selectedNodeId);
+    } else {
+      archiveWorkspace?.classList.remove("is-chronology-atlas");
+      archiveWorkspace?.classList.add("is-chronology-normal");
+      navigationType.textContent = "AÇILIR / KAPANIR OLAY AĞACI";
+      navigationHost.innerHTML = renderChronologyTree(activeCategory.nodes);
+      renderDetail(selectedNodeId ? findNode(activeCategory.nodes, selectedNodeId) : null);
+      syncNavigationState();
+    }
+  };
+
   const sceneClasses = ["archive-scene-open", "archive-scene-chronology", "archive-scene-characters", "archive-scene-institutions", "archive-scene-technology"];
   const activateCategory = (categoryId, targetNodeId = null) => {
     activeCategory = categories.find((item) => item.id === categoryId);
@@ -664,12 +771,17 @@
     document.documentElement.classList.add("archive-view-open");
 
     selectedNodeId = null;
+    chronologyMode = null;
     expandedNodes = new Set();
+    syncChronologyViewSwitch();
+    archiveWorkspace?.classList.remove("is-chronology-choice", "is-chronology-normal", "is-chronology-atlas", "is-chronology-reading");
+    if (chronologyAtlas) chronologyAtlas.hidden = true;
+    if (archiveNavigation) archiveNavigation.hidden = false;
+    if (detailHost) detailHost.hidden = false;
 
     if (activeCategory.nodes && activeCategory.nodes.length) {
       if (activeCategory.id === "chronology") {
-        const firstEvent = resolveChronologyRecord(activeCategory, targetNodeId);
-        selectedNodeId = firstEvent?.id || null;
+        selectedNodeId = targetNodeId && findNode(activeCategory.nodes, targetNodeId) ? targetNodeId : null;
       } else if (targetNodeId && findNode(activeCategory.nodes, targetNodeId)) {
         selectedNodeId = targetNodeId;
         const targetNode = findNode(activeCategory.nodes, targetNodeId);
@@ -710,8 +822,8 @@
     navigationType.textContent = activeCategory.id === "chronology"
       ? "YATAY 3B OLAY HARİTASI"
       : activeCategory.view === "tree" ? "DALLANAN KAYIT AĞACI" : "KAYIT KATALOĞU";
-    explorer.classList.toggle("is-chronology-map", activeCategory.id === "chronology");
-    archiveWorkspace?.classList.toggle("is-chronology-atlas", activeCategory.id === "chronology");
+    explorer.classList.toggle("is-chronology-map", false);
+    archiveWorkspace?.classList.toggle("is-chronology-atlas", false);
     archiveWorkspace?.classList.toggle("is-chronology-reading", activeCategory.id === "chronology" && Boolean(targetNodeId));
     if (chronologyAtlas) chronologyAtlas.hidden = activeCategory.id !== "chronology";
     explorer.classList.toggle("is-catalogue", activeCategory.view !== "tree");
@@ -726,26 +838,17 @@
     explorer.classList.remove("scene-entering", "scene-leaving", "scene-switching");
 
     if (activeCategory.id === "chronology") {
-      navigationHost.innerHTML = "";
-      if (chronologyAtlas) {
-        try {
-          const atlasMarkup = renderChronologyAtlas(activeCategory.nodes);
-          if (!atlasMarkup || !atlasMarkup.trim()) throw new Error("Kronoloji haritası boş üretildi.");
-          chronologyAtlas.innerHTML = atlasMarkup;
-          enablePictureFallbacks(chronologyAtlas);
-        } catch (error) {
-          console.error("Kronoloji atlası oluşturulamadı:", error);
-          chronologyAtlas.innerHTML = '<div class="chronology-atlas-error" role="alert"><strong>KRONOLOJİ HARİTASI OLUŞTURULAMADI</strong><p>Bu sayfanın harita verisi hazırlanırken bir hata oluştu.</p><small>Hata ayrıntıları tarayıcı konsolunda bulunuyor.</small></div>';
-        }
-      }
-    } else if (activeCategory.view === "tree") {
-      navigationHost.innerHTML = renderTree(activeCategory.nodes);
+      if (targetNodeId) setChronologyMode("normal", targetNodeId);
+      else renderChronologyModeChoice();
     } else {
-      renderCatalogue();
+      if (activeCategory.view === "tree") {
+        navigationHost.innerHTML = renderTree(activeCategory.nodes);
+      } else {
+        renderCatalogue();
+      }
+      renderDetail(findNode(activeCategory.nodes, selectedNodeId));
+      syncNavigationState();
     }
-
-    renderDetail(findNode(activeCategory.nodes, selectedNodeId));
-    syncNavigationState();
     void explorer.offsetWidth;
     explorer.classList.add("scene-entering");
     if (backButton) backButton.focus({ preventScroll: true });
@@ -757,7 +860,10 @@
 
     const sceneIsOpen = !explorer.hidden && explorer.classList.contains("is-immersive");
     if (sceneIsOpen && activeCategory?.id === categoryId) {
-      if (targetNodeId) selectNode(targetNodeId);
+      if (targetNodeId) {
+        if (categoryId === "chronology" && chronologyMode !== "normal") setChronologyMode("normal", targetNodeId);
+        else selectNode(targetNodeId);
+      }
       return;
     }
 
@@ -881,6 +987,11 @@
   });
 
 
+  chronologyViewSwitch?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-chronology-view]");
+    if (button) setChronologyMode(button.dataset.chronologyView);
+  });
+
   chronologyAtlas?.addEventListener("change", (event) => {
     const jump = event.target.closest("#chronology-year-jump");
     if (!jump || !jump.value) return;
@@ -890,6 +1001,11 @@
     anchor?.focus({ preventScroll: true });
   });
   chronologyAtlas?.addEventListener("click", (event) => {
+    const modeButton = event.target.closest("[data-chronology-mode]");
+    if (modeButton) {
+      setChronologyMode(modeButton.dataset.chronologyMode);
+      return;
+    }
     const reset = event.target.closest("#chronology-atlas-reset");
     if (!reset) return;
     const viewport = chronologyAtlas.querySelector("#chronology-atlas-viewport");
@@ -932,6 +1048,8 @@
         archivePlaceholder.parentNode.insertBefore(explorer, archivePlaceholder.nextSibling);
       }
       activeCategory = null;
+      chronologyMode = null;
+      syncChronologyViewSwitch();
       if (backButton) backButton.blur();
       if (refreshPageLayer) refreshPageLayer(false);
     };

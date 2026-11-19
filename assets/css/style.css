@@ -7089,3 +7089,230 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
         animation: none !important;
     }
 }
+
+
+/* Chronology: let readers choose between the visual atlas and the classic tree. */
+.chronology-view-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px;
+    border: 1px solid rgba(215, 227, 232, .19);
+    border-radius: 3px;
+    background: rgba(3, 10, 15, .32);
+}
+.chronology-view-switch[hidden] { display: none !important; }
+.chronology-view-switch button {
+    min-height: 38px;
+    padding: 0 14px;
+    border: 1px solid transparent;
+    color: #b8c5ca;
+    background: transparent;
+    font: 8px var(--mono);
+    letter-spacing: .09em;
+    cursor: pointer;
+    transition: color .2s ease, background .2s ease, border-color .2s ease;
+}
+.chronology-view-switch button span { margin-right: 5px; font-size: 13px; }
+.chronology-view-switch button:hover,
+.chronology-view-switch button.is-active {
+    border-color: rgba(213, 178, 111, .42);
+    color: #f0d8a7;
+    background: rgba(187, 145, 77, .13);
+}
+.archive-workspace.is-chronology-choice {
+    display: block;
+    min-height: 0;
+    background:
+      radial-gradient(ellipse at 50% 0, rgba(190, 147, 79, .13), transparent 58%),
+      linear-gradient(180deg, rgba(8, 19, 27, .66), rgba(5, 12, 19, .2));
+}
+.archive-workspace.is-chronology-choice > .archive-navigation,
+.archive-workspace.is-chronology-choice > .archive-detail {
+    display: none !important;
+}
+.archive-workspace.is-chronology-choice > #chronology-atlas {
+    display: block;
+    margin: 0;
+    padding: clamp(28px, 5vw, 64px) clamp(18px, 5vw, 74px) clamp(28px, 4vw, 48px);
+    border: 0;
+    background: transparent;
+}
+.chronology-mode-intro {
+    max-width: 740px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.chronology-mode-kicker {
+    color: #c4a36a;
+    font: 9px var(--mono);
+    letter-spacing: .2em;
+}
+.chronology-mode-intro h4 {
+    margin: 13px 0 9px;
+    color: #f0ece3;
+    font: 500 clamp(29px, 4vw, 46px) var(--display);
+    letter-spacing: .01em;
+}
+.chronology-mode-intro p {
+    margin: 0 auto;
+    max-width: 570px;
+    color: #b8c5ca;
+    font-size: 15px;
+    line-height: 1.7;
+}
+.chronology-mode-intro small {
+    display: inline-block;
+    margin-top: 18px;
+    color: #c2ac87;
+    font: 8px var(--mono);
+    letter-spacing: .13em;
+}
+.chronology-mode-intro small i { padding: 0 8px; color: #8d7c5c; font-style: normal; }
+.chronology-mode-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: min(100%, 980px);
+    margin: 0 auto;
+}
+.chronology-mode-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 280px;
+    padding: clamp(22px, 3vw, 34px);
+    overflow: hidden;
+    border: 1px solid rgba(205, 183, 143, .27);
+    border-radius: 2px;
+    color: #e7e9e7;
+    text-align: left;
+    background:
+      linear-gradient(145deg, rgba(178, 143, 88, .12), rgba(13, 24, 32, .72) 52%),
+      rgba(5, 14, 21, .7);
+    cursor: pointer;
+    transition: transform .28s ease, border-color .28s ease, background .28s ease, box-shadow .28s ease;
+}
+.chronology-mode-card::after {
+    content: "";
+    position: absolute;
+    right: -45px;
+    bottom: -96px;
+    width: 230px;
+    height: 230px;
+    border: 1px solid rgba(210, 178, 118, .15);
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(210, 178, 118, .025), 0 0 0 42px rgba(210, 178, 118, .018);
+    pointer-events: none;
+}
+.chronology-mode-card:hover,
+.chronology-mode-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: rgba(223, 190, 126, .62);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, .25), 0 0 28px rgba(194, 151, 82, .08);
+    outline: none;
+}
+.chronology-mode-card-index {
+    color: #bba275;
+    font: 8px var(--mono);
+    letter-spacing: .15em;
+}
+.chronology-mode-card-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin: 24px 0 17px;
+    border: 1px solid rgba(206, 177, 120, .38);
+    border-radius: 50%;
+    color: #e0c18a;
+    font-size: 26px;
+    background: rgba(194, 151, 82, .08);
+}
+.chronology-mode-card strong {
+    color: #f0ece3;
+    font: 500 clamp(21px, 2.3vw, 28px) var(--display);
+}
+.chronology-mode-card-description {
+    display: block;
+    max-width: 430px;
+    margin-top: 10px;
+    color: #b7c2c6;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.chronology-mode-card-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 24px;
+    color: #ddc18e;
+    font: 8px var(--mono);
+    letter-spacing: .15em;
+}
+.chronology-mode-card-action b { font-size: 16px; font-weight: 400; }
+.chronology-mode-card-normal {
+    background:
+      linear-gradient(145deg, rgba(89, 116, 126, .17), rgba(13, 24, 32, .72) 52%),
+      rgba(5, 14, 21, .7);
+}
+.chronology-mode-card-normal .chronology-mode-card-icon {
+    color: #b8ccd0;
+    border-color: rgba(167, 198, 207, .35);
+    background: rgba(118, 157, 169, .08);
+}
+.chronology-mode-footnote {
+    margin: 22px 0 0;
+    color: rgba(185, 199, 204, .58);
+    text-align: center;
+    font: 8px var(--mono);
+    letter-spacing: .13em;
+}
+.chronology-detail-mode-label {
+    color: #bca77f;
+    font: 8px var(--mono);
+    letter-spacing: .1em;
+}
+.archive-workspace.is-chronology-normal > .archive-navigation {
+    display: block;
+}
+.archive-workspace.is-chronology-normal > .archive-detail {
+    display: block;
+}
+.archive-workspace.is-chronology-normal > #chronology-atlas {
+    display: none !important;
+}
+@media (max-width: 760px) {
+    .chronology-view-switch {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .chronology-view-switch button {
+        flex: 1 1 0;
+        min-height: 42px;
+        padding: 0 10px;
+    }
+    .archive-workspace.is-chronology-choice > #chronology-atlas {
+        padding: 28px 14px 30px;
+    }
+    .chronology-mode-options {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .chronology-mode-card {
+        min-height: 230px;
+        padding: 22px;
+    }
+    .chronology-mode-card-icon {
+        margin: 17px 0 13px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .chronology-view-switch button,
+    .chronology-mode-card {
+        transition: none !important;
+    }
+}
