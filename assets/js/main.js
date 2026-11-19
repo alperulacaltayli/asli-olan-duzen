@@ -309,12 +309,15 @@
 
   const renderChronologyAtlas = (groups) => {
     const compactMap = window.matchMedia("(max-width: 760px)").matches;
-    const YEAR_WIDTH = compactMap ? 800 : 980;
-    const CARD_WIDTH = compactMap ? 300 : 370;
-    const CARD_HEIGHT = compactMap ? 230 : 240;
-    const CARD_GAP_X = compactMap ? 140 : 180;
-    const ROW_HEIGHT = compactMap ? 320 : 345;
-    const TOP = compactMap ? 145 : 160;
+    // Deliberately generous map spacing: each year gets its own wide visual
+    // territory and the two event lanes never crowd the next period.
+    const YEAR_WIDTH = compactMap ? 930 : 1360;
+    const YEAR_HEADER_WIDTH = compactMap ? 700 : 900;
+    const CARD_WIDTH = compactMap ? 310 : 410;
+    const CARD_HEIGHT = compactMap ? 238 : 270;
+    const CARD_GAP_X = compactMap ? 210 : 320;
+    const ROW_HEIGHT = compactMap ? 365 : 430;
+    const TOP = compactMap ? 150 : 180;
     const yearGroups = (groups || []).map((group) => ({
       group,
       events: allNodes(group.children || []).filter((node) => node && node.id && node.title)
@@ -351,7 +354,7 @@
     const curve = (from, to, className, marker) => {
       const dx = to.x - from.x;
       const dy = to.y - from.y;
-      const bend = Math.max(38, Math.min(150, Math.abs(dx) * .38 + Math.abs(dy) * .1));
+      const bend = Math.max(54, Math.min(210, Math.abs(dx) * .32 + Math.abs(dy) * .12));
       const c1x = from.x + (dx >= 0 ? bend : -bend);
       const c2x = to.x - (dx >= 0 ? bend : -bend);
       return '<path class="' + className + '" d="M ' + from.x + ' ' + from.y +
@@ -363,12 +366,9 @@
     yearGroups.forEach((item, groupIndex) => {
       const yearX = groupIndex * YEAR_WIDTH + 18;
       if (groupIndex < yearGroups.length - 1) {
-        const nextYear = yearGroups[groupIndex + 1];
-        const nextEvent = nextYear.events[0] || null;
-        const nextTargetId = nextEvent ? nextEvent.id : nextYear.group.id;
         paths.push(curve(
-          { x: yearX + 620, y: 61 },
-          { x: (groupIndex + 1) * YEAR_WIDTH + 18, y: 61 },
+          { x: yearX + YEAR_HEADER_WIDTH, y: 65 },
+          { x: (groupIndex + 1) * YEAR_WIDTH + 18, y: 65 },
           "is-year-link",
           "chronology-atlas-arrowhead"
         ));
@@ -417,10 +417,9 @@
     const headers = yearGroups.map((item, index) => {
       const group = item.group;
       const eventCount = item.events.length;
-      const firstEventId = item.events[0]?.id || group.id;
-      return '<button type="button" class="chronology-year-anchor" data-year-anchor="' + escapeHtml(group.id) +
-        '" data-select-node="' + escapeHtml(firstEventId) + '" style="left:' + (index * YEAR_WIDTH + 18) +
-        'px;top:22px" aria-pressed="' + String(selectedNodeId === firstEventId) + '">' +
+      return '<div class="chronology-year-anchor" data-year-anchor="' + escapeHtml(group.id) +
+        '" tabindex="-1" role="heading" aria-level="2" style="left:' + (index * YEAR_WIDTH + 18) +
+        'px;top:22px">' +
         '<span class="chronology-year-number">' + escapeHtml(group.title) + '</span>' +
         '<span class="chronology-year-caption"><b>' + (group.date === "TARİHİ BELİRTİLMEMİŞ" ? "TARİHİ BELİRTİLMEMİŞ" : "DÖNEM KAYDI") +
         '</b><span>' + escapeHtml(group.summary || "Bu döneme ait arşiv kayıtları") + '</span></span>' +
@@ -625,7 +624,13 @@
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
       });
       detailHost.setAttribute("tabindex", "-1");
-      window.requestAnimationFrame(() => detailHost.focus({ preventScroll: true }));
+      window.requestAnimationFrame(() => {
+        detailHost.focus({ preventScroll: true });
+        detailHost.scrollIntoView({
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+          block: "start"
+        });
+      });
       return;
     }
 
@@ -884,7 +889,7 @@
     const jump = event.target.closest("#chronology-year-jump");
     if (!jump || !jump.value) return;
     const anchor = Array.from(chronologyAtlas.querySelectorAll("[data-year-anchor]"))
-      .find((button) => button.dataset.yearAnchor === jump.value);
+      .find((element) => element.dataset.yearAnchor === jump.value);
     anchor?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest", inline: "center" });
     anchor?.focus({ preventScroll: true });
   });
