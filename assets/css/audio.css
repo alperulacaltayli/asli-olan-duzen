@@ -766,7 +766,7 @@
 }
 
 /* Archive type chooser */
-.audio-type-chooser[hidden],.audio-track-browser[hidden] {display:none !important;}
+.audio-country-chooser[hidden],.audio-type-chooser[hidden],.audio-track-browser[hidden] {display:none !important;}
 .audio-type-chooser {margin:0 0 40px;animation:audioCatalogueReveal .45s both;}
 .audio-type-heading {display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:18px;}
 .audio-type-heading h3 {margin:8px 0 0;color:#f0ece3;font:500 clamp(25px,3.4vw,38px)/1.12 var(--display);}
