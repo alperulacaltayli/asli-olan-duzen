@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add archives.json gallery.json videos.json
+          git add archives.json gallery.json videos.json audio.json
           if ! git diff --cached --quiet; then
             git commit -m "Update generated archive and gallery data"
             git push origin "HEAD:${GITHUB_REF_NAME}"
@@ -61,6 +61,7 @@ jobs:
           archives = json.loads(Path("dist/archives.json").read_text(encoding="utf-8"))
           gallery = json.loads(Path("dist/gallery.json").read_text(encoding="utf-8"))
           videos = json.loads(Path("dist/videos.json").read_text(encoding="utf-8"))
+          audio = json.loads(Path("dist/audio.json").read_text(encoding="utf-8"))
           html = Path("dist/index.html").read_text(encoding="utf-8")
           match = re.search(r'<script type="application/json" id="archive-data">(.*?)</script>', html, re.S)
           assert match, "index.html içinde gömülü arşiv verisi bulunamadı"
@@ -68,14 +69,18 @@ jobs:
           assert len(archives.get("categories", [])) > 0, "Arşiv kategorisi yok"
           assert len(gallery.get("images", [])) > 0, "Galeri görseli yok"
           assert isinstance(videos.get("videos", []), list), "Video kataloğu geçersiz"
+          assert isinstance(audio.get("audio", []), list), "Ses kataloğu geçersiz"
           for video in videos.get("videos", []):
               video_path = Path("dist") / video["src"]
               assert video_path.is_file(), "Video dosyası bulunamadı: " + video["src"]
               if video.get("poster"):
                   poster_path = Path("dist") / video["poster"]
                   assert poster_path.is_file(), "Video kapağı bulunamadı: " + video["poster"]
+          for record in audio.get("audio", []):
+              audio_path = Path("dist") / record["src"]
+              assert audio_path.is_file(), "Ses dosyası bulunamadı: " + record["src"]
           assert len(embedded.get("categories", [])) == len(archives["categories"]), "Gömülü arşiv verisi ile JSON uyuşmuyor"
-          print(f"Verified: {len(archives['categories'])} archive categories, {len(gallery['images'])} gallery images")
+          print(f"Verified: {len(archives['categories'])} archive categories, {len(gallery['images'])} gallery images, {len(videos.get('videos', []))} videos, {len(audio.get('audio', []))} audio records")
           PY
 
       - name: Upload Pages artifact
