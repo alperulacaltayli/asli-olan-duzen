@@ -363,7 +363,9 @@
     yearGroups.forEach((item, groupIndex) => {
       const yearX = groupIndex * YEAR_WIDTH + 18;
       if (groupIndex < yearGroups.length - 1) {
-        const nextGroup = yearGroups[groupIndex + 1].group;
+        const nextYear = yearGroups[groupIndex + 1];
+        const nextEvent = nextYear.events[0] || null;
+        const nextTargetId = nextEvent ? nextEvent.id : nextYear.group.id;
         paths.push(curve(
           { x: yearX + 620, y: 61 },
           { x: (groupIndex + 1) * YEAR_WIDTH + 18, y: 61 },
@@ -373,7 +375,7 @@
         arrowButtons.push(
           '<button type="button" class="chronology-atlas-arrow" style="left:' +
           (yearX + 620 + (YEAR_WIDTH - 620) / 2 - 17) + 'px;top:44px" data-select-node="' +
-          escapeHtml(nextGroup.events[0]?.id || nextGroup.group.id) + '" aria-label="' + escapeHtml(nextGroup.group.title) + ' dönemine geç">→</button>'
+          escapeHtml(nextTargetId) + '" aria-label="' + escapeHtml(nextYear.group.title) + ' dönemine geç">→</button>'
         );
       }
 
@@ -735,8 +737,15 @@
     if (activeCategory.id === "chronology") {
       navigationHost.innerHTML = "";
       if (chronologyAtlas) {
-        chronologyAtlas.innerHTML = renderChronologyAtlas(activeCategory.nodes);
-        enablePictureFallbacks(chronologyAtlas);
+        try {
+          const atlasMarkup = renderChronologyAtlas(activeCategory.nodes);
+          if (!atlasMarkup || !atlasMarkup.trim()) throw new Error("Kronoloji haritası boş üretildi.");
+          chronologyAtlas.innerHTML = atlasMarkup;
+          enablePictureFallbacks(chronologyAtlas);
+        } catch (error) {
+          console.error("Kronoloji atlası oluşturulamadı:", error);
+          chronologyAtlas.innerHTML = '<div class="chronology-atlas-error" role="alert"><strong>KRONOLOJİ HARİTASI OLUŞTURULAMADI</strong><p>Bu sayfanın harita verisi hazırlanırken bir hata oluştu.</p><small>Hata ayrıntıları tarayıcı konsolunda bulunuyor.</small></div>';
+        }
       }
     } else if (activeCategory.view === "tree") {
       navigationHost.innerHTML = renderTree(activeCategory.nodes);
