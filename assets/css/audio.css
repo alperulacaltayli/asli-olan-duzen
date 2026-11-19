@@ -739,26 +739,22 @@
 /* Second-stage audio catalogue: type selection, followed by records. */
 .audio-country-title-label {display:block;width:100%;white-space:nowrap;font-size:clamp(18px,2.05vw,28px) !important;letter-spacing:-.025em;}
 .audio-country-card-copy {min-width:0;}
+/* Keep the two country cards on the same composition: vertical flag + centered emblem.
+   The German card retains its colder palette and separate entrance motion. */
 .audio-country-card-german .audio-country-card-art {
-  background:linear-gradient(135deg,rgba(9,16,19,.3),rgba(10,15,17,.82)),url("../../SiteMalzemeleri/NaziSiteMalzemeler/GrobHalle.jpg") center/cover;
+  background:linear-gradient(140deg,#263438,#11191c);
 }
-.audio-country-card-german .audio-country-card-art .audio-country-banner {opacity:.1;filter:grayscale(.65) contrast(1.1);}
-.audio-country-card-german .audio-country-card-art .audio-country-emblem {
-  width:clamp(90px,10vw,138px);max-height:62%;opacity:.9;filter:grayscale(.35) drop-shadow(0 10px 22px rgba(0,0,0,.6));
+.audio-country-card-german .audio-country-banner {
+  object-position:48% center;
+  opacity:.34;
+  filter:none;
 }
-.audio-country-flag {
-  position:absolute;z-index:1;left:10px;top:12%;height:76%;width:auto;max-width:27%;
-  object-fit:contain;opacity:.3;filter:grayscale(.55);box-shadow:0 10px 25px rgba(0,0,0,.25);
+.audio-country-card-german .audio-country-emblem {
+  width:clamp(110px,13vw,172px);
+  max-height:68%;
+  opacity:.94;
+  filter:drop-shadow(0 10px 22px rgba(0,0,0,.62));
 }
-.audio-country-card-german .audio-country-secondary-art {
-  right:10px;bottom:10px;width:42%;aspect-ratio:16/10;opacity:.84;filter:grayscale(.3) contrast(1.05);
-}
-.audio-country-card-seal {
-  position:absolute;z-index:4;top:12px;right:12px;width:42px;height:42px;padding:4px;
-  object-fit:contain;border:1px solid rgba(202,212,207,.38);background:rgba(5,10,12,.7);opacity:.8;
-}
-.audio-country-card-german .audio-country-card-copy {padding-left:clamp(14px,1.7vw,26px);}
-.audio-country-card-german .audio-country-title-label {font-family:var(--display);letter-spacing:-.035em;}
 .audio-country-title-label {overflow:visible;}
 @media(max-width:680px) {
   .audio-country-title-label {font-size:clamp(17px,4.6vw,20px) !important;letter-spacing:-.045em;}
