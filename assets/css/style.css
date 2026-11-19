@@ -7338,3 +7338,48 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
         align-self: flex-end;
     }
 }
+
+
+/* Katman 02 — put the photo and sound archives side by side in the home directory. */
+@media (min-width: 981px) {
+  .world-grid>.world-card[data-open-category="characters"],
+  .world-grid>.world-card[data-open-category="technology"],
+  .world-grid>.world-card.world-card-gallery,
+  .world-grid>.world-card.world-card-audio {
+    grid-column: span 3;
+  }
+}
+.world-grid>.world-card.world-card-audio {
+  border-color:rgba(142,177,181,.32);
+  background:radial-gradient(circle at 82% 45%,rgba(112,159,165,.12),transparent 26%),linear-gradient(135deg,rgba(37,58,62,.9),rgba(13,24,28,.99));
+}
+.world-grid>.world-card.world-card-audio::before {
+  content:"";position:absolute;z-index:-1;top:30px;right:28px;width:136px;height:112px;opacity:.7;
+  background:radial-gradient(ellipse at center,transparent 0 28%,rgba(156,193,195,.28) 29% 30%,transparent 31% 49%,rgba(156,193,195,.2) 50% 51%,transparent 52% 69%,rgba(156,193,195,.13) 70% 71%,transparent 72%);
+  transform:rotate(-14deg);
+}
+.world-grid>.world-card.world-card-audio .world-card-icon {color:#b4d0d1;text-shadow:0 0 22px rgba(145,190,192,.2);}
+.world-grid>.world-card.world-card-audio h3 {color:#eaf4f1;}
+.world-grid>.world-card.world-card-audio .world-card-number,
+.world-grid>.world-card.world-card-audio .world-card-link {color:#a9c9ca;}
+.world-grid>.world-card.world-card-audio:hover {
+  border-color:rgba(185,220,218,.7);
+  background:radial-gradient(circle at 82% 45%,rgba(112,159,165,.2),transparent 28%),linear-gradient(135deg,rgba(43,70,75,.95),rgba(13,24,28,.99));
+  box-shadow:0 18px 42px rgba(0,0,0,.25);
+}
+@media (max-width: 980px) {
+  .world-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .world-grid>.world-card {grid-column:span 1 !important;}
+  .world-grid>.world-card:first-child[data-open-category="chronology"],
+  .world-grid>.world-card[data-open-category="institutions"] {grid-column:span 2 !important;}
+  .world-grid>.world-card.world-card-gallery,
+  .world-grid>.world-card.world-card-audio {grid-column:span 1 !important;}
+}
+@media (max-width: 680px) {
+  .world-grid {grid-template-columns:1fr;}
+  .world-grid>.world-card,
+  .world-grid>.world-card:first-child[data-open-category="chronology"],
+  .world-grid>.world-card[data-open-category="institutions"],
+  .world-grid>.world-card.world-card-gallery,
+  .world-grid>.world-card.world-card-audio {grid-column:1 / -1 !important;}
+}

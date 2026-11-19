@@ -10,6 +10,11 @@
   const countryTitle = document.getElementById("audio-country-title");
   const countryDescription = document.getElementById("audio-country-description");
   const countryCount = document.getElementById("audio-country-count");
+  const typeChooser = document.getElementById("audio-type-chooser");
+  const trackBrowser = document.getElementById("audio-track-browser");
+  const typeBackButton = document.getElementById("audio-type-back");
+  const selectedTypeTitle = document.getElementById("audio-selected-type-title");
+  const playerDock = document.getElementById("audio-player-dock");
   const total = document.getElementById("audio-total");
   const visibleCount = document.getElementById("audio-visible-count");
   const searchInput = document.getElementById("audio-search");
@@ -28,6 +33,7 @@
 
   let audioRecords = [];
   let selectedCountry = "";
+  let selectedType = "";
   let activeIndex = -1;
   let visibleRecords = [];
 
@@ -66,20 +72,41 @@
     .map((item, index) => ({ item, index }))
     .filter(entry => entry.item.country === selectedCountry);
 
+  const recordType = item => {
+    if (["state", "marches", "sounds"].includes(item.type)) return item.type;
+    const label = normalize([item.category, item.subcategory].join(" "));
+    if (label.includes("devlet") || label.includes("resmi") || label.includes("state")) return "state";
+    if (label.includes("mars")) return "marches";
+    return "sounds";
+  };
+
+  const typeRecords = () => countryRecords().filter(entry => recordType(entry.item) === selectedType);
+
+  const renderTypeCounts = () => {
+    const counts = { state: 0, marches: 0, sounds: 0 };
+    countryRecords().forEach(entry => { counts[recordType(entry.item)] += 1; });
+    document.querySelectorAll("[data-audio-type-count]").forEach(element => {
+      const value = counts[element.dataset.audioTypeCount] || 0;
+      element.textContent = String(value).padStart(2, "0") + " KAYIT";
+    });
+  };
+
   const countryArt = country => {
     if (country === "turkish") {
       return '<img class="audio-banner-flag" src="SiteMalzemeleri/TürkSiteMalzemeler/DikeyTrİmpBayrak540x1920.png" alt="" loading="lazy">' +
         '<img class="audio-banner-logo" src="SiteMalzemeleri/TürkSiteMalzemeler/TrimpLogo.png" alt="" loading="lazy">';
     }
     return '<img class="audio-banner-flag" src="SiteMalzemeleri/NaziSiteMalzemeler/DikeyNaziİmpbayrak540x1920.png" alt="" loading="lazy">' +
-      '<img class="audio-banner-eagle" src="SiteMalzemeleri/NaziSiteMalzemeler/Kartal2.png" alt="" loading="lazy">';
+      '<img class="audio-banner-eagle" src="SiteMalzemeleri/NaziSiteMalzemeler/Kartal2.png" alt="" loading="lazy">' +
+      '<img class="audio-banner-mark" src="SiteMalzemeleri/NaziSiteMalzemeler/NaziLogo.png" alt="" loading="lazy">' +
+      '<img class="audio-banner-feature" src="SiteMalzemeleri/NaziSiteMalzemeler/Horten229Foto.jpg" alt="" loading="lazy">';
   };
 
   const renderCategoryOptions = () => {
     if (!categorySelect) return;
-    const values = [...new Set(countryRecords().map(entry => entry.item.category).filter(Boolean))]
+    const values = [...new Set(typeRecords().map(entry => entry.item.subcategory || entry.item.category).filter(Boolean))]
       .sort((a, b) => a.localeCompare(b, "tr"));
-    categorySelect.innerHTML = '<option value="">Tüm kayıt türleri</option>' +
+    categorySelect.innerHTML = '<option value="">Tüm alt gruplar</option>' +
       values.map(value => '<option value="' + escapeHtml(value) + '">' + escapeHtml(value) + '</option>').join("");
     categorySelect.disabled = values.length === 0;
   };
@@ -88,9 +115,10 @@
     if (!trackList) return;
     const query = normalize(searchInput?.value || "");
     const category = categorySelect?.value || "";
-    visibleRecords = countryRecords().filter(entry => {
+    const entriesForType = typeRecords();
+    visibleRecords = entriesForType.filter(entry => {
       const item = entry.item;
-      if (category && item.category !== category) return false;
+      if (category && (item.subcategory || item.category) !== category) return false;
       if (query) {
         const haystack = normalize([
           item.title, item.category, item.subcategory, item.date, item.description, item.file
@@ -100,11 +128,11 @@
       return true;
     });
 
-    if (visibleCount) visibleCount.textContent = visibleRecords.length + " / " + countryRecords().length + " KAYIT";
+    if (visibleCount) visibleCount.textContent = visibleRecords.length + " / " + entriesForType.length + " KAYIT";
     if (!visibleRecords.length) {
-      const emptyText = countryRecords().length
+      const emptyText = entriesForType.length
         ? "Bu aramayla eşleşen bir kayıt bulunamadı."
-        : "Bu arşivde henüz ses kaydı bulunmuyor. Yeni ses dosyaları ilgili ülkenin klasörüne eklendiğinde burada listelenecek.";
+        : "Bu kayıt türünde henüz ses bulunmuyor. Yeni dosyalar ilgili klasöre eklendiğinde burada listelenecek.";
       trackList.innerHTML = '<div class="audio-empty"><strong>' + emptyText + '</strong><br><small>DESTEKLENEN DOSYALAR: MP3 · WAV · OGG · M4A · AAC · FLAC · OPUS</small></div>';
       return;
     }
@@ -155,8 +183,11 @@
     player.load();
     nowTitle.textContent = item.title;
     nowMeta.textContent = [countryLabel(item.country), item.category, item.subcategory].filter(Boolean).join(" / ");
-    previousButton.disabled = !countryRecords().length || countryRecords()[0].index === index;
-    nextButton.disabled = !countryRecords().length || countryRecords()[countryRecords().length - 1].index === index;
+    const records = typeRecords();
+    const position = records.findIndex(entry => entry.index === index);
+    previousButton.disabled = position <= 0;
+    nextButton.disabled = position < 0 || position >= records.length - 1;
+    if (playerDock) playerDock.hidden = false;
     renderTracks();
     if (shouldPlay) {
       const promise = player.play();
@@ -180,11 +211,12 @@
     playerStatus.textContent = "";
     previousButton.disabled = true;
     nextButton.disabled = true;
+    if (playerDock) playerDock.hidden = true;
     syncTrackState();
   };
 
   const stepTrack = direction => {
-    const records = countryRecords();
+    const records = typeRecords();
     if (!records.length) return;
     const position = records.findIndex(entry => entry.index === activeIndex);
     const nextPosition = position < 0
@@ -198,9 +230,12 @@
     if (!["turkish", "german"].includes(country)) return;
     stopTrack();
     selectedCountry = country;
+    selectedType = "";
     document.body.dataset.audioCountry = country;
     countryChooser.hidden = true;
     catalogue.hidden = false;
+    typeChooser.hidden = false;
+    trackBrowser.hidden = true;
     countryBanner.dataset.country = country;
     countryBannerArt.innerHTML = countryArt(country);
     countryOverline.textContent = country === "turkish"
@@ -208,16 +243,36 @@
       : "BİRİM 02 / DEUTSCHES REICH";
     countryTitle.textContent = country === "turkish" ? "Türk Devlet Arşivi" : "Alman Reich Arşivi";
     countryDescription.textContent = country === "turkish"
-      ? "Marşlar, devlet kayıtları ve dönemin işitsel belgeleri. Kayıtlar kendi arşiv başlıkları altında sıralanır."
-      : "Marşlar, resmî kayıtlar ve dönemin işitsel belgeleri. Bu bölüm, evrenin Alman arşiv malzemeleriyle ayrı bir görsel kimlik taşır.";
+      ? "Türk arşiv kayıtları üç ana başlık altında düzenlenmiştir. İlgili belge türünü seçerek ses kataloğuna geç."
+      : "Alman arşiv kayıtları üç ana başlık altında düzenlenmiştir. İlgili belge türünü seçerek ses kataloğuna geç.";
     countryCount.textContent = countryRecords().length.toString().padStart(2, "0") + " SES KAYDI / " +
       (country === "turkish" ? "TÜRK ARŞİVİ" : "ALMAN ARŞİVİ");
     if (searchInput) searchInput.value = "";
     if (categorySelect) categorySelect.value = "";
+    renderTypeCounts();
+    window.requestAnimationFrame(() => {
+      catalogue.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    });
+  };
+
+  const setAudioType = type => {
+    if (!["state", "marches", "sounds"].includes(type) || !selectedCountry) return;
+    stopTrack();
+    selectedType = type;
+    typeChooser.hidden = true;
+    trackBrowser.hidden = false;
+    if (searchInput) searchInput.value = "";
+    if (categorySelect) categorySelect.value = "";
+    const titles = {
+      state: "Devlet ses kayıtları",
+      marches: "Marşlar",
+      sounds: "Sesler"
+    };
+    if (selectedTypeTitle) selectedTypeTitle.textContent = titles[type];
     renderCategoryOptions();
     renderTracks();
     window.requestAnimationFrame(() => {
-      catalogue.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      trackBrowser.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
     });
   };
 
@@ -225,11 +280,27 @@
     button.addEventListener("click", () => setCountry(button.dataset.audioCountry));
   });
 
+  typeChooser?.addEventListener("click", event => {
+    const button = event.target.closest("[data-audio-type]");
+    if (button) setAudioType(button.dataset.audioType);
+  });
+
+  typeBackButton?.addEventListener("click", () => {
+    stopTrack();
+    selectedType = "";
+    trackBrowser.hidden = true;
+    typeChooser.hidden = false;
+    renderTypeCounts();
+  });
+
   backButton?.addEventListener("click", () => {
     stopTrack();
     selectedCountry = "";
+    selectedType = "";
     delete document.body.dataset.audioCountry;
     catalogue.hidden = true;
+    typeChooser.hidden = false;
+    trackBrowser.hidden = true;
     countryChooser.hidden = false;
     window.scrollTo({ top: document.querySelector(".audio-collection-section")?.offsetTop || 0, behavior: "smooth" });
   });
@@ -283,8 +354,11 @@
         if (selectedCountry) {
           countryCount.textContent = countryRecords().length.toString().padStart(2, "0") + " SES KAYDI / " +
             (selectedCountry === "turkish" ? "TÜRK ARŞİVİ" : "ALMAN ARŞİVİ");
-          renderCategoryOptions();
-          renderTracks();
+          renderTypeCounts();
+          if (selectedType) {
+            renderCategoryOptions();
+            renderTracks();
+          }
         }
       })
       .catch(error => {
@@ -296,5 +370,6 @@
 
   previousButton.disabled = true;
   nextButton.disabled = true;
+  if (playerDock) playerDock.hidden = true;
   loadAudioArchive();
 })();

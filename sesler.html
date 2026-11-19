@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261119-audio1">
-  <link rel="stylesheet" href="assets/css/audio.css?v=20261119-audio1">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261119-audio2">
+  <link rel="stylesheet" href="assets/css/audio.css?v=20261119-audio2">
 </head>
 <body class="audio-page">
   <a class="skip-link" href="#audio-main">İçeriğe geç</a>
@@ -68,7 +68,7 @@
             </span>
             <span class="audio-country-card-copy">
               <span class="audio-country-kicker">BİRİM 01 / TÜRK DEVLETİ</span>
-              <strong>Türk Arşivi</strong>
+              <strong class="audio-country-title-label">Türk Arşivi</strong>
               <span>Marşlar · Devlet kayıtları · Sesler</span>
               <b>AÇIK ARŞİV <i>↗</i></b>
             </span>
@@ -76,14 +76,16 @@
 
           <button class="audio-country-card audio-country-card-german" type="button" data-audio-country="german">
             <span class="audio-country-card-art">
-              <img class="audio-country-banner" src="SiteMalzemeleri/NaziSiteMalzemeler/DikeyNaziİmpbayrak540x1920.png" alt="" loading="lazy">
+              <img class="audio-country-banner" src="SiteMalzemeleri/NaziSiteMalzemeler/GrobHalle.jpg" alt="" loading="lazy">
+              <img class="audio-country-flag" src="SiteMalzemeleri/NaziSiteMalzemeler/DikeyNaziİmpbayrak540x1920.png" alt="" loading="lazy">
               <img class="audio-country-emblem" src="SiteMalzemeleri/NaziSiteMalzemeler/Kartal1.png" alt="" loading="lazy">
-              <img class="audio-country-secondary-art" src="SiteMalzemeleri/NaziSiteMalzemeler/GrobHalle.jpg" alt="" loading="lazy">
+              <img class="audio-country-secondary-art" src="SiteMalzemeleri/NaziSiteMalzemeler/Horten229Foto.jpg" alt="" loading="lazy">
+              <img class="audio-country-card-seal" src="SiteMalzemeleri/NaziSiteMalzemeler/NaziLogo.png" alt="" loading="lazy">
               <span class="audio-country-card-glow"></span>
             </span>
             <span class="audio-country-card-copy">
               <span class="audio-country-kicker">BİRİM 02 / ALMAN REICH</span>
-              <strong>Alman Arşivi</strong>
+              <strong class="audio-country-title-label">Alman Arşivi</strong>
               <span>Marşlar · Devlet kayıtları · Sesler</span>
               <b>AÇIK ARŞİV <i>↗</i></b>
             </span>
@@ -102,14 +104,46 @@
             </div>
           </div>
 
+          <div class="audio-type-chooser" id="audio-type-chooser">
+            <div class="audio-type-heading">
+              <div><span class="audio-section-index">ARŞİV SINIFLANDIRMASI</span><h3>Hangi kayıt <em>türünü arıyorsun?</em></h3></div>
+              <p>Ülke arşivi, belge türlerine göre ayrılmıştır. Bir başlık seçerek ilgili ses kayıtlarına ulaş.</p>
+            </div>
+            <div class="audio-type-grid">
+              <button class="audio-type-card audio-type-card-state" type="button" data-audio-type="state">
+                <span class="audio-type-number">01 / RESMÎ BELGELER</span>
+                <span class="audio-type-icon" aria-hidden="true">▤</span>
+                <strong>Devlet ses kayıtları</strong>
+                <span class="audio-type-description">Resmî açıklamalar, bildiriler, konuşmalar ve devlet kayıtları.</span>
+                <span class="audio-type-bottom"><b data-audio-type-count="state">00 KAYIT</b><i>ARŞİVİ AÇ ↗</i></span>
+              </button>
+              <button class="audio-type-card audio-type-card-marches" type="button" data-audio-type="marches">
+                <span class="audio-type-number">02 / TÖREN VE MARŞLAR</span>
+                <span class="audio-type-icon" aria-hidden="true">♫</span>
+                <strong>Marşlar</strong>
+                <span class="audio-type-description">Ülkenin marşları, tören ezgileri ve tarihî besteler.</span>
+                <span class="audio-type-bottom"><b data-audio-type-count="marches">00 KAYIT</b><i>ARŞİVİ AÇ ↗</i></span>
+              </button>
+              <button class="audio-type-card audio-type-card-sounds" type="button" data-audio-type="sounds">
+                <span class="audio-type-number">03 / ORTAM VE DİĞER SESLER</span>
+                <span class="audio-type-icon" aria-hidden="true">◉</span>
+                <strong>Sesler</strong>
+                <span class="audio-type-description">Telsiz, şehir, makine, ortam ve diğer işitsel kayıtlar.</span>
+                <span class="audio-type-bottom"><b data-audio-type-count="sounds">00 KAYIT</b><i>ARŞİVİ AÇ ↗</i></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="audio-track-browser" id="audio-track-browser" hidden>
+            <button class="audio-back-button audio-type-back" type="button" id="audio-type-back">← KAYIT TÜRLERİNE DÖN</button>
           <div class="audio-catalogue-heading">
-            <div><span class="audio-section-index">KAYIT LİSTESİ</span><h3>İşitsel <em>belgeler.</em></h3></div>
+            <div><span class="audio-section-index">SEÇİLEN KAYIT TÜRÜ</span><h3 id="audio-selected-type-title">İşitsel <em>belgeler.</em></h3></div>
             <p>Bir kaydı seçerek oynatıcıya yükleyebilir, arşivdeki diğer seslere geçebilirsin.</p>
           </div>
 
           <div class="audio-filters">
             <label><span class="visually-hidden">Ses kayıtlarında ara</span><input type="search" id="audio-search" placeholder="Kayıt, başlık veya kategori ara..." autocomplete="off"></label>
-            <label><span class="visually-hidden">Kayıt türü</span><select id="audio-category"><option value="">Tüm kayıt türleri</option></select></label>
+            <label><span class="visually-hidden">Kayıt türü</span><select id="audio-category"><option value="">Tüm alt gruplar</option></select></label>
             <span id="audio-visible-count" aria-live="polite"></span>
           </div>
 
@@ -117,7 +151,7 @@
             <p class="audio-empty">Ses kayıtları hazırlanıyor...</p>
           </div>
 
-          <div class="audio-player-dock" id="audio-player-dock">
+          <div class="audio-player-dock" id="audio-player-dock" hidden>
             <div class="audio-player-now">
               <span class="audio-player-disc" aria-hidden="true">♫</span>
               <div><small>ŞU ANDA OYNATILIYOR</small><strong id="audio-now-title">Bir kayıt seç</strong><span id="audio-now-meta">AOD / SES ARŞİVİ</span></div>
@@ -133,6 +167,7 @@
               </audio>
               <span id="audio-player-status" role="status" aria-live="polite"></span>
             </div>
+          </div>
           </div>
         </section>
 
@@ -157,6 +192,6 @@
       <a href="#audio-main">BAŞA DÖN ↑</a>
     </div>
   </footer>
-  <script src="assets/js/audio.js?v=20261119-audio1" defer></script>
+  <script src="assets/js/audio.js?v=20261119-audio2" defer></script>
 </body>
 </html>

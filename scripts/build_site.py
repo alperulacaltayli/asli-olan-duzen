@@ -406,7 +406,7 @@ def discover_audio() -> dict[str, Any]:
             country = "german"
         elif country_hint in {"turkish", "turkey", "turk", "turkiye", "tr"}:
             country = "turkish"
-        elif any(term in path_hint or term in file_hint for term in ("alman", "german", "deutsch", "reich")):
+        elif any(term in path_hint or term in file_hint for term in ("alman", "almanya", "germany", "german", "deutsch", "reich")):
             country = "german"
         elif any(term in path_hint or term in file_hint for term in ("turk", "turkiye", "turkish")):
             country = "turkish"
@@ -415,6 +415,13 @@ def discover_audio() -> dict[str, Any]:
 
         category = str(metadata.get("category") or (relative.parts[0] if len(relative.parts) > 1 else "Diğer Sesler")).strip()
         subcategory = str(metadata.get("subcategory") or (relative.parts[1] if len(relative.parts) > 2 else "")).strip()
+        category_key = key_text(category)
+        if any(term in category_key for term in ("devlet", "resmi", "official", "state")):
+            archive_type = "state"
+        elif "mars" in category_key:
+            archive_type = "marches"
+        else:
+            archive_type = "sounds"
         try:
             order = int(metadata.get("order", 999999))
         except (TypeError, ValueError):
@@ -434,6 +441,7 @@ def discover_audio() -> dict[str, Any]:
             "country": country,
             "category": category,
             "subcategory": subcategory,
+            "type": archive_type,
             "date": str(metadata.get("date", "")).strip(),
             "description": str(metadata.get("description", "")).strip(),
             "type": audio_type,
