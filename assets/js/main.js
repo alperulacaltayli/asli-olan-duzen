@@ -1255,7 +1255,8 @@
       renderArchiveSearch();
     })
     .catch((error) => {
-      console.error(error);
-      categoryHost.innerHTML = '<div class="archive-load-error" role="alert"><p class="archive-empty">Arşiv verileri yüklenemedi. Bağlantıyı kontrol edip yeniden deneyebilirsin.</p><button type="button" data-retry-archives>ARŞİVİ YENİDEN YÜKLE ↻</button></div>';
+      console.error("Arşiv verileri başlatılamadı:", error);
+      const detail = escapeHtml(error?.message || String(error || "Bilinmeyen yükleme hatası"));
+      categoryHost.innerHTML = '<div class="archive-load-error" role="alert"><p class="archive-empty">Arşiv verileri yüklenemedi. Bağlantıyı kontrol edip yeniden deneyebilirsin.</p><small class="archive-load-diagnostic">Teknik ayrıntı: ' + detail + '</small><button type="button" data-retry-archives>ARŞİVİ YENİDEN YÜKLE ↻</button></div>';
     });
 })();
