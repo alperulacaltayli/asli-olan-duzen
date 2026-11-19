@@ -298,6 +298,15 @@
     return (category.nodes || []).flatMap((group) => allNodes(group.children || []));
   };
 
+  // A year is a navigation group, not an event record. Resolve it to the first
+  // real event so year searches and year-level links never open an empty detail.
+  const resolveChronologyRecord = (category, nodeId = null) => {
+    if (!category || category.id !== "chronology") return nodeId ? findNode(category?.nodes || [], nodeId) : null;
+    const requested = nodeId ? findNode(category.nodes, nodeId) : null;
+    if (requested?.children?.length) return requested.children[0];
+    return requested || chronologySequence(category)[0] || null;
+  };
+
   const renderChronologyAtlas = (groups) => {
     const YEAR_WIDTH = 690;
     const CARD_WIDTH = 285;
@@ -307,8 +316,8 @@
     const TOP = 145;
     const yearGroups = (groups || []).map((group) => ({
       group,
-      events: allNodes(group.children || [])
-    }));
+      events: allNodes(group.children || []).filter((node) => node && node.id && node.title)
+    })).filter((item) => item.events.length > 0);
     const mapRecords = yearGroups.flatMap((item) => item.events);
     const recordPositions = new Map();
     let maxRows = 1;
@@ -611,8 +620,13 @@
   };
 
   const selectNode = (nodeId) => {
+    let node = activeCategory ? findNode(activeCategory.nodes, nodeId) : null;
+    if (activeCategory?.id === "chronology" && node?.children?.length) {
+      node = resolveChronologyRecord(activeCategory, nodeId);
+    }
+    if (!node) return;
+    nodeId = node.id;
     selectedNodeId = nodeId;
-    const node = findNode(activeCategory.nodes, nodeId);
     if (activeCategory.view === "tree") {
       (node?.ancestors || []).forEach((ancestorId) => expandedNodes.add(ancestorId));
       syncNavigationState();
@@ -661,7 +675,10 @@
     expandedNodes = new Set();
 
     if (activeCategory.nodes && activeCategory.nodes.length) {
-      if (targetNodeId && findNode(activeCategory.nodes, targetNodeId)) {
+      if (activeCategory.id === "chronology") {
+        const firstEvent = resolveChronologyRecord(activeCategory, targetNodeId);
+        selectedNodeId = firstEvent?.id || null;
+      } else if (targetNodeId && findNode(activeCategory.nodes, targetNodeId)) {
         selectedNodeId = targetNodeId;
         const targetNode = findNode(activeCategory.nodes, targetNodeId);
         (targetNode?.ancestors || []).forEach((ancestorId) => expandedNodes.add(ancestorId));
@@ -673,11 +690,6 @@
         }
         selectedNodeId = firstRecord.id;
         (firstRecord.ancestors || []).forEach((ancestorId) => expandedNodes.add(ancestorId));
-      } else if (activeCategory.id === "chronology") {
-        const firstGroup = activeCategory.nodes[0];
-        const firstEvent = firstGroup.children && firstGroup.children[0];
-        selectedNodeId = firstEvent ? firstEvent.id : firstGroup.id;
-        if (firstGroup.children?.length) expandedNodes.add(firstGroup.id);
       } else {
         selectedNodeId = activeCategory.nodes[0].id;
         if (activeCategory.view === "tree" && activeCategory.nodes[0].children?.length) {
@@ -1154,10 +1166,15 @@
     .replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("tr-TR").replace(/ı/g,"i")
     .replace(/[^a-z0-9]+/g," ").trim();
   const rebuildArchiveSearch = () => {
-    archiveSearchIndex = categories.flatMap((category) => allNodes(category.nodes).map((node) => ({
-      categoryId:category.id,categoryTitle:category.title,node,
-      text:normalizeArchiveSearch([node.title,node.date,node.summary,node.content,node.path,node.sourceName,...(node.aliases||[])].join(" "))
-    })));
+    archiveSearchIndex = categories.flatMap((category) => {
+      const searchableNodes = category.id === "chronology"
+        ? chronologySequence(category)
+        : allNodes(category.nodes);
+      return searchableNodes.map((node) => ({
+        categoryId:category.id,categoryTitle:category.title,node,
+        text:normalizeArchiveSearch([node.title,node.date,node.summary,node.content,node.path,node.sourceName,...(node.aliases||[])].join(" "))
+      }));
+    });
   };
   const renderArchiveSearch = () => {
     if(!archiveSearchInput||!archiveSearchResults||!archiveSearchStatus)return;

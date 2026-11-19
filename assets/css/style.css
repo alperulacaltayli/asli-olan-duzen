@@ -6250,3 +6250,36 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
     }
     .chronology-atlas-plane { transform:none; }
 }
+
+
+/* Katman 01 — the emblem sits inside a picture wrapper, so size the nested image. */
+.roman-artwork {
+    width: 100%;
+    max-width: 340px;
+    min-width: 0;
+    box-sizing: border-box;
+    justify-self: end;
+}
+.roman-artwork picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+.roman-artwork picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+    object-position: center;
+}
+@media (max-width: 680px) {
+    .roman-artwork {
+        width: min(100%, 320px);
+        justify-self: center;
+    }
+}
