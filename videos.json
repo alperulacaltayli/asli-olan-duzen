@@ -1,3 +1,28 @@
 {
-  "videos": []
+  "videos": [
+    {
+      "src": "VideoArsiv/Beyaz Saray Kutlaması Renklendirilmiş.mp4",
+      "file": "Beyaz Saray Kutlaması Renklendirilmiş.mp4",
+      "type": "video/mp4",
+      "title": "Beyaz Saray Kutlaması Renklendirilmiş",
+      "date": "",
+      "category": "Video kayıtları",
+      "description": "",
+      "poster": "",
+      "order": 999999,
+      "number": 1
+    },
+    {
+      "src": "VideoArsiv/Beyaz Saray Kutlaması.mp4",
+      "file": "Beyaz Saray Kutlaması.mp4",
+      "type": "video/mp4",
+      "title": "Beyaz Saray Kutlaması",
+      "date": "",
+      "category": "Video kayıtları",
+      "description": "",
+      "poster": "",
+      "order": 999999,
+      "number": 2
+    }
+  ]
 }
