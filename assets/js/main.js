@@ -794,16 +794,32 @@
     activateCategory(categoryId, targetNodeId);
   };
 
+  // Prefer the archive payload embedded by the site build. This removes a
+  // separate network request from the critical path for the public archive.
+  const loadArchiveData = async () => {
+    const embedded = document.getElementById("archive-data");
+    if (embedded) {
+      try {
+        const payload = JSON.parse(embedded.textContent || "{}");
+        if (Array.isArray(payload.categories) && payload.categories.length) return payload;
+        throw new Error("Gömülü arşiv verisinde kategori bulunamadı.");
+      } catch (error) {
+        console.error("Gömülü arşiv verisi okunamadı; JSON yedeği deneniyor.", error);
+      }
+    }
+
+    const archiveUrl = new URL("./archives.json", document.baseURI);
+    const response = await fetch(archiveUrl, { cache: "no-store" });
+    if (!response.ok) throw new Error("archives.json alınamadı: " + response.status);
+    return response.json();
+  };
+
   categoryHost.addEventListener("click", (event) => {
     const retry = event.target.closest("[data-retry-archives]");
     if (retry) {
       retry.disabled = true;
       retry.textContent = "YENİDEN DENENİYOR...";
-      fetch(new URL("./archives.json", document.baseURI), { cache: "no-store" })
-        .then((response) => {
-          if (!response.ok) throw new Error("archives.json alınamadı: " + response.status);
-          return response.json();
-        })
+      loadArchiveData()
         .then((data) => {
           categories = Array.isArray(data.categories) ? data.categories : [];
           if (!categories.length) throw new Error("Arşiv dosyası boş.");
@@ -1220,11 +1236,7 @@
     if(result)openCategory(result.dataset.searchCategory,result.dataset.searchId);
   });
 
-  fetch(new URL("./archives.json", document.baseURI), { cache: "no-store" })
-    .then((response) => {
-      if (!response.ok) throw new Error("archives.json alınamadı: " + response.status);
-      return response.json();
-    })
+  loadArchiveData()
     .then((data) => {
       if (!Array.isArray(data.categories) || !data.categories.length) throw new Error("Arşiv dosyasında kategori bulunamadı.");
       categories = data.categories.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));

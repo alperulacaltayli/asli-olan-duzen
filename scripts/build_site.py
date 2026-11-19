@@ -342,6 +342,26 @@ def build() -> None:
     (ROOT / "archives.json").write_text(encoded, encoding="utf-8")
     (DIST / "archives.json").write_text(encoded, encoding="utf-8")
 
+    # Embed the same archive payload in index.html so the public archive does
+    # not depend on a second HTTP request succeeding before categories render.
+    index_path = DIST / "index.html"
+    index_html = index_path.read_text(encoding="utf-8")
+    main_script_marker = '<script src="assets/js/main.js?'
+    if main_script_marker not in index_html:
+        raise RuntimeError("index.html içinde main.js bağlantısı bulunamadı.")
+    inline_archive_json = json.dumps(archive_data, ensure_ascii=False, separators=(",", ":"))
+    # Escape closing-script sequences so text inside the JSON cannot terminate
+    # the application/json script element during HTML parsing.
+    inline_archive_json = inline_archive_json.replace("</", "<\\/")
+    archive_data_script = (
+        '<script type="application/json" id="archive-data">'
+        + inline_archive_json
+        + "</script>\n  "
+    )
+    index_html = index_html.replace(main_script_marker, archive_data_script + main_script_marker, 1)
+    index_path.write_text(index_html, encoding="utf-8")
+
+    print(f"Embedded archive data: {len(archive_data['categories'])} categories")
     print(f"Site built: {DIST}")
     print(f"Gallery images: {len(gallery_data['images'])}")
     print(f"Archive categories: {len(archive_data['categories'])}")
