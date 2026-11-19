@@ -10,7 +10,13 @@
   const closeButton=document.getElementById("lightbox-close"),previousButton=document.getElementById("lightbox-previous");
   const nextButton=document.getElementById("lightbox-next"),menuToggle=document.querySelector(".menu-toggle");
   const nav=document.getElementById("gallery-nav"),year=document.getElementById("gallery-year");
-  let images=[],activeIndex=-1,lastTrigger=null;
+  const videoGrid=document.getElementById("video-grid"),videoTotal=document.getElementById("video-total");
+  const videoPlayer=document.getElementById("video-player"),videoMedia=document.getElementById("video-player-media");
+  const videoTitle=document.getElementById("video-player-title"),videoMeta=document.getElementById("video-player-meta");
+  const videoDescription=document.getElementById("video-player-description"),videoNumber=document.getElementById("video-player-number");
+  const videoError=document.getElementById("video-player-error"),videoClose=document.getElementById("video-player-close");
+  const videoPrevious=document.getElementById("video-player-previous"),videoNext=document.getElementById("video-player-next");
+  let images=[],activeIndex=-1,lastTrigger=null,videos=[],activeVideoIndex=-1,lastVideoTrigger=null;
   if(year)year.textContent=String(new Date().getFullYear());
   document.addEventListener("click",(event)=>{
     const link=event.target.closest('a[href^="index.html"]');
@@ -138,5 +144,95 @@
   lightboxImage?.addEventListener("error",()=>{
     if(lightboxWebp)lightboxWebp.removeAttribute("srcset");
   });
+
+  const renderVideoGallery=()=>{
+    if(videoTotal)videoTotal.textContent=String(videos.length).padStart(2,"0");
+    if(!videoGrid)return;
+    if(!videos.length){
+      videoGrid.innerHTML='<div class="video-empty"><span class="video-empty-mark" aria-hidden="true">▶</span><div><strong>Henüz video kaydı eklenmedi.</strong><p>Video dosyaları <code>VideoArsiv/</code> klasörüne eklendiğinde burada otomatik listelenecek.</p><small>DESTEKLENEN BİÇİMLER: MP4 · WEBM · OGG</small></div></div>';
+      return;
+    }
+    videoGrid.innerHTML=videos.map((item,index)=>{
+      const meta=[item.category,item.date].filter(Boolean).join(" · ")||"HAREKETLİ GÖRSEL KAYIT";
+      const poster=item.poster
+        ? '<img src="'+escapeHtml(item.poster)+'" alt="" loading="lazy" decoding="async">'
+        : '<span class="video-card-placeholder" aria-hidden="true"><i>▶</i><b>AOD / VIDEO</b></span>';
+      return '<button type="button" class="video-card" data-video-index="'+index+'" aria-label="'+escapeHtml(item.title)+' videosunu oynat">' +
+        '<span class="video-card-poster">'+poster+'<span class="video-card-play" aria-hidden="true">▶</span><span class="video-card-format">VİDEO KAYDI</span></span>' +
+        '<span class="video-card-caption"><span class="video-card-number">'+String(index+1).padStart(2,"0")+'</span>' +
+        '<span class="video-card-copy"><strong>'+escapeHtml(item.title)+'</strong><small>'+escapeHtml(meta)+'</small></span>' +
+        '<span class="video-card-arrow" aria-hidden="true">↗</span></span></button>';
+    }).join("");
+  };
+
+  const showVideo=index=>{
+    if(!videos.length||!videoMedia)return;
+    activeVideoIndex=(index+videos.length)%videos.length;
+    const item=videos[activeVideoIndex];
+    videoMedia.pause();
+    videoMedia.src=item.src;
+    if(item.poster)videoMedia.poster=item.poster;else videoMedia.removeAttribute("poster");
+    videoMedia.load();
+    videoTitle.textContent=item.title||"Video kaydı";
+    videoMeta.textContent=[item.category,item.date].filter(Boolean).join(" · ")||"AOD / VİDEO ARŞİVİ";
+    videoDescription.textContent=item.description||"";
+    videoNumber.textContent=String(activeVideoIndex+1).padStart(2,"0")+" / "+String(videos.length).padStart(2,"0");
+    videoError.hidden=true;
+    videoPrevious.hidden=videos.length<2;
+    videoNext.hidden=videos.length<2;
+  };
+
+  const openVideoPlayer=(index,trigger)=>{
+    lastVideoTrigger=trigger;
+    showVideo(index);
+    videoPlayer.hidden=false;
+    document.body.classList.add("video-player-open");
+    videoClose.focus();
+    const playback=videoMedia?.play();
+    if(playback&&typeof playback.catch==="function")playback.catch(()=>{});
+  };
+  const closeVideoPlayer=()=>{
+    if(!videoPlayer||videoPlayer.hidden)return;
+    videoMedia?.pause();
+    if(videoMedia){videoMedia.removeAttribute("src");videoMedia.removeAttribute("poster");videoMedia.load();}
+    videoPlayer.hidden=true;
+    document.body.classList.remove("video-player-open");
+    activeVideoIndex=-1;
+    if(lastVideoTrigger&&typeof lastVideoTrigger.focus==="function")lastVideoTrigger.focus();
+  };
+
+  const loadVideoArchive=()=>{
+    if(videoGrid)videoGrid.innerHTML='<p class="video-loading">Video kayıtları hazırlanıyor...</p>';
+    fetch(new URL("./videos.json",document.baseURI),{cache:"no-store"})
+      .then(response=>{if(!response.ok)throw new Error("videos.json alınamadı: "+response.status);return response.json();})
+      .then(data=>{
+        if(!Array.isArray(data.videos))throw new Error("Video kataloğunda kayıt listesi bulunamadı.");
+        videos=data.videos;
+        renderVideoGallery();
+      })
+      .catch(error=>{
+        console.error(error);
+        if(videoGrid)videoGrid.innerHTML='<div class="video-empty video-load-error"><span class="video-empty-mark" aria-hidden="true">!</span><div><strong>Video arşivi yüklenemedi.</strong><p>Bağlantıyı kontrol edip yeniden deneyebilirsin.</p><button type="button" data-retry-videos>VİDEO ARŞİVİNİ YENİLE ↻</button></div></div>';
+        if(videoTotal)videoTotal.textContent="—";
+      });
+  };
+
+  videoGrid?.addEventListener("click",event=>{
+    if(event.target.closest("[data-retry-videos]")){loadVideoArchive();return;}
+    const card=event.target.closest("[data-video-index]");
+    if(card)openVideoPlayer(Number(card.dataset.videoIndex),card);
+  });
+  videoClose?.addEventListener("click",closeVideoPlayer);
+  videoPrevious?.addEventListener("click",()=>showVideo(activeVideoIndex-1));
+  videoNext?.addEventListener("click",()=>showVideo(activeVideoIndex+1));
+  videoPlayer?.addEventListener("click",event=>{if(event.target===videoPlayer)closeVideoPlayer();});
+  videoMedia?.addEventListener("error",()=>{if(activeVideoIndex>=0)videoError.hidden=false;});
+  videoMedia?.addEventListener("loadeddata",()=>{videoError.hidden=true;});
+  document.addEventListener("keydown",event=>{
+    if(!videoPlayer||videoPlayer.hidden)return;
+    if(event.key==="Escape"){event.preventDefault();closeVideoPlayer();}
+  });
+
   loadGallery();
+  loadVideoArchive();
 })();

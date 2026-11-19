@@ -17,8 +17,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
   <meta property="og:image" content="https://alperulacaltayli.github.io/asli-olan-duzen/SiteMalzemeleri/KitapKapakFotosu.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261119-atlas1">
-  <link rel="stylesheet" href="assets/css/gallery.css?v=20261119-atlas1">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261119-video1">
+  <link rel="stylesheet" href="assets/css/gallery.css?v=20261119-video1">
 </head>
 <body class="gallery-page">
   <a class="skip-link" href="#gallery-main">İçeriğe geç</a>
@@ -49,7 +49,7 @@
         <div class="gallery-overline"><span></span> ASLI OLAN DÜZEN / GÖRSEL KAYITLAR <span></span></div>
         <p class="gallery-layer">KATMAN 05 · GÖRSEL ARŞİV</p>
         <h1 id="gallery-title">GÖRSEL<br><em>ARŞİV</em></h1>
-        <p class="gallery-intro">Başka türlü yazılmış bir tarihten kareler.<br>Her kayıt, bu dünyanın hafızasında ayrı bir iz bırakır.</p>
+        <p class="gallery-intro">Başka türlü yazılmış bir tarihten kareler ve hareketli kayıtlar.<br>Her kayıt, bu dünyanın hafızasında ayrı bir iz bırakır.</p>
         <div class="gallery-hero-meta">
           <span><b id="gallery-total">—</b> GÖRSEL KAYIT</span>
           <span>AOD / 1985</span>
@@ -88,6 +88,23 @@
         </div>
       </div>
     </section>
+
+    <section class="video-archive-section" aria-labelledby="video-archive-title">
+      <div class="container">
+        <div class="video-archive-heading">
+          <div>
+            <span class="video-archive-index">HAREKETLİ GÖRSEL KAYITLAR</span>
+            <h2 id="video-archive-title">Hareketli <em>arşiv.</em></h2>
+            <p>Bu dünyanın görüntü kayıtları, tanıtım filmleri ve hareketli belgeleri.</p>
+          </div>
+          <div class="video-archive-count"><strong id="video-total">—</strong><span>VİDEO KAYDI</span></div>
+        </div>
+        <div class="video-archive-grid" id="video-grid" aria-live="polite">
+          <p class="video-loading">Video arşivi hazırlanıyor...</p>
+        </div>
+        <p class="video-archive-note">VİDEO DOSYALARI / AOD GÖRSEL ARŞİVİ</p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -103,6 +120,18 @@
     </div>
   </footer>
 
+  <div class="video-player-overlay" id="video-player" role="dialog" aria-modal="true" aria-labelledby="video-player-title" hidden>
+    <button class="video-player-close" id="video-player-close" type="button" aria-label="Video oynatıcıyı kapat">×</button>
+    <div class="video-player-shell">
+      <div class="video-player-overline"><span>ASLI OLAN DÜZEN / VİDEO ARŞİVİ</span><span id="video-player-number"></span></div>
+      <video id="video-player-media" controls playsinline preload="metadata">Tarayıcın video oynatmayı desteklemiyor.</video>
+      <p class="video-player-error" id="video-player-error" role="alert" hidden>Bu video oynatılamadı. MP4 (H.264) veya WebM biçimindeki dosyaları kullanmayı dene.</p>
+      <div class="video-player-caption"><div><span id="video-player-meta"></span><h3 id="video-player-title"></h3><p id="video-player-description"></p></div>
+        <div class="video-player-navigation"><button id="video-player-previous" type="button" aria-label="Önceki video">←</button><button id="video-player-next" type="button" aria-label="Sonraki video">→</button></div>
+      </div>
+      <p class="video-player-hint">KAPAT: ESC <span>·</span> OYNATMA DENETİMLERİ VİDEO ÜZERİNDE</p>
+    </div>
+  </div>
   <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Fotoğraf görüntüleyici" hidden>
     <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Galeriyi kapat">×</button>
     <button class="lightbox-arrow lightbox-previous" id="lightbox-previous" type="button" aria-label="Önceki fotoğraf">←</button>
@@ -118,6 +147,6 @@
     <p class="lightbox-hint">KAPAT: ESC <span>·</span> GEZİN: ← →</p>
   </div>
 
-  <script src="assets/js/gallery.js?v=20261119-atlas1" defer></script>
+  <script src="assets/js/gallery.js?v=20261119-video1" defer></script>
 </body>
 </html>

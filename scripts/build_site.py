@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+import mimetypes
 import shutil
 import unicodedata
 from pathlib import Path
@@ -20,6 +21,9 @@ ROOT = Path(__file__).resolve().parents[1]
 ARCHIVES_ROOT = ROOT / "content" / "archives"
 DIST = ROOT / "dist"
 GALLERY_ROOT = ROOT / "AlternatifTarihfotoarşiv"
+VIDEO_ROOT = ROOT / "VideoArsiv"
+VIDEO_SUFFIXES = {".mp4", ".m4v", ".webm", ".ogv", ".ogg"}
+VIDEO_POSTER_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 GALLERY_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
 GALLERY_EXCLUDED_TERMS = ("infaz",)
 SITE_MATERIAL_FILES = [
@@ -298,6 +302,72 @@ def discover_gallery() -> dict[str, Any]:
     return {"images": images}
 
 
+
+def discover_videos() -> dict[str, Any]:
+    """Discover browser-playable videos and optional posters/metadata."""
+    videos: list[dict[str, Any]] = []
+    if not VIDEO_ROOT.is_dir():
+        return {"videos": videos}
+
+    metadata_path = VIDEO_ROOT / "_metadata.json"
+    metadata_catalog: dict[str, Any] = {}
+    if metadata_path.is_file():
+        try:
+            payload = json.loads(metadata_path.read_text(encoding="utf-8"))
+            metadata_catalog = payload.get("videos", payload) if isinstance(payload, dict) else {}
+        except (OSError, json.JSONDecodeError):
+            metadata_catalog = {}
+
+    for video_path in sorted(VIDEO_ROOT.iterdir(), key=lambda item: natural_key(item.name)):
+        if not video_path.is_file() or video_path.name.startswith("_") or video_path.suffix.lower() not in VIDEO_SUFFIXES:
+            continue
+        metadata = metadata_catalog.get(video_path.name, {})
+        if not isinstance(metadata, dict):
+            metadata = {}
+
+        poster_name = str(metadata.get("poster", "")).strip()
+        poster_path: Path | None = None
+        if poster_name:
+            candidate = VIDEO_ROOT / poster_name
+            if Path(poster_name).name == poster_name and candidate.is_file() and candidate.suffix.lower() in VIDEO_POSTER_SUFFIXES:
+                poster_path = candidate
+        else:
+            for suffix in (".webp", ".jpg", ".jpeg", ".png"):
+                candidate = video_path.with_suffix(suffix)
+                if candidate.is_file():
+                    poster_path = candidate
+                    break
+
+        try:
+            order = int(metadata.get("order", 999999))
+        except (TypeError, ValueError):
+            order = 999999
+
+        guessed_type = mimetypes.guess_type(video_path.name)[0]
+        if video_path.suffix.lower() in {".mp4", ".m4v"}:
+            guessed_type = "video/mp4"
+        elif video_path.suffix.lower() == ".webm":
+            guessed_type = "video/webm"
+        elif video_path.suffix.lower() in {".ogv", ".ogg"}:
+            guessed_type = "video/ogg"
+
+        videos.append({
+            "src": f"{VIDEO_ROOT.name}/{video_path.name}",
+            "file": video_path.name,
+            "type": guessed_type or "application/octet-stream",
+            "title": str(metadata.get("title") or re.sub(r"[-_]+", " ", video_path.stem).strip().title()),
+            "date": str(metadata.get("date", "")).strip(),
+            "category": str(metadata.get("category", "Video kayıtları")).strip(),
+            "description": str(metadata.get("description", "")).strip(),
+            "poster": f"{VIDEO_ROOT.name}/{poster_path.name}" if poster_path else "",
+            "order": order,
+        })
+
+    videos.sort(key=lambda item: (item["order"], natural_key(item["file"])))
+    for index, video in enumerate(videos, start=1):
+        video["number"] = index
+    return {"videos": videos}
+
 def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
@@ -334,6 +404,21 @@ def build() -> None:
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
         create_webp(destination, destination.with_suffix(".webp"))
+
+    video_data = discover_videos()
+    video_encoded = json.dumps(video_data, ensure_ascii=False, indent=2) + "\n"
+    (ROOT / "videos.json").write_text(video_encoded, encoding="utf-8")
+    (DIST / "videos.json").write_text(video_encoded, encoding="utf-8")
+    for video in video_data["videos"]:
+        source = ROOT / video["src"]
+        destination = DIST / video["src"]
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, destination)
+        if video["poster"]:
+            poster_source = ROOT / video["poster"]
+            poster_destination = DIST / video["poster"]
+            poster_destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(poster_source, poster_destination)
 
     archive_data = import_obsidian.discover_archives()
     encoded = json.dumps(archive_data, ensure_ascii=False, indent=2) + "\n"
