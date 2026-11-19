@@ -320,7 +320,7 @@
       const initials = getInitials(node.title);
       const hasOguzPortrait = normalizeWikiTarget(node.title) === normalizeWikiTarget("Oğuz Kağan Atalay");
       const portrait = hasOguzPortrait
-        ? '<figure class="character-portrait"><img src="SiteMalzemeleri/OğuzKağanAtalayPosterÇizim.png" alt="Oğuz Kağan Atalay karakter çizimi" loading="lazy"><figcaption>3. KANAT / KARAKTER PORTRESİ</figcaption></figure>'
+        ? '<figure class="character-portrait"><picture><source srcset="SiteMalzemeleri/OğuzKağanAtalayPosterÇizim.webp" type="image/webp"><img src="SiteMalzemeleri/OğuzKağanAtalayPosterÇizim.png" alt="Oğuz Kağan Atalay karakter çizimi" loading="lazy" decoding="async"></picture><figcaption>3. KANAT / KARAKTER PORTRESİ</figcaption></figure>'
         : '<div class="character-profile-monogram" aria-hidden="true">' + escapeHtml(initials) + '</div>';
       detailHost.innerHTML = '<div class="character-detail ' + (isCharacterRecord ? "character-detail-person" : "character-detail-group") + '">' +
         '<div class="character-detail-overline"><span>ASLI OLAN DÜZEN</span><span>' + (isCharacterRecord ? "KARAKTER DOSYASI" : "KARAKTER ARŞİVİ") + '</span></div>' +

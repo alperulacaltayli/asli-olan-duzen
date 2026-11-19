@@ -10,6 +10,8 @@ import unicodedata
 from pathlib import Path
 from typing import Any
 
+from PIL import Image, ImageOps
+
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_obsidian
@@ -58,6 +60,16 @@ def parse_scalar(value: str) -> Any:
     if re.fullmatch(r"-?\d+", value):
         return int(value)
     return value
+
+
+def create_webp(source: Path, destination: Path) -> None:
+    """Create a compressed WebP copy while preserving transparency and orientation."""
+    with Image.open(source) as opened:
+        image = ImageOps.exif_transpose(opened)
+        has_alpha = "A" in image.getbands() or "transparency" in image.info
+        if image.mode not in {"RGB", "RGBA"}:
+            image = image.convert("RGBA" if has_alpha else "RGB")
+        image.save(destination, "WEBP", quality=82, method=6)
 
 
 def split_document(path: Path) -> tuple[dict[str, Any], str]:
@@ -272,6 +284,7 @@ def discover_gallery() -> dict[str, Any]:
         year_match = re.search(r"\b(19\d{2}|20\d{2})\b", date)
         images.append({
             "src": f"{GALLERY_ROOT.name}/{image_path.name}",
+            "webp_src": f"{GALLERY_ROOT.name}/{image_path.stem}.webp",
             "title": str(metadata.get("title") or title),
             "number": len(images) + 1,
             "category": str(metadata.get("category") or gallery_default_category(image_path.stem)),
@@ -305,7 +318,9 @@ def build() -> None:
         source = material_source / filename
         if source.is_file():
             material_target.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(source, material_target / filename)
+            destination = material_target / filename
+            shutil.copy2(source, destination)
+            create_webp(destination, destination.with_suffix(".webp"))
 
     gallery_data = discover_gallery()
     gallery_encoded = json.dumps(gallery_data, ensure_ascii=False, indent=2) + "\n"
@@ -318,6 +333,7 @@ def build() -> None:
         destination = DIST / image["src"]
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
+        create_webp(destination, destination.with_suffix(".webp"))
 
     archive_data = import_obsidian.discover_archives()
     encoded = json.dumps(archive_data, ensure_ascii=False, indent=2) + "\n"

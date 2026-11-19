@@ -5818,3 +5818,10 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
 .character-chronology-links button:hover b { color:#fff1e4; }
 @media(max-width:760px) { .archive-search-controls{grid-template-columns:1fr}.archive-search-heading{align-items:flex-start;flex-direction:column;gap:6px}.archive-search-results{grid-template-columns:1fr}.character-facts{grid-template-columns:1fr}.character-chronology-links button{grid-template-columns:82px minmax(0,1fr) 14px} }
 @media(prefers-reduced-motion:reduce) { .archive-search-result,.archive-search-controls button{transition:none} }
+
+/* Picture wrappers retain the sizing of their original image elements. */
+.brand-mark picture,.welcome-banner picture,.welcome-book picture,.roman-artwork picture,.character-portrait picture {
+    display:block;
+    width:100%;
+    height:100%;
+}

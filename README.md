@@ -6,9 +6,10 @@ Alper Ulaç ALTAYLI'nın **Aslı Olan Düzen** adlı alternatif tarih romanı ve
 
 1. Depoyu GitHub Desktop ile bilgisayarına klonla.
 2. Proje klasöründe terminal aç.
-3. `python scripts/build_site.py` komutunu çalıştır.
-4. `python -m http.server 8000 --directory dist` komutunu çalıştır.
-5. Tarayıcıda `http://localhost:8000` adresini aç.
+3. `python -m pip install -r requirements.txt` komutuyla görsel derleme bağımlılığını kur.
+4. `python scripts/build_site.py` komutunu çalıştır.
+5. `python -m http.server 8000 --directory dist` komutunu çalıştır.
+6. Tarayıcıda `http://localhost:8000` adresini aç.
 
 ## Arşivleri dosyalardan yönetme
 
@@ -151,3 +152,6 @@ Tarih, konum, açıklama, kaynak ve kronoloji alanları doğrulanmış bilgi yok
 ## Public depo güvenliği
 
 Bu depo Public olduğu için depoda bulunan her dosya, siteye aktarılmasa da herkes tarafından görülebilir. `.obsidian/` ayar klasörü ve üretilmiş `archives.json` depoya eklenmez. Yayımlanmamış roman bölümleri, özel AI promptları, kişisel notlar ve gizli kanon dosyaları bu depoda tutulmamalı; ayrı bir yerel veya private depoda saklanmalıdır. Siteye aktarılmayan bir Vault dosyası, public depoda bulunduğu sürece gizli değildir.
+
+
+Derleme sırasında ana sayfa ve galeri görselleri WebP biçiminde sıkıştırılmış kopyalarla birlikte yayımlanır. Tarayıcı WebP desteklemiyorsa özgün PNG/JPEG dosyası kullanılır. Kaynak görseller değiştirilmez.

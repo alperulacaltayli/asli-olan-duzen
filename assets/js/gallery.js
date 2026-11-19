@@ -5,7 +5,7 @@
   const visibleTotal=document.getElementById("gallery-visible-total"),searchInput=document.getElementById("gallery-search");
   const categoryFilter=document.getElementById("gallery-category-filter"),periodFilter=document.getElementById("gallery-period-filter");
   const clearFilters=document.getElementById("gallery-filter-clear"),lightbox=document.getElementById("gallery-lightbox");
-  const lightboxImage=document.getElementById("lightbox-image"),lightboxTitle=document.getElementById("lightbox-title");
+  const lightboxImage=document.getElementById("lightbox-image"),lightboxWebp=document.getElementById("lightbox-image-webp"),lightboxTitle=document.getElementById("lightbox-title");
   const lightboxNumber=document.getElementById("lightbox-number"),lightboxMetadata=document.getElementById("lightbox-metadata");
   const closeButton=document.getElementById("lightbox-close"),previousButton=document.getElementById("lightbox-previous");
   const nextButton=document.getElementById("lightbox-next"),menuToggle=document.querySelector(".menu-toggle");
@@ -51,7 +51,7 @@
       const item=entry.item,number=String(entry.index+1).padStart(2,"0");
       const meta=[item.category,item.date].filter(Boolean).join(" · ")||"EK BİLGİ BEKLENİYOR";
       return '<button class="gallery-card" type="button" data-gallery-index="'+entry.index+'" aria-label="'+escapeHtml(item.title)+' fotoğrafını aç">'+
-        '<span class="gallery-card-image"><img src="'+escapeHtml(item.src)+'" alt="'+escapeHtml(item.title)+'" loading="lazy" decoding="async"></span>'+
+        '<span class="gallery-card-image"><picture><source srcset="'+escapeHtml(item.webp_src||"")+'" type="image/webp"><img src="'+escapeHtml(item.src)+'" alt="'+escapeHtml(item.title)+'" loading="lazy" decoding="async"></picture></span>'+
         '<span class="gallery-card-caption"><span class="gallery-card-number">'+number+'</span><span class="gallery-card-title">'+escapeHtml(item.title)+
         '<span class="gallery-card-meta">'+escapeHtml(meta)+'</span></span><span class="gallery-card-arrow" aria-hidden="true">↗</span></span></button>';
     }).join("");
@@ -78,6 +78,7 @@
   };
   const showImage=index=>{
     if(!images.length)return;activeIndex=(index+images.length)%images.length;const item=images[activeIndex];
+    if(lightboxWebp){if(item.webp_src)lightboxWebp.srcset=item.webp_src;else lightboxWebp.removeAttribute("srcset");}
     lightboxImage.src=item.src;lightboxImage.alt=item.title;lightboxTitle.textContent=item.title;
     lightboxNumber.textContent=String(activeIndex+1).padStart(2,"0")+" / "+String(images.length).padStart(2,"0");showMetadata(item);
   };
