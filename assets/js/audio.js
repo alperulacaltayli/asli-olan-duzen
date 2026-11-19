@@ -73,7 +73,7 @@
     .filter(entry => entry.item.country === selectedCountry);
 
   const recordType = item => {
-    if (["state", "marches", "sounds"].includes(item.type)) return item.type;
+    if (["state", "marches", "sounds"].includes(item.archive_type)) return item.archive_type;
     const label = normalize([item.category, item.subcategory].join(" "));
     if (label.includes("devlet") || label.includes("resmi") || label.includes("state")) return "state";
     if (label.includes("mars")) return "marches";

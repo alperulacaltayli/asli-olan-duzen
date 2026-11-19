@@ -441,7 +441,7 @@ def discover_audio() -> dict[str, Any]:
             "country": country,
             "category": category,
             "subcategory": subcategory,
-            "type": archive_type,
+            "archive_type": archive_type,
             "date": str(metadata.get("date", "")).strip(),
             "description": str(metadata.get("description", "")).strip(),
             "type": audio_type,
