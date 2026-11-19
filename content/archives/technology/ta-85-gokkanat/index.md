@@ -1,6 +1,6 @@
 ---
 title: TA-85 Gökkanat
-date: 1943 — prototip dönemi
+period: 1943 — prototip dönemi
 summary: Türk uçan kanat bombardıman uçağı projesi.
 order: 1
 ---

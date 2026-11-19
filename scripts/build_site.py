@@ -108,7 +108,7 @@ def split_document(path: Path) -> tuple[dict[str, Any], str]:
 
     return {
         "title": title,
-        "date": str(metadata.get("date", "")).strip(),
+        "date": str(metadata.get("date", metadata.get("period", ""))).strip(),
         "summary": summary,
         "order": metadata.get("order", 999999),
         "content": body,
