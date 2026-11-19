@@ -155,3 +155,12 @@ Bu depo Public olduğu için depoda bulunan her dosya, siteye aktarılmasa da he
 
 
 Derleme sırasında ana sayfa ve galeri görselleri WebP biçiminde sıkıştırılmış kopyalarla birlikte yayımlanır. Tarayıcı WebP desteklemiyorsa özgün PNG/JPEG dosyası kullanılır. Kaynak görseller değiştirilmez.
+
+
+## Kronoloji atlası
+
+Kronoloji birimi, yatay kaydırılabilir 3B bir olay haritası olarak açılır. Yıl başlıkları dönemleri ayırır; olay kartları tarih sırasına göre iki şeritli zikzak düzende ilerler. Kart seçimi olayın ansiklopedi kaydını açar. Sağ/sol devam okları ve sonraki olay düğmeleri zaman çizgisinde ilerletir; kesikli çizgiler kaynak notlardaki açık `[[wikilink]]` bağlantılarını gösterir.
+
+Harita, olay başlığıyla eşleşen mevcut görsel arşiv dosyalarını kullanır. Şu an Bakü, Hitler'in Ankara/Anıtkabir ziyareti, Kiev, Leningrad, Moskova, Sivastopol ve Stalingrad kayıtları için uygun eşleşmeler bulunur. Eşleşmeyen olaylar görselsiz arşiv kartı olarak gösterilir; olmayan görsel üretilmez.
+
+Arşiv ve galeri JSON dosyaları sayfa yolu üzerinden, önbelleksiz istekle yüklenir. Yükleme başarısız olduğunda tekrar deneme düğmesi gösterilir.

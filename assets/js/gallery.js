@@ -55,7 +55,20 @@
         '<span class="gallery-card-caption"><span class="gallery-card-number">'+number+'</span><span class="gallery-card-title">'+escapeHtml(item.title)+
         '<span class="gallery-card-meta">'+escapeHtml(meta)+'</span></span><span class="gallery-card-arrow" aria-hidden="true">↗</span></span></button>';
     }).join("");
+    bindWebpFallbacks(grid);
   };
+
+  const bindWebpFallbacks=(root)=>{
+    root?.querySelectorAll('picture source[type="image/webp"]').forEach(source=>{
+      const image=source.parentElement?.querySelector("img");
+      if(!image||image.dataset.webpFallbackReady==="true")return;
+      image.dataset.webpFallbackReady="true";
+      image.addEventListener("error",()=>{
+        source.removeAttribute("srcset");
+      },{once:true});
+    });
+  };
+
   const filterGallery=()=>{
     const query=normalize(searchInput?.value||""),category=categoryFilter?.value||"",decade=periodFilter?.value||"";
     const entries=images.map((item,index)=>({item,index})).filter(({item})=>{
@@ -84,7 +97,11 @@
   };
   const openLightbox=(index,trigger)=>{lastTrigger=trigger;showImage(index);lightbox.hidden=false;document.body.classList.add("lightbox-open");closeButton.focus();};
   const closeLightbox=()=>{lightbox.hidden=true;document.body.classList.remove("lightbox-open");if(lastTrigger&&typeof lastTrigger.focus==="function")lastTrigger.focus();activeIndex=-1;};
-  grid?.addEventListener("click",event=>{const card=event.target.closest("[data-gallery-index]");if(card)openLightbox(Number(card.dataset.galleryIndex),card);});
+  grid?.addEventListener("click",event=>{
+    if(event.target.closest("[data-retry-gallery]")){loadGallery();return;}
+    const card=event.target.closest("[data-gallery-index]");
+    if(card)openLightbox(Number(card.dataset.galleryIndex),card);
+  });
   closeButton?.addEventListener("click",closeLightbox);
   previousButton?.addEventListener("click",()=>showImage(activeIndex-1));nextButton?.addEventListener("click",()=>showImage(activeIndex+1));
   lightbox?.addEventListener("click",event=>{if(event.target===lightbox)closeLightbox();});
@@ -101,7 +118,25 @@
   });
   searchInput?.addEventListener("input",filterGallery);categoryFilter?.addEventListener("change",filterGallery);periodFilter?.addEventListener("change",filterGallery);
   clearFilters?.addEventListener("click",()=>{if(searchInput)searchInput.value="";if(categoryFilter)categoryFilter.value="";if(periodFilter)periodFilter.value="";filterGallery();searchInput?.focus();});
-  fetch("gallery.json",{cache:"no-cache"}).then(response=>{if(!response.ok)throw new Error("gallery.json alınamadı: "+response.status);return response.json();})
-    .then(data=>{images=Array.isArray(data.images)?data.images:[];populateFilters();filterGallery();})
-    .catch(error=>{console.error(error);if(grid)grid.innerHTML='<p class="gallery-empty">Görsel arşiv yüklenemedi. Siteyi yenileyin veya yayın işlemini kontrol edin.</p>';if(total)total.textContent="—";if(visibleTotal)visibleTotal.textContent="";});
+  const loadGallery=()=>{
+    if(grid)grid.innerHTML='<p class="gallery-loading">Görsel kayıtlar hazırlanıyor...</p>';
+    fetch(new URL("./gallery.json",document.baseURI),{cache:"no-store"})
+      .then(response=>{if(!response.ok)throw new Error("gallery.json alınamadı: "+response.status);return response.json();})
+      .then(data=>{
+        if(!Array.isArray(data.images))throw new Error("Galeri dosyasında görsel listesi bulunamadı.");
+        images=data.images;
+        populateFilters();
+        filterGallery();
+      })
+      .catch(error=>{
+        console.error(error);
+        if(grid)grid.innerHTML='<div class="gallery-load-error"><p class="gallery-empty">Görsel arşiv yüklenemedi. Bağlantıyı kontrol edip yeniden deneyebilirsin.</p><button type="button" data-retry-gallery>GALERİYİ YENİDEN YÜKLE ↻</button></div>';
+        if(total)total.textContent="—";
+        if(visibleTotal)visibleTotal.textContent="";
+      });
+  };
+  lightboxImage?.addEventListener("error",()=>{
+    if(lightboxWebp)lightboxWebp.removeAttribute("srcset");
+  });
+  loadGallery();
 })();

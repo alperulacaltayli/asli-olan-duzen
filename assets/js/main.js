@@ -8,6 +8,8 @@
   const worldGrid = document.querySelector(".world-grid");
   const pageProgressBar = document.querySelector("#page-progress-bar");
   const explorer = document.querySelector("#archive-explorer");
+  const archiveWorkspace = document.querySelector("#archive-workspace");
+  const chronologyAtlas = document.querySelector("#chronology-atlas");
   const navigationHost = document.querySelector("#archive-navigation-content");
   const detailHost = document.querySelector("#archive-detail");
   const activeTitle = document.querySelector("#archive-active-title");
@@ -269,6 +271,209 @@
       '</div></section>';
   };
 
+
+  const chronologyImageRules = [
+    { test: (text) => text.includes("baku") && (text.includes("dus") || text.includes("dusmes")), file: "Baküdüştü.jpg", alt: "Bakü'nün düşüşüne ait arşiv görseli" },
+    { test: (text) => text.includes("hitler") && (text.includes("ankara") || text.includes("anitkabir")), file: "HitlerAtatürkZiyareti.jpg", alt: "Hitler'in Ankara ziyaretiyle ilgili arşiv görseli" },
+    { test: (text) => text.includes("kiev") && text.includes("dus"), file: "KievDüşüş.jpg", alt: "Kiev'in düşüşüne ait arşiv görseli" },
+    { test: (text) => text.includes("leningrad") && text.includes("dus"), file: "LeningradDüşüş.jpg", alt: "Leningrad'ın düşüşüne ait arşiv görseli" },
+    { test: (text) => text.includes("moskova") && (text.includes("isgal") || text.includes("dus")), file: "MoskovaDüşüş.jpg", alt: "Moskova'nın işgaline ait arşiv görseli" },
+    { test: (text) => text.includes("sivastopol") && text.includes("cikarma"), file: "Sevatipoolçıkarması.jpg", alt: "Sivastopol çıkarmasına ait arşiv görseli" },
+    { test: (text) => text.includes("sivastopol") && text.includes("dus"), file: "SivastipolDüşüş.jpg", alt: "Sivastopol'un düşüşüne ait arşiv görseli" },
+    { test: (text) => text.includes("stalingrad") && text.includes("dus"), file: "StalingGradDÜşüş.jpg", alt: "Stalingrad'ın düşüşüne ait arşiv görseli" }
+  ];
+
+  const chronologyImageForNode = (node) => {
+    if (!node) return null;
+    const text = normalizeWikiTarget([node.title, node.sourceName].join(" "));
+    const match = chronologyImageRules.find((rule) => rule.test(text));
+    if (!match) return null;
+    const base = "AlternatifTarihfotoarşiv/";
+    const stem = match.file.replace(/\.[^.]+$/, "");
+    return { src: base + match.file, webp: base + stem + ".webp", alt: match.alt };
+  };
+
+  const chronologySequence = (category = activeCategory) => {
+    if (!category || category.id !== "chronology") return [];
+    return (category.nodes || []).flatMap((group) => allNodes(group.children || []));
+  };
+
+  const renderChronologyAtlas = (groups) => {
+    const YEAR_WIDTH = 690;
+    const CARD_WIDTH = 285;
+    const CARD_HEIGHT = 190;
+    const CARD_GAP_X = 32;
+    const ROW_HEIGHT = 224;
+    const TOP = 145;
+    const yearGroups = (groups || []).map((group) => ({
+      group,
+      events: allNodes(group.children || [])
+    }));
+    const mapRecords = yearGroups.flatMap((item) => item.events);
+    const recordPositions = new Map();
+    let maxRows = 1;
+
+    yearGroups.forEach((item, groupIndex) => {
+      item.events.forEach((node, eventIndex) => {
+        const row = Math.floor(eventIndex / 2);
+        const lane = row % 2 === 0 ? eventIndex % 2 : 1 - (eventIndex % 2);
+        const position = {
+          x: groupIndex * YEAR_WIDTH + 18 + lane * (CARD_WIDTH + CARD_GAP_X),
+          y: TOP + row * ROW_HEIGHT,
+          width: CARD_WIDTH,
+          height: CARD_HEIGHT,
+          groupIndex,
+          eventIndex
+        };
+        recordPositions.set(node.id, position);
+        maxRows = Math.max(maxRows, row + 1);
+      });
+    });
+
+    const width = Math.max(980, yearGroups.length * YEAR_WIDTH + 26);
+    const height = TOP + maxRows * ROW_HEIGHT + 105;
+    const point = (position, side) => {
+      if (side === "right") return { x: position.x + position.width, y: position.y + position.height / 2 };
+      if (side === "left") return { x: position.x, y: position.y + position.height / 2 };
+      if (side === "bottom") return { x: position.x + position.width / 2, y: position.y + position.height };
+      return { x: position.x + position.width / 2, y: position.y };
+    };
+    const curve = (from, to, className, marker) => {
+      const dx = to.x - from.x;
+      const dy = to.y - from.y;
+      const bend = Math.max(38, Math.min(150, Math.abs(dx) * .38 + Math.abs(dy) * .1));
+      const c1x = from.x + (dx >= 0 ? bend : -bend);
+      const c2x = to.x - (dx >= 0 ? bend : -bend);
+      return '<path class="' + className + '" d="M ' + from.x + ' ' + from.y +
+        ' C ' + c1x + ' ' + from.y + ', ' + c2x + ' ' + to.y + ', ' + to.x + ' ' + to.y +
+        '" marker-end="url(#' + marker + ')"></path>';
+    };
+
+    const paths = [];
+    const arrowButtons = [];
+    yearGroups.forEach((item, groupIndex) => {
+      const yearX = groupIndex * YEAR_WIDTH + 18;
+      if (groupIndex < yearGroups.length - 1) {
+        const nextGroup = yearGroups[groupIndex + 1].group;
+        paths.push(curve(
+          { x: yearX + 620, y: 61 },
+          { x: (groupIndex + 1) * YEAR_WIDTH + 18, y: 61 },
+          "is-year-link",
+          "chronology-atlas-arrowhead"
+        ));
+        arrowButtons.push(
+          '<button type="button" class="chronology-atlas-arrow" style="left:' +
+          (yearX + 620 + (YEAR_WIDTH - 620) / 2 - 17) + 'px;top:44px" data-select-node="' +
+          escapeHtml(nextGroup.events[0]?.id || nextGroup.group.id) + '" aria-label="' + escapeHtml(nextGroup.group.title) + ' dönemine geç">→</button>'
+        );
+      }
+
+      item.events.forEach((node, eventIndex) => {
+        const next = item.events[eventIndex + 1] ||
+          (yearGroups[groupIndex + 1]?.events?.[0] || null);
+        if (!next) return;
+        const from = recordPositions.get(node.id);
+        const to = recordPositions.get(next.id);
+        if (!from || !to) return;
+        let start, end;
+        if (to.y > from.y + 30 && Math.abs(to.x - from.x) < CARD_WIDTH * .55) {
+          start = point(from, "bottom");
+          end = point(to, "top");
+        } else if (to.x >= from.x + CARD_WIDTH * .55) {
+          start = point(from, "right");
+          end = point(to, "left");
+        } else {
+          start = point(from, "left");
+          end = point(to, "right");
+        }
+        paths.push(curve(start, end, "is-sequence-link", "chronology-atlas-arrowhead"));
+        arrowButtons.push(
+          '<button type="button" class="chronology-atlas-arrow" style="left:' +
+          ((start.x + end.x) / 2 - 17) + 'px;top:' + ((start.y + end.y) / 2 - 17) +
+          'px" data-select-node="' + escapeHtml(next.id) + '" aria-label="Sonraki olay: ' +
+          escapeHtml(next.title) + '">→</button>'
+        );
+      });
+    });
+
+    // Explicit wikilinks form secondary, dashed connections between related events.
+    const seenCrossEdges = new Set();
+    for (const node of mapRecords) {
+      const from = recordPositions.get(node.id);
+      if (!from) continue;
+      for (const link of node.links || []) {
+        if (link.categoryId !== "chronology" || link.id === node.id) continue;
+        const to = recordPositions.get(link.id);
+        if (!to) continue;
+        const key = node.id + "->" + link.id;
+        if (seenCrossEdges.has(key)) continue;
+        seenCrossEdges.add(key);
+        const start = point(from, to.x >= from.x ? "right" : "left");
+        const end = point(to, to.x >= from.x ? "left" : "right");
+        paths.push(curve(start, end, "is-cross-link", "chronology-atlas-crosshead"));
+      }
+    }
+
+    const headers = yearGroups.map((item, index) => {
+      const group = item.group;
+      const eventCount = item.events.length;
+      const firstEventId = item.events[0]?.id || group.id;
+      return '<button type="button" class="chronology-year-anchor" data-year-anchor="' + escapeHtml(group.id) +
+        '" data-select-node="' + escapeHtml(firstEventId) + '" style="left:' + (index * YEAR_WIDTH + 18) +
+        'px;top:22px" aria-pressed="' + String(selectedNodeId === firstEventId) + '">' +
+        '<span class="chronology-year-number">' + escapeHtml(group.title) + '</span>' +
+        '<span class="chronology-year-caption"><b>' + (group.date === "TARİHİ BELİRTİLMEMİŞ" ? "TARİHİ BELİRTİLMEMİŞ" : "DÖNEM KAYDI") +
+        '</b><span>' + escapeHtml(group.summary || "Bu döneme ait arşiv kayıtları") + '</span></span>' +
+        '<span class="chronology-year-count">' + String(eventCount).padStart(2, "0") + ' KAYIT</span></button>';
+    }).join("");
+
+    const cards = yearGroups.map((item, groupIndex) => item.events.map((node, eventIndex) => {
+      const position = recordPositions.get(node.id);
+      const image = chronologyImageForNode(node);
+      const next = item.events[eventIndex + 1] || yearGroups[groupIndex + 1]?.events?.[0] || null;
+      const selected = selectedNodeId === node.id;
+      const imageMarkup = image
+        ? '<span class="chronology-map-image"><picture><source srcset="' + escapeHtml(image.webp) +
+          '" type="image/webp"><img src="' + escapeHtml(image.src) + '" alt="' + escapeHtml(image.alt) +
+          '" loading="lazy" decoding="async"></picture></span>'
+        : '<span class="chronology-map-image is-placeholder" aria-hidden="true"></span>';
+      return '<div class="chronology-map-node ' + (selected ? "is-selected" : "") +
+        '" data-map-node-id="' + escapeHtml(node.id) + '" style="left:' + position.x + 'px;top:' +
+        position.y + 'px">' +
+        '<button type="button" class="chronology-map-select" data-select-node="' + escapeHtml(node.id) +
+        '" aria-current="' + String(selected) + '" aria-pressed="' + String(selected) + '">' +
+        imageMarkup +
+        '<span class="chronology-map-copy"><span class="chronology-map-meta"><span>' +
+        escapeHtml(node.date || "TARİHİ BELİRTİLMEMİŞ") + '</span><span>' +
+        String(eventIndex + 1).padStart(2, "0") + ' / ' + String(item.events.length).padStart(2, "0") +
+        '</span></span><strong>' + escapeHtml(node.title) + '</strong>' +
+        '<small>' + escapeHtml(node.summary || "Ayrıntılı kayıt için seç.") + '</small></span></button>' +
+        (next ? '<button type="button" class="chronology-map-next" data-select-node="' + escapeHtml(next.id) +
+          '" aria-label="Sonraki olay: ' + escapeHtml(next.title) + '">→</button>' : '') +
+        '</div>';
+    }).join("")).join("");
+
+    const options = yearGroups.map((item) =>
+      '<option value="' + escapeHtml(item.group.id) + '">' + escapeHtml(item.group.title) + '</option>'
+    ).join("");
+    const heading = '<div class="chronology-atlas-toolbar"><div><span class="chronology-atlas-kicker">AOD / ZAMAN ATLASI · 1938—1946</span>' +
+      '<span class="chronology-atlas-instructions">Haritayı yatay kaydır. Bir olayı seç, bağlı kayıtları ve devam oklarını izle.</span></div>' +
+      '<div class="chronology-atlas-tools"><label>DÖNEME GİT <select id="chronology-year-jump"><option value="">Seç...</option>' +
+      options + '</select></label><button type="button" class="chronology-atlas-reset" id="chronology-atlas-reset">BAŞA DÖN</button></div></div>';
+    const svg = '<svg class="chronology-atlas-connections" width="' + width + '" height="' + height +
+      '" viewBox="0 0 ' + width + ' ' + height + '" aria-hidden="true"><defs>' +
+      '<marker id="chronology-atlas-arrowhead" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#9fcbdc"></path></marker>' +
+      '<marker id="chronology-atlas-crosshead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#c7a584"></path></marker>' +
+      '</defs>' + paths.join("") + '</svg>';
+    const legend = '<div class="chronology-atlas-legend"><span><i></i> ZAMAN AKIŞI / SONRAKİ OLAY</span>' +
+      '<span><i class="is-related"></i> KAYITLAR ARASI BAĞLANTI</span><span>' +
+      String(mapRecords.length).padStart(2, "0") + ' OLAY · ' + yearGroups.length + ' DÖNEM</span></div>';
+
+    return heading + '<div class="chronology-atlas-viewport" id="chronology-atlas-viewport" tabindex="0" aria-label="Yatay kaydırılabilir kronoloji haritası">' +
+      '<div class="chronology-atlas-plane" style="width:' + width + 'px;height:' + height + 'px">' +
+      svg + headers + cards + arrowButtons.join("") + '</div></div>' + legend;
+  };
+
   const renderDetail = (node) => {
     if (!node) {
       detailHost.innerHTML = '<div class="archive-detail-placeholder"><span class="detail-placeholder-mark">AOD</span><p>Bu arşiv henüz boş.</p><small>İçerik klasöre eklendiğinde burada görünecek.</small></div>';
@@ -305,13 +510,35 @@
         '</div></section>'
       : "";
     if (activeCategory?.id === "chronology") {
+      const image = chronologyImageForNode(node);
+      const sequence = chronologySequence(activeCategory);
+      const currentIndex = sequence.findIndex((item) => item.id === node.id);
+      const previous = currentIndex > 0 ? sequence[currentIndex - 1] : null;
+      const next = currentIndex >= 0 ? sequence[currentIndex + 1] : null;
+      const imageMarkup = image
+        ? '<figure class="chronology-detail-visual"><picture><source srcset="' + escapeHtml(image.webp) +
+          '" type="image/webp"><img src="' + escapeHtml(image.src) + '" alt="' + escapeHtml(image.alt) +
+          '" loading="lazy" decoding="async"></picture><figcaption>' + escapeHtml(image.alt) +
+          '</figcaption><p>' + escapeHtml(node.summary || "Bu kayıt, kronoloji haritasındaki tarihsel dönüm noktalarından biridir.") + '</p></figure>'
+        : '';
+      const stepMarkup = currentIndex >= 0
+        ? '<nav class="chronology-step-nav" aria-label="Kronolojide önceki ve sonraki olay">' +
+          (previous ? '<button type="button" data-select-node="' + escapeHtml(previous.id) +
+            '"><small>← ÖNCEKİ KAYIT · ' + escapeHtml(previous.date || "TARİH") +
+            '</small><strong>' + escapeHtml(previous.title) + '</strong></button>' : '<span></span>') +
+          (next ? '<button type="button" data-select-node="' + escapeHtml(next.id) +
+            '"><small>SONRAKİ KAYIT · ' + escapeHtml(next.date || "TARİH") +
+            ' →</small><strong>' + escapeHtml(next.title) + '</strong></button>' : '<span></span>') +
+          '</nav>'
+        : '';
       detailHost.innerHTML = '<div class="chronology-detail">' +
         '<div class="chronology-detail-top"><span>KRONOLOJİ / ' + escapeHtml(node.path || node.id) + '</span><span>ARŞİV KAYDI</span></div>' +
         '<div class="chronology-detail-date">' + escapeHtml(node.date || "TARİHSEL KAYIT") + '</div>' +
         '<h3>' + escapeHtml(node.title) + '</h3>' +
         (node.summary ? '<p class="chronology-detail-summary">' + escapeHtml(node.summary) + '</p>' : '') +
+        imageMarkup +
         '<div class="detail-body chronology-detail-body">' + renderMarkdown(node.content || "") + '</div>' +
-        childLinks + relatedLinks + '</div>';
+        stepMarkup + childLinks + relatedLinks + '</div>';
       return;
     }
 
@@ -355,6 +582,14 @@
       const item = button.closest(".chronology-node, .character-tree-item");
       if (item) item.classList.toggle("is-selected", selected);
     });
+    chronologyAtlas?.querySelectorAll("[data-select-node]").forEach((button) => {
+      const selected = button.dataset.selectNode === selectedNodeId;
+      button.classList.toggle("is-selected", selected);
+      button.setAttribute("aria-current", String(selected));
+      if (button.matches(".chronology-map-select")) button.setAttribute("aria-pressed", String(selected));
+      const mapNode = button.closest(".chronology-map-node");
+      if (mapNode) mapNode.classList.toggle("is-selected", mapNode.dataset.mapNodeId === selectedNodeId);
+    });
 
     navigationHost.querySelectorAll("[data-toggle-node]").forEach((button) => {
       const id = button.dataset.toggleNode;
@@ -389,6 +624,17 @@
       });
     }
     renderDetail(node);
+    if (activeCategory?.id === "chronology" && chronologyAtlas) {
+      const mapNode = Array.from(chronologyAtlas.querySelectorAll("[data-map-node-id]"))
+        .find((element) => element.dataset.mapNodeId === nodeId);
+      if (mapNode) {
+        mapNode.scrollIntoView({
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+          block: "nearest",
+          inline: "center"
+        });
+      }
+    }
   };
 
   const renderCatalogue = () => {
@@ -427,6 +673,11 @@
         }
         selectedNodeId = firstRecord.id;
         (firstRecord.ancestors || []).forEach((ancestorId) => expandedNodes.add(ancestorId));
+      } else if (activeCategory.id === "chronology") {
+        const firstGroup = activeCategory.nodes[0];
+        const firstEvent = firstGroup.children && firstGroup.children[0];
+        selectedNodeId = firstEvent ? firstEvent.id : firstGroup.id;
+        if (firstGroup.children?.length) expandedNodes.add(firstGroup.id);
       } else {
         selectedNodeId = activeCategory.nodes[0].id;
         if (activeCategory.view === "tree" && activeCategory.nodes[0].children?.length) {
@@ -452,7 +703,12 @@
     } else if (existingHistoryStamp) {
       existingHistoryStamp.remove();
     }
-    navigationType.textContent = activeCategory.view === "tree" ? "DALLANAN OLAY AĞACI" : "KAYIT KATALOĞU";
+    navigationType.textContent = activeCategory.id === "chronology"
+      ? "YATAY 3B OLAY HARİTASI"
+      : activeCategory.view === "tree" ? "DALLANAN KAYIT AĞACI" : "KAYIT KATALOĞU";
+    explorer.classList.toggle("is-chronology-map", activeCategory.id === "chronology");
+    archiveWorkspace?.classList.toggle("is-chronology-atlas", activeCategory.id === "chronology");
+    if (chronologyAtlas) chronologyAtlas.hidden = activeCategory.id !== "chronology";
     explorer.classList.toggle("is-catalogue", activeCategory.view !== "tree");
     explorer.classList.toggle("is-chronology", activeCategory.id === "chronology");
     explorer.classList.toggle("is-characters", activeCategory.id === "characters");
@@ -464,10 +720,20 @@
     if (explorer.parentElement !== document.body) document.body.appendChild(explorer);
     explorer.classList.remove("scene-entering", "scene-leaving", "scene-switching");
 
-    if (activeCategory.view === "tree") navigationHost.innerHTML = renderTree(activeCategory.nodes);
-    else renderCatalogue();
+    if (activeCategory.id === "chronology") {
+      navigationHost.innerHTML = "";
+      if (chronologyAtlas) {
+        chronologyAtlas.innerHTML = renderChronologyAtlas(activeCategory.nodes);
+        enablePictureFallbacks(chronologyAtlas);
+      }
+    } else if (activeCategory.view === "tree") {
+      navigationHost.innerHTML = renderTree(activeCategory.nodes);
+    } else {
+      renderCatalogue();
+    }
 
     renderDetail(findNode(activeCategory.nodes, selectedNodeId));
+    syncNavigationState();
     void explorer.offsetWidth;
     explorer.classList.add("scene-entering");
     if (backButton) backButton.focus({ preventScroll: true });
@@ -508,6 +774,34 @@
   };
 
   categoryHost.addEventListener("click", (event) => {
+    const retry = event.target.closest("[data-retry-archives]");
+    if (retry) {
+      retry.disabled = true;
+      retry.textContent = "YENİDEN DENENİYOR...";
+      fetch(new URL("./archives.json", document.baseURI), { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) throw new Error("archives.json alınamadı: " + response.status);
+          return response.json();
+        })
+        .then((data) => {
+          categories = Array.isArray(data.categories) ? data.categories : [];
+          if (!categories.length) throw new Error("Arşiv dosyası boş.");
+          buildAliasLookup();
+          renderCategories();
+          rebuildArchiveSearch();
+          if (archiveSearchCategory) {
+            archiveSearchCategory.innerHTML = '<option value="">Tüm arşiv birimleri</option>' +
+              categories.map((category) => '<option value="' + escapeHtml(category.id) + '">' + escapeHtml(category.title) + '</option>').join("");
+          }
+          renderArchiveSearch();
+        })
+        .catch((error) => {
+          console.error(error);
+          retry.disabled = false;
+          retry.textContent = "YENİDEN DENE ↻";
+        });
+      return;
+    }
     const button = event.target.closest("[data-category-id]");
     if (button) openCategory(button.dataset.categoryId);
   });
@@ -542,6 +836,37 @@
       selectNode(id);
     }
   });
+
+
+  chronologyAtlas?.addEventListener("change", (event) => {
+    const jump = event.target.closest("#chronology-year-jump");
+    if (!jump || !jump.value) return;
+    const anchor = Array.from(chronologyAtlas.querySelectorAll("[data-year-anchor]"))
+      .find((button) => button.dataset.yearAnchor === jump.value);
+    anchor?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest", inline: "center" });
+    anchor?.focus({ preventScroll: true });
+    if (anchor?.dataset.selectNode) selectNode(anchor.dataset.selectNode);
+  });
+  chronologyAtlas?.addEventListener("click", (event) => {
+    const reset = event.target.closest("#chronology-atlas-reset");
+    if (!reset) return;
+    const viewport = chronologyAtlas.querySelector("#chronology-atlas-viewport");
+    if (viewport) viewport.scrollTo({ left: 0, top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  });
+
+  const enablePictureFallbacks = (root = document) => {
+    root.querySelectorAll('picture source[type="image/webp"]').forEach((source) => {
+      const image = source.parentElement?.querySelector("img");
+      if (!image || image.dataset.webpFallbackReady === "true") return;
+      image.dataset.webpFallbackReady = "true";
+      image.addEventListener("error", () => {
+        source.removeAttribute("srcset");
+        const fallback = image.getAttribute("src");
+        if (fallback && image.src !== new URL(fallback, document.baseURI).href) image.src = fallback;
+      }, { once: true });
+    });
+  };
+  enablePictureFallbacks();
 
   const closeArchiveScene = () => {
     if (explorer.hidden || !explorer.classList.contains("is-immersive")) return;
@@ -869,13 +1194,14 @@
     if(result)openCategory(result.dataset.searchCategory,result.dataset.searchId);
   });
 
-  fetch("archives.json", { cache: "no-cache" })
+  fetch(new URL("./archives.json", document.baseURI), { cache: "no-store" })
     .then((response) => {
       if (!response.ok) throw new Error("archives.json alınamadı: " + response.status);
       return response.json();
     })
     .then((data) => {
-      categories = (data.categories || []).sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+      if (!Array.isArray(data.categories) || !data.categories.length) throw new Error("Arşiv dosyasında kategori bulunamadı.");
+      categories = data.categories.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
       buildAliasLookup();
       renderCategories();
       rebuildArchiveSearch();
@@ -887,6 +1213,6 @@
     })
     .catch((error) => {
       console.error(error);
-      categoryHost.innerHTML = '<p class="archive-empty">Arşiv verileri henüz yüklenemedi. Siteyi yenileyin veya yayın işleminin tamamlanmasını bekleyin.</p>';
+      categoryHost.innerHTML = '<div class="archive-load-error" role="alert"><p class="archive-empty">Arşiv verileri yüklenemedi. Bağlantıyı kontrol edip yeniden deneyebilirsin.</p><button type="button" data-retry-archives>ARŞİVİ YENİDEN YÜKLE ↻</button></div>';
     });
 })();

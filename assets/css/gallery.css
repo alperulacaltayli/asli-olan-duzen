@@ -411,3 +411,9 @@ body.lightbox-open { overflow: hidden; }
     max-width:100%;
     max-height:100%;
 }
+
+.gallery-load-error { grid-column:1/-1; padding:35px 18px; border:1px solid rgba(222,222,211,.16); text-align:center; }
+.gallery-load-error button,.archive-load-error button { min-height:42px; padding:0 16px; border:1px solid rgba(174,194,201,.3); color:#d4e0e1; background:rgba(137,163,172,.08); font:8px var(--mono); letter-spacing:.12em; cursor:pointer; }
+.gallery-load-error button:hover,.archive-load-error button:hover { border-color:rgba(183,207,214,.7); background:rgba(137,163,172,.17); }
+.archive-load-error { padding:18px; border:1px solid rgba(174,194,201,.18); text-align:center; }
+.archive-load-error .archive-empty { padding:0 0 12px; }

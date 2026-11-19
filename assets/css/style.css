@@ -5825,3 +5825,428 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
     width:100%;
     height:100%;
 }
+
+
+/* Chronology atlas — an interactive, horizontal historical map. */
+.archive-workspace.is-chronology-atlas {
+    display:block;
+    min-height:0;
+    background:linear-gradient(180deg,rgba(8,19,27,.52),rgba(5,12,19,.18));
+}
+.archive-workspace.is-chronology-atlas > .archive-navigation { display:none; }
+.archive-workspace.is-chronology-atlas > .archive-detail {
+    margin:20px 24px 30px;
+    border-top:1px solid rgba(164,201,214,.23);
+    background:linear-gradient(145deg,rgba(215,225,229,.045),transparent 60%);
+}
+.chronology-atlas[hidden] { display:none; }
+.chronology-atlas {
+    position:relative;
+    padding:20px clamp(12px,2vw,26px) 12px;
+    color:#e5f0f3;
+    isolation:isolate;
+}
+.chronology-atlas-toolbar {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:13px;
+    padding:11px 13px;
+    border:1px solid rgba(174,207,221,.16);
+    background:rgba(5,15,22,.5);
+}
+.chronology-atlas-toolbar > div:first-child {
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+.chronology-atlas-kicker {
+    color:#a9cfdd;
+    font:8px var(--mono);
+    letter-spacing:.15em;
+}
+.chronology-atlas-instructions {
+    color:rgba(196,216,223,.62);
+    font:12px var(--serif);
+}
+.chronology-atlas-tools {
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+.chronology-atlas-tools label {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#a9cbd7;
+    font:8px var(--mono);
+    letter-spacing:.08em;
+}
+.chronology-atlas-tools select,
+.chronology-atlas-reset {
+    min-height:36px;
+    border:1px solid rgba(174,207,221,.22);
+    border-radius:0;
+    padding:0 10px;
+    color:#e1edf0;
+    background:#0b1b25;
+    font:9px var(--mono);
+}
+.chronology-atlas-reset { cursor:pointer; }
+.chronology-atlas-tools select:focus-visible,
+.chronology-atlas-reset:focus-visible,
+.chronology-atlas-arrow:focus-visible,
+.chronology-map-select:focus-visible,
+.chronology-map-next:focus-visible,
+.chronology-year-anchor:focus-visible {
+    outline:2px solid #e3c29c;
+    outline-offset:3px;
+}
+.chronology-atlas-viewport {
+    position:relative;
+    width:100%;
+    min-height:480px;
+    max-height:min(70vh, 1120px);
+    overflow:auto;
+    overscroll-behavior:contain;
+    border:1px solid rgba(160,198,213,.18);
+    background:
+      radial-gradient(ellipse at 30% 10%,rgba(80,137,163,.15),transparent 44%),
+      linear-gradient(135deg,rgba(10,25,36,.96),rgba(4,11,18,.99));
+    perspective:1550px;
+    scrollbar-color:#567485 #0a1821;
+    scrollbar-width:thin;
+}
+.chronology-atlas-viewport::before {
+    content:"";
+    position:sticky;
+    z-index:5;
+    top:0;
+    display:block;
+    height:1px;
+    width:100%;
+    background:linear-gradient(90deg,transparent,rgba(190,226,237,.55),transparent);
+}
+.chronology-atlas-plane {
+    position:relative;
+    transform:rotateX(2.2deg);
+    transform-origin:top center;
+    transform-style:preserve-3d;
+    min-height:500px;
+    background-image:
+      linear-gradient(rgba(146,190,208,.045) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(146,190,208,.045) 1px,transparent 1px);
+    background-size:48px 48px;
+}
+.chronology-atlas-plane::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.3;
+    background:
+      radial-gradient(ellipse at 50% 50%,transparent 34%,rgba(0,0,0,.4) 100%),
+      repeating-linear-gradient(0deg,transparent 0 95px,rgba(127,176,196,.035) 96px,transparent 97px);
+}
+.chronology-atlas-connections {
+    position:absolute;
+    z-index:1;
+    inset:0;
+    overflow:visible;
+    pointer-events:none;
+}
+.chronology-atlas-connections path {
+    fill:none;
+    stroke:rgba(154,205,222,.68);
+    stroke-width:2;
+    vector-effect:non-scaling-stroke;
+    filter:drop-shadow(0 0 5px rgba(91,174,207,.22));
+}
+.chronology-atlas-connections path.is-year-link {
+    stroke:rgba(197,220,227,.4);
+    stroke-width:2.4;
+}
+.chronology-atlas-connections path.is-cross-link {
+    stroke:rgba(210,173,135,.35);
+    stroke-width:1.5;
+    stroke-dasharray:6 8;
+    filter:none;
+}
+.chronology-year-anchor {
+    position:absolute;
+    z-index:4;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    gap:15px;
+    width:620px;
+    min-height:76px;
+    padding:12px 18px;
+    border:1px solid rgba(174,216,230,.4);
+    color:#e9f4f7;
+    background:linear-gradient(100deg,rgba(57,101,123,.82),rgba(9,25,36,.94) 72%);
+    text-align:left;
+    cursor:pointer;
+    box-shadow:0 15px 30px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.08);
+    transform:translateZ(28px);
+    transition:border-color .2s,background .2s,box-shadow .2s;
+}
+.chronology-year-anchor:hover,
+.chronology-year-anchor.is-selected {
+    border-color:rgba(224,241,246,.84);
+    background:linear-gradient(100deg,rgba(76,133,157,.88),rgba(12,34,47,.98) 72%);
+    box-shadow:0 17px 35px rgba(0,0,0,.34),0 0 24px rgba(119,181,204,.12);
+}
+.chronology-year-number {
+    color:#f4fbfd;
+    font:500 25px var(--display);
+    letter-spacing:.04em;
+}
+.chronology-year-caption {
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+.chronology-year-caption b {
+    color:#c9e0e7;
+    font:8px var(--mono);
+    letter-spacing:.14em;
+}
+.chronology-year-caption span {
+    color:rgba(209,228,233,.7);
+    font:13px var(--serif);
+}
+.chronology-year-count {
+    color:#a6cbd8;
+    font:8px var(--mono);
+    letter-spacing:.1em;
+    white-space:nowrap;
+}
+.chronology-map-node {
+    position:absolute;
+    z-index:3;
+    width:285px;
+    min-height:190px;
+    transform:translateZ(18px);
+    transition:filter .22s,transform .22s;
+}
+.chronology-map-node:hover { z-index:6; transform:translateZ(42px) translateY(-4px); }
+.chronology-map-node.is-selected { z-index:7; transform:translateZ(48px) translateY(-3px); }
+.chronology-map-node.is-selected .chronology-map-select {
+    border-color:rgba(226,242,247,.86);
+    box-shadow:0 0 0 1px rgba(160,210,226,.25),0 17px 38px rgba(0,0,0,.42),0 0 30px rgba(114,183,207,.17);
+}
+.chronology-map-select {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    min-height:190px;
+    padding:0;
+    overflow:hidden;
+    border:1px solid rgba(160,198,213,.3);
+    color:#e8f0f1;
+    background:linear-gradient(145deg,rgba(18,39,52,.98),rgba(5,15,23,.99));
+    text-align:left;
+    cursor:pointer;
+    box-shadow:0 13px 26px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.055);
+    transition:border-color .2s,box-shadow .2s,background .2s;
+}
+.chronology-map-select:hover {
+    border-color:rgba(199,229,239,.65);
+    background:linear-gradient(145deg,rgba(29,59,76,.98),rgba(7,19,29,.99));
+}
+.chronology-map-image {
+    position:relative;
+    display:block;
+    width:100%;
+    height:83px;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 50% 48%,rgba(151,198,214,.23),transparent 31%),
+      repeating-linear-gradient(135deg,rgba(172,211,223,.07) 0 1px,transparent 1px 15px),
+      #102432;
+}
+.chronology-map-image img {
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.9;
+    filter:saturate(.72) contrast(1.04);
+    transition:transform .5s,opacity .3s;
+}
+.chronology-map-select:hover .chronology-map-image img { transform:scale(1.045); opacity:1; }
+.chronology-map-image.is-placeholder::after {
+    content:"AOD / KRONOLOJİ KAYDI";
+    position:absolute;
+    right:12px;
+    bottom:10px;
+    color:rgba(199,224,232,.52);
+    font:7px var(--mono);
+    letter-spacing:.15em;
+}
+.chronology-map-copy {
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    padding:10px 12px 11px;
+}
+.chronology-map-meta {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    color:#a6cbd7;
+    font:7px var(--mono);
+    letter-spacing:.08em;
+}
+.chronology-map-copy strong {
+    color:#f0f5f4;
+    font:17px/1.15 var(--serif);
+    font-weight:500;
+}
+.chronology-map-copy small {
+    display:-webkit-box;
+    overflow:hidden;
+    color:rgba(195,213,216,.65);
+    font:12px/1.25 var(--serif);
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+}
+.chronology-map-next {
+    position:absolute;
+    z-index:4;
+    right:-15px;
+    bottom:12px;
+    display:grid;
+    place-items:center;
+    width:31px;
+    height:31px;
+    border:1px solid rgba(190,222,232,.48);
+    border-radius:50%;
+    color:#f0f8fa;
+    background:#31596d;
+    font:17px var(--mono);
+    cursor:pointer;
+    box-shadow:0 6px 15px rgba(0,0,0,.3);
+    transition:transform .2s,background .2s;
+}
+.chronology-map-next:hover {
+    transform:scale(1.12);
+    background:#4c7d94;
+}
+.chronology-atlas-arrow {
+    position:absolute;
+    z-index:5;
+    display:grid;
+    place-items:center;
+    width:34px;
+    height:34px;
+    border:1px solid rgba(190,222,232,.48);
+    border-radius:50%;
+    color:#e7f4f7;
+    background:rgba(39,80,101,.94);
+    font:16px var(--mono);
+    cursor:pointer;
+    box-shadow:0 5px 14px rgba(0,0,0,.24);
+    transform:translateZ(42px);
+    transition:background .2s,transform .2s;
+}
+.chronology-atlas-arrow:hover {
+    background:#56849a;
+    transform:translateZ(50px) scale(1.08);
+}
+.chronology-atlas-legend {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+    padding:11px 3px 0;
+    color:rgba(182,207,216,.62);
+    font:8px var(--mono);
+    letter-spacing:.08em;
+}
+.chronology-atlas-legend span { display:inline-flex; align-items:center; gap:7px; }
+.chronology-atlas-legend i {
+    display:inline-block;
+    width:16px;
+    height:2px;
+    background:#9ccbdc;
+}
+.chronology-atlas-legend i.is-related {
+    background:repeating-linear-gradient(90deg,#c9a989 0 4px,transparent 4px 7px);
+}
+.chronology-detail-visual {
+    display:grid;
+    grid-template-columns:minmax(0,1.05fr) minmax(200px,.95fr);
+    gap:20px;
+    align-items:center;
+    margin:22px 0 25px;
+    padding:14px;
+    border:1px solid rgba(165,204,218,.2);
+    background:rgba(5,16,23,.32);
+}
+.chronology-detail-visual picture {
+    display:block;
+    min-width:0;
+    background:#08141d;
+}
+.chronology-detail-visual img {
+    display:block;
+    width:100%;
+    max-height:340px;
+    object-fit:cover;
+}
+.chronology-detail-visual figcaption {
+    color:#a9cbd7;
+    font:8px var(--mono);
+    letter-spacing:.11em;
+}
+.chronology-detail-visual p {
+    margin:0;
+    color:#bfd2d9;
+    font:18px/1.5 var(--serif);
+}
+.chronology-step-nav {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    margin:24px 0;
+}
+.chronology-step-nav button {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+    min-width:0;
+    padding:13px 15px;
+    border:1px solid rgba(165,204,218,.22);
+    color:#e0ebee;
+    background:rgba(94,145,166,.07);
+    text-align:left;
+    cursor:pointer;
+    transition:border-color .2s,background .2s;
+}
+.chronology-step-nav button:last-child { align-items:flex-end; text-align:right; }
+.chronology-step-nav button:hover { border-color:rgba(190,224,235,.6); background:rgba(94,145,166,.14); }
+.chronology-step-nav small { color:#a9cbd7; font:7px var(--mono); letter-spacing:.12em; }
+.chronology-step-nav strong { color:#e9f3f5; font:16px/1.2 var(--serif); font-weight:500; }
+@media(max-width:760px) {
+    .chronology-atlas { padding:12px 8px 8px; }
+    .chronology-atlas-viewport { max-height:67vh; min-height:440px; }
+    .chronology-atlas-tools { width:100%; justify-content:space-between; }
+    .chronology-year-anchor { width:590px; }
+    .chronology-map-node { width:270px; }
+    .chronology-detail-visual { grid-template-columns:1fr; }
+    .chronology-step-nav { grid-template-columns:1fr; }
+    .chronology-step-nav button:last-child { align-items:flex-start; text-align:left; }
+}
+@media(prefers-reduced-motion:reduce) {
+    .chronology-map-node,.chronology-map-select,.chronology-map-image img,.chronology-map-next,.chronology-atlas-arrow {
+        transition:none !important;
+    }
+    .chronology-atlas-plane { transform:none; }
+}
