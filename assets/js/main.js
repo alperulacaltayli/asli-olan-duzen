@@ -682,6 +682,7 @@
 
   const renderChronologyModeChoice = () => {
     chronologyMode = null;
+    if (explorer) explorer.scrollTo({ top: 0, behavior: "auto" });
     syncChronologyViewSwitch();
     archiveWorkspace?.classList.remove("is-chronology-atlas", "is-chronology-reading", "is-chronology-normal");
     archiveWorkspace?.classList.add("is-chronology-choice");
@@ -715,6 +716,7 @@
     if (!activeCategory || activeCategory.id !== "chronology" || !["map", "normal"].includes(mode)) return;
     const previousSelection = selectedNodeId;
     chronologyMode = mode;
+    if (explorer) explorer.scrollTo({ top: 0, behavior: "auto" });
     syncChronologyViewSwitch();
     archiveWorkspace?.classList.remove("is-chronology-choice", "is-chronology-reading");
     if (chronologyAtlas) chronologyAtlas.hidden = mode !== "map";

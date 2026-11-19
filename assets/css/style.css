@@ -7316,3 +7316,25 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
         transition: none !important;
     }
 }
+
+
+/* Keep the chronology header and view switch readable on narrow screens. */
+@media (max-width: 760px) {
+    .archive-explorer.is-immersive .archive-explorer-top {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px;
+    }
+    .archive-explorer.is-immersive .archive-explorer-top > div:first-child {
+        width: 100%;
+        max-width: none;
+    }
+    .archive-explorer.is-immersive .chronology-view-switch {
+        align-self: stretch;
+        width: 100%;
+        margin: 0;
+    }
+    .archive-explorer.is-immersive .archive-back {
+        align-self: flex-end;
+    }
+}
