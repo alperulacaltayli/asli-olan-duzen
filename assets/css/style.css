@@ -6283,3 +6283,413 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
         justify-self: center;
     }
 }
+
+
+/* Chronology atlas refinement: calmer spacing, no clickable arrow controls,
+   and a focused full-width reading state after selecting an event. */
+.chronology-atlas-arrow,
+.chronology-map-next {
+    display: none !important;
+    pointer-events: none !important;
+}
+.chronology-atlas-toolbar {
+    gap: 18px;
+    margin-bottom: 20px;
+    padding: 16px 20px;
+}
+.chronology-atlas-instructions {
+    max-width: 58ch;
+    line-height: 1.45;
+}
+.chronology-atlas-viewport {
+    max-height: min(74vh, 1180px);
+    min-height: 520px;
+}
+.chronology-atlas-plane {
+    background-size: 56px 56px;
+}
+.chronology-year-anchor {
+    width: 720px;
+    min-height: 86px;
+    padding: 15px 22px;
+}
+.chronology-map-node {
+    width: 370px;
+    min-height: 240px;
+}
+.chronology-map-select {
+    min-height: 240px;
+}
+.chronology-map-image {
+    height: 105px;
+}
+.chronology-map-copy {
+    gap: 7px;
+    padding: 13px 15px 15px;
+}
+.chronology-map-copy strong {
+    font-size: 19px;
+    line-height: 1.2;
+}
+.chronology-map-copy small {
+    font-size: 13px;
+    line-height: 1.4;
+}
+.chronology-atlas-connections path.is-sequence-link {
+    stroke: rgba(154,205,222,.54);
+    stroke-width: 1.8;
+}
+.chronology-atlas-connections path.is-year-link {
+    stroke: rgba(197,220,227,.32);
+    stroke-width: 2;
+}
+.chronology-atlas-legend {
+    padding: 15px 4px 2px;
+}
+
+/* Map landing: keep the reading pane hidden until an event is selected. */
+.archive-workspace.is-chronology-atlas:not(.is-chronology-reading) > .archive-detail {
+    display: none;
+}
+.archive-workspace.is-chronology-atlas.is-chronology-reading > #chronology-atlas {
+    display: none !important;
+}
+.archive-workspace.is-chronology-atlas.is-chronology-reading > .archive-detail {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: calc(100dvh - 205px);
+    margin: 0;
+    padding: clamp(24px, 4vw, 66px) clamp(18px, 6vw, 88px);
+    box-sizing: border-box;
+    border: 0;
+    background:
+      radial-gradient(ellipse at 85% 0%,rgba(104,160,184,.12),transparent 46%),
+      linear-gradient(145deg,rgba(9,22,31,.5),rgba(5,13,20,.16));
+    animation: chronologyReadingOpen .42s cubic-bezier(.2,.8,.2,1) both;
+}
+.archive-workspace.is-chronology-reading .chronology-detail {
+    width: min(100%, 1080px);
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 4px 0 36px;
+}
+.archive-workspace.is-chronology-reading .chronology-detail::after {
+    right: 0;
+    top: 80px;
+    opacity: .7;
+}
+.chronology-detail-top {
+    align-items: center;
+    min-height: 46px;
+}
+.chronology-return-map {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 14px;
+    border: 1px solid rgba(174,207,221,.28);
+    color: #c9e2e9;
+    background: rgba(116,163,185,.075);
+    font: 8px var(--mono);
+    letter-spacing: .12em;
+    cursor: pointer;
+    transition: border-color .2s,background .2s,transform .2s;
+}
+.chronology-return-map:hover {
+    border-color: rgba(190,224,235,.65);
+    background: rgba(116,181,206,.14);
+    transform: translateX(-2px);
+}
+.chronology-return-map:focus-visible {
+    outline: 2px solid #e3c29c;
+    outline-offset: 3px;
+}
+.chronology-detail-date {
+    margin-top: 34px;
+}
+.chronology-detail h3 {
+    max-width: 24ch;
+    font-size: clamp(32px,5vw,58px);
+    line-height: 1.08;
+}
+.chronology-detail-summary {
+    max-width: 68ch;
+    margin: 22px 0 28px;
+    font-size: clamp(18px,2vw,23px);
+    line-height: 1.55;
+}
+.chronology-detail-visual {
+    grid-template-columns: minmax(0,1.2fr) minmax(240px,.8fr);
+    grid-template-rows: auto auto;
+    gap: 8px 24px;
+    align-items: center;
+    margin: 30px 0 34px;
+    padding: 18px;
+}
+.chronology-detail-visual picture {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    overflow: hidden;
+}
+.chronology-detail-visual img {
+    width: 100%;
+    max-height: 440px;
+    object-fit: cover;
+}
+.chronology-detail-visual figcaption {
+    grid-column: 1;
+    grid-row: 2;
+    padding-top: 4px;
+}
+.chronology-detail-visual p {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    padding: 10px;
+    font-size: clamp(18px,2.1vw,24px);
+    line-height: 1.55;
+}
+.chronology-detail-body {
+    max-width: 76ch;
+    margin: 28px 0 36px;
+    color: #c7d8de;
+    font-size: 17px;
+    line-height: 1.75;
+}
+.chronology-detail-body p {
+    margin: 0 0 1.25em;
+}
+.chronology-detail-body h2,
+.chronology-detail-body h3,
+.chronology-detail-body h4 {
+    margin: 1.65em 0 .65em;
+    color: #e8f2f4;
+    line-height: 1.25;
+}
+.chronology-detail-body ul,
+.chronology-detail-body ol {
+    margin: 0 0 1.4em;
+    padding-left: 1.5em;
+}
+.chronology-detail-body li {
+    margin: .45em 0;
+}
+.chronology-step-nav {
+    margin: 40px 0 32px;
+    gap: 16px;
+}
+.chronology-step-nav button {
+    min-height: 86px;
+    padding: 17px 20px;
+}
+@keyframes chronologyReadingOpen {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Phone and narrow-tablet treatment. The map remains horizontally pannable;
+   selected events switch to a single-column, readable article. */
+@media(max-width: 760px) {
+    .chronology-atlas {
+        padding: 10px 8px 12px;
+    }
+    .chronology-atlas-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 12px;
+        padding: 13px 12px;
+    }
+    .chronology-atlas-toolbar > div:first-child {
+        gap: 5px;
+    }
+    .chronology-atlas-instructions {
+        font-size: 13px;
+    }
+    .chronology-atlas-tools {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0,1fr) auto;
+        gap: 8px;
+    }
+    .chronology-atlas-tools label {
+        justify-content: space-between;
+        min-width: 0;
+        gap: 6px;
+    }
+    .chronology-atlas-tools select {
+        min-width: 0;
+        max-width: 55%;
+    }
+    .chronology-atlas-reset {
+        white-space: nowrap;
+        padding: 0 9px;
+    }
+    .chronology-atlas-viewport {
+        min-height: 450px;
+        max-height: 64vh;
+        border-radius: 2px;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x pan-y;
+    }
+    .chronology-atlas-plane {
+        transform: none;
+        transform-style: flat;
+        background-size: 42px 42px;
+    }
+    .chronology-year-anchor {
+        width: 700px;
+        min-height: 72px;
+        grid-template-columns: auto minmax(0,1fr) auto;
+        gap: 10px;
+        padding: 10px 13px;
+        transform: none;
+    }
+    .chronology-year-number {
+        font-size: 21px;
+    }
+    .chronology-year-caption span {
+        font-size: 12px;
+    }
+    .chronology-year-count {
+        font-size: 7px;
+    }
+    .chronology-map-node {
+        width: 300px;
+        min-height: 230px;
+        transform: none;
+    }
+    .chronology-map-node:hover,
+    .chronology-map-node.is-selected {
+        transform: none;
+    }
+    .chronology-map-select {
+        min-height: 230px;
+    }
+    .chronology-map-image {
+        height: 96px;
+    }
+    .chronology-map-copy {
+        padding: 11px 12px 13px;
+    }
+    .chronology-map-copy strong {
+        font-size: 17px;
+    }
+    .chronology-map-copy small {
+        font-size: 12px;
+    }
+    .chronology-atlas-legend {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 7px;
+    }
+    .archive-workspace.is-chronology-reading > .archive-detail {
+        min-height: 0;
+        padding: 20px 14px 34px;
+    }
+    .archive-workspace.is-chronology-reading .chronology-detail {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .chronology-detail-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 14px;
+    }
+    .chronology-return-map {
+        width: 100%;
+        min-height: 44px;
+        justify-content: flex-start;
+        padding: 0 13px;
+    }
+    .chronology-detail-date {
+        margin: 24px 0 9px;
+        font-size: 9px;
+        letter-spacing: .12em;
+    }
+    .chronology-detail h3 {
+        max-width: none;
+        font-size: clamp(28px,8vw,40px);
+        line-height: 1.12;
+        overflow-wrap: anywhere;
+    }
+    .chronology-detail-summary {
+        margin: 17px 0 22px;
+        padding-left: 12px;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+    .chronology-detail-visual {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        grid-template-rows: auto auto auto;
+        gap: 9px;
+        margin: 22px 0 26px;
+        padding: 10px;
+    }
+    .chronology-detail-visual picture {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .chronology-detail-visual img {
+        max-height: 260px;
+        object-fit: contain;
+    }
+    .chronology-detail-visual figcaption {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .chronology-detail-visual p {
+        grid-column: 1;
+        grid-row: 3;
+        padding: 4px 2px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .chronology-detail-body {
+        max-width: none;
+        margin: 22px 0 28px;
+        font-size: 16px;
+        line-height: 1.72;
+        overflow-wrap: anywhere;
+    }
+    .chronology-step-nav {
+        grid-template-columns: minmax(0,1fr);
+        gap: 9px;
+        margin: 30px 0 24px;
+    }
+    .chronology-step-nav button,
+    .chronology-step-nav button:last-child {
+        min-height: 74px;
+        align-items: flex-start;
+        padding: 14px;
+        text-align: left;
+    }
+}
+@media(max-width: 390px) {
+    .chronology-atlas-tools {
+        grid-template-columns: minmax(0,1fr);
+    }
+    .chronology-atlas-tools label {
+        min-height: 36px;
+    }
+    .chronology-atlas-tools select {
+        max-width: 62%;
+    }
+    .chronology-atlas-reset {
+        min-height: 38px;
+    }
+}
+@media(prefers-reduced-motion:reduce) {
+    .archive-workspace.is-chronology-reading > .archive-detail {
+        animation: none;
+    }
+    .chronology-return-map {
+        transition: none;
+    }
+}
