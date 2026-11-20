@@ -39,10 +39,16 @@ def read_doc(relative):
                     k, v = line.split(":", 1)
                     meta[k.strip().lower()] = v.strip().strip("'\"")
             raw = raw[end + 4:].lstrip("\n")
-    status = meta.get("status", "").casefold()
+    status = meta.get("status", "").casefold().strip()
     tags = meta.get("tags", "").casefold()
     privacy = meta.get("gizlilik", meta.get("privacy", "")).casefold()
-    blocked = ("draft", "proposed", "taslak", "yazar onayı bekliyor", "approval pending", "gizli", "classified")
+    visibility_key = next((key for key in ("visibility", "publication", "yayın") if key in meta), None)
+    visibility = meta.get(visibility_key, "").casefold().strip() if visibility_key else ""
+    public_values = {"public", "kamuya açık", "kamuya acik", "herkese açık", "herkese acik"}
+    if visibility_key and visibility not in public_values:
+        return None
+    blocked = ("draft", "proposed", "taslak", "yazar onayı bekliyor", "approval pending",
+               "gizli", "classified", "internal", "private", "confidential", "unlisted", "spoiler")
     if any(term in status + " " + tags + " " + privacy for term in blocked):
         return None
     lines = raw.splitlines()
@@ -104,6 +110,7 @@ def import_chronology():
     folder=VAULT/"Tarihi Olaylar"/"Olaylar"
     if not folder.is_dir(): return None
     years,undated={},[]
+    seen_titles=set()
     for path in sorted(folder.glob("*.md"),key=lambda p:p.name.casefold()):
         rel=path.relative_to(VAULT).as_posix()
         doc=read_doc(rel)
@@ -112,8 +119,26 @@ def import_chronology():
         if "Akşam yemeği" in doc["title"] and year is None:
             year,month,day,label=1940,11,0,"Kasım 1940 · gün belirtilmemiş"
         rec=node("chronology",doc,label)
+        seen_titles.add(normalize(doc["title"]))
         if year is None: undated.append(rec)
         else: years.setdefault(year,[]).append((month,day,doc["title"],rec))
+
+    manual_root = ROOT / "content" / "archives" / "chronology"
+    if manual_root.is_dir():
+        for path in sorted(manual_root.rglob("*"), key=lambda item: item.as_posix().casefold()):
+            if not path.is_file() or path.name.lower() in {"readme.md", "index.md", "index.txt"}:
+                continue
+            doc = read_public_archive_note(path, manual_root)
+            if not doc or normalize(doc["title"]) in seen_titles:
+                continue
+            year,month,day,label = parse_event_date(path.stem + " " + doc.get("date", ""), doc["title"])
+            rec = node("chronology", doc, label or doc.get("date", ""))
+            rec["order"] = doc.get("order", 999)
+            if year is None:
+                undated.append(rec)
+            else:
+                years.setdefault(year, []).append((month,day,doc["title"],rec))
+            seen_titles.add(normalize(doc["title"]))
     roots=[]
     for year in sorted(years):
         events=[x[3] for x in sorted(years[year],key=lambda x:(x[0],x[1],x[2].casefold()))]
@@ -462,8 +487,140 @@ def import_characters():
         "nodes":roots
     }
 
+
+def read_public_archive_note(path, archive_root):
+    """Read an archive document only when status and visibility are explicitly approved/public."""
+    if not path.is_file() or path.suffix.lower() not in {".md", ".txt"}:
+        return None
+    raw = path.read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
+    if not raw.startswith("---\n"):
+        return None
+    end = raw.find("\n---", 4)
+    if end < 0:
+        return None
+
+    metadata = {}
+    for line in raw[4:end].splitlines():
+        if ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+            value = value[1:-1]
+        metadata[key.strip().lower()] = value
+
+    status = normalize(metadata.get("status", ""))
+    visibility = normalize(metadata.get("visibility", metadata.get("publication", metadata.get("yayın", ""))))
+    if status not in {"onaylandi", "approved", "established canon"}:
+        return None
+    if visibility not in {"public", "kamuya acik", "herkese acik"}:
+        return None
+
+    restricted = normalize(" ".join([
+        metadata.get("tags", ""),
+        metadata.get("privacy", ""),
+        metadata.get("gizlilik", ""),
+    ]))
+    blocked = ("taslak", "draft", "proposed", "gizli", "classified", "internal",
+               "private", "confidential", "unlisted", "spoiler")
+    if any(term in restricted for term in blocked):
+        return None
+
+    body = raw[end + 4:].lstrip("\n")
+    lines = body.splitlines()
+    title = metadata.get("title", "").strip()
+    if not title and path.suffix.lower() == ".txt":
+        first = next((i for i, line in enumerate(lines) if line.strip()), None)
+        if first is not None:
+            title = lines[first].strip().lstrip("#").strip()
+            lines.pop(first)
+    if not title:
+        for index, line in enumerate(lines):
+            match = re.match(r"^#\s+(.+)$", line.strip())
+            if match:
+                title = match.group(1).strip()
+                lines.pop(index)
+                break
+    if not title:
+        title = path.parent.name if path.name.lower() in {"index.md", "index.txt"} else path.stem
+
+    content = "\n".join(lines).strip()
+    summary = metadata.get("summary", "").strip()
+    if not summary:
+        for paragraph in re.split(r"\n\s*\n", content):
+            candidate = paragraph.strip()
+            if candidate:
+                summary = re.sub(r"[*_>#]", "", candidate)[:240]
+                break
+    aliases = []
+    raw_aliases = metadata.get("aliases", "").strip()
+    if raw_aliases.startswith("[") and raw_aliases.endswith("]"):
+        aliases = [item.strip().strip("'\"") for item in raw_aliases[1:-1].split(",") if item.strip()]
+    try:
+        order = int(metadata.get("order", 999))
+    except (TypeError, ValueError):
+        order = 999
+
+    return {
+        "title": title,
+        "summary": summary,
+        "content": content,
+        "aliases": aliases,
+        "sourceName": path.stem,
+        "path": path.relative_to(archive_root).as_posix(),
+        "date": str(metadata.get("date", metadata.get("period", ""))).strip(),
+        "order": order,
+    }
+
+
+def scan_public_archive_nodes(directory, archive_root, category, excluded=None):
+    """Preserve folder/index hierarchy while excluding every unapproved document."""
+    if not directory.is_dir():
+        return []
+    excluded = excluded or set()
+    entries = sorted(directory.iterdir(), key=lambda item: natural_key(item.name))
+    records = []
+    paired_directories = set()
+
+    for entry in entries:
+        if not entry.is_file() or entry.resolve() in excluded:
+            continue
+        if entry.suffix.lower() not in {".md", ".txt"} or entry.name.lower() in {"readme.md", "index.md", "index.txt"}:
+            continue
+        doc = read_public_archive_note(entry, archive_root)
+        if not doc:
+            continue
+        paired = directory / entry.stem
+        children = scan_public_archive_nodes(paired, archive_root, category) if paired.is_dir() else []
+        if paired.is_dir():
+            paired_directories.add(paired.resolve())
+        record = node(category, doc, doc.get("date", ""))
+        record["order"] = doc.get("order", 999)
+        record["children"] = children
+        records.append(record)
+
+    for entry in entries:
+        if not entry.is_dir() or entry.resolve() in paired_directories:
+            continue
+        index_file = next((entry / name for name in ("index.md", "index.txt") if (entry / name).is_file()), None)
+        if index_file:
+            child_nodes = scan_public_archive_nodes(entry, archive_root, category, {index_file.resolve()})
+            doc = read_public_archive_note(index_file, archive_root)
+            if doc:
+                record = node(category, doc, doc.get("date", ""))
+                record["order"] = doc.get("order", 999)
+                record["children"] = child_nodes
+                records.append(record)
+            else:
+                records.extend(child_nodes)
+        else:
+            records.extend(scan_public_archive_nodes(entry, archive_root, category))
+
+    return sorted(records, key=lambda item: (item.get("order", 999), natural_key(item["title"])))
+
+
 def public_folder_nodes(category, relative_folder):
-    """Import only explicitly approved, public Markdown notes from an author folder."""
+    """Import only explicitly approved, public Markdown notes from an Obsidian author folder."""
     folder = VAULT / relative_folder
     if not folder.is_dir():
         return []
@@ -471,15 +628,11 @@ def public_folder_nodes(category, relative_folder):
     for path in sorted(folder.rglob("*.md"), key=lambda item: item.as_posix().casefold()):
         if path.name.casefold() in {"readme.md", "index.md"}:
             continue
-        relative = path.relative_to(VAULT).as_posix()
-        raw_head = path.read_text(encoding="utf-8-sig")[:1800]
-        status = re.search(r"(?mi)^status\s*:\s*(onaylandı|onaylandi|approved|established canon)\s*$", raw_head)
-        visibility = re.search(r"(?mi)^(?:visibility|publication|yayın)\s*:\s*(public|kamuya açık|herkese açık)\s*$", raw_head)
-        if not status or not visibility:
-            continue
-        doc = read_doc(relative)
+        doc = read_public_archive_note(path, VAULT)
         if doc:
-            records.append(node(category, doc, str(doc.get("date", ""))))
+            record = node(category, doc, str(doc.get("date", "")))
+            record["order"] = doc.get("order", 999)
+            records.append(record)
     return records
 
 def import_institutions():
@@ -530,24 +683,8 @@ def import_geography():
     }
 
 def import_technology():
-    rel = "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Necdet Atalay.md"
-    doc = read_doc(rel)
-    if not doc:
-        return None
-    entry = {
-        "id":"technology-ta-85-gokkanat",
-        "path":rel,
-        "sourceName":"TA-85 Gökkanat",
-        "title":"TA-85 Gökkanat",
-        "date":"Prototip dönemi: 1943",
-        "summary":"Türk uçan kanat tipi bombardıman uçağı projesi.",
-        "content":"**TA-85 Gökkanat**, evrende yer alan Türk uçan kanat tipi bombardıman uçağı projesidir. Necdet Atalay'ın karakter dosyası, uçağın yapımında görev aldığını kaydeder. Bu katalog yalnızca genel ve yayımlanabilir tarihçe bilgisini içerir; uygulamalı teknik ayrıntı veya gizli dosya aktarılmamıştır.",
-        "order":1,
-        "aliases":["Gökkanat","TA-85"],
-        "children":[],
-        "links":[]
-    }
-    records = [entry]
+    technology_root = ROOT / "content" / "archives" / "technology"
+    records = scan_public_archive_nodes(technology_root, technology_root, "technology")
     records += public_folder_nodes("technology", "Alternatif Tarih/Teknoloji/Kamuya Açık")
     return {
         "id":"technology",
@@ -689,22 +826,35 @@ def attach_links(categories):
         clear_unpublished_links(cat.get("nodes", []))
 
 def manual_categories():
-    root=ROOT/"content"/"archives"
-    categories=[]
-    reserved={"chronology","world","characters","institutions","technology","geography","society","media","documents"}
-    if not root.is_dir(): return categories
-    import json
-    for folder in sorted(root.iterdir(),key=lambda p:p.name.casefold()):
-        if not folder.is_dir() or folder.name in reserved or folder.name.startswith("_"): continue
-        config_file=folder/"_archive.json"
-        cfg=json.loads(config_file.read_text(encoding="utf-8")) if config_file.is_file() else {"title":folder.name.title(),"view":"tree","order":99}
-        records=[]
-        for path in sorted(folder.rglob("*.md"),key=lambda p:p.as_posix().casefold()):
-            rel=path.relative_to(folder).as_posix()
-            raw=path.read_text(encoding="utf-8")
-            doc={"title":path.stem,"summary":"","content":raw,"aliases":[],"sourceName":path.stem,"path":rel}
-            records.append(node(folder.name,doc))
-        categories.append({"id":folder.name,"title":cfg.get("title",folder.name.title()),"description":cfg.get("description",""),"view":cfg.get("view","tree"),"label":cfg.get("label","ARŞİV"),"order":cfg.get("order",99),"nodes":records})
+    """Discover extra archive units without publishing unapproved documents."""
+    root = ROOT / "content" / "archives"
+    categories = []
+    reserved = {"chronology", "world", "characters", "institutions", "technology", "geography", "society", "media", "documents"}
+    if not root.is_dir():
+        return categories
+
+    for folder in sorted(root.iterdir(), key=lambda item: item.name.casefold()):
+        if not folder.is_dir() or folder.name in reserved or folder.name.startswith("_"):
+            continue
+        config_file = folder / "_archive.json"
+        cfg = json.loads(config_file.read_text(encoding="utf-8")) if config_file.is_file() else {
+            "title": folder.name.title(), "view": "tree", "order": 99
+        }
+        records = scan_public_archive_nodes(folder, folder, folder.name)
+        if not records:
+            continue
+        view = cfg.get("view", "tree")
+        if view not in {"tree", "catalogue"}:
+            view = "tree"
+        categories.append({
+            "id": folder.name,
+            "title": cfg.get("title", folder.name.title()),
+            "description": cfg.get("description", ""),
+            "view": view,
+            "label": cfg.get("label", "ARŞİV"),
+            "order": cfg.get("order", 99),
+            "nodes": records,
+        })
     return categories
 
 def flatten(nodes):

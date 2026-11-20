@@ -13,7 +13,12 @@ Alper Ulaç ALTAYLI'nın **Aslı Olan Düzen** adlı alternatif tarih romanı ve
 
 ## Arşivleri dosyalardan yönetme
 
-Bütün arşiv verileri `content/archives/` klasörünün içindedir. Site, bu klasörleri ve içlerindeki Markdown / TXT dosyalarını okuyarak arşiv arayüzünü üretir.
+Arşivler iki denetimli kaynaktan üretilir:
+
+- `AslıOlanDüzenObsidianVault/`: Kronoloji, kısa karakter tanıtımları, soy ağaçları ve mevcut kanondan seçilmiş dünya/kurum/toplum/teknoloji notları için kullanılır. Bu kaynakta sabit izin listesi vardır; her Markdown dosyası otomatik yayımlanmaz.
+- `content/archives/`: Obsidian dışındaki ek arşiv birimleri ve tamamlayıcı kayıtlar içindir. Yeni bir kayıt için YAML üstbilgisinde hem `status: onaylandı` hem de `visibility: public` bulunmalıdır. Bu iki koşul birlikte sağlanmadan dosya siteye aktarılmaz.
+
+`content/archives/chronology/` ve `content/archives/technology/` özel tamamlayıcı kaynaklarıdır; bunlarda da yalnızca onaylı ve public işaretli kayıtlar yayımlanır.
 
 ### Yeni bir kronoloji olayı eklemek
 
@@ -79,7 +84,26 @@ Desteklenen görünümler:
 - `tree`: dallanan olay / kayıt ağacı.
 - `catalogue`: kartlı katalog.
 
-Sonra aynı klasöre `.md` / `.txt` kayıtları veya `index.md` içeren klasörler ekle.
+Sonra aynı klasöre `.md` / `.txt` kayıtları veya `index.md` içeren klasörler ekle. Her yayımlanacak kayıt için iki onay alanı zorunludur:
+
+```md
+---
+title: Kayıt başlığı
+status: onaylandı
+visibility: public
+date: 1985
+summary: Kısa açıklama.
+order: 1
+---
+
+# Kayıt başlığı
+
+Yayımlanmasına onay verilen içerik.
+```
+
+- `index.md` klasörün ana kaydı olur; onaylı alt dosyalar onun altında listelenir.
+- Onaysız, taslak, gizli, internal veya private kayıtlar yayımlanmaz.
+- `README.md` ve `_archive.json` içerik kaydı değildir.
 
 ## Yayınlama sistemi
 
