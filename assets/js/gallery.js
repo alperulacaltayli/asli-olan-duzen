@@ -100,9 +100,12 @@
     if(lightboxWebp){if(item.webp_src)lightboxWebp.srcset=item.webp_src;else lightboxWebp.removeAttribute("srcset");}
     lightboxImage.src=item.src;lightboxImage.alt=item.title;lightboxTitle.textContent=item.title;
     lightboxNumber.textContent=String(activeIndex+1).padStart(2,"0")+" / "+String(images.length).padStart(2,"0");showMetadata(item);
+    const address=new URL(window.location.href);address.searchParams.set("image",item.src);address.searchParams.delete("video");window.history.replaceState({...(window.history.state||{}),aodImage:item.src},"",address);
   };
   const openLightbox=(index,trigger)=>{lastTrigger=trigger;showImage(index);lightbox.hidden=false;document.body.classList.add("lightbox-open");closeButton.focus();};
-  const closeLightbox=()=>{lightbox.hidden=true;document.body.classList.remove("lightbox-open");if(lastTrigger&&typeof lastTrigger.focus==="function")lastTrigger.focus();activeIndex=-1;};
+  const closeLightbox=()=>{lightbox.hidden=true;document.body.classList.remove("lightbox-open");if(lastTrigger&&typeof lastTrigger.focus==="function")lastTrigger.focus();activeIndex=-1;
+    const address=new URL(window.location.href);address.searchParams.delete("image");window.history.replaceState(window.history.state||{},"",address);
+  };
   grid?.addEventListener("click",event=>{
     if(event.target.closest("[data-retry-gallery]")){loadGallery();return;}
     const card=event.target.closest("[data-gallery-index]");
@@ -133,6 +136,11 @@
         images=data.images;
         populateFilters();
         filterGallery();
+        const requestedImage=new URLSearchParams(window.location.search).get("image");
+        if(requestedImage){
+          const requestedIndex=images.findIndex(item=>item.src===requestedImage);
+          if(requestedIndex>=0)openLightbox(requestedIndex,grid.querySelector('[data-gallery-index="'+requestedIndex+'"]'));
+        }
       })
       .catch(error=>{
         console.error(error);
@@ -180,16 +188,19 @@
     videoError.hidden=true;
     videoPrevious.hidden=videos.length<2;
     videoNext.hidden=videos.length<2;
+    const address=new URL(window.location.href);address.searchParams.set("video",item.src);address.searchParams.delete("image");window.history.replaceState({...(window.history.state||{}),aodVideo:item.src},"",address);
   };
 
-  const openVideoPlayer=(index,trigger)=>{
+  const openVideoPlayer=(index,trigger,autoplay=true)=>{
     lastVideoTrigger=trigger;
     showVideo(index);
     videoPlayer.hidden=false;
     document.body.classList.add("video-player-open");
     videoClose.focus();
-    const playback=videoMedia?.play();
-    if(playback&&typeof playback.catch==="function")playback.catch(()=>{});
+    if(autoplay){
+      const playback=videoMedia?.play();
+      if(playback&&typeof playback.catch==="function")playback.catch(()=>{});
+    }
   };
   const closeVideoPlayer=()=>{
     if(!videoPlayer||videoPlayer.hidden)return;
@@ -199,6 +210,7 @@
     document.body.classList.remove("video-player-open");
     activeVideoIndex=-1;
     if(lastVideoTrigger&&typeof lastVideoTrigger.focus==="function")lastVideoTrigger.focus();
+    const address=new URL(window.location.href);address.searchParams.delete("video");window.history.replaceState(window.history.state||{},"",address);
   };
 
   const loadVideoArchive=()=>{
@@ -209,6 +221,11 @@
         if(!Array.isArray(data.videos))throw new Error("Video kataloğunda kayıt listesi bulunamadı.");
         videos=data.videos;
         renderVideoGallery();
+        const requestedVideo=new URLSearchParams(window.location.search).get("video");
+        if(requestedVideo){
+          const requestedIndex=videos.findIndex(item=>item.src===requestedVideo);
+          if(requestedIndex>=0)openVideoPlayer(requestedIndex,null,false);
+        }
       })
       .catch(error=>{
         console.error(error);
