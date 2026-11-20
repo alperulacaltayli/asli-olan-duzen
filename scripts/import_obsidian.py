@@ -578,7 +578,7 @@ def scan_public_archive_nodes(directory, archive_root, category, excluded=None):
     if not directory.is_dir():
         return []
     excluded = excluded or set()
-    entries = sorted(directory.iterdir(), key=lambda item: natural_key(item.name))
+    entries = sorted(directory.iterdir(), key=lambda item: item.name.casefold())
     records = []
     paired_directories = set()
 
@@ -616,7 +616,7 @@ def scan_public_archive_nodes(directory, archive_root, category, excluded=None):
         else:
             records.extend(scan_public_archive_nodes(entry, archive_root, category))
 
-    return sorted(records, key=lambda item: (item.get("order", 999), natural_key(item["title"])))
+    return sorted(records, key=lambda item: (item.get("order", 999), item["title"].casefold()))
 
 
 def public_folder_nodes(category, relative_folder):
