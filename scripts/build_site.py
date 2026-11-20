@@ -460,7 +460,7 @@ def build() -> None:
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)
 
-    for filename in ("index.html", "galeri.html", "sesler.html", "robots.txt", "sitemap.xml"):
+    for filename in ("index.html", "galeri.html", "sesler.html", "404.html", "robots.txt", "sitemap.xml"):
         source = ROOT / filename
         if source.is_file():
             shutil.copy2(source, DIST / filename)
