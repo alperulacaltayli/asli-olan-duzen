@@ -579,6 +579,31 @@
       childLinks + relatedLinks + '</div>';
   };
 
+  const buildArchiveRecordUrl = (categoryId, nodeId) => {
+    const url = new URL("index.html", window.location.href);
+    url.searchParams.set("record", categoryId + ":" + nodeId);
+    url.hash = "arsiv";
+    return url.href;
+  };
+
+  const syncArchiveRecordAddress = (node) => {
+    if (!activeCategory || !node) return;
+    const url = new URL(window.location.href);
+    url.searchParams.set("record", activeCategory.id + ":" + node.id);
+    url.hash = "arsiv";
+    window.history.replaceState({ ...(window.history.state || {}), aodRecord: node.id }, "", url);
+  };
+
+  const attachArchiveRecordActions = (node) => {
+    const top = detailHost.querySelector(".chronology-detail-top, .character-detail-overline, .detail-record-top");
+    if (!top || !node || !activeCategory) return;
+    const tools = document.createElement("div");
+    tools.className = "archive-record-tools";
+    tools.innerHTML = '<span>ARŞİV KAYDI / ' + escapeHtml(node.id) + '</span>' +
+      '<button type="button" data-share-record aria-label="Bu arşiv kaydının bağlantısını kopyala">KAYDI PAYLAŞ ↗</button>';
+    top.appendChild(tools);
+  };
+
   const syncNavigationState = () => {
     navigationHost.querySelectorAll("[data-select-node]").forEach((button) => {
       const selected = button.dataset.selectNode === selectedNodeId;
@@ -627,6 +652,8 @@
     if (activeCategory?.id === "chronology") {
       syncNavigationState();
       renderDetail(node);
+      attachArchiveRecordActions(node);
+      syncArchiveRecordAddress(node);
       const isMapMode = chronologyMode === "map";
       archiveWorkspace?.classList.toggle("is-chronology-reading", isMapMode);
       if (isMapMode) {
@@ -651,6 +678,8 @@
       });
     }
     renderDetail(node);
+    attachArchiveRecordActions(node);
+    syncArchiveRecordAddress(node);
   };
 
   const renderCatalogue = () => {
@@ -943,6 +972,36 @@
   });
 
   explorer.addEventListener("click", (event) => {
+    const shareRecordButton = event.target.closest("[data-share-record]");
+    if (shareRecordButton) {
+      const shareUrl = activeCategory && selectedNodeId
+        ? buildArchiveRecordUrl(activeCategory.id, selectedNodeId)
+        : window.location.href;
+      const copyLink = async () => {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(shareUrl);
+          } else {
+            const field = document.createElement("textarea");
+            field.value = shareUrl;
+            field.setAttribute("readonly", "");
+            field.style.position = "fixed";
+            field.style.opacity = "0";
+            document.body.appendChild(field);
+            field.select();
+            const copied = document.execCommand("copy");
+            field.remove();
+            if (!copied) throw new Error("Bağlantı panoya kopyalanamadı.");
+          }
+          shareRecordButton.textContent = "BAĞLANTI KOPYALANDI";
+        } catch (error) {
+          shareRecordButton.textContent = "BAĞLANTIYI SEÇİP KOPYALA";
+          console.error("Arşiv bağlantısı paylaşılamadı:", error);
+        }
+      };
+      copyLink();
+      return;
+    }
     const mapBackButton = event.target.closest("[data-chronology-map-back]");
     if (mapBackButton && activeCategory?.id === "chronology") {
       archiveWorkspace?.classList.remove("is-chronology-reading");
@@ -1064,6 +1123,18 @@
   };
 
   if (backButton) backButton.addEventListener("click", closeArchiveScene);
+
+  window.addEventListener("popstate", () => {
+    const requestedRecord = new URLSearchParams(window.location.search).get("record");
+    if (!requestedRecord) {
+      if (!explorer.hidden && explorer.classList.contains("is-immersive")) closeArchiveScene();
+      return;
+    }
+    const separator = requestedRecord.indexOf(":");
+    if (separator > 0 && categories.length) {
+      openCategory(requestedRecord.slice(0, separator), requestedRecord.slice(separator + 1));
+    }
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !explorer.hidden && explorer.classList.contains("is-immersive")) {
@@ -1373,6 +1444,11 @@
           categories.map((category) => '<option value="' + escapeHtml(category.id) + '">' + escapeHtml(category.title) + '</option>').join("");
       }
       renderArchiveSearch();
+      const requestedRecord = new URLSearchParams(window.location.search).get("record");
+      if (requestedRecord) {
+        const separator = requestedRecord.indexOf(":");
+        if (separator > 0) openCategory(requestedRecord.slice(0, separator), requestedRecord.slice(separator + 1));
+      }
     })
     .catch((error) => {
       console.error("Arşiv verileri başlatılamadı:", error);
