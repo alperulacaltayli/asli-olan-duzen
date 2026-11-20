@@ -35,6 +35,7 @@ jobs:
           node --check assets/js/gallery.js
           node --check assets/js/audio.js
           node --check assets/js/site-search.js
+          node --check assets/js/file-center.js
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -66,7 +67,7 @@ jobs:
           html = Path("dist/index.html").read_text(encoding="utf-8")
           assert Path("dist/404.html").is_file(), "Özel 404 sayfası dist içine kopyalanmadı"
           assert Path("dist/assets/js/site-search.js").is_file(), "Merkezî arama betiği bulunamadı"
-          for page in ("index.html", "galeri.html", "sesler.html"):
+          for page in ("index.html", "galeri.html", "sesler.html", "dosya-merkezi.html"):
               page_html = Path("dist") / page
               assert page_html.is_file(), "Sayfa bulunamadı: " + page
               source = page_html.read_text(encoding="utf-8")
@@ -75,6 +76,12 @@ jobs:
           match = re.search(r'<script type="application/json" id="archive-data">(.*?)</script>', html, re.S)
           assert match, "index.html içinde gömülü arşiv verisi bulunamadı"
           embedded = json.loads(match.group(1))
+          category_ids = {category.get("id") for category in archives.get("categories", [])}
+          assert {"geography", "society", "media", "documents"}.issubset(category_ids), "Yeni arşiv birimleri eksik"
+          assert Path("dist/required-files.json").is_file(), "Gerekli dosyalar envanteri bulunamadı"
+          assert Path("dist/assets/css/file-center.css").is_file(), "Dosya merkezi stili bulunamadı"
+          assert Path("dist/assets/js/file-center.js").is_file(), "Dosya merkezi betiği bulunamadı"
+          assert Path("dist/GerekliDosyalar/00-OKUMA-REHBERI.md").is_file(), "Şablon rehberi bulunamadı"
           assert len(archives.get("categories", [])) > 0, "Arşiv kategorisi yok"
           assert len(gallery.get("images", [])) > 0, "Galeri görseli yok"
           assert isinstance(videos.get("videos", []), list), "Video kataloğu geçersiz"

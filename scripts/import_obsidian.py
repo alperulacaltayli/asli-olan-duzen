@@ -462,18 +462,191 @@ def import_characters():
         "nodes":roots
     }
 
+def public_folder_nodes(category, relative_folder):
+    """Import only explicitly approved, public Markdown notes from an author folder."""
+    folder = VAULT / relative_folder
+    if not folder.is_dir():
+        return []
+    records = []
+    for path in sorted(folder.rglob("*.md"), key=lambda item: item.as_posix().casefold()):
+        if path.name.casefold() in {"readme.md", "index.md"}:
+            continue
+        relative = path.relative_to(VAULT).as_posix()
+        raw_head = path.read_text(encoding="utf-8-sig")[:1800]
+        status = re.search(r"(?mi)^status\s*:\s*(onaylandı|onaylandi|approved|established canon)\s*$", raw_head)
+        visibility = re.search(r"(?mi)^(?:visibility|publication|yayın)\s*:\s*(public|kamuya açık|herkese açık)\s*$", raw_head)
+        if not status or not visibility:
+            continue
+        doc = read_doc(relative)
+        if doc:
+            records.append(node(category, doc, str(doc.get("date", ""))))
+    return records
+
 def import_institutions():
-    rel="Kuruluşlar/Hilalifiyet Merkezi - İstanbul.md"
-    doc=read_doc(rel)
-    if not doc: return None
-    return {"id":"institutions","title":"Kurumlar","description":"Yayımlanmasına uygun kurumsal kayıtlar ve kurum profilleri.","view":"catalogue","label":"KURUM DOSYALARI","order":4,"nodes":[node("institutions",doc)]}
+    specs = [
+        "Kuruluşlar/Hilalifiyet Merkezi - İstanbul.md",
+        "Aslı Olan Düzen/World/Organizations/Turkish Empire/Kızıl Orda.md",
+    ]
+    records = []
+    for rel in specs:
+        doc = read_doc(rel)
+        if doc:
+            records.append(node("institutions", doc))
+    records += public_folder_nodes("institutions", "Kuruluşlar/Kamuya Açık")
+    return {
+        "id":"institutions",
+        "title":"Kurumlar",
+        "description":"Kamuya açık kurumsal kayıtlar. Taslak, öneri veya gizli dosyalar bu kataloğa aktarılmaz.",
+        "view":"catalogue",
+        "label":"KURUM DOSYALARI",
+        "order":4,
+        "nodes":records
+    }
+
+def import_geography():
+    base = "Alternatif Tarih/Dünya/"
+    specs = [
+        (base + "Genel Dünya.md", "1985 · DÜNYA DÜZENİ"),
+        (base + "Dünya Paylaşımı 1946.md", "1946 · SİYASİ PAYLAŞIM"),
+        (base + "Türkiye.md", "DEVLET DOSYASI"),
+        (base + "Almanya.md", "DEVLET DOSYASI"),
+        (base + "Amerika.md", "DEVLET DOSYASI"),
+        (base + "Diğer Devletler.md", "DİĞER GÜÇLER"),
+    ]
+    records = []
+    for rel, date in specs:
+        doc = read_doc(rel)
+        if doc:
+            records.append(node("geography", doc, date))
+    records += public_folder_nodes("geography", "Alternatif Tarih/Dünya/Coğrafya")
+    return {
+        "id":"geography",
+        "title":"Dünya Atlası",
+        "description":"Alternatif dünyanın güç alanları, devlet profilleri ve 1946 paylaşımının coğrafi çerçevesi. Ayrıntılı şehir ve bölge haritaları yeni atlas dosyaları geldikçe genişler.",
+        "view":"catalogue",
+        "label":"COĞRAFYA VE SİYASİ ATLAS",
+        "order":2,
+        "nodes":records
+    }
 
 def import_technology():
-    rel="Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Necdet Atalay.md"
-    doc=read_doc(rel)
-    if not doc: return None
-    entry={"id":"technology-ta-85-gokkanat","path":rel,"sourceName":"TA-85 Gökkanat","title":"TA-85 Gökkanat","date":"Prototip dönemi: 1943","summary":"Türk uçan kanat tipi bombardıman uçağı projesi.","content":"**TA-85 Gökkanat**, evrende yer alan Türk uçan kanat tipi bombardıman uçağı projesidir. Necdet Atalay'ın karakter dosyası, uçağın yapımında görev aldığını kaydeder. Bu katalog yalnızca genel ve yayımlanabilir tanıtım bilgisini içerir; taslak veya gizli teknik dosyalar aktarılmamıştır.","order":1,"aliases":["Gökkanat","TA-85"],"children":[],"links":[]}
-    return {"id":"technology","title":"Teknoloji","description":"Evrenin araç ve teknoloji projelerine ait yayımlanabilir genel kayıtlar.","view":"catalogue","label":"TEKNOLOJİ KATALOĞU","order":5,"nodes":[entry]}
+    rel = "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Necdet Atalay.md"
+    doc = read_doc(rel)
+    if not doc:
+        return None
+    entry = {
+        "id":"technology-ta-85-gokkanat",
+        "path":rel,
+        "sourceName":"TA-85 Gökkanat",
+        "title":"TA-85 Gökkanat",
+        "date":"Prototip dönemi: 1943",
+        "summary":"Türk uçan kanat tipi bombardıman uçağı projesi.",
+        "content":"**TA-85 Gökkanat**, evrende yer alan Türk uçan kanat tipi bombardıman uçağı projesidir. Necdet Atalay'ın karakter dosyası, uçağın yapımında görev aldığını kaydeder. Bu katalog yalnızca genel ve yayımlanabilir tarihçe bilgisini içerir; uygulamalı teknik ayrıntı veya gizli dosya aktarılmamıştır.",
+        "order":1,
+        "aliases":["Gökkanat","TA-85"],
+        "children":[],
+        "links":[]
+    }
+    records = [entry]
+    records += public_folder_nodes("technology", "Alternatif Tarih/Teknoloji/Kamuya Açık")
+    return {
+        "id":"technology",
+        "title":"Teknoloji",
+        "description":"Evrenin araç ve teknoloji projelerine ait yayımlanabilir genel kayıtlar.",
+        "view":"catalogue",
+        "label":"TEKNOLOJİ KATALOĞU",
+        "order":5,
+        "nodes":records
+    }
+
+def import_society():
+    specs = [
+        ("Aslı Olan Düzen/B-3/B-3 Sınıf Profili.md", "1985 · EĞİTİM"),
+        ("Aslı Olan Düzen/Eğitim Sistemi Analizi.md", "1985 · EĞİTİM"),
+        ("Aslı Olan Düzen/World/Politics/Kanat.md", "İMPARATORLUK GENELİ"),
+    ]
+    records = []
+    for rel, date in specs:
+        doc = read_doc(rel)
+        if not doc:
+            continue
+        doc["content"] = "\n".join(
+            line for line in doc["content"].splitlines()
+            if not re.search(r"BELİRLENMESİ GEREKİYOR|YAZAR ONAYI BEKLİYOR", line, re.I)
+        )
+        records.append(node("society", doc, date))
+    schedule = read_doc("Aslı Olan Düzen/B-3/B-3 Ders Programı.md")
+    if schedule:
+        schedule["title"] = "B-3 — Haftalık Ders Düzeni"
+        schedule["summary"] = "1985 eğitim yılında B-3 sınıfı için kayda alınmış haftalık ders akışı."
+        schedule["content"] = """B-3 programı haftada beş güne ve toplam kırk ders saatine yayılır. Her gün sekiz ders bulunur; ilk ders 09.00'da başlar, son ders 17.40'ta tamamlanır.
+
+## Günlük zaman düzeni
+- Ders süresi: 40 dakika.
+- Normal teneffüsler: 20 dakika.
+- Öğle arası: 1 saat 20 dakika.
+- Günlük ders süresi: 320 dakika.
+
+## Ders alanları
+Türk Dili ve Edebiyatı, Matematik, Fizik, Kimya, Biyoloji, Tarih, Coğrafya, Yabancı Dil, Felsefe ve Mantık, Toplum ve Yurttaşlık, Teknoloji ve Tasarım, Beden Eğitimi, Sosyolojik Eğitim, Sanat ve Kültür.
+
+Bu kayıt yalnızca B-3 sınıfının programını gösterir; okulun tüm sınıflarına ait ortak çizelge değildir."""
+        records.append(node("society", schedule, "1985 · HAFTALIK PROGRAM"))
+    records += public_folder_nodes("society", "Aslı Olan Düzen/Toplum ve Gündelik Hayat")
+    return {
+        "id":"society",
+        "title":"Toplum ve Gündelik Hayat",
+        "description":"Eğitim düzeni, Kanat sistemi ve 1985 toplum hayatına dair mevcut kayıtlar. Konut, tüketim, çalışma hayatı ve gündelik alışkanlıklar yeni dosyalarla tamamlanacaktır.",
+        "view":"catalogue",
+        "label":"TOPLUMSAL YAŞAM KAYITLARI",
+        "order":6,
+        "nodes":records
+    }
+
+def import_media():
+    records = []
+    source = read_doc("Tarihi Olaylar/Olaylar/10 KASIM 1940.md")
+    if source:
+        press_doc = {
+            "title":"10 Kasım 1940 — Ankara Ziyareti ve Dünya Basını",
+            "summary":"Ankara ziyareti, Anıtkabir töreni ve olayın Amerikan basınında yarattığı yankıya ilişkin mevcut kronoloji notlarından derlenen basın bağlamı.",
+            "content":"""10 Kasım 1940 tarihli kronoloji kaydı, Adolf Hitler'in Ankara'ya gelişi ve Anıtkabir ziyaretinin Türk kamuoyunda ve uluslararası basında yankı bulduğunu belirtir.
+
+## Mevcut kayıt
+Kanon notunda Amerikan basınının ziyareti, Avrupa'daki güç dengesinin değiştiğine dair bir uyarı işareti olarak değerlendirdiği aktarılır. Bu arşiv girdisi, söz konusu bilgiyi kataloglar; henüz özgün gazete nüshası, yayın adı, muhabir, sayfa numarası veya tam metin mevcut değildir.
+
+## Bağlantılı kayıt
+[[10 KASIM 1940]]
+
+## Dosya durumu
+Site malzemeleri arasında Ankara ziyareti haberine ayrılmış bir görsel dosya bulunur. Görselin yayın künyesi ve özgün kaynağı ayrıca tamamlanmalıdır."""
+        }
+        press_doc["sourceName"] = "10 KASIM 1940"
+        press_doc["path"] = source["path"]
+        press_doc["aliases"] = ["Ankara ziyareti basını", "Dünya basını"]
+        records.append(node("media", press_doc, "10 KASIM 1940"))
+    records += public_folder_nodes("media", "Medya ve Basın")
+    return {
+        "id":"media",
+        "title":"Basın ve Yayın Arşivi",
+        "description":"Basın yansımaları ve yayın kayıtları. Mevcut tarih notlarının ötesindeki gazete nüshaları, yayın akışları ve künye bilgileri henüz hazırlanmayı bekliyor.",
+        "view":"catalogue",
+        "label":"BASIN VE YAYIN KAYITLARI",
+        "order":7,
+        "nodes":records
+    }
+
+def import_documents():
+    records = public_folder_nodes("documents", "Belge Arşivi")
+    return {
+        "id":"documents",
+        "title":"Belge Arşivi",
+        "description":"Kamuya açık resmî kararlar, yazışmalar, toplantı tutanakları ve tarihî dosyalar. Yayımlanmaya onaylanmış belgeler eklendikçe katalog dolar.",
+        "view":"catalogue",
+        "label":"BELGE VE EVRAK KATALOĞU",
+        "order":8,
+        "nodes":records
+    }
 
 def attach_links(categories):
     index={}
@@ -518,7 +691,7 @@ def attach_links(categories):
 def manual_categories():
     root=ROOT/"content"/"archives"
     categories=[]
-    reserved={"chronology","world","characters","institutions","technology"}
+    reserved={"chronology","world","characters","institutions","technology","geography","society","media","documents"}
     if not root.is_dir(): return categories
     import json
     for folder in sorted(root.iterdir(),key=lambda p:p.name.casefold()):
@@ -543,7 +716,7 @@ def flatten(nodes):
 
 def discover_archives():
     cats=[]
-    for fn in [import_chronology,import_characters,import_institutions,import_technology]:
+    for fn in [import_chronology,import_geography,import_characters,import_institutions,import_technology,import_society,import_media,import_documents]:
         cat=fn()
         if cat: cats.append(cat)
     cats += manual_categories()

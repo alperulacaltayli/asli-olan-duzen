@@ -460,10 +460,14 @@ def build() -> None:
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)
 
-    for filename in ("index.html", "galeri.html", "sesler.html", "404.html", "robots.txt", "sitemap.xml"):
+    for filename in ("index.html", "galeri.html", "sesler.html", "dosya-merkezi.html", "required-files.json", "404.html", "robots.txt", "sitemap.xml"):
         source = ROOT / filename
         if source.is_file():
             shutil.copy2(source, DIST / filename)
+
+    template_source = ROOT / "GerekliDosyalar"
+    if template_source.is_dir():
+        shutil.copytree(template_source, DIST / "GerekliDosyalar")
 
     assets = ROOT / "assets"
     if assets.is_dir():

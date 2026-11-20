@@ -1,0 +1,12 @@
+{
+  "videos": {
+    "VIDEO_DOSYA_ADI.mp4": {
+      "title": "Video başlığı",
+      "category": "Video kayıtları",
+      "date": "Doğrulanmış tarih veya dönem",
+      "description": "İçerik ve sürüm hakkında kısa açıklama",
+      "poster": "Video ile aynı klasörde bulunan kapak dosyası.webp",
+      "order": 1
+    }
+  }
+}

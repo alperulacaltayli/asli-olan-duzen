@@ -144,7 +144,7 @@
 
   const categoryIcon = (id) => ({
     chronology: "◈", technology: "⌘", geography: "⌖",
-    institutions: "⌂", characters: "✦"
+    institutions: "⌂", characters: "✦", society: "⌂", media: "▤", documents: "▧"
   })[id] || "▤";
 
   const renderCategories = () => {

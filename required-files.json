@@ -1,0 +1,440 @@
+{
+  "version": 1,
+  "purpose": "Mevcut kanonla doldurulmuş arşiv alanlarını ve yazar tarafından hazırlanması gereken içerikleri birbirinden ayırır. Taslaklar kamuya aktarılmaz.",
+  "approvalRule": "Yeni Markdown kayıtlarının yayımlanabilmesi için YAML üstbilgisinde status: onaylandı ve visibility: public alanları bulunmalıdır. Gizli, taslak veya öneri dosyaları aktarılmaz.",
+  "vaultRoot": "AslıOlanDüzenObsidianVault/",
+  "sections": [
+    {
+      "id": "geography",
+      "title": "Dünya atlası ve coğrafya",
+      "state": "KISMEN HAZIR",
+      "summary": "Dünya düzeni, devlet profilleri ve 1946 paylaşımının ana çerçevesi mevcut notlardan aktarılıyor. Harita katmanları, şehirlerin fiziksel yapısı ve sınır ayrıntıları henüz kaynak dosya bekliyor.",
+      "folder": "Alternatif Tarih/Dünya/Coğrafya/",
+      "items": [
+        {
+          "title": "1985 Dünya Siyasi Atlası",
+          "file": "atlas-1985.md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/atlas-1985.md",
+          "template": "harita-kaydi.md",
+          "priority": "ÖNCELİKLİ",
+          "why": "1946 paylaşımının 1985 sınır ve nüfuz görünümüne nasıl dönüştüğünü tek bir ana atlas kaydında toplamak için.",
+          "fields": [
+            "Harita tarihi ve sürümü",
+            "Devlet sınırları ve nüfuz alanları",
+            "Bağlı yönetimler ve statüleri",
+            "Haritada gösterilen/ gösterilmeyen bölgeler",
+            "Kaynak görsel veya çizim"
+          ]
+        },
+        {
+          "title": "Ankara şehir dosyası",
+          "file": "sehir-ankara.md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/sehir-ankara.md",
+          "template": "sehir-profili.md",
+          "priority": "ÖNCELİKLİ",
+          "why": "Kızıl Orda, Anıtkabir ve başkent yönetiminin aynı şehir içindeki yerleşimini açıklamak için.",
+          "fields": [
+            "1985 şehir planı",
+            "İdari bölgeler ve merkezler",
+            "Kızıl Orda ve bilinen kamusal yapılar",
+            "Ulaşım ve gündelik hareketlilik",
+            "Mahalle/yerleşim ayrımları"
+          ]
+        },
+        {
+          "title": "İstanbul şehir dosyası",
+          "file": "sehir-istanbul.md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/sehir-istanbul.md",
+          "template": "sehir-profili.md",
+          "priority": "ÖNCELİKLİ",
+          "why": "Romanın okul ve aile yaşamı çevresini şehir ölçeğinde tutarlı kılmak için.",
+          "fields": [
+            "1985 şehir planı",
+            "İlçeler ve önemli merkezler",
+            "Okulun kesin konumu (belirlendiğinde)",
+            "Toplu taşıma ve ana yollar",
+            "Gündelik yaşam bölgeleri"
+          ]
+        },
+        {
+          "title": "Berlin şehir dosyası",
+          "file": "sehir-berlin.md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/sehir-berlin.md",
+          "template": "sehir-profili.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Alman Reich merkezinin 1985 siyasi ve toplumsal görünümünü tanımlamak için.",
+          "fields": [
+            "Şehrin yönetim statüsü",
+            "Merkezî kurumlar",
+            "Şehir planı ve ulaşım",
+            "Kamusal mimari",
+            "1985 gündelik yaşamı"
+          ]
+        },
+        {
+          "title": "Washington ve New York dosyaları",
+          "file": "sehir-washington-new-york.md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/sehir-washington-new-york.md",
+          "template": "sehir-profili.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "1946 olayları sonrasında Amerika'nın siyasi ve kentsel durumunu anlatan mevcut dünya dosyalarını şehir ölçeğinde tamamlamak için.",
+          "fields": [
+            "1946 sonrası idari durum",
+            "Şehirlerin statüsü",
+            "Kamu kurumları ve yönetim merkezleri",
+            "Ulaşım/liman altyapısı",
+            "1985'e uzanan değişim"
+          ]
+        },
+        {
+          "title": "Bölgesel ulaşım ve bağlantı haritası",
+          "file": "ulasim-aglari.md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/ulasim-aglari.md",
+          "template": "harita-kaydi.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Demiryolu, karayolu, havalimanı ve deniz bağlantılarının hangi bölgelerde mevcut olduğunu harita üzerinde göstermek için.",
+          "fields": [
+            "Hat/rota adı",
+            "Başlangıç ve bitiş noktası",
+            "Kullanım amacı",
+            "Tarih ve işletmeci",
+            "Harita katmanı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "society",
+      "title": "Toplum ve gündelik hayat",
+      "state": "KISMEN HAZIR",
+      "summary": "Kanat sistemi, B-3 sınıf profili, okul yaklaşımı ve haftalık ders düzeni mevcut kanondan aktarılıyor. 1985'te ev, iş, tüketim, ulaşım ve toplumsal alışkanlıklar için özgün kayıtlar gerekiyor.",
+      "folder": "Aslı Olan Düzen/Toplum ve Gündelik Hayat/",
+      "items": [
+        {
+          "title": "1985 gündelik hayat dosyası",
+          "file": "gunluk-hayat-1985.md",
+          "path": "Aslı Olan Düzen/Toplum ve Gündelik Hayat/gunluk-hayat-1985.md",
+          "template": "gunluk-hayat.md",
+          "priority": "ÖNCELİKLİ",
+          "why": "Evrenin yalnızca liderler ve savaşlardan ibaret görünmemesi; sıradan insanların yaşamının da belgelenmesi için.",
+          "fields": [
+            "Ev ve aile yaşamı",
+            "Giyim, yemek ve tüketim",
+            "Şehir/kasaba farkları",
+            "Boş zaman ve sosyal hayat",
+            "Devlet düzeninin günlük hayata etkisi"
+          ]
+        },
+        {
+          "title": "İstanbul Şarkın İlim ve Teknoloji Mektebi dosyası",
+          "file": "istanbul-sarkin-ilim-ve-teknoloji-mektebi.md",
+          "path": "Aslı Olan Düzen/Toplum ve Gündelik Hayat/istanbul-sarkin-ilim-ve-teknoloji-mektebi.md",
+          "template": "egitim-kurumu.md",
+          "priority": "ÖNCELİKLİ",
+          "why": "B-3 dosyasında okul adı ve bazı idari bilgiler belirsiz/eksik. Okulun adı mevcut bağlamda biliniyor; resmî kurum profili, konumu ve yapısı tek dosyada sabitlenmeli.",
+          "fields": [
+            "Resmî okul adı ve kısa adı",
+            "Adres/ilçe ve kampüs planı",
+            "Eğitim kademesi ve kabul düzeni",
+            "Yönetim ve öğretmen kadrosu",
+            "1985 eğitim yılına ait okul içi düzen"
+          ]
+        },
+        {
+          "title": "B-3 ve Kanat uygulama ayrıntıları",
+          "file": "kanat-sistemi-uygulamasi.md",
+          "path": "Aslı Olan Düzen/Toplum ve Gündelik Hayat/kanat-sistemi-uygulamasi.md",
+          "template": "gunluk-hayat.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Kanat seviyeleri mevcut; değerlendirme yöntemi, dönemsel ilerleme, itiraz ve okul dışındaki görünürlüğü henüz ayrıntılandırılmalı.",
+          "fields": [
+            "Değerlendirme dönemi",
+            "Gözlem ve karar süreci",
+            "Kanat Konseyinin yetki sınırı",
+            "İtiraz/yükselme kuralları",
+            "Öğrenciler üzerindeki toplumsal etkiler"
+          ]
+        },
+        {
+          "title": "Ekonomi ve çalışma hayatı",
+          "file": "ekonomi-ve-calisma-1985.md",
+          "path": "Aslı Olan Düzen/Toplum ve Gündelik Hayat/ekonomi-ve-calisma-1985.md",
+          "template": "ekonomi-ve-calisma.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Kapalı ekonomi, sanayi ve geniş imparatorluk ölçeğinin 1985'te hanelere ve iş yaşamına nasıl yansıdığını belgelemek için.",
+          "fields": [
+            "Para birimi ve fiyatlandırma (kesinleştiğinde)",
+            "Başlıca iş alanları",
+            "Ücret/meslek düzeni",
+            "Ticaret ve tüketim",
+            "Bölgesel ekonomik farklılıklar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "title": "Basın ve yayın arşivi",
+      "state": "İLK KAYIT HAZIR",
+      "summary": "10 Kasım 1940 Ankara ziyareti ve Amerikan basınına ilişkin mevcut kronoloji notu arşive bağlanıyor. Gerçek gazete künyesi, sayı, sayfa ve radyo/televizyon yayın çizelgeleri eksik.",
+      "folder": "Medya ve Basın/",
+      "items": [
+        {
+          "title": "10 Kasım 1940 gazete nüshası/künyesi",
+          "file": "1940-11-10-ankara-ziyareti-gazete.md",
+          "path": "Medya ve Basın/1940-11-10-ankara-ziyareti-gazete.md",
+          "template": "gazete-sayisi.md",
+          "priority": "ÖNCELİKLİ",
+          "why": "Mevcut arşiv notu basın tepkisinden söz ediyor; ancak gazete adı, yayın yeri, sayı ve sayfa bilgisi henüz yok. Görseldeki haberin kaynağı doğrulanmalı.",
+          "fields": [
+            "Gazete/yayın adı",
+            "Yayın yeri ve tarihi",
+            "Sayı, cilt ve sayfa",
+            "Manşet ve haber özeti",
+            "Kaynak/özgün görsel"
+          ]
+        },
+        {
+          "title": "1985 basın kuruluşları rehberi",
+          "file": "basin-kuruluslari-1985.md",
+          "path": "Medya ve Basın/basin-kuruluslari-1985.md",
+          "template": "gazete-sayisi.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Ülkeler, diller ve yayın çizgileri hakkında tutarlı bir referans oluşturmak için.",
+          "fields": [
+            "Yayın adı ve ülke",
+            "Dil ve yayın sıklığı",
+            "Sahiplik/kurum bağlantısı",
+            "Yayın çizgisi ve erişim alanı",
+            "İlk/son yayın tarihi"
+          ]
+        },
+        {
+          "title": "1985 radyo ve televizyon akışı",
+          "file": "yayin-akisi-1985.md",
+          "path": "Medya ve Basın/yayin-akisi-1985.md",
+          "template": "yayin-programi.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Dönemin haber, eğlence ve devlet yayınlarının gün içindeki yerini belgelemek için.",
+          "fields": [
+            "Kanal/istasyon adı",
+            "Tarih ve saat dilimi",
+            "Program adı ve türü",
+            "Sunucu/üretici (varsa)",
+            "Kayıt veya yayın kaynağı"
+          ]
+        },
+        {
+          "title": "Devlet açıklamaları ve basın duyuruları",
+          "file": "resmi-aciklamalar/",
+          "path": "Medya ve Basın/resmi-aciklamalar/",
+          "template": "resmi-belge.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Resmî söylem ile bağımsız/ yabancı basın anlatıları arasında karşılaştırma yapılabilmesi için.",
+          "fields": [
+            "Açıklamayı yapan makam",
+            "Tarih ve yer",
+            "Yayımlandığı mecra",
+            "Tam metin veya güvenilir özet",
+            "İlgili olay/kişi bağlantısı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "documents",
+      "title": "Belge ve evrak arşivi",
+      "state": "ALTYAPI HAZIR · İÇERİK BEKLİYOR",
+      "summary": "Belge kataloğu ve yayımlama filtresi kuruldu. Henüz onaylı kamuya açık evrak dosyası bulunmadığından bu bölüm boş kalabilir; sahte belge üretilmedi.",
+      "folder": "Belge Arşivi/",
+      "items": [
+        {
+          "title": "1985 resmî karar/kararname örneği",
+          "file": "kararlar/1985-karar-ornek.md",
+          "path": "Belge Arşivi/kararlar/1985-karar-ornek.md",
+          "template": "resmi-belge.md",
+          "priority": "ÖNCELİKLİ",
+          "why": "Devletin kararlarını okurun evren içi belge olarak inceleyebilmesi için. Yalnızca romanda gerçekten var olan veya yazar tarafından onaylanan kararlar eklenmeli.",
+          "fields": [
+            "Belge numarası ve tarihi",
+            "Düzenleyen makam",
+            "Kamuya açık/gizlilik derecesi",
+            "Karar metni",
+            "Yürürlük ve ilgili kayıt"
+          ]
+        },
+        {
+          "title": "Kurumlar arası toplantı tutanağı",
+          "file": "toplantilar/1985-tutanak-ornek.md",
+          "path": "Belge Arşivi/toplantilar/1985-tutanak-ornek.md",
+          "template": "toplanti-tutanagi.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Kurumlar ve karakterler arasındaki ilişkileri açıklama metni yerine dönem içi kayıtlar üzerinden göstermek için.",
+          "fields": [
+            "Toplantı tarihi ve yeri",
+            "Katılımcılar ve makamları",
+            "Gündem maddeleri",
+            "Kararlar ve açık kalan konular",
+            "Belgenin yayın durumu"
+          ]
+        },
+        {
+          "title": "Kamuya açık yazışma/duyuru koleksiyonu",
+          "file": "yazismalar/",
+          "path": "Belge Arşivi/yazismalar/",
+          "template": "resmi-belge.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Duyuru, genelge, mektup ve kurum yazılarının ayrı bir katalogda birbirine bağlanması için.",
+          "fields": [
+            "Gönderen/alıcı",
+            "Tarih ve kayıt numarası",
+            "Belge türü",
+            "Metin veya özet",
+            "İlgili kurum/olay bağlantısı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "institutions",
+      "title": "Kurum ve yönetim dosyaları",
+      "state": "KISMEN HAZIR",
+      "summary": "Kızıl Orda ve mevcut Hilalifiyet Merkezi kaydı aktarılıyor. Diğer kurumların bir kısmı Obsidian'da öneri/taslak veya gizli statüsünde; yazar onayı olmadan yayımlanmayacak.",
+      "folder": "Kuruluşlar/Kamuya Açık/",
+      "items": [
+        {
+          "title": "Kamuya açık kurum profilleri",
+          "file": "kurum-profilleri/",
+          "path": "Kuruluşlar/Kamuya Açık/",
+          "template": "kurum-profili.md",
+          "priority": "ÖNCELİKLİ",
+          "why": "Mevcut kurum ağacındaki taslak dosyaları doğrudan açmak yerine, onaylanmış kamusal görev ve yetki bilgilerini ayrı profillerde toplamak için.",
+          "fields": [
+            "Resmî ad ve kısa ad",
+            "Kuruluş tarihi (biliniyorsa)",
+            "Kamusal görev ve yetki",
+            "Merkez ve bağlı birimler",
+            "Kamuya açık yönetici bilgileri"
+          ]
+        },
+        {
+          "title": "Kızıl Orda mimari ve yerleşke dosyası",
+          "file": "kizil-orda-yerleske.md",
+          "path": "Kuruluşlar/Kamuya Açık/kizil-orda-yerleske.md",
+          "template": "kurum-profili.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Kızıl Orda'nın Ankara/Çankaya konumu ve bilinen görsel/yerleşim özelliklerini tek yerde derlemek için; kesinleşmemiş kat planları eklenmemeli.",
+          "fields": [
+            "Ankara/Çankaya konumu",
+            "Dış mimari ve genel kütle",
+            "Kamusal işlevler",
+            "Uluğâh ve bilinen alanlar (onaylandığı ölçüde)",
+            "Fotoğraf/çizim bağlantıları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "title": "Teknoloji ve araştırma projeleri",
+      "state": "BAŞLANGIÇ KATALOĞU HAZIR",
+      "summary": "TA-85 Gökkanat genel tanıtımı mevcut. Gök Kutup dosyası gizli/taslak olarak işaretlendiğinden yayımlanmıyor; kamuya açık bir tanıtımın hazırlanıp hazırlanmayacağına yazar karar vermeli.",
+      "folder": "Alternatif Tarih/Teknoloji/Kamuya Açık/",
+      "items": [
+        {
+          "title": "TA-85 Gökkanat tarihçe ve görsel dosyası",
+          "file": "ta-85-gokkanat-tarihce.md",
+          "path": "Alternatif Tarih/Teknoloji/Kamuya Açık/ta-85-gokkanat-tarihce.md",
+          "template": "teknoloji-projesi.md",
+          "priority": "ÖNCELİKLİ",
+          "why": "Mevcut genel proje tanıtımını tasarım geçmişi, prototip dönemi ve yayımlanabilir görsel kaynaklarla desteklemek için.",
+          "fields": [
+            "Proje adı ve sınıflandırma",
+            "İlk çalışma/prototip tarihi",
+            "Tasarımın genel tarihçesi",
+            "Kamuya açık görsel kayıtlar",
+            "Kaynak ve kanon durumu"
+          ]
+        },
+        {
+          "title": "Gök Kutup için kamuya açık tanıtım kararı",
+          "file": "gok-kutup-kamuya-acik-tanitim.md",
+          "path": "Alternatif Tarih/Teknoloji/Kamuya Açık/gok-kutup-kamuya-acik-tanitim.md",
+          "template": "teknoloji-projesi.md",
+          "priority": "YAZAR KARARI GEREKİR",
+          "why": "Mevcut Gök Kutup notu tamamen gizli ve yazar onayı bekliyor. İçeriği yayımlamıyorum; yalnızca ayrı, kamuya açık bir tanıtım dosyası oluşturulup oluşturulmayacağına karar verilmesi gerekiyor.",
+          "fields": [
+            "Kamuya açıklanacak genel amaç",
+            "Kamuya açık konum bilgisi sınırı",
+            "Kişi/kurum adlarının yayımlanma izni",
+            "Sapma bağlantısının spoiler sınırı",
+            "Yayımlanabilir özet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visuals",
+      "title": "Fotoğraf ve video künyeleri",
+      "state": "DOSYALAR VAR · KÜNYELER EKSİK",
+      "summary": "13 fotoğraf ve 2 video dosyası bulundu. Galeri metadata alanlarında tarih, konum, açıklama, kaynak ve kronoloji bağlantılarının çoğu boş; videolar için de yayın künyesi yok.",
+      "folder": "AlternatifTarihfotoarşiv/ ve VideoArsiv/",
+      "items": [
+        {
+          "title": "13 fotoğrafın katalog bilgileri",
+          "file": "AlternatifTarihfotoarşiv/_metadata.json",
+          "path": "AlternatifTarihfotoarşiv/_metadata.json",
+          "template": "fotograf-metadata.json",
+          "priority": "ÖNCELİKLİ",
+          "why": "Mevcut görsellerin arşivde anlamlı şekilde aranabilmesi ve doğru olaylarla bağlanabilmesi için tarih, yer, açıklama, kaynak ve kronoloji alanlarını doldur.",
+          "fields": [
+            "Her görselin doğrulanmış başlığı",
+            "Tarih/dönem",
+            "Konum",
+            "Görselin neyi gösterdiği",
+            "Üretim/özgün kaynak ve kronoloji kaydı"
+          ]
+        },
+        {
+          "title": "2 videonun katalog bilgileri",
+          "file": "VideoArsiv/_metadata.json",
+          "path": "VideoArsiv/_metadata.json",
+          "template": "video-metadata.json",
+          "priority": "ÖNCELİKLİ",
+          "why": "Beyaz Saray kutlama videolarının tarihini, sürüm farkını, açıklamasını ve varsa poster görselini belirtmek için.",
+          "fields": [
+            "Video başlığı",
+            "Tarih/dönem ve konum",
+            "Sürüm/renklendirme bilgisi",
+            "Açıklama ve kaynak",
+            "Poster dosya adı (varsa)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "title": "Ses arşivi",
+      "state": "ALTYAPI HAZIR · KOLEKSİYON BAŞLANGIÇ",
+      "summary": "Bir Türkçe marş dosyası mevcut. Alman arşivinde henüz ses dosyası yok; devlet kayıtları ve ortam sesleri de henüz eklenmemiş. Bunlar içerik üretimi gerektirir, otomatik doldurulmaz.",
+      "folder": "Sesler/",
+      "items": [
+        {
+          "title": "Alman arşivi için ilk onaylı ses kaydı (isteğe bağlı)",
+          "file": "Sesler/Alman/",
+          "path": "Sesler/Alman/",
+          "template": "ses-metadata.json",
+          "priority": "İÇERİK TERCİHİ",
+          "why": "Alman arşivinin şu anda dosyasız olması teknik eksik değil, içerik eksikliğidir. Yalnızca evren için hazırladığın veya kullanım hakkına sahip olduğun kayıtları ekle.",
+          "fields": [
+            "Ses dosyası ve biçimi",
+            "Ülke/koleksiyon türü",
+            "Tarih ve kaynak",
+            "Kısa açıklama",
+            "Yayımlama/kullanım hakkı notu"
+          ]
+        }
+      ]
+    }
+  ]
+}

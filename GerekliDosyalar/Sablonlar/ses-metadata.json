@@ -1,0 +1,13 @@
+{
+  "audio": {
+    "Klasor/DOSYA_ADI.mp3": {
+      "title": "Kayıt başlığı",
+      "country": "turkish veya german",
+      "category": "Marşlar / Devlet ses kayıtları / Sesler",
+      "subcategory": "Koleksiyon veya alt grup",
+      "date": "Doğrulanmış tarih veya dönem",
+      "description": "Kaydın ne olduğuna dair kısa açıklama",
+      "order": 1
+    }
+  }
+}

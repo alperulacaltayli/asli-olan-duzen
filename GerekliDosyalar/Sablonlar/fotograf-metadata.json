@@ -1,0 +1,13 @@
+{
+  "images": {
+    "DOSYA_ADI.jpg": {
+      "title": "Arşivde gösterilecek başlık",
+      "category": "Koleksiyon adı",
+      "date": "Doğrulanmış tarih veya dönem",
+      "location": "Doğrulanmış konum",
+      "description": "Görselin neyi gösterdiğine dair kısa açıklama",
+      "source": "Üretim/kaynak bilgisi ve kullanım notu",
+      "chronology": "İlgili kronoloji kaydının başlığı veya kimliği"
+    }
+  }
+}

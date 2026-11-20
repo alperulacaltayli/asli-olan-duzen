@@ -7383,3 +7383,15 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
   .world-grid>.world-card.world-card-gallery,
   .world-grid>.world-card.world-card-audio {grid-column:1 / -1 !important;}
 }
+
+
+/* Archive expansion — additional public-facing world layers */
+.world-card-geography .world-card-icon,
+.world-card-files .world-card-icon{color:#d0b18b}
+.world-card-geography .world-card-number,
+.world-card-files .world-card-number{color:#c19c77}
+.world-card-geography:hover,
+.world-card-files:hover{background:rgba(193,156,119,.09)}
+.world-card-society .world-card-icon{color:#9fb8ad}
+.world-card-media .world-card-icon{color:#c1a6a0}
+.world-card-documents .world-card-icon{color:#a9b8c6}
