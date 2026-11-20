@@ -181,6 +181,7 @@
     player.pause();
     player.src = item.src;
     player.load();
+    const address=new URL(window.location.href);address.searchParams.set("track",item.src);window.history.replaceState({...(window.history.state||{}),aodTrack:item.src},"",address);
     nowTitle.textContent = item.title;
     nowMeta.textContent = [countryLabel(item.country), item.category, item.subcategory].filter(Boolean).join(" / ");
     const records = typeRecords();
@@ -213,6 +214,7 @@
     nextButton.disabled = true;
     if (playerDock) playerDock.hidden = true;
     syncTrackState();
+    const address=new URL(window.location.href);address.searchParams.delete("track");window.history.replaceState(window.history.state||{},"",address);
   };
 
   const stepTrack = direction => {
@@ -351,6 +353,16 @@
         if (!Array.isArray(data.audio)) throw new Error("Ses kataloğunda kayıt listesi bulunamadı.");
         audioRecords = data.audio;
         if (total) total.textContent = String(audioRecords.length).padStart(2, "0");
+        const requestedTrack=new URLSearchParams(window.location.search).get("track");
+        if(requestedTrack){
+          const requestedIndex=audioRecords.findIndex(item=>item.src===requestedTrack);
+          if(requestedIndex>=0){
+            const requestedRecord=audioRecords[requestedIndex];
+            setCountry(requestedRecord.country);
+            setAudioType(recordType(requestedRecord));
+            loadTrack(requestedIndex,false);
+          }
+        }
         if (selectedCountry) {
           countryCount.textContent = countryRecords().length.toString().padStart(2, "0") + " SES KAYDI / " +
             (selectedCountry === "turkish" ? "TÜRK ARŞİVİ" : "ALMAN ARŞİVİ");
