@@ -100,6 +100,21 @@
             "Tarih ve işletmeci",
             "Harita katmanı"
           ]
+        },
+        {
+          "title": "Diğer devletler için ayrıntılı ülke profilleri",
+          "file": "ulke-profilleri/",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/ulke-profilleri/",
+          "template": "ulke-profili.md",
+          "priority": "SONRAKİ AŞAMA",
+          "why": "Mevcut Diğer Devletler notu ülke adlarını ve genel güç konumlarını bir araya getiriyor. İngiltere, Fransa, İtalya, Japonya ve diğer devletleri ayrı dosyalarda tanımlamak karşılaştırma ve atlas bağlantılarını güçlendirir.",
+          "fields": [
+            "Resmî devlet adı ve 1985 statüsü",
+            "Başkent ve önemli şehirler",
+            "Yönetim ve önde gelen kurumlar",
+            "Ekonomi ve toplumsal yapı",
+            "Dış ilişkiler ve 1946 sonrası değişim"
+          ]
         }
       ]
     },
