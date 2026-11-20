@@ -14,11 +14,28 @@
           "sourceName": "1938",
           "title": "1938",
           "date": "YIL",
-          "summary": "1938 yılına ait 1 tarihsel kayıt.",
-          "content": "1938 yılına ait 1 tarihsel kayıt.",
+          "summary": "1938 yılına ait 2 tarihsel kayıt.",
+          "content": "1938 yılına ait 2 tarihsel kayıt.",
           "order": 0,
           "aliases": [],
           "children": [
+            {
+              "id": "chronology-1938-ataturkun-vefati-md",
+              "path": "1938/ataturkun-vefati.md",
+              "sourceName": "ataturkun-vefati",
+              "title": "Atatürk'ün vefatı",
+              "date": "10 Kasım 1938",
+              "summary": "Atatürk'ün vefatı, 1938'de başlayan alternatif tarih çizgisinin ilk önemli dönüm noktasıdır.",
+              "content": "Atatürk'ün vefatı 10 Kasım 1938 tarihinde gerçekleşir. Mevcut 10 Kasım 1940 Ankara ziyareti kaydı, bu tarihi Atatürk'ün ikinci ölüm yıl dönümü olarak tanımlar.\n\nBu kayıt, evren kronolojisinin başlangıç dönemindeki bilinen tarih bilgisini sabitler. Kaynak notlarda yer almayan ek tören, konuşma veya siyasi gelişme ayrıntıları bu dosyaya eklenmemiştir.",
+              "order": 1,
+              "aliases": [],
+              "children": [],
+              "links": [],
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1938"
+              ]
+            },
             {
               "id": "chronology-tarihi-olaylar-olaylar-29-kasim-1938-md",
               "path": "Tarihi Olaylar/Olaylar/29 kasım 1938.md",
@@ -3062,13 +3079,13 @@
       "order": 5,
       "nodes": [
         {
-          "id": "technology-ta-85-gokkanat",
-          "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Necdet Atalay.md",
-          "sourceName": "TA-85 Gökkanat",
+          "id": "technology-ta-85-gokkanat-index-md",
+          "path": "ta-85-gokkanat/index.md",
+          "sourceName": "index",
           "title": "TA-85 Gökkanat",
-          "date": "Prototip dönemi: 1943",
-          "summary": "Türk uçan kanat tipi bombardıman uçağı projesi.",
-          "content": "**TA-85 Gökkanat**, evrende yer alan Türk uçan kanat tipi bombardıman uçağı projesidir. Necdet Atalay'ın karakter dosyası, uçağın yapımında görev aldığını kaydeder. Bu katalog yalnızca genel ve yayımlanabilir tarihçe bilgisini içerir; uygulamalı teknik ayrıntı veya gizli dosya aktarılmamıştır.",
+          "date": "1943 — prototip dönemi",
+          "summary": "Türk uçan kanat bombardıman uçağı projesi.",
+          "content": "**TA-85 Gökkanat**, Aslı Olan Düzen evreninde yer alan Türk uçan kanat uçak projesidir. Prototip dönemi 1943'e uzanır.\n\nBu kayıt yalnızca genel ve yayımlanabilir proje tanıtımını içerir. Tasarım geçmişi ve diğer ayrıntılar, roman kanonunda kesinleştirildiğinde ayrı alt kayıtlar olarak eklenebilir.",
           "order": 1,
           "aliases": [
             "Gökkanat",
