@@ -5,6 +5,8 @@
   const nav = document.querySelector("#site-nav");
   const year = document.querySelector("#current-year");
   const categoryHost = document.querySelector("#archive-categories");
+  const archiveContent = document.querySelector(".archive-content");
+  const randomRecordButton = document.querySelector("#archive-random-record");
   const worldGrid = document.querySelector(".world-grid");
   const pageProgressBar = document.querySelector("#page-progress-bar");
   const explorer = document.querySelector("#archive-explorer");
@@ -941,6 +943,28 @@
     if (!response.ok) throw new Error("archives.json alınamadı: " + response.status);
     return response.json();
   };
+
+  archiveContent?.addEventListener("click", (event) => {
+    const route = event.target.closest("[data-discover-category]");
+    if (route) {
+      openCategory(route.dataset.discoverCategory);
+      return;
+    }
+    const randomButton = event.target.closest("#archive-random-record");
+    if (randomButton) {
+      const records = categories.flatMap(category =>
+        allNodes(category.nodes)
+          .filter(node => !(node.children || []).length && node.path)
+          .map(node => ({ categoryId: category.id, nodeId: node.id }))
+      );
+      if (!records.length) {
+        randomButton.textContent = "ŞU ANDA KAYIT BULUNAMADI";
+        return;
+      }
+      const selected = records[Math.floor(Math.random() * records.length)];
+      openCategory(selected.categoryId, selected.nodeId);
+    }
+  });
 
   categoryHost.addEventListener("click", (event) => {
     const retry = event.target.closest("[data-retry-archives]");
