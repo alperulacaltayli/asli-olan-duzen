@@ -44,6 +44,10 @@
     if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==="k"){event.preventDefault();if(overlay.hidden)open();else input.focus();}
     else if(event.key==="/"&&!typing&&overlay.hidden&&!event.altKey&&!event.ctrlKey&&!event.metaKey){event.preventDefault();open();}
     else if(event.key==="Escape"&&!overlay.hidden){event.preventDefault();close();}
-    else if(event.key==="Tab"&&!overlay.hidden){const controls=[input,...filterButtons,...results.querySelectorAll("a"),closeButton],visible=controls.filter(el=>el&&el.offsetParent!==null),first=visible[0],last=visible[visible.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
+    else if((event.key==="ArrowDown"||event.key==="ArrowUp")&&!overlay.hidden){
+      const links=[...results.querySelectorAll("a")];
+      if(links.length){event.preventDefault();const current=links.indexOf(document.activeElement);const direction=event.key==="ArrowDown"?1:-1;const next=current<0?(direction>0?0:links.length-1):(current+direction+links.length)%links.length;links[next].focus();}
+    }
+    else if(event.key==="Tab"&&!overlay.hidden){const controls=[closeButton,input,...filterButtons,...results.querySelectorAll("a")],visible=controls.filter(el=>el&&el.offsetParent!==null),first=visible[0],last=visible[visible.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
   });
 })();
