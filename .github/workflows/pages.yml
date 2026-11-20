@@ -34,6 +34,7 @@ jobs:
           node --check assets/js/main.js
           node --check assets/js/gallery.js
           node --check assets/js/audio.js
+          node --check assets/js/site-search.js
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -63,6 +64,14 @@ jobs:
           videos = json.loads(Path("dist/videos.json").read_text(encoding="utf-8"))
           audio = json.loads(Path("dist/audio.json").read_text(encoding="utf-8"))
           html = Path("dist/index.html").read_text(encoding="utf-8")
+          assert Path("dist/404.html").is_file(), "Özel 404 sayfası dist içine kopyalanmadı"
+          assert Path("dist/assets/js/site-search.js").is_file(), "Merkezî arama betiği bulunamadı"
+          for page in ("index.html", "galeri.html", "sesler.html"):
+              page_html = Path("dist") / page
+              assert page_html.is_file(), "Sayfa bulunamadı: " + page
+              source = page_html.read_text(encoding="utf-8")
+              assert 'rel="canonical"' in source, "Canonical URL eksik: " + page
+              assert "site-search.js" in source, "Merkezî arama yüklenmiyor: " + page
           match = re.search(r'<script type="application/json" id="archive-data">(.*?)</script>', html, re.S)
           assert match, "index.html içinde gömülü arşiv verisi bulunamadı"
           embedded = json.loads(match.group(1))
