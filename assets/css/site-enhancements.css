@@ -8,6 +8,7 @@ button:disabled{cursor:not-allowed;opacity:.48}
 .global-search-trigger svg{width:14px;height:14px}
 .site-search-overlay{position:fixed;z-index:10000;inset:0;display:grid;place-items:start center;padding:min(12vh,100px) 20px 30px;background:rgba(3,7,6,.82);backdrop-filter:blur(12px)}
 .site-search-overlay[hidden]{display:none}
+body.site-search-open{overflow:hidden}
 .site-search-dialog{width:min(760px,100%);max-height:min(78vh,820px);display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(218,194,158,.34);background:linear-gradient(145deg,#1b2521,#0d1311 78%);color:#eee8dc;box-shadow:0 35px 100px rgba(0,0,0,.58)}
 .site-search-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px 14px;border-bottom:1px solid var(--aod-line)}
 .site-search-overline{color:#c69a76;font:9px var(--mono,monospace);letter-spacing:.16em}
