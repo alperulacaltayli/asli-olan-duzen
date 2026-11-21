@@ -5,8 +5,11 @@
       "country": "turkish",
       "category": "Marşlar",
       "subcategory": "Türklerin Marşları",
-      "description": "Türk ses arşivine eklenen marş kaydı.",
+      "archive_type": "marches",
+      "description": "Türk ses arşivinde yer alan marş kaydı. Sözlerini okumak için metin bölümünü aç.",
+      "lyrics": "Türk'üz, yürüyoruz, fethediyoruz!\nYenilmiyoruz, pes etmiyoruz.\nDurmuyoruz, Türklüğümüzden vazgeçmiyoruz.\nBizim ebediyetimizi kuruyoruz.\nTürk'üz, biriz, Türk'üz hepimiz!\nYaşıyoruz bu cihanda.\nHakkımız olanı da alıyoruz hepimiz.\nÇok yaşa millete, çok yaşa ordulara!\nYaşıyoruz bu cihanda.\\n\\nBizi bölmeye çalıştınız ama!\nBilmiyorsunuz ki bir Türk asla\nBölünmez ve pes etmez, kaybetmez!\nŞanlı bir milletiz, çürükleri ezeriz.\nBizim bu yurt, bizim bu cihan, bizim!\nSizi göremedik cihanda?\nNereye kaçtınız bir anda?\\n\\nTürk'ün kuvvetini, Türk'ün!\nTürk'ün gücünü, Türk'ün!\nGördünüz her gün.\nAma artık yok, yoksunuz!\nBu cihanda var olamıyorsunuz.\nBu dünyada var olamıyorsunuz.\nBu vatana yâr olamıyorsunuz.\nSiz artık yoksunuz!\\n\\nKazandık, zafere! Çok yaşa zafere!\nYaşa, yaşa, yaşa, yaşa!\nHep ileri, durma!\nDurma, durma, durma, durma!\nHep ileri, durma!\\n\\nDemir dağları erittik,\nSizi mi geçemeyecektik?\nŞanlı millet, şanlı tarih!\nBiz bu dünyanın sahipleri.\nArtık düzen kuruldu,\nZafer her yerde duyuldu.\nYer, gök bizim oldu.\nEbediyete kavuşuldu.",
+      "language": "tr",
       "order": 1
     }
   }
-}
+}\n
