@@ -638,7 +638,6 @@ def public_folder_nodes(category, relative_folder):
 def import_institutions():
     specs = [
         "Kuruluşlar/Hilalifiyet Merkezi - İstanbul.md",
-        "Aslı Olan Düzen/World/Organizations/Turkish Empire/Kızıl Orda.md",
     ]
     records = []
     for rel in specs:
@@ -675,7 +674,7 @@ def import_geography():
     return {
         "id":"geography",
         "title":"Dünya Atlası",
-        "description":"Alternatif dünyanın güç alanları, devlet profilleri ve 1946 paylaşımının coğrafi çerçevesi. Ayrıntılı şehir ve bölge haritaları yeni atlas dosyaları geldikçe genişler.",
+        "description":"1985 dünya düzeni, 1946 paylaşımı, ülke profilleri ve şehir/tarih kayıtları. Kesin sınır çizgileri ve ulaşım katmanları kaynak geldikçe genişler.",
         "view":"catalogue",
         "label":"COĞRAFYA VE SİYASİ ATLAS",
         "order":2,
@@ -689,7 +688,7 @@ def import_technology():
     return {
         "id":"technology",
         "title":"Teknoloji",
-        "description":"Evrenin araç ve teknoloji projelerine ait yayımlanabilir genel kayıtlar.",
+        "description":"TA-85 Gökkanat ve diğer projelere ait yalnızca onaylanmış, genel ve tarihsel teknoloji kayıtları.",
         "view":"catalogue",
         "label":"TEKNOLOJİ KATALOĞU",
         "order":5,
@@ -733,7 +732,7 @@ Bu kayıt yalnızca B-3 sınıfının programını gösterir; okulun tüm sını
     return {
         "id":"society",
         "title":"Toplum ve Gündelik Hayat",
-        "description":"Eğitim düzeni, Kanat sistemi ve 1985 toplum hayatına dair mevcut kayıtlar. Konut, tüketim, çalışma hayatı ve gündelik alışkanlıklar yeni dosyalarla tamamlanacaktır.",
+        "description":"Okul profili, B-3 haftalık programı ve Kanat sisteminin bilinen kamusal çerçevesi. Genel gündelik yaşam ve ekonomi kayıtları ayrıca hazırlanmalıdır.",
         "view":"catalogue",
         "label":"TOPLUMSAL YAŞAM KAYITLARI",
         "order":6,
