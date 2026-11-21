@@ -7936,3 +7936,17 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
     .archive-country-stage .audio-country-card-copy strong {font-size:24px;}
     .archive-country-stage .audio-country-card-copy > span:nth-of-type(2) {font-size:13px;}
 }
+
+
+@keyframes archiveCountryStageIn {
+    from {opacity:0;transform:translateY(12px);}
+    to {opacity:1;transform:translateY(0);}
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .archive-country-stage,
+    .archive-country-stage .audio-country-card {
+        animation:none !important;
+        transition:none !important;
+    }
+}
