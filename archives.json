@@ -3466,24 +3466,6 @@
       "order": 5,
       "nodes": [
         {
-          "id": "technology-ta-85-gokkanat-index-md",
-          "path": "ta-85-gokkanat/index.md",
-          "sourceName": "index",
-          "title": "TA-85 Gökkanat",
-          "date": "1943 — prototip dönemi",
-          "summary": "Türk uçan kanat bombardıman uçağı projesi.",
-          "content": "**TA-85 Gökkanat**, Aslı Olan Düzen evreninde yer alan Türk uçan kanat uçak projesidir. Prototip dönemi 1943'e uzanır.\n\nBu kayıt yalnızca genel ve yayımlanabilir proje tanıtımını içerir. Tasarım geçmişi ve diğer ayrıntılar, roman kanonunda kesinleştirildiğinde ayrı alt kayıtlar olarak eklenebilir.",
-          "order": 1,
-          "aliases": [
-            "Gökkanat",
-            "TA-85"
-          ],
-          "children": [],
-          "links": [],
-          "categoryId": "technology",
-          "ancestors": []
-        },
-        {
           "id": "technology-alternatif-tarih-teknoloji-kamuya-acik-ta-85-gokkanat-tarihce-md",
           "path": "Alternatif Tarih/Teknoloji/Kamuya Açık/ta-85-gokkanat-tarihce.md",
           "sourceName": "ta-85-gokkanat-tarihce",
