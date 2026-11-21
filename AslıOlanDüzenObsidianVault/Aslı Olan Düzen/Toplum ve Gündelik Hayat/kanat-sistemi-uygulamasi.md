@@ -5,7 +5,7 @@ visibility: public
 date: 1985
 summary: Büyük Türk İmparatorluğu genelinde kullanılan, öğrencilerin sorumluluk, katkı, liderlik ve okul içi görevlerini kademelendiren altı seviyeli sistem.
 order: 2
-aliases: [Kanat Sistemi, Kanat seviyeleri]
+aliases: [Kanat, Kanat Sistemi, Kanat seviyeleri]
 ---
 
 # Kanat Sistemi — Kamusal Çerçeve
