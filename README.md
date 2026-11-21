@@ -197,3 +197,25 @@ Kronoloji birimi, yatay kaydırılabilir 3B bir olay haritası olarak açılır.
 Harita, olay başlığıyla eşleşen mevcut görsel arşiv dosyalarını kullanır. Şu an Bakü, Hitler'in Ankara/Anıtkabir ziyareti, Kiev, Leningrad, Moskova, Sivastopol ve Stalingrad kayıtları için uygun eşleşmeler bulunur. Eşleşmeyen olaylar görselsiz arşiv kartı olarak gösterilir; olmayan görsel üretilmez.
 
 Arşiv ve galeri JSON dosyaları sayfa yolu üzerinden, önbelleksiz istekle yüklenir. Yükleme başarısız olduğunda tekrar deneme düğmesi gösterilir.
+
+## Ülkeye göre arşiv sınıflandırması
+
+Kurumlar, teknoloji, karakterler, toplum ve gündelik hayat, basın ve yayın ve belge arşivleri önce ülke seçimi gösterir. Bir kaydın bu ekranın doğru tarafında görünmesi için kaynak Markdown dosyasının ön yüzüne `country` alanı ekle:
+
+```yaml
+---
+title: Örnek kayıt
+status: approved
+visibility: public
+country: turkish
+---
+```
+
+Kullanılabilen değerler:
+
+- `turkish`: Türk Arşivi
+- `german`: Alman Arşivi
+- `both`: Her iki ülkenin arşivinde de gösterilecek ortak kayıt
+
+Aynı alan Obsidian kaynak dosyalarında da tanınır. Yeni kayıtların ülke etiketi açıkça belirtilmelidir. Mevcut kurum, teknoloji, karakter ve toplum kayıtlarının ülke bilgisi derleme sırasında atanır; Kanat sistemi ve uluslararası basın kaydı ortak arşiv olarak iki tarafta da görünür. Ülke etiketli kayıtları yayımlamak için normal `python scripts/build_site.py` derlemesi yeterlidir.
+\n
