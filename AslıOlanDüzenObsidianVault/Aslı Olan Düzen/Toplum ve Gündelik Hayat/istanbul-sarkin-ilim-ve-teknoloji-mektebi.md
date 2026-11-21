@@ -1,7 +1,7 @@
 ---
 title: İstanbul Şarkın İlim ve Teknoloji Mektebi
 status: onaylandı
-visibility: public
+visibility: private
 date: 1985
 summary: B-3 sınıfının bulunduğu, fen ve teknoloji derslerini tarih, edebiyat, yurttaşlık, felsefe ve sanat eğitimiyle birleştiren okul.
 order: 1
