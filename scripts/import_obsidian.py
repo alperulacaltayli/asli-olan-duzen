@@ -892,28 +892,10 @@ def discover_archives():
     return {"categories":cats}
 
 def build():
-    root=Path(__file__).resolve().parents[1]
-    dist=root/"dist"
-    if dist.exists(): shutil.rmtree(dist)
-    dist.mkdir(parents=True)
-    for name in ["index.html","robots.txt","sitemap.xml"]:
-        src=root/name
-        if src.is_file(): shutil.copy2(src,dist/name)
-    assets=root/"assets"
-    if assets.is_dir(): shutil.copytree(assets,dist/"assets")
-    data=discover_archives()
-    text=json.dumps(data,ensure_ascii=False,indent=2)+"\n"
-    (root/"archives.json").write_text(text,encoding="utf-8")
-    (dist/"archives.json").write_text(text,encoding="utf-8")
-    print("Site build completed.")
-    total=0
-    for cat in data["categories"]:
-        count=len(flatten(cat.get("nodes",[])))
-        total+=count
-        print(f" - {cat['title']}: {count} records")
-    print(f"Total: {total} public records.")
+    """Compatibility entry point that delegates to the complete site builder."""
+    import build_site
+    build_site.build()
 
-if __name__=="__main__":
-    import shutil
-    import json
+
+if __name__ == "__main__":
     build()

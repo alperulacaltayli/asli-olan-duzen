@@ -3,6 +3,8 @@ name: Build and deploy Asli Olan Duzen
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -11,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.workflow }}-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
@@ -47,6 +49,7 @@ jobs:
         run: python scripts/build_site.py
 
       - name: Persist generated archive and gallery data for branch previews
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -76,6 +79,12 @@ jobs:
               source = page_html.read_text(encoding="utf-8")
               assert 'rel="canonical"' in source, "Canonical URL eksik: " + page
               assert "site-search.js" in source, "Merkezî arama yüklenmiyor: " + page
+              for srcset in re.findall(r'srcset="([^"]+)"', source):
+                  for candidate in srcset.split(","):
+                      asset = candidate.strip().split()[0]
+                      if asset.startswith(("http://", "https://", "data:", "//")):
+                          continue
+                      assert (Path("dist") / asset).is_file(), "Üretilen sayfa görseli bulunamadı: " + asset
           match = re.search(r'<script type="application/json" id="archive-data">(.*?)</script>', html, re.S)
           assert match, "index.html içinde gömülü arşiv verisi bulunamadı"
           embedded = json.loads(match.group(1))
@@ -87,6 +96,11 @@ jobs:
           assert Path("dist/GerekliDosyalar/00-OKUMA-REHBERI.md").is_file(), "Şablon rehberi bulunamadı"
           assert len(archives.get("categories", [])) > 0, "Arşiv kategorisi yok"
           assert len(gallery.get("images", [])) > 0, "Galeri görseli yok"
+          for image in gallery.get("images", []):
+              for key in ("src", "webp_src"):
+                  asset = image.get(key)
+                  if asset:
+                      assert (Path("dist") / asset).is_file(), "Galeri görseli bulunamadı: " + asset
           assert isinstance(videos.get("videos", []), list), "Video kataloğu geçersiz"
           assert isinstance(audio.get("audio", []), list), "Ses kataloğu geçersiz"
           for video in videos.get("videos", []):
@@ -108,6 +122,7 @@ jobs:
           path: dist
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
