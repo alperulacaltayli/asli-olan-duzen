@@ -2,19 +2,21 @@
   "images": {
     "Baküdüştü.jpg": {
       "category": "Cephe kayıtları",
-      "date": "",
-      "location": "",
-      "description": "",
+      "date": "3 Ocak 1942",
+      "location": "Bakü",
+      "description": "Kronolojiye göre Bakü'nün düşüşü, Sovyet savaş ekonomisini ve Hazar çevresindeki güç dengesini değiştiren önemli bir dönüm noktasıdır.",
       "source": "",
-      "chronology": ""
+      "chronology": "3 Ocak 1942 — Bakü'nün Düşmesi",
+      "title": "Bakü'nün Düşüşü"
     },
     "BeyazSarayTr.jpg": {
       "category": "Diplomasi ve şehirler",
       "date": "",
-      "location": "",
-      "description": "",
+      "location": "Washington, D.C.",
+      "description": "Beyaz Saray yapısını gösteren arşiv görseli. Tarihi ve belirli bir olayla bağlantısı henüz kaynaklandırılmamıştır.",
       "source": "",
-      "chronology": ""
+      "chronology": "",
+      "title": "Beyaz Saray — Washington, D.C."
     },
     "Hainler.jpg": {
       "category": "Diğer kayıtlar",
@@ -34,75 +36,84 @@
     },
     "HitlerAtatürkZiyareti.jpg": {
       "category": "Diplomasi ve şehirler",
-      "date": "",
-      "location": "",
-      "description": "",
+      "date": "10 Kasım 1940",
+      "location": "Ankara, Anıtkabir",
+      "description": "10 Kasım 1940'ta Adolf Hitler'in Ankara'ya gelişi ve Anıtkabir ziyaretiyle bağlantılı tarihî sahneyi gösterir.",
       "source": "",
-      "chronology": ""
+      "chronology": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
+      "title": "Hitler'in Anıtkabir Ziyareti"
     },
     "KievDüşüş.jpg": {
       "category": "Cephe kayıtları",
-      "date": "",
-      "location": "",
-      "description": "",
+      "date": "11 Eylül 1941",
+      "location": "Kiev",
+      "description": "Kiev'in düşüşünü, Ukrayna'daki Sovyet savunmasının kırılması ve bölgenin ulaşım ile tarım alanlarının el değiştirmesi bağlamında kaydeder.",
       "source": "",
-      "chronology": ""
+      "chronology": "11 Eylül 1941 — Kiev'in Düşüşü",
+      "title": "Kiev'in Düşüşü"
     },
     "LeningradDüşüş.jpg": {
       "category": "Cephe kayıtları",
-      "date": "",
-      "location": "",
-      "description": "",
+      "date": "28 Ekim 1942",
+      "location": "Leningrad",
+      "description": "Uzun kuşatmanın ardından Leningrad'ın düşüşünü ve Sovyet kuzey cephesindeki büyük değişimi temsil eder.",
       "source": "",
-      "chronology": ""
+      "chronology": "28 Ekim 1942 — Leningrad'ın Düşüşü",
+      "title": "Leningrad'ın Düşüşü"
     },
     "MoskovaDüşüş.jpg": {
       "category": "Cephe kayıtları",
-      "date": "",
-      "location": "",
-      "description": "",
+      "date": "2 Şubat 1943",
+      "location": "Moskova",
+      "description": "Moskova'nın işgalini, Sovyet merkezî yönetiminin bütünlüğünü kaybettiği dönüm noktası olarak gösterir.",
       "source": "",
-      "chronology": ""
+      "chronology": "2 Şubat 1943 — Moskova İşgal Edilir",
+      "title": "Moskova'nın İşgali"
     },
     "Sevatipoolçıkarması.jpg": {
       "category": "Cephe kayıtları",
-      "date": "",
-      "location": "",
-      "description": "",
+      "date": "1 Mayıs 1942",
+      "location": "Sivastopol, Kırım",
+      "description": "Kronoloji kaydındaki 1 Mayıs 1942 Sivastopol çıkarmasıyla bağlantılı görsel.",
       "source": "",
-      "chronology": ""
+      "chronology": "1 Mayıs 1942 — Sivastopol Çıkarması",
+      "title": "Sivastopol Çıkarması"
     },
     "SivastipolDüşüş.jpg": {
       "category": "Cephe kayıtları",
-      "date": "",
-      "location": "",
-      "description": "",
+      "date": "7 Temmuz 1942",
+      "location": "Sivastopol, Kırım",
+      "description": "Sivastopol'un düşüşünü ve Karadeniz çevresindeki savaş sonrası güç dengesinin değişimini kaydeder.",
       "source": "",
-      "chronology": ""
+      "chronology": "7 Temmuz 1942 — Sivastopol'un Düşüşü",
+      "title": "Sivastopol'un Düşüşü"
     },
     "StalingGradDÜşüş.jpg": {
       "category": "Cephe kayıtları",
-      "date": "",
-      "location": "",
-      "description": "",
+      "date": "3 Kasım 1942",
+      "location": "Stalingrad",
+      "description": "Stalingrad'ın düşüşünü, Volga hattı ve Sovyet merkezî koordinasyonu üzerindeki etkileriyle birlikte kaydeder.",
       "source": "",
-      "chronology": ""
+      "chronology": "3 Kasım 1942 — Stalingrad'ın Düşüşü",
+      "title": "Stalingrad'ın Düşüşü"
     },
     "TürklerAyda.jpg": {
       "category": "Uzay ve keşif",
       "date": "",
-      "location": "",
-      "description": "",
+      "location": "Ay",
+      "description": "Türklerin Ay'daki varlığını konu alan alternatif tarih görseli. Olayın kesin tarihi ve kronoloji bağlantısı henüz belirlenmemiştir.",
       "source": "",
-      "chronology": ""
+      "chronology": "",
+      "title": "Türkler Ay'da"
     },
     "TürlerinAtombombası.jpeg": {
       "category": "Bilim ve teknoloji",
       "date": "",
       "location": "",
-      "description": "",
+      "description": "Türk atom programı temalı arşiv görseli. Hangi tarihî olayı veya proje aşamasını temsil ettiği ayrıca doğrulanmalıdır.",
       "source": "",
-      "chronology": ""
+      "chronology": "",
+      "title": "Türlerin Atom Bombası"
     }
   }
 }
