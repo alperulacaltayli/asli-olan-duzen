@@ -79,7 +79,7 @@ jobs:
               source = page_html.read_text(encoding="utf-8")
               assert 'rel="canonical"' in source, "Canonical URL eksik: " + page
               assert "site-search.js" in source, "Merkezî arama yüklenmiyor: " + page
-              for srcset in re.findall(r'\\bsrcset=["\\\']([^"\\\']+)["\\\']', source):
+              for srcset in re.findall(r'srcset="([^"]+)"', source):
                   for candidate in srcset.split(","):
                       asset = candidate.strip().split()[0]
                       if asset.startswith(("http://", "https://", "data:", "//")):
