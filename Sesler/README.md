@@ -47,7 +47,7 @@ Sesler/
       "description": "Kayıt hakkında kısa bilgi.",
       "date": "1985",
       "language": "tr",
-      "lyrics": "İlk söz satırı.\\nİkinci söz satırı.\\n\\nYeni kıta.",
+      "lyrics": "İlk söz satırı.\nİkinci söz satırı.\n\nYeni kıta.",
       "performer": "Seslendiren",
       "composer": "Besteci",
       "lyricist": "Söz yazarı",
