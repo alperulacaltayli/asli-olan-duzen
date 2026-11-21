@@ -779,7 +779,8 @@ Bu kayıt yalnızca B-3 sınıfının programını gösterir; okulun tüm sını
     public_records = public_folder_nodes("society", "Aslı Olan Düzen/Toplum ve Gündelik Hayat")
     records = _merge_public_records(records, public_records)
     for record in records:
-        if "kanat-sistemi" in str(record.get("path", "")).casefold():
+        record_path = normalize(record.get("path", ""))
+        if record_path == "kanat" or "kanat sistemi" in normalize(record.get("title", "")):
             record["country"] = "both"
     apply_default_leaf_country(records, "turkish")
     return {
