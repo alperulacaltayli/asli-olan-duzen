@@ -681,10 +681,27 @@ def import_geography():
         "nodes":records
     }
 
+def _merge_public_records(existing, public_records):
+    """Prefer a detailed approved public profile over an older short alias record."""
+    public_keys = set()
+    for record in public_records:
+        for value in [record.get("title", ""), record.get("sourceName", "")] + record.get("aliases", []):
+            if value:
+                public_keys.add(normalize(value))
+    kept = []
+    for record in existing:
+        values = [record.get("title", ""), record.get("sourceName", "")] + record.get("aliases", [])
+        if any(normalize(value) in public_keys for value in values if value):
+            continue
+        kept.append(record)
+    return kept + public_records
+
+
 def import_technology():
     technology_root = ROOT / "content" / "archives" / "technology"
-    records = scan_public_archive_nodes(technology_root, technology_root, "technology")
-    records += public_folder_nodes("technology", "Alternatif Tarih/Teknoloji/Kamuya Açık")
+    existing = scan_public_archive_nodes(technology_root, technology_root, "technology")
+    public_records = public_folder_nodes("technology", "Alternatif Tarih/Teknoloji/Kamuya Açık")
+    records = _merge_public_records(existing, public_records)
     return {
         "id":"technology",
         "title":"Teknoloji",
@@ -728,7 +745,8 @@ Türk Dili ve Edebiyatı, Matematik, Fizik, Kimya, Biyoloji, Tarih, Coğrafya, Y
 
 Bu kayıt yalnızca B-3 sınıfının programını gösterir; okulun tüm sınıflarına ait ortak çizelge değildir."""
         records.append(node("society", schedule, "1985 · HAFTALIK PROGRAM"))
-    records += public_folder_nodes("society", "Aslı Olan Düzen/Toplum ve Gündelik Hayat")
+    public_records = public_folder_nodes("society", "Aslı Olan Düzen/Toplum ve Gündelik Hayat")
+    records = _merge_public_records(records, public_records)
     return {
         "id":"society",
         "title":"Toplum ve Gündelik Hayat",
