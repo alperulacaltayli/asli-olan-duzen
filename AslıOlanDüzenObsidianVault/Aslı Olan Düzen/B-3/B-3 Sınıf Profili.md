@@ -6,7 +6,7 @@
 - **Kod:** B-3
 - **Ana karakter:** [[Oğuz Kağan Atalay]]
 - **Dönem:** 1985 eğitim yılı
-- **Okul adı:** **[BELİRLENMESİ GEREKİYOR]**
+- **Okul adı:** [[İstanbul Şarkın İlim ve Teknoloji Mektebi]] (kesinleşmiş ad)
 - **Bağlı dosya:** [[B-3 Ders Programı]]
 
 ## Sınıfın Genel Karakteri
