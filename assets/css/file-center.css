@@ -72,3 +72,17 @@
 .file-center-no-results{padding:30px;text-align:center;color:#b3bcb0;border:1px dashed rgba(221,211,190,.25)}
 @media(max-width:800px){.file-center-section-heading{align-items:start;flex-direction:column}.file-center-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.file-center-workflow-layout{grid-template-columns:1fr;gap:35px}.file-center-tools{grid-template-columns:1fr 1fr}.file-center-tools label:first-child{grid-column:1/-1}.file-center-item{grid-template-columns:1fr}.file-center-item-actions{justify-content:flex-start}.file-center-group-head{flex-direction:column}}
 @media(max-width:520px){.file-center-hero{min-height:auto;padding:130px 0 54px}.file-center-intro{font-size:18px}.file-center-overview,.file-center-manifest{padding:60px 0}.file-center-manifest{padding-top:18px}.file-center-metrics{gap:8px}.file-metric{min-height:105px;padding:13px}.file-metric>strong{font-size:27px}.file-center-tools{grid-template-columns:1fr;padding:12px}.file-center-tools label:first-child{grid-column:auto}.file-center-group-head,.file-center-item{padding:17px}.file-center-group-head h3{font-size:22px}.file-center-item-title h4{font-size:18px}.file-center-workflow{padding:70px 0}}
+
+
+/* Visible completion ledger — distinct from the remaining author tasks. */
+.file-center-completed{margin:0;padding:17px 24px 18px;border-bottom:1px solid rgba(221,211,190,.14);background:rgba(137,164,139,.055)}
+.file-center-completed-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;color:#b6c5b2;font:9px var(--mono);letter-spacing:.13em}
+.file-center-completed-head b{color:#c4d3bf;font:16px var(--display);font-weight:500}
+.file-center-completed ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;margin:0;padding:0;list-style:none}
+.file-center-completed li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:8px;align-items:start;min-width:0}
+.file-center-completed-mark{display:flex;align-items:center;justify-content:center;width:17px;height:17px;border:1px solid rgba(172,198,166,.35);border-radius:50%;color:#bdd0b6;font:11px var(--mono)}
+.file-center-completed li strong{display:block;color:#d6dfd1;font:500 14px/1.35 var(--serif)}
+.file-center-completed li small{display:block;margin-top:3px;overflow-wrap:anywhere;color:#859787;font:9px/1.45 var(--mono)}
+.file-center-completed li p{margin:4px 0 0;color:#9eaea0;font:12px/1.4 var(--serif)}
+@media(max-width:800px){.file-center-completed ul{grid-template-columns:1fr}}
+@media(max-width:520px){.file-center-completed{padding:15px 17px}.file-center-completed ul{gap:12px}}
