@@ -28,24 +28,25 @@ def normalize(text):
 def normalize_country(value):
     key = normalize(value)
     aliases = {
-        "turkish": "turkish", "turk": "turkish", "turkiye": "turkish",
+        "turkish": "turkish", "turk": "turkish", "turkiye": "turkish", "turkey": "turkish",
         "turkiye arsivi": "turkish", "turk arsivi": "turkish",
-        "german": "german", "alman": "german", "almanya": "german",
-        "deutsch": "german", "german reich": "german", "alman arsivi": "german",
+        "german": "german", "germany": "german", "alman": "german", "almanya": "german",
+        "deutsch": "german", "deutschland": "german", "german reich": "german", "alman arsivi": "german",
         "both": "both", "shared": "both", "common": "both", "ortak": "both",
         "her iki arsiv": "both",
     }
     return aliases.get(key)
 
 
-def apply_default_leaf_country(nodes, country):
-    """Tag actual records while leaving structural folders neutral."""
+def apply_default_leaf_country(nodes, country, inherited_country=None):
+    """Tag actual records, inheriting an explicit country from a parent folder."""
     for item in nodes or []:
+        item_country = item.get("country") or inherited_country
         children = item.get("children", [])
         if children:
-            apply_default_leaf_country(children, country)
+            apply_default_leaf_country(children, country, item_country)
         elif not item.get("country"):
-            item["country"] = country
+            item["country"] = item_country or country
 
 
 def read_doc(relative):
