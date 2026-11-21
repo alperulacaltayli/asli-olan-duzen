@@ -3597,31 +3597,9 @@
             },
             {
               "categoryId": "society",
-              "id": "society-asli-olan-duzen-world-politics-kanat-md",
-              "title": "Kanat",
-              "date": "İMPARATORLUK GENELİ"
-            }
-          ],
-          "categoryId": "society",
-          "ancestors": []
-        },
-        {
-          "id": "society-asli-olan-duzen-world-politics-kanat-md",
-          "path": "Aslı Olan Düzen/World/Politics/Kanat.md",
-          "sourceName": "Kanat",
-          "title": "Kanat",
-          "date": "İMPARATORLUK GENELİ",
-          "summary": "Status: Established Canon / Expanded System Note",
-          "content": "**Status:** Established Canon / Expanded System Note\n\nEmpire-wide student responsibility and rank system. Author decision: the Kanat system exists across the entire Büyük Türk İmparatorluğu, not only in Oğuz's school.\n\n## Known Levels\n- One Kanat: entry/basic level.\n- Two Kanat: proven respectful and helpful student.\n- Three Kanat: group leadership and responsibility.\n- Four Kanat: wider organization of Three Kanats and school operations.\n- Five Kanat: school president's deputy / high student office.\n- Six Kanat: school president / highest student office.\n\n## Related Files\n- [[B-3 Sınıf Profili]]\n- Ministry of Education and Youth Order\n- Ziya Arat",
-          "order": 999,
-          "aliases": [],
-          "children": [],
-          "links": [
-            {
-              "categoryId": "society",
-              "id": "society-asli-olan-duzen-b-3-b-3-sinif-profili-md",
-              "title": "B-3 Sınıf Profili",
-              "date": "1985 · EĞİTİM"
+              "id": "society-asli-olan-duzen-toplum-ve-gundelik-hayat-kanat-sistemi-uygulamasi-md",
+              "title": "Kanat Sistemi — Kamusal Çerçeve",
+              "date": "1985"
             }
           ],
           "categoryId": "society",
@@ -3677,9 +3655,9 @@
             },
             {
               "categoryId": "society",
-              "id": "society-asli-olan-duzen-world-politics-kanat-md",
-              "title": "Kanat",
-              "date": "İMPARATORLUK GENELİ"
+              "id": "society-asli-olan-duzen-toplum-ve-gundelik-hayat-kanat-sistemi-uygulamasi-md",
+              "title": "Kanat Sistemi — Kamusal Çerçeve",
+              "date": "1985"
             }
           ],
           "categoryId": "society",
@@ -3695,17 +3673,12 @@
           "content": "# Kanat Sistemi — Kamusal Çerçeve\n\n## Sistemin kapsamı\n\nKanat sistemi, yalnızca Oğuz Kağan Atalay'ın okuluna özgü değildir; Büyük Türk İmparatorluğu genelindeki öğrenci düzeninin parçasıdır. Öğrencilerin sorumluluk, katkı, liderlik ve okul içindeki görevleri altı seviyede tanımlanır.\n\nKanat sayısı, öğrencinin okul sistemi içindeki görev ve sorumluluk seviyesini gösterir. Bu kayıt, seviyelerin kamusal anlamını açıklar; kesinleşmemiş değerlendirme ölçütleri veya terfi prosedürleri eklemez.\n\n## Bilinen seviyeler\n\n| Seviye | Kamusal karşılığı |\n|---|---|\n| 1 Kanat | Başlangıç ve temel sorumluluk seviyesi. |\n| 2 Kanat | Saygılı, yardımcı ve uyumlu davranışları kanıtlanmış öğrenci. |\n| 3 Kanat | Grup liderliği ve görev sorumluluğu üstlenebilen öğrenci. |\n| 4 Kanat | Üç Kanat seviyesindeki öğrencilerin daha geniş organizasyonuna ve okul işleyişine katkı sağlayan seviye. |\n| 5 Kanat | Okul başkan yardımcılığı düzeyindeki üst öğrenci görevi. |\n| 6 Kanat | Okul başkanlığı ve sistemdeki en yüksek öğrenci görevi. |\n\n## Öğretmenlerin rolü\n\nÖğretmenler öğrencilerin ders, grup çalışması, sunum, görev paylaşımı ve davranışlarını gözlemler. Bu gözlemler sistem için değerlendirme bilgisi oluşturabilir; öğretmenler Kanat seviyesini tek başına belirlemez.\n\n## Kanat Konseyi ve karar süreci\n\nMevcut okul kanonunda nihai Kanat işleyişinin Kanat Konseyi ve kendi kuralları üzerinden yürüdüğü belirtilir. Konseyin ayrıntılı yapısı, üyelik ölçütleri, değerlendirme takvimi, yükselme ve itiraz prosedürü henüz kamuya açık kaynaklarda ayrıntılandırılmamıştır.\n\n## B-3 sınıfından bilinen örnekler\n\n- Oğuz Kağan Atalay: 3 Kanat.\n- Alev Acar: 2 Kanat.\n- Aylin Aksoy: 3 Kanat.\n- Muhammed Mete: 4 Kanat.\n- İsmail Yağız Aslan: 5 Kanat.\n- Alper: 6 Kanat.\n\nBu örnekler karakter dosyalarındaki mevcut sınıf bilgilerini yansıtır; genel terfi ölçütlerinin yerine geçmez.\n\n## Açık kalan bilgiler\n\n- Kanat Konseyinin üyeleri ve görev süresi.\n- Seviye yükseltme/değerlendirme aralıkları.\n- Puanlama veya gözlem ölçütleri.\n- İtiraz ve yeniden değerlendirme usulü.\n- Okullar arasında uygulamanın standartlaştırılması.\n\n## Kaynaklar\n\n- [[Kanat]]\n- [[B-3 Sınıf Profili]]\n- [[B-3 Ders Programı]]\n- [[İstanbul Şarkın İlim ve Teknoloji Mektebi]]",
           "order": 2,
           "aliases": [
+            "Kanat",
             "Kanat Sistemi",
             "Kanat seviyeleri"
           ],
           "children": [],
           "links": [
-            {
-              "categoryId": "society",
-              "id": "society-asli-olan-duzen-world-politics-kanat-md",
-              "title": "Kanat",
-              "date": "İMPARATORLUK GENELİ"
-            },
             {
               "categoryId": "society",
               "id": "society-asli-olan-duzen-b-3-b-3-sinif-profili-md",
