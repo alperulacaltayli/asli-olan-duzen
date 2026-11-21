@@ -2302,6 +2302,371 @@
           ],
           "categoryId": "geography",
           "ancestors": []
+        },
+        {
+          "id": "geography-alternatif-tarih-dunya-cografya-atlas-1985-md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/atlas-1985.md",
+          "sourceName": "atlas-1985",
+          "title": "1985 Dünya Siyasi Atlası — Genel Çerçeve",
+          "date": "1985",
+          "summary": "1946 paylaşımı sonrasında Almanya merkezli kuzey ve Türkiye merkezli güney nüfuz alanlarının 1985'e uzanan genel coğrafi çerçevesi.",
+          "content": "# 1985 Dünya Siyasi Atlası — Genel Çerçeve\n\n## Haritanın kapsamı\n\nBu kayıt, 1985 yılında geçerli olan dünya düzenini, evrenin mevcut ülke ve paylaşım notlarına dayanarak genel ölçekte açıklar. Kesin sınır çizgileri veya ölçekli şehir haritası değildir. Belirli sınırların koordinatları, yerel idarî statüler ve bazı geçiş bölgeleri henüz ayrı kaynaklarla sabitlenmemiştir.\n\n## Tarihsel zemin\n\n- 1938'de Türkiye'de Alperen Keser yönetimi başladı.\n- 1940'ta Fransa ve İngiltere'nin düşmesi Avrupa ve sömürge düzenini değiştirdi.\n- 1941–1943 döneminde Almanya ve Türkiye'nin savaşa katılımıyla Sovyetler Birliği'nin merkezî bütünlüğü sona erdi.\n- 1944'te Türkistan uranyum kaynakları Türkiye'nin atom programı için stratejik önem kazandı.\n- 1 Ağustos 1946'da Washington, 8 Ağustos 1946'da New York atom saldırısına uğradı.\n- Amerika'nın merkezî devlet yapısının çöküşünden sonra Almanya ve Türkiye arasında yeni bir dünya paylaşımı kuruldu.\n\n## Kuzey düzeni — Alman nüfuz alanı\n\nMevcut paylaşım notlarında Almanya'nın ana ağırlığı Avrupa, kuzey ve orta Kuzey Amerika, Kanada, Alaska, Grönland, Avrupa Rusyası ve kuzey deniz bağlantıları olarak tarif edilir. Britanya adaları, Fransa, İskandinavya, Baltık hattı ve kuzey Avrupa sanayi kuşağı bu düzenin parçasıdır.\n\n## Güney düzeni — Türk nüfuz alanı\n\nTürkiye'nin nüfuz alanı; Anadolu merkezinden Balkanların büyük bölümüne, Ortadoğu, Kafkasya, Hazar ve Türkistan hattına uzanır. Güney Amerika'nın tamamı, Meksika ve Orta Amerika çevresi, Karayipler üzerindeki deniz nüfuzu, Doğu ve Güney Afrika ile Hint Okyanusu bağlantıları da mevcut paylaşım notlarında Türk tarafına bırakılır.\n\nViyana'nın Türkiye'ye bağlanması, paylaşımın sembolik sonuçlarından biri olarak Kızıl Elma başlığı altında anlatılır.\n\n## Diğer güçler\n\nİtalya ve Japonya kendi bölgelerinde varlıklarını sürdürür; ancak mevcut kanon onları Almanya ve Türkiye ile eşit ölçekte üçüncü bir dünya kutbu olarak tanımlamaz. İngiltere ve Fransa'nın eski küresel güçleri sona ermiştir. Eski Sovyet coğrafyasında farklı bağlı yönetimler, tampon bölgeler ve kimlik mücadeleleri bulunur.\n\n## Harita üzerinde henüz sabitlenmeyenler\n\n- Afrika'daki Alman-Türk geçiş çizgisinin kesin sınırları.\n- Kuzey Amerika'daki tampon bölgelerin idarî statüsü.\n- Balkanlar, İran ve Hindistan çevresindeki yerel yönetimlerin kesin sınırları.\n- Japonya ve diğer devletlerin 1985'teki ayrıntılı idarî statüleri.\n- Şehir sınırları, ulaşım hatları ve bölgesel merkezlerin koordinatları.\n\nBu alanlar kesinleşmiş kanon dosyası veya onaylı harita geldiğinde güncellenecektir.\n\n## Kaynak kayıtları\n\n- [[Dünya Paylaşımı 1946]]\n- [[Genel Dünya]]\n- [[Türkiye]]\n- [[Almanya]]\n- [[Amerika]]\n- [[Diğer Devletler]]",
+          "order": 1,
+          "aliases": [
+            "1985 Dünya Atlası",
+            "Siyasi Dünya Atlası"
+          ],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-dunya-paylasimi-1946-md",
+              "title": "Dünya Paylaşımı 1946",
+              "date": "1946 · SİYASİ PAYLAŞIM"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
+              "title": "Genel Dünya",
+              "date": "1985 · DÜNYA DÜZENİ"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-turkiye-md",
+              "title": "Türkiye",
+              "date": "DEVLET DOSYASI"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-almanya-md",
+              "title": "Almanya",
+              "date": "DEVLET DOSYASI"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-amerika-md",
+              "title": "Amerika",
+              "date": "DEVLET DOSYASI"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-diger-devletler-md",
+              "title": "Diğer Devletler",
+              "date": "DİĞER GÜÇLER"
+            }
+          ],
+          "categoryId": "geography",
+          "ancestors": []
+        },
+        {
+          "id": "geography-alternatif-tarih-dunya-cografya-sehir-ankara-md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/sehir-ankara.md",
+          "sourceName": "sehir-ankara",
+          "title": "Ankara — 1985 Şehir Profili",
+          "date": "1985",
+          "summary": "Büyük Türk İmparatorluğu'nun merkezî yönetim noktası; Çankaya tepelerinde Kızıl Orda ve Rasattepe'deki Anıtkabir aynı başkent siluetinin parçalarıdır.",
+          "content": "# Ankara — 1985 Şehir Profili\n\n## Şehrin konumu\n\n1985 yılında Ankara, Büyük Türk İmparatorluğu'nun merkezî yönetiminin bulunduğu başkenttir. Şehir, devlet idaresinin yanı sıra tarihî hafıza ve resmî temsil açısından da önem taşır.\n\n## Çankaya ve Kızıl Orda\n\nKızıl Orda, Ankara'nın Çankaya tepelerinde konumlanan strateji, istihbarat ve bilim merkezidir. Yerleşke, Rasattepe ve Anıtkabir yönüne bakacak şekilde tasarlanmıştır. Böylece çağdaş devlet merkezi ile imparatorluğun kurucu tarih anlatısı aynı başkent manzarasında karşı karşıya gelir.\n\nKızıl Orda'nın ana kütlesi beş köşeli yıldız biçimindedir ve 18 katlıdır. Yapıya üç hilal biçimli kanat eşlik eder. Dış görünüşte koyu taş, beton, tuğla ve cam yüzeyler kullanılır. En üst kattaki Uluğâh, merkezî karar ve görüşme mekânıdır.\n\n## Anıtkabir ve tarihî hafıza\n\nAnıtkabir, 1940'ta tamamlanmış ve devletin kamusal hafızasında merkezî bir yer edinmiştir. 10 Kasım 1940'taki ziyaret ve törenler, Ankara'nın uluslararası basında da görünür olmasına neden olmuştur.\n\n## Şehir planı ve ulaşım\n\nAnkara'nın 1985 tarihli tam şehir planı, mahalle sınırları, toplu taşıma hatları, ana yollar ve havalimanı bağlantıları mevcut kaynaklarda henüz kesinleştirilmemiştir. Bu nedenle burada doğrulanmış güzergâh veya adres verilmez.\n\n## İlgili kayıtlar\n\n- [[Kızıl Orda]]\n- [[10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti]]\n- [[Mart 1940 — Anıtkabir'in Tamamlanması]]",
+          "order": 2,
+          "aliases": [
+            "Ankara",
+            "Başkent Ankara"
+          ],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "institutions",
+              "id": "institutions-asli-olan-duzen-world-organizations-turkish-empire-kizil-orda-md",
+              "title": "Kızıl Orda",
+              "date": ""
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
+              "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
+              "date": "10 Kasım 1940"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-1940-mart-anitkabir-tamamlandi-md",
+              "title": "Mart 1940 — Anıtkabir'in Tamamlanması",
+              "date": "Mart 1940"
+            }
+          ],
+          "categoryId": "geography",
+          "ancestors": []
+        },
+        {
+          "id": "geography-alternatif-tarih-dunya-cografya-sehir-istanbul-md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/sehir-istanbul.md",
+          "sourceName": "sehir-istanbul",
+          "title": "İstanbul — 1985 Şehir Profili",
+          "date": "1985",
+          "summary": "Romanın okul ve aile yaşamının geçtiği şehir. İstanbul Şarkın İlim ve Teknoloji Mektebi'nin şehirde bulunduğu kesin; ilçe ve kampüs adresi henüz belirlenmemiştir.",
+          "content": "# İstanbul — 1985 Şehir Profili\n\n## Şehrin evrendeki yeri\n\nİstanbul, romanın 1985 yılında geçen okul ve aile yaşamının temel şehirlerinden biridir. Ana karakter Oğuz Kağan Atalay ve B-3 sınıfının hikâyesi İstanbul'daki eğitim çevresinde gelişir.\n\n## Eğitim merkezi\n\nİstanbul Şarkın İlim ve Teknoloji Mektebi, B-3 sınıfının bağlı olduğu okuldur. Okulun adı kesinleşmiştir. Eğitim yaklaşımı yalnızca teknik üretime dayanmaz; fen ve teknoloji derslerinin yanında dil, tarih, yurttaşlık, sosyolojik eğitim, felsefe ve sanat dersleri de bulunur.\n\n## Şehir dokusu\n\nİstanbul'un 1985 idarî bölünümü, okulun bulunduğu ilçe, kampüsün kesin adresi, ulaşım bağlantıları ve mahalle profilleri mevcut kanonda henüz sabitlenmemiştir. Bu dosyada gerçek İstanbul haritasından otomatik olarak alternatif evrene aktarılmış bir idarî düzen varsayılmaz.\n\n## İlgili kayıtlar\n\n- İstanbul Şarkın İlim ve Teknoloji Mektebi\n- [[B-3 Sınıf Profili]]\n- [[B-3 Ders Programı]]",
+          "order": 3,
+          "aliases": [
+            "İstanbul"
+          ],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "society",
+              "id": "society-asli-olan-duzen-b-3-b-3-sinif-profili-md",
+              "title": "B-3 Sınıf Profili",
+              "date": "1985 · EĞİTİM"
+            },
+            {
+              "categoryId": "society",
+              "id": "society-asli-olan-duzen-b-3-b-3-ders-programi-md",
+              "title": "B-3 — Haftalık Ders Düzeni",
+              "date": "1985 · HAFTALIK PROGRAM"
+            }
+          ],
+          "categoryId": "geography",
+          "ancestors": []
+        },
+        {
+          "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/sehir-new-york.md",
+          "sourceName": "sehir-new-york",
+          "title": "New York — 1946 Tarihî Durum",
+          "date": "1946",
+          "summary": "8 Ağustos 1946'da Almanya'nın atom saldırısına uğrayan ve Amerika'nın merkezî devlet yapısının çöküşünü hızlandıran şehir.",
+          "content": "# New York — 1946 Tarihî Durum\n\n## Tarihî kırılma\n\n8 Ağustos 1946'da New York, Almanya tarafından gerçekleştirilen ikinci atom saldırısının hedefi oldu. Olay, Washington saldırısından bir hafta sonra gerçekleşti ve Amerika'nın siyasî, ekonomik ve toplumsal çöküş sürecinde belirleyici bir eşik olarak kaydedildi.\n\n## Dünya düzenine etkisi\n\nNew York saldırısı sonrasında Amerika Birleşik Devletleri merkezî devlet olarak varlığını sürdüremedi. Eski ülkenin farklı bölgelerinde yerel yönetimler, sürgün çevreleri ve direniş yapıları ortaya çıktı. 1946 dünya paylaşımı, bu çöküşün ardından Almanya ve Türkiye arasında şekillendi.\n\n## 1985 statüsü\n\nNew York'un 1985'teki yerel yönetimi, nüfus yapısı, yeniden inşası ve siyasî statüsü için mevcut kanonda yeterli ayrıntı bulunmamaktadır. Şehir profili bu alanlarda varsayım üretmez.\n\n## Kaynaklar\n\n- [[8 Ağustos 1946 — New York Atom Bombardımanı]]\n- [[1 Ağustos 1946 — Washington Atom Bombardımanı]]\n- [[1946 — Amerika'nın Tam Çöküşü]]\n- [[Amerika]]",
+          "order": 5,
+          "aliases": [
+            "New York",
+            "New York City"
+          ],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-1946-8-agustos-new-york-atom-bombardimani-md",
+              "title": "8 Ağustos 1946 — New York Atom Bombardımanı",
+              "date": "8 Ağustos 1946"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-1946-1-agustos-washington-atom-bombardimani-md",
+              "title": "1 Ağustos 1946 — Washington Atom Bombardımanı",
+              "date": "1 Ağustos 1946"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-1946-amerika-nin-tam-cokusu-md",
+              "title": "1946 — Amerika'nın Tam Çöküşü",
+              "date": "1946"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-amerika-md",
+              "title": "Amerika",
+              "date": "DEVLET DOSYASI"
+            }
+          ],
+          "categoryId": "geography",
+          "ancestors": []
+        },
+        {
+          "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/sehir-washington.md",
+          "sourceName": "sehir-washington",
+          "title": "Washington, D.C. — 1946 Tarihî Durum",
+          "date": "1946",
+          "summary": "1 Ağustos 1946'da Türkiye'nin atom saldırısına uğrayan ve Amerika'nın merkezî yönetim krizinin başlangıç noktası hâline gelen başkent.",
+          "content": "# Washington, D.C. — 1946 Tarihî Durum\n\n## Tarihî kırılma\n\n1 Ağustos 1946'da Washington, D.C. Türkiye tarafından gerçekleştirilen atom saldırısının hedefi oldu. Mevcut kanon, bu saldırının Amerikan federal yönetimini parçaladığını ve merkezî komuta bütünlüğünü ağır biçimde sarstığını belirtir.\n\n## Sonraki gelişmeler\n\n8 Ağustos 1946'da New York'a Almanya tarafından ikinci bir atom saldırısı gerçekleştirildi. Bu iki olayın ardından Amerika Birleşik Devletleri merkezî devlet olarak çöktü. 1950'lerde eski devletin kalıntıları yerel yönetimler, sürgün çevreleri ve direniş hareketleri biçiminde varlığını sürdürdü.\n\n## 1985 statüsü\n\nWashington'un 1985'teki idarî statüsü, şehir yönetimi, nüfus, yeniden inşa süreci ve kamusal yapıların durumu mevcut kaynaklarda kesinleştirilmemiştir. Bu dosya yalnızca tarihî olay ve genel sonuçları kaydeder.\n\n## Kaynaklar\n\n- [[1 Ağustos 1946 — Washington Atom Bombardımanı]]\n- [[8 Ağustos 1946 — New York Atom Bombardımanı]]\n- [[1946 — Amerika'nın Tam Çöküşü]]\n- [[Amerika]]",
+          "order": 4,
+          "aliases": [
+            "Washington",
+            "Washington D.C."
+          ],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-1946-1-agustos-washington-atom-bombardimani-md",
+              "title": "1 Ağustos 1946 — Washington Atom Bombardımanı",
+              "date": "1 Ağustos 1946"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-1946-8-agustos-new-york-atom-bombardimani-md",
+              "title": "8 Ağustos 1946 — New York Atom Bombardımanı",
+              "date": "8 Ağustos 1946"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-1946-amerika-nin-tam-cokusu-md",
+              "title": "1946 — Amerika'nın Tam Çöküşü",
+              "date": "1946"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-amerika-md",
+              "title": "Amerika",
+              "date": "DEVLET DOSYASI"
+            }
+          ],
+          "categoryId": "geography",
+          "ancestors": []
+        },
+        {
+          "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-fransa-md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/ulke-profilleri/fransa.md",
+          "sourceName": "fransa",
+          "title": "Fransa — Ülke Profili",
+          "date": "1985",
+          "summary": "14 Haziran 1940'ta çöken, Suriye üzerindeki denetimini kaybeden ve sürgün çevreleri Amerika ile temas kurarak varlığını sürdürmeye çalışan Fransa.",
+          "content": "# Fransa — Ülke Profili\n\n## 1940 kırılması\n\nEvrenin kronolojisine göre Fransa 14 Haziran 1940'ta düşmüştür. Bu gelişme Avrupa'daki güç dengesini değiştirmiş ve Fransa'nın denizaşırı manda bölgelerini savunmasız bırakmıştır.\n\n## Suriye ve Türkiye ile ilişkiler\n\nFransa'nın Suriye üzerindeki denetimi sona ermiş, Türkiye bölgeye girerek kendi yönetimine bağlamıştır. Bu gelişme Fransa'nın Doğu Akdeniz'deki eski konumunu zayıflatmıştır.\n\n## Savaş sonrası konum\n\nFransız sürgün çevreleri Amerika ile temas kurarak siyasî varlıklarını sürdürmeye çalışmıştır. Amerika'nın 1946'da çökmesiyle bu çevrelerin bağımsız bir hükümet olarak yeniden güç kazanma umudu daha da azalmıştır. Fransa'nın eski küresel gücü sona ermiş olsa da Fransız kimliği ve sürgün hafızası devam eder.\n\n## Açık kalan bilgiler\n\n1985'te Fransa'nın kesin idarî statüsü, yerel yönetim yapısı, başkent kurumları, nüfus, ekonomi ve sürgün çevrelerinin örgütlenmesi için yeni kanon bilgisi gerekir.\n\n## Kaynaklar\n\n- [[Diğer Devletler]]\n- [[Türkiye]]\n- [[Dünya Paylaşımı 1946]]\n- [[14 Haziran 1940 — Fransa'nın Düşüşü]]",
+          "order": 13,
+          "aliases": [
+            "Fransa"
+          ],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-diger-devletler-md",
+              "title": "Diğer Devletler",
+              "date": "DİĞER GÜÇLER"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-turkiye-md",
+              "title": "Türkiye",
+              "date": "DEVLET DOSYASI"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-dunya-paylasimi-1946-md",
+              "title": "Dünya Paylaşımı 1946",
+              "date": "1946 · SİYASİ PAYLAŞIM"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-1940-14-haziran-fransa-dustu-md",
+              "title": "14 Haziran 1940 — Fransa'nın Düşüşü",
+              "date": "14 Haziran 1940"
+            }
+          ],
+          "categoryId": "geography",
+          "ancestors": []
+        },
+        {
+          "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/ulke-profilleri/ingiltere.md",
+          "sourceName": "ingiltere",
+          "title": "İngiltere — Ülke Profili",
+          "date": "1985",
+          "summary": "16 Eylül 1940'ta Alman hâkimiyetine giren, eski küresel imparatorluk yapısı parçalanan ve direniş hafızası süren İngiltere.",
+          "content": "# İngiltere — Ülke Profili\n\n## 1940 kırılması\n\nEvrenin kronolojisine göre İngiltere 16 Eylül 1940'ta Alman hâkimiyetine girmiştir. Bu gelişme yalnızca adanın siyasî statüsünü değil, Britanya İmparatorluğu'nun sömürge ve denizaşırı nüfuz ağlarını da parçalamıştır.\n\n## Savaş sonrası konum\n\nEski İngiliz sömürge sistemi merkezî bütünlüğünü kaybetmiş; farklı bölgeler yerel hareketler, Mihver baskısı ve yeni paylaşım düzeni içinde farklı statülere ayrılmıştır. İngiliz kimliği ve direniş hafızası ortadan kalkmış değildir. Sürgün çevreleri ve yeraltı ağları varlığını sürdürür.\n\n## 1946 sonrası\n\nAmerika'nın çöküşü, İngiliz sürgün çevrelerinin bağımsız bir hükümet olarak yeniden güç kazanma ihtimalini daha da azaltmıştır. Dünya paylaşımı notlarında Britanya adaları Alman nüfuz alanı içinde gösterilir.\n\n## Açık kalan bilgiler\n\n1985'teki yerel yönetim, idarî bölünme, başkent kurumlarının statüsü, nüfus, ekonomi ve direniş gruplarına ilişkin ayrıntılar henüz doğrulanmamıştır.\n\n## Kaynaklar\n\n- [[Diğer Devletler]]\n- [[Dünya Paylaşımı 1946]]\n- [[Genel Dünya]]\n- [[16 Eylül 1940 — İngiltere'nin Düşüşü]]",
+          "order": 12,
+          "aliases": [
+            "Birleşik Krallık",
+            "Britanya"
+          ],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-diger-devletler-md",
+              "title": "Diğer Devletler",
+              "date": "DİĞER GÜÇLER"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-dunya-paylasimi-1946-md",
+              "title": "Dünya Paylaşımı 1946",
+              "date": "1946 · SİYASİ PAYLAŞIM"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
+              "title": "Genel Dünya",
+              "date": "1985 · DÜNYA DÜZENİ"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-1940-16-eylul-ingiltere-dustu-md",
+              "title": "16 Eylül 1940 — İngiltere'nin Düşüşü",
+              "date": "16 Eylül 1940"
+            }
+          ],
+          "categoryId": "geography",
+          "ancestors": []
+        },
+        {
+          "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-italya-md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/ulke-profilleri/italya.md",
+          "sourceName": "italya",
+          "title": "İtalya — Ülke Profili",
+          "date": "1985",
+          "summary": "Mihver içinde yer alan, Akdeniz'de kazanımlar elde etse de savaş sonrası dünya düzeninde Almanya ve Türkiye'nin gerisinde kalan İtalya.",
+          "content": "# İtalya — Ülke Profili\n\n## Devletin evrendeki konumu\n\nİtalya, II. Dünya Savaşı'nın alternatif seyrinde Mihver tarafında yer alır. Yunanistan'ın paylaşımında rol oynar ve Akdeniz'de bazı kazanımlar elde eder. Buna rağmen mevcut kanon, İtalya'yı Almanya ve Türkiye ile aynı ölçekte kalıcı bir küresel güç olarak tanımlamaz.\n\n## Türkiye ile ilişkiler\n\nİtalya'nın Akdeniz'deki konumu, Türkiye'nin Ege ve Kıbrıs çevresindeki genişlemesiyle gerilimli hâle gelir. İki devlet aynı ittifak düzeninde bulunsa da bölgesel çıkarları her zaman örtüşmez.\n\n## 1946 sonrası\n\nDünya paylaşımından sonra İtalya, Almanya ve Türkiye'nin kurduğu kuzey-güney düzeninde ikincil konumda kalır. Akdeniz'deki bazı haklarını koruduğu belirtilir; ancak kesin idarî sınırlar ve bağlı bölgeler mevcut kaynaklarda ayrıntılandırılmamıştır.\n\n## Açık kalan bilgiler\n\nBaşkent ve şehir profilleri, 1985 yönetim yapısı, ekonomi, nüfus, askerî/idarî kurumlar ve kesin sınırlar için ayrı kanon dosyası gerekir. Bu kayıtta doğrulanmamış ayrıntı eklenmemiştir.\n\n## Kaynaklar\n\n- [[Diğer Devletler]]\n- [[Dünya Paylaşımı 1946]]\n- [[Genel Dünya]]",
+          "order": 10,
+          "aliases": [
+            "İtalya"
+          ],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-diger-devletler-md",
+              "title": "Diğer Devletler",
+              "date": "DİĞER GÜÇLER"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-dunya-paylasimi-1946-md",
+              "title": "Dünya Paylaşımı 1946",
+              "date": "1946 · SİYASİ PAYLAŞIM"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
+              "title": "Genel Dünya",
+              "date": "1985 · DÜNYA DÜZENİ"
+            }
+          ],
+          "categoryId": "geography",
+          "ancestors": []
+        },
+        {
+          "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-japonya-md",
+          "path": "Alternatif Tarih/Dünya/Coğrafya/ulke-profilleri/japonya.md",
+          "sourceName": "japonya",
+          "title": "Japonya — Ülke Profili",
+          "date": "1985",
+          "summary": "Pasifik'te varlığını sürdüren, Amerika'nın çöküşünden yararlansa da yeni dünya düzeninin ana kurucusu olmayan Japonya.",
+          "content": "# Japonya — Ülke Profili\n\n## Devletin evrendeki konumu\n\nJaponya, Pasifik'te önemli kazanımlar elde etmiş ve Amerika ile rekabetini bu bölgede sürdürmüştür. Ancak mevcut kanon, Japonya'nın Almanya ve Türkiye kadar geniş bir kara veya küresel nüfuz alanı oluşturamadığını belirtir.\n\n## 1946 sonrası\n\nAmerika'nın merkezî devlet yapısının çöküşü Japonya'ya yeni hareket alanı sağlamıştır. Buna rağmen Japonya, kuzey-güney paylaşımının başlıca kurucu gücü değildir. Dünya paylaşım notlarında, Pasifik'teki varlığını sürdüren fakat yeni düzende ikincil/bağlı aktör konumuna gerileyen bir güç olarak tarif edilir.\n\n## Açık kalan bilgiler\n\n1985'teki resmî yönetim biçimi, başkent ve idarî statü, Pasifik sınırları, ekonomi, nüfus ve diğer devletlerle yapılan anlaşmalar henüz ayrı kaynaklarla kesinleştirilmemiştir.\n\n## Kaynaklar\n\n- [[Diğer Devletler]]\n- [[Dünya Paylaşımı 1946]]\n- [[Genel Dünya]]",
+          "order": 11,
+          "aliases": [
+            "Japonya"
+          ],
+          "children": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-diger-devletler-md",
+              "title": "Diğer Devletler",
+              "date": "DİĞER GÜÇLER"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-dunya-paylasimi-1946-md",
+              "title": "Dünya Paylaşımı 1946",
+              "date": "1946 · SİYASİ PAYLAŞIM"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
+              "title": "Genel Dünya",
+              "date": "1985 · DÜNYA DÜZENİ"
+            }
+          ],
+          "categoryId": "geography",
+          "ancestors": []
         }
       ]
     },
@@ -3112,8 +3477,8 @@
           "sourceName": "B-3 Sınıf Profili",
           "title": "B-3 Sınıf Profili",
           "date": "1985 · EĞİTİM",
-          "summary": " Temel Bilgiler\n- Sınıf: 3. sınıf\n- Şube: B\n- Kod: B-3\n- Ana karakter: [[Oğuz Kağan Atalay]]\n- Dönem: 1985 eğitim yılı\n- Okul adı: [BELİRLENMESİ GEREKİYOR]\n- Bağlı dosya: [[B-3 Ders Programı]]",
-          "content": "## Temel Bilgiler\n- **Sınıf:** 3. sınıf\n- **Şube:** B\n- **Kod:** B-3\n- **Ana karakter:** [[Oğuz Kağan Atalay]]\n- **Dönem:** 1985 eğitim yılı\n- **Bağlı dosya:** [[B-3 Ders Programı]]\n\n## Sınıfın Genel Karakteri\nB-3, akademik seviyesi ortalamanın üzerinde olan fakat tek tip öğrencilerden oluşmayan bir sınıftır. Teknik merakı güçlü öğrenciler, sosyal becerileri gelişmiş öğrenciler, siyasete ve hukuka ilgi duyanlar, sanat ve sporla kendini gösterenler aynı sınıfta bulunur. Bu nedenle sınıf yalnızca sınav başarısıyla değil, konuşma, ikna, grup çalışması ve sorumluluk alma davranışlarıyla da dikkat çeker.\n\n## Öne Çıkan Öğrenciler\n- [[Oğuz Kağan Atalay]]: Üç kanatlı, disiplinli, teknik zekâsı ve askerî pilot hedefiyle öne çıkar.\n- [[İsmail Yağız Aslan]]: Beş kanatlı, esprili ve siyasete yatkın; dağınık görünse de doğru konuda güçlü odaklanabilir.\n- [[Muhammed Mete]]: Dört kanatlı, sakin ve uzlaşmacı; sivil pilotluk hedefi vardır.\n- [[Aylin Aksoy]]: Üç kanatlı, planlı, gözlemci; avukatlık hedefi ve Sosyolojik Eğitim ilgisi güçlüdür.\n- [[Alev Acar]]: İki kanatlı, enerjik, uyumlu; sivil pilotluk hedefi vardır.\n\n## Sosyal Yapı\nSınıfın merkezinde Oğuz, İsmail, Alper ve çevrelerine katılan öğrencilerden oluşan güçlü bir arkadaş grubu bulunur. Bu grup sınıfta doğal ağırlık taşır; ancak öğretmenler bu ağırlığı resmî yetki gibi görmez. B-3'ün sağlıklı işlemesi için yüksek Kanatlı öğrencilerin sınıfı baskılamak yerine toparlaması gerekir.\n\n## Akademik Atmosfer\nSınıfta matematik, fizik ve teknoloji derslerine ilgi yüksektir; ancak hukuk, hitabet, tarih ve yurttaşlık gibi alanlar da karakter gelişimi açısından önemlidir. Öğrencilerin bazıları belirli derslerde zorlanır: örneğin [[Aylin Aksoy]] matematikten fazla hoşlanmaz, [[Alev Acar]] edebiyatı sevmez, [[Muhammed Mete]] edebiyattan uzak durabilir. Bu farklılıklar ders sahnelerinde doğal gerilim ve gelişim alanı verir.\n\n## Kanat Sistemiyle İlişki\nB-3, Kanat sisteminin görünür olduğu bir sınıftır. Bir sınıfta iki, üç, dört, beş ve altı kanatlı öğrencilerin bir arada bulunması sosyal dengeleri belirgin hâle getirir. Öğretmenlerin gözlemleri Kanat Konseyi için veri olabilir; fakat öğretmenler Kanat sayısını belirlemez.\n\n## Hikâyede Kullanım\nB-3, roman içinde okul hayatını yalnızca ders anlatımı olarak değil; arkadaşlık, liderlik, sorumluluk, rekabet, proje üretimi ve toplum önünde kendini ifade etme alanı olarak göstermek için kullanılabilir. Teknoloji ve Tasarım yarışması, Sosyolojik Eğitim sunumları ve Kanat sistemi üzerinden sınıf çok sayıda sahneye zemin hazırlar.",
+          "summary": " Temel Bilgiler\n- Sınıf: 3. sınıf\n- Şube: B\n- Kod: B-3\n- Ana karakter: [[Oğuz Kağan Atalay]]\n- Dönem: 1985 eğitim yılı\n- Okul adı: [[İstanbul Şarkın İlim ve Teknoloji Mektebi]] (kesinleşmiş ad)\n- Bağlı dosya: [[B-3 Ders Programı]]",
+          "content": "## Temel Bilgiler\n- **Sınıf:** 3. sınıf\n- **Şube:** B\n- **Kod:** B-3\n- **Ana karakter:** [[Oğuz Kağan Atalay]]\n- **Dönem:** 1985 eğitim yılı\n- **Okul adı:** İstanbul Şarkın İlim ve Teknoloji Mektebi (kesinleşmiş ad)\n- **Bağlı dosya:** [[B-3 Ders Programı]]\n\n## Sınıfın Genel Karakteri\nB-3, akademik seviyesi ortalamanın üzerinde olan fakat tek tip öğrencilerden oluşmayan bir sınıftır. Teknik merakı güçlü öğrenciler, sosyal becerileri gelişmiş öğrenciler, siyasete ve hukuka ilgi duyanlar, sanat ve sporla kendini gösterenler aynı sınıfta bulunur. Bu nedenle sınıf yalnızca sınav başarısıyla değil, konuşma, ikna, grup çalışması ve sorumluluk alma davranışlarıyla da dikkat çeker.\n\n## Öne Çıkan Öğrenciler\n- [[Oğuz Kağan Atalay]]: Üç kanatlı, disiplinli, teknik zekâsı ve askerî pilot hedefiyle öne çıkar.\n- [[İsmail Yağız Aslan]]: Beş kanatlı, esprili ve siyasete yatkın; dağınık görünse de doğru konuda güçlü odaklanabilir.\n- [[Muhammed Mete]]: Dört kanatlı, sakin ve uzlaşmacı; sivil pilotluk hedefi vardır.\n- [[Aylin Aksoy]]: Üç kanatlı, planlı, gözlemci; avukatlık hedefi ve Sosyolojik Eğitim ilgisi güçlüdür.\n- [[Alev Acar]]: İki kanatlı, enerjik, uyumlu; sivil pilotluk hedefi vardır.\n\n## Sosyal Yapı\nSınıfın merkezinde Oğuz, İsmail, Alper ve çevrelerine katılan öğrencilerden oluşan güçlü bir arkadaş grubu bulunur. Bu grup sınıfta doğal ağırlık taşır; ancak öğretmenler bu ağırlığı resmî yetki gibi görmez. B-3'ün sağlıklı işlemesi için yüksek Kanatlı öğrencilerin sınıfı baskılamak yerine toparlaması gerekir.\n\n## Akademik Atmosfer\nSınıfta matematik, fizik ve teknoloji derslerine ilgi yüksektir; ancak hukuk, hitabet, tarih ve yurttaşlık gibi alanlar da karakter gelişimi açısından önemlidir. Öğrencilerin bazıları belirli derslerde zorlanır: örneğin [[Aylin Aksoy]] matematikten fazla hoşlanmaz, [[Alev Acar]] edebiyatı sevmez, [[Muhammed Mete]] edebiyattan uzak durabilir. Bu farklılıklar ders sahnelerinde doğal gerilim ve gelişim alanı verir.\n\n## Kanat Sistemiyle İlişki\nB-3, Kanat sisteminin görünür olduğu bir sınıftır. Bir sınıfta iki, üç, dört, beş ve altı kanatlı öğrencilerin bir arada bulunması sosyal dengeleri belirgin hâle getirir. Öğretmenlerin gözlemleri Kanat Konseyi için veri olabilir; fakat öğretmenler Kanat sayısını belirlemez.\n\n## Hikâyede Kullanım\nB-3, roman içinde okul hayatını yalnızca ders anlatımı olarak değil; arkadaşlık, liderlik, sorumluluk, rekabet, proje üretimi ve toplum önünde kendini ifade etme alanı olarak göstermek için kullanılabilir. Teknoloji ve Tasarım yarışması, Sosyolojik Eğitim sunumları ve Kanat sistemi üzerinden sınıf çok sayıda sahneye zemin hazırlar.",
           "order": 999,
           "aliases": [],
           "children": [],
