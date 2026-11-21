@@ -25,6 +25,29 @@ def normalize(text):
     text = re.sub(r"[_-]+", " ", text)
     return re.sub(r"\s+", " ", text).strip()
 
+def normalize_country(value):
+    key = normalize(value)
+    aliases = {
+        "turkish": "turkish", "turk": "turkish", "turkiye": "turkish",
+        "turkiye arsivi": "turkish", "turk arsivi": "turkish",
+        "german": "german", "alman": "german", "almanya": "german",
+        "deutsch": "german", "german reich": "german", "alman arsivi": "german",
+        "both": "both", "shared": "both", "common": "both", "ortak": "both",
+        "her iki arsiv": "both",
+    }
+    return aliases.get(key)
+
+
+def apply_default_leaf_country(nodes, country):
+    """Tag actual records while leaving structural folders neutral."""
+    for item in nodes or []:
+        children = item.get("children", [])
+        if children:
+            apply_default_leaf_country(children, country)
+        elif not item.get("country"):
+            item["country"] = country
+
+
 def read_doc(relative):
     path = VAULT / relative
     if not path.is_file() or path.suffix.lower() not in {".md", ".txt"}:
@@ -74,10 +97,14 @@ def read_doc(relative):
     raw_aliases = meta.get("aliases", "")
     if raw_aliases.startswith("[") and raw_aliases.endswith("]"):
         aliases = [x.strip().strip("'\"") for x in raw_aliases[1:-1].split(",")]
-    return {"title":title,"summary":summary,"content":content,"aliases":aliases,"sourceName":path.stem,"path":relative.replace("\\","/")}
+    return {"title":title,"summary":summary,"content":content,"aliases":aliases,"sourceName":path.stem,"path":relative.replace("\\","/"),"country":normalize_country(meta.get("country", meta.get("ülke", "")))}
 
 def node(category, doc, date=""):
-    return {"id":category+"-"+slug(doc["path"]),"path":doc["path"],"sourceName":doc["sourceName"],"title":doc["title"],"date":date,"summary":doc["summary"],"content":doc["content"],"order":999,"aliases":doc["aliases"],"children":[],"links":[]}
+    record = {"id":category+"-"+slug(doc["path"]),"path":doc["path"],"sourceName":doc["sourceName"],"title":doc["title"],"date":date,"summary":doc["summary"],"content":doc["content"],"order":999,"aliases":doc["aliases"],"children":[],"links":[]}
+    country = normalize_country(doc.get("country", ""))
+    if country:
+        record["country"] = country
+    return record
 
 def group(category,title,date,summary,children,key):
     return {"id":category+"-"+slug(key),"path":key,"sourceName":title,"title":title,"date":date,"summary":summary,"content":summary,"order":0,"aliases":[],"children":children,"links":[]}
@@ -179,6 +206,7 @@ def make_public_character(category, spec):
         "aliases": spec.get("aliases", [doc["title"], doc["sourceName"]]),
         "children": [],
         "links": [],
+        "country": normalize_country(doc.get("country", "")) or normalize_country(spec.get("country", "turkish")) or "turkish",
     }
 
 def make_character_group(title, date, summary, children, key):
@@ -570,6 +598,7 @@ def read_public_archive_note(path, archive_root):
         "path": path.relative_to(archive_root).as_posix(),
         "date": str(metadata.get("date", metadata.get("period", ""))).strip(),
         "order": order,
+        "country": normalize_country(metadata.get("country", metadata.get("ülke", ""))),
     }
 
 
@@ -645,6 +674,7 @@ def import_institutions():
         if doc:
             records.append(node("institutions", doc))
     records += public_folder_nodes("institutions", "Kuruluşlar/Kamuya Açık")
+    apply_default_leaf_country(records, "turkish")
     return {
         "id":"institutions",
         "title":"Kurumlar",
@@ -702,6 +732,7 @@ def import_technology():
     existing = scan_public_archive_nodes(technology_root, technology_root, "technology")
     public_records = public_folder_nodes("technology", "Alternatif Tarih/Teknoloji/Kamuya Açık")
     records = _merge_public_records(existing, public_records)
+    apply_default_leaf_country(records, "turkish")
     return {
         "id":"technology",
         "title":"Teknoloji",
@@ -747,6 +778,10 @@ Bu kayıt yalnızca B-3 sınıfının programını gösterir; okulun tüm sını
         records.append(node("society", schedule, "1985 · HAFTALIK PROGRAM"))
     public_records = public_folder_nodes("society", "Aslı Olan Düzen/Toplum ve Gündelik Hayat")
     records = _merge_public_records(records, public_records)
+    for record in records:
+        if "kanat-sistemi" in str(record.get("path", "")).casefold():
+            record["country"] = "both"
+    apply_default_leaf_country(records, "turkish")
     return {
         "id":"society",
         "title":"Toplum ve Gündelik Hayat",
@@ -778,8 +813,10 @@ Site malzemeleri arasında Ankara ziyareti haberine ayrılmış bir görsel dosy
         press_doc["sourceName"] = "10 KASIM 1940"
         press_doc["path"] = source["path"]
         press_doc["aliases"] = ["Ankara ziyareti basını", "Dünya basını"]
+        press_doc["country"] = "both"
         records.append(node("media", press_doc, "10 KASIM 1940"))
     records += public_folder_nodes("media", "Medya ve Basın")
+    apply_default_leaf_country(records, "both")
     return {
         "id":"media",
         "title":"Basın ve Yayın Arşivi",
@@ -792,6 +829,7 @@ Site malzemeleri arasında Ankara ziyareti haberine ayrılmış bir görsel dosy
 
 def import_documents():
     records = public_folder_nodes("documents", "Belge Arşivi")
+    apply_default_leaf_country(records, "both")
     return {
         "id":"documents",
         "title":"Belge Arşivi",
