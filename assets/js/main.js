@@ -5,6 +5,9 @@
   const nav = document.querySelector("#site-nav");
   const year = document.querySelector("#current-year");
   const categoryHost = document.querySelector("#archive-categories");
+  const countryStage = document.querySelector("#archive-country-stage");
+  const countryStageTitle = document.querySelector("#archive-country-heading");
+  const countryStageDescription = document.querySelector("#archive-country-description");
   const archiveContent = document.querySelector(".archive-content");
   const randomRecordButton = document.querySelector("#archive-random-record");
   const worldGrid = document.querySelector(".world-grid");
@@ -49,6 +52,8 @@
 
   let categories = [];
   let activeCategory = null;
+  let activeCountry = null;
+  let pendingCountryCategoryId = null;
   let chronologyMode = null;
   let selectedNodeId = null;
   let expandedNodes = new Set();
@@ -143,6 +148,37 @@
   };
 
   const findNode = (nodes, id) => allNodes(nodes).find((node) => node.id === id) || null;
+
+  const COUNTRY_CHOOSER_CATEGORY_IDS = new Set([
+    "institutions", "technology", "characters", "society", "media", "documents"
+  ]);
+
+  const normalizeArchiveCountry = (value) => {
+    const country = String(value ?? "").trim().toLocaleLowerCase("tr-TR");
+    if (["turkish", "turk", "turkiye", "türkiye"].includes(country)) return "turkish";
+    if (["german", "alman", "almanya", "deutsch"].includes(country)) return "german";
+    if (["both", "shared", "common", "ortak"].includes(country)) return "both";
+    return "";
+  };
+
+  const filterNodesForCountry = (nodes, country) => (nodes || []).flatMap((node) => {
+    const children = filterNodesForCountry(node.children || [], country);
+    const nodeCountry = normalizeArchiveCountry(node.country);
+    const ownRecordMatches = nodeCountry === country || nodeCountry === "both";
+    if (!ownRecordMatches && !children.length) return [];
+    return [{ ...node, children }];
+  });
+
+  const countCountryRecords = (nodes, country) => allNodes(filterNodesForCountry(nodes, country))
+    .filter((node) => node.path && !(node.children || []).length).length;
+
+  const updateCountryChooserCounts = (category) => {
+    countryStage?.querySelectorAll("[data-archive-country-count]").forEach((element) => {
+      const country = element.dataset.archiveCountryCount;
+      const count = countCountryRecords(category.nodes, country);
+      element.textContent = String(count).padStart(2, "0") + " KAYIT";
+    });
+  };
 
   const categoryIcon = (id) => ({
     chronology: "◈", technology: "⌘", geography: "⌖",
@@ -686,10 +722,13 @@
 
   const renderCatalogue = () => {
     const nodes = activeCategory.nodes || [];
+    const emptyMessage = activeCountry
+      ? (activeCountry === "turkish" ? "Türk" : "Alman") + " arşivinde henüz kayıt bulunmuyor."
+      : "Bu katalog henüz boş.";
     navigationHost.innerHTML = '<div class="catalogue-list">' + nodes.map((node) => `
       <button type="button" class="catalogue-item ${selectedNodeId === node.id ? "is-selected" : ""}" data-select-node="${escapeHtml(node.id)}">
         <span>${escapeHtml(node.date || "KAYIT")}</span><b>${escapeHtml(node.title)}</b><i>↗</i>
-      </button>`).join("") + (nodes.length ? "" : '<p class="archive-empty">Bu katalog henüz boş.</p>') + '</div>';
+      </button>`).join("") + (nodes.length ? "" : '<p class="archive-empty">' + escapeHtml(emptyMessage) + '</p>') + '</div>';
   };
 
   const findNodeAncestors = (nodes, targetId, ancestors = []) => {
@@ -792,9 +831,16 @@
   };
 
   const sceneClasses = ["archive-scene-open", "archive-scene-chronology", "archive-scene-characters", "archive-scene-institutions", "archive-scene-technology"];
-  const activateCategory = (categoryId, targetNodeId = null) => {
-    activeCategory = categories.find((item) => item.id === categoryId);
-    if (!activeCategory) return;
+  const activateCategory = (categoryId, targetNodeId = null, country = null) => {
+    const sourceCategory = categories.find((item) => item.id === categoryId);
+    if (!sourceCategory) return;
+    activeCountry = ["turkish", "german"].includes(country) ? country : null;
+    activeCategory = activeCountry
+      ? { ...sourceCategory, nodes: filterNodesForCountry(sourceCategory.nodes, activeCountry) }
+      : sourceCategory;
+    pendingCountryCategoryId = null;
+    if (countryStage) countryStage.hidden = true;
+    if (archiveWorkspace) archiveWorkspace.hidden = false;
 
     window.clearTimeout(archiveCloseTimer);
     window.clearTimeout(sceneSwitchSettleTimer);
@@ -836,8 +882,11 @@
     }
 
     activeTitle.textContent = activeCategory.title;
-    activeDescription.textContent = activeCategory.description || "";
-    viewLabel.textContent = activeCategory.label || "ARŞİV BİRİMİ";
+    activeDescription.textContent = (activeCategory.description || "") +
+      (activeCountry ? " · " + (activeCountry === "turkish" ? "TÜRK ARŞİVİ" : "ALMAN ARŞİVİ") : "");
+    viewLabel.textContent = activeCountry
+      ? (activeCountry === "turkish" ? "TÜRK ARŞİVİ" : "ALMAN ARŞİVİ") + " / " + (activeCategory.label || "ARŞİV BİRİMİ")
+      : (activeCategory.label || "ARŞİV BİRİMİ");
 
     const titleContainer = activeTitle.parentElement;
     const existingHistoryStamp = titleContainer.querySelector(".archive-history-stamp");
@@ -887,15 +936,38 @@
     if (backButton) backButton.focus({ preventScroll: true });
   };
 
+  const showArchiveCountryChooser = (category) => {
+    if (!countryStage || !archiveWorkspace) return;
+    pendingCountryCategoryId = category.id;
+    activeCountry = null;
+    countryStage.hidden = false;
+    archiveWorkspace.hidden = true;
+    if (countryStageTitle) countryStageTitle.innerHTML = "Hangi ülkenin " + escapeHtml(category.title) + " arşivini <em>açacaksın?</em>";
+    if (countryStageDescription) countryStageDescription.textContent = category.description || "Kayıtlar ülke arşivlerine göre ayrılmıştır. İncelemek istediğin arşivi seç.";
+    updateCountryChooserCounts(category);
+    explorer.scrollTo({ top: 0, behavior: "auto" });
+  };
+
   const openCategory = (categoryId, targetNodeId = null) => {
     const nextCategory = categories.find((item) => item.id === categoryId);
     if (!nextCategory) return;
+
+    const needsCountry = COUNTRY_CHOOSER_CATEGORY_IDS.has(categoryId) && !targetNodeId;
+    const targetNode = targetNodeId ? findNode(nextCategory.nodes, targetNodeId) : null;
+    const targetCountry = normalizeArchiveCountry(targetNode?.country);
+    const countryForTarget = ["turkish", "german"].includes(targetCountry) ? targetCountry : null;
+    const launchCategory = () => {
+      activateCategory(categoryId, targetNodeId, countryForTarget);
+      if (needsCountry) showArchiveCountryChooser(nextCategory);
+    };
 
     const sceneIsOpen = !explorer.hidden && explorer.classList.contains("is-immersive");
     if (sceneIsOpen && activeCategory?.id === categoryId) {
       if (targetNodeId) {
         if (categoryId === "chronology" && chronologyMode !== "normal") setChronologyMode("normal", targetNodeId);
         else selectNode(targetNodeId);
+      } else if (needsCountry) {
+        showArchiveCountryChooser(nextCategory);
       }
       return;
     }
@@ -910,7 +982,7 @@
       explorer.classList.add("scene-switching");
 
       sceneSwitchTimer = window.setTimeout(() => {
-        activateCategory(categoryId, targetNodeId);
+        launchCategory();
         explorer.classList.add("scene-switching");
         window.clearTimeout(sceneSwitchSettleTimer);
         sceneSwitchSettleTimer = window.setTimeout(() => {
@@ -921,7 +993,7 @@
       return;
     }
 
-    activateCategory(categoryId, targetNodeId);
+    launchCategory();
   };
 
   // Prefer the archive payload embedded by the site build. This removes a
@@ -996,6 +1068,18 @@
   });
 
   explorer.addEventListener("click", (event) => {
+    const countryButton = event.target.closest("[data-archive-country]");
+    if (countryButton && pendingCountryCategoryId) {
+      const country = countryButton.dataset.archiveCountry;
+      if (["turkish", "german"].includes(country)) activateCategory(pendingCountryCategoryId, null, country);
+      return;
+    }
+    const countryReturn = event.target.closest("[data-archive-country-return]");
+    if (countryReturn) {
+      closeArchiveScene();
+      return;
+    }
+
     const shareRecordButton = event.target.closest("[data-share-record]");
     if (shareRecordButton) {
       const shareUrl = activeCategory && selectedNodeId
@@ -1133,6 +1217,10 @@
         archivePlaceholder.parentNode.insertBefore(explorer, archivePlaceholder.nextSibling);
       }
       activeCategory = null;
+      activeCountry = null;
+      pendingCountryCategoryId = null;
+      if (countryStage) countryStage.hidden = true;
+      if (archiveWorkspace) archiveWorkspace.hidden = false;
       chronologyMode = null;
       syncChronologyViewSwitch();
       if (backButton) backButton.blur();
