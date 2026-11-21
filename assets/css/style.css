@@ -7544,3 +7544,77 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
     .site-nav { gap: 8px; }
     .site-nav a { font-size: 8px; letter-spacing: .02em; }
 }
+
+
+/* Home archive entry cards: uniform dimensions and predictable reading order. */
+.world-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 16px;
+    border: 0;
+}
+.world-grid > .world-card,
+.world-grid > .world-card:first-child,
+.world-grid > .world-card:first-child[data-open-category="chronology"],
+.world-grid > .world-card[data-open-category="institutions"],
+.world-grid > .world-card.world-card-gallery,
+.world-grid > .world-card.world-card-audio {
+    grid-column: auto !important;
+    min-width: 0;
+    min-height: 300px !important;
+    height: 100%;
+    padding: 24px 22px;
+    border: 1px solid rgba(190, 211, 177, .2);
+}
+.world-grid > .world-card:first-child h3 {
+    font-size: 20px;
+}
+.world-grid > .world-card:first-child p {
+    max-width: none;
+    font-size: 16px;
+}
+.world-grid > .world-card .world-card-icon {
+    height: 72px;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+}
+.world-grid > .world-card h3 {
+    min-height: 2.5em;
+    margin-bottom: 9px;
+}
+.world-grid > .world-card p {
+    min-height: 4.5em;
+    margin-bottom: 18px;
+}
+.world-grid > .world-card .world-card-link {
+    margin-top: auto;
+}
+.world-grid > .world-card:first-child::after {
+    content: none;
+}
+@media (max-width: 980px) {
+    .world-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .world-grid > .world-card,
+    .world-grid > .world-card:first-child,
+    .world-grid > .world-card:first-child[data-open-category="chronology"],
+    .world-grid > .world-card[data-open-category="institutions"],
+    .world-grid > .world-card.world-card-gallery,
+    .world-grid > .world-card.world-card-audio {
+        grid-column: auto !important;
+        min-height: 290px !important;
+    }
+}
+@media (max-width: 680px) {
+    .world-grid { grid-template-columns: 1fr; }
+    .world-grid > .world-card,
+    .world-grid > .world-card:first-child,
+    .world-grid > .world-card:first-child[data-open-category="chronology"],
+    .world-grid > .world-card[data-open-category="institutions"],
+    .world-grid > .world-card.world-card-gallery,
+    .world-grid > .world-card.world-card-audio {
+        grid-column: 1 / -1 !important;
+        min-height: 260px !important;
+    }
+}
