@@ -22,6 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="assets/css/style.css?v=20261122-country1">
   <link rel="stylesheet" href="assets/css/site-enhancements.css?v=20261121-aod2">
+  <link rel="stylesheet" href="assets/css/audio.css?v=20261122-shared-country-ui">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -262,12 +263,12 @@
             <button class="archive-back" id="archive-back" type="button" aria-label="Arşiv ekranını kapat">× <span>ARŞİVDEN ÇIK</span></button>
           </div>
           <section class="archive-country-stage" id="archive-country-stage" hidden aria-labelledby="archive-country-heading">
-            <div class="archive-country-stage-heading">
-              <span class="archive-section-kicker">ARŞİV / ÜLKE SINIFLANDIRMASI</span>
-              <h4 id="archive-country-heading">Hangi ülke arşivini <em>açacaksın?</em></h4>
-              <p id="archive-country-description">Kayıtlar ülke arşivlerine göre ayrılmıştır. İncelemek istediğin arşivi seç.</p>
+            <div class="audio-section-intro">
+              <div><span class="audio-section-index">ARŞİV BİRİMLERİ</span><h2>Hangi arşivi <em>açacaksın?</em></h2></div>
+              <p>Türk ve Alman kayıtları, kendi dönemlerinin görsel dili ve arşiv düzeniyle ayrı ayrı sunulur.</p>
             </div>
-            <div class="audio-country-chooser archive-country-cards">
+
+            <div class="audio-country-chooser" id="archive-country-chooser">
               <button class="audio-country-card audio-country-card-turkish" type="button" data-archive-country="turkish">
                 <span class="audio-country-card-art">
                   <img class="audio-country-banner" src="SiteMalzemeleri/TürkSiteMalzemeler/DikeyTrİmpBayrak540x1920.png" alt="" loading="lazy">
@@ -277,10 +278,11 @@
                 <span class="audio-country-card-copy">
                   <span class="audio-country-kicker">BİRİM 01 / TÜRK DEVLETİ</span>
                   <strong class="audio-country-title-label">Türk Arşivi</strong>
-                  <span>Türk devletine ait kayıtlar ve belgeler.</span>
-                  <b><span data-archive-country-count="turkish">00 KAYIT</span><i>↗</i></b>
+                  <span>Kurumlar · Teknoloji · Karakterler · Belgeler</span>
+                  <b>AÇIK ARŞİV <i>↗</i></b>
                 </span>
               </button>
+
               <button class="audio-country-card audio-country-card-german" type="button" data-archive-country="german">
                 <span class="audio-country-card-art">
                   <img class="audio-country-banner" src="SiteMalzemeleri/NaziSiteMalzemeler/DikeyNaziİmpbayrak540x1920.png" alt="" loading="lazy">
@@ -290,12 +292,13 @@
                 <span class="audio-country-card-copy">
                   <span class="audio-country-kicker">BİRİM 02 / ALMAN REICH</span>
                   <strong class="audio-country-title-label">Alman Arşivi</strong>
-                  <span>Alman Reich'e ait kayıtlar ve belgeler.</span>
-                  <b><span data-archive-country-count="german">00 KAYIT</span><i>↗</i></b>
+                  <span>Kurumlar · Teknoloji · Karakterler · Belgeler</span>
+                  <b>AÇIK ARŞİV <i>↗</i></b>
                 </span>
               </button>
             </div>
-            <button class="archive-country-return" type="button" data-archive-country-return>← ARŞİV BİRİMLERİNE DÖN</button>
+
+            <button class="audio-back-button" type="button" data-archive-country-return>← ARŞİV BİRİMLERİNE DÖN</button>
           </section>
 
           <div class="archive-workspace" id="archive-workspace">
