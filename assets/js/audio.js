@@ -143,12 +143,12 @@
       const isPlaying = isActive && player && !player.paused;
       const meta = [item.subcategory, item.date, item.performer].filter(Boolean).join(" · ");
       const textValue = item.lyrics || item.transcript || "";
-      const textContent = Array.isArray(textValue) ? textValue.join("\\n") : String(textValue);
+      const textContent = Array.isArray(textValue) ? textValue.join("\n") : String(textValue);
       const textParagraphs = textContent.trim()
-        .replace(/\\r\\n?/g, "\\n")
-        .split(/\\n\\s*\\n/)
+        .replace(/\r\n?/g, "\n")
+        .split(/\n\s*\n/)
         .filter(Boolean)
-        .map(stanza => '<p>' + escapeHtml(stanza).replace(/\\n/g, "<br>") + '</p>')
+        .map(stanza => '<p>' + escapeHtml(stanza).replace(/\n/g, "<br>") + '</p>')
         .join("");
       const textIsLyrics = Boolean(item.lyrics);
       const textToggle = textContent.trim()
