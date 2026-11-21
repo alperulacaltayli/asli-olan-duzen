@@ -2709,6 +2709,7 @@
               ],
               "children": [],
               "links": [],
+              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-young-characters"
@@ -2728,6 +2729,7 @@
               ],
               "children": [],
               "links": [],
+              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-young-characters"
@@ -2747,6 +2749,7 @@
               ],
               "children": [],
               "links": [],
+              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-young-characters"
@@ -2767,6 +2770,7 @@
               ],
               "children": [],
               "links": [],
+              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-young-characters"
@@ -2787,6 +2791,7 @@
               ],
               "children": [],
               "links": [],
+              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-young-characters"
@@ -2806,6 +2811,7 @@
               ],
               "children": [],
               "links": [],
+              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-young-characters"
@@ -2852,6 +2858,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-atalay-lineage",
@@ -2872,6 +2879,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-atalay-lineage",
@@ -2910,6 +2918,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-atalay-lineage",
@@ -2930,6 +2939,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-atalay-lineage",
@@ -2950,6 +2960,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-atalay-lineage",
@@ -2988,6 +2999,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-atalay-lineage",
@@ -3026,6 +3038,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-atalay-lineage",
@@ -3046,6 +3059,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-atalay-lineage",
@@ -3066,6 +3080,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-atalay-lineage",
@@ -3121,6 +3136,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-keser-lineage",
@@ -3160,6 +3176,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-keser-lineage",
@@ -3181,6 +3198,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-keser-lineage",
@@ -3220,6 +3238,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-keser-lineage",
@@ -3241,6 +3260,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-keser-lineage",
@@ -3263,6 +3283,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-keser-lineage",
@@ -3302,6 +3323,7 @@
                   ],
                   "children": [],
                   "links": [],
+                  "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
                     "characters-keser-lineage",
@@ -3345,6 +3367,7 @@
               ],
               "children": [],
               "links": [],
+              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-state-leaders"
@@ -3364,6 +3387,7 @@
               ],
               "children": [],
               "links": [],
+              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-state-leaders"
@@ -3427,6 +3451,7 @@
               "date": "1968 · 17 yaş"
             }
           ],
+          "country": "turkish",
           "categoryId": "institutions",
           "ancestors": []
         },
@@ -3452,6 +3477,7 @@
               "date": "1985"
             }
           ],
+          "country": "turkish",
           "categoryId": "institutions",
           "ancestors": []
         }
@@ -3494,6 +3520,7 @@
               "date": "1946"
             }
           ],
+          "country": "turkish",
           "categoryId": "technology",
           "ancestors": []
         }
@@ -3562,6 +3589,7 @@
               "date": "1968 · 17 yaş"
             }
           ],
+          "country": "turkish",
           "categoryId": "society",
           "ancestors": []
         },
@@ -3602,6 +3630,7 @@
               "date": "1985"
             }
           ],
+          "country": "turkish",
           "categoryId": "society",
           "ancestors": []
         },
@@ -3617,6 +3646,7 @@
           "aliases": [],
           "children": [],
           "links": [],
+          "country": "turkish",
           "categoryId": "society",
           "ancestors": []
         },
@@ -3660,6 +3690,7 @@
               "date": "1985"
             }
           ],
+          "country": "turkish",
           "categoryId": "society",
           "ancestors": []
         },
@@ -3698,6 +3729,7 @@
               "date": "1985"
             }
           ],
+          "country": "both",
           "categoryId": "society",
           "ancestors": []
         }
@@ -3733,6 +3765,7 @@
               "date": "10 Kasım 1940"
             }
           ],
+          "country": "both",
           "categoryId": "media",
           "ancestors": []
         }
