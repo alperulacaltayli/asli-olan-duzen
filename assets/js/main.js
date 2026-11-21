@@ -155,8 +155,8 @@
 
   const normalizeArchiveCountry = (value) => {
     const country = String(value ?? "").trim().toLocaleLowerCase("tr-TR");
-    if (["turkish", "turk", "turkiye", "türkiye"].includes(country)) return "turkish";
-    if (["german", "alman", "almanya", "deutsch"].includes(country)) return "german";
+    if (["turkish", "turk", "turkiye", "türkiye", "turkey"].includes(country)) return "turkish";
+    if (["german", "germany", "alman", "almanya", "deutsch", "deutschland"].includes(country)) return "german";
     if (["both", "shared", "common", "ortak"].includes(country)) return "both";
     return "";
   };
@@ -258,6 +258,11 @@
   };
 
   const renderTree = (nodes) => {
+    if ((!nodes || !nodes.length) && activeCountry) {
+      return '<p class="archive-empty">' +
+        (activeCountry === "turkish" ? "Türk" : "Alman") +
+        ' arşivinde bu bölüm için henüz kayıt bulunmuyor.</p>';
+    }
     if (activeCategory?.id === "chronology") return renderChronologyTree(nodes);
     if (activeCategory?.id === "characters") return renderCharacterTree(nodes);
     if (!nodes || !nodes.length) return '<p class="archive-empty">Bu bölümde henüz kayıt bulunmuyor.</p>';
