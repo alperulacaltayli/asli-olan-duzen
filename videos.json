@@ -1,27 +1,27 @@
 {
   "videos": [
     {
-      "src": "VideoArsiv/Beyaz Saray Kutlaması Renklendirilmiş.mp4",
-      "file": "Beyaz Saray Kutlaması Renklendirilmiş.mp4",
-      "type": "video/mp4",
-      "title": "Beyaz Saray Kutlaması Renklendirilmiş",
-      "date": "",
-      "category": "Video kayıtları",
-      "description": "",
-      "poster": "",
-      "order": 999999,
-      "number": 1
-    },
-    {
       "src": "VideoArsiv/Beyaz Saray Kutlaması.mp4",
       "file": "Beyaz Saray Kutlaması.mp4",
       "type": "video/mp4",
       "title": "Beyaz Saray Kutlaması",
       "date": "",
-      "category": "Video kayıtları",
-      "description": "",
+      "category": "Diplomasi ve şehirler",
+      "description": "Beyaz Saray çevresindeki kutlamayı gösteren arşiv video kaydı. Çekim tarihi, özgün kaynak ve olayın kesin bağlamı henüz kataloglanmamıştır.",
       "poster": "",
-      "order": 999999,
+      "order": 1,
+      "number": 1
+    },
+    {
+      "src": "VideoArsiv/Beyaz Saray Kutlaması Renklendirilmiş.mp4",
+      "file": "Beyaz Saray Kutlaması Renklendirilmiş.mp4",
+      "type": "video/mp4",
+      "title": "Beyaz Saray Kutlaması — Renklendirilmiş Sürüm",
+      "date": "",
+      "category": "Diplomasi ve şehirler",
+      "description": "Beyaz Saray kutlama kaydının renklendirilmiş sürümü. Özgün görüntünün tarihi ve renklendirme künyesi ayrıca doğrulanmalıdır.",
+      "poster": "",
+      "order": 2,
       "number": 2
     }
   ]

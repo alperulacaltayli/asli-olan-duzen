@@ -2004,7 +2004,7 @@
     {
       "id": "geography",
       "title": "Dünya Atlası",
-      "description": "Alternatif dünyanın güç alanları, devlet profilleri ve 1946 paylaşımının coğrafi çerçevesi. Ayrıntılı şehir ve bölge haritaları yeni atlas dosyaları geldikçe genişler.",
+      "description": "1985 dünya düzeni, 1946 paylaşımı, ülke profilleri ve şehir/tarih kayıtları. Kesin sınır çizgileri ve ulaşım katmanları kaynak geldikçe genişler.",
       "view": "catalogue",
       "label": "COĞRAFYA VE SİYASİ ATLAS",
       "order": 2,
@@ -2375,9 +2375,9 @@
           "links": [
             {
               "categoryId": "institutions",
-              "id": "institutions-asli-olan-duzen-world-organizations-turkish-empire-kizil-orda-md",
-              "title": "Kızıl Orda",
-              "date": ""
+              "id": "institutions-kuruluslar-kamuya-acik-kizil-orda-yerleske-md",
+              "title": "Kızıl Orda — Merkez Yerleşke Profili",
+              "date": "1985"
             },
             {
               "categoryId": "chronology",
@@ -3398,9 +3398,9 @@
           "links": [
             {
               "categoryId": "institutions",
-              "id": "institutions-asli-olan-duzen-world-organizations-turkish-empire-kizil-orda-md",
-              "title": "Kızıl Orda",
-              "date": ""
+              "id": "institutions-kuruluslar-kamuya-acik-kizil-orda-yerleske-md",
+              "title": "Kızıl Orda — Merkez Yerleşke Profili",
+              "date": "1985"
             },
             {
               "categoryId": "characters",
@@ -3427,21 +3427,6 @@
               "date": "1968 · 17 yaş"
             }
           ],
-          "categoryId": "institutions",
-          "ancestors": []
-        },
-        {
-          "id": "institutions-asli-olan-duzen-world-organizations-turkish-empire-kizil-orda-md",
-          "path": "Aslı Olan Düzen/World/Organizations/Turkish Empire/Kızıl Orda.md",
-          "sourceName": "Kızıl Orda",
-          "title": "Kızıl Orda",
-          "date": "",
-          "summary": "Kızıl Orda, Ankara'nın merkezinde bulunan ve Büyük Türk İmparatorluğu'nun siyasî, askerî ve stratejik idaresinin toplandığı ana merkezdi.",
-          "content": "**Kızıl Orda**, Ankara'nın merkezinde bulunan ve Büyük Türk İmparatorluğu'nun siyasî, askerî ve stratejik idaresinin toplandığı ana merkezdi.",
-          "order": 999,
-          "aliases": [],
-          "children": [],
-          "links": [],
           "categoryId": "institutions",
           "ancestors": []
         },
@@ -3475,7 +3460,7 @@
     {
       "id": "technology",
       "title": "Teknoloji",
-      "description": "Evrenin araç ve teknoloji projelerine ait yayımlanabilir genel kayıtlar.",
+      "description": "TA-85 Gökkanat ve diğer projelere ait yalnızca onaylanmış, genel ve tarihsel teknoloji kayıtları.",
       "view": "catalogue",
       "label": "TEKNOLOJİ KATALOĞU",
       "order": 5,
@@ -3535,7 +3520,7 @@
     {
       "id": "society",
       "title": "Toplum ve Gündelik Hayat",
-      "description": "Eğitim düzeni, Kanat sistemi ve 1985 toplum hayatına dair mevcut kayıtlar. Konut, tüketim, çalışma hayatı ve gündelik alışkanlıklar yeni dosyalarla tamamlanacaktır.",
+      "description": "Okul profili, B-3 haftalık programı ve Kanat sisteminin bilinen kamusal çerçevesi. Genel gündelik yaşam ve ekonomi kayıtları ayrıca hazırlanmalıdır.",
       "view": "catalogue",
       "label": "TOPLUMSAL YAŞAM KAYITLARI",
       "order": 6,
