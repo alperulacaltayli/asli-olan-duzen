@@ -62,26 +62,30 @@
     ).join("");
   };
   let sections = [];
-  const itemHaystack = item => normalize([
-    item.title,item.file,item.path,item.why,item.priority,(item.fields || []).join(" ")
+  const entryHaystack = item => normalize([
+    item.title,item.file,item.path,item.why,item.summary,item.status,item.priority,(item.fields || []).join(" ")
   ].join(" "));
   const render = () => {
     const query = normalize(search?.value || "");
     const selected = filter?.value || "";
     const visible = sections.map(section => ({
       ...section,
-      items:(section.items || []).filter(item => {
-        if (query && !itemHaystack(item).includes(query)) return false;
-        return true;
-      })
-    })).filter(section => (!selected || section.id === selected) && section.items.length);
+      items:(section.items || []).filter(item => !query || entryHaystack(item).includes(query)),
+      completed:(section.completed || []).filter(item => !query || entryHaystack(item).includes(query))
+    })).filter(section => (!selected || section.id === selected) && (section.items.length || section.completed.length));
     const itemCount = visible.reduce((sum,section)=>sum+section.items.length,0);
-    resultsLabel.textContent = itemCount + " dosya önerisi gösteriliyor · " + visible.length + " arşiv birimi";
+    const completedCount = visible.reduce((sum,section)=>sum+section.completed.length,0);
+    resultsLabel.textContent = itemCount + " açık dosya talebi · " + completedCount + " yayımlanmış kayıt · " + visible.length + " arşiv birimi";
     if (!visible.length) {
-      groupsHost.innerHTML = '<p class="file-center-no-results">Bu aramayla eşleşen bir dosya bulunamadı. Başka bir terim veya arşiv birimi seç.</p>';
+      groupsHost.innerHTML = '<p class="file-center-no-results">Bu aramayla eşleşen bir dosya veya yayımlanmış kayıt bulunamadı. Başka bir terim veya arşiv birimi seç.</p>';
       return;
     }
     groupsHost.innerHTML = visible.map(section => {
+      const completed = section.completed.length
+        ? '<div class="file-center-completed"><div class="file-center-completed-head"><span>YAYINA ALINAN KAYITLAR</span><b>'+String(section.completed.length).padStart(2,"0")+'</b></div><ul>'+
+          section.completed.map(item => '<li><span class="file-center-completed-mark" aria-hidden="true">✓</span><div><strong>'+escapeHtml(item.title)+'</strong><small>'+escapeHtml(item.path)+'</small><p>'+escapeHtml(item.summary || "")+'</p></div></li>').join("")+
+          '</ul></div>'
+        : "";
       const items = section.items.map(item => {
         const fields = (item.fields || []).map(field => '<span>'+escapeHtml(field)+'</span>').join("");
         const template = item.template
@@ -96,7 +100,7 @@
       }).join("");
       return '<section class="file-center-group" data-file-group="'+escapeHtml(section.id)+'"><header class="file-center-group-head">'+
         '<div><h3>'+escapeHtml(section.title)+'</h3><p>'+escapeHtml(section.summary)+'</p><span class="file-center-folder-label">'+escapeHtml(section.folder || "")+'</span></div>'+
-        '<span class="file-center-group-meta"><i></i>'+escapeHtml(section.state || "İÇERİK")+'</span></header>'+items+'</section>';
+        '<span class="file-center-group-meta"><i></i>'+escapeHtml(section.state || "İÇERİK")+'</span></header>'+completed+items+'</section>';
     }).join("");
   };
   Promise.all([fetchJson("required-files.json"),fetchJson("archives.json"),fetchJson("gallery.json"),fetchJson("videos.json"),fetchJson("audio.json")])
