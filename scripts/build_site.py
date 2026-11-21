@@ -416,12 +416,14 @@ def discover_audio() -> dict[str, Any]:
         category = str(metadata.get("category") or (relative.parts[0] if len(relative.parts) > 1 else "Diğer Sesler")).strip()
         subcategory = str(metadata.get("subcategory") or (relative.parts[1] if len(relative.parts) > 2 else "")).strip()
         category_key = key_text(category)
-        if any(term in category_key for term in ("devlet", "resmi", "official", "state")):
-            archive_type = "state"
-        elif "mars" in category_key:
-            archive_type = "marches"
-        else:
-            archive_type = "sounds"
+        archive_type = key_text(str(metadata.get("archive_type", "")))
+        if archive_type not in {"state", "marches", "sounds"}:
+            if any(term in category_key for term in ("devlet", "resmi", "official", "state")):
+                archive_type = "state"
+            elif "mars" in category_key:
+                archive_type = "marches"
+            else:
+                archive_type = "sounds"
         try:
             order = int(metadata.get("order", 999999))
         except (TypeError, ValueError):
@@ -434,7 +436,7 @@ def discover_audio() -> dict[str, Any]:
             ".flac": "audio/flac", ".opus": "audio/opus",
         }.get(suffix, mimetypes.guess_type(audio_path.name)[0] or "application/octet-stream")
         fallback_title = re.sub(r"[-_]+", " ", audio_path.stem).strip()
-        records.append({
+        record = {
             "src": f"{AUDIO_ROOT.name}/{relative.as_posix()}",
             "file": audio_path.name,
             "title": str(metadata.get("title") or fallback_title),
@@ -446,7 +448,16 @@ def discover_audio() -> dict[str, Any]:
             "description": str(metadata.get("description", "")).strip(),
             "type": audio_type,
             "order": order,
-        })
+        }
+
+        # Optional text fields let songs carry lyrics and spoken records carry transcripts.
+        for field in ("lyrics", "transcript", "performer", "composer", "lyricist", "credits", "language"):
+            value = metadata.get(field)
+            if isinstance(value, list):
+                value = "\\n".join(str(part) for part in value)
+            if value is not None and str(value).strip():
+                record[field] = str(value).strip()
+        records.append(record)
 
     country_order = {"turkish": 0, "german": 1, "unassigned": 2}
     records.sort(key=lambda item: (country_order.get(item["country"], 9), item["order"], natural_key(item["src"])))
