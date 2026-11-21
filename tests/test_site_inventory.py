@@ -27,8 +27,11 @@ class SiteInventoryTests(unittest.TestCase):
             for record in section.get("completed", []):
                 with self.subTest(section=section["id"], record=record["title"]):
                     self.assertEqual(record.get("status"), "YAYINDA")
+                    candidate = ROOT / record["path"]
+                    if not candidate.is_file():
+                        candidate = ROOT / "AslıOlanDüzenObsidianVault" / record["path"]
                     self.assertTrue(
-                        (ROOT / record["path"]).is_file(),
+                        candidate.is_file(),
                         f"Tamamlandı olarak işaretlenen dosya bulunamadı: {record['path']}",
                     )
 
