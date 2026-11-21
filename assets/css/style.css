@@ -7623,3 +7623,102 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
     }
 }
 
+/* Section 02 — semantic color treatments for the remaining archive cards. */
+
+/* World atlas — deep maritime blue */
+.world-grid > .world-card.world-card-geography {
+    border-color: rgba(133, 185, 194, .36);
+    background: linear-gradient(135deg, rgba(34, 75, 82, .94), rgba(13, 30, 37, .99));
+}
+.world-grid > .world-card.world-card-geography .world-card-icon {
+    color: #a8d5d5;
+    text-shadow: 0 0 22px rgba(132, 203, 205, .22);
+}
+.world-grid > .world-card.world-card-geography h3 { color: #edfafa; }
+.world-grid > .world-card.world-card-geography .world-card-number,
+.world-grid > .world-card.world-card-geography .world-card-link { color: #a8d1d2; }
+.world-grid > .world-card.world-card-geography:hover {
+    border-color: rgba(173, 224, 222, .76);
+    background: linear-gradient(135deg, rgba(43, 94, 101, .98), rgba(13, 33, 41, .99));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .25);
+}
+
+/* Society and daily life — muted olive and sage */
+.world-grid > .world-card.world-card-society {
+    border-color: rgba(184, 194, 132, .34);
+    background: linear-gradient(135deg, rgba(66, 76, 43, .9), rgba(23, 34, 25, .99));
+}
+.world-grid > .world-card.world-card-society .world-card-icon {
+    color: #c9d39a;
+    text-shadow: 0 0 20px rgba(190, 205, 133, .18);
+}
+.world-grid > .world-card.world-card-society h3 { color: #f1f3df; }
+.world-grid > .world-card.world-card-society .world-card-number,
+.world-grid > .world-card.world-card-society .world-card-link { color: #c4ce98; }
+.world-grid > .world-card.world-card-society:hover {
+    border-color: rgba(213, 224, 160, .72);
+    background: linear-gradient(135deg, rgba(80, 93, 50, .96), rgba(25, 39, 28, .99));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .25);
+}
+
+/* Press and publications — archival brick red */
+.world-grid > .world-card.world-card-media {
+    border-color: rgba(205, 139, 125, .36);
+    background: linear-gradient(135deg, rgba(91, 48, 45, .94), rgba(36, 24, 27, .99));
+}
+.world-grid > .world-card.world-card-media .world-card-icon {
+    color: #e0aaa0;
+    text-shadow: 0 0 20px rgba(210, 139, 126, .18);
+}
+.world-grid > .world-card.world-card-media h3 { color: #fff0eb; }
+.world-grid > .world-card.world-card-media .world-card-number,
+.world-grid > .world-card.world-card-media .world-card-link { color: #dfa79d; }
+.world-grid > .world-card.world-card-media:hover {
+    border-color: rgba(235, 177, 163, .74);
+    background: linear-gradient(135deg, rgba(111, 58, 53, .98), rgba(42, 25, 29, .99));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .25);
+}
+
+/* Documents — cool archival slate */
+.world-grid > .world-card.world-card-documents {
+    border-color: rgba(151, 174, 194, .36);
+    background: linear-gradient(135deg, rgba(55, 72, 89, .94), rgba(23, 32, 43, .99));
+}
+.world-grid > .world-card.world-card-documents .world-card-icon {
+    color: #b7cadb;
+    text-shadow: 0 0 20px rgba(153, 184, 210, .18);
+}
+.world-grid > .world-card.world-card-documents h3 { color: #eef4fa; }
+.world-grid > .world-card.world-card-documents .world-card-number,
+.world-grid > .world-card.world-card-documents .world-card-link { color: #b3c7d8; }
+.world-grid > .world-card.world-card-documents:hover {
+    border-color: rgba(190, 215, 235, .76);
+    background: linear-gradient(135deg, rgba(67, 88, 108, .98), rgba(25, 37, 49, .99));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .25);
+}
+
+/* Required files — warm brass and folder leather */
+.world-grid > .world-card.world-card-files {
+    border-color: rgba(201, 160, 103, .38);
+    background: linear-gradient(135deg, rgba(91, 66, 37, .94), rgba(37, 28, 21, .99));
+}
+.world-grid > .world-card.world-card-files .world-card-icon {
+    color: #e3c18c;
+    text-shadow: 0 0 20px rgba(220, 178, 112, .2);
+}
+.world-grid > .world-card.world-card-files h3 { color: #fff3df; }
+.world-grid > .world-card.world-card-files .world-card-number,
+.world-grid > .world-card.world-card-files .world-card-link { color: #e0bd87; }
+.world-grid > .world-card.world-card-files:hover {
+    border-color: rgba(239, 204, 145, .76);
+    background: linear-gradient(135deg, rgba(111, 80, 43, .98), rgba(45, 32, 22, .99));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .25);
+}
+
+/* Keep the category accents visible when navigating with a keyboard. */
+.world-grid > .world-card.world-card-geography:focus-visible { outline: 2px solid #a8d5d5; outline-offset: 3px; }
+.world-grid > .world-card.world-card-society:focus-visible { outline: 2px solid #c9d39a; outline-offset: 3px; }
+.world-grid > .world-card.world-card-media:focus-visible { outline: 2px solid #e0aaa0; outline-offset: 3px; }
+.world-grid > .world-card.world-card-documents:focus-visible { outline: 2px solid #b7cadb; outline-offset: 3px; }
+.world-grid > .world-card.world-card-files:focus-visible { outline: 2px solid #e3c18c; outline-offset: 3px; }
+
