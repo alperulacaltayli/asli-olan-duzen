@@ -132,8 +132,13 @@ Depodaki `AslıOlanDüzenObsidianVault/` klasörü, site derlemesi sırasında b
 - `Tarihi Olaylar/Olaylar/` — yıl bazlı dallanan kronoloji
 - `Alternatif Tarih/Karakterler/` — kısa ve spoilersız karakter tanıtımları
 - `Atalay Soyu` ve `Keser Soyu` — ayrı kuşak ağaçları
-- `Kuruluşlar/Hilalifiyet Merkezi - İstanbul.md` — kurum kaydı
-- `TA-85 Gökkanat` — yayımlanabilir genel teknoloji tanıtımı
+- `Alternatif Tarih/Dünya/` — genel dünya düzeni, Türkiye, Almanya, Amerika ve 1946 paylaşım çerçevesi
+- `Alternatif Tarih/Dünya/Coğrafya/` — onaylı atlas, ülke ve şehir profilleri
+- `Aslı Olan Düzen/Toplum ve Gündelik Hayat/` — okul profili ve Kanat sistemi
+- `Kuruluşlar/Kamuya Açık/` — onaylı kamuya açık kurum/yerleşke profilleri
+- `TA-85 Gökkanat` — genel ve tarihsel teknoloji tanıtımı
+- `Medya ve Basın/` — kronoloji kaynaklı basın bağlamı
+- `Belge Arşivi/` — karar, toplantı ve yazışma klasörleri; onaylı belge geldikçe kataloglanır
 
 Karakter tanıtımları tek bir kısa biçimde sunulur: doğum / yaş, genel rol, görünüş ve kişilik. Kaynaklarda doğrulanmayan ayrıntılar, uzun karakter geçmişleri ve olay örgüsünü açığa çıkaran bilgiler yayımlanmaz. Tamamlanmamış veya onay bekleyen karakter notları arşive alınmaz. Tek isimle kayıtlı tarihî aile üyeleri, Keser Soyu ağacında ortak aile etiketiyle düzenlenir; aile ağacında görünür soy adı kullanılır.
 
@@ -141,7 +146,7 @@ Obsidian `[[çift köşeli bağlantıları]]` hedef kayıtlar sitede mevcutsa t�
 
 ### Dünya ve tarih bölümü
 
-Dünya ve tarih arşivi şimdilik yayından kaldırılmıştır. İlgili Vault kaynak dosyaları silinmemiştir; daha sonra yeniden düzenlenerek eklenmek üzere korunur.
+Dünya Atlası birimi yeniden etkinleştirilmiştir. Genel dünya düzeni, 1946 paylaşımının ana çerçevesi ve mevcut ülke notları arşivde yer alır. Onaylı coğrafya klasöründe 1985 atlas özeti, ülke profilleri ve şehir/tarih dosyaları bulunur. Kesin sınır çizgileri, ayrıntılı şehir planları ve ulaşım ağları henüz tamamlanmış sayılmaz; kaynakla belirlenmeyen sınırlar harita üzerinde uydurulmaz.
 
 ### Yayımlanmayan kaynaklar
 
@@ -151,6 +156,10 @@ Yeni kayıt eklemek için uygun kaynak klasörüne bir Markdown dosyası ekle ve
 
 > **Gizlilik uyarısı:** GitHub deposu Public olduğu için `AslıOlanDüzenObsidianVault/` klasörünün içindeki kaynak dosyalar da GitHub'da herkese açıktır. Siteye aktarılmayan bir dosya, depo içinden gizlenmiş olmaz. Özel notları, yayımlanmamış bölümleri ve `.obsidian` ayarlarını ayrı bir private depoda tut.
 
+
+## Gerekli Dosyalar ve ilerleme takibi
+
+`dosya-merkezi.html` sayfası `required-files.json` dosyasını okuyarak iki ayrı liste gösterir: yayımlanmış/tamamlanmış kayıtlar ve hâlâ kaynak ya da yazar kararı bekleyen içerikler. Her açık dosya önerisi ilgili Obsidian klasörünü, doldurulması gereken alanları ve şablon bağlantısını taşır. Bu envanter, mevcut kanonda bulunmayan ayrıntıların kendiliğinden uydurulmasını önlemek için kullanılır.
 
 ## Fotoğraf galerisi metadata yönetimi
 
