@@ -454,7 +454,7 @@ def discover_audio() -> dict[str, Any]:
         for field in ("lyrics", "transcript", "performer", "composer", "lyricist", "credits", "language"):
             value = metadata.get(field)
             if isinstance(value, list):
-                value = "\\n".join(str(part) for part in value)
+                value = "\n".join(str(part) for part in value)
             if value is not None and str(value).strip():
                 record[field] = str(value).strip()
         records.append(record)
