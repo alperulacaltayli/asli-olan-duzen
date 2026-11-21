@@ -15,7 +15,7 @@ import build_site  # noqa: E402
 
 class AudioArchiveTests(unittest.TestCase):
     def test_discover_audio_exports_lyrics_and_optional_metadata(self) -> None:
-        lyrics = "İlk dize.\\nİkinci dize.\\n\\nYeni kıta."
+        lyrics = "İlk dize.\nİkinci dize.\n\nYeni kıta."
         with tempfile.TemporaryDirectory() as directory:
             audio_root = Path(directory)
             relative = Path("Marşlar") / "Türklerin Marşları" / "Deneme.mp3"
