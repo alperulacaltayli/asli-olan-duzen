@@ -1,3 +1,16 @@
 {
-  "videos": {}
+  "videos": {
+    "Beyaz Saray Kutlaması.mp4": {
+      "title": "Beyaz Saray Kutlaması",
+      "category": "Diplomasi ve şehirler",
+      "description": "Beyaz Saray çevresindeki kutlamayı gösteren arşiv video kaydı. Çekim tarihi, özgün kaynak ve olayın kesin bağlamı henüz kataloglanmamıştır.",
+      "order": 1
+    },
+    "Beyaz Saray Kutlaması Renklendirilmiş.mp4": {
+      "title": "Beyaz Saray Kutlaması — Renklendirilmiş Sürüm",
+      "category": "Diplomasi ve şehirler",
+      "description": "Beyaz Saray kutlama kaydının renklendirilmiş sürümü. Özgün görüntünün tarihi ve renklendirme künyesi ayrıca doğrulanmalıdır.",
+      "order": 2
+    }
+  }
 }
