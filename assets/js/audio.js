@@ -141,7 +141,26 @@
       const item = entry.item;
       const isActive = entry.index === activeIndex;
       const isPlaying = isActive && player && !player.paused;
-      const meta = [item.subcategory, item.date].filter(Boolean).join(" · ");
+      const meta = [item.subcategory, item.date, item.performer].filter(Boolean).join(" · ");
+      const textValue = item.lyrics || item.transcript || "";
+      const textContent = Array.isArray(textValue) ? textValue.join("\\n") : String(textValue);
+      const textParagraphs = textContent.trim()
+        .replace(/\\r\\n?/g, "\\n")
+        .split(/\\n\\s*\\n/)
+        .filter(Boolean)
+        .map(stanza => '<p>' + escapeHtml(stanza).replace(/\\n/g, "<br>") + '</p>')
+        .join("");
+      const textIsLyrics = Boolean(item.lyrics);
+      const textToggle = textContent.trim()
+        ? '<button class="audio-track-text-toggle" type="button" data-audio-text aria-controls="audio-track-text-' + entry.index + '" aria-expanded="false" data-open-label="' +
+            (textIsLyrics ? 'SÖZLERİ OKU' : 'METNİ OKU') + '" data-close-label="' +
+            (textIsLyrics ? 'SÖZLERİ GİZLE' : 'METNİ GİZLE') + '">' +
+            (textIsLyrics ? 'SÖZLERİ OKU' : 'METNİ OKU') + '</button>' +
+          '<section class="audio-track-text" id="audio-track-text-' + entry.index + '" hidden>' +
+            '<span class="audio-track-text-heading">' + (textIsLyrics ? 'MARŞ / ŞARKI SÖZLERİ' : 'KAYIT DÖKÜMÜ') + '</span>' +
+            '<div class="audio-track-text-content">' + textParagraphs + '</div>' +
+          '</section>'
+        : "";
       const playSymbol = isPlaying ? "Ⅱ" : (isActive ? "▶" : "▷");
       return '<article class="audio-track' + (isActive ? " is-playing" : "") + '" data-audio-row="' + entry.index + '">' +
         '<button class="audio-track-play" type="button" data-audio-play="' + entry.index + '" aria-label="' +
@@ -149,6 +168,7 @@
         '<div class="audio-track-main"><span class="audio-track-index">KAYIT / ' + String(rowIndex + 1).padStart(2, "0") + '</span>' +
           '<strong>' + escapeHtml(item.title) + '</strong>' +
           (item.description ? '<p>' + escapeHtml(item.description) + '</p>' : '') +
+          textToggle +
         '</div>' +
         '<div class="audio-track-meta"><span>' + escapeHtml(item.category || "SES KAYDI") + '</span>' +
           (meta ? '<span>' + escapeHtml(meta) + '</span>' : '') +
@@ -311,6 +331,18 @@
   categorySelect?.addEventListener("change", renderTracks);
 
   trackList?.addEventListener("click", event => {
+    const textButton = event.target.closest("[data-audio-text]");
+    if (textButton) {
+      const panelId = textButton.getAttribute("aria-controls");
+      const panel = panelId ? document.getElementById(panelId) : null;
+      if (!panel) return;
+      const isExpanded = textButton.getAttribute("aria-expanded") === "true";
+      panel.hidden = isExpanded;
+      textButton.setAttribute("aria-expanded", String(!isExpanded));
+      textButton.textContent = isExpanded ? textButton.dataset.openLabel : textButton.dataset.closeLabel;
+      return;
+    }
+
     const button = event.target.closest("[data-audio-play]");
     if (!button) return;
     const index = Number(button.dataset.audioPlay);
