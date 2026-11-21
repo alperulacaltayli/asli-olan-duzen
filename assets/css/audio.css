@@ -843,3 +843,54 @@
   .audio-page[data-audio-country="german"] .audio-country-banner-art .audio-banner-mark {width:38px;height:38px;right:5%;top:6%;}
 }
 @media(prefers-reduced-motion:reduce) {.audio-type-card {transition:none !important;}}
+
+
+/* Expandable lyrics and transcripts inside audio catalogue entries. */
+.audio-track-text-toggle {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  margin-top:13px;
+  padding:8px 11px;
+  border:1px solid var(--audio-border);
+  color:var(--audio-accent);
+  background:rgba(0,0,0,.16);
+  font:8px var(--mono);
+  letter-spacing:.12em;
+  cursor:pointer;
+  transition:background .2s,border-color .2s,color .2s;
+}
+.audio-track-text-toggle:hover,
+.audio-track-text-toggle:focus-visible {
+  border-color:var(--audio-accent);
+  color:#fff0dc;
+  background:var(--audio-accent-soft);
+}
+.audio-track-text-toggle:focus-visible {
+  outline:2px solid var(--audio-accent);
+  outline-offset:3px;
+}
+.audio-track-text[hidden] {display:none !important;}
+.audio-track-text {
+  margin-top:16px;
+  padding:17px 19px 18px;
+  border-left:2px solid var(--audio-accent);
+  background:linear-gradient(110deg,var(--audio-accent-soft),rgba(0,0,0,.12));
+}
+.audio-track-text-heading {
+  display:block;
+  margin-bottom:12px;
+  color:var(--audio-accent);
+  font:8px var(--mono);
+  letter-spacing:.14em;
+}
+.audio-track-text-content {
+  color:#e5dfd2;
+  font:16px/1.75 var(--serif);
+}
+.audio-track-text-content p {margin:0 0 15px;}
+.audio-track-text-content p:last-child {margin-bottom:0;}
+@media(max-width:680px) {
+  .audio-track-text {padding:14px 13px;}
+  .audio-track-text-content {font-size:15px;line-height:1.7;}
+}
