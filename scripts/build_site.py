@@ -466,6 +466,25 @@ def discover_audio() -> dict[str, Any]:
     return {"audio": records}
 
 
+def read_archive_access() -> dict[str, Any]:
+    """Read the same reversible access switches used by the browser interface."""
+    index_html = (ROOT / "index.html").read_text(encoding="utf-8")
+    match = re.search(
+        r'<script\s+type="application/json"\s+id="archive-access"\s*>(.*?)</script>',
+        index_html,
+        re.DOTALL,
+    )
+    if not match:
+        raise RuntimeError("index.html içinde archive-access ayarları bulunamadı.")
+    try:
+        settings = json.loads(match.group(1))
+    except json.JSONDecodeError as error:
+        raise RuntimeError("archive-access ayarları geçerli JSON değil.") from error
+    if not isinstance(settings, dict):
+        raise RuntimeError("archive-access ayarları bir JSON nesnesi olmalıdır.")
+    return settings
+
+
 def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
@@ -537,6 +556,12 @@ def build() -> None:
         shutil.copy2(source, destination)
 
     archive_data = import_obsidian.discover_archives()
+    archive_access = read_archive_access()
+    closed_categories = []
+    for category in archive_data["categories"]:
+        if archive_access.get(category["id"]) is False:
+            category["nodes"] = []
+            closed_categories.append(category["title"])
     encoded = json.dumps(archive_data, ensure_ascii=False, indent=2) + "\n"
 
     # Keep a root copy for branch-based preview and place the deploy copy in dist.
@@ -566,6 +591,8 @@ def build() -> None:
     print(f"Site built: {DIST}")
     print(f"Gallery images: {len(gallery_data['images'])}")
     print(f"Archive categories: {len(archive_data['categories'])}")
+    if closed_categories:
+        print("Closed archive categories omitted from public data: " + ", ".join(closed_categories))
     for category in archive_data["categories"]:
         print(f" - {category['title']}: {len(category['nodes'])} top-level records")
 

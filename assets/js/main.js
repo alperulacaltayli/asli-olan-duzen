@@ -153,10 +153,20 @@
     "institutions", "technology", "characters", "society", "media", "documents", "personal-records"
   ]);
 
-  // Reopen this archive later by changing its value to true (or removing the entry).
-  const ARCHIVE_CATEGORY_ACCESS = Object.freeze({
-    "personal-records": false
-  });
+  // The same JSON setting is read by the site builder to keep closed records out of public data.
+  const ARCHIVE_CATEGORY_ACCESS = (() => {
+    const configNode = document.getElementById("archive-access");
+    if (!configNode) return { "personal-records": false };
+    try {
+      const parsed = JSON.parse(configNode.textContent || "{}");
+      return parsed && typeof parsed === "object" && !Array.isArray(parsed)
+        ? parsed
+        : { "personal-records": false };
+    } catch (error) {
+      console.error("Arşiv erişim ayarları okunamadı; kişisel arşivler kapalı tutuluyor.", error);
+      return { "personal-records": false };
+    }
+  })();
   const isArchiveCategoryOpen = (categoryId) => ARCHIVE_CATEGORY_ACCESS[categoryId] !== false;
 
   const syncArchiveEntryStates = (root = document) => {
