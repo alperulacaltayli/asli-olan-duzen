@@ -1,0 +1,7 @@
+{
+  "title": "Kişisel Arşivler",
+  "description": "Karakterlerin ajandaları, günlükleri ve not defterleri. Kayıtlar ülke arşivine, karakter grubuna ve kişiye göre ayrılır.",
+  "view": "tree",
+  "label": "KİŞİSEL KAYITLAR",
+  "order": 90
+}

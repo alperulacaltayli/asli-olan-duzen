@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.import_obsidian import read_public_archive_note, scan_public_archive_nodes
+from scripts.import_obsidian import inherit_archive_context, read_public_archive_note, scan_public_archive_nodes
 
 
 class PublicArchiveImportTests(unittest.TestCase):
@@ -83,6 +83,43 @@ visibility: public
             self.assertEqual(len(nodes), 1)
             self.assertEqual(nodes[0]["title"], "1938 — Dönem kaydı")
             self.assertEqual([child["title"] for child in nodes[0]["children"]], ["Açık olay"])
+
+
+    def test_personal_archive_metadata_is_inherited_by_nested_entries(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.write_note(root, "Asena/index.md", """
+title: Asena Korkut
+status: approved
+visibility: public
+country: turkish
+character_group: young
+character: Asena Korkut
+record_type: character
+theme: asena
+""")
+            self.write_note(root, "Asena/Günlük/index.md", """
+title: Günlük
+status: approved
+visibility: public
+record_type: diary
+""")
+            self.write_note(root, "Asena/Günlük/İlk kayıt.md", """
+title: İlk kayıt
+status: approved
+visibility: public
+date: 14 Eylül 1985
+record_type: entry
+""")
+            nodes = scan_public_archive_nodes(root, root, "personal-records")
+            inherit_archive_context(nodes)
+            diary = nodes[0]["children"][0]
+            entry = diary["children"][0]
+            self.assertEqual(entry["character"], "Asena Korkut")
+            self.assertEqual(entry["theme"], "asena")
+            self.assertEqual(entry["country"], "turkish")
+            self.assertEqual(entry["character_group"], "young")
+            self.assertEqual(entry["record_type"], "entry")
 
 
 if __name__ == "__main__":

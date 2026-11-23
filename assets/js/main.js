@@ -150,7 +150,7 @@
   const findNode = (nodes, id) => allNodes(nodes).find((node) => node.id === id) || null;
 
   const COUNTRY_CHOOSER_CATEGORY_IDS = new Set([
-    "institutions", "technology", "characters", "society", "media", "documents"
+    "institutions", "technology", "characters", "society", "media", "documents", "personal-records"
   ]);
 
   const normalizeArchiveCountry = (value) => {
@@ -182,7 +182,7 @@
 
   const categoryIcon = (id) => ({
     chronology: "◈", technology: "⌘", geography: "⌖",
-    institutions: "⌂", characters: "✦", society: "⌂", media: "▤", documents: "▧"
+    institutions: "⌂", characters: "✦", society: "⌂", media: "▤", documents: "▧", "personal-records": "✎"
   })[id] || "▤";
 
   const renderCategories = () => {
@@ -613,6 +613,27 @@
       return;
     }
 
+    if (activeCategory?.id === "personal-records") {
+      const allowedThemes = new Set(["alper", "tomris", "asena", "aylin"]);
+      const personalTheme = allowedThemes.has(node.theme) ? node.theme : "index";
+      const characterName = node.character || node.title;
+      const groupLabel = node.character_group === "young"
+        ? "GENÇ KARAKTERLER"
+        : node.character_group === "political" ? "SİYASİ KARAKTERLER" : "KİŞİSEL ARŞİV";
+      const typeLabel = ({section:"KARAKTER SINIFI",character:"KİŞİSEL DOSYA",agenda:"AJANDA",diary:"GÜNLÜK",notebook:"NOT DEFTERİ",entry:"KİŞİSEL KAYIT"})[node.record_type] || "KİŞİSEL KAYIT";
+      detailHost.innerHTML = '<article class="personal-archive-detail" data-personal-theme="' + escapeHtml(personalTheme) +
+        '" data-personal-kind="' + escapeHtml(node.record_type || "entry") + '">' +
+        '<div class="personal-archive-overline"><span>ASLI OLAN DÜZEN / KİŞİSEL ARŞİV</span><span>' + groupLabel + '</span></div>' +
+        '<header class="personal-archive-heading"><div class="personal-archive-monogram" aria-hidden="true">' + escapeHtml(getInitials(characterName)) + '</div>' +
+        '<div class="personal-archive-heading-copy"><p>' + escapeHtml(characterName) + ' / ' + typeLabel + '</p>' +
+        '<h3>' + escapeHtml(node.title) + '</h3><span>' + escapeHtml(node.date || typeLabel) + '</span></div></header>' +
+        (node.summary ? '<p class="personal-archive-summary">' + escapeHtml(node.summary) + '</p>' : '') +
+        '<div class="personal-archive-rule"><span></span><small>ÖZEL KAYIT DEFTERİ</small><span></span></div>' +
+        '<div class="personal-archive-body">' + renderMarkdown(node.content || "") + '</div>' +
+        childLinks + relatedLinks + '</article>';
+      return;
+    }
+
     detailHost.innerHTML = '<div class="detail-record">' +
       '<div class="detail-record-top"><span>' + escapeHtml(activeCategory.title) + '</span><span>' + escapeHtml(node.path || node.id) + '</span></div>' +
       '<p class="detail-date">' + escapeHtml(node.date || "TARİH BELİRTİLMEMİŞ") + '</p>' +
@@ -638,7 +659,7 @@
   };
 
   const attachArchiveRecordActions = (node) => {
-    const top = detailHost.querySelector(".chronology-detail-top, .character-detail-overline, .detail-record-top");
+    const top = detailHost.querySelector(".chronology-detail-top, .character-detail-overline, .personal-archive-overline, .detail-record-top");
     if (!top || !node || !activeCategory) return;
     const tools = document.createElement("div");
     tools.className = "archive-record-tools";

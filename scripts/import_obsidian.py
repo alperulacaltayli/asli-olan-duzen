@@ -105,6 +105,10 @@ def node(category, doc, date=""):
     country = normalize_country(doc.get("country", ""))
     if country:
         record["country"] = country
+    for field in ("character", "character_group", "record_type", "theme"):
+        value = str(doc.get(field, "")).strip()
+        if value:
+            record[field] = value
     return record
 
 def group(category,title,date,summary,children,key):
@@ -600,6 +604,10 @@ def read_public_archive_note(path, archive_root):
         "date": str(metadata.get("date", metadata.get("period", ""))).strip(),
         "order": order,
         "country": normalize_country(metadata.get("country", metadata.get("ülke", ""))),
+        "character": metadata.get("character", "").strip(),
+        "character_group": metadata.get("character_group", "").strip(),
+        "record_type": metadata.get("record_type", "").strip(),
+        "theme": metadata.get("theme", "").strip(),
     }
 
 
@@ -882,6 +890,20 @@ def attach_links(categories):
     for cat in categories:
         clear_unpublished_links(cat.get("nodes", []))
 
+
+def inherit_archive_context(nodes, inherited=None):
+    """Propagate character, archive type, theme and country through nested records."""
+    fields = ("country", "character", "character_group", "record_type", "theme")
+    inherited = inherited or {}
+    for item in nodes or []:
+        context = dict(inherited)
+        for field in fields:
+            value = item.get(field) or context.get(field)
+            if value:
+                item[field] = value
+                context[field] = value
+        inherit_archive_context(item.get("children", []), context)
+
 def manual_categories():
     """Discover extra archive units without publishing unapproved documents."""
     root = ROOT / "content" / "archives"
@@ -898,6 +920,7 @@ def manual_categories():
             "title": folder.name.title(), "view": "tree", "order": 99
         }
         records = scan_public_archive_nodes(folder, folder, folder.name)
+        inherit_archive_context(records)
         if not records:
             continue
         view = cfg.get("view", "tree")
