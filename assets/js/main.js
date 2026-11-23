@@ -153,6 +153,40 @@
     "institutions", "technology", "characters", "society", "media", "documents", "personal-records"
   ]);
 
+  // Reopen this archive later by changing its value to true (or removing the entry).
+  const ARCHIVE_CATEGORY_ACCESS = Object.freeze({
+    "personal-records": false
+  });
+  const isArchiveCategoryOpen = (categoryId) => ARCHIVE_CATEGORY_ACCESS[categoryId] !== false;
+
+  const syncArchiveEntryStates = (root = document) => {
+    root.querySelectorAll("[data-open-category], [data-discover-category], [data-category-id]").forEach((element) => {
+      const categoryId = element.dataset.openCategory || element.dataset.discoverCategory || element.dataset.categoryId;
+      const closed = !isArchiveCategoryOpen(categoryId);
+      element.classList.toggle("archive-entry-closed", closed);
+
+      if (closed) {
+        element.setAttribute("aria-disabled", "true");
+        element.title = "Bu arşiv şimdilik kapalı.";
+        if (element.tagName === "BUTTON") element.disabled = true;
+        if (!element.querySelector(".archive-closed-stamp")) {
+          const stamp = document.createElement("span");
+          stamp.className = "archive-closed-stamp";
+          stamp.textContent = "KAPALI ARŞİV";
+          stamp.setAttribute("aria-hidden", "true");
+          element.appendChild(stamp);
+        }
+      } else {
+        element.removeAttribute("aria-disabled");
+        if (element.title === "Bu arşiv şimdilik kapalı.") element.removeAttribute("title");
+        if (element.tagName === "BUTTON") element.disabled = false;
+        element.querySelector(".archive-closed-stamp")?.remove();
+      }
+    });
+  };
+
+  syncArchiveEntryStates();
+
   const normalizeArchiveCountry = (value) => {
     const country = String(value ?? "").trim().toLocaleLowerCase("tr-TR");
     if (["turkish", "turk", "turkiye", "türkiye", "turkey"].includes(country)) return "turkish";
@@ -197,16 +231,18 @@
     });
     categoryHost.innerHTML = orderedCategories.map((category, index) => {
       const count = allNodes(category.nodes).length;
+      const isOpen = isArchiveCategoryOpen(category.id);
       const viewName = category.view === "tree" ? "DALLANAN OLAY AĞACI" : "KAYIT KATALOĞU";
       return `
         <button class="archive-category" type="button" data-category-id="${escapeHtml(category.id)}" data-archive-theme="${escapeHtml(category.id)}">
-          <span class="category-topline"><span>${String(index + 1).padStart(2, "0")} / ${escapeHtml(category.label || "ARŞİV")}</span><span>${String(count).padStart(2, "0")} KAYIT</span></span>
+          <span class="category-topline"><span>${String(index + 1).padStart(2, "0")} / ${escapeHtml(category.label || "ARŞİV")}</span><span>${isOpen ? String(count).padStart(2, "0") + " KAYIT" : "KAPALI"}</span></span>
           <span class="category-icon" aria-hidden="true">${categoryIcon(category.id)}</span>
           <span class="category-title">${escapeHtml(category.title)}</span>
           <span class="category-description">${escapeHtml(category.description || "")}</span>
-          <span class="category-bottom"><span>${viewName}</span><b aria-hidden="true">↗</b></span>
+          <span class="category-bottom"><span>${isOpen ? viewName : "ERİŞİM ŞİMDİLİK KAPALI"}</span><b aria-hidden="true">↗</b></span>
         </button>`;
     }).join("");
+    syncArchiveEntryStates(categoryHost);
     categoryHost.querySelectorAll(".archive-category").forEach(enableTilt);
   };
 
@@ -975,6 +1011,7 @@
   };
 
   const openCategory = (categoryId, targetNodeId = null) => {
+    if (!isArchiveCategoryOpen(categoryId)) return;
     const nextCategory = categories.find((item) => item.id === categoryId);
     if (!nextCategory) return;
 
@@ -1050,7 +1087,7 @@
     }
     const randomButton = event.target.closest("#archive-random-record");
     if (randomButton) {
-      const records = categories.flatMap(category =>
+      const records = categories.filter(category => isArchiveCategoryOpen(category.id)).flatMap(category =>
         allNodes(category.nodes)
           .filter(node => !(node.children || []).length && node.path)
           .map(node => ({ categoryId: category.id, nodeId: node.id }))
@@ -1078,7 +1115,11 @@
           rebuildArchiveSearch();
           if (archiveSearchCategory) {
             archiveSearchCategory.innerHTML = '<option value="">Tüm arşiv birimleri</option>' +
-              categories.map((category) => '<option value="' + escapeHtml(category.id) + '">' + escapeHtml(category.title) + '</option>').join("");
+              categories.map((category) => {
+                const isOpen = isArchiveCategoryOpen(category.id);
+                return '<option value="' + escapeHtml(category.id) + '"' + (isOpen ? "" : " disabled") + '>' +
+                  escapeHtml(category.title) + (isOpen ? "" : " — KAPALI ARŞİV") + '</option>';
+              }).join("");
           }
           renderArchiveSearch();
         })
@@ -1525,7 +1566,7 @@
     .replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("tr-TR").replace(/ı/g,"i")
     .replace(/[^a-z0-9]+/g," ").trim();
   const rebuildArchiveSearch = () => {
-    archiveSearchIndex = categories.flatMap((category) => {
+    archiveSearchIndex = categories.filter((category) => isArchiveCategoryOpen(category.id)).flatMap((category) => {
       const searchableNodes = category.id === "chronology"
         ? chronologySequence(category)
         : allNodes(category.nodes);
@@ -1579,7 +1620,11 @@
       rebuildArchiveSearch();
       if (archiveSearchCategory) {
         archiveSearchCategory.innerHTML = '<option value="">Tüm arşiv birimleri</option>' +
-          categories.map((category) => '<option value="' + escapeHtml(category.id) + '">' + escapeHtml(category.title) + '</option>').join("");
+          categories.map((category) => {
+                const isOpen = isArchiveCategoryOpen(category.id);
+                return '<option value="' + escapeHtml(category.id) + '"' + (isOpen ? "" : " disabled") + '>' +
+                  escapeHtml(category.title) + (isOpen ? "" : " — KAPALI ARŞİV") + '</option>';
+              }).join("");
       }
       renderArchiveSearch();
       const requestedRecord = new URLSearchParams(window.location.search).get("record");
