@@ -8,7 +8,5 @@ character: Aylin Aksoy
 record_type: character
 theme: aylin
 order: 4
-summary: Mor tonlu, düzenli not defteri.
+summary: Not defterini serbest notlar almak için kullanır.
 ---
-
-Vault'taki karakter dosyasında adı Aylin Aksoy olarak geçer. Not defteri sakin, gözlemci ve planlı yaklaşımına uygun olarak tasarlanır.

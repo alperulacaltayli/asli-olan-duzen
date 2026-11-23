@@ -7777,3 +7777,56 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
 .personal-archive-detail .detail-connections button,.personal-archive-detail .detail-crosslinks button{border-color:var(--pa-line);color:var(--pa-ink);background:rgba(255,255,255,.035)}
 @keyframes personal-archive-arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:680px){.personal-archive-detail{padding:20px 16px}.personal-archive-heading{align-items:flex-start;gap:14px}.personal-archive-monogram{flex-basis:58px;width:58px;height:58px;font-size:19px}.personal-archive-summary{margin-left:0}.personal-archive-body{padding:16px;font-size:16px}.personal-archive-detail[data-personal-kind="agenda"] .personal-archive-body{padding-left:42px}.personal-archive-detail[data-personal-theme="aylin"] .personal-archive-body{padding-left:36px}}
+
+
+/* Section 03 archive cards use the same semantic palettes as their Section 02 world cards. */
+/* Society and daily life — muted olive and sage */
+.archive-category[data-archive-theme="society"] {
+    border-color: rgba(184, 194, 132, .34);
+    background: linear-gradient(135deg, rgba(66, 76, 43, .9), rgba(23, 34, 25, .99));
+}
+.archive-category[data-archive-theme="society"] .category-icon { color: #c9d39a; text-shadow: 0 0 20px rgba(190, 205, 133, .18); }
+.archive-category[data-archive-theme="society"] .category-title { color: #f1f3df; }
+.archive-category[data-archive-theme="society"] .category-topline,
+.archive-category[data-archive-theme="society"] .category-bottom { color: #c4ce98; }
+.archive-category[data-archive-theme="society"] .category-bottom { border-top-color: rgba(184, 194, 132, .24); }
+.archive-category[data-archive-theme="society"]:hover,
+.archive-category[data-archive-theme="society"]:focus-visible {
+    border-color: rgba(213, 224, 160, .72);
+    background: linear-gradient(135deg, rgba(80, 93, 50, .96), rgba(25, 39, 28, .99));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .25);
+}
+
+/* Press and publications — archival brick red */
+.archive-category[data-archive-theme="media"] {
+    border-color: rgba(205, 139, 125, .36);
+    background: linear-gradient(135deg, rgba(91, 48, 45, .94), rgba(36, 24, 27, .99));
+}
+.archive-category[data-archive-theme="media"] .category-icon { color: #e0aaa0; text-shadow: 0 0 20px rgba(210, 139, 126, .18); }
+.archive-category[data-archive-theme="media"] .category-title { color: #fff0eb; }
+.archive-category[data-archive-theme="media"] .category-topline,
+.archive-category[data-archive-theme="media"] .category-bottom { color: #dfa79d; }
+.archive-category[data-archive-theme="media"] .category-bottom { border-top-color: rgba(205, 139, 125, .24); }
+.archive-category[data-archive-theme="media"]:hover,
+.archive-category[data-archive-theme="media"]:focus-visible {
+    border-color: rgba(235, 177, 163, .74);
+    background: linear-gradient(135deg, rgba(111, 58, 53, .98), rgba(42, 25, 29, .99));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .25);
+}
+
+/* Documents — cool archival slate */
+.archive-category[data-archive-theme="documents"] {
+    border-color: rgba(151, 174, 194, .36);
+    background: linear-gradient(135deg, rgba(55, 72, 89, .94), rgba(23, 32, 43, .99));
+}
+.archive-category[data-archive-theme="documents"] .category-icon { color: #b7cadb; text-shadow: 0 0 20px rgba(153, 184, 210, .18); }
+.archive-category[data-archive-theme="documents"] .category-title { color: #eef4fa; }
+.archive-category[data-archive-theme="documents"] .category-topline,
+.archive-category[data-archive-theme="documents"] .category-bottom { color: #b3c7d8; }
+.archive-category[data-archive-theme="documents"] .category-bottom { border-top-color: rgba(151, 174, 194, .24); }
+.archive-category[data-archive-theme="documents"]:hover,
+.archive-category[data-archive-theme="documents"]:focus-visible {
+    border-color: rgba(190, 215, 235, .76);
+    background: linear-gradient(135deg, rgba(67, 88, 108, .98), rgba(25, 37, 49, .99));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .25);
+}

@@ -8,7 +8,5 @@ character: Alper Ulaç Altaylı
 record_type: character
 theme: alper
 order: 1
-summary: Mor temalı ajanda ve not defteri.
+summary: Not defterine günlük ve serbest notlar alır. Ajandasını daha planlı ve uzun vadeli planlar için kullanır.
 ---
-
-Alper Ulaç Altaylı'nın kişisel arşivi; mor sayfa diliyle tasarlanan ajanda ve not defterini içerir.

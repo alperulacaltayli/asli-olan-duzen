@@ -8,7 +8,5 @@ character: Tomris İlter
 record_type: character
 theme: tomris
 order: 2
-summary: Siyah ve sade tasarımlı ajanda.
+summary: Ajandasını net ve kesin planlamalar için kullanır.
 ---
-
-Tomris'in kişisel arşivi, kontrol ve planlama yönünü yansıtan siyah ağırlıklı bir sayfa dili kullanır.

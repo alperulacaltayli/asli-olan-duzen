@@ -8,7 +8,5 @@ character: Asena Korkut
 record_type: character
 theme: asena
 order: 3
-summary: Turkuaz tasarımlı günlük ve not defteri.
+summary: Günlüğünü duygularını dizginleyebilmek için kullanır. Not defterini ise Tomris ile aldığı kararları unutmamak için, serbeste yakın ama düzenli biçimde kullanır.
 ---
-
-Asena'nın kişisel arşivi; sosyal, canlı ve insan ilişkilerine açık yönünü yansıtan turkuaz bir sayfa dili kullanır.
