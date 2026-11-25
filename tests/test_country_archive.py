@@ -50,10 +50,33 @@ class ArchiveCountryClassificationTests(unittest.TestCase):
         self.assertEqual(press_records[0]["country"], "both")
 
     def test_current_turkish_records_are_tagged_turkish(self):
-        for category_id in ("institutions", "technology", "characters"):
+        for category_id in ("institutions", "technology"):
             leaves = [node for node in walk(self.categories[category_id]["nodes"]) if not node.get("children")]
             self.assertTrue(leaves, category_id)
             self.assertTrue(all(node["country"] == "turkish" for node in leaves), category_id)
+
+    def test_character_archive_keeps_turkish_and_reich_profiles_separate(self):
+        leaves = [
+            node for node in walk(self.categories["characters"]["nodes"])
+            if not node.get("children")
+        ]
+        self.assertTrue(leaves, "characters")
+        self.assertTrue(all(node["country"] in {"turkish", "german"} for node in leaves))
+
+        by_name = {node["title"]: node for node in leaves}
+        for name in (
+            "Reinhard Falkenhorst", "Martin Kessler", "Ulrich von Havel",
+            "Friedrich Wulfhart", "Konrad Weissmann",
+        ):
+            with self.subTest(character=name):
+                self.assertEqual(by_name[name]["country"], "german")
+
+        for name in (
+            "Oğuz Kağan Atalay", "Alper Ulaç Altaylı", "Tomris İlter",
+            "Asena Korkut", "Selim Arkan",
+        ):
+            with self.subTest(character=name):
+                self.assertEqual(by_name[name]["country"], "turkish")
 
     def test_country_aliases_normalize(self):
         self.assertEqual(import_obsidian.normalize_country("Türkiye"), "turkish")
