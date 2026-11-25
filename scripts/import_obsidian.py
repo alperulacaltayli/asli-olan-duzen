@@ -182,7 +182,10 @@ def import_chronology():
 
 def make_public_character(category, spec):
     """Create a short, spoiler-safe character card from an approved source note."""
-    doc = read_doc(spec["path"])
+    if spec.get("profile_only"):
+        doc = {"sourceName": spec["name"], "title": spec["name"], "country": spec.get("country", "turkish")}
+    else:
+        doc = read_doc(spec["path"])
     if not doc:
         return None
 
@@ -290,7 +293,7 @@ def import_characters():
         },
         {
             "key":"cengiz-atalay", "path":main_base+"Cengiz Atalay.md", "name":"Cengiz Atalay",
-            "date":"1945 · 40 yaş", "birth":"1945", "age":"40",
+            "date":"1942 · 43 yaş", "birth":"1942", "age":"43",
             "role":"Askerî uçak mühendisi",
             "appearance":"Düzenli ve klasik giyinir; resmî ve hafif askerî çizgileri tercih eder.",
             "personality":"Özgüvenli, enerjik, meraklı ve çalışkan.",
@@ -298,7 +301,7 @@ def import_characters():
         },
         {
             "key":"meliha-atalay", "path":main_base+"Meliha Atalay.md", "name":"Meliha Atalay",
-            "date":"1975 · 10 yaş", "birth":"1975", "age":"10",
+            "date":"1976 · 9 yaş", "birth":"1976", "age":"9",
             "role":"Öğrenci",
             "appearance":"Yaşına uygun, sade ve rahat kıyafetler tercih eder.",
             "personality":"Çalışkan, kararlı, inatçı ve azimli.",
@@ -306,7 +309,7 @@ def import_characters():
         },
         {
             "key":"muhammed-atalay", "path":main_base+"Muhammed Atalay.md", "name":"Muhammed Atalay",
-            "date":"1973 · 12 yaş", "birth":"1973", "age":"12",
+            "date":"1974 · 11 yaş", "birth":"1974", "age":"11",
             "role":"Öğrenci · mühendisliğe ilgi duyuyor",
             "appearance":"Yaşına uygun, sade ve rahat giyinir.",
             "personality":"Meraklı, hareketli ve teknik konulara ilgili.",
@@ -389,27 +392,120 @@ def import_characters():
         },
         {
             "key":"alperen-keser", "path":political_base+"Alperen.md", "name":"Alperen Keser",
-            "date":"1888–1960", "birth":"1888 · Giresun, Kuşköy",
-            "role":"Asker ve devlet adamı · 1938–1960 döneminin lideri",
-            "personality":"Disiplinli, kararlı, milliyetçi ve güçlü merkezi devlet yanlısı.",
+            "date":"1899 doğumlu · 1938'de yönetimi devraldı", "birth":"1899 · Giresun, Kuşköy",
+            "role":"Asker ve devlet adamı · 1938'de yönetimi devralan lider",
+            "personality":"Disiplinli, kararlı, milliyetçi ve sanayileşme yanlısı.",
             "aliases":["Alperen","Alperen Keser"]
         },
         {
             "key":"ismail-karaslan", "path":political_base+"İsmail Karaslan.md", "name":"İsmail Karaslan",
-            "date":"1904 doğumlu · 1960–1975 döneminde lider",
-            "birth":"1904 · Hatay",
+            "date":"1915 doğumlu · Alperen Keser sonrasındaki lider", 
+            "birth":"1915 · Hatay",
             "role":"Asker ve devlet adamı",
             "personality":"Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
             "aliases":["İsmail Karaslan"]
         },
         {
             "key":"selim-arkan", "path":political_base+"Selim Arkan.md", "name":"Selim Arkan",
-            "date":"1935 doğumlu · 1975'ten itibaren lider",
-            "birth":"1935 · Ankara",
+            "date":"1939 doğumlu · 1985'te Ulu Han",
+            "birth":"1939 · Ankara",
             "role":"Siyasetçi ve devlet adamı",
             "personality":"Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
             "aliases":["Selim Arkan"]
         },
+    ]
+
+    extra_student_specs = [
+        {
+            "key":"alper-ulac-altayli", "name":"Alper Ulaç Altaylı",
+            "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
+            "role":"Öğrenci · 6. Kanat · Üsküdar Milli İlim ve İrfan Mektebi okul başkanı",
+            "appearance":"Düzenli, ölçülü ve sade giyinir; bulunduğu ortamda dikkat çekmekten çok kontrolü elinde tutmayı tercih eder.",
+            "personality":"Sakin, hesapçı, stratejik ve kontrol ihtiyacı yüksek.",
+            "summary":"Üsküdar Mektebi'nin altı kanatlı başkanı; otoritesini kürsüden çok bilgi, gözlem ve ilişkileri yöneterek kurar.",
+            "profile_only":True, "country":"turkish", "aliases":["Alper","Alper Ulaç Altaylı"]
+        }
+    ]
+    state_specs = [
+        {
+            "key":"kaan-demirsoy", "name":"Kaan Demirsoy", "date":"1936 doğumlu",
+            "birth":"1936", "role":"Başbuyruk · Ulu Han'ın iradesini bağlayıcı emre dönüştüren makam",
+            "personality":"Sessiz, titiz, sabırlı ve kayıt düzenine bağlı.",
+            "summary":"İmparatorluk yönetiminin emir, kararname ve kayıt düzenini ayakta tutan Başbuyruk.",
+            "profile_only":True, "country":"turkish"
+        },
+        {
+            "key":"sabiha-erten", "name":"Sabiha Erten", "date":"1945 doğumlu · 40 yaş",
+            "birth":"1945", "age":"40", "role":"Başbuyruk Kalemi Müsteşarı",
+            "personality":"Sessiz, dikkatli, titiz ve gerektiğinde itiraz etmekten çekinmeyen.",
+            "summary":"Kararname nüshalarının, mühür sırasının ve gizli tutanakların düzenini takip eden bürokrat.",
+            "profile_only":True, "country":"turkish"
+        },
+        {
+            "key":"mete-kutlu", "name":"Mete Kutlu", "date":"1931 doğumlu · 54 yaş",
+            "birth":"1931", "age":"54", "role":"İmparatorluk İstihbarat Başkanı",
+            "personality":"Sakin, ölçülü, sabırlı ve dikkatli bir dinleyici.",
+            "summary":"Dış istihbarat ve Reich masasını yöneten; bildiğini hemen açığa vurmayan istihbarat başkanı.",
+            "profile_only":True, "country":"turkish"
+        },
+        {
+            "key":"rana-tozun", "name":"Rana Tözün", "date":"1938 doğumlu · 47 yaş",
+            "birth":"1938", "age":"47", "role":"Bilim ve Gök Araştırmaları Başkanı",
+            "personality":"Sakin, kesin, sabırlı ve veriye bağlı.",
+            "summary":"Gök Kutup, sensör çalışmaları ve imparatorluğun bilim programlarından sorumlu üst düzey yönetici.",
+            "profile_only":True, "country":"turkish"
+        },
+        {
+            "key":"ziya-arat", "name":"Ziya Arat", "date":"1934 doğumlu · 51 yaş",
+            "birth":"1934", "age":"51", "role":"Maarif ve Gençlik Nazırı",
+            "personality":"Enerjik, ikna edici ve siyasî açıdan dikkatli.",
+            "summary":"Mekteplerin, müfredatın ve imparatorluk genelindeki Kanat sisteminin sorumlusu.",
+            "profile_only":True, "country":"turkish"
+        },
+        {
+            "key":"haluk-sancar", "name":"Haluk Sancar", "date":"1927 doğumlu · 58 yaş",
+            "birth":"1927", "age":"58", "role":"Afrika Umumi Valisi",
+            "personality":"Enerjik, konuşkan, ikna edici ve siyasî denge gözeten.",
+            "summary":"Afrika'daki reform hedefleri ile taşradaki keyfî uygulamalar arasındaki çelişkinin merkezindeki vali.",
+            "profile_only":True, "country":"turkish"
+        }
+    ]
+    reich_specs = [
+        {
+            "key":"reinhard-falkenhorst", "name":"Reinhard Falkenhorst", "date":"1922 doğumlu · 63 yaş",
+            "birth":"1922", "age":"63", "role":"Führer und Reichskanzler des Großdeutschen Reiches",
+            "personality":"Ağır, soğuk, sabırlı ve hesapçı.",
+            "summary":"Reich'ın tepesindeki Führer; parti, SS, ordu ve sanayi arasındaki dengeyi kendi otoritesi altında tutar.",
+            "profile_only":True, "country":"german"
+        },
+        {
+            "key":"martin-kessler", "name":"Martin Kessler", "date":"1930 doğumlu · 55 yaş",
+            "birth":"1930", "age":"55", "role":"Führer Yardımcısı · Parti Kanzelleyi Başkanı",
+            "personality":"Nazik görünen, sabırlı ve siyasî bağlantıları güçlü.",
+            "summary":"Reich içindeki atamaları ve parti disiplinini yöneten etkili iktidar aracısı.",
+            "profile_only":True, "country":"german"
+        },
+        {
+            "key":"ulrich-von-havel", "name":"Ulrich von Havel", "date":"1932 doğumlu · 53 yaş",
+            "birth":"1932", "age":"53", "role":"Reich Dışişleri Bakanı",
+            "personality":"Kibar, sabırlı, hesapçı ve diplomatik baskı kurabilen.",
+            "summary":"Türkiye ile ilişkilerde Reich'ın çıkarlarını nezaket ve koşullu teklifler üzerinden gözeten bakan.",
+            "profile_only":True, "country":"german"
+        },
+        {
+            "key":"friedrich-wulfhart", "name":"Friedrich Wulfhart", "date":"1925 doğumlu · 60 yaş",
+            "birth":"1925", "age":"60", "role":"Reichsführer-SS und Chef der Reichssicherheit",
+            "personality":"Sessiz, düzen takıntılı, ideolojik açıdan katı ve hesaplı.",
+            "summary":"Nazi rejiminin güvenlik ve baskı aygıtını yöneten SS lideri.",
+            "profile_only":True, "country":"german"
+        },
+        {
+            "key":"konrad-weissmann", "name":"Konrad Weissmann", "date":"1933 doğumlu · 52 yaş",
+            "birth":"1933", "age":"52", "role":"Baş Nükleer Fizikçi · SFA-P Polaris",
+            "personality":"Sabırsız, keskin, kibirli ve veriye odaklı.",
+            "summary":"Reich'ın yüksek enerji fiziği ve özel teknoloji programlarında öne çıkan bilim insanı.",
+            "profile_only":True, "country":"german"
+        }
     ]
 
     main_nodes = {}
@@ -424,14 +520,131 @@ def import_characters():
         if rec:
             political_nodes[spec["key"]] = rec
 
+    for spec in extra_student_specs:
+        rec = make_public_character("characters", spec)
+        if rec:
+            main_nodes[spec["key"]] = rec
+
+    state_nodes = {}
+    for spec in state_specs:
+        rec = make_public_character("characters", spec)
+        if rec:
+            state_nodes[spec["key"]] = rec
+
+    reich_nodes = {}
+    for spec in reich_specs:
+        rec = make_public_character("characters", spec)
+        if rec:
+            reich_nodes[spec["key"]] = rec
+
+    expansions = {
+        "oguz-kagan-atalay": (
+            "Üçüncü kanatlı Oğuz, iki kuşaktır uçak mühendisi yetiştiren Atalay ailesinin havacılık mirasını kokpitte sürdürmek ister. Dedesi Necdet ve babası Cengiz uçakları tasarlayan ve geliştiren insanlardır; Oğuz'un kendi arzusu ise onları uçurmaktır. Teknik bilgisi ve teorik hazırlığı güçlüdür, ancak 1985'te henüz gerçek uçuş eğitimi almamıştır.\n\nSoğukkanlılığı, düzenli çalışması ve bağımsız hareket etme isteği onu güvenilir kılar. Buna karşılık başarısızlığı kişisel bir kusur gibi algılaması, duygularını bastırması ve aynı anda çok fazla konuya yönelmesi zayıf yanlarıdır. Başlangıçta güçlü devlet ve emir-komuta düşüncesine yakındır; yaşadıkları, disiplin ile vicdanı birbirinden ayırıp ayıramayacağını sorgulamasına yol açar.\n\nİsmail'le ortaokul yıllarından beri süren dostluğu, Aylin'le gelişen yakınlığı ve Alper'le benzer görünen fakat ahlaken ayrışan rekabeti, Oğuz'un kişisel dünyasını şekillendirir. Babası Cengiz'in hayatında açıklayamadığı boşluklar bulunması da aile geçmişini sorgulamasına neden olur."
+        ),
+        "alper-ulac-altayli": (
+            "Alper, Üsküdar Milli İlim ve İrfan Mektebi'nin altı kanatlı okul başkanı ve Üsküdar Bloğu'nun lideridir. Yetkisini yalnızca resmî makamından almaz; okul içindeki insanları, ilişkileri ve bilgi akışını dikkatle izler. Panosu, notları ve dosyaları onun yönetim anlayışının uzantısıdır: kim hangi konuda yetenekli, kimin kiminle bağı var, hangi gelişme yaklaşan bir soruna dönüşebilir? Bu sorulara cevap arayarak çevresini düzenler.\n\nSakin konuşur ve nadiren sesini yükseltir. Otoritesini açık cezadan çok, karşısındakine ne bildiğini göstererek kurar. İnsanları çoğu zaman kabiliyetleri üzerinden değerlendirir; hedefi için yöntemlerini esnetebilmesi, onu etkili olduğu kadar ahlaken tartışmalı da kılar. Buna rağmen İsmail'e ve bir ölçüde Oğuz'a karşı gerçek bağlar taşır. Oğuz'la rekabetleri, benzer disiplin ve dış görünüşün ardında farklı ahlak anlayışlarının bulunmasından kaynaklanır. Tomris'le geçmişte Hilalifiyet çevresinde yaşanan yenilgi de iki okul yöneticisi arasındaki gerilimin önemli zeminidir."
+        ),
+        "ismail-yagiz-aslan": (
+            "İsmail, beş kanatlı okul başkan yardımcısıdır ve gelecekte siyasete girmeyi ister. Arkadaş çevresinde mizahı, rahat tavrı ve samimiyetiyle tanınır. İlgisini çekmeyen işlerde üşengeç davranabilir; ancak bir meseleyi gerçekten önemsediğinde uzun süre odaklanır ve çevresindekilerin beklemediği kadar pratik çözümler üretebilir. Bu nedenle onu yalnızca sınıfın şakacısı olarak görmek yanıltıcıdır.\n\nOğuz'la ortaokulun altıncı sınıfında tanışmış, yıllar içinde güçlü bir arkadaşlık kurmuştur. Oğuz'un ona taktığı İso lakabı, aralarındaki rahat ve samimi dili yansıtır. Alper'in yardımcısı olarak okul yönetiminde yer alması, onu dostluk çevresi ile öğrenci siyaseti arasında tutar. İsmail'in mizahı çoğu zaman gerginliği dağıtır; fakat konu ciddileştiğinde aynı rahatlığın altında kararlı bir taraf bulunduğu görülür."
+        ),
+        "muhammed-mete": (
+            "Muhammed Mete, dördüncü kanatlı bir öğrenci ve sivil pilot adayıdır. İlk karşılaşmada ağırbaşlı ve mesafeli görünse de güvendiği insanların yanında konuşkan, neşeli ve enerjik olabilir. Farklı ortamlara hızlı uyum sağlaması, arkadaş grubunda çatışmayı büyütmek yerine denge kurmasına yardımcı olur.\n\nPilotluk onun için yalnızca bir meslek değildir; yeni yerler görmek, aynı noktaya bağlı kalmamak ve kendi hayatının yönünü seçebilmek anlamına gelir. Sadakat, samimiyet ve güvene önem verir. Sevdiği insanları kaybetmekten ve onları hayal kırıklığına uğratmaktan çekindiği için önemli kararlarında kendisini gereğinden fazla sorgulayabilir. Oğuz, Alev ve diğer arkadaşlarıyla kurduğu bağ, sınıfın daha sakin ama güvenilir damarını oluşturur. Oğuz'un kardeşi Muhammed Atalay ile aynı kişi değildir."
+        ),
+        "aylin-aksoy": (
+            "Üç kanatlı Aylin, hukuk alanında ilerlemek isteyen, çevresini önce gözlemleyip sonra karar veren bir öğrencidir. İnsanlara kolayca güvenmez; fakat tanıdığı birini peşinen yargılamaz. Küçük ayrıntıları fark etmesi ve olayları uzun süre zihninde tartması, onu iyi bir gözlemci yapar. Bunun bedeli bazen fazla düşünerek karar vermeyi geciktirmesidir.\n\nSadakat, dürüstlük ve güven onun için temel değerlerdir. Bir arkadaşının yanlışını sırf yakın oldukları için savunmaz; gerçeği söylemenin de dostluğun parçası olduğuna inanır. Alev'le çocukluktan gelen arkadaşlığı bu iki karakterin birbirini tamamlamasını sağlar: Aylin düşünür ve ölçer, Alev daha çabuk harekete geçer. Oğuz'u ilk gördüğünde Alper'e benzetir; zamanla ikisinin sakinliğinin ve karar verme biçimlerinin farklı olduğunu fark eder. Tomris ve Asena'yla ilişkisi ise kişisel yakınlık ile kendisine verilen görev arasında denge kurmasını gerektirir."
+        ),
+        "alev-acar": (
+            "İki kanatlı Alev, sınıfın hareketli ve iletişimi güçlü öğrencilerindendir. Yeni bir ortama girdiğinde uzun süre sessiz kalmaz; planlar değiştiğinde kolayca uyum sağlar ve yeni bir yol bulur. Bu canlı tavrı gerektiğinde ciddileşmesine engel değildir. Sivil pilotluk hedefi, hareket ve keşif isteğiyle birleşir.\n\nAlev için sadakat çok önemlidir; birine gerçekten bağlandıktan sonra onu yarı yolda bırakmayı kendine yakıştırmaz. Bununla birlikte güveni ilk anda bütünüyle vermez, karşısındaki insanı zaman içinde tanır. Aylin'le çocukluk arkadaşıdır: Aylin daha çok düşünürken Alev harekete geçer. Oğuz'u başlangıçta iyi niyetli ve güvenilir bulur; Muhammed Mete'yle de aynı arkadaş çevresinde yer alır."
+        ),
+        "tomris-ilter": (
+            "Tomris, İstanbul Şarkın İlim ve Teknoloji Mektebi'nin altı kanatlı okul başkanıdır. Yönetmek onun için yalnızca bir görev değil, dünyayı anlaşılır ve denetlenebilir tutmanın yoludur. İnsanların davranışlarını, hafızalarını ve aralarındaki güç ilişkilerini dikkatle izler; birkaç adım sonrasını düşünerek hareket eder. Doğrudan konuşur, kendine güvenir ve kararsız görünmekten hoşlanmaz.\n\nTomris'in temel korkusu yenilmekten çok kontrolü kaybetmektir. Bu yüzden gerektiğinde kuralı esnetebilir, gerçeği saklayabilir veya insanları kendi planına göre yönlendirebilir. Düzenin korunmasını önemserken, aynı düzeni korumak için kendi koyduğu ilkeleri çiğneyebilmesi karakterinin ana çelişkisidir. Gelecekte millî istihbarat ve askerî güvenlik alanında görev almak ister. Asena'yı çocukluğundan beri en güvendiği kişi olarak görür. Alper'le Hilalifiyet'te yaşanan eski yenilgiye dayanan rekabeti ise kişisel bir hesap hâline gelmiştir. Oğuz'la henüz tanışmamıştır."
+        ),
+        "asena-korkut": (
+            "Asena, Şarkın Mektebi'nin beş kanatlı başkan yardımcısıdır ve istihbarat alanında, özellikle saha görevlerinde ilerlemek ister. Tomris kadar kontrol odaklı değildir; insanları anlamak, konuşmalarından ve davranışlarından güven ilişkisi kurmak onun güçlü yanıdır. Sosyal, hareketli ve kolay iletişim kuran biri görünür; buna karşılık kendi yeterliliğini sık sık sorgular ve başarısız olduğunda bunu kişisel değeriyle karıştırabilir.\n\nTomris'le çocukluktan beri süren yakınlığı, onun en büyük gücü ve zayıflığıdır. Tomris'in kararlarını düşünmeden kabul etmez; tartar, fakat çoğu zaman onun yanında kalır. Bu bağlılık kör itaat değildir: Tomris'in yanlış yaptığını fark ettiğinde onu durdurabilecek ender kişilerden biri Asena'dır. Aylin ve Alev'le, Tomris'e kıyasla daha rahat ve doğal bir iletişim kurar. Bu nedenle iki okul arasındaki görev ilişkilerinde insanî bağları ve kişisel sadakati sürekli karşı karşıya gelir."
+        ),
+        "cengiz-atalay": (
+            "Cengiz, Gökkanat programında çalışan askerî uçak mühendisidir. Meraklı, enerjik ve üretkendir; mekanik sorunları çözmek, mevcut sistemleri geliştirmek ve bir tasarımın zayıf noktasını bulmak onu motive eder. İşine duyduğu ilgi zaman zaman aile hayatındaki sorumluluklarının önüne geçebilir. 1942 doğumlu olması, Oğuz'un 1968'de doğduğu sırada yirmi altı yaşında olduğunu gösterir.\n\nOğuz'la güçlü bir ilişkisi vardır. Ona çalışma disiplini, sorumluluk alma ve teknik konulara sabırla yaklaşma alışkanlığı kazandırmıştır. Oğlunun askerî pilot olmasını ister; böylece ailedeki mühendislik geleneğinin başka bir biçimde sürmesini bekler. Aysel'le birbirini tamamlayan bir aile düzeni kurmuştur. Cengiz'in mesleki hayatındaki bazı boşluklar ve içine kapanması, Oğuz'un babasını yalnızca bir mühendis olarak değil, geçmişi olan bir insan olarak anlamaya çalışmasına yol açar."
+        ),
+        "aysel-atalay": (
+            "Aysel, Atalay ailesinin ev içindeki duygusal dengesini koruyan kişidir. Sakin, sabırlı ve gözlemcidir; Cengiz'in işine yoğunlaşmasını ve Oğuz'un giderek ağırlaşan hedeflerini anlayışla karşılamaya çalışır. Ancak anlayışlı olması kaygı duymadığı anlamına gelmez. Özellikle Oğuz'un kendisini fazla zorlamasından ve tehlikeli bir mesleğe yönelmesinden endişelenir.\n\nAile içinde çoğu zaman doğrudan sorgulamak yerine küçük değişiklikleri fark eder ve doğru zamanı bekler. Cengiz'in başarılarıyla gurur duyar, Oğuz'a ise duygularını rahatça gösterebileceği güvenli bir alan sunar. Kendi isteklerini ailesinin gerisine atması, koruyucu yönünün aynı zamanda zayıflığıdır."
+        ),
+        "nec-det-atalay": (
+            "Necdet, Atalay ailesinin havacılık geleneğinin ilk önemli halkası olan emekli askerî uçak mühendisidir. 1940'lı yıllardan itibaren askerî havacılık ve uzun menzilli uçak projelerinde çalışmıştır. Oğuz'a uçakları, kanat biçimlerini ve mühendisliğin gerektirdiği sabrı çocukluğundan itibaren anlatmıştır. Sevgisini uzun konuşmalarla değil, bilgi ve deneyim aktararak gösterir.\n\nSert, suskun ve disiplinlidir. Geçmişi anlatırken bazı ayrıntıları seçerek paylaşır; kimi meseleleri hiç açmaması, Oğuz'un tarih ve aile hafızasına yaklaşımını etkiler. 1965 Gökkanat hangarı olayı, Necdet'in geçmişindeki önemli bir dönüm noktasıdır. Bu olayın ayrıntıları karakter tanıtımında açıklanmaz; okurun keşfedeceği tarihsel bir bağ olarak bırakılır."
+        ),
+        "muhammed-atalay": (
+            "Muhammed Atalay, Oğuz'un on bir yaşındaki küçük kardeşidir. Oyun oynamayı ve televizyon izlemeyi sever; hareketli tavrı evin gündelik sesini ve neşesini oluşturur. Ağabeyine hayranlık duyar ve onunla vakit geçirmek ister. Büyüklerin siyasî veya meslekî meselelerinden çok kendi çocukluk dünyasına yakındır.\n\nMuhammed'in hikâyedeki önemi, Oğuz'un yalnızca idealler veya devlet meseleleri için değil, ailesinin sıradan hayatını korumak için de mücadele ettiğini hatırlatmasıdır. Sınıf arkadaşı olan Muhammed Mete ile karıştırılmamalıdır."
+        ),
+        "meliha-atalay": (
+            "Meliha, Atalay ailesinin dokuz yaşındaki en küçük çocuğudur. Ağabeyleri Muhammed ve Oğuz'un arasında büyür; evin hareketli gündelik hayatına neşe katar. Henüz büyüklerin dünyasındaki siyasî ve meslekî sorunları anlamlandıracak yaşta değildir.\n\nOğuz için Meliha, evin korunması gereken sade ve güvenli tarafını temsil eder. Onun çocukça merakı ve aile içindeki varlığı, Oğuz'un dış dünyadaki gerilimlerden bağımsız olarak önem verdiği hayatı görünür kılar."
+        ),
+        "alperen-keser": (
+            "Alperen Keser, Atatürk'ün 10 Kasım 1938'deki vefatından sonra 29 Kasım 1938'de yönetimi devralan asker ve devlet adamıdır. Merkezî devlet yapısını güçlendirmeyi, sanayileşmeyi hızlandırmayı ve askerî hazırlığı artırmayı hedefler. Türkiye'nin savaş yıllarındaki yönelişinde ve daha sonra Büyük Türk İmparatorluğu'na dönüşecek devlet anlayışının oluşmasında belirleyici rol oynar.\n\nDisiplinli, kararlı ve milliyetçi bir yönetici olarak güçlü devlet fikrini siyasetin merkezine yerleştirir. Bu program devleti hızla güçlendirirken otoriter yönetim biçiminin, güvenlikçi politikaların ve savaş yıllarındaki ağır kararların da temelini oluşturur. Ölüm yılı Vault'ta türetilmiş karar olarak işaretlendiği için bu tanıtımda kesin tarih verilmez."
+        ),
+        "ismail-karaslan": (
+            "İsmail Karaslan, Alperen Keser'den sonra devletin merkezî yönetimini sürdüren asker kökenli devlet adamıdır. Disiplinli, temkinli ve kurumların devamlılığına önem veren bir yönetici olarak tanımlanır. Onunla ilişkilendirilen dönem, yeni genişlemelerden çok mevcut imparatorluk yapısının yerleşmesi, eğitim düzeninin yayılması ve idarenin sağlamlaştırılmasıyla anılır.\n\nBu dönem, dışarıya doğru büyümenin ardından devletin kendi iç işleyişini düzenlemeye çalıştığı bir geçiş evresidir. Karaslan'ın görev süresinin kesin tarihleri Vault'ta türetilmiş olarak işaretlendiğinden, kamuya açık tanıtımda yalnızca Alperen sonrasındaki liderlik konumu belirtilir."
+        ),
+        "selim-arkan": (
+            "Selim Arkan, 1985 yılında Büyük Türk İmparatorluğu'nun Ulu Hanı ve Ankara'daki merkezî yönetimin başındaki isimdir. Teknik ve bürokratik kökeni, onu askerî çevrelerin alışık olduğu gösterişli komuta tarzından ayırır. Karar vermeden önce farklı değerlendirmeleri dinler; ardından kısa ve kesin emirler verir. Yetkisi geniş olsa da imparatorluğun her bölgesini tek tek yönetemeyeceğini, bürokrasinin kararları geciktirebileceğini bilir.\n\nDevletin güçlü ve disiplinli kalmasını ister. Bununla birlikte geçmişte işlenmiş devlet suçlarının gelecekte ağır bir siyasî ve ahlakî borç olarak geri dönebileceğinin farkındadır. Reich kaynaklı bir krizin, imparatorluk hazırlıksızken patlaması en büyük kaygılarındandır. Selim'in soğukkanlı görünüşünün altında, devletin geleceği ve kendi yönetiminin sınırları hakkında sürekli hesap yapan bir hükümdar bulunur."
+        ),
+        "kaan-demirsoy": (
+            "Kaan Demirsoy, Ulu Han'ın kararlarını bağlayıcı devlet emirlerine dönüştüren Başbuyruk makamını yürütür. Kararnamelerin hazırlanması, resmî metinlerin geçerliliği ve merkezî emirlerin doğru biçimde kayda geçirilmesi onun sorumluluğundadır. Bu nedenle devlet içinde yalnızca yazan değil, hangi metnin hüküm taşıdığını bilen kişidir.\n\nSessiz, sabırlı ve titizdir. İnsanlarla arasına mesafe koyar; konuştuğunda konuyu maddeler hâlinde ele alır. Sabiha Erten'le birlikte kararname nüshalarını ve gizli tutanakları takip eder. Kayıtların güvenilirliği onun için bürokratik bir ayrıntı değil, devletin hafızasının temelidir."
+        ),
+        "sabiha-erten": (
+            "Sabiha Erten, Başbuyruk Kalemi'nde kararname sürümlerini, mühür sırasını ve gizli toplantı tutanaklarını takip eder. Bir kararın alınmış olması kadar, hangi metinle ve hangi tarihte yürürlüğe girdiğinin doğru kaydedilmesi de önemlidir. Bu ayrıntılar üzerindeki dikkati, onu devletin belge düzeninde vazgeçilmez kılar.\n\nSessiz ve titizdir; ancak kuruma bağlılığı kör itaat anlamına gelmez. Bir mührün veya belgenin tutarsız olduğunu fark ettiğinde bunu dile getirebilir. Kimin ne zaman neyi imzaladığını bilmesi, onu hem güvenilir bir bürokrat hem de önemli bir tanık hâline getirir."
+        ),
+        "mete-kutlu": (
+            "Mete Kutlu, İmparatorluk İstihbarat Başkanı olarak dış ve stratejik istihbarat alanını, özellikle Reich masasıyla ilgili çalışmaları yönetir. Yabancı temsilcilikler, diplomatik temaslar ve devlet adına yürütülen hassas bilgi ilişkileri onun sorumluluk alanındadır. Bilgi toplamak kadar, hangi bilginin kime ve ne zaman aktarılacağını belirlemek de görevinin parçasıdır.\n\nSakin ve ölçülü konuşur; karşısındakini acele ettirmeden dinler. Korku yaratmaya çalışmaz, fakat bildiklerinin bir kısmını sakladığını hissettirir. Kendi teşkilatının içinde de denetlendiğinin farkındadır. Bu nedenle istihbarat dünyasında güven ve şüpheyi aynı anda yönetmek zorundadır."
+        ),
+        "rana-tozun": (
+            "Rana Tözün, imparatorluğun bilim ve gök araştırmaları alanındaki üst yöneticisidir. Gök Kutup, sensör sistemleri ve üniversitelerle yürütülen araştırma programları onun çalışma alanına girer. Bilimsel sonuçların kişisel kanaatle değil, gözlem ve ölçümle desteklenmesi gerektiğine inanır.\n\nGenç araştırmacılara karşı koruyucu, bürokratik engellere karşı serttir. Verilerin açıklayamadığı bir durumla karşılaştığında acele bir sonuca varmak yerine ölçümleri yeniden incelemeyi tercih eder. Bu yaklaşım onu hem bilimsel titizliğin hem de araştırmanın doğurabileceği bilinmezlik karşısındaki kaygının temsilcisi yapar."
+        ),
+        "ziya-arat": (
+            "Ziya Arat, Maarif ve Gençlik Nazırı olarak mekteplerin, müfredatın ve imparatorluk genelindeki Kanat sisteminin işleyişinden sorumludur. Öğrenci temsil mekanizmaları, okullar arası yarışmalar ve gençlerin ileride yönlendirileceği akademi ve kurumlar da onun görev alanına girer. Bu nedenle okullardaki gelişmeleri yalnızca eğitim meselesi olarak değil, devletin gelecekteki insan kaynağını ilgilendiren bir konu olarak görür.\n\nEnerjik ve ikna edicidir. Canlı konuşma tarzı, taşıdığı makamın denetim gücünü bazen olduğundan hafif gösterebilir. Oysa hangi öğrencinin hangi imkâna erişeceği ve hangi kurumun gençlik çevresinde ne ölçüde etkili olacağı onun sorumluluğundadır."
+        ),
+        "haluk-sancar": (
+            "Haluk Sancar, imparatorluğun Afrika Umumi Valisi olarak geniş bir coğrafyadaki idarî düzenin sorumluluğunu taşır. Raporlarında eğitim, sağlık ve vergi reformlarını öne çıkarır; ancak taşradaki bazı yöneticilerin keyfî uygulamaları, merkezde ilan edilen ilkelerle sahadaki gerçeklik arasında ciddi bir mesafe doğurur. Sancar bu çelişkinin farkındadır.\n\nEnerjik ve ikna edici bir yöneticidir; fakat reformu hızlandırmak yerel güç odaklarıyla çatışma yaratırken mevcut düzeni korumak halkın devlete duyduğu güveni zedeler. Bu nedenle onun görevi yalnızca emir vermek değil, imparatorluğun uzak bölgelerinde yönetim ile sorumluluk arasındaki farkla yüzleşmektir."
+        ),
+        "reinhard-falkenhorst": (
+            "Reinhard Falkenhorst, 1985 yılında Großdeutsches Reich'ın Führer und Reichskanzler makamındadır. Parti, SS, ordu ve sanayi arasındaki rekabeti birbirine karşı dengeleyerek merkezî otoriteyi korur. Bu yöntem rejimin devamını sağlarken karar alma süreçlerini ağırlaştırır.\n\nAğır ve soğuk konuşur; kelimelerini seçerek kullanır. İnsanlardan çok dosyalara ve kayıtlara güvenir. Kendi liderlik mitini korumak zorunda olduğu için hata kabul etmekte zorlanır. Reich'ın Türkiye ile ilişkilerinde teknoloji rekabetini ve savaş sonrası düzenin devamını yakından izler."
+        ),
+        "martin-kessler": (
+            "Martin Kessler, Führer yardımcısı ve Parti Kanzelleyi Başkanı olarak üst düzey atamaları, parti disiplinini ve kurumlar arası siyasî dengeyi yönetir. Ordu ile SS arasındaki rekabette arabulucu rolü üstlenmesi, ona resmî unvanının ötesinde geniş bir nüfuz sağlar.\n\nİlk bakışta nazik ve sıcak görünür; insanların adlarını ve aile bağlarını hatırlaması, görüşmelerde güven kurmasına yardımcı olur. Ancak bu yakınlık her zaman samimiyet değildir. Kessler ideolojik coşkudan çok rejimin devamlılığına ve Führer sonrası iktidar dengesine odaklanır."
+        ),
+        "ulrich-von-havel": (
+            "Ulrich von Havel, Reich Dışişleri Bakanı olarak Türkiye ile yürütülen diplomatik temaslarda Reich'ın çıkarlarını gözetir. Açık çatışma yerine pazarlık, nüfuz ve karşılıklı bağımlılık araçlarını kullanır. Türk tarafını küçümsememesi, onu daha dikkatli bir muhatap hâline getirir.\n\nKonuşması nazik ve ölçülüdür; ancak sunduğu her teklifin içinde bir koşul bulunur. Nezaketi, karşı tarafın hareket alanını daraltan diplomatik hesabın bir parçasıdır. Kişisel duygulardan çok sonuçları ve güç dengesini önemser."
+        ),
+        "friedrich-wulfhart": (
+            "Friedrich Wulfhart, Reichsführer-SS ve Reich güvenlik teşkilatının başıdır. SS'nin, siyasî güvenliğin ve rejimin iç denetim düzeninin en üst sorumlularındandır. Nazi ideolojisine katı biçimde bağlıdır; uygulamada ise farklı kurumları birbirine karşı kullanabilecek kadar hesaplıdır.\n\nBağırarak otorite kurmaz. Soru sorar, cevapları bekler ve ayrıntıları kayda geçirir. Onun temsil ettiği Reich düzeninde gözetim ve baskı, istisna değil yönetim anlayışının temel parçalarıdır."
+        ),
+        "konrad-weissmann": (
+            "Konrad Weissmann, Reich'ın yüksek enerji fiziği ve özel teknoloji programlarında çalışan baş nükleer fizikçidir; SFA-P Polaris'teki araştırmaların bilimsel yüzlerinden biridir. İnsan ilişkilerinden çok ölçümlere ve sonuçlara önem verir. Kibirli ve sabırsız tavrı, çevresindekilerle mesafe yaratır.\n\nWeissmann bilinmeyen bir olguyu yalnızca açıklamakla yetinmek istemez; ondan yararlanma ihtimaline de yönelir. Bilimsel merak ile siyasî ve askerî güç arzusunun birbirine karışması, onu Türk bilim çevrelerinin daha temkinli yaklaşımından ayırır."
+        )
+    }
+    for key, description in expansions.items():
+        record = main_nodes.get(key) or political_nodes.get(key) or state_nodes.get(key) or reich_nodes.get(key)
+        if record:
+            record["content"] += "\n\n## Karakterin yapısı ve hikâyedeki yeri\n\n" + description
+
     def collect(keys, source):
         return [source[key] for key in keys if key in source]
 
     young_people = make_character_group(
         "Genç karakterler", "GENÇ KARAKTERLER",
-        "1985 yılında hikâyenin genç kuşağını oluşturan öğrenciler ve arkadaş çevresi.",
-        collect(["alev-acar","asena-korkut","aylin-aksoy","tomris-ilter",
-                 "ismail-yagiz-aslan","muhammed-mete"], main_nodes),
+        "1985 yılında iki İstanbul mektebinde öğrenim gören, farklı hedefleri ve yönetim anlayışlarıyla birbirine bağlanan genç kuşak.",
+        [
+            make_character_group(
+                "Üsküdar Milli İlim ve İrfan Mektebi", "ÜSKÜDAR MEKTEBİ",
+                "Oğuz, Alper, İsmail, Muhammed Mete, Aylin ve Alev'in bulunduğu okul çevresi.",
+                collect(["oguz-kagan-atalay","alper-ulac-altayli","ismail-yagiz-aslan","muhammed-mete","aylin-aksoy","alev-acar"], main_nodes),
+                "uskudar-students"
+            ),
+            make_character_group(
+                "İstanbul Şarkın İlim ve Teknoloji Mektebi", "ŞARKIN MEKTEBİ",
+                "Tomris ve Asena'nın temsil ettiği, Üsküdar çevresiyle görev ve rekabet ilişkileri bulunan okul.",
+                collect(["tomris-ilter","asena-korkut"], main_nodes),
+                "sarkin-students"
+            )
+        ],
         "young-characters"
     )
 
@@ -500,13 +713,33 @@ def import_characters():
     )
 
     state_leaders = make_character_group(
-        "Devlet liderleri", "SİYASİ KARAKTERLER",
-        "Keser soy ağacının dışında yer alan devlet yöneticileri.",
-        collect(["ismail-karaslan","selim-arkan"], political_nodes),
+        "Büyük Türk İmparatorluğu yönetimi", "TÜRK DEVLET KADROSU",
+        "Ulu Hanlık, merkezî bürokrasi, istihbarat, bilim, eğitim ve taşra yönetiminde görev alan kişiler.",
+        [
+            make_character_group(
+                "Ulu Hanlar ve devlet başkanları", "YÖNETİM ZİNCİRİ",
+                "İmparatorluğun yakın dönem liderleri.",
+                collect(["alperen-keser","ismail-karaslan","selim-arkan"], political_nodes),
+                "turkish-rulers"
+            ),
+            make_character_group(
+                "Merkezî yönetim ve kurumlar", "DEVLET KADROSU",
+                "Başbuyruk Kalemi, istihbarat, bilim, eğitim ve taşra yönetiminin üst düzey isimleri.",
+                collect(["kaan-demirsoy","sabiha-erten","mete-kutlu","rana-tozun","ziya-arat","haluk-sancar"], state_nodes),
+                "turkish-state-cadre"
+            )
+        ],
         "state-leaders"
     )
 
-    roots = [young_people, atalay_suyu, keser_soyu, state_leaders]
+    reich_leadership = make_character_group(
+        "Großdeutsches Reich yönetimi", "REICH KADROSU",
+        "Reich'ın parti, dış politika, güvenlik ve bilim alanlarındaki önde gelen yöneticileri.",
+        collect(["reinhard-falkenhorst","martin-kessler","ulrich-von-havel","friedrich-wulfhart","konrad-weissmann"], reich_nodes),
+        "reich-leadership"
+    )
+
+    roots = [young_people, atalay_suyu, keser_soyu, state_leaders, reich_leadership]
     roots = [item for item in roots if item.get("children")]
     if not roots:
         return None
@@ -514,7 +747,7 @@ def import_characters():
     return {
         "id":"characters",
         "title":"Karakterler",
-        "description":"Kısa, genel ve spoilersız karakter tanıtımları. Aile bağları ayrı soy ağaçlarında düzenlenmiştir.",
+        "description":"Genç kuşak, Atalay ve Keser aileleri, imparatorluk yönetimi ve Reich kadrosu. Karakterlerin görevleri, hedefleri, kişilikleri ve birbirleriyle ilişkileri birlikte ele alınır.",
         "view":"tree",
         "label":"KARAKTER VE SOY AĞAÇLARI",
         "order":3,
