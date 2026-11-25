@@ -290,7 +290,7 @@ def import_characters():
         {
             "key":"asena-korkut", "path":main_base+"Asena Korkut.md", "name":"Asena Korkut",
             "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
-            "role":"Öğrenci · 5. Kanat",
+            "role":"Öğrenci · 5. Kanat · Şarkın Mektebi başkan yardımcısı · saha istihbaratı hedefi",
             "appearance":"Siyah, hafif kızıl tonlu saçları, kahverengi gözleri ve gözlüğü vardır.",
             "personality":"Konuşkan, sosyal, anlayışlı ve insan ilişkilerinde becerikli.",
             "aliases":["Asena Korkut"]
@@ -306,7 +306,7 @@ def import_characters():
         {
             "key":"tomris-ilter", "path":main_base+"Tomris İlter.md", "name":"Tomris İlter",
             "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
-            "role":"Öğrenci · 6. Kanat",
+            "role":"Öğrenci · 6. Kanat · Şarkın Mektebi okul başkanı · millî istihbarat ve askerî güvenlik hedefi",
             "appearance":"Uzun siyah saçlı ve koyu gözlü.",
             "personality":"Kendine güvenen, ciddi, kararlı ve yönetici yönü güçlü.",
             "aliases":["Tomris İlter","TOMRİS İLTER"]
@@ -314,7 +314,7 @@ def import_characters():
         {
             "key":"ismail-yagiz-aslan", "path":main_base+"İsmail Yağız Aslan.md", "name":"İsmail Yağız Aslan",
             "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
-            "role":"Öğrenci",
+            "role":"Öğrenci · 5. Kanat · Üsküdar Mektebi başkan yardımcısı · siyaset hedefi",
             "appearance":"Siyah saçlı, kahverengi gözlü; rahat ve gündelik giyimi tercih eder.",
             "personality":"Neşeli, esprili ve samimi; gerektiğinde kararlı ve odaklı.",
             "aliases":["İsmail Yağız Aslan","İso"]
@@ -330,7 +330,7 @@ def import_characters():
         {
             "key":"oguz-kagan-atalay", "path":main_base+"Oğuz Kağan Atalay.md", "name":"Oğuz Kağan Atalay",
             "date":"1968 · 17 yaş", "birth":"3 Ocak 1968 · İstanbul, Üsküdar", "age":"17",
-            "role":"Öğrenci · 3. Kanat · havacılığa ilgi duyuyor",
+            "role":"Öğrenci · 3. Kanat · Üsküdar Mektebi · askerî pilotluk hedefi",
             "appearance":"Belirgin yüz hatlarına, kızıl saçlara ve düzenli bir görünüme sahiptir.",
             "personality":"Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.",
             "aliases":["Oğuz Kağan Atalay"]
@@ -346,14 +346,14 @@ def import_characters():
         {
             "key":"cengiz-atalay", "path":main_base+"Cengiz Atalay.md", "name":"Cengiz Atalay",
             "date":"1942 · 43 yaş", "birth":"1942", "age":"43",
-            "role":"Askerî uçak mühendisi",
+            "role":"Askerî uçak mühendisi · Gökkanat programı",
             "appearance":"Düzenli ve klasik giyinir; resmî ve hafif askerî çizgileri tercih eder.",
             "personality":"Özgüvenli, enerjik, meraklı ve çalışkan.",
             "aliases":["Cengiz Atalay"]
         },
         {
             "key":"meliha-atalay", "path":main_base+"Meliha Atalay.md", "name":"Meliha Atalay",
-            "date":"1976 · 9 yaş", "birth":"1976", "age":"9",
+            "date":"1985 · 9 yaş (doğum yılı türetilmiş)",
             "role":"Öğrenci",
             "appearance":"Yaşına uygun, sade ve rahat kıyafetler tercih eder.",
             "personality":"Çalışkan, kararlı, inatçı ve azimli.",
@@ -361,7 +361,7 @@ def import_characters():
         },
         {
             "key":"muhammed-atalay", "path":main_base+"Muhammed Atalay.md", "name":"Muhammed Atalay",
-            "date":"1974 · 11 yaş", "birth":"1974", "age":"11",
+            "date":"1985 · 11 yaş (doğum yılı türetilmiş)",
             "role":"Öğrenci · mühendisliğe ilgi duyuyor",
             "appearance":"Yaşına uygun, sade ve rahat giyinir.",
             "personality":"Meraklı, hareketli ve teknik konulara ilgili.",
@@ -369,7 +369,7 @@ def import_characters():
         },
         {
             "key":"nec-det-atalay", "path":main_base+"Necdet Atalay.md", "name":"Necdet Atalay",
-            "date":"1918 · 67 yaş", "birth":"1918", "age":"67",
+            "date":"1918 doğumlu", "birth":"1918",
             "role":"Emekli askerî uçak mühendisi",
             "appearance":"Sade, klasik ve düzenli giyinir.",
             "personality":"Ağırbaşlı, disiplinli, otoriter ve az konuşan.",
@@ -1155,7 +1155,7 @@ Japonya Pasifik'te varlığını ve bölgesel etkisini korur; ancak 1985 dünya 
 
     records += public_folder_nodes("geography", "Alternatif Tarih/Dünya/Coğrafya")
     for record in records:
-        if normalize(record.get("title", "")) == "istanbul 1985 sehir profili":
+        if normalize(record.get("title", "")).replace("—", "").strip() == "istanbul 1985 sehir profili":
             record["summary"] = "İstanbul, 1985 anlatısındaki iki ayrı mektebin ve öğrenci çevresinin bulunduğu şehirdir; B-3 Üsküdar Mektebi'ndedir."
             record["content"] = """# İstanbul — 1985 Şehir Profili
 
@@ -1200,7 +1200,7 @@ def import_technology():
     records = _merge_public_records(existing, public_records)
     for record in records:
         if normalize(record.get("title", "")).startswith("ta 85 gokkanat"):
-            record["summary"] = "Türk uçan kanat havacılığının gelişim çizgisi: 1958'de Ta 70, 1965'te Gökkanat hangarı olayı ve 1975'te TA-85'in seri üretime geçmesi."
+            record["summary"] = "Türk uçan kanat havacılığının gelişim çizgisi: 1958'de Ta 70, 1965'te Gökkanat programının önemli hangar olayı ve 1975'te TA-85'in seri üretime geçmesi."
             record["content"] = """# Ta 70 ve TA-85 Gökkanat — Kamuya Açık Tarihçe
 
 ## Projenin yeri
@@ -1208,7 +1208,7 @@ Gökkanat, Büyük Türk İmparatorluğu'nun uçan kanat havacılık çizgisinin
 
 ## Gelişim çizgisi
 - **1958 — Ta 70:** Türk uçan kanat tasarımının ilk prototip aşaması. Necdet Atalay bu dönemin mühendisleri arasındadır.
-- **1965 — Hangar olayı:** Gökkanat programının geçmişinde önemli bir kırılma yaşanır. Bir prototip kaybolur ve bir mühendisin adı kayıtlardan silinir. Olayın bütün ayrıntıları bu kamusal tarihçede açıklanmaz.
+- **1965 — Hangar olayı:** Gökkanat programının geçmişinde önemli bir kırılma yaşanır. Olayın nedeni, sorumluları ve teknik ayrıntıları bu kamusal tarihçede açıklanmaz.
 - **1975 — TA-85 Gökkanat:** Yeni seri üretim dönemi başlar. 1985'te Gökkanat, imparatorluğun havacılık kimliğinin başlıca simgelerinden biridir.
 
 ## Aile belleği
