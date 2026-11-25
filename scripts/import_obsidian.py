@@ -172,6 +172,58 @@ def import_chronology():
             else:
                 years.setdefault(year, []).append((month,day,doc["title"],rec))
             seen_titles.add(normalize(doc["title"]))
+    # Public milestones from the revised canon vault. The 1965 incident is
+    # deliberately described without publishing its unresolved internal details.
+    public_milestones = [
+        {
+            "year":1965, "month":0, "day":0, "date":"1965",
+            "title":"1965 — Gökkanat Hangar Olayı",
+            "summary":"Atalay ailesinin havacılık geçmişinde ve Gökkanat programında önemli bir kırılma noktası.",
+            "content":"""# 1965 — Gökkanat Hangar Olayı
+
+1965 yılında Gökkanat programının geçmişinde, Necdet Atalay'la da bağlantılı önemli bir hangar olayı yaşandı. Bu olay, Atalay ailesinin havacılık hatıralarında ve daha sonraki mühendislik kayıtlarında iz bıraktı.
+
+Olayın teknik ve idarî ayrıntıları mevcut kamusal tarihçede kesinleştirilmiş değildir. Bu nedenle burada nedeni, sorumluları veya sonuçları hakkında doğrulanmamış bir açıklama yapılmaz. Olayın romandaki önemi, sonraki kuşakların Gökkanat'a ve aile geçmişine bakışını etkilemesidir."""
+        },
+        {
+            "year":1985, "month":9, "day":10, "date":"10 Eylül 1985",
+            "title":"10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti",
+            "summary":"Reich heyeti, teknik işbirliği görüntüsü altında Türk havacılık ve sensör kapasitesini değerlendirmek üzere İstanbul'a geldi.",
+            "content":"""# 10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti
+
+Eylül 1985'te Großdeutsches Reich'tan bir heyet İstanbul'a geldi. Resmî çerçeve teknik temas ve işbirliğiydi; heyetin asıl ilgisi ise Büyük Türk İmparatorluğu'nun havacılık ve sensör alanlarında Reich'la arasındaki teknolojik mesafeyi ne ölçüde kapattığını anlamaktı.
+
+Heyetin İstanbul'daki varlığı, 16 Eylül'de düzenlenecek Mektepler Arası Teknoloji Tasarım Yarışması'nın hazırlıklarıyla aynı döneme denk geldi. Böylece devletler arası rekabet, yalnızca diplomatik görüşmelerde değil, okulların ve genç araştırmacıların çevresinde de hissedilmeye başladı.
+
+Türk tarafı ziyaretin resmî nezaketini korurken Reich heyetinin temasları dikkatle izleniyordu. Bu ziyaret, 1985 sonbaharında iki imparatorluk arasındaki güvensizliğin görünür hâle geldiği gelişmelerden biridir."""
+        },
+        {
+            "year":1985, "month":9, "day":16, "date":"16 Eylül 1985",
+            "title":"16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması",
+            "summary":"İstanbul'daki Üsküdar ve Şarkın mekteplerinin öne çıktığı, Hilalifiyet Merkezi'nin ev sahipliğinde düzenlenen büyük öğrenci yarışması.",
+            "content":"""# 16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması
+
+İstanbul'da düzenlenen yarışma, Büyük Türk İmparatorluğu'nun mekteplerini ve öğrenci temsil yapılarını aynı organizasyonda buluşturdu. Üsküdar Milli İlim ve İrfan Mektebi ile İstanbul Şarkın İlim ve Teknoloji Mektebi, rekabetin öne çıkan iki okuludur.
+
+Yarışmanın ev sahibi Hilalifiyet Merkezi'dir. Jüri devlet tarafından atanır; Nizam-1 değerlendirme sürecine analiz desteği sunar, ancak kararın kendisini vermez. Böylece öğrenci rekabeti, devlet denetimi ve kurumlar arası müzakere aynı zeminde buluşur.
+
+Yarışma yalnızca teknik ürünlerin karşılaştırılması değildir. Okulların temsil gücü, öğrencilerin işbirliği ve liderlik becerileri, ayrıca dış heyetlerin genç kuşağa gösterdiği ilgi de bu etkinliğin siyasî önemini artırır."""
+        }
+    ]
+    for event in public_milestones:
+        if normalize(event["title"]) in seen_titles:
+            continue
+        doc = {
+            "title":event["title"], "summary":event["summary"], "content":event["content"],
+            "path":"kanon-vault/" + slug(event["title"]) + ".md",
+            "sourceName":event["title"], "aliases":[], "country":"turkish"
+        }
+        rec = node("chronology", doc, event["date"])
+        years.setdefault(event["year"], []).append(
+            (event["month"],event["day"],event["title"],rec)
+        )
+        seen_titles.add(normalize(event["title"]))
+
     roots=[]
     for year in sorted(years):
         events=[x[3] for x in sorted(years[year],key=lambda x:(x[0],x[1],x[2].casefold()))]
@@ -917,6 +969,33 @@ def import_institutions():
         if doc:
             records.append(node("institutions", doc))
     records += public_folder_nodes("institutions", "Kuruluşlar/Kamuya Açık")
+    for record in records:
+        if normalize(record.get("title", "")).startswith("hilalifiyet merkezi"):
+            record["summary"] = "Mekteplerin üst düzey öğrenci temsilcilerini buluşturan, okullar arası siyasî ilişkileri ve müzakere süreçlerini düzenleyen merkezî kurum."
+            record["content"] = """# Hilalifiyet Merkezi
+
+## Kurumun niteliği
+Hilalifiyet Merkezi, Büyük Türk İmparatorluğu'ndaki mekteplerin üst düzey öğrenci temsilcilerini bir araya getiren merkezî müzakere kurumudur. Temsil edilen birimler devletler değil, mekteplerdir. Bu yönüyle diplomatik kuruluşlara benzer; ancak faaliyet alanı öğrenci blokları, okul ittifakları ve gençlik teşkilatlarıdır.
+
+İmparatorluğun her ilinde en az bir merkez bulunur. İstanbul ve Ankara gibi büyük şehirlerde birden fazla merkez faaliyet gösterebilir. Kurum, Kızıl Orda'ya ve Maarif ve Gençlik Nizamı'na bağlıdır.
+
+## İki otorite alanı
+Merkezde iki yetki alanı birlikte işler:
+- **Öğrenci temsili:** okul başkanları, müzakere heyetleri, ittifaklar ve öğrenci blokları.
+- **Devlet denetimi:** merkez bürokrasisi, atanmış uzman jüriler, hukukî denetim ve Ankara'nın gözetimi.
+
+Bu nedenle öğrenci temsilcileri kendi aralarında karar ve ittifak geliştirebilir; ancak kararların yürürlüğe girmesi devletin belirlediği usule bağlıdır.
+
+## Karar süreci
+Bir talep önce gerekçelendirilir, ardından jüri tarafından değerlendirilir. Uygun görülen karar idarî onaydan geçtikten sonra bağlayıcı hâle gelir. Nizam-1 bu süreçte analiz ve karşılaştırma desteği sunar; karar veren makam değildir.
+
+## Yetkiler ve yaptırımlar
+Hilalifiyet Merkezi; ittifaklara katılma, liderlik tanıma, bütçe ve araştırma imtiyazları, yarışma hakları ve müzakere ayrıcalıkları gibi konuları düzenleyebilir. Temsilin askıya alınması, oy hakkının kısıtlanması veya bazı imtiyazların geri alınması da yaptırımlar arasındadır.
+
+Rekabet serbesttir; fakat devlet güvenliğini tehdit ettiği kabul edilen eylemler bu serbestinin dışındadır. Böylece merkez, öğrencilere siyasî deneyim kazandırırken gençlik örgütlerini devlet denetimi altında tutar.
+
+## 1985 gündemi
+16 Eylül 1985'te düzenlenen Mektepler Arası Teknoloji Tasarım Yarışması, kurumun o yılki en görünür faaliyetlerinden biridir. Üsküdar ve Şarkın mektepleri arasındaki rekabet, öğrenci liderlerinin güç dengelerini ve devletin gençlik politikasını aynı sahnede buluşturur."""
     apply_default_leaf_country(records, "turkish")
     return {
         "id":"institutions",
@@ -1211,6 +1290,28 @@ B-3, farklı hedefleri olan gençleri aynı gündelik çevrede buluşturur. Arka
         record_path = normalize(record.get("path", ""))
         if record_path == "kanat" or "kanat sistemi" in normalize(record.get("title", "")):
             record["country"] = "both"
+            record["summary"] = "İmparatorluk genelinde öğrencilerin okul içindeki sorumluluk, temsil ve görev kapsamını altı seviyede düzenleyen sistem."
+            record["content"] = """# Kanat Sistemi — Kamusal Çerçeve
+
+## Sistemin anlamı
+Kanat, öğrencinin zekâsını, servetini veya dokunulmazlığını gösteren bir rütbe değildir. Okul içinde üstlendiği sorumluluğun ve temsil ettiği öğrenci çevresinin kapsamını belirtir. Seviye yükseldikçe yalnızca yetki değil, sorumlu olunan insan sayısı ve hesap verme yükü de artar.
+
+## Altı seviye
+| Kanat | Anlamı | Tipik sorumluluk |
+|---|---|---|
+| 1 | Başlangıç | Kendi görevlerini düzenli yerine getirmek |
+| 2 | Güvenilir katkı | Yardım, küçük grup desteği ve temsil |
+| 3 | Grup liderliği | Küçük ekipleri yönlendirmek ve sunum yapmak |
+| 4 | Organizasyon | Üç kanatlı öğrencilerin koordinasyonuna ve okul işleyişine katkı |
+| 5 | Başkan yardımcılığı | Okul temsili ve müzakere heyetinde görev |
+| 6 | Okul başkanlığı | Okulun öğrenci siyaseti, temsil ve ittifak kararları |
+
+## Kim belirler?
+Öğretmenler öğrencilerin davranış, katkı, grup çalışması ve sorumluluklarını gözlemler; bu gözlemler değerlendirme sürecine bilgi sağlar. Kanat seviyesini öğretmenler tek başına vermez. Karar, öğrenciler ve danışman öğretmenin yer aldığı Kanat Konseyi'nin kuralları üzerinden yürür. Maarif ve Gençlik Nizamı ile Hilalifiyet sicil düzeni sistemi denetler.
+
+## Sınırlar
+Kanat sayısı ayrıcalık veya dokunulmazlık sağlamaz. En yüksek seviyedeki okul başkanı da ağır ihlal durumunda görevden alınabilir. Sistem resmî söylemde liyakat ve sorumluluk ilkelerine dayanır; uygulamada kayırmacılık ve oy ilişkileri etrafında tartışmalar yaşanabilir."""
+
     apply_default_leaf_country(records, "turkish")
     return {
         "id":"society",
