@@ -1906,40 +1906,6 @@
           "ancestors": []
         },
         {
-          "id": "chronology-year-1965",
-          "path": "year-1965",
-          "sourceName": "1965",
-          "title": "1965",
-          "date": "YIL",
-          "summary": "1965 yılına ait 1 tarihsel kayıt.",
-          "content": "1965 yılına ait 1 tarihsel kayıt.",
-          "order": 0,
-          "aliases": [],
-          "children": [
-            {
-              "id": "chronology-kanon-vault-1965-gokkanat-hangar-olayi-md",
-              "path": "kanon-vault/1965-gokkanat-hangar-olayi.md",
-              "sourceName": "1965 — Gökkanat Hangar Olayı",
-              "title": "1965 — Gökkanat Hangar Olayı",
-              "date": "1965",
-              "summary": "Atalay ailesinin havacılık geçmişinde ve Gökkanat programında önemli bir kırılma noktası.",
-              "content": "# 1965 — Gökkanat Hangar Olayı\n\n1965 yılında Gökkanat programının geçmişinde, Necdet Atalay'la da bağlantılı önemli bir hangar olayı yaşandı. Bu olay, Atalay ailesinin havacılık hatıralarında ve daha sonraki mühendislik kayıtlarında iz bıraktı.\n\nOlayın teknik ve idarî ayrıntıları mevcut kamusal tarihçede kesinleştirilmiş değildir. Bu nedenle burada nedeni, sorumluları veya sonuçları hakkında doğrulanmamış bir açıklama yapılmaz. Olayın romandaki önemi, sonraki kuşakların Gökkanat'a ve aile geçmişine bakışını etkilemesidir.",
-              "order": 999,
-              "aliases": [],
-              "children": [],
-              "links": [],
-              "country": "turkish",
-              "categoryId": "chronology",
-              "ancestors": [
-                "chronology-year-1965"
-              ]
-            }
-          ],
-          "links": [],
-          "categoryId": "chronology",
-          "ancestors": []
-        },
-        {
           "id": "chronology-year-1985",
           "path": "year-1985",
           "sourceName": "1985",
@@ -1951,8 +1917,8 @@
           "aliases": [],
           "children": [
             {
-              "id": "chronology-kanon-vault-10-eylul-1985-alman-teknik-heyetinin-istanbul-ziyareti-md",
-              "path": "kanon-vault/10-eylul-1985-alman-teknik-heyetinin-istanbul-ziyareti.md",
+              "id": "chronology-tarihi-olaylar-1985-alman-heyeti-md",
+              "path": "Tarihi Olaylar/1985 Alman Heyeti.md",
               "sourceName": "10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti",
               "title": "10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti",
               "date": "10 Eylül 1985",
@@ -1969,8 +1935,8 @@
               ]
             },
             {
-              "id": "chronology-kanon-vault-16-eylul-1985-mektepler-arasi-teknoloji-tasarim-yarismasi-md",
-              "path": "kanon-vault/16-eylul-1985-mektepler-arasi-teknoloji-tasarim-yarismasi.md",
+              "id": "chronology-tarihi-olaylar-1985-yarisma-md",
+              "path": "Tarihi Olaylar/1985 Yarışma.md",
               "sourceName": "16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması",
               "title": "16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması",
               "date": "16 Eylül 1985",
@@ -2611,7 +2577,7 @@
                 },
                 {
                   "id": "characters-alper-ulac-altayli",
-                  "path": "03_KARAKTERLER/Alper Ulaç Altaylı.md",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Alper Ulaç Altaylı.md",
                   "sourceName": "Alper Ulaç Altaylı",
                   "title": "Alper Ulaç Altaylı",
                   "date": "1968 · 17 yaş",
@@ -2818,7 +2784,7 @@
                   "title": "Necdet Atalay",
                   "date": "1918 doğumlu",
                   "summary": "Ağırbaşlı, disiplinli, otoriter ve az konuşan.",
-                  "content": "**Doğum:** 1918\n\n**Genel rol:** Emekli askerî uçak mühendisi\n\n**Dış görünüş:** Sade, klasik ve düzenli giyinir.\n\n**Kişilik:** Ağırbaşlı, disiplinli, otoriter ve az konuşan.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nNecdet, Atalay ailesinin havacılık geleneğinin ilk önemli halkası olan emekli askerî uçak mühendisidir. 1940'lı yıllardan itibaren askerî havacılık ve uzun menzilli uçak projelerinde çalışmıştır. Oğuz'a uçakları, kanat biçimlerini ve mühendisliğin gerektirdiği sabrı çocukluğundan itibaren anlatmıştır. Sevgisini uzun konuşmalarla değil, bilgi ve deneyim aktararak gösterir.\n\nSert, suskun ve disiplinlidir. Geçmişi anlatırken bazı ayrıntıları seçerek paylaşır; kimi meseleleri hiç açmaması, Oğuz'un tarih ve aile hafızasına yaklaşımını etkiler. 1965 Gökkanat hangarı olayı, Necdet'in geçmişindeki önemli bir dönüm noktasıdır. Bu olayın ayrıntıları karakter tanıtımında açıklanmaz; okurun keşfedeceği tarihsel bir bağ olarak bırakılır.",
+                  "content": "**Doğum:** 1918\n\n**Genel rol:** Emekli askerî uçak mühendisi\n\n**Dış görünüş:** Sade, klasik ve düzenli giyinir.\n\n**Kişilik:** Ağırbaşlı, disiplinli, otoriter ve az konuşan.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nNecdet, Atalay ailesinin havacılık geleneğinin ilk önemli halkası olan emekli askerî uçak mühendisidir. 1940'lı yıllardan itibaren askerî havacılık ve uzun menzilli uçak projelerinde çalışmıştır. Oğuz'a uçakları, kanat biçimlerini ve mühendisliğin gerektirdiği sabrı çocukluğundan itibaren anlatmıştır. Sevgisini uzun konuşmalarla değil, bilgi ve deneyim aktararak gösterir.\n\nSert, suskun ve disiplinlidir. Geçmişi anlatırken bazı ayrıntıları seçerek paylaşır; kimi meseleleri hiç açmaması, Oğuz'un tarih ve aile hafızasına yaklaşımını etkiler. Necdet'in meslek hayatında yaşadığı bazı gelişmeler aile içinde tam olarak konuşulmaz. Bu suskunluk, Oğuz'un aile geçmişini anlamaya çalışırken karşılaştığı belirsizliklerden biridir.",
                   "order": 999,
                   "aliases": [
                     "Necdet Atalay"
@@ -3415,7 +3381,7 @@
               "children": [
                 {
                   "id": "characters-kaan-demirsoy",
-                  "path": "03_KARAKTERLER/Kaan Demirsoy.md",
+                  "path": "Alternatif Tarih/Karakterler/Devlet/Kaan Demirsoy.md",
                   "sourceName": "Kaan Demirsoy",
                   "title": "Kaan Demirsoy",
                   "date": "1936 doğumlu",
@@ -3437,7 +3403,7 @@
                 },
                 {
                   "id": "characters-sabiha-erten",
-                  "path": "03_KARAKTERLER/Sabiha Erten.md",
+                  "path": "Alternatif Tarih/Karakterler/Devlet/Sabiha Erten.md",
                   "sourceName": "Sabiha Erten",
                   "title": "Sabiha Erten",
                   "date": "1945 doğumlu · 40 yaş",
@@ -3459,7 +3425,7 @@
                 },
                 {
                   "id": "characters-mete-kutlu",
-                  "path": "03_KARAKTERLER/Mete Kutlu.md",
+                  "path": "Alternatif Tarih/Karakterler/Devlet/Mete Kutlu.md",
                   "sourceName": "Mete Kutlu",
                   "title": "Mete Kutlu",
                   "date": "1931 doğumlu · 54 yaş",
@@ -3481,7 +3447,7 @@
                 },
                 {
                   "id": "characters-rana-tozun",
-                  "path": "03_KARAKTERLER/Rana Tözün.md",
+                  "path": "Alternatif Tarih/Karakterler/Devlet/Rana Tözün.md",
                   "sourceName": "Rana Tözün",
                   "title": "Rana Tözün",
                   "date": "1938 doğumlu · 47 yaş",
@@ -3503,7 +3469,7 @@
                 },
                 {
                   "id": "characters-ziya-arat",
-                  "path": "03_KARAKTERLER/Ziya Arat.md",
+                  "path": "Alternatif Tarih/Karakterler/Devlet/Ziya Arat.md",
                   "sourceName": "Ziya Arat",
                   "title": "Ziya Arat",
                   "date": "1934 doğumlu · 51 yaş",
@@ -3525,7 +3491,7 @@
                 },
                 {
                   "id": "characters-haluk-sancar",
-                  "path": "03_KARAKTERLER/Haluk Sancar.md",
+                  "path": "Alternatif Tarih/Karakterler/Devlet/Haluk Sancar.md",
                   "sourceName": "Haluk Sancar",
                   "title": "Haluk Sancar",
                   "date": "1927 doğumlu · 58 yaş",
@@ -3570,7 +3536,7 @@
           "children": [
             {
               "id": "characters-reinhard-falkenhorst",
-              "path": "03_KARAKTERLER/Reinhard Falkenhorst.md",
+              "path": "Alternatif Tarih/Karakterler/Reich/Reinhard Falkenhorst.md",
               "sourceName": "Reinhard Falkenhorst",
               "title": "Reinhard Falkenhorst",
               "date": "1922 doğumlu · 63 yaş",
@@ -3591,7 +3557,7 @@
             },
             {
               "id": "characters-martin-kessler",
-              "path": "03_KARAKTERLER/Martin Kessler.md",
+              "path": "Alternatif Tarih/Karakterler/Reich/Martin Kessler.md",
               "sourceName": "Martin Kessler",
               "title": "Martin Kessler",
               "date": "1930 doğumlu · 55 yaş",
@@ -3612,7 +3578,7 @@
             },
             {
               "id": "characters-ulrich-von-havel",
-              "path": "03_KARAKTERLER/Ulrich von Havel.md",
+              "path": "Alternatif Tarih/Karakterler/Reich/Ulrich von Havel.md",
               "sourceName": "Ulrich von Havel",
               "title": "Ulrich von Havel",
               "date": "1932 doğumlu · 53 yaş",
@@ -3633,7 +3599,7 @@
             },
             {
               "id": "characters-friedrich-wulfhart",
-              "path": "03_KARAKTERLER/Friedrich Wulfhart.md",
+              "path": "Alternatif Tarih/Karakterler/Reich/Friedrich Wulfhart.md",
               "sourceName": "Friedrich Wulfhart",
               "title": "Friedrich Wulfhart",
               "date": "1925 doğumlu · 60 yaş",
@@ -3654,7 +3620,7 @@
             },
             {
               "id": "characters-konrad-weissmann",
-              "path": "03_KARAKTERLER/Konrad Weissmann.md",
+              "path": "Alternatif Tarih/Karakterler/Reich/Konrad Weissmann.md",
               "sourceName": "Konrad Weissmann",
               "title": "Konrad Weissmann",
               "date": "1933 doğumlu · 52 yaş",
@@ -3691,7 +3657,7 @@
           "children": [
             {
               "id": "characters-nihat-karaca",
-              "path": "03_KARAKTERLER/Nihat Karaca.md",
+              "path": "Alternatif Tarih/Karakterler/Okul/Nihat Karaca.md",
               "sourceName": "Nihat Karaca",
               "title": "Nihat Karaca",
               "date": "1985 · Mektep yönetimi",
@@ -3712,7 +3678,7 @@
             },
             {
               "id": "characters-turgut-aksoy",
-              "path": "03_KARAKTERLER/Turgut Aksoy.md",
+              "path": "Alternatif Tarih/Karakterler/Okul/Turgut Aksoy.md",
               "sourceName": "Turgut Aksoy",
               "title": "Turgut Aksoy",
               "date": "1985 · Mektep yönetimi",
@@ -3733,7 +3699,7 @@
             },
             {
               "id": "characters-jale-deniz",
-              "path": "03_KARAKTERLER/Jale Deniz.md",
+              "path": "Alternatif Tarih/Karakterler/Okul/Jale Deniz.md",
               "sourceName": "Jale Deniz",
               "title": "Jale Deniz",
               "date": "1985 · Öğretmen kadrosu",
@@ -3754,7 +3720,7 @@
             },
             {
               "id": "characters-huseyin-kutlu",
-              "path": "03_KARAKTERLER/Hüseyin Kutlu.md",
+              "path": "Alternatif Tarih/Karakterler/Okul/Hüseyin Kutlu.md",
               "sourceName": "Hüseyin Kutlu",
               "title": "Hüseyin Kutlu",
               "date": "1985 · Öğretmen kadrosu",
@@ -3829,6 +3795,54 @@
           "country": "turkish",
           "categoryId": "institutions",
           "ancestors": []
+        },
+        {
+          "id": "institutions-kuruluslar-mektepler-1985-egitim-duzeni-md",
+          "path": "Kuruluşlar/Mektepler - 1985 Eğitim Düzeni.md",
+          "sourceName": "Mektepler",
+          "title": "Mektepler — 1985 Eğitim Düzeni",
+          "date": "",
+          "summary": "Beş yıllık lise düzeyindeki mektepler, genel eğitimi Teknoloji ve Tasarım ağırlığıyla birleştirir; Üsküdar ve Şarkın iki ana öğrenci ekolünü temsil eder.",
+          "content": "# Mektepler — 1985 Eğitim Düzeni\n\n## Mektep nedir?\nMektepler, imparatorlukta lise düzeyindeki beş yıllık eğitim kurumlarıdır. Genel derslerin yanında Teknoloji ve Tasarım alanına özel ağırlık verilir. Öğrenciler yalnızca sınav başarısıyla değil; grup çalışması, sorumluluk, temsil ve proje üretimi gibi alanlarda da değerlendirilir.\n\nMektepler Maarif ve Gençlik Nizamı'na bağlıdır. Denetim; müfettişler, okul Kanat Konseyleri ve Hilalifiyet sistemi üzerinden yürür.\n\n## İstanbul'daki iki ana ekol\n**Üsküdar Milli İlim ve İrfan Mektebi**, Üsküdar Bloğu'nun merkez okuludur. İrfan ekolünü temsil eder; teknik merak ile edebiyat ve hukuk alanlarını birlikte önemser. Oğuz, Alper, İsmail, Muhammed Mete, Aylin ve Alev'in öğrenim gördüğü B-3 sınıfı bu okuldadır.\n\n**İstanbul Şarkın İlim ve Teknoloji Mektebi**, Şark Bloğu'nun merkez okuludur. Otorite ekolüyle, teknoloji ve istihbarat alanlarına verdiği ağırlıkla tanınır. Tomris ve Asena bu okulda öğrenim görür. Tomris okul başkanı, Asena başkan yardımcısıdır.\n\nBu iki mektep aynı şehirde bulunur; ancak ayrı öğrenci çevrelerine, yönetim kadrolarına ve blok ilişkilerine sahiptir. Tomris ile Asena'yı Üsküdar'daki B-3 sınıfının öğrencisi olarak tanıtmak yanlıştır.\n\n## Blok okulları\nÜsküdar Bloğu'nun çevresinde Kadıköy İleri Sanayi ve Askeri İdadi, Beyoğlu Fen ve Havacılık Akademisi ve Ümraniye Anadolu İrfan Mektebi bulunur.\n\nŞark Bloğu'nun çevresinde Beşiktaş Siyasi ve Teknolojik Bilimler, Fatih Klasik Edebiyat ve Hukuk ve Bakırköy Teknik Araştırma İdadisi yer alır.\n\nBu okullar arasındaki bağ yalnızca akademik değildir; öğrenci temsilciliği, ittifaklar, müzakere ve yıllık yarışmalar da blok ilişkilerinin parçasıdır.\n\n## Ortak okul hayatı\nSabah törenleri, marşlar, Alp selamı, haftalık sicil, dönem sonu müzakereleri ve yıllık Teknoloji Tasarım Yarışması mektep hayatının ortak unsurlarıdır. Her okul kendi ekolünü ve temsil biçimini korurken imparatorluğun ortak eğitim düzenine bağlıdır.\n\n## 1985'teki önem\nMektepler gençlerin gelecekteki meslek ve görev alanlarına hazırlandığı yerlerdir. B-3'ün hikâyedeki önemi, farklı ilgi alanlarına sahip öğrencileri aynı sınıfta buluşturmasıdır. Üsküdar ve Şarkın arasındaki rekabet ise kişisel arkadaşlıkları, öğrenci siyasetini ve devletin gençlik politikasını birbirine bağlar.",
+          "order": 999,
+          "aliases": [],
+          "children": [],
+          "links": [],
+          "country": "turkish",
+          "categoryId": "institutions",
+          "ancestors": []
+        },
+        {
+          "id": "institutions-kuruluslar-istihbarat-ve-ic-emniyet-md",
+          "path": "Kuruluşlar/İstihbarat ve İç Emniyet.md",
+          "sourceName": "İstihbarat ve Emniyet",
+          "title": "İstihbarat ve İç Emniyet — İki Kurum",
+          "date": "",
+          "summary": "Dış tehditleri izleyen İmparatorluk İstihbarat Başkanlığı ile ülke içindeki gözetim ve güvenliği yürüten İç Emniyet Başdirektörlüğü ayrı görev ve kültürlere sahiptir.",
+          "content": "# İstihbarat ve İç Emniyet — İki Kurum\n\n## İmparatorluk İstihbarat Başkanlığı\nMete Kutlu'nun yönettiği İmparatorluk İstihbarat Başkanlığı, dış ve stratejik istihbarattan sorumludur. Reich masası, yabancı başkentlerdeki kaynaklar, teknik istihbarat ve karşı istihbarat bu kurumun başlıca çalışma alanlarıdır.\n\nKurumun çalışma kültürü sabır ve uzun vadeli değerlendirmeye dayanır. Bilgiyi toplamak tek başına yeterli sayılmaz; hangi bilginin ne zaman ve kime aktarılacağı da önemlidir.\n\n## İç Emniyet Başdirektörlüğü\nSelahattin Akgün'ün yönettiği İç Emniyet Başdirektörlüğü ülke içindeki gözetim, kayıt, kritik tesis güvenliği ve sansür faaliyetlerinden sorumludur. Okullar ve üniversiteler de bu denetim alanının içindedir.\n\nİç Emniyet'in yaklaşımı daha hızlı ve sicil merkezlidir: şüpheli görülen gelişmeler kayda alınır, kişiler ve kurumlar izlenir. Bu görev alanı, istihbarat başkanlığının dış odaklı çalışmasından farklıdır.\n\n## İki kurum arasındaki ilişki\nİki teşkilat aynı devlet adına çalışsa da birbirine bütünüyle güvenmez. İstihbarat dışarıdaki tehditlere odaklanırken İç Emniyet ülke içindeki düzeni korumayı önceler. Ulu Han'ın bu rekabeti denetim altında tutması, hiçbir kurumun tek başına bütün güvenlik alanını kontrol etmemesini sağlar.\n\n## Okur için ayrım\nBir yabancı devletin planını, elçilik temasını veya dışarıdaki ajan ağını araştıran yapı İmparatorluk İstihbarat Başkanlığı'dır. Ülke içindeki bir okulun, tesisin veya kişinin sicilini izleyen yapı ise İç Emniyet Başdirektörlüğü'dür. İki kurumun yetkileri birbirine karıştırılmamalıdır.",
+          "order": 999,
+          "aliases": [],
+          "children": [],
+          "links": [],
+          "country": "turkish",
+          "categoryId": "institutions",
+          "ancestors": []
+        },
+        {
+          "id": "institutions-kuruluslar-reich-kurumlari-md",
+          "path": "Kuruluşlar/Reich Kurumları.md",
+          "sourceName": "Reich Kurumları",
+          "title": "Großdeutsches Reich Kurumları — Yönetim Yapısı",
+          "date": "",
+          "summary": "Reich yönetimi parti, şansölyelik, dışişleri, ordu, SS ve sanayi çevreleri arasında kurulan sert bir güç dengesiyle işler.",
+          "content": "# Großdeutsches Reich Kurumları — Yönetim Yapısı\n\n## Parti-devlet\nReich'ın başında Führer und Reichskanzler Reinhard Falkenhorst bulunur. Reich Şansölyeliği kararname ve protokol işlerini yürütür. Martin Kessler'in başındaki NSDAP Parti Kanzelleyi ise üst düzey atamalar, parti disiplini ve siyasî devamlılıkla ilgilenir.\n\n## Diplomasi ve propaganda\nUlrich von Havel'in yönettiği Auswärtiges Amt dış ilişkileri ve diplomatik temasları yürütür. Basın ve radyo üzerindeki ideolojik denetim Propaganda Bakanlığı'nın görev alanıdır. Ekonomi ve ulaştırma kurumları ise sanayi tahsisi, demiryolu ve stratejik bağlantılar üzerinde etkilidir.\n\n## Silahlı kuvvetler ve güvenlik\nOKW, Heer, Luftwaffe ve Kriegsmarine Reich'ın askerî yapısını oluşturur. Friedrich Wulfhart'ın yönettiği SS-Reichssicherheitsapparat ise rejimin güvenlik ve baskı aygıtının merkezindedir. Gestapo ve dış istihbarat birimleri bu denetim yapısının farklı parçalarıdır.\n\n## Bilim ve özel teknoloji\nReich Bilim ve Özel Teknoloji Dairesi ile Reich Yüksek Enerji Fiziği Enstitüsü, rejimin ileri araştırma alanlarında görev yapar. Konrad Weissmann yüksek enerji fiziği ve SFA-P Polaris araştırmalarıyla ilişkilidir.\n\n## Güç dengesi\nReich'ta parti, SS, ordu ve sanayi birbirleriyle rekabet eder. Führer bu kurumların tamamını tek çizgide tutmaya çalışır. Bu yapı karar almayı yavaşlatabilir; buna karşılık rejimin cezalandırma ve güvenlik mekanizmaları son derece hızlı çalışır.\n\nReich'ın kurumsal düzeni, sıradan bir bürokrasi değil, Nazi ideolojisi ve baskı üzerine kurulu bir parti-devlet yapısıdır.",
+          "order": 999,
+          "aliases": [],
+          "children": [],
+          "links": [],
+          "country": "german",
+          "categoryId": "institutions",
+          "ancestors": []
         }
       ]
     },
@@ -3846,8 +3860,8 @@
           "sourceName": "ta-85-gokkanat-tarihce",
           "title": "TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi",
           "date": "1943",
-          "summary": "Türk uçan kanat havacılığının gelişim çizgisi: 1958'de Ta 70, 1965'te Gökkanat programının önemli hangar olayı ve 1975'te TA-85'in seri üretime geçmesi.",
-          "content": "# Ta 70 ve TA-85 Gökkanat — Kamuya Açık Tarihçe\n\n## Projenin yeri\nGökkanat, Büyük Türk İmparatorluğu'nun uçan kanat havacılık çizgisinin en tanınan projelerinden biridir. Sadece bir uçak modeli olarak değil, Necdet Atalay'ın kuşağından başlayıp Cengiz Atalay ve sonraki mühendislerle devam eden uzun bir mühendislik geleneğinin parçası olarak değerlendirilir.\n\n## Gelişim çizgisi\n- **1958 — Ta 70:** Türk uçan kanat tasarımının ilk prototip aşaması. Necdet Atalay bu dönemin mühendisleri arasındadır.\n- **1965 — Hangar olayı:** Gökkanat programının geçmişinde önemli bir kırılma yaşanır. Olayın nedeni, sorumluları ve teknik ayrıntıları bu kamusal tarihçede açıklanmaz.\n- **1975 — TA-85 Gökkanat:** Yeni seri üretim dönemi başlar. 1985'te Gökkanat, imparatorluğun havacılık kimliğinin başlıca simgelerinden biridir.\n\n## Aile belleği\nNecdet Atalay'ın çalışmaları, oğlu Cengiz'in askerî uçak mühendisliği kariyeri ve torunu Oğuz'un pilot olma isteği arasında kuşaklar boyunca süren bir bağ kurar. Necdet ve Cengiz uçakların geliştirilmesiyle, Oğuz ise onları uçurmak arzusuyla bu mirasın farklı halkalarını temsil eder.\n\n## Kamusal kapsam\nBu kayıt projenin tarihsel gelişimini ve evrendeki yerini açıklar. Tasarım, üretim, performans, silahlandırma veya operasyonel kullanıma yönelik uygulanabilir teknik ayrıntı içermez.",
+          "summary": "Türk uçan kanat havacılığının gelişim çizgisi: 1958'de Ta 70 prototipi ve 1975'te TA-85 Gökkanat'ın seri üretime geçmesi.",
+          "content": "# Ta 70 ve TA-85 Gökkanat — Kamuya Açık Tarihçe\n\n## Projenin yeri\nGökkanat, Büyük Türk İmparatorluğu'nun uçan kanat havacılık çizgisinin en tanınan projelerinden biridir. Sadece bir uçak modeli olarak değil, Necdet Atalay'ın kuşağından başlayıp Cengiz Atalay ve sonraki mühendislerle devam eden uzun bir mühendislik geleneğinin parçası olarak değerlendirilir.\n\n## Gelişim çizgisi\n- **1958 — Ta 70:** Türk uçan kanat tasarımının ilk prototip aşaması. Necdet Atalay bu dönemin mühendisleri arasındadır.\n- **1975 — TA-85 Gökkanat:** Yeni seri üretim dönemi başlar. 1985'te Gökkanat, imparatorluğun havacılık kimliğinin başlıca simgelerinden biridir.\n\n## Aile belleği\nNecdet Atalay'ın çalışmaları, oğlu Cengiz'in askerî uçak mühendisliği kariyeri ve torunu Oğuz'un pilot olma isteği arasında kuşaklar boyunca süren bir bağ kurar. Necdet ve Cengiz uçakların geliştirilmesiyle, Oğuz ise onları uçurmak arzusuyla bu mirasın farklı halkalarını temsil eder. Programın aile içindeki geçmişine ilişkin bazı kayıtlar ise kamuya açık tarihçenin dışında tutulur.\n\n## Kamusal kapsam\nBu kayıt projenin tarihsel gelişimini ve evrendeki yerini açıklar. Tasarım, üretim, performans, silahlandırma veya operasyonel kullanıma yönelik uygulanabilir teknik ayrıntı içermez.",
           "order": 1,
           "aliases": [
             "TA-85",
@@ -3857,6 +3871,38 @@
           "children": [],
           "links": [],
           "country": "turkish",
+          "categoryId": "technology",
+          "ancestors": []
+        },
+        {
+          "id": "technology-alternatif-tarih-teknoloji-turk-teknolojileri-1985-turk-teknolojileri-md",
+          "path": "Alternatif Tarih/Teknoloji/Türk teknolojileri/1985 Türk Teknolojileri.md",
+          "sourceName": "Türk Teknolojileri",
+          "title": "Türk Teknolojileri — 1985 Genel Bakış",
+          "date": "1985 · TEKNOLOJİ GENEL BAKIŞI",
+          "summary": "İmparatorluğun güçlü olduğu alanlar havacılık, sensör füzyonu, ölçüm sistemleri ve uzay çalışmalarıdır; bazı ileri fizik ve malzeme alanlarında Reich'a bağımlılık sürer.",
+          "content": "# Türk Teknolojileri — 1985 Genel Bakış\n\n## Havacılık\nTürk uçan kanat çizgisi 1958'deki Ta 70 prototipinden 1975'te seri üretime geçen Ta 85 Gökkanat'a uzanır. Gökkanat, yalnızca bir uçak projesi değil, imparatorluğun stratejik havacılık kimliğinin simgesidir. Atalay ailesinin üç kuşağı da bu programla farklı biçimlerde bağlantılıdır: Necdet ve Cengiz mühendislik tarafında, Oğuz ise pilotluk hedefiyle yer alır.\n\n## Zırhlı araçlar ve arşiv teknolojisi\nTürk Panzeri, ağır ve dayanıklı zırhlı araç serisini temsil eder. Tarih Bombası adı verilen program ise fiziksel bir patlayıcıdan ziyade belge ve arşiv kayıtlarının değiştirilmesiyle ilgilidir. Bu nedenle programın etkisi cepheden çok devlet hafızası, tarih yazımı ve güvenilir kayıtlar üzerinde hissedilir.\n\n## Sensör ve ölçüm\nGök Kutup'un araştırma çizgisi, farklı ölçüm türlerini bir araya getirerek çevresel ve fiziksel değişimleri izlemeye dayanır. Öte-İz Ölçeri, Tunç Halka ve Dokuma gibi sistemler bu araştırma dünyasının adlarıdır. Bu araçların okur açısından önemi, imparatorluğun bilimsel gözlem ve ölçüm kapasitesini temsil etmeleridir.\n\n## Hesaplama ve karar desteği\nNizam-1, Hilalifiyet Merkezi'nde kullanılan mantık ve karar destek bilgisayarıdır. Verileri karşılaştırır ve analiz sunar; ancak siyasî veya idarî kararı kendisi vermez. Ana Beyin ise daha geniş araştırma ve uzay programlarının hesaplama altyapısını temsil eder. Bu iki sistem birbirinin yerine geçmez.\n\n## Uzay programı\nAy programı üç aşamada ilerlemiştir: ilk aşamada insansız görevler, ikinci aşamada geri dönüşlü kapsül çalışmaları, üçüncü aşamada ise mürettebatlı dönüş ve kalıcı üs hedefi öne çıkar. 1985, bu üçüncü aşamanın devam ettiği dönemdir.\n\n## Sınırlar ve bağımlılıklar\nİmparatorluk sensör sistemleri, yazılım ve uzay araştırmalarında Reich'ı bazı alanlarda geride bırakmıştır. Buna karşılık ileri fizik, belirli malzemeler ve motor ömrü gibi konularda eksikleri sürer. Bu nedenle iki devlet arasındaki teknoloji ilişkisi tek yönlü bir üstünlük değil, alanlara göre değişen rekabet ve bağımlılık ilişkisidir.",
+          "order": 999,
+          "aliases": [],
+          "children": [],
+          "links": [],
+          "country": "turkish",
+          "categoryId": "technology",
+          "ancestors": []
+        },
+        {
+          "id": "technology-alternatif-tarih-teknoloji-alman-teknolojileri-1985-alman-teknolojileri-md",
+          "path": "Alternatif Tarih/Teknoloji/Alman Teknolojileri/1985 Alman Teknolojileri.md",
+          "sourceName": "Alman Teknolojileri",
+          "title": "Alman Teknolojileri — 1985 Genel Bakış",
+          "date": "1985 · TEKNOLOJİ GENEL BAKIŞI",
+          "summary": "Reich; füze ve roket sistemleri, ağır sanayi, yüksek enerji fiziği ve antimadde araştırmalarında güçlüdür; sensör füzyonu, yazılım ve uzay lojistiğinde Türkiye'nin gerisindedir.",
+          "content": "# Alman Teknolojileri — 1985 Genel Bakış\n\n## Havacılık\nHorten 229, Reich'ın uçan kanat tasarım çizgisinin simgesidir. 1940'ların prototiplerinden 1960'lardaki modernizasyonlara, oradan 1980'lerin B/C serisine uzanan bir gelişim hattı vardır. Gökkanat ile aynı tasarım ailesi fikrini paylaşsa da iki projenin tarihî ve kurumsal geçmişi farklıdır.\n\n## Sivil havacılık\nMe 620 Überschall, Reich'ın süpersonik yolcu uçağı programıdır. Devlet prestijini ve yüksek hızlı sivil taşımacılık iddiasını temsil eder. Kanona göre askerî türevi bulunmaz; bu nedenle onu savaş uçağı olarak tanıtmak yanlıştır.\n\n## Atom ve yüksek enerji fiziği\nReich, atom çağında erken teknolojiye erişmiş ve bunu sınırlı sayıdaki stratejik kapasiteye dönüştürmüştür. SFA-P Polaris'teki halka deneyleri, yüksek enerji fiziği ile antimadde ve karanlık madde araştırmalarının bir arada yürütüldüğü bilimsel hattı temsil eder. Deneylerin sonuçları kesin ve güvenli değildir; yüksek enerji araştırmaları önemli bilimsel riskler taşır.\n\n## Füze ve roket araştırmaları\nFüze ve roket teknolojileri Reich'ın güçlü olduğu alanlardandır. Bu üstünlük, devletin kıtalararası erişim ve uzay çalışmaları konusundaki iddiasını destekler; ancak tek başına bütün teknoloji alanlarında üstünlük anlamına gelmez.\n\n## Güçlü ve zayıf alanlar\nReich ağır sanayi, füze sistemleri ve yüksek enerji fiziğinde güçlüdür. Buna karşılık sensör füzyonu, yazılım, sistemlerin küçültülmesi ve uzay lojistiği alanlarında Türk araştırmaları öne geçmiştir. İki tarafın rekabeti bu nedenle tek bir “ileri teknoloji” sıralamasına indirgenemez.",
+          "order": 999,
+          "aliases": [],
+          "children": [],
+          "links": [],
+          "country": "german",
           "categoryId": "technology",
           "ancestors": []
         }
