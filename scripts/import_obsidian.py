@@ -183,23 +183,11 @@ def import_chronology():
 
 Eylül 1985'te Großdeutsches Reich'tan bir heyet İstanbul'a geldi. Resmî çerçeve teknik temas ve işbirliğiydi; heyetin asıl ilgisi ise Büyük Türk İmparatorluğu'nun havacılık ve sensör alanlarında Reich'la arasındaki teknolojik mesafeyi ne ölçüde kapattığını anlamaktı.
 
-Heyetin İstanbul'daki varlığı, 16 Eylül'de düzenlenecek Mektepler Arası Teknoloji Tasarım Yarışması'nın hazırlıklarıyla aynı döneme denk geldi. Böylece devletler arası rekabet, yalnızca diplomatik görüşmelerde değil, okulların ve genç araştırmacıların çevresinde de hissedilmeye başladı.
+Heyetin İstanbul'daki varlığı, devletler arası rekabetin yalnızca diplomatik görüşmelerde değil, teknik kurumlar ve araştırma çevrelerinde de hissedildiğini gösterdi.
 
 Türk tarafı ziyaretin resmî nezaketini korurken Reich heyetinin temasları dikkatle izleniyordu. Bu ziyaret, 1985 sonbaharında iki imparatorluk arasındaki güvensizliğin görünür hâle geldiği gelişmelerden biridir."""
         },
-        {
-            "year":1985, "month":9, "day":16, "date":"16 Eylül 1985",
-            "title":"16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması",
-            "path":"Tarihi Olaylar/1985 Yarışma.md",
-            "summary":"İstanbul'daki Üsküdar ve Şarkın mekteplerinin öne çıktığı, Hilalifiyet Merkezi'nin ev sahipliğinde düzenlenen büyük öğrenci yarışması.",
-            "content":"""# 16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması
 
-İstanbul'da düzenlenen yarışma, Büyük Türk İmparatorluğu'nun mekteplerini ve öğrenci temsil yapılarını aynı organizasyonda buluşturdu. Üsküdar Milli İlim ve İrfan Mektebi ile İstanbul Şarkın İlim ve Teknoloji Mektebi, rekabetin öne çıkan iki okuludur.
-
-Yarışmanın ev sahibi Hilalifiyet Merkezi'dir. Jüri devlet tarafından atanır; Nizam-1 değerlendirme sürecine analiz desteği sunar, ancak kararın kendisini vermez. Böylece öğrenci rekabeti, devlet denetimi ve kurumlar arası müzakere aynı zeminde buluşur.
-
-Yarışma yalnızca teknik ürünlerin karşılaştırılması değildir. Okulların temsil gücü, öğrencilerin işbirliği ve liderlik becerileri, ayrıca dış heyetlerin genç kuşağa gösterdiği ilgi de bu etkinliğin siyasî önemini artırır."""
-        }
     ]
     for event in public_milestones:
         if normalize(event["title"]) in seen_titles:
