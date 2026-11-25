@@ -205,7 +205,7 @@ def make_public_character(category, spec):
     summary = spec.get("summary") or spec.get("personality", "")
     return {
         "id": category + "-" + slug(spec["key"]),
-        "path": spec["path"],
+        "path": spec.get("path", "03_KARAKTERLER/" + spec["name"] + ".md"),
         "sourceName": doc["sourceName"],
         "title": spec["name"],
         "date": spec.get("date", ""),
