@@ -1337,7 +1337,7 @@
     archiveCloseTimer = window.setTimeout(finish, 540);
   };
 
-  if (backButton) backButton.addEventListener("click", closeArchiveScene);
+  if (backButton) backButton.addEventListener("click", () => closeArchiveScene());
 
   window.addEventListener("popstate", (event) => {
     const requestedRecord = new URLSearchParams(window.location.search).get("record");
