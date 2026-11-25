@@ -50,10 +50,20 @@ class ArchiveCountryClassificationTests(unittest.TestCase):
         self.assertEqual(press_records[0]["country"], "both")
 
     def test_current_turkish_records_are_tagged_turkish(self):
-        for category_id in ("institutions",):
+        for category_id in ():
             leaves = [node for node in walk(self.categories[category_id]["nodes"]) if not node.get("children")]
             self.assertTrue(leaves, category_id)
             self.assertTrue(all(node["country"] == "turkish" for node in leaves), category_id)
+
+    def test_institution_archive_separates_turkish_and_reich_structures(self):
+        leaves = [
+            node for node in walk(self.categories["institutions"]["nodes"])
+            if not node.get("children")
+        ]
+        by_title = {node["title"]: node for node in leaves}
+        self.assertEqual(by_title["Mektepler — 1985 Eğitim Düzeni"]["country"], "turkish")
+        self.assertEqual(by_title["İstihbarat ve İç Emniyet — İki Kurum"]["country"], "turkish")
+        self.assertEqual(by_title["Großdeutsches Reich Kurumları — Yönetim Yapısı"]["country"], "german")
 
     def test_technology_archive_contains_turkish_and_german_overviews(self):
         leaves = [
