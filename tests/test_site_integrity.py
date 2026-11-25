@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
@@ -11,6 +12,8 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = ("index.html", "galeri.html", "sesler.html", "dosya-merkezi.html", "404.html")
 VAULT = ROOT / "AslıOlanDüzenObsidianVault"
+sys.path.insert(0, str(ROOT / "scripts"))
+import import_obsidian  # noqa: E402
 
 
 class PageReferences(HTMLParser):
@@ -127,7 +130,9 @@ class SiteIntegrityTests(unittest.TestCase):
                             )
 
     def test_published_archive_records_have_source_documents(self) -> None:
-        payload = json.loads((ROOT / "archives.json").read_text(encoding="utf-8"))
+        # Validate the archive generated from the current importer, not the
+        # checked-in JSON snapshot that the Pages workflow refreshes later.
+        payload = import_obsidian.discover_archives()
         def visit(category_id: str, nodes: list[dict]) -> None:
             for node in nodes:
                 reference = str(node.get("path", ""))
