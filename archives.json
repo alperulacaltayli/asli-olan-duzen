@@ -58,7 +58,7 @@
                   "categoryId": "characters",
                   "id": "characters-alperen-keser",
                   "title": "Alperen Keser",
-                  "date": "1888–1960"
+                  "date": "1899 doğumlu (türetilmiş) · 29 Kasım 1938'de yönetimi devraldı"
                 },
                 {
                   "categoryId": "chronology",
@@ -242,7 +242,7 @@
                   "categoryId": "characters",
                   "id": "characters-alperen-keser",
                   "title": "Alperen Keser",
-                  "date": "1888–1960"
+                  "date": "1899 doğumlu (türetilmiş) · 29 Kasım 1938'de yönetimi devraldı"
                 }
               ],
               "categoryId": "chronology",
@@ -272,7 +272,7 @@
                   "categoryId": "characters",
                   "id": "characters-alperen-keser",
                   "title": "Alperen Keser",
-                  "date": "1888–1960"
+                  "date": "1899 doğumlu (türetilmiş) · 29 Kasım 1938'de yönetimi devraldı"
                 },
                 {
                   "categoryId": "geography",
@@ -1906,6 +1906,92 @@
           "ancestors": []
         },
         {
+          "id": "chronology-year-1965",
+          "path": "year-1965",
+          "sourceName": "1965",
+          "title": "1965",
+          "date": "YIL",
+          "summary": "1965 yılına ait 1 tarihsel kayıt.",
+          "content": "1965 yılına ait 1 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-kanon-vault-1965-gokkanat-hangar-olayi-md",
+              "path": "kanon-vault/1965-gokkanat-hangar-olayi.md",
+              "sourceName": "1965 — Gökkanat Hangar Olayı",
+              "title": "1965 — Gökkanat Hangar Olayı",
+              "date": "1965",
+              "summary": "Atalay ailesinin havacılık geçmişinde ve Gökkanat programında önemli bir kırılma noktası.",
+              "content": "# 1965 — Gökkanat Hangar Olayı\n\n1965 yılında Gökkanat programının geçmişinde, Necdet Atalay'la da bağlantılı önemli bir hangar olayı yaşandı. Bu olay, Atalay ailesinin havacılık hatıralarında ve daha sonraki mühendislik kayıtlarında iz bıraktı.\n\nOlayın teknik ve idarî ayrıntıları mevcut kamusal tarihçede kesinleştirilmiş değildir. Bu nedenle burada nedeni, sorumluları veya sonuçları hakkında doğrulanmamış bir açıklama yapılmaz. Olayın romandaki önemi, sonraki kuşakların Gökkanat'a ve aile geçmişine bakışını etkilemesidir.",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [],
+              "country": "turkish",
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1965"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
+          "id": "chronology-year-1985",
+          "path": "year-1985",
+          "sourceName": "1985",
+          "title": "1985",
+          "date": "YIL",
+          "summary": "1985 yılına ait 2 tarihsel kayıt.",
+          "content": "1985 yılına ait 2 tarihsel kayıt.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "chronology-kanon-vault-10-eylul-1985-alman-teknik-heyetinin-istanbul-ziyareti-md",
+              "path": "kanon-vault/10-eylul-1985-alman-teknik-heyetinin-istanbul-ziyareti.md",
+              "sourceName": "10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti",
+              "title": "10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti",
+              "date": "10 Eylül 1985",
+              "summary": "Reich heyeti, teknik işbirliği görüntüsü altında Türk havacılık ve sensör kapasitesini değerlendirmek üzere İstanbul'a geldi.",
+              "content": "# 10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti\n\nEylül 1985'te Großdeutsches Reich'tan bir heyet İstanbul'a geldi. Resmî çerçeve teknik temas ve işbirliğiydi; heyetin asıl ilgisi ise Büyük Türk İmparatorluğu'nun havacılık ve sensör alanlarında Reich'la arasındaki teknolojik mesafeyi ne ölçüde kapattığını anlamaktı.\n\nHeyetin İstanbul'daki varlığı, 16 Eylül'de düzenlenecek Mektepler Arası Teknoloji Tasarım Yarışması'nın hazırlıklarıyla aynı döneme denk geldi. Böylece devletler arası rekabet, yalnızca diplomatik görüşmelerde değil, okulların ve genç araştırmacıların çevresinde de hissedilmeye başladı.\n\nTürk tarafı ziyaretin resmî nezaketini korurken Reich heyetinin temasları dikkatle izleniyordu. Bu ziyaret, 1985 sonbaharında iki imparatorluk arasındaki güvensizliğin görünür hâle geldiği gelişmelerden biridir.",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [],
+              "country": "turkish",
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1985"
+              ]
+            },
+            {
+              "id": "chronology-kanon-vault-16-eylul-1985-mektepler-arasi-teknoloji-tasarim-yarismasi-md",
+              "path": "kanon-vault/16-eylul-1985-mektepler-arasi-teknoloji-tasarim-yarismasi.md",
+              "sourceName": "16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması",
+              "title": "16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması",
+              "date": "16 Eylül 1985",
+              "summary": "İstanbul'daki Üsküdar ve Şarkın mekteplerinin öne çıktığı, Hilalifiyet Merkezi'nin ev sahipliğinde düzenlenen büyük öğrenci yarışması.",
+              "content": "# 16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması\n\nİstanbul'da düzenlenen yarışma, Büyük Türk İmparatorluğu'nun mekteplerini ve öğrenci temsil yapılarını aynı organizasyonda buluşturdu. Üsküdar Milli İlim ve İrfan Mektebi ile İstanbul Şarkın İlim ve Teknoloji Mektebi, rekabetin öne çıkan iki okuludur.\n\nYarışmanın ev sahibi Hilalifiyet Merkezi'dir. Jüri devlet tarafından atanır; Nizam-1 değerlendirme sürecine analiz desteği sunar, ancak kararın kendisini vermez. Böylece öğrenci rekabeti, devlet denetimi ve kurumlar arası müzakere aynı zeminde buluşur.\n\nYarışma yalnızca teknik ürünlerin karşılaştırılması değildir. Okulların temsil gücü, öğrencilerin işbirliği ve liderlik becerileri, ayrıca dış heyetlerin genç kuşağa gösterdiği ilgi de bu etkinliğin siyasî önemini artırır.",
+              "order": 999,
+              "aliases": [],
+              "children": [],
+              "links": [],
+              "country": "turkish",
+              "categoryId": "chronology",
+              "ancestors": [
+                "chronology-year-1985"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "chronology",
+          "ancestors": []
+        },
+        {
           "id": "chronology-undated-events",
           "path": "undated-events",
           "sourceName": "Tarihi belirtilmeyen kayıtlar",
@@ -1986,7 +2072,7 @@
                   "categoryId": "characters",
                   "id": "characters-alperen-keser",
                   "title": "Alperen Keser",
-                  "date": "1888–1960"
+                  "date": "1899 doğumlu (türetilmiş) · 29 Kasım 1938'de yönetimi devraldı"
                 }
               ],
               "categoryId": "chronology",
@@ -2015,37 +2101,12 @@
           "sourceName": "Genel Dünya",
           "title": "Genel Dünya",
           "date": "1985 · DÜNYA DÜZENİ",
-          "summary": "Bu alternatif evrende II. Dünya Savaşı'nın seyri Mihver lehine değişmiştir. Almanya Avrupa'da çok hızlı ilerlemiş, İngiltere düşmüş, Türkiye ise Alperen Keser yönetiminde Mihver'e katılarak savaşın aktif güçlerinden biri hâline gelmiştir.",
-          "content": "Bu alternatif evrende II. Dünya Savaşı'nın seyri Mihver lehine değişmiştir. Almanya Avrupa'da çok hızlı ilerlemiş, İngiltere düşmüş, Türkiye ise Alperen Keser yönetiminde Mihver'e katılarak savaşın aktif güçlerinden biri hâline gelmiştir.\n\n## Ana Kırılma Noktaları\n\n- **1938:** Alperen Keser Türkiye'de yönetimi ele aldı.\n- **1940:** Fransa, İngiltere ve Yunanistan'ın düşüşüyle Avrupa dengesi Mihver lehine bozuldu.\n- **1941:** Almanya ve Türkiye, Sovyetler Birliği'ne karşı ortak savaşa başladı.\n- **1942:** Kafkasya, Bakü, Stalingrad, Leningrad ve Sivastopol gibi kritik merkezler düştü.\n- **1943:** Moskova'nın işgali ve Sovyet merkezi yönetiminin çöküşüyle SSCB parçalandı.\n\n## Dünya Düzeni\n\nSavaş sonrası dünya üç ana güç alanına ayrıldı:\n\n1. **Almanya merkezli Avrupa-Asya kara düzeni**\n2. **Türkiye merkezli Kafkasya-Ortadoğu-Türkistan nüfuz alanı**\n3. **Amerika merkezli denizaşırı karşı blok**\n\nİngiltere'nin düşüşü Amerika'yı yalnızlaştırdı. Japonya Pasifik'te kazanımlar elde etse de Almanya ve Türkiye kadar genişleyemedi. İtalya Akdeniz'de varlık gösterdi fakat kalıcı güç bakımından Türkiye'nin gerisinde kaldı.\n\n## 1980'lere Gelindiğinde\n\nRomanın ana zamanı olan 1980'lerde dünya, savaşın üzerinden yaklaşık kırk yıl geçmesine rağmen hâlâ bu kırılmanın sonuçlarıyla yaşamaktadır. Sınırlar değişmiş, halklar yer değiştirmiş, yeni kuşaklar savaş sonrası kurulan düzenin içinde doğmuştur.\n\n## Ana Gerilimler\n\n- Amerika ile Almanya-Türkiye hattı arasındaki soğuk savaş benzeri rekabet.\n- Sovyet sonrası bölgelerde bastırılmış kimlik ve bağımsızlık hareketleri.\n- Türkiye'nin genişleyen toprakları yönetme zorluğu.\n- Almanya'nın Avrupa üzerindeki sert hâkimiyeti.\n- Eski İngiliz ve Fransız sömürgelerinin parçalı idaresi.\n\n## Bağlantılar\n\n- Ana Evren\n- [[Türkiye]]\n- [[Almanya]]\n- [[Amerika]]\n- [[Diğer Devletler]]\n\n---\n\n# Tarihlere Göre Dünya Yaşantısı\n\n## 1938-1940\n\nDünya, Avrupa'daki Alman yükselişinin artık durdurulamaz göründüğü bir döneme girdi. Türkiye'nin Alperen Keser yönetiminde Almanya'ya yaklaşması Doğu Akdeniz, Ortadoğu ve Sovyet güney cephesi açısından büyük değişim yarattı.\n\n## 1941\n\nSovyetler Birliği'ne karşı iki cepheli saldırı dünya dengesini değiştirdi. Savaş artık yalnızca Avrupa savaşı olmaktan çıktı; Kafkasya, Karadeniz, Hazar ve Türkistan hattı dünya siyasetinin merkezine yerleşti.\n\n## 1942\n\nMihver ilerleyişi dünya genelinde korku ve fırsat duygusunu aynı anda büyüttü. Bazı devletler Almanya-Türkiye düzenine uyum ararken bazıları Amerika çevresinde karşı denge aradı.\n\n## 1943\n\nSSCB'nin çöküşüyle dünya tek bir savaşın sonucundan çok yeni bir çağın başlangıcına girdi. Avrasya'da Almanya ve Türkiye merkezli sert bir düzen kurulurken Amerika denizaşırı karşı güç hâline geldi.",
+          "summary": "1985'te dünya iki egemen karar merkezi çevresinde şekillenir: güneyde Büyük Türk İmparatorluğu, kuzeyde Großdeutsches Reich. Amerika Birleşik Devletleri 1946'da merkezî devlet olarak çökmüştür; üçüncü bir süper güç değildir.",
+          "content": "# 1985 Dünya Düzeni\n\n## Tarihin ayrıldığı nokta\nBu evrenin tarihi, 10 Kasım 1938'de Atatürk'ün vefatıyla farklı bir yola girer. 29 Kasım 1938'de Alperen Keser yönetimi devralır. Yeni yönetim merkezî idareyi, millî sanayiyi ve askerî hazırlığı güçlendirir. Türkiye'nin savaş yıllarındaki yönelişi, Sovyetler Birliği'nin 1943'te çöküşü ve 1946'daki dünya paylaşımı bu tek tarih kırılmasının sonuçlarıdır.\n\n## Savaş ve güç dengesi\n1940'ta Fransa ve İngiltere'nin düşmesi Avrupa'daki dengeyi değiştirir. 1941–1943 arasında Almanya ve Türkiye'nin Sovyetler Birliği'ne karşı yürüttüğü savaş, Sovyet merkezî bütünlüğünün sona ermesiyle sonuçlanır. 1946'da Amerika'nın çöküşüyle savaş sonrası güç boşluğu iki imparatorluk arasında paylaşılır.\n\n## İki egemen merkez\n1985'te dünya iki büyük karar merkezine ayrılmıştır:\n- **Büyük Türk İmparatorluğu:** Ankara merkezli güney düzeni. Anadolu, Balkanlar ve Viyana, Kafkasya, Türkistan, Ortadoğu, Afrika'nın bazı bölgeleri, Güney Amerika, Antarktika ve Ay programı bu nüfuz alanının parçalarıdır.\n- **Großdeutsches Reich:** Germania merkezli kuzey düzeni. Avrupa'nın büyük bölümü, Britanya, İskandinavya, Avrupa Rusyası, Sibirya ve Kuzey Amerika'nın kuzey kuşağı Reich'ın nüfuz alanındadır.\n\nBu iki merkez dışındaki yapılar bağımsız üçüncü bir süper güç oluşturmaz. Bazı bölgeler doğrudan yönetilir, bazıları koloni veya işgal bölgesidir; bazılarıysa bağlı hanlık, tampon alan ya da eski devletlerden kalan yerel yönetimler biçiminde varlığını sürdürür.\n\n## Amerika'nın durumu\nAmerika Birleşik Devletleri 1985'te devlet olarak yoktur. 1946'daki iki atom saldırısı ve okyanus yenilgileri federal yapının çöküşüne yol açmıştır. Eski topraklar kuzey ve güney nüfuz alanlarına ayrılmış; şehirler, yerel topluluklar ve mülteci çevreleri eski Amerikan kimliğini farklı biçimlerde taşımaya devam etmiştir.\n\n## İki rejimin niteliği\nBüyük Türk İmparatorluğu otoriter-milliyetçi bir devlettir; Großdeutsches Reich ise Nazi rejimidir. Bu ayrım, Türk devletinin masum olduğu anlamına gelmez. İmparatorluğun da infaz, sürgün, zorla teslim ve taşrada keyfî yönetim gibi ağır sorumlulukları vardır. Romanın siyasî dünyası, iki rejimin gücünü olduğu kadar bu gücün insanlara yüklediği bedeli de gösterir.\n\n## Teknoloji ve gündelik hayat\n1985 teknolojisi kendi tarihimizin 1985'inden ileridir; ancak 2000'lerin başındaki tüketici teknolojisine ulaşmaz. Jet uçakları, bilgisayarlar, uydu haberleşmesi ve nükleer enerji kullanılır; internet ve yaygın cep telefonu yoktur. Türk araştırmaları sensör, uzay ve uçan kanat havacılığına; Reich araştırmaları füze, yüksek enerji fiziği ve antimadde alanlarına ağırlık verir.\n\n## Romanın anlatı odağı\nDünya tarihi, Oğuz'un hayatından bağımsız bir arka plan değildir. Oğuz geçmişi büyük ölçüde ailesinden, özellikle dedesinin anlattıklarından öğrenir. Bu nedenle resmî tarih ile ev içinde aktarılan hatıralar zaman zaman birbirini tutmaz; okur dünyayı hem devlet kayıtlarından hem de karakterlerin yaşadıklarından tanır.",
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-turkiye-md",
-              "title": "Türkiye",
-              "date": "DEVLET DOSYASI"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-almanya-md",
-              "title": "Almanya",
-              "date": "DEVLET DOSYASI"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-amerika-md",
-              "title": "Amerika",
-              "date": "DEVLET DOSYASI"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-diger-devletler-md",
-              "title": "Diğer Devletler",
-              "date": "DİĞER GÜÇLER"
-            }
-          ],
+          "links": [],
           "categoryId": "geography",
           "ancestors": []
         },
@@ -2055,49 +2116,12 @@
           "sourceName": "Dünya Paylaşımı 1946",
           "title": "Dünya Paylaşımı 1946",
           "date": "1946 · SİYASİ PAYLAŞIM",
-          "summary": "1946'da Amerika'nın çöküşünden sonra dünya Almanya ve Türkiye arasında iki büyük nüfuz alanına bölündü. Temel ilke basitti:",
-          "content": "1946'da Amerika'nın çöküşünden sonra dünya Almanya ve Türkiye arasında iki büyük nüfuz alanına bölündü. Temel ilke basitti:\n\n> **Kuzey Almanların, güney Türklerin.**\n\nBu paylaşım tamamen doğal, etnik veya tarihî sınırlara göre yapılmadı. Büyük ölçüde masa başında, stratejik çıkarlar ve güç dengesiyle çizildi.\n\n---\n\n# Genel İlke\n\n## Alman Kuzey Bloğu\n\nAlmanya, kuzey yarımkürenin sanayi, eski Avrupa ve Kuzey Amerika ağırlıklı bölgelerini aldı.\n\n## Türk Güney Bloğu\n\nTürkiye, güney yarımküreyi, Ortadoğu-Kafkasya-Türkistan hattını, Güney Amerika'yı ve Kızıl Elma hedefleri kapsamındaki tarihî bölgeleri aldı.\n\n---\n\n# Kuzey Amerika\n\n## Almanya'ya Bırakılan Alanlar\n\n- Kanada'nın tamamı.\n- Amerika Birleşik Devletleri'nin kuzey ve orta bölgeleri.\n- Alaska.\n- Grönland.\n- Kuzey Atlantik üsleri.\n- Büyük Göller çevresi.\n- New York sonrası Atlantik kıyısının kalan stratejik limanları.\n\n## Türkiye'ye Bırakılan / Türk Nüfuzuna Giren Alanlar\n\n- Meksika.\n- Orta Amerika.\n- Karayipler üzerinde Türkiye lehine deniz nüfuz düzeni.\n- Eski Amerikan güney eyaletlerinin bir kısmı tampon ve pazarlık bölgesi olarak Türk ekonomik nüfuzuna açıldı.\n\n## Sınır Mantığı\n\nKuzey Amerika'da Alman payı Kanada ve ABD'nin ana sanayi-kuzey hattıdır. Türkiye doğrudan kuzey Amerika'nın tamamını almaz; ancak güney geçişleri, Meksika, Karayipler ve Orta Amerika üzerinden Güney Amerika'ya bağlanan hattı kontrol eder.\n\n---\n\n# Güney Amerika\n\nGüney Amerika kıtasının tamamı Türk nüfuz alanına bırakıldı.\n\n## Türkiye'ye Bırakılan Alanlar\n\n- Brezilya.\n- Arjantin.\n- Şili.\n- Peru.\n- Bolivya.\n- Paraguay.\n- Uruguay.\n- Kolombiya.\n- Venezuela.\n- Ekvador.\n- Guyana bölgesi.\n\n## Önemi\n\nGüney Amerika, Türkiye için tarım, maden, deniz üsleri ve Güney Atlantik kontrolü anlamına gelir. Türkiye'nin Afrika ve Güney Amerika arasında kurduğu hat, güney dünya düzeninin omurgası olur.\n\n---\n\n# Avrupa\n\n## Almanya'ya Bırakılan Alanlar\n\n- Almanya merkezli Orta Avrupa.\n- Fransa.\n- İngiltere ve Britanya adaları.\n- İskandinavya.\n- Polonya ve Baltık hattı.\n- Avrupa Rusyası'nın büyük kısmı.\n- Kuzey ve merkez Avrupa sanayi kuşağı.\n\n## Türkiye'ye Bırakılan / Bağlanan Alanlar\n\n- Türkiye'nin mevcut toprakları.\n- Balkanların büyük bölümü.\n- Yunanistan'ın Türk payı.\n- Kıbrıs ve Ege adalarının büyük kısmı.\n- Viyana ve çevresi.\n- Macaristan üzerinde güçlü Türk nüfuzu.\n- Romanya-Bulgaristan hattında Türk askerî geçiş ve nüfuz alanı.\n\n## Özel Durum: Viyana\n\nViyana, Kızıl Elma hedefinin sembolü olarak Türkiye'ye bağlandı. Bu, Almanya'nın gönüllü memnuniyetinden değil, dünya paylaşımındaki büyük pazarlığın sonucundan doğdu.\n\n---\n\n# Afrika\n\nAfrika ikiye bölündü.\n\n## Almanya'ya Bırakılan Kuzey-Batı / Kuzey-Orta Hat\n\n- Fas'ın kuzey ve batı bağlantıları üzerinde Alman nüfuzu.\n- Cezayir'in batı ve kuzey kesimleri.\n- Libya'nın batı bağlantıları üzerinde Alman-İtalyan geçiş düzeni.\n- Batı Afrika'nın Atlantik'e bakan kuzey limanları.\n- Orta Afrika'nın kuzey kuşağı.\n\n## Türkiye'ye Bırakılan Güney-Doğu / Nil-Ortadoğu Bağlantılı Hat\n\n- Mısır.\n- Sudan.\n- Habeşistan/Etiyopya çevresi.\n- Somali ve Kızıldeniz hattı.\n- Doğu Afrika kıyıları.\n- Güney Afrika.\n- Orta Afrika'nın güney kuşağı.\n- Sahra altı bölgelerin büyük kısmı.\n\n## Sınır Mantığı\n\nAfrika'da net çizgi yaklaşık olarak kuzeybatıdan orta Afrika'ya, oradan doğu-güney hattına doğru çekilir. Almanya Atlantik ve kuzey bağlantılı bölgeleri; Türkiye Kızıldeniz, Hint Okyanusu, Doğu Afrika ve Güney Afrika hattını alır.\n\n---\n\n# Ortadoğu ve Kafkasya\n\nBu bölgeler Türkiye'ye bırakıldı veya doğrudan Türkiye'ye bağlandı.\n\n## Türkiye'ye Bağlanan / Türk Nüfuzuna Giren Alanlar\n\n- Suriye.\n- Irak.\n- Filistin ve kutsal topraklar hattı.\n- Hicaz ve Arap yarımadası üzerinde Türk nüfuzu.\n- İran üzerinde ağır Türk baskısı ve geçiş denetimi.\n- Kafkasya.\n- Bakü ve Hazar petrol hattı.\n\n## Önemi\n\nBu bölge Türkiye'nin enerji, dinî sembolizm, tarihî miras ve Asya bağlantısının merkezidir.\n\n---\n\n# Türkistan ve Orta Asya\n\nTürkistan, Türkiye'nin en stratejik alanlarından biri hâline geldi.\n\n## Türkiye'ye Bırakılan Alanlar\n\n- Türkistan coğrafyasının büyük kısmı.\n- Hazar doğusu.\n- Kazak bozkırlarının güney ve orta kesimleri.\n- Özbek, Türkmen, Kırgız ve Tacik bölgeleri üzerinde Türk nüfuzu.\n- Uranyum ve stratejik maden sahaları.\n\n## Önemi\n\nTürkistan, atom programının hammadde temeli olduğu için Türkiye tarafından vazgeçilmez kabul edildi.\n\n---\n\n# Asya\n\n## Almanya'ya Bırakılan Alanlar\n\n- Sibirya'nın kuzey ve doğu genişlikleri.\n- Kuzey Asya kara yolları.\n- Eski Sovyet kuzey bölgeleri.\n\n## Türkiye'ye Bırakılan Alanlar\n\n- Orta Asya'nın Türkistan merkezli güney hattı.\n- İran-Afganistan geçiş bölgesi.\n- Hindistan çevresinde güney nüfuz hattı.\n- Hint Okyanusu bağlantıları.\n\n## Japonya'nın Durumu\n\nJaponya bağımsız büyük kutup olmaktan çıkar. Pasifik'teki varlığını sürdürse de Almanya-Türkiye düzenine bağlı ikincil güç hâline gelir.\n\n---\n\n# Okyanuslar\n\n## Almanya\n\n- Kuzey Atlantik.\n- Kuzey Denizi.\n- Kuzey Buz Denizi.\n- Kuzey Pasifik bağlantıları.\n\n## Türkiye\n\n- Akdeniz'in doğusu ve güneyi.\n- Kızıldeniz.\n- Hint Okyanusu.\n- Güney Atlantik.\n- Güney Pasifik bağlantıları.\n\n---\n\n# Siyasi Sonuç\n\nDünya artık üç kutuplu değildir. Amerika çökmüş, diğer devletler ilhak edilmiş veya bağlı yönetimlere dönüştürülmüştür. Geriye iki ezici güç kalır:\n\n1. **Alman Kuzey Düzeni**\n2. **Türk Güney Düzeni**\n\nBu düzen resmî olarak ortak zafer diye anlatılsa da iki güç arasında sürekli örtülü rekabet vardır.\n\n## Bağlantılar\n\n- [[1946 Dünya Paylaşım Konferansı]]\n- [[1946 Amerika'nın Tam Çöküşü]]\n- [[1946 Kızıl Elma ve Viyana'nın Türkiye'ye Bağlanması]]\n- [[Türkiye]]\n- [[Almanya]]\n- [[Genel Dünya]]",
+          "summary": "Amerika'nın merkezî devlet olarak çökmesinden sonra Almanya ve Türkiye arasında kurulan kuzey-güney nüfuz paylaşımı. İlke: Kuzey Almanya'nın, güney Türkiye'nin.",
+          "content": "# 1946 — Dünya Paylaşımı\n\n## Paylaşımın nedeni\n1946'da Amerika Birleşik Devletleri'nin merkezî yönetimi çöktüğünde, savaşın sonunda ortaya çıkan güç boşluğu Almanya ve Türkiye'nin etkisiyle yeniden düzenlendi. İki heyet, Germania'daki Große Halle'de eski Amerikan topraklarının ve diğer nüfuz alanlarının paylaşımını görüştü.\n\n## Temel ilke\nPaylaşımın kısa formülü **“Kuzey Almanya'nın, güney Türkiye'nin”** oldu. Sınırlar doğal, etnik veya tarihî bütünlüğe göre çizilmedi. Harita, iki imparatorluğun stratejik çıkarları ve güç dengesi temelinde cetvelle bölündü.\n\n## Reich'ın kuzey alanı\nAlmanya; Kanada'yı, Alaska'yı, Grönland'ı, Kuzey Amerika'nın kuzey ve orta kuşağını, Avrupa'nın büyük bölümünü, Britanya'yı, İskandinavya'yı, Avrupa Rusyası'nı ve Sibirya hattını kendi düzenine bağladı.\n\n## Türk güney alanı\nTürkiye; Meksika, Orta Amerika, Karayip geçişleri ve Güney Amerika'nın yanı sıra Ortadoğu, Kafkasya, Türkistan, Balkanlar, Viyana, Afrika'nın doğu ve güney kuşakları ile güney deniz bağlantılarında nüfuz kazandı.\n\n## Bölünmüş ve ortak alanlar\nİtalya tek parça hâlinde bir tarafa bırakılmadı: kuzeyi Alman, güneyi ve Akdeniz adalarının bir bölümü Türk nüfuzunda kaldı; Roma ortak yönetim alanı olarak düzenlendi. Eski ABD'nin bazı güney bölgeleri ise tampon veya ortak ekonomik alan niteliği taşıdı. Bu statüler, doğrudan ilhakla aynı şey değildir.\n\n## Sonuç\n1946 paylaşımı yeni düzenin temelini kurdu; 1947–1950 arasında ilhaklar, bağlı yönetimler ve sınır düzenlemeleri devam etti. **1950'de İstanbul'da** Yeni Dünya Düzeni ilan edildi ve Büyük Türk İmparatorluğu ile Großdeutsches Reich adları resmîleşti.",
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1946-dunya-paylasim-konferansi-md",
-              "title": "1946 — Dünya Paylaşım Konferansı",
-              "date": "1946"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1946-amerika-nin-tam-cokusu-md",
-              "title": "1946 — Amerika'nın Tam Çöküşü",
-              "date": "1946"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1946-kizil-elma-ve-viyana-nin-turkiye-ye-baglanmasi-md",
-              "title": "1946 — Kızıl Elma ve Viyana'nın Türkiye'ye Bağlanması",
-              "date": "1946"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-turkiye-md",
-              "title": "Türkiye",
-              "date": "DEVLET DOSYASI"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-almanya-md",
-              "title": "Almanya",
-              "date": "DEVLET DOSYASI"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
-              "title": "Genel Dünya",
-              "date": "1985 · DÜNYA DÜZENİ"
-            }
-          ],
+          "links": [],
           "categoryId": "geography",
           "ancestors": []
         },
@@ -2107,73 +2131,12 @@
           "sourceName": "Türkiye",
           "title": "Türkiye",
           "date": "DEVLET DOSYASI",
-          "summary": "1938 yılı 29 Kasım itibariyle Türkiye, Alperen Keser yönetimine girmiştir. Yeni yönetim milliyetçi, merkeziyetçi ve sert güvenlikçi bir politika benimsemiştir. Almanya ile yapılan gizli anlaşmalar sonucunda Türkiye giderek Mihver çizgisine yaklaşmış ",
-          "content": "1938 yılı 29 Kasım itibariyle Türkiye, Alperen Keser yönetimine girmiştir. Yeni yönetim milliyetçi, merkeziyetçi ve sert güvenlikçi bir politika benimsemiştir. Almanya ile yapılan gizli anlaşmalar sonucunda Türkiye giderek Mihver çizgisine yaklaşmış ve sonunda savaşın aktif taraflarından biri olmuştur.\n\n## Yönetim Anlayışı\n\nAlperen Keser yönetimi güçlü merkezî devlet, disiplinli toplum, millî sanayi ve askerî hazırlık üzerine kuruludur. Devlet, ekonomiden eğitime kadar birçok alanı doğrudan yönlendirmiştir.\n\n## İç Politikalar\n\n1941 yılına kadar ülke içinde yönetim güçlendirilmiştir:\n\n- 1932'den beri atılan altyapı ve fabrikalaşma adımları hızlandırıldı.\n- 1940'tan itibaren askerî kuvvetler büyük ölçüde millîleştirildi.\n- Almanya ile teknoloji anlaşmaları yapıldı; tank, uçak ve donanma üretimi geliştirildi.\n- Kapalı ekonomi modeliyle dışa bağımlılık azaltılmaya çalışıldı.\n- Demiryolları, geniş şehir yolları, havalimanları ve fabrikalar kuruldu.\n- Ahilik sistemi resmî bir yapıya kavuşturuldu.\n- Okullarda ahlak, terbiye ve devlet disiplini temalı eğitimler verildi.\n- Ankara ve İstanbul uzun vadeli şehir planlarıyla yeniden düzenlendi.\n\n> Not: Yönetimin azınlıklara ve muhaliflere yönelik sert uygulamaları, bu evrenin karanlık taraflarından biridir. Devlet güvenliği gerekçesiyle yapılan baskılar, ilerleyen yıllarda toplumsal hafızada derin yaralar bırakmıştır.\n\n## 1940 — Genişleme Dönemi\n\n### 14 Haziran 1940 — Fransa'nın Düşüşü\n\nFransa'nın düşmesiyle Suriye üzerindeki Fransız denetimi sona erdi. Türkiye Suriye'ye girerek bölgeyi kendi yönetimine bağladı.\n\n### 16 Eylül 1940 — İngiltere'nin Düşüşü\n\nİngiltere'nin düşmesiyle Afrika, Ortadoğu ve Orta Asya'daki İngiliz nüfuz alanları paylaşıma açıldı. Türkiye özellikle güney ve doğu yönündeki taleplerini artırdı.\n\n### 7 Aralık 1940 — Yunanistan'ın Düşüşü\n\nYunanistan Türkiye ve İtalya arasında paylaştırıldı. Kıbrıs Türkiye'ye bağlandı, Ege'deki adaların büyük kısmında Türk hâkimiyeti kuruldu.\n\n## 1941-1943 — Sovyet Savaşı\n\n22 Haziran 1941'de Almanya batıdan Barbarossa Harekâtı'nı başlatırken Türkiye Kafkasya, Bakü, Stalingrad ve Karadeniz hattı üzerinden savaşa katıldı.\n\nTürkiye'nin temel hedefleri:\n\n- Bakü petrol sahalarını ele geçirmek.\n- Kafkasya'yı kontrol altına almak.\n- Sivastopol çıkarma hattıyla Karadeniz güvenliğini sağlamak.\n- Türkistan yönünde Sovyet sonrası nüfuz oluşturmak.\n- SSCB içindeki Türk topluluklarının ayaklanmalarından yararlanmak.\n\n## 1943 Sonrası\n\nSSCB'nin yıkılmasından sonra Türkiye bölgesel devlet olmaktan çıkıp büyük bir nüfuz alanına sahip güç hâline geldi. Ancak bu genişleme beraberinde ciddi sorunlar doğurdu:\n\n- Yeni bölgelerin yönetimi.\n- Yerel halkların farklı beklentileri.\n- Almanya ile nüfuz rekabeti.\n- Amerika'nın artan düşmanlığı.\n- Savaş ekonomisinden kalıcı düzene geçiş zorluğu.\n\n## 1980'lerde Türkiye\n\nRomanın ana zamanında Türkiye, Alperen döneminin mirası üzerinde yükselen büyük ama ağır bir devlettir. Resmî tarih zaferleri anlatır; aile hikâyeleri, dedelerin anıları ve halk hafızası ise bu zaferlerin bedelini daha karmaşık biçimde taşır.\n\n## Bağlantılar\n\n- [[Alperen]]\n- [[29 kasım 1938]]\n- [[10 KASIM 1940]]\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- [[1943 26 nisan SSCB Yıkıldı]]\n- [[Genel Dünya]]\n\n---\n\n# 1944-1946 Atom Çağı ve Türk Güney Düzeni\n\nSSCB'nin yıkılmasından sonra Türkiye, Türkistan'daki uranyum kaynaklarını kontrol altına aldı. Bu kaynaklar, 1944'ten itibaren gizli atom programının temeli oldu.\n\n## Atom Programı\n\nTürkiye'nin atom programı üç nedene dayanıyordu:\n\n- Amerika'nın okyanuslarla korunan coğrafyasını klasik işgalle yenmenin zorluğu.\n- Türkistan uranyumunun Türkiye'ye stratejik üstünlük sağlaması.\n- Almanya karşısında bağımsız büyük güç konumunu koruma isteği.\n\n## Washington Saldırısı\n\n1 Ağustos 1946'da Türkiye Washington D.C.'ye ilk atom bombasını attı. Bu saldırı Amerika'yı hemen yok etmedi; fakat federal yönetimi parçaladı ve devletin komuta zincirini kırdı.\n\n## Dünya Paylaşımındaki Türk Payı\n\nAmerika'nın tamamen çöküşünden sonra Türkiye şu alanları aldı veya nüfuzuna bağladı:\n\n- Güney Amerika kıtasının tamamı.\n- Meksika, Orta Amerika ve Karayip hattı üzerinde güney geçiş nüfuzu.\n- Ortadoğu, Kafkasya, Türkistan ve Hazar hattı.\n- Doğu ve Güney Afrika.\n- Hint Okyanusu ve Güney Atlantik bağlantıları.\n- Viyana ve Kızıl Elma kapsamındaki tarihî Türk hedefleri.\n\n## Kızıl Elma\n\n1946 müzakerelerinde Viyana'nın Türkiye'ye bağlanması, Alperen Keser yönetimi tarafından Kızıl Elma'ya ulaşılması olarak ilan edildi. Bu, Türkiye'nin devlet propagandasında en büyük tarihî tamamlanma anı sayıldı.\n\n## Uzun Vadeli Sonuç\n\nTürkiye artık bölgesel güç değil, güney dünyanın imparatorluk merkezidir. Fakat Güney Amerika'dan Türkistan'a uzanan bu devasa alan, yönetim, isyan, lojistik ve kimlik sorunlarını da beraberinde getirir.\n\n## Bağlantılar\n\n- [[1944 Türkistan Uranyum Seferberliği]]\n- [[1946 1 Ağustos Washington Atom Bombardımanı]]\n- [[1946 Kızıl Elma ve Viyana'nın Türkiye'ye Bağlanması]]\n- [[Dünya Paylaşımı 1946]]",
+          "summary": "Büyük Türk İmparatorluğu, 1950'de İstanbul'da resmen ilan edilen, Ankara merkezli otoriter-milliyetçi güney imparatorluğudur.",
+          "content": "# Büyük Türk İmparatorluğu\n\n## Kuruluş çizgisi\n10 Kasım 1938'de Atatürk'ün vefatından sonra, 29 Kasım 1938'de Alperen Keser yönetimi devralır. Yeni yönetim merkezî devleti, sanayileşmeyi ve askerî hazırlığı ön plana çıkarır. 1946 dünya paylaşımıyla yeni nüfuz alanı şekillenir; 1950'de İstanbul'da Büyük Türk İmparatorluğu adı resmen ilan edilir.\n\n## Yönetim\n1985'te devletin başında Ulu Han Selim Arkan bulunur. Başkent Ankara'dır. Ulu Han'ın iradesini resmî ve bağlayıcı emirlere dönüştüren Başbuyruk makamı, merkezî bürokrasinin temel parçalarındandır. Nazırlıklar, askerî kurumlar ve istihbarat teşkilatları geniş imparatorluk alanını yönetir.\n\n## Toprakların yönetimi\nİmparatorluğun bütün bölgeleri aynı statüde değildir. Anadolu ve bazı çekirdek bölgeler doğrudan vilayet düzeniyle yönetilir. Uzak coğrafyalarda umumi valilikler bulunur. Buhara, Hive ve Hicaz gibi bağlı hanlıklar ise iç işlerinde belirli ölçüde serbest, dış ilişkilerinde Ankara'ya bağlıdır. Bu farklılıklar, geniş coğrafyayı tek merkezden yönetmenin siyasî ve idarî zorluklarını gösterir.\n\n## Toplum ve kurumlar\nEğitim ve gençlik siyaseti devletin doğrudan ilgilendiği alanlardır. Kanat sistemi öğrencilerin okul içindeki sorumluluk ve temsil düzeylerini belirler; Hilalifiyet Merkezleri ise mektepler arasında müzakere ve öğrenci siyaseti için kurumsal alan oluşturur.\n\n## Devletin ahlakî yükü\nİmparatorluk kendisini Nazi Reich'ından farklı tanımlar ve ideolojik olarak otoriter-milliyetçi bir çizgidedir. Ancak bu fark onu masum kılmaz. Savaş yıllarında işlenen infazlar, sürgünler, zorla teslimler ve taşrada süren keyfî uygulamalar, devletin resmî düzen anlatısının altında duran gerçek sorumluluklardır.",
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [
-            {
-              "categoryId": "characters",
-              "id": "characters-alperen-keser",
-              "title": "Alperen Keser",
-              "date": "1888–1960"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-29-kasim-1938-md",
-              "title": "29 Kasım 1938 — Alperen Keser'in İktidarı İlanı",
-              "date": "29 Kasım 1938"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
-              "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
-              "date": "10 Kasım 1940"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
-              "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
-              "date": "22 Haziran 1941"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1943-26-nisan-sscb-yikildi-md",
-              "title": "26 Nisan 1943 — SSCB’nin Yıkılışı",
-              "date": "26 Nisan 1943"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
-              "title": "Genel Dünya",
-              "date": "1985 · DÜNYA DÜZENİ"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1944-turkistan-uranyum-seferberligi-md",
-              "title": "1944 — Türkistan Uranyum Seferberliği",
-              "date": "1944"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1946-1-agustos-washington-atom-bombardimani-md",
-              "title": "1 Ağustos 1946 — Washington Atom Bombardımanı",
-              "date": "1 Ağustos 1946"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1946-kizil-elma-ve-viyana-nin-turkiye-ye-baglanmasi-md",
-              "title": "1946 — Kızıl Elma ve Viyana'nın Türkiye'ye Bağlanması",
-              "date": "1946"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-dunya-paylasimi-1946-md",
-              "title": "Dünya Paylaşımı 1946",
-              "date": "1946 · SİYASİ PAYLAŞIM"
-            }
-          ],
+          "links": [],
           "categoryId": "geography",
           "ancestors": []
         },
@@ -2183,43 +2146,12 @@
           "sourceName": "Almanya",
           "title": "Almanya",
           "date": "DEVLET DOSYASI",
-          "summary": "Almanya, bu evrende II. Dünya Savaşı'nın Avrupa'daki belirleyici gücüdür. Blitzkrieg taktikleriyle Fransa'yı kısa sürede düşürmüş, ardından İngiltere'ye karşı Deniz Aslanı Harekâtı'nı başarıya ulaştırmıştır.",
-          "content": "Almanya, bu evrende II. Dünya Savaşı'nın Avrupa'daki belirleyici gücüdür. Blitzkrieg taktikleriyle Fransa'yı kısa sürede düşürmüş, ardından İngiltere'ye karşı Deniz Aslanı Harekâtı'nı başarıya ulaştırmıştır.\n\n## Siyasi Konum\n\nAdolf Hitler yönetimindeki Almanya, savaşın ilk yıllarında Avrupa'nın en baskın askerî gücü hâline gelmiştir. Türkiye ile kurduğu ittifak, Almanya'ya güney ve doğu cephelerinde stratejik avantaj sağlamıştır.\n\n## Türkiye ile İlişkiler\n\nAlmanya, Türkiye'yi yalnızca yardımcı müttefik olarak değil, Sovyetler Birliği'ne karşı tamamlayıcı bir kara gücü olarak görmüştür. Türkiye'ye teknoloji, askerî eğitim, tank ve uçak üretimi konusunda destek verilmiştir.\n\nAncak iki ülke arasında tam bir eşitlik yoktur. Almanya kendisini Mihver'in merkez gücü olarak görürken Alperen Keser yönetimi Türkiye'nin bağımsız çıkarlarını korumaya çalışmıştır.\n\n## Savaş Başarıları\n\n- Fransa'nın düşürülmesi.\n- İngiltere'nin işgali.\n- İskandinav ülkelerinin kontrol altına alınması.\n- Sovyet batı cephesinde Minsk, Smolensk, Kiev, Leningrad ve Moskova hattında ilerleyiş.\n- SSCB'nin parçalanmasında başat rol.\n\n## Savaş Sonrası\n\nAlmanya Avrupa Rusyası, Baltık hattı ve doğuya uzanan geniş bölgelerde nüfuz kurmuştur. Bu genişleme Almanya'yı devasa bir kara imparatorluğuna dönüştürmüş, fakat aynı zamanda sürekli direniş ve yönetim sorunu yaratmıştır.\n\n## 1980'lerde Almanya\n\n1980'lerde Almanya hâlâ Avrupa'nın en sert ve merkeziyetçi gücüdür. Türkiye ile ilişkiler resmî olarak müttefiklik şeklinde devam etse de iki güç arasında nüfuz alanları konusunda örtülü gerilim vardır.\n\n## Bağlantılar\n\n- [[1940 14 haziran Fransa Düştü]]\n- [[1940 16 eylül İngiltere düştü]]\n- [[1941 22 haziran SSCB savaşı Başladı]]\n- [[1943 26 nisan SSCB Yıkıldı]]\n- [[Türkiye]]\n\n---\n\n# Tarihsel Olaylara Göre Almanya'nın Yaşantısı\n\n## 1938-1940\n\nAlmanya, Türkiye'deki yönetim değişimini Sovyetler'e karşı gelecekte kullanılabilecek stratejik fırsat olarak gördü. Türkiye'nin modernleşen ordusu, Almanya'nın doğu planları için güneyden destek anlamına geliyordu.\n\n## 1940\n\nFransa ve İngiltere'nin düşmesi Almanya'da zafer sarhoşluğu yarattı. Ancak bu zaferler aynı zamanda yeni işgal yönetimleri, ikmal sorumluluğu ve genişleyen cephe hazırlıkları demekti. Türkiye ile ilişkiler daha açık hâle geldi.\n\n## 1941\n\nBarbarossa başlarken Alman toplumu ve ordusu kısa savaş beklentisi taşıyordu. Türkiye'nin savaşa katılması bu beklentiyi güçlendirdi. Alman komutanlığı, Sovyetlerin Kafkasya ve Bakü için kuvvet ayırmak zorunda kalmasını büyük avantaj saydı.\n\n## 1942\n\nAlmanya'nın ilerleyişi sürerken lojistik zorluklar arttı. Leningrad, Stalingrad ve Don-Volga hattındaki başarılar zafer hissini büyüttü; fakat ele geçirilen bölgelerin idaresi giderek ağırlaştı.\n\n## 1943\n\nSSCB'nin yıkılması Almanya'yı devasa bir kara imparatorluğuna çevirdi. Ancak 1943 sonrası Almanya'nın ana meselesi savaş kazanmak değil, kazanılan coğrafyayı kontrol etmek oldu.",
+          "summary": "Großdeutsches Reich, 1985'te kuzey nüfuz alanını yöneten Nazi imparatorluğudur; merkezi Germania'dır.",
+          "content": "# Großdeutsches Reich\n\n## Devletin konumu\nGroßdeutsches Reich, 1985'te Avrupa ve kuzey nüfuz alanlarının merkezinde bulunan Nazi rejimidir. Yönetimin başında Führer und Reichskanzler Reinhard Falkenhorst yer alır. Reich'ın siyasî düzeni parti, SS, ordu ve sanayi çevrelerinin iç rekabeti üzerine kuruludur.\n\n## Yönetim ve baskı\nParti teşkilatı atamaları ve ideolojik disiplini yürütür; SS ve güvenlik aygıtı rejimin gözetim ve baskı düzenini uygular; ordu ve sanayi ise devletin askerî ve ekonomik gücünü taşır. Bu kurumlar arasında rekabet bulunması, Reich'ın otoriter ve Nazi niteliğini değiştirmez.\n\n## Türkiye ile ilişkiler\nTürkiye ile geçmişteki ittifak, savaş sonrasında çıkar ve güç rekabetine dönüşmüştür. Diplomatik heyetler ve teknik temaslar sürse de iki taraf birbirinin havacılık, sensör, bilim ve stratejik kapasitesini yakından izler. Açık dostluk söyleminin altında karşılıklı güvensizlik bulunur.\n\n## Bilim ve teknoloji\nReich füze, ağır zırh, yüksek enerji fiziği ve antimadde araştırmalarına ağırlık verir. SFA-P Polaris, bu araştırmaların önemli merkezlerinden biridir. Türk bilim çevreleriyle arasındaki fark yalnızca teknik önceliklerden değil, bilinmeyen doğa olaylarına yaklaşım biçiminden de kaynaklanır.\n\n## Koloniler ve bağlı alanlar\nReich'ın Avrupa dışındaki nüfuz alanları tek tip değildir. Bazı bölgeler doğrudan yönetilir, bazıları koloni veya işgal düzenindedir. Yerel kimlikler ve direniş çevreleri varlığını sürdürür; geniş coğrafyanın idaresi rejim için sürekli bir yük oluşturur.",
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1940-14-haziran-fransa-dustu-md",
-              "title": "14 Haziran 1940 — Fransa'nın Düşüşü",
-              "date": "14 Haziran 1940"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1940-16-eylul-ingiltere-dustu-md",
-              "title": "16 Eylül 1940 — İngiltere'nin Düşüşü",
-              "date": "16 Eylül 1940"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
-              "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
-              "date": "22 Haziran 1941"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1943-26-nisan-sscb-yikildi-md",
-              "title": "26 Nisan 1943 — SSCB’nin Yıkılışı",
-              "date": "26 Nisan 1943"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-turkiye-md",
-              "title": "Türkiye",
-              "date": "DEVLET DOSYASI"
-            }
-          ],
+          "links": [],
           "categoryId": "geography",
           "ancestors": []
         },
@@ -2229,43 +2161,12 @@
           "sourceName": "Amerika",
           "title": "Amerika",
           "date": "DEVLET DOSYASI",
-          "summary": "Amerika, bu evrende Mihver'in Avrupa ve Asya'daki yükselişine karşı ayakta kalan en büyük dış güçtür. İngiltere'nin düşüşü Amerika'yı Atlantik dünyasında yalnızlaştırmış, savaş sonrası dönemde Almanya ve Türkiye'ye karşı başlıca karşı blok hâline get",
-          "content": "Amerika, bu evrende Mihver'in Avrupa ve Asya'daki yükselişine karşı ayakta kalan en büyük dış güçtür. İngiltere'nin düşüşü Amerika'yı Atlantik dünyasında yalnızlaştırmış, savaş sonrası dönemde Almanya ve Türkiye'ye karşı başlıca karşı blok hâline getirmiştir.\n\n## Savaş Sırasındaki Konum\n\nFransa'nın ve ardından İngiltere'nin düşmesi Amerika'da büyük şok yaratmıştır. Amerikan basını, özellikle Hitler'in Ankara ziyareti ve Türkiye-Almanya yakınlaşmasını yeni dünya düzeninin tehlikeli işareti olarak görmüştür.\n\n## Stratejik Kaygılar\n\n- Almanya'nın Avrupa'yı tek merkezden yönetmesi.\n- Türkiye'nin Ortadoğu, Kafkasya ve Türkistan yönünde genişlemesi.\n- İngiliz sömürge sisteminin dağılmasıyla küresel deniz dengesinin bozulması.\n- Japonya'nın Pasifik'teki hareket alanının genişlemesi.\n\n## Savaş Sonrası Rolü\n\nAmerika doğrudan Avrupa kıtasına hâkim olamasa da deniz gücü, sanayi kapasitesi ve uzak coğrafi konumu sayesinde bağımsız kaldı. Savaş sonrası dönemde sürgündeki hükümetler, muhalif hareketler ve Mihver karşıtı ağlar için merkez hâline geldi.\n\n## Bağlantılar\n\n- [[1940 16 eylül İngiltere düştü]]\n- [[10 KASIM 1940]]\n- [[Genel Dünya]]\n- [[Almanya]]\n- [[Türkiye]]\n\n---\n\n# Tarihsel Olaylara Göre Amerika'nın Yaşantısı\n\n## 1938-1940\n\nAmerika başlangıçta Türkiye'deki değişimi Avrupa krizinin yan unsuru olarak gördü. Fakat Hitler'in Ankara ziyareti ve İngiltere'nin düşüşü, kamuoyunda Mihver'in dünya düzenini değiştirdiği fikrini güçlendirdi.\n\n## 1940\n\nİngiltere'nin düşmesi Amerikan halkında şok etkisi yarattı. Atlantik artık güvenli bir tampon değil, Mihver tehdidinin uzandığı bir hat olarak görülmeye başladı.\n\n## 1941\n\nSSCB savaşı başladığında Amerika, Sovyetlerin ayakta kalmasının Almanya-Türkiye eksenini dengeleyeceğini hesapladı. Türkiye'nin Kafkasya'dan savaşa girmesi bu umudu zayıflattı.\n\n## 1942\n\nBakü, Stalingrad ve Leningrad kayıpları Washington'da Sovyet çöküşünün mümkün olduğu görüşünü güçlendirdi. Amerika uzun vadeli bir soğuk mücadele hazırlığına başladı.\n\n## 1943\n\nSSCB'nin yıkılması Amerika'yı Mihver karşısındaki en büyük bağımsız güç hâline getirdi. Bu tarihten sonra Amerika'nın stratejisi doğrudan Avrupa'yı kurtarmaktan çok Almanya-Türkiye düzenini uzun vadede yıpratmaya yöneldi.\n\n# 1946\n\nAmerika ya 1 ağustos tarihinde washington dc ye atom bombası türkiye tarafından atıldı 1 hafta sonra naziler 8 ağustos günü new york a attı",
+          "summary": "Amerika Birleşik Devletleri 1946'da merkezî devlet olarak çökmüştür; 1985'te bağımsız Amerikan devleti veya üçüncü dünya kutbu yoktur.",
+          "content": "# Eski Amerika Birleşik Devletleri\n\n## 1946 öncesi konum\nAvrupa'daki Mihver ilerleyişi, İngiltere'nin düşüşü ve Sovyetler Birliği'nin parçalanması Amerika'yı giderek yalnızlaştırdı. Buna rağmen Amerika, 1946'ya kadar denizaşırı büyük güç olarak varlığını sürdürdü.\n\n## Ağustos 1946\n**1 Ağustos 1946'da Washington, D.C. Türkiye'nin atom saldırısına uğradı.** Bu saldırı federal yönetimi ağır biçimde sarstı. **8 Ağustos 1946'da New York'a Almanya tarafından ikinci saldırı düzenlendi.** İki darbe, daha önceki okyanus yenilgileriyle birlikte merkezî devlet yapısının çöküşünü hızlandırdı.\n\n## Toprakların paylaşılması\nAmerika'nın kuzey ve orta bölgeleri Reich'ın nüfuz alanına; Meksika, Orta Amerika ve daha güneydeki alanlar Türk nüfuzuna girdi. Bazı eski eyaletler tampon veya ortak ekonomik alan olarak düzenlendi. Bu bölgelerin hepsi aynı idarî statüde değildir.\n\n## 1985'te Amerika ne demektir?\n1985 yılında Amerika Birleşik Devletleri bağımsız bir devlet olarak mevcut değildir. Eski Amerikan topraklarında koloniler, bağlı yönetimler, yerel topluluklar, direniş çevreleri ve göçmen hafızası bulunur. Washington ve New York tarihî önemlerini korur; ancak eski federal devletin işleyen başkentleri değildir.",
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1940-16-eylul-ingiltere-dustu-md",
-              "title": "16 Eylül 1940 — İngiltere'nin Düşüşü",
-              "date": "16 Eylül 1940"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
-              "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
-              "date": "10 Kasım 1940"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
-              "title": "Genel Dünya",
-              "date": "1985 · DÜNYA DÜZENİ"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-almanya-md",
-              "title": "Almanya",
-              "date": "DEVLET DOSYASI"
-            },
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-turkiye-md",
-              "title": "Türkiye",
-              "date": "DEVLET DOSYASI"
-            }
-          ],
+          "links": [],
           "categoryId": "geography",
           "ancestors": []
         },
@@ -2275,31 +2176,12 @@
           "sourceName": "Diğer Devletler",
           "title": "Diğer Devletler",
           "date": "DİĞER GÜÇLER",
-          "summary": "Bu not, ana güçler dışında kalan devletlerin bu alternatif dünyadaki konumunu özetler.",
-          "content": "Bu not, ana güçler dışında kalan devletlerin bu alternatif dünyadaki konumunu özetler.\n\n## İtalya\n\nİtalya, Mihver içinde yer almasına rağmen Almanya ve Türkiye kadar kalıcı güç oluşturamamıştır. Yunanistan'ın paylaşımında rol almış, Akdeniz'de bazı kazanımlar elde etmiştir. Ancak askerî kapasite ve yönetim becerisi bakımından sınırlı kalmıştır.\n\n## Japonya\n\nJaponya Pasifik'te önemli kazanımlar elde etmiş fakat Almanya ve Türkiye'nin kara imparatorlukları kadar geniş bir etki alanı kuramamıştır. Amerika ile rekabeti Pasifik hattında devam etmiştir.\n\n## İngiltere\n\nİngiltere'nin düşüşü dünya düzeninin en büyük kırılmalarından biridir. Ada işgal edilmiş, sömürgeleri parçalanmış ve nüfuz alanları Mihver devletleri arasında tartışmalı biçimde paylaşılmıştır. İngiliz kimliği ve direnişi tamamen yok olmamış, fakat devletin eski küresel gücü sona ermiştir.\n\n## Fransa\n\nFransa'nın erken çöküşü Avrupa'daki direniş ihtimalini zayıflatmıştır. Suriye üzerindeki kontrolünü kaybetmiş, bu durum Türkiye'nin güneye ilerlemesini kolaylaştırmıştır.\n\n## Sovyet Sonrası Devletler\n\nSSCB'nin yıkılmasından sonra bazı bölgelerde bağlı yönetimler, bazı bölgelerde tampon devletler ortaya çıkmıştır. Baltık, Kafkasya ve Türkistan bölgelerinde kimlik mücadeleleri uzun süre devam etmiştir.\n\n## Bağlantılar\n\n- [[Genel Dünya]]\n- [[1940 7 aralık Yunanistan Düştü]]\n- [[1943 26 nisan SSCB Yıkıldı]]\n\n---\n\n# Tarihsel Olaylara Göre Diğer Devletlerin Yaşantısı\n\n## İngiltere\n\nİngiltere'nin düşüşü yalnızca ada halkının yenilgisi değil, küresel imparatorluğun dağılması anlamına geldi. Sömürge yönetimleri merkezsiz kaldı; bazıları yerel isyanlarla, bazıları Mihver baskısıyla parçalandı.\n\n## Fransa\n\nFransa'nın erken çöküşü Suriye gibi manda bölgelerini savunmasız bıraktı. Fransız sürgün çevreleri Amerika ile temas kurarak varlıklarını sürdürmeye çalıştı.\n\n## İtalya\n\nİtalya, Yunanistan ve Akdeniz'de kazanım elde etti fakat Türkiye'nin Ege ve Kıbrıs'taki yükselişi Roma'yı rahatsız etti. İtalya Mihver içinde müttefik ama ikinci sınıf güç hâline geldi.\n\n## Japonya\n\nJaponya, Avrasya'daki Mihver başarılarından cesaret aldı. Ancak Pasifik'te Amerika ile rekabeti nedeniyle kaynaklarını dikkatli kullanmak zorundaydı.\n\n## Eski Sovyet Halkları\n\n1943 sonrası eski Sovyet halkları farklı kaderler yaşadı. Bazıları Almanya veya Türkiye denetimine girdi, bazıları bağlı devlet yapısına dönüştürüldü, bazıları ise yeraltı direnişine yöneldi.",
+          "summary": "İtalya bölünmüş ve Roma ortak yönetimlidir; Japonya ikincil/bağlı aktördür. İngiltere, Fransa ve Sovyet sonrası bölgeler eski devlet statülerini kaybetmiştir.",
+          "content": "# Diğer Devletler ve Eski Güçler\n\n## İtalya\nİtalya tek bir imparatorluğa bütünüyle bağlanmış değildir. Kuzey kesimi Alman, güneyi ve Akdeniz adalarının bir bölümü Türk nüfuzundadır. Roma ortak yönetim alanı olarak korunmuştur. Bu paylaşım, ülkenin siyasî bütünlüğünü ortadan kaldırırken sembolik başkent statüsünü ayrı tutar.\n\n## Japonya\nJaponya Pasifik'te varlığını ve bölgesel etkisini korur; ancak 1985 dünya düzeninin üçüncü egemen kutbu değildir. Yeni düzenin ana karar merkezleri Almanya ve Türkiye'dir.\n\n## İngiltere ve Fransa\nİngiltere'nin 1940'ta düşmesi Britanya İmparatorluğu'nun eski sömürge ağını parçalamıştır. Fransa da 1940 yenilgisinin ardından eski denizaşırı konumunu kaybetmiştir. Her iki halkın kimliği ve direniş hafızası devam eder; fakat eski küresel devlet güçleri ortadan kalkmıştır.\n\n## Sovyet sonrası coğrafya\n1943'te Sovyet merkezî yapısının çöküşünden sonra kuzey ve doğu bölgelerinde bağlı yönetimler, işgal alanları ve yerel direniş yapıları ortaya çıkmıştır. Bu bölgeler tek bir bağımsız Sovyet ardılı devlet altında birleşmez.",
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [
-            {
-              "categoryId": "geography",
-              "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
-              "title": "Genel Dünya",
-              "date": "1985 · DÜNYA DÜZENİ"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1940-7-aralik-yunanistan-dustu-md",
-              "title": "7 Aralık 1940 — Yunanistan'ın Düşüşü",
-              "date": "7 Aralık 1940"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1943-26-nisan-sscb-yikildi-md",
-              "title": "26 Nisan 1943 — SSCB’nin Yıkılışı",
-              "date": "26 Nisan 1943"
-            }
-          ],
+          "links": [],
           "categoryId": "geography",
           "ancestors": []
         },
@@ -2402,13 +2284,19 @@
           "title": "İstanbul — 1985 Şehir Profili",
           "date": "1985",
           "summary": "Romanın okul ve aile yaşamının geçtiği şehir. İstanbul Şarkın İlim ve Teknoloji Mektebi'nin şehirde bulunduğu kesin; ilçe ve kampüs adresi henüz belirlenmemiştir.",
-          "content": "# İstanbul — 1985 Şehir Profili\n\n## Şehrin evrendeki yeri\n\nİstanbul, romanın 1985 yılında geçen okul ve aile yaşamının temel şehirlerinden biridir. Ana karakter Oğuz Kağan Atalay ve B-3 sınıfının hikâyesi İstanbul'daki eğitim çevresinde gelişir.\n\n## Eğitim merkezi\n\nİstanbul Şarkın İlim ve Teknoloji Mektebi, B-3 sınıfının bağlı olduğu okuldur. Okulun adı kesinleşmiştir. Eğitim yaklaşımı yalnızca teknik üretime dayanmaz; fen ve teknoloji derslerinin yanında dil, tarih, yurttaşlık, sosyolojik eğitim, felsefe ve sanat dersleri de bulunur.\n\n## Şehir dokusu\n\nİstanbul'un 1985 idarî bölünümü, okulun bulunduğu ilçe, kampüsün kesin adresi, ulaşım bağlantıları ve mahalle profilleri mevcut kanonda henüz sabitlenmemiştir. Bu dosyada gerçek İstanbul haritasından otomatik olarak alternatif evrene aktarılmış bir idarî düzen varsayılmaz.\n\n## İlgili kayıtlar\n\n- İstanbul Şarkın İlim ve Teknoloji Mektebi\n- [[B-3 Sınıf Profili]]\n- [[B-3 Ders Programı]]",
+          "content": "# İstanbul — 1985 Şehir Profili\n\n## Şehrin evrendeki yeri\n\nİstanbul, romanın 1985 yılında geçen okul ve aile yaşamının temel şehirlerinden biridir. Ana karakter Oğuz Kağan Atalay ve B-3 sınıfının hikâyesi İstanbul'daki eğitim çevresinde gelişir.\n\n## Eğitim merkezi\n\nİstanbul Şarkın İlim ve Teknoloji Mektebi, B-3 sınıfının bağlı olduğu okuldur. Okulun adı kesinleşmiştir. Eğitim yaklaşımı yalnızca teknik üretime dayanmaz; fen ve teknoloji derslerinin yanında dil, tarih, yurttaşlık, sosyolojik eğitim, felsefe ve sanat dersleri de bulunur.\n\n## Şehir dokusu\n\nİstanbul'un 1985 idarî bölünümü, okulun bulunduğu ilçe, kampüsün kesin adresi, ulaşım bağlantıları ve mahalle profilleri mevcut kanonda henüz sabitlenmemiştir. Bu dosyada gerçek İstanbul haritasından otomatik olarak alternatif evrene aktarılmış bir idarî düzen varsayılmaz.\n\n## İlgili kayıtlar\n\n- [[İstanbul Şarkın İlim ve Teknoloji Mektebi]]\n- [[B-3 Sınıf Profili]]\n- [[B-3 Ders Programı]]",
           "order": 3,
           "aliases": [
             "İstanbul"
           ],
           "children": [],
           "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-sarkin-students",
+              "title": "İstanbul Şarkın İlim ve Teknoloji Mektebi",
+              "date": "ŞARKIN MEKTEBİ"
+            },
             {
               "categoryId": "society",
               "id": "society-asli-olan-duzen-b-3-b-3-sinif-profili-md",
@@ -2673,7 +2561,7 @@
     {
       "id": "characters",
       "title": "Karakterler",
-      "description": "Kısa, genel ve spoilersız karakter tanıtımları. Aile bağları ayrı soy ağaçlarında düzenlenmiştir.",
+      "description": "Genç kuşak, Atalay ve Keser aileleri, mektep kadrosu, imparatorluk yönetimi ve Reich çevresi. Karakterlerin görevleri, hedefleri, kişilikleri ve birbirleriyle ilişkileri birlikte ele alınır.",
       "view": "tree",
       "label": "KARAKTER VE SOY AĞAÇLARI",
       "order": 3,
@@ -2684,128 +2572,213 @@
           "sourceName": "Genç karakterler",
           "title": "Genç karakterler",
           "date": "GENÇ KARAKTERLER",
-          "summary": "1985 yılında hikâyenin genç kuşağını oluşturan öğrenciler ve arkadaş çevresi.",
-          "content": "1985 yılında hikâyenin genç kuşağını oluşturan öğrenciler ve arkadaş çevresi.",
+          "summary": "1985 yılında iki İstanbul mektebinde öğrenim gören, farklı hedefleri ve yönetim anlayışlarıyla birbirine bağlanan genç kuşak.",
+          "content": "1985 yılında iki İstanbul mektebinde öğrenim gören, farklı hedefleri ve yönetim anlayışlarıyla birbirine bağlanan genç kuşak.",
           "order": 0,
           "aliases": [],
           "children": [
             {
-              "id": "characters-alev-acar",
-              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Alev Acar.md",
-              "sourceName": "Alev Acar",
-              "title": "Alev Acar",
-              "date": "1968 · 17 yaş",
-              "summary": "Neşeli, konuşkan, uyumlu ve arkadaşlarına bağlı.",
-              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 2. Kanat · sivil pilotluk hedefi\n\n**Dış görünüş:** Düz kızıl saçlı ve ela gözlü.\n\n**Kişilik:** Neşeli, konuşkan, uyumlu ve arkadaşlarına bağlı.",
-              "order": 999,
-              "aliases": [
-                "Alev Acar"
+              "id": "characters-uskudar-students",
+              "path": "uskudar-students",
+              "sourceName": "Üsküdar Milli İlim ve İrfan Mektebi",
+              "title": "Üsküdar Milli İlim ve İrfan Mektebi",
+              "date": "ÜSKÜDAR MEKTEBİ",
+              "summary": "Oğuz, Alper, İsmail, Muhammed Mete, Aylin ve Alev'in bulunduğu okul çevresi.",
+              "content": "Oğuz, Alper, İsmail, Muhammed Mete, Aylin ve Alev'in bulunduğu okul çevresi.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-oguz-kagan-atalay",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Oğuz Kağan Atalay.md",
+                  "sourceName": "Oğuz Kağan Atalay",
+                  "title": "Oğuz Kağan Atalay",
+                  "date": "1968 · 17 yaş",
+                  "summary": "Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.",
+                  "content": "**Doğum:** 3 Ocak 1968 · İstanbul, Üsküdar\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 3. Kanat · Üsküdar Mektebi · askerî pilotluk hedefi\n\n**Dış görünüş:** Belirgin yüz hatlarına, kızıl saçlara ve düzenli bir görünüme sahiptir.\n\n**Kişilik:** Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nÜçüncü kanatlı Oğuz, iki kuşaktır uçak mühendisi yetiştiren Atalay ailesinin havacılık mirasını kokpitte sürdürmek ister. Dedesi Necdet ve babası Cengiz uçakları tasarlayan ve geliştiren insanlardır; Oğuz'un kendi arzusu ise onları uçurmaktır. Teknik bilgisi ve teorik hazırlığı güçlüdür, ancak 1985'te henüz gerçek uçuş eğitimi almamıştır.\n\nSoğukkanlılığı, düzenli çalışması ve bağımsız hareket etme isteği onu güvenilir kılar. Buna karşılık başarısızlığı kişisel bir kusur gibi algılaması, duygularını bastırması ve aynı anda çok fazla konuya yönelmesi zayıf yanlarıdır. Başlangıçta güçlü devlet ve emir-komuta düşüncesine yakındır; yaşadıkları, disiplin ile vicdanı birbirinden ayırıp ayıramayacağını sorgulamasına yol açar.\n\nİsmail'le ortaokul yıllarından beri süren dostluğu, Aylin'le gelişen yakınlığı ve Alper'le benzer görünen fakat ahlaken ayrışan rekabeti, Oğuz'un kişisel dünyasını şekillendirir. Babası Cengiz'in hayatında açıklayamadığı boşluklar bulunması da aile geçmişini sorgulamasına neden olur.",
+                  "order": 999,
+                  "aliases": [
+                    "Oğuz Kağan Atalay"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-atalay-lineage",
+                    "characters-atalay-third-generation"
+                  ]
+                },
+                {
+                  "id": "characters-alper-ulac-altayli",
+                  "path": "03_KARAKTERLER/Alper Ulaç Altaylı.md",
+                  "sourceName": "Alper Ulaç Altaylı",
+                  "title": "Alper Ulaç Altaylı",
+                  "date": "1968 · 17 yaş",
+                  "summary": "Üsküdar Mektebi'nin altı kanatlı başkanı; otoritesini kürsüden çok bilgi, gözlem ve ilişkileri yöneterek kurar.",
+                  "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 6. Kanat · Üsküdar Milli İlim ve İrfan Mektebi okul başkanı\n\n**Dış görünüş:** Düzenli, ölçülü ve sade giyinir; bulunduğu ortamda dikkat çekmekten çok kontrolü elinde tutmayı tercih eder.\n\n**Kişilik:** Sakin, hesapçı, stratejik ve kontrol ihtiyacı yüksek.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nAlper, Üsküdar Milli İlim ve İrfan Mektebi'nin altı kanatlı okul başkanı ve Üsküdar Bloğu'nun lideridir. Yetkisini yalnızca resmî makamından almaz; okul içindeki insanları, ilişkileri ve bilgi akışını dikkatle izler. Panosu, notları ve dosyaları onun yönetim anlayışının uzantısıdır: kim hangi konuda yetenekli, kimin kiminle bağı var, hangi gelişme yaklaşan bir soruna dönüşebilir? Bu sorulara cevap arayarak çevresini düzenler.\n\nSakin konuşur ve nadiren sesini yükseltir. Otoritesini açık cezadan çok, karşısındakine ne bildiğini göstererek kurar. İnsanları çoğu zaman kabiliyetleri üzerinden değerlendirir; hedefi için yöntemlerini esnetebilmesi, onu etkili olduğu kadar ahlaken tartışmalı da kılar. Buna rağmen İsmail'e ve bir ölçüde Oğuz'a karşı gerçek bağlar taşır. Oğuz'la rekabetleri, benzer disiplin ve dış görünüşün ardında farklı ahlak anlayışlarının bulunmasından kaynaklanır. Tomris'le geçmişte Hilalifiyet çevresinde yaşanan yenilgi de iki okul yöneticisi arasındaki gerilimin önemli zeminidir.",
+                  "order": 999,
+                  "aliases": [
+                    "Alper",
+                    "Alper Ulaç Altaylı"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-young-characters",
+                    "characters-uskudar-students"
+                  ]
+                },
+                {
+                  "id": "characters-ismail-yagiz-aslan",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/İsmail Yağız Aslan.md",
+                  "sourceName": "İsmail Yağız Aslan",
+                  "title": "İsmail Yağız Aslan",
+                  "date": "1968 · 17 yaş",
+                  "summary": "Neşeli, esprili ve samimi; gerektiğinde kararlı ve odaklı.",
+                  "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 5. Kanat · Üsküdar Mektebi başkan yardımcısı · siyaset hedefi\n\n**Dış görünüş:** Siyah saçlı, kahverengi gözlü; rahat ve gündelik giyimi tercih eder.\n\n**Kişilik:** Neşeli, esprili ve samimi; gerektiğinde kararlı ve odaklı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nİsmail, beş kanatlı okul başkan yardımcısıdır ve gelecekte siyasete girmeyi ister. Arkadaş çevresinde mizahı, rahat tavrı ve samimiyetiyle tanınır. İlgisini çekmeyen işlerde üşengeç davranabilir; ancak bir meseleyi gerçekten önemsediğinde uzun süre odaklanır ve çevresindekilerin beklemediği kadar pratik çözümler üretebilir. Bu nedenle onu yalnızca sınıfın şakacısı olarak görmek yanıltıcıdır.\n\nOğuz'la ortaokulun altıncı sınıfında tanışmış, yıllar içinde güçlü bir arkadaşlık kurmuştur. Oğuz'un ona taktığı İso lakabı, aralarındaki rahat ve samimi dili yansıtır. Alper'in yardımcısı olarak okul yönetiminde yer alması, onu dostluk çevresi ile öğrenci siyaseti arasında tutar. İsmail'in mizahı çoğu zaman gerginliği dağıtır; fakat konu ciddileştiğinde aynı rahatlığın altında kararlı bir taraf bulunduğu görülür.",
+                  "order": 999,
+                  "aliases": [
+                    "İsmail Yağız Aslan",
+                    "İso"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-young-characters",
+                    "characters-uskudar-students"
+                  ]
+                },
+                {
+                  "id": "characters-muhammed-mete",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Muhammed Mete.md",
+                  "sourceName": "Muhammed Mete",
+                  "title": "Muhammed Mete",
+                  "date": "1968 · 17 yaş",
+                  "summary": "Sakin, ölçülü, uyumlu ve yakın çevresinde konuşkan.",
+                  "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 4. Kanat · sivil havacılığa ilgi duyuyor\n\n**Dış görünüş:** Siyah, hafif kıvırcık saçlı ve kahverengi gözlü.\n\n**Kişilik:** Sakin, ölçülü, uyumlu ve yakın çevresinde konuşkan.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nMuhammed Mete, dördüncü kanatlı bir öğrenci ve sivil pilot adayıdır. İlk karşılaşmada ağırbaşlı ve mesafeli görünse de güvendiği insanların yanında konuşkan, neşeli ve enerjik olabilir. Farklı ortamlara hızlı uyum sağlaması, arkadaş grubunda çatışmayı büyütmek yerine denge kurmasına yardımcı olur.\n\nPilotluk onun için yalnızca bir meslek değildir; yeni yerler görmek, aynı noktaya bağlı kalmamak ve kendi hayatının yönünü seçebilmek anlamına gelir. Sadakat, samimiyet ve güvene önem verir. Sevdiği insanları kaybetmekten ve onları hayal kırıklığına uğratmaktan çekindiği için önemli kararlarında kendisini gereğinden fazla sorgulayabilir. Oğuz, Alev ve diğer arkadaşlarıyla kurduğu bağ, sınıfın daha sakin ama güvenilir damarını oluşturur. Oğuz'un kardeşi Muhammed Atalay ile aynı kişi değildir.",
+                  "order": 999,
+                  "aliases": [
+                    "Muhammed Mete"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-young-characters",
+                    "characters-uskudar-students"
+                  ]
+                },
+                {
+                  "id": "characters-aylin-aksoy",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Aylin Aksoy.md",
+                  "sourceName": "Aylin Aksoy",
+                  "title": "Aylin Aksoy",
+                  "date": "1968 · 17 yaş",
+                  "summary": "Sakin, dikkatli, gözlemci ve planlı.",
+                  "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 3. Kanat · hukuk alanına ilgi duyuyor\n\n**Dış görünüş:** Uzun, kıvırcık kumral saçlı ve koyu gözlü.\n\n**Kişilik:** Sakin, dikkatli, gözlemci ve planlı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nÜç kanatlı Aylin, hukuk alanında ilerlemek isteyen, çevresini önce gözlemleyip sonra karar veren bir öğrencidir. İnsanlara kolayca güvenmez; fakat tanıdığı birini peşinen yargılamaz. Küçük ayrıntıları fark etmesi ve olayları uzun süre zihninde tartması, onu iyi bir gözlemci yapar. Bunun bedeli bazen fazla düşünerek karar vermeyi geciktirmesidir.\n\nSadakat, dürüstlük ve güven onun için temel değerlerdir. Bir arkadaşının yanlışını sırf yakın oldukları için savunmaz; gerçeği söylemenin de dostluğun parçası olduğuna inanır. Alev'le çocukluktan gelen arkadaşlığı bu iki karakterin birbirini tamamlamasını sağlar: Aylin düşünür ve ölçer, Alev daha çabuk harekete geçer. Oğuz'u ilk gördüğünde Alper'e benzetir; zamanla ikisinin sakinliğinin ve karar verme biçimlerinin farklı olduğunu fark eder. Tomris ve Asena'yla ilişkisi ise kişisel yakınlık ile kendisine verilen görev arasında denge kurmasını gerektirir.",
+                  "order": 999,
+                  "aliases": [
+                    "Aylin Aksoy"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-young-characters",
+                    "characters-uskudar-students"
+                  ]
+                },
+                {
+                  "id": "characters-alev-acar",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Alev Acar.md",
+                  "sourceName": "Alev Acar",
+                  "title": "Alev Acar",
+                  "date": "1968 · 17 yaş",
+                  "summary": "Neşeli, konuşkan, uyumlu ve arkadaşlarına bağlı.",
+                  "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 2. Kanat · sivil pilotluk hedefi\n\n**Dış görünüş:** Düz kızıl saçlı ve ela gözlü.\n\n**Kişilik:** Neşeli, konuşkan, uyumlu ve arkadaşlarına bağlı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nİki kanatlı Alev, sınıfın hareketli ve iletişimi güçlü öğrencilerindendir. Yeni bir ortama girdiğinde uzun süre sessiz kalmaz; planlar değiştiğinde kolayca uyum sağlar ve yeni bir yol bulur. Bu canlı tavrı gerektiğinde ciddileşmesine engel değildir. Sivil pilotluk hedefi, hareket ve keşif isteğiyle birleşir.\n\nAlev için sadakat çok önemlidir; birine gerçekten bağlandıktan sonra onu yarı yolda bırakmayı kendine yakıştırmaz. Bununla birlikte güveni ilk anda bütünüyle vermez, karşısındaki insanı zaman içinde tanır. Aylin'le çocukluk arkadaşıdır: Aylin daha çok düşünürken Alev harekete geçer. Oğuz'u başlangıçta iyi niyetli ve güvenilir bulur; Muhammed Mete'yle de aynı arkadaş çevresinde yer alır.",
+                  "order": 999,
+                  "aliases": [
+                    "Alev Acar"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-young-characters",
+                    "characters-uskudar-students"
+                  ]
+                }
               ],
-              "children": [],
               "links": [],
-              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-young-characters"
               ]
             },
             {
-              "id": "characters-asena-korkut",
-              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Asena Korkut.md",
-              "sourceName": "Asena Korkut",
-              "title": "Asena Korkut",
-              "date": "1968 · 17 yaş",
-              "summary": "Konuşkan, sosyal, anlayışlı ve insan ilişkilerinde becerikli.",
-              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 5. Kanat\n\n**Dış görünüş:** Siyah, hafif kızıl tonlu saçları, kahverengi gözleri ve gözlüğü vardır.\n\n**Kişilik:** Konuşkan, sosyal, anlayışlı ve insan ilişkilerinde becerikli.",
-              "order": 999,
-              "aliases": [
-                "Asena Korkut"
+              "id": "characters-sarkin-students",
+              "path": "sarkin-students",
+              "sourceName": "İstanbul Şarkın İlim ve Teknoloji Mektebi",
+              "title": "İstanbul Şarkın İlim ve Teknoloji Mektebi",
+              "date": "ŞARKIN MEKTEBİ",
+              "summary": "Tomris ve Asena'nın temsil ettiği, Üsküdar çevresiyle görev ve rekabet ilişkileri bulunan okul.",
+              "content": "Tomris ve Asena'nın temsil ettiği, Üsküdar çevresiyle görev ve rekabet ilişkileri bulunan okul.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-tomris-ilter",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Tomris İlter.md",
+                  "sourceName": "Tomris İlter",
+                  "title": "Tomris İlter",
+                  "date": "1968 · 17 yaş",
+                  "summary": "Kendine güvenen, ciddi, kararlı ve yönetici yönü güçlü.",
+                  "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 6. Kanat · Şarkın Mektebi okul başkanı · millî istihbarat ve askerî güvenlik hedefi\n\n**Dış görünüş:** Uzun siyah saçlı ve koyu gözlü.\n\n**Kişilik:** Kendine güvenen, ciddi, kararlı ve yönetici yönü güçlü.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nTomris, İstanbul Şarkın İlim ve Teknoloji Mektebi'nin altı kanatlı okul başkanıdır. Yönetmek onun için yalnızca bir görev değil, dünyayı anlaşılır ve denetlenebilir tutmanın yoludur. İnsanların davranışlarını, hafızalarını ve aralarındaki güç ilişkilerini dikkatle izler; birkaç adım sonrasını düşünerek hareket eder. Doğrudan konuşur, kendine güvenir ve kararsız görünmekten hoşlanmaz.\n\nTomris'in temel korkusu yenilmekten çok kontrolü kaybetmektir. Bu yüzden gerektiğinde kuralı esnetebilir, gerçeği saklayabilir veya insanları kendi planına göre yönlendirebilir. Düzenin korunmasını önemserken, aynı düzeni korumak için kendi koyduğu ilkeleri çiğneyebilmesi karakterinin ana çelişkisidir. Gelecekte millî istihbarat ve askerî güvenlik alanında görev almak ister. Asena'yı çocukluğundan beri en güvendiği kişi olarak görür. Alper'le Hilalifiyet'te yaşanan eski yenilgiye dayanan rekabeti ise kişisel bir hesap hâline gelmiştir. Oğuz'la henüz tanışmamıştır.",
+                  "order": 999,
+                  "aliases": [
+                    "Tomris İlter",
+                    "TOMRİS İLTER"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-young-characters",
+                    "characters-sarkin-students"
+                  ]
+                },
+                {
+                  "id": "characters-asena-korkut",
+                  "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Asena Korkut.md",
+                  "sourceName": "Asena Korkut",
+                  "title": "Asena Korkut",
+                  "date": "1968 · 17 yaş",
+                  "summary": "Konuşkan, sosyal, anlayışlı ve insan ilişkilerinde becerikli.",
+                  "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 5. Kanat · Şarkın Mektebi başkan yardımcısı · saha istihbaratı hedefi\n\n**Dış görünüş:** Siyah, hafif kızıl tonlu saçları, kahverengi gözleri ve gözlüğü vardır.\n\n**Kişilik:** Konuşkan, sosyal, anlayışlı ve insan ilişkilerinde becerikli.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nAsena, Şarkın Mektebi'nin beş kanatlı başkan yardımcısıdır ve istihbarat alanında, özellikle saha görevlerinde ilerlemek ister. Tomris kadar kontrol odaklı değildir; insanları anlamak, konuşmalarından ve davranışlarından güven ilişkisi kurmak onun güçlü yanıdır. Sosyal, hareketli ve kolay iletişim kuran biri görünür; buna karşılık kendi yeterliliğini sık sık sorgular ve başarısız olduğunda bunu kişisel değeriyle karıştırabilir.\n\nTomris'le çocukluktan beri süren yakınlığı, onun en büyük gücü ve zayıflığıdır. Tomris'in kararlarını düşünmeden kabul etmez; tartar, fakat çoğu zaman onun yanında kalır. Bu bağlılık kör itaat değildir: Tomris'in yanlış yaptığını fark ettiğinde onu durdurabilecek ender kişilerden biri Asena'dır. Aylin ve Alev'le, Tomris'e kıyasla daha rahat ve doğal bir iletişim kurar. Bu nedenle iki okul arasındaki görev ilişkilerinde insanî bağları ve kişisel sadakati sürekli karşı karşıya gelir.",
+                  "order": 999,
+                  "aliases": [
+                    "Asena Korkut"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-young-characters",
+                    "characters-sarkin-students"
+                  ]
+                }
               ],
-              "children": [],
               "links": [],
-              "country": "turkish",
-              "categoryId": "characters",
-              "ancestors": [
-                "characters-young-characters"
-              ]
-            },
-            {
-              "id": "characters-aylin-aksoy",
-              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Aylin Aksoy.md",
-              "sourceName": "Aylin Aksoy",
-              "title": "Aylin Aksoy",
-              "date": "1968 · 17 yaş",
-              "summary": "Sakin, dikkatli, gözlemci ve planlı.",
-              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 3. Kanat · hukuk alanına ilgi duyuyor\n\n**Dış görünüş:** Uzun, kıvırcık kumral saçlı ve koyu gözlü.\n\n**Kişilik:** Sakin, dikkatli, gözlemci ve planlı.",
-              "order": 999,
-              "aliases": [
-                "Aylin Aksoy"
-              ],
-              "children": [],
-              "links": [],
-              "country": "turkish",
-              "categoryId": "characters",
-              "ancestors": [
-                "characters-young-characters"
-              ]
-            },
-            {
-              "id": "characters-tomris-ilter",
-              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Tomris İlter.md",
-              "sourceName": "Tomris İlter",
-              "title": "Tomris İlter",
-              "date": "1968 · 17 yaş",
-              "summary": "Kendine güvenen, ciddi, kararlı ve yönetici yönü güçlü.",
-              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 6. Kanat\n\n**Dış görünüş:** Uzun siyah saçlı ve koyu gözlü.\n\n**Kişilik:** Kendine güvenen, ciddi, kararlı ve yönetici yönü güçlü.",
-              "order": 999,
-              "aliases": [
-                "Tomris İlter",
-                "TOMRİS İLTER"
-              ],
-              "children": [],
-              "links": [],
-              "country": "turkish",
-              "categoryId": "characters",
-              "ancestors": [
-                "characters-young-characters"
-              ]
-            },
-            {
-              "id": "characters-ismail-yagiz-aslan",
-              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/İsmail Yağız Aslan.md",
-              "sourceName": "İsmail Yağız Aslan",
-              "title": "İsmail Yağız Aslan",
-              "date": "1968 · 17 yaş",
-              "summary": "Neşeli, esprili ve samimi; gerektiğinde kararlı ve odaklı.",
-              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci\n\n**Dış görünüş:** Siyah saçlı, kahverengi gözlü; rahat ve gündelik giyimi tercih eder.\n\n**Kişilik:** Neşeli, esprili ve samimi; gerektiğinde kararlı ve odaklı.",
-              "order": 999,
-              "aliases": [
-                "İsmail Yağız Aslan",
-                "İso"
-              ],
-              "children": [],
-              "links": [],
-              "country": "turkish",
-              "categoryId": "characters",
-              "ancestors": [
-                "characters-young-characters"
-              ]
-            },
-            {
-              "id": "characters-muhammed-mete",
-              "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Muhammed Mete.md",
-              "sourceName": "Muhammed Mete",
-              "title": "Muhammed Mete",
-              "date": "1968 · 17 yaş",
-              "summary": "Sakin, ölçülü, uyumlu ve yakın çevresinde konuşkan.",
-              "content": "**Doğum:** 1968\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 4. Kanat · sivil havacılığa ilgi duyuyor\n\n**Dış görünüş:** Siyah, hafif kıvırcık saçlı ve kahverengi gözlü.\n\n**Kişilik:** Sakin, ölçülü, uyumlu ve yakın çevresinde konuşkan.",
-              "order": 999,
-              "aliases": [
-                "Muhammed Mete"
-              ],
-              "children": [],
-              "links": [],
-              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-young-characters"
@@ -2843,9 +2816,9 @@
                   "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Necdet Atalay.md",
                   "sourceName": "Necdet Atalay",
                   "title": "Necdet Atalay",
-                  "date": "1918 · 67 yaş",
+                  "date": "1918 doğumlu",
                   "summary": "Ağırbaşlı, disiplinli, otoriter ve az konuşan.",
-                  "content": "**Doğum:** 1918\n\n**Yaş (1985):** 67\n\n**Genel rol:** Emekli askerî uçak mühendisi\n\n**Dış görünüş:** Sade, klasik ve düzenli giyinir.\n\n**Kişilik:** Ağırbaşlı, disiplinli, otoriter ve az konuşan.",
+                  "content": "**Doğum:** 1918\n\n**Genel rol:** Emekli askerî uçak mühendisi\n\n**Dış görünüş:** Sade, klasik ve düzenli giyinir.\n\n**Kişilik:** Ağırbaşlı, disiplinli, otoriter ve az konuşan.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nNecdet, Atalay ailesinin havacılık geleneğinin ilk önemli halkası olan emekli askerî uçak mühendisidir. 1940'lı yıllardan itibaren askerî havacılık ve uzun menzilli uçak projelerinde çalışmıştır. Oğuz'a uçakları, kanat biçimlerini ve mühendisliğin gerektirdiği sabrı çocukluğundan itibaren anlatmıştır. Sevgisini uzun konuşmalarla değil, bilgi ve deneyim aktararak gösterir.\n\nSert, suskun ve disiplinlidir. Geçmişi anlatırken bazı ayrıntıları seçerek paylaşır; kimi meseleleri hiç açmaması, Oğuz'un tarih ve aile hafızasına yaklaşımını etkiler. 1965 Gökkanat hangarı olayı, Necdet'in geçmişindeki önemli bir dönüm noktasıdır. Bu olayın ayrıntıları karakter tanıtımında açıklanmaz; okurun keşfedeceği tarihsel bir bağ olarak bırakılır.",
                   "order": 999,
                   "aliases": [
                     "Necdet Atalay"
@@ -2947,7 +2920,7 @@
                   "title": "Aysel Atalay",
                   "date": "1947 · 38 yaş",
                   "summary": "Sakin, sabırlı, anlayışlı ve koruyucu.",
-                  "content": "**Doğum:** 1947\n\n**Yaş (1985):** 38\n\n**Genel rol:** Atalay ailesinin annesi\n\n**Dış görünüş:** Sade ve zarif bir giyim tarzını tercih eder.\n\n**Kişilik:** Sakin, sabırlı, anlayışlı ve koruyucu.",
+                  "content": "**Doğum:** 1947\n\n**Yaş (1985):** 38\n\n**Genel rol:** Atalay ailesinin annesi\n\n**Dış görünüş:** Sade ve zarif bir giyim tarzını tercih eder.\n\n**Kişilik:** Sakin, sabırlı, anlayışlı ve koruyucu.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nAysel, Atalay ailesinin ev içindeki duygusal dengesini koruyan kişidir. Sakin, sabırlı ve gözlemcidir; Cengiz'in işine yoğunlaşmasını ve Oğuz'un giderek ağırlaşan hedeflerini anlayışla karşılamaya çalışır. Ancak anlayışlı olması kaygı duymadığı anlamına gelmez. Özellikle Oğuz'un kendisini fazla zorlamasından ve tehlikeli bir mesleğe yönelmesinden endişelenir.\n\nAile içinde çoğu zaman doğrudan sorgulamak yerine küçük değişiklikleri fark eder ve doğru zamanı bekler. Cengiz'in başarılarıyla gurur duyar, Oğuz'a ise duygularını rahatça gösterebileceği güvenli bir alan sunar. Kendi isteklerini ailesinin gerisine atması, koruyucu yönünün aynı zamanda zayıflığıdır.",
                   "order": 999,
                   "aliases": [
                     "Aysel Atalay"
@@ -2984,9 +2957,9 @@
                   "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Cengiz Atalay.md",
                   "sourceName": "Cengiz Atalay",
                   "title": "Cengiz Atalay",
-                  "date": "1945 · 40 yaş",
+                  "date": "1942 · 43 yaş",
                   "summary": "Özgüvenli, enerjik, meraklı ve çalışkan.",
-                  "content": "**Doğum:** 1945\n\n**Yaş (1985):** 40\n\n**Genel rol:** Askerî uçak mühendisi\n\n**Dış görünüş:** Düzenli ve klasik giyinir; resmî ve hafif askerî çizgileri tercih eder.\n\n**Kişilik:** Özgüvenli, enerjik, meraklı ve çalışkan.",
+                  "content": "**Doğum:** 1942\n\n**Yaş (1985):** 43\n\n**Genel rol:** Askerî uçak mühendisi · Gökkanat programı\n\n**Dış görünüş:** Düzenli ve klasik giyinir; resmî ve hafif askerî çizgileri tercih eder.\n\n**Kişilik:** Özgüvenli, enerjik, meraklı ve çalışkan.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nCengiz, Gökkanat programında çalışan askerî uçak mühendisidir. Meraklı, enerjik ve üretkendir; mekanik sorunları çözmek, mevcut sistemleri geliştirmek ve bir tasarımın zayıf noktasını bulmak onu motive eder. İşine duyduğu ilgi zaman zaman aile hayatındaki sorumluluklarının önüne geçebilir. 1942 doğumlu olması, Oğuz'un 1968'de doğduğu sırada yirmi altı yaşında olduğunu gösterir.\n\nOğuz'la güçlü bir ilişkisi vardır. Ona çalışma disiplini, sorumluluk alma ve teknik konulara sabırla yaklaşma alışkanlığı kazandırmıştır. Oğlunun askerî pilot olmasını ister; böylece ailedeki mühendislik geleneğinin başka bir biçimde sürmesini bekler. Aysel'le birbirini tamamlayan bir aile düzeni kurmuştur. Cengiz'in mesleki hayatındaki bazı boşluklar ve içine kapanması, Oğuz'un babasını yalnızca bir mühendis olarak değil, geçmişi olan bir insan olarak anlamaya çalışmasına yol açar.",
                   "order": 999,
                   "aliases": [
                     "Cengiz Atalay"
@@ -3025,7 +2998,7 @@
                   "title": "Oğuz Kağan Atalay",
                   "date": "1968 · 17 yaş",
                   "summary": "Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.",
-                  "content": "**Doğum:** 3 Ocak 1968 · İstanbul, Üsküdar\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 3. Kanat · havacılığa ilgi duyuyor\n\n**Dış görünüş:** Belirgin yüz hatlarına, kızıl saçlara ve düzenli bir görünüme sahiptir.\n\n**Kişilik:** Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.",
+                  "content": "**Doğum:** 3 Ocak 1968 · İstanbul, Üsküdar\n\n**Yaş (1985):** 17\n\n**Genel rol:** Öğrenci · 3. Kanat · Üsküdar Mektebi · askerî pilotluk hedefi\n\n**Dış görünüş:** Belirgin yüz hatlarına, kızıl saçlara ve düzenli bir görünüme sahiptir.\n\n**Kişilik:** Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nÜçüncü kanatlı Oğuz, iki kuşaktır uçak mühendisi yetiştiren Atalay ailesinin havacılık mirasını kokpitte sürdürmek ister. Dedesi Necdet ve babası Cengiz uçakları tasarlayan ve geliştiren insanlardır; Oğuz'un kendi arzusu ise onları uçurmaktır. Teknik bilgisi ve teorik hazırlığı güçlüdür, ancak 1985'te henüz gerçek uçuş eğitimi almamıştır.\n\nSoğukkanlılığı, düzenli çalışması ve bağımsız hareket etme isteği onu güvenilir kılar. Buna karşılık başarısızlığı kişisel bir kusur gibi algılaması, duygularını bastırması ve aynı anda çok fazla konuya yönelmesi zayıf yanlarıdır. Başlangıçta güçlü devlet ve emir-komuta düşüncesine yakındır; yaşadıkları, disiplin ile vicdanı birbirinden ayırıp ayıramayacağını sorgulamasına yol açar.\n\nİsmail'le ortaokul yıllarından beri süren dostluğu, Aylin'le gelişen yakınlığı ve Alper'le benzer görünen fakat ahlaken ayrışan rekabeti, Oğuz'un kişisel dünyasını şekillendirir. Babası Cengiz'in hayatında açıklayamadığı boşluklar bulunması da aile geçmişini sorgulamasına neden olur.",
                   "order": 999,
                   "aliases": [
                     "Oğuz Kağan Atalay"
@@ -3044,9 +3017,9 @@
                   "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Muhammed Atalay.md",
                   "sourceName": "Muhammed Atalay",
                   "title": "Muhammed Atalay",
-                  "date": "1973 · 12 yaş",
+                  "date": "1985 · 11 yaş (doğum yılı türetilmiş)",
                   "summary": "Meraklı, hareketli ve teknik konulara ilgili.",
-                  "content": "**Doğum:** 1973\n\n**Yaş (1985):** 12\n\n**Genel rol:** Öğrenci · mühendisliğe ilgi duyuyor\n\n**Dış görünüş:** Yaşına uygun, sade ve rahat giyinir.\n\n**Kişilik:** Meraklı, hareketli ve teknik konulara ilgili.",
+                  "content": "**Genel rol:** Öğrenci · mühendisliğe ilgi duyuyor\n\n**Dış görünüş:** Yaşına uygun, sade ve rahat giyinir.\n\n**Kişilik:** Meraklı, hareketli ve teknik konulara ilgili.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nMuhammed Atalay, Oğuz'un on bir yaşındaki küçük kardeşidir. Oyun oynamayı ve televizyon izlemeyi sever; hareketli tavrı evin gündelik sesini ve neşesini oluşturur. Ağabeyine hayranlık duyar ve onunla vakit geçirmek ister. Büyüklerin siyasî veya meslekî meselelerinden çok kendi çocukluk dünyasına yakındır.\n\nMuhammed'in hikâyedeki önemi, Oğuz'un yalnızca idealler veya devlet meseleleri için değil, ailesinin sıradan hayatını korumak için de mücadele ettiğini hatırlatmasıdır. Sınıf arkadaşı olan Muhammed Mete ile karıştırılmamalıdır.",
                   "order": 999,
                   "aliases": [
                     "Muhammed Atalay"
@@ -3065,9 +3038,9 @@
                   "path": "Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Meliha Atalay.md",
                   "sourceName": "Meliha Atalay",
                   "title": "Meliha Atalay",
-                  "date": "1975 · 10 yaş",
+                  "date": "1985 · 9 yaş (doğum yılı türetilmiş)",
                   "summary": "Çalışkan, kararlı, inatçı ve azimli.",
-                  "content": "**Doğum:** 1975\n\n**Yaş (1985):** 10\n\n**Genel rol:** Öğrenci\n\n**Dış görünüş:** Yaşına uygun, sade ve rahat kıyafetler tercih eder.\n\n**Kişilik:** Çalışkan, kararlı, inatçı ve azimli.",
+                  "content": "**Genel rol:** Öğrenci\n\n**Dış görünüş:** Yaşına uygun, sade ve rahat kıyafetler tercih eder.\n\n**Kişilik:** Çalışkan, kararlı, inatçı ve azimli.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nMeliha, Atalay ailesinin dokuz yaşındaki en küçük çocuğudur. Ağabeyleri Muhammed ve Oğuz'un arasında büyür; evin hareketli gündelik hayatına neşe katar. Henüz büyüklerin dünyasındaki siyasî ve meslekî sorunları anlamlandıracak yaşta değildir.\n\nOğuz için Meliha, evin korunması gereken sade ve güvenli tarafını temsil eder. Onun çocukça merakı ve aile içindeki varlığı, Oğuz'un dış dünyadaki gerilimlerden bağımsız olarak önem verdiği hayatı görünür kılar.",
                   "order": 999,
                   "aliases": [
                     "Meliha Atalay"
@@ -3307,9 +3280,9 @@
                   "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Alperen.md",
                   "sourceName": "Alperen",
                   "title": "Alperen Keser",
-                  "date": "1888–1960",
-                  "summary": "Disiplinli, kararlı, milliyetçi ve güçlü merkezi devlet yanlısı.",
-                  "content": "**Doğum:** 1888 · Giresun, Kuşköy\n\n**Genel rol:** Asker ve devlet adamı · 1938–1960 döneminin lideri\n\n**Kişilik:** Disiplinli, kararlı, milliyetçi ve güçlü merkezi devlet yanlısı.",
+                  "date": "1899 doğumlu (türetilmiş) · 29 Kasım 1938'de yönetimi devraldı",
+                  "summary": "Disiplinli, kararlı, milliyetçi ve sanayileşme yanlısı.",
+                  "content": "**Doğum:** 1899 · Giresun, Kuşköy (türetilmiş)\n\n**Genel rol:** Asker ve devlet adamı · 1938'de yönetimi devralan lider\n\n**Kişilik:** Disiplinli, kararlı, milliyetçi ve sanayileşme yanlısı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nAlperen Keser, Atatürk'ün 10 Kasım 1938'deki vefatından sonra 29 Kasım 1938'de yönetimi devralan asker ve devlet adamıdır. Merkezî devlet yapısını güçlendirmeyi, sanayileşmeyi hızlandırmayı ve askerî hazırlığı artırmayı hedefler. Türkiye'nin savaş yıllarındaki yönelişinde ve daha sonra Büyük Türk İmparatorluğu'na dönüşecek devlet anlayışının oluşmasında belirleyici rol oynar.\n\nDisiplinli, kararlı ve milliyetçi bir yönetici olarak güçlü devlet fikrini siyasetin merkezine yerleştirir. Bu program devleti hızla güçlendirirken otoriter yönetim biçiminin, güvenlikçi politikaların ve savaş yıllarındaki ağır kararların da temelini oluşturur. Ölüm yılı Vault'ta türetilmiş karar olarak işaretlendiği için bu tanıtımda kesin tarih verilmez.",
                   "order": 999,
                   "aliases": [
                     "Alperen",
@@ -3320,8 +3293,8 @@
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
-                    "characters-keser-lineage",
-                    "characters-keser-fourth-generation"
+                    "characters-state-leaders",
+                    "characters-turkish-rulers"
                   ]
                 }
               ],
@@ -3339,52 +3312,465 @@
         {
           "id": "characters-state-leaders",
           "path": "state-leaders",
-          "sourceName": "Devlet liderleri",
-          "title": "Devlet liderleri",
-          "date": "SİYASİ KARAKTERLER",
-          "summary": "Keser soy ağacının dışında yer alan devlet yöneticileri.",
-          "content": "Keser soy ağacının dışında yer alan devlet yöneticileri.",
+          "sourceName": "Büyük Türk İmparatorluğu yönetimi",
+          "title": "Büyük Türk İmparatorluğu yönetimi",
+          "date": "TÜRK DEVLET KADROSU",
+          "summary": "Ulu Hanlık, merkezî bürokrasi, istihbarat, bilim, eğitim ve taşra yönetiminde görev alan kişiler.",
+          "content": "Ulu Hanlık, merkezî bürokrasi, istihbarat, bilim, eğitim ve taşra yönetiminde görev alan kişiler.",
           "order": 0,
           "aliases": [],
           "children": [
             {
-              "id": "characters-ismail-karaslan",
-              "path": "Alternatif Tarih/Karakterler/siyasi karakterler/İsmail Karaslan.md",
-              "sourceName": "İsmail Karaslan",
-              "title": "İsmail Karaslan",
-              "date": "1904 doğumlu · 1960–1975 döneminde lider",
-              "summary": "Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
-              "content": "**Doğum:** 1904 · Hatay\n\n**Genel rol:** Asker ve devlet adamı\n\n**Kişilik:** Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
-              "order": 999,
-              "aliases": [
-                "İsmail Karaslan"
+              "id": "characters-turkish-rulers",
+              "path": "turkish-rulers",
+              "sourceName": "Ulu Hanlar ve devlet başkanları",
+              "title": "Ulu Hanlar ve devlet başkanları",
+              "date": "YÖNETİM ZİNCİRİ",
+              "summary": "İmparatorluğun yakın dönem liderleri.",
+              "content": "İmparatorluğun yakın dönem liderleri.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-alperen-keser",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Alperen.md",
+                  "sourceName": "Alperen",
+                  "title": "Alperen Keser",
+                  "date": "1899 doğumlu (türetilmiş) · 29 Kasım 1938'de yönetimi devraldı",
+                  "summary": "Disiplinli, kararlı, milliyetçi ve sanayileşme yanlısı.",
+                  "content": "**Doğum:** 1899 · Giresun, Kuşköy (türetilmiş)\n\n**Genel rol:** Asker ve devlet adamı · 1938'de yönetimi devralan lider\n\n**Kişilik:** Disiplinli, kararlı, milliyetçi ve sanayileşme yanlısı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nAlperen Keser, Atatürk'ün 10 Kasım 1938'deki vefatından sonra 29 Kasım 1938'de yönetimi devralan asker ve devlet adamıdır. Merkezî devlet yapısını güçlendirmeyi, sanayileşmeyi hızlandırmayı ve askerî hazırlığı artırmayı hedefler. Türkiye'nin savaş yıllarındaki yönelişinde ve daha sonra Büyük Türk İmparatorluğu'na dönüşecek devlet anlayışının oluşmasında belirleyici rol oynar.\n\nDisiplinli, kararlı ve milliyetçi bir yönetici olarak güçlü devlet fikrini siyasetin merkezine yerleştirir. Bu program devleti hızla güçlendirirken otoriter yönetim biçiminin, güvenlikçi politikaların ve savaş yıllarındaki ağır kararların da temelini oluşturur. Ölüm yılı Vault'ta türetilmiş karar olarak işaretlendiği için bu tanıtımda kesin tarih verilmez.",
+                  "order": 999,
+                  "aliases": [
+                    "Alperen",
+                    "Alperen Keser"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-state-leaders",
+                    "characters-turkish-rulers"
+                  ]
+                },
+                {
+                  "id": "characters-ismail-karaslan",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/İsmail Karaslan.md",
+                  "sourceName": "İsmail Karaslan",
+                  "title": "İsmail Karaslan",
+                  "date": "1915 doğumlu (türetilmiş) · Alperen Keser sonrasındaki lider",
+                  "summary": "Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
+                  "content": "**Doğum:** 1915 · Hatay (türetilmiş)\n\n**Genel rol:** Asker ve devlet adamı\n\n**Kişilik:** Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nİsmail Karaslan, Alperen Keser'den sonra devletin merkezî yönetimini sürdüren asker kökenli devlet adamıdır. Disiplinli, temkinli ve kurumların devamlılığına önem veren bir yönetici olarak tanımlanır. Onunla ilişkilendirilen dönem, yeni genişlemelerden çok mevcut imparatorluk yapısının yerleşmesi, eğitim düzeninin yayılması ve idarenin sağlamlaştırılmasıyla anılır.\n\nBu dönem, dışarıya doğru büyümenin ardından devletin kendi iç işleyişini düzenlemeye çalıştığı bir geçiş evresidir. Karaslan'ın görev süresinin kesin tarihleri Vault'ta türetilmiş olarak işaretlendiğinden, kamuya açık tanıtımda yalnızca Alperen sonrasındaki liderlik konumu belirtilir.",
+                  "order": 999,
+                  "aliases": [
+                    "İsmail Karaslan"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-state-leaders",
+                    "characters-turkish-rulers"
+                  ]
+                },
+                {
+                  "id": "characters-selim-arkan",
+                  "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Selim Arkan.md",
+                  "sourceName": "Selim Arkan",
+                  "title": "Selim Arkan",
+                  "date": "1939 doğumlu · 1985'te Ulu Han",
+                  "summary": "Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
+                  "content": "**Doğum:** 1939 · Ankara\n\n**Genel rol:** Siyasetçi ve devlet adamı\n\n**Kişilik:** Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nSelim Arkan, 1985 yılında Büyük Türk İmparatorluğu'nun Ulu Hanı ve Ankara'daki merkezî yönetimin başındaki isimdir. Teknik ve bürokratik kökeni, onu askerî çevrelerin alışık olduğu gösterişli komuta tarzından ayırır. Karar vermeden önce farklı değerlendirmeleri dinler; ardından kısa ve kesin emirler verir. Yetkisi geniş olsa da imparatorluğun her bölgesini tek tek yönetemeyeceğini, bürokrasinin kararları geciktirebileceğini bilir.\n\nDevletin güçlü ve disiplinli kalmasını ister. Bununla birlikte geçmişte işlenmiş devlet suçlarının gelecekte ağır bir siyasî ve ahlakî borç olarak geri dönebileceğinin farkındadır. Reich kaynaklı bir krizin, imparatorluk hazırlıksızken patlaması en büyük kaygılarındandır. Selim'in soğukkanlı görünüşünün altında, devletin geleceği ve kendi yönetiminin sınırları hakkında sürekli hesap yapan bir hükümdar bulunur.",
+                  "order": 999,
+                  "aliases": [
+                    "Selim Arkan"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-state-leaders",
+                    "characters-turkish-rulers"
+                  ]
+                }
               ],
-              "children": [],
               "links": [],
-              "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
                 "characters-state-leaders"
               ]
             },
             {
-              "id": "characters-selim-arkan",
-              "path": "Alternatif Tarih/Karakterler/siyasi karakterler/Selim Arkan.md",
-              "sourceName": "Selim Arkan",
-              "title": "Selim Arkan",
-              "date": "1935 doğumlu · 1975'ten itibaren lider",
-              "summary": "Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
-              "content": "**Doğum:** 1935 · Ankara\n\n**Genel rol:** Siyasetçi ve devlet adamı\n\n**Kişilik:** Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
+              "id": "characters-turkish-state-cadre",
+              "path": "turkish-state-cadre",
+              "sourceName": "Merkezî yönetim ve kurumlar",
+              "title": "Merkezî yönetim ve kurumlar",
+              "date": "DEVLET KADROSU",
+              "summary": "Başbuyruk Kalemi, istihbarat, bilim, eğitim ve taşra yönetiminin üst düzey isimleri.",
+              "content": "Başbuyruk Kalemi, istihbarat, bilim, eğitim ve taşra yönetiminin üst düzey isimleri.",
+              "order": 0,
+              "aliases": [],
+              "children": [
+                {
+                  "id": "characters-kaan-demirsoy",
+                  "path": "03_KARAKTERLER/Kaan Demirsoy.md",
+                  "sourceName": "Kaan Demirsoy",
+                  "title": "Kaan Demirsoy",
+                  "date": "1936 doğumlu",
+                  "summary": "İmparatorluk yönetiminin emir, kararname ve kayıt düzenini ayakta tutan Başbuyruk.",
+                  "content": "**Doğum:** 1936\n\n**Genel rol:** Başbuyruk · Ulu Han'ın iradesini bağlayıcı emre dönüştüren makam\n\n**Kişilik:** Sessiz, titiz, sabırlı ve kayıt düzenine bağlı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nKaan Demirsoy, Ulu Han'ın kararlarını bağlayıcı devlet emirlerine dönüştüren Başbuyruk makamını yürütür. Kararnamelerin hazırlanması, resmî metinlerin geçerliliği ve merkezî emirlerin doğru biçimde kayda geçirilmesi onun sorumluluğundadır. Bu nedenle devlet içinde yalnızca yazan değil, hangi metnin hüküm taşıdığını bilen kişidir.\n\nSessiz, sabırlı ve titizdir. İnsanlarla arasına mesafe koyar; konuştuğunda konuyu maddeler hâlinde ele alır. Sabiha Erten'le birlikte kararname nüshalarını ve gizli tutanakları takip eder. Kayıtların güvenilirliği onun için bürokratik bir ayrıntı değil, devletin hafızasının temelidir.",
+                  "order": 999,
+                  "aliases": [
+                    "Kaan Demirsoy",
+                    "Kaan Demirsoy"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-state-leaders",
+                    "characters-turkish-state-cadre"
+                  ]
+                },
+                {
+                  "id": "characters-sabiha-erten",
+                  "path": "03_KARAKTERLER/Sabiha Erten.md",
+                  "sourceName": "Sabiha Erten",
+                  "title": "Sabiha Erten",
+                  "date": "1945 doğumlu · 40 yaş",
+                  "summary": "Kararname nüshalarının, mühür sırasının ve gizli tutanakların düzenini takip eden bürokrat.",
+                  "content": "**Doğum:** 1945\n\n**Yaş (1985):** 40\n\n**Genel rol:** Başbuyruk Kalemi Müsteşarı\n\n**Kişilik:** Sessiz, dikkatli, titiz ve gerektiğinde itiraz etmekten çekinmeyen.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nSabiha Erten, Başbuyruk Kalemi'nde kararname sürümlerini, mühür sırasını ve gizli toplantı tutanaklarını takip eder. Bir kararın alınmış olması kadar, hangi metinle ve hangi tarihte yürürlüğe girdiğinin doğru kaydedilmesi de önemlidir. Bu ayrıntılar üzerindeki dikkati, onu devletin belge düzeninde vazgeçilmez kılar.\n\nSessiz ve titizdir; ancak kuruma bağlılığı kör itaat anlamına gelmez. Bir mührün veya belgenin tutarsız olduğunu fark ettiğinde bunu dile getirebilir. Kimin ne zaman neyi imzaladığını bilmesi, onu hem güvenilir bir bürokrat hem de önemli bir tanık hâline getirir.",
+                  "order": 999,
+                  "aliases": [
+                    "Sabiha Erten",
+                    "Sabiha Erten"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-state-leaders",
+                    "characters-turkish-state-cadre"
+                  ]
+                },
+                {
+                  "id": "characters-mete-kutlu",
+                  "path": "03_KARAKTERLER/Mete Kutlu.md",
+                  "sourceName": "Mete Kutlu",
+                  "title": "Mete Kutlu",
+                  "date": "1931 doğumlu · 54 yaş",
+                  "summary": "Dış istihbarat ve Reich masasını yöneten; bildiğini hemen açığa vurmayan istihbarat başkanı.",
+                  "content": "**Doğum:** 1931\n\n**Yaş (1985):** 54\n\n**Genel rol:** İmparatorluk İstihbarat Başkanı\n\n**Kişilik:** Sakin, ölçülü, sabırlı ve dikkatli bir dinleyici.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nMete Kutlu, İmparatorluk İstihbarat Başkanı olarak dış ve stratejik istihbarat alanını, özellikle Reich masasıyla ilgili çalışmaları yönetir. Yabancı temsilcilikler, diplomatik temaslar ve devlet adına yürütülen hassas bilgi ilişkileri onun sorumluluk alanındadır. Bilgi toplamak kadar, hangi bilginin kime ve ne zaman aktarılacağını belirlemek de görevinin parçasıdır.\n\nSakin ve ölçülü konuşur; karşısındakini acele ettirmeden dinler. Korku yaratmaya çalışmaz, fakat bildiklerinin bir kısmını sakladığını hissettirir. Kendi teşkilatının içinde de denetlendiğinin farkındadır. Bu nedenle istihbarat dünyasında güven ve şüpheyi aynı anda yönetmek zorundadır.",
+                  "order": 999,
+                  "aliases": [
+                    "Mete Kutlu",
+                    "Mete Kutlu"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-state-leaders",
+                    "characters-turkish-state-cadre"
+                  ]
+                },
+                {
+                  "id": "characters-rana-tozun",
+                  "path": "03_KARAKTERLER/Rana Tözün.md",
+                  "sourceName": "Rana Tözün",
+                  "title": "Rana Tözün",
+                  "date": "1938 doğumlu · 47 yaş",
+                  "summary": "Gök Kutup, sensör çalışmaları ve imparatorluğun bilim programlarından sorumlu üst düzey yönetici.",
+                  "content": "**Doğum:** 1938\n\n**Yaş (1985):** 47\n\n**Genel rol:** Bilim ve Gök Araştırmaları Başkanı\n\n**Kişilik:** Sakin, kesin, sabırlı ve veriye bağlı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nRana Tözün, imparatorluğun bilim ve gök araştırmaları alanındaki üst yöneticisidir. Gök Kutup, sensör sistemleri ve üniversitelerle yürütülen araştırma programları onun çalışma alanına girer. Bilimsel sonuçların kişisel kanaatle değil, gözlem ve ölçümle desteklenmesi gerektiğine inanır.\n\nGenç araştırmacılara karşı koruyucu, bürokratik engellere karşı serttir. Verilerin açıklayamadığı bir durumla karşılaştığında acele bir sonuca varmak yerine ölçümleri yeniden incelemeyi tercih eder. Bu yaklaşım onu hem bilimsel titizliğin hem de araştırmanın doğurabileceği bilinmezlik karşısındaki kaygının temsilcisi yapar.",
+                  "order": 999,
+                  "aliases": [
+                    "Rana Tözün",
+                    "Rana Tözün"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-state-leaders",
+                    "characters-turkish-state-cadre"
+                  ]
+                },
+                {
+                  "id": "characters-ziya-arat",
+                  "path": "03_KARAKTERLER/Ziya Arat.md",
+                  "sourceName": "Ziya Arat",
+                  "title": "Ziya Arat",
+                  "date": "1934 doğumlu · 51 yaş",
+                  "summary": "Mekteplerin, müfredatın ve imparatorluk genelindeki Kanat sisteminin sorumlusu.",
+                  "content": "**Doğum:** 1934\n\n**Yaş (1985):** 51\n\n**Genel rol:** Maarif ve Gençlik Nazırı\n\n**Kişilik:** Enerjik, ikna edici ve siyasî açıdan dikkatli.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nZiya Arat, Maarif ve Gençlik Nazırı olarak mekteplerin, müfredatın ve imparatorluk genelindeki Kanat sisteminin işleyişinden sorumludur. Öğrenci temsil mekanizmaları, okullar arası yarışmalar ve gençlerin ileride yönlendirileceği akademi ve kurumlar da onun görev alanına girer. Bu nedenle okullardaki gelişmeleri yalnızca eğitim meselesi olarak değil, devletin gelecekteki insan kaynağını ilgilendiren bir konu olarak görür.\n\nEnerjik ve ikna edicidir. Canlı konuşma tarzı, taşıdığı makamın denetim gücünü bazen olduğundan hafif gösterebilir. Oysa hangi öğrencinin hangi imkâna erişeceği ve hangi kurumun gençlik çevresinde ne ölçüde etkili olacağı onun sorumluluğundadır.",
+                  "order": 999,
+                  "aliases": [
+                    "Ziya Arat",
+                    "Ziya Arat"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-state-leaders",
+                    "characters-turkish-state-cadre"
+                  ]
+                },
+                {
+                  "id": "characters-haluk-sancar",
+                  "path": "03_KARAKTERLER/Haluk Sancar.md",
+                  "sourceName": "Haluk Sancar",
+                  "title": "Haluk Sancar",
+                  "date": "1927 doğumlu · 58 yaş",
+                  "summary": "Afrika'daki reform hedefleri ile taşradaki keyfî uygulamalar arasındaki çelişkinin merkezindeki vali.",
+                  "content": "**Doğum:** 1927\n\n**Yaş (1985):** 58\n\n**Genel rol:** Afrika Umumi Valisi\n\n**Kişilik:** Enerjik, konuşkan, ikna edici ve siyasî denge gözeten.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nHaluk Sancar, imparatorluğun Afrika Umumi Valisi olarak geniş bir coğrafyadaki idarî düzenin sorumluluğunu taşır. Raporlarında eğitim, sağlık ve vergi reformlarını öne çıkarır; ancak taşradaki bazı yöneticilerin keyfî uygulamaları, merkezde ilan edilen ilkelerle sahadaki gerçeklik arasında ciddi bir mesafe doğurur. Sancar bu çelişkinin farkındadır.\n\nEnerjik ve ikna edici bir yöneticidir; fakat reformu hızlandırmak yerel güç odaklarıyla çatışma yaratırken mevcut düzeni korumak halkın devlete duyduğu güveni zedeler. Bu nedenle onun görevi yalnızca emir vermek değil, imparatorluğun uzak bölgelerinde yönetim ile sorumluluk arasındaki farkla yüzleşmektir.",
+                  "order": 999,
+                  "aliases": [
+                    "Haluk Sancar",
+                    "Haluk Sancar"
+                  ],
+                  "children": [],
+                  "links": [],
+                  "country": "turkish",
+                  "categoryId": "characters",
+                  "ancestors": [
+                    "characters-state-leaders",
+                    "characters-turkish-state-cadre"
+                  ]
+                }
+              ],
+              "links": [],
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-state-leaders"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "characters",
+          "ancestors": []
+        },
+        {
+          "id": "characters-reich-leadership",
+          "path": "reich-leadership",
+          "sourceName": "Großdeutsches Reich yönetimi",
+          "title": "Großdeutsches Reich yönetimi",
+          "date": "REICH KADROSU",
+          "summary": "Reich'ın parti, dış politika, güvenlik ve bilim alanlarındaki önde gelen yöneticileri.",
+          "content": "Reich'ın parti, dış politika, güvenlik ve bilim alanlarındaki önde gelen yöneticileri.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "characters-reinhard-falkenhorst",
+              "path": "03_KARAKTERLER/Reinhard Falkenhorst.md",
+              "sourceName": "Reinhard Falkenhorst",
+              "title": "Reinhard Falkenhorst",
+              "date": "1922 doğumlu · 63 yaş",
+              "summary": "Reich'ın tepesindeki Führer; parti, SS, ordu ve sanayi arasındaki dengeyi kendi otoritesi altında tutar.",
+              "content": "**Doğum:** 1922\n\n**Yaş (1985):** 63\n\n**Genel rol:** Führer und Reichskanzler des Großdeutschen Reiches\n\n**Kişilik:** Ağır, soğuk, sabırlı ve hesapçı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nReinhard Falkenhorst, 1985 yılında Großdeutsches Reich'ın Führer und Reichskanzler makamındadır. Parti, SS, ordu ve sanayi arasındaki rekabeti birbirine karşı dengeleyerek merkezî otoriteyi korur. Bu yöntem rejimin devamını sağlarken karar alma süreçlerini ağırlaştırır.\n\nAğır ve soğuk konuşur; kelimelerini seçerek kullanır. İnsanlardan çok dosyalara ve kayıtlara güvenir. Kendi liderlik mitini korumak zorunda olduğu için hata kabul etmekte zorlanır. Reich'ın Türkiye ile ilişkilerinde teknoloji rekabetini ve savaş sonrası düzenin devamını yakından izler.",
               "order": 999,
               "aliases": [
-                "Selim Arkan"
+                "Reinhard Falkenhorst",
+                "Reinhard Falkenhorst"
+              ],
+              "children": [],
+              "links": [],
+              "country": "german",
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-reich-leadership"
+              ]
+            },
+            {
+              "id": "characters-martin-kessler",
+              "path": "03_KARAKTERLER/Martin Kessler.md",
+              "sourceName": "Martin Kessler",
+              "title": "Martin Kessler",
+              "date": "1930 doğumlu · 55 yaş",
+              "summary": "Reich içindeki atamaları ve parti disiplinini yöneten etkili iktidar aracısı.",
+              "content": "**Doğum:** 1930\n\n**Yaş (1985):** 55\n\n**Genel rol:** Führer Yardımcısı · Parti Kanzelleyi Başkanı\n\n**Kişilik:** Nazik görünen, sabırlı ve siyasî bağlantıları güçlü.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nMartin Kessler, Führer yardımcısı ve Parti Kanzelleyi Başkanı olarak üst düzey atamaları, parti disiplinini ve kurumlar arası siyasî dengeyi yönetir. Ordu ile SS arasındaki rekabette arabulucu rolü üstlenmesi, ona resmî unvanının ötesinde geniş bir nüfuz sağlar.\n\nİlk bakışta nazik ve sıcak görünür; insanların adlarını ve aile bağlarını hatırlaması, görüşmelerde güven kurmasına yardımcı olur. Ancak bu yakınlık her zaman samimiyet değildir. Kessler ideolojik coşkudan çok rejimin devamlılığına ve Führer sonrası iktidar dengesine odaklanır.",
+              "order": 999,
+              "aliases": [
+                "Martin Kessler",
+                "Martin Kessler"
+              ],
+              "children": [],
+              "links": [],
+              "country": "german",
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-reich-leadership"
+              ]
+            },
+            {
+              "id": "characters-ulrich-von-havel",
+              "path": "03_KARAKTERLER/Ulrich von Havel.md",
+              "sourceName": "Ulrich von Havel",
+              "title": "Ulrich von Havel",
+              "date": "1932 doğumlu · 53 yaş",
+              "summary": "Türkiye ile ilişkilerde Reich'ın çıkarlarını nezaket ve koşullu teklifler üzerinden gözeten bakan.",
+              "content": "**Doğum:** 1932\n\n**Yaş (1985):** 53\n\n**Genel rol:** Reich Dışişleri Bakanı\n\n**Kişilik:** Kibar, sabırlı, hesapçı ve diplomatik baskı kurabilen.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nUlrich von Havel, Reich Dışişleri Bakanı olarak Türkiye ile yürütülen diplomatik temaslarda Reich'ın çıkarlarını gözetir. Açık çatışma yerine pazarlık, nüfuz ve karşılıklı bağımlılık araçlarını kullanır. Türk tarafını küçümsememesi, onu daha dikkatli bir muhatap hâline getirir.\n\nKonuşması nazik ve ölçülüdür; ancak sunduğu her teklifin içinde bir koşul bulunur. Nezaketi, karşı tarafın hareket alanını daraltan diplomatik hesabın bir parçasıdır. Kişisel duygulardan çok sonuçları ve güç dengesini önemser.",
+              "order": 999,
+              "aliases": [
+                "Ulrich von Havel",
+                "Ulrich von Havel"
+              ],
+              "children": [],
+              "links": [],
+              "country": "german",
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-reich-leadership"
+              ]
+            },
+            {
+              "id": "characters-friedrich-wulfhart",
+              "path": "03_KARAKTERLER/Friedrich Wulfhart.md",
+              "sourceName": "Friedrich Wulfhart",
+              "title": "Friedrich Wulfhart",
+              "date": "1925 doğumlu · 60 yaş",
+              "summary": "Nazi rejiminin güvenlik ve baskı aygıtını yöneten SS lideri.",
+              "content": "**Doğum:** 1925\n\n**Yaş (1985):** 60\n\n**Genel rol:** Reichsführer-SS und Chef der Reichssicherheit\n\n**Kişilik:** Sessiz, düzen takıntılı, ideolojik açıdan katı ve hesaplı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nFriedrich Wulfhart, Reichsführer-SS ve Reich güvenlik teşkilatının başıdır. SS'nin, siyasî güvenliğin ve rejimin iç denetim düzeninin en üst sorumlularındandır. Nazi ideolojisine katı biçimde bağlıdır; uygulamada ise farklı kurumları birbirine karşı kullanabilecek kadar hesaplıdır.\n\nBağırarak otorite kurmaz. Soru sorar, cevapları bekler ve ayrıntıları kayda geçirir. Onun temsil ettiği Reich düzeninde gözetim ve baskı, istisna değil yönetim anlayışının temel parçalarıdır.",
+              "order": 999,
+              "aliases": [
+                "Friedrich Wulfhart",
+                "Friedrich Wulfhart"
+              ],
+              "children": [],
+              "links": [],
+              "country": "german",
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-reich-leadership"
+              ]
+            },
+            {
+              "id": "characters-konrad-weissmann",
+              "path": "03_KARAKTERLER/Konrad Weissmann.md",
+              "sourceName": "Konrad Weissmann",
+              "title": "Konrad Weissmann",
+              "date": "1933 doğumlu · 52 yaş",
+              "summary": "Reich'ın yüksek enerji fiziği ve özel teknoloji programlarında öne çıkan bilim insanı.",
+              "content": "**Doğum:** 1933\n\n**Yaş (1985):** 52\n\n**Genel rol:** Baş Nükleer Fizikçi · SFA-P Polaris\n\n**Kişilik:** Sabırsız, keskin, kibirli ve veriye odaklı.\n\n## Karakterin yapısı ve hikâyedeki yeri\n\nKonrad Weissmann, Reich'ın yüksek enerji fiziği ve özel teknoloji programlarında çalışan baş nükleer fizikçidir; SFA-P Polaris'teki araştırmaların bilimsel yüzlerinden biridir. İnsan ilişkilerinden çok ölçümlere ve sonuçlara önem verir. Kibirli ve sabırsız tavrı, çevresindekilerle mesafe yaratır.\n\nWeissmann bilinmeyen bir olguyu yalnızca açıklamakla yetinmek istemez; ondan yararlanma ihtimaline de yönelir. Bilimsel merak ile siyasî ve askerî güç arzusunun birbirine karışması, onu Türk bilim çevrelerinin daha temkinli yaklaşımından ayırır.",
+              "order": 999,
+              "aliases": [
+                "Konrad Weissmann",
+                "Konrad Weissmann"
+              ],
+              "children": [],
+              "links": [],
+              "country": "german",
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-reich-leadership"
+              ]
+            }
+          ],
+          "links": [],
+          "categoryId": "characters",
+          "ancestors": []
+        },
+        {
+          "id": "characters-school-staff",
+          "path": "school-staff",
+          "sourceName": "Mektep yönetimi ve öğretmenleri",
+          "title": "Mektep yönetimi ve öğretmenleri",
+          "date": "OKUL KADROSU",
+          "summary": "Öğrencilerin disiplin, temsil, sanat ve tarih eğitimiyle doğrudan ilişkili yetişkinler.",
+          "content": "Öğrencilerin disiplin, temsil, sanat ve tarih eğitimiyle doğrudan ilişkili yetişkinler.",
+          "order": 0,
+          "aliases": [],
+          "children": [
+            {
+              "id": "characters-nihat-karaca",
+              "path": "03_KARAKTERLER/Nihat Karaca.md",
+              "sourceName": "Nihat Karaca",
+              "title": "Nihat Karaca",
+              "date": "1985 · Mektep yönetimi",
+              "summary": "Okulun günlük düzeni ve disiplininden sorumlu yönetici; öğrencileri sözle değil kayıtlarla yüzleştirir.",
+              "content": "**Genel rol:** Düzen, Disiplin ve Günlük İşleyiş Müdürü Başyardımcısı\n\n**Kişilik:** Disiplinli, tok sesli, sakin ve belgeye dayalı karar veren.",
+              "order": 999,
+              "aliases": [
+                "Nihat Karaca",
+                "Nihat Karaca"
               ],
               "children": [],
               "links": [],
               "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
-                "characters-state-leaders"
+                "characters-school-staff"
+              ]
+            },
+            {
+              "id": "characters-turgut-aksoy",
+              "path": "03_KARAKTERLER/Turgut Aksoy.md",
+              "sourceName": "Turgut Aksoy",
+              "title": "Turgut Aksoy",
+              "date": "1985 · Mektep yönetimi",
+              "summary": "Okulun dış ilişkilerini, yarışma organizasyonunu ve kurumlarla temasını yürüten yönetici.",
+              "content": "**Genel rol:** Organizasyon, Temsil ve Dış İlişkiler Müdürü\n\n**Kişilik:** Nazik, sakin, diplomatik ve temkinli.",
+              "order": 999,
+              "aliases": [
+                "Turgut Aksoy",
+                "Turgut Aksoy"
+              ],
+              "children": [],
+              "links": [],
+              "country": "turkish",
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-school-staff"
+              ]
+            },
+            {
+              "id": "characters-jale-deniz",
+              "path": "03_KARAKTERLER/Jale Deniz.md",
+              "sourceName": "Jale Deniz",
+              "title": "Jale Deniz",
+              "date": "1985 · Öğretmen kadrosu",
+              "summary": "Sanat atölyesinin sakin otoritesi; öğrencilerin ifade edemediklerini çalışmalarından okuyabilen öğretmen.",
+              "content": "**Genel rol:** Sanat ve Kültür Öğretmeni\n\n**Kişilik:** Sessiz, dikkatli, öğrencinin çizdikleri kadar onları neden çizdiğine de önem veren.",
+              "order": 999,
+              "aliases": [
+                "Jale Deniz",
+                "Jale Deniz"
+              ],
+              "children": [],
+              "links": [],
+              "country": "turkish",
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-school-staff"
+              ]
+            },
+            {
+              "id": "characters-huseyin-kutlu",
+              "path": "03_KARAKTERLER/Hüseyin Kutlu.md",
+              "sourceName": "Hüseyin Kutlu",
+              "title": "Hüseyin Kutlu",
+              "date": "1985 · Öğretmen kadrosu",
+              "summary": "Tarihi yalnızca olay sırası olarak değil, alınan kararların ve ödenen bedellerin kaydı olarak anlatan öğretmen.",
+              "content": "**Genel rol:** Tarih Öğretmeni\n\n**Kişilik:** Ağırbaşlı, yavaş konuşan, tarihsel ayrıntıları dikkatle tartan.",
+              "order": 999,
+              "aliases": [
+                "Hüseyin Kutlu",
+                "Hüseyin Kutlu"
+              ],
+              "children": [],
+              "links": [],
+              "country": "turkish",
+              "categoryId": "characters",
+              "ancestors": [
+                "characters-school-staff"
               ]
             }
           ],
@@ -3408,43 +3794,12 @@
           "sourceName": "Hilalifiyet Merkezi - İstanbul",
           "title": "Hilalifiyet Merkezi",
           "date": "",
-          "summary": "kurum dünya-kurma hilalifiyet-merkezi müzakere öğrenci-siyaseti kanat-sistemi istanbul-blokları",
-          "content": "#kurum #dünya-kurma #hilalifiyet-merkezi #müzakere #öğrenci-siyaseti #kanat-sistemi #istanbul-blokları\n\n## 1. Genel Tanım\n\n**Kurumun Adı:** Hilalifiyet Merkezi  \n**Ana Yerleşke:** İstanbul Boğazı'nın hâkim sırtları  \n**Bağlı Olduğu Otorite:** Ankara / [[Kızıl Orda]]  \n**Üst İdari Kurum:** Maarif ve Gençlik Nizamı  \n**İlgili Devlet Makamları:** Ziya Arat ve Ulu Han Selim Arkan  \n**Merkezin En Üst Sivil Yetkilisi:** Hilalifiyet Hanı  \n**Yaygınlık:** İmparatorluğun her ilinde en az bir Hilalifiyet Merkezi bulunur. İstanbul ve Ankara gibi büyük metropollerde birden fazla merkez faaliyet gösterir.\n\n### 1.1. Kurumun Niteliği\n\nHilalifiyet Merkezi, Büyük Türk İmparatorluğu bünyesindeki mekteplerin üst düzey öğrenci temsilcilerini bir araya getiren, okullar arası siyasi ilişkileri düzenleyen ve gençlik teşkilatlarının güç dengelerini belirleyen merkezi müzakere kurumudur.\n\nKurum, imparatorluğun genç nüfusunu siyasi, diplomatik, askeri, bilimsel ve yönetsel açıdan geliştirmeyi amaçlar. Geleceğin devlet adamlarını, askeri personelini, pilotlarını, mühendislerini ve yöneticilerini henüz lise çağındayken tespit etmek ve yetiştirmek sistemin temel hedefleri arasındadır.\n\nHilalifiyet Merkezi, okullar arasındaki siyasi ilişkiler bakımından uluslararası diplomasi kuruluşlarına benzer bir işleve sahiptir. Ancak klasik diplomatik kuruluşlardan farklı olarak burada temsil edilen birimler devletler değil, imparatorluğun farklı mektepleridir.\n\nKurumun temel faaliyet alanları:\n\n- Okullar arası diplomatik ilişkilerin yürütülmesi.\n    \n- Siyasi ittifakların oluşturulması ve denetlenmesi.\n    \n- Mektepler arasındaki anlaşmazlıkların çözümlenmesi.\n    \n- Öğrenci temsilcilerinin karar alma yeteneklerinin geliştirilmesi.\n    \n- Bilimsel, teknolojik ve askeri projelerin değerlendirilmesi.\n    \n- Okulların devlet nezdindeki kurumsal konumlarının belirlenmesi.\n    \n- Gençlik teşkilatları içerisindeki siyasi rekabetin düzenlenmesi.\n    \n\n### 1.2. Kurumsal Bağımsızlık ve Devlet Denetimi\n\nHilalifiyet Merkezi devlete ait bir kurumdur ve Ankara'daki Maarif ve Gençlik Nizamı'na bağlıdır.\n\nKurumun günlük faaliyetleri ve öğrenci diplomasisi büyük ölçüde öğrenci temsilcileri üzerinden yürütülür. Buna karşılık merkez idaresi ve ilgili devlet makamları, kararların kurumsal ve hukuki denetimini gerçekleştirir.\n\nBu nedenle Hilalifiyet Merkezi iki ayrı otorite alanına sahiptir:\n\n**Öğrenci otoritesi:** Okul başkanları, müzakere heyetleri, siyasi ittifaklar ve öğrencilerin temsil faaliyetleri.\n\n**Devlet otoritesi:** Merkez bürokrasisi, uzman jüriler, hukuki denetim ve Ankara'nın idari gözetimi.\n\nMerkezde alınan kararlar, gerekli değerlendirme ve onay süreçlerinden geçtikten sonra ilgili okullar açısından bağlayıcı nitelik kazanır.\n\n---\n\n## 2. Coğrafi Konum ve Mimari Yapı\n\n### 2.1. Yerleşke Konumu\n\nAna Hilalifiyet Merkezi, İstanbul Boğazı'nın en hâkim sırtlarından birinde, geniş ve anıtsal bir arazi üzerine kuruludur.\n\nYerleşke, Boğaz'ın turkuaz sularına, İstanbul'un gökdelen siluetine ve çevresindeki geniş yerleşim alanlarına tepeden bakacak şekilde konumlandırılmıştır.\n\nMimari yerleşim, kurumun devlet içerisindeki önemini ve gençlik teşkilatları üzerindeki etkisini yansıtacak biçimde tasarlanmıştır.\n\n### 2.2. Mimari Kimlik ve Renk Paleti\n\nHilalifiyet Merkezi'nin mimarisi modern minimalist çizgilerle geleneksel Türk devlet motiflerini bir araya getirir.\n\n**Ana cephe:** Ufuktan bakıldığında kolayca fark edilebilen, uzun ve anıtsal beyaz cepheler.\n\n**Mimari renkler:**\n\n- Turkuaz: Deniz, süreklilik ve devletin denizle olan bağını temsil eder.\n    \n- Siyah: Otorite, disiplin ve kurumsal ciddiyeti temsil eder.\n    \n- Altın sarısı: Devlet geleneği, itibar ve yüksek makamları temsil eder.\n    \n- Kızıl: Güç, irade ve devlet otoritesini temsil eder.\n    \n\n### 2.3. Yerleşke Planı\n\nAna yerleşke toplam dokuz büyük yapıdan meydana gelir.\n\n#### A. Ulu Hilal Külliyesi — Ana Bina\n\nMerkezin idari, diplomatik ve temsil merkezidir.\n\nBaşlıca bölümleri:\n\n- Ana müzakere salonları.\n    \n- Hilalifiyet Hanı makamı.\n    \n- Bütün okul başkanlarının katıldığı genel müzakere salonu.\n    \n- Yüksek Kanat Konseyi oturum alanı.\n    \n- Üst düzey protokol salonları.\n    \n- İdari toplantı odaları.\n    \n\nGenel müzakere salonu, farklı okulların altıncı kanat temsilcilerinin bir araya geldiği temel diplomatik alandır.\n\n#### B. Dört Yardımcı Bina\n\nEğitim, araştırma, simülasyon ve teknik faaliyetler için kullanılır.\n\nİçerisinde:\n\n- Eğitim ve simülasyon blokları.\n    \n- Ar-Ge laboratuvarları.\n    \n- Veri işleme merkezleri.\n    \n- Teknolojik araştırma alanları.\n    \n- Teknik inceleme ve değerlendirme odaları.\n    \n\n#### C. Dört Çok İşlevli Bina\n\nUlusal ve uluslararası organizasyonlar ile öğrenci faaliyetlerine ayrılmıştır.\n\nİçerisinde:\n\n- Ulusal ve uluslararası yarışma alanları.\n    \n- Havacılık test alanları.\n    \n- Öğrenci konaklama kompleksleri.\n    \n- Hitabet amfileri.\n    \n- Etkinlik ve organizasyon salonları.\n    \n\n---\n\n## 3. Kurumsal Amaç ve Stratejik Yetkiler\n\n### 3.1. Temel Amaç\n\nHilalifiyet Merkezi'nin temel amacı, imparatorluk gençliğinin bireysel yeteneklerini belirlemek, geliştirmek ve bu yetenekleri devletin ihtiyaç duyduğu alanlara yönlendirmektir.\n\nKurum özellikle şu alanlara önem verir:\n\n- Siyasi liderlik ve devlet yönetimi.\n    \n- Diplomasi ve müzakere.\n    \n- Askeri eğitim ve stratejik düşünme.\n    \n- Havacılık ve mühendislik.\n    \n- Bilimsel araştırma.\n    \n- Teknolojik geliştirme.\n    \n- Hukuk ve hitabet.\n    \n- Organizasyon ve yönetim.\n    \n\n### 3.2. Stratejik Etki Alanları\n\nHilalifiyet Merkezi'nde alınan kararlar, okulların ve öğrencilerin gelecekteki konumlarını doğrudan etkileyebilir.\n\nMerkezin faaliyetleri şu alanlarda belirleyici olabilir:\n\n- Öğrencilerin resmi sicilleri.\n    \n- Askeri akademilere kabul süreçlerinde referans ve değerlendirmeler.\n    \n- Okulların devletten aldığı bütçe ve hak payları.\n    \n- Yarışma ve özel programlara katılım hakları.\n    \n- Araştırma projeleri ve kurumsal destekler.\n    \n- Okulların siyasi temsil ve nüfuz alanları.\n    \n- Öğrenci liderlerinin kurumsal itibarı.\n    \n- Mektepler arasındaki ittifak ilişkileri.\n    \n\nMerkez, okulların yalnızca akademik başarılarını değil, siyasi ve kurumsal performanslarını da değerlendiren bir mekanizmadır.\n\n---\n\n## 4. Kurumsal Yönetim ve İdari Hiyerarşi\n\nHilalifiyet Merkezi iki temel yönetim katmanından meydana gelir:\n\n1. Kurumsal Merkez İdaresi.\n    \n2. Öğrenci Temsilciliği.\n    \n\nBu iki yapı birbirinden bağımsız değildir ancak yetki alanları farklıdır.\n\n### 4.1. Üst Otorite\n\nHilalifiyet Merkezi, Ankara'daki [[Kızıl Orda]] bünyesinde bulunan Maarif ve Gençlik Nizamı'na bağlıdır.\n\nGenel faaliyetleri devletin eğitim, gençlik ve teşkilatlanma politikaları çerçevesinde yürütülür.\n\nMerkez, kendi içerisinde önemli karar yetkilerine sahip olsa da devlet otoritesinin üzerinde değildir.\n\n### 4.2. Kurumsal Merkez İdaresi\n\n**Merkez Başkanı — Hilalifiyet Hanı**\n\nHilalifiyet Merkezi'nin en üst düzey sivil bürokratıdır.\n\nGörevleri:\n\n- Merkezin genel sevk ve idaresini yürütmek.\n    \n- Kurumsal işleyişin sürekliliğini sağlamak.\n    \n- İdari düzeni ve protokol kurallarını denetlemek.\n    \n- Müzakerelerin kurumsal kurallara uygunluğunu gözetmek.\n    \n- Merkez bürokrasisini yönetmek.\n    \n- Gerektiğinde müzakere süreçlerine ilişkin idari müdahalelerde bulunmak.\n    \n\nHilalifiyet Hanı'nın yetkileri Ankara'ya karşı sorumludur. Öğrenci temsilcilerinin siyasi faaliyetleri ile merkez idaresinin denetim yetkisi arasındaki sınır, kurumun temel yönetim ilkelerinden biridir.\n\n**Başyardımcı**\n\nMerkezin günlük idari işleyişinden, il içindeki koordinasyondan ve güvenlik protokollerinden sorumludur.\n\n**Organizasyon ve Genel Yardımcı**\n\nYarışmaların, etkinliklerin, panellerin ve diğer organizasyonların saha yönetimini gerçekleştirir.\n\n**Müzakere Müdürleri**\n\nÖğrenci temsilcilerinin diplomatik oturumlarını, protokol görüşmelerini ve ittifak anlaşmalarını denetler.\n\n**Jüriler ve Teknik Kurul**\n\nBilimsel, teknolojik, siyasi ve diğer uzmanlık alanlarındaki değerlendirmeleri gerçekleştirir. Müzakerelerde ortaya çıkan taleplerin ve kararların incelenmesinde önemli rol oynar.\n\n### 4.3. Öğrenci Temsilciliği\n\nMerkezin diplomatik faaliyetlerine katılabilecek öğrenciler kanat sistemi üzerinden belirlenir.\n\nResmi müzakere alanlarına yalnızca:\n\n- 6. Kanat — Okul Başkanı.\n    \n- 5. Kanat — Okul Başkan Yardımcısı.\n        \n\ngirebilir.\n\nDördüncü kanat ve altındaki öğrenciler resmi diplomatik müzakerelere katılamaz.\n\n**6. Kanat — Okul Başkanı**\n\nBir okulun en üst düzey öğrenci temsilcisidir.\n\nYetkileri:\n\n- Okulun siyasi görüşünü temsil etmek.\n    \n- Müzakerelerde okul adına konuşmak.\n    \n- Siyasi ittifak politikalarını belirlemek.\n    \n- Diplomatik anlaşmalara katılmak.\n    \n- Okulun taleplerini ve çıkarlarını savunmak.\n    \n- Gerekli durumlarda veto yetkisini kullanmak.\n    \n\n**5. Kanat — Okul Başkan Yardımcısı**\n\nOkul başkanının en üst düzey yardımcısıdır.\n\nSorumlulukları:\n\n- Diplomatik ilişkilerin yürütülmesine yardımcı olmak.\n    \n- Müzakere hazırlıklarını düzenlemek.\n    \n- Organizasyon ve koordinasyonu sağlamak.\n    \n- Okulun diplomatik iletişimini yürütmek.\n    \n- Okul başkanının kararlarının uygulanmasını sağlamak.\n    \n\n### 4.4. Okul İçi Kanat Konseyi ile Merkez Arasındaki Fark\n\nKanat Konseyi, Hilalifiyet Merkezi'ne ait bir yönetim organı değildir.\n\nHer okulun kendi bünyesinde bulunan Kanat Konseyi, o okulun iç yönetimiyle ilgilenir.\n\nHilalifiyet Merkezi ise farklı okulların üst düzey temsilcilerini bir araya getiren merkezi bir diplomasi ve müzakere kurumudur.\n\nDolayısıyla okul içindeki Kanat Konseyi ile Hilalifiyet Merkezi'nin genel müzakere mekanizması birbirinden ayrı değerlendirilmelidir.\n\n### 4.5. Öğrenci Liderlerinin Statü Farkı\n\nBütün 6. Kanat sahipleri resmi olarak eşit temsil statüsündedir.\n\nHilalifiyet Merkezi'nde bütün okul başkanlarının üzerinde bulunan ayrı bir öğrenci makamı yoktur.\n\nBununla birlikte okul başkanları arasında doğal bir nüfuz ve itibar farkı bulunabilir.\n\nBu farkı belirleyen unsurlar:\n\n- Geçmişte gerçekleştirilen faaliyetler.\n    \n- Diplomatik başarılar.\n    \n- Yönetim ve liderlik becerileri.\n    \n- Kazanılan ittifaklar.\n    \n- Okulun siyasi gücü.\n    \n- Müzakere performansı.\n    \n- Merkez içerisindeki kişisel itibar.\n    \n\nBu nedenle resmi eşitlik, fiili siyasi eşitlik anlamına gelmez.\n\n---\n\n## 5. Müzakere Sistemi ve Karar Mekanizması\n\n### 5.1. Genel Müzakere Meclisi\n\nHilalifiyet Merkezi'nde bütün okul başkanlarının katılabildiği büyük bir genel müzakere toplantısı bulunur.\n\nBu toplantı, okulların siyasi görüşlerini açıklayabildiği, taleplerini sunduğu ve birbirleriyle müzakere yürüttüğü temel karar platformudur.\n\nMüzakerelere 6. Kanat sahipleri katılır. 5. Kanat sahipleri ise kendi okul başkanlarının yardımcıları olarak diplomatik ve organizasyonel süreçlerde görev alır.\n\n### 5.2. Karar Alma Usulü\n\nGenel müzakere toplantılarında okul başkanları görüşlerini, taleplerini ve gerekçelerini açıklar.\n\nKarar mekanizması yalnızca okul başkanlarının oy çokluğuna dayanmaz. İlgili uzmanlık alanındaki jüri, müzakereye konu olan talebi ve ortaya konulan gerekçeleri değerlendirerek karar verir.\n\nSürecin temel aşamaları:\n\n1. İlgili okul veya temsilci talebini sunar.\n    \n2. Taraflar görüşlerini ve gerekçelerini açıklar.\n    \n3. İlgili uzmanlık alanının jürisi değerlendirme yapar.\n    \n4. Jüri, talebin uygunluğunu ve gerekçelerini inceler.\n    \n5. Jüri onayı bulunmayan talepler yürürlüğe giremez.\n    \n6. Gerekli kurumsal ve idari onay süreçleri tamamlanır.\n    \n7. Onaylanan karar ilgili taraflar için bağlayıcı hale gelir.\n    \n\nBu sistemde okul başkanları siyasi iradeyi ve talepleri ortaya koyarken jüriler değerlendirme ve onay mekanizmasını oluşturur.\n\n### 5.3. Müzakerelerde Kazanılabilecek Haklar\n\nMüzakerelerin sonucunda, haklı ve gerekçelendirilebilir olmak şartıyla çok çeşitli kazanımlar elde edilebilir.\n\nBunlar:\n\n- Başka okulların siyasi ittifaka katılması.\n    \n- Bir okulun başka bir okulun liderliğini kabul etmesi.\n    \n- Bütçe ve kaynak tahsisinde avantaj elde edilmesi.\n    \n- Askeri akademilere öğrenci gönderme konusunda referans ve destek sağlanması.\n    \n- Yarışma ve araştırma imtiyazları kazanılması.\n    \n- Yeni projelerin devlet desteği alması.\n    \n- Okulların kurumsal haklarının değiştirilmesi.\n    \n- Bir okulun siyasi yetkilerinin sınırlandırılması.\n    \n- Diplomatik ve idari ayrıcalıkların elde edilmesi.\n    \n\nMerkezdeki müzakereler yalnızca siyasi itibar kazanmak için değil, okulların somut çıkarlarını ve haklarını belirlemek için de yürütülür.\n\n---\n\n## 6. Jüri ve Uzman Değerlendirme Sistemi\n\n### 6.1. Genel Yapı\n\nHilalifiyet Merkezi'ndeki jüri sistemi, farklı uzmanlık alanlarına ayrılmış geniş bir değerlendirme mekanizmasından meydana gelir.\n\nHer uzmanlık dalında ön planda bulunan yedi kişilik bir uzman heyeti vardır.\n\nBu yedi kişi, ilgili alanın temel değerlendirme kadrosunu oluşturur.\n\nYedi kişilik ana heyetin arkasında ise uzmanlık sahibi, deneyimli ve değerlendirme süreçlerine katkı sunabilecek daha geniş bir uzman kadrosu bulunur.\n\nBu kadroda eski kanat başkanları gibi geçmişte kurum içerisinde görev yapmış ve tecrübe kazanmış kişiler de yer alabilir.\n\n### 6.2. Uzmanların Belirlenmesi\n\nJüri üyeleri kendi uzmanlık alanlarında liyakat, başarı ve yeterlilik esaslarına göre belirlenir.\n\nGörevlendirme devlet atamasıyla gerçekleştirilir. Böylece uzmanlık yeterliliği ile devletin kurumsal denetimi bir arada korunur.\n\n### 6.3. Jürilerin Görevleri\n\n- Müzakere taleplerini incelemek.\n    \n- Sunulan gerekçelerin yeterliliğini değerlendirmek.\n    \n- Okulların projelerini denetlemek.\n    \n- Bilimsel ve teknolojik çalışmaları değerlendirmek.\n    \n- İttifak ve anlaşma taleplerini incelemek.\n    \n- Rütbe terfileri ve yeterlilik değerlendirmelerine katılmak.\n    \n- Nizam-1 tarafından sunulan analizleri incelemek.\n    \n- Kurumsal kurallara uygunluk denetimi yapmak.\n    \n\n### 6.4. Jüri Onayının Önemi\n\nJüri onayı, Hilalifiyet Merkezi'nin karar mekanizmasındaki temel şartlardan biridir.\n\nBir talebin veya anlaşmanın yalnızca okul başkanları tarafından desteklenmesi yeterli değildir. İlgili uzmanlık alanındaki jürinin onayı olmadan talep yürürlüğe giremez.\n\nJüriler, kararların yalnızca siyasi güç veya kişisel nüfuz kullanılarak alınmasını engelleyen kurumsal denetim mekanizmasını oluşturur.\n\n---\n\n## 7. Nizam-1 Mantık Bilgisayarı\n\n### 7.1. Tanım\n\nNizam-1, Hilalifiyet Merkezi'nde kullanılan yapay zekâ destekli mantık ve karar değerlendirme sistemidir.\n\nTemel amacı, müzakere sırasında sunulan talepleri, projeleri ve anlaşmaları analiz ederek bunların mantıksal tutarlılığını ve imparatorluğun çıkarlarıyla uyumunu değerlendirmektir.\n\n### 7.2. Görevleri\n\n- Okulların sunduğu projeleri analiz etmek.\n    \n- İttifak anlaşmalarının olası sonuçlarını simüle etmek.\n    \n- Taleplerin mantıksal tutarlılığını incelemek.\n    \n- Önerilen kararların muhtemel etkilerini değerlendirmek.\n    \n- İmparatorluk çıkarlarıyla uyum analizi gerçekleştirmek.\n    \n- Müzakere heyetlerine gerekçeli değerlendirmeler sunmak.\n    \n\n### 7.3. İnsan Denetimi\n\nNizam-1'in değerlendirmeleri nihai ve tartışmasız karar niteliği taşımaz.\n\nSistem analizlerini ve gerekçelerini ortaya koyar. Ardından ilgili uzman jürisi bu değerlendirmeyi inceler ve onaylayıp onaylamadığını bildirir.\n\nBu nedenle Nizam-1, bağımsız değerlendirme gerçekleştiren tarafsız bir karar destek sistemidir. Nihai kurumsal yetki ise jüri ve ilgili idari mekanizmalarda bulunur.\n\n---\n\n## 8. Sorgu ve Müzakere Destek Teknolojileri\n\nHilalifiyet Merkezi'nde müzakere süreçlerinde katılımcıların fizyolojik ve davranışsal tepkilerini incelemek amacıyla çeşitli teknolojik sistemler kullanılır.\n\nBu sistemler kamuoyunda yalan makinesi ve stres ölçer olarak tanımlanır.\n\n### 8.1. Ölçüm Sistemleri\n\nCihazların takip ettiği başlıca veriler:\n\n- Nabız değişimleri.\n    \n- Vücut sıcaklığı.\n    \n- Ses frekansındaki değişimler.\n    \n- Stres göstergeleri.\n    \n- Fizyolojik tepki sapmaları.\n    \n\n### 8.2. Kullanım Amacı\n\nBu cihazlar müzakere sırasında katılımcıların fizyolojik tepkilerini gözlemlemek ve değerlendirme süreçlerine yardımcı veri sağlamak amacıyla kullanılır.\n\nÖlçüm sonuçları tek başına kesin bir suç veya yalan kanıtı olarak değerlendirilmez. Kurumsal değerlendirme sürecinde jüri incelemesiyle birlikte ele alınır.\n\n---\n\n## 9. Okullar Arası İttifak ve Domine Edilme Sistemi\n\n### 9.1. Domine Edilmiş Okul Tanımı\n\nHilalifiyet Merkezi'nde kullanılan domine edilmiş okul kavramı, bir okulun başka bir okul tarafından fiziksel veya askeri olarak işgal edilmesini ifade etmez.\n\nBu kavram, bir okulun başka bir okulun siyasi üstünlüğünü kabul etmesi ve onun liderliği altında müttefiklik ilişkisine girmesi anlamına gelir.\n\nDomine edilen okul kendi kurumsal varlığını, okul yönetimini ve iç teşkilatlanmasını korur. Ancak Hilalifiyet Merkezi'ndeki siyasi ilişkilerinde ve bloklaşmalarda lider okulun politikalarına bağlı hareket eder.\n\n### 9.2. Domine Edilme Süreci\n\nBir okul, başka bir okulun siyasi üstünlüğünü çeşitli yollarla kabul edebilir.\n\nBu sürecin temel araçları:\n\n- Diplomatik müzakere.\n    \n- Siyasi ve stratejik ittifaklar.\n    \n- Başarı ve kurumsal itibar.\n    \n- Müzakerelerde haklı ve güçlü gerekçeler ortaya koymak.\n    \n- Siyasi baskı ve nüfuz.\n    \n- Yarışma ve organizasyonlardaki başarılar.\n    \n\nBir okulun diğerini domine etmesi tek taraflı bir işgal veya zorunlu yönetim değişikliği değildir. İlişki, Hilalifiyet Merkezi bünyesinde tanınan siyasi üstünlük ve müttefiklik düzenine dayanır.\n\n### 9.3. Müttefik Okulların Yükümlülükleri\n\nDomine edilmiş okul:\n\n- Lider okulun siyasi üstünlüğünü tanır.\n    \n- Blok içerisindeki ortak kararlara uygun hareket eder.\n    \n- Müzakerelerde ortak diplomatik tutumu destekler.\n    \n- Blok içerisindeki stratejik iş birliğini sürdürür.\n    \n\nLider okul ise:\n\n- Müttefik okulları siyasi olarak temsil eder.\n    \n- Müttefiklerinin çıkarlarını müzakerelerde savunur.\n    \n- Gerektiğinde koruma ve referans desteği sağlar.\n    \n- Yarışma ve araştırma faaliyetlerinde destek sunar.\n    \n- Blok içerisindeki siyasi koordinasyonu yürütür.\n    \n\n### 9.4. Blok Değiştirme ve Bağımsızlık\n\nBir okulun domine edildiği bloktan ayrılması mümkündür.\n\nAncak bu ayrılık yalnızca sözlü bir bildirimle gerçekleşmez. Okulun müzakere masasında yeterli siyasi güce ulaşması, haklı gerekçeler ortaya koyması ve ilgili jürilerin değerlendirmesinden geçmesi gerekir.\n\nBir okul, gerekli şartları sağlayarak başka bir bloğa katılabilir veya bağımsız bir siyasi konum elde edebilir.\n\nBu durum, Hilalifiyet Merkezi'ndeki güç dengelerinin sürekli değişebilmesini sağlar.\n\n---\n\n## 10. Yaptırımlar ve Disiplin Mekanizması\n\nHilalifiyet Merkezi, öğrenci temsilcileri ve okullar üzerinde kurumsal yaptırım uygulama yetkisine sahiptir.\n\n### 10.1. Uygulanabilecek Yaptırımlar\n\n- Öğrencilerin temsil yetkilerinin geçici olarak askıya alınması.\n    \n- Okulların oy veya temsil haklarının sınırlandırılması.\n    \n- Kurumsal imtiyazların kaldırılması.\n    \n- Müzakere yetkilerinin kısıtlanması.\n    \n- İlgili temsilcilerin görevden alınması.\n    \n- Okulların belirli diplomatik faaliyetlerden men edilmesi.\n    \n\nBu yaptırımlar, kurumun kurallarına ve ihlalin niteliğine bağlı olarak değerlendirilir.\n\n### 10.2. Okul Başkanının Görevden Alınması\n\nBir okul başkanının görevden alınması sıradan siyasi anlaşmazlıklar veya başarısız müzakereler nedeniyle gerçekleştirilemez.\n\nGörevden alma gibi ağır sonuçlar için ihanet gibi son derece ciddi suçların ortaya çıkması gerekir.\n\nSiyasi rakiplerin varlığı veya başka bir okulun liderliği ele geçirmeye çalışması, tek başına görevden alma gerekçesi değildir.\n\n---\n\n## 11. Devlet Güvenliği ve Vatan Suçu Sınırı\n\nHilalifiyet Merkezi'ndeki siyasi rekabet belirli sınırlar içerisinde serbesttir.\n\nOkulların birbirleriyle rekabet etmesi, blok değiştirmesi, siyasi üstünlük kurmaya çalışması ve müzakere masasında baskı oluşturması sistemin doğal parçalarıdır.\n\nAncak bu rekabetin devletin güvenliğini, imparatorluğun çıkarlarını ve kurumsal düzeni tehdit edecek seviyeye ulaşmasına izin verilmez.\n\nDevletin belirlediği sınırları bilerek aşmak ve imparatorluğun çıkarlarına karşı faaliyet yürütmek vatan suçu kapsamında değerlendirilebilir.\n\nBu çerçevede özellikle:\n\n- Devletin gizli bilgilerini yabancı güçlere aktarmak.\n    \n- Hilalifiyet Merkezi'nin faaliyetlerini kasıtlı olarak sabote etmek.\n    \n- Yasaklanmış gizli anlaşmalar gerçekleştirmek.\n    \n- Devlet otoritesine karşı faaliyet yürütmek.\n    \n- İmparatorluğun çıkarlarına karşı yabancı güçlerle iş birliği yapmak.\n    \n\ngibi eylemler ağır ihlal ve suç kategorileri arasında yer alır.\n\nBu nedenle Üsküdar ve Şark blokları arasındaki rekabet ne kadar sert olursa olsun devletin belirlediği kırmızı çizgilerin aşılması kabul edilemez.\n\nHilalifiyet Merkezi, okulların siyasi mücadelelerini düzenlerken aynı zamanda bu mücadelenin devlet düzenine zarar vermesini engelleyen bir kontrol mekanizmasıdır.\n\n---\n\n## 12. Hilalifiyet Hanı'nın Yetki ve Sorumlulukları\n\nHilalifiyet Hanı, kurumun en üst sivil yöneticisidir ve Ankara'ya karşı sorumludur.\n\nMerkez başkanının temel rolü, öğrenci temsilcilerinin yerine siyasi kararlar almak değil, kurumun idari ve hukuki düzenini korumaktır.\n\nYetki alanına ilişkin belirlenmiş unsurlar:\n\n- Müzakerelerin kurumsal düzenini denetlemek.\n    \n- Gerekli durumlarda toplantıları durdurabilmek.\n    \n- Kurallara aykırı kararları iptal edebilmek.\n    \n- Merkezin idari işleyişini yönetmek.\n    \n- Öğrenci müzakerelerinin kurallara uygunluğunu gözetmek.\n    \n- Ankara'ya karşı kurumsal sorumluluk taşımak.\n    \n\nBu makam, siyasi müzakerelerin üzerinde yer alan bir denetim makamıdır. Öğrenci temsilcilerinin siyasi iradesi ile merkezin idari otoritesi arasındaki sınırın korunması esastır.\n\n---\n\n## 13. İstanbul'daki Siyasi Güç Dengesi\n\nİstanbul mektepleri, Hilalifiyet Merkezi içerisindeki faaliyetlerinde iki büyük siyasi blok etrafında toplanmıştır.\n\nBu iki blok farklı yönetim anlayışlarını ve stratejik hedefleri temsil eder.\n\n### 13.1. Üsküdar Bloğu — İrfan Ekolü\n\n**Blok Lideri:** [[Alper Ulaç Altaylı]]  \n**Lider Okul:** Üsküdar Milli İlim ve İrfan Mektebi  \n**Okul Başkanı:** Alper Ulaç Altaylı — 6. Kanat  \n**Başkan Yardımcısı:** [[İsmail Yağız Aslan]] — 5. Kanat\n\n#### Domine Edilmiş Müttefik Okullar\n\n- Kadıköy İleri Sanayi ve Askeri İdadi Mektebi.\n    \n- Beyoğlu Fen ve Havacılık Akademisi.\n    \n- Ümraniye Anadolu İrfan Mektebi.\n    \n\n#### Siyasi Kimlik\n\nÜsküdar Bloğu, irfan, liyakat ve sivil-askeri denge anlayışını temel alır.\n\nBlok, farklı yeteneklere sahip öğrencilerin ortak bir strateji altında organize edilmesini ve müttefik okulların potansiyellerinden yararlanılmasını hedefler.\n\n#### Temel Stratejiler\n\n- Liyakat esaslı yönetim.\n    \n- Alt kanatların yeteneklerini organize etme.\n    \n- Havacılık ve teknolojik gelişim vizyonu.\n    \n- Sivil ve askeri güçler arasında denge kurma.\n    \n- Esnek ancak uzun vadeli ittifaklar oluşturma.\n    \n- Müzakerelerde ortak çıkarları savunma.\n    \n- Müttefiklerin yeteneklerinden yararlanarak blok gücünü artırma.\n    \n\n### 13.2. Şark Bloğu — Otorite Ekolü\n\n**Blok Lideri:** [[Tomris İlter]]  \n**Lider Okul:** İstanbul Şarkın İlim ve Teknoloji Mektebi  \n**Okul Başkanı:** Tomris İlter — 6. Kanat  \n**Başkan Yardımcısı:** [[Asena Korkut]] — 5. Kanat\n\n#### Domine Edilmiş Müttefik Okullar\n\n- Beşiktaş Siyasi ve Teknolojik Bilimler Lisesi.\n    \n- Fatih Klasik Edebiyat ve Hukuk Mektebi.\n    \n- Bakırköy Teknik Araştırma İdadisi.\n    \n\n#### Siyasi Kimlik\n\nŞark Bloğu, otorite, merkeziyetçilik ve teknolojik üstünlük anlayışını temel alır.\n\nBlok içerisinde liderliğin tek merkezde toplanması ve bütün müttefik okulların ortak bir hiyerarşi altında hareket etmesi esastır.\n\n#### Temel Stratejiler\n\n- Katı hiyerarşik yönetim.\n    \n- Merkezi ve tekilleştirilmiş liderlik.\n    \n- Müzakerelerde diplomatik baskı.\n    \n- Teknolojik üstünlük oluşturma.\n    \n- İstihbarat ve bilgi kontrolüne önem verme.\n    \n- Blok içerisindeki siyasi disiplini koruma.\n    \n- Ortak hedefler doğrultusunda koordineli hareket etme.\n    \n\n---\n\n## 14. İstanbul Blokları Arasındaki Rekabet\n\n### 14.1. Rekabetin Niteliği\n\nÜsküdar ve Şark blokları arasındaki rekabet, İstanbul'daki mekteplerin siyasi üstünlük mücadelesinin temelini oluşturur.\n\nİki blok farklı yönetim anlayışlarına sahip oldukları için yalnızca belirli konularda değil, genel siyasi yaklaşımlarında da karşı karşıya gelir.\n\n### 14.2. Mücadele Yöntemleri\n\nBloklar arasındaki rekabet şu alanlarda yürütülebilir:\n\n- Okullar arası yarışmalar.\n    \n- İstihbarat toplama faaliyetleri.\n    \n- Stratejik siyasi hamleler.\n    \n- Diplomatik baskı.\n    \n- Müzakere üstünlüğü kazanma çabaları.\n    \n- Müttefik okulların sayısını ve niteliğini artırma.\n    \n- Siyasi nüfuz alanlarını genişletme.\n    \n- Rakip bloğun stratejik hamlelerine karşılık verme.\n    \n\n### 14.3. Rekabetin Sınırları\n\nBloklar arasındaki mücadele belirli bir devlet düzeni içerisinde kalmak zorundadır.\n\nDevletin belirlediği sınırların aşılması ve imparatorluğun güvenliğine zarar verecek faaliyetlere girişilmesi ağır suç kapsamındadır.\n\nBu nedenle iki blok arasındaki rekabet sert, stratejik ve yoğun olabilir; ancak devlet otoritesine karşı bir mücadeleye dönüşemez.\n\n---\n\n## 15. İstanbul Bloklarının Karşılaştırılması\n\n|Özellik|Üsküdar Bloğu|Şark Bloğu|\n|---|---|---|\n|Lider|Alper Ulaç Altaylı|Tomris İlter|\n|Lider okul|Üsküdar Milli İlim ve İrfan Mektebi|İstanbul Şarkın İlim ve Teknoloji Mektebi|\n|Başkan yardımcısı|İsmail Yağız Aslan|Asena Korkut|\n|Temel ekol|İrfan|Otorite|\n|Yönetim anlayışı|Liyakat ve denge|Merkeziyetçilik ve hiyerarşi|\n|Diplomatik yaklaşım|Esnek stratejik ittifak|Sert diplomatik baskı|\n|Öncelikli alan|Havacılık ve sivil-askeri denge|Teknoloji ve istihbarat|\n|Blok yapısı|Yetenek ve iş birliği odaklı|Merkezi liderlik odaklı|\n\n---\n\n## 16. Kurumun Genel İşleyiş Mantığı\n\nHilalifiyet Merkezi'nin siyasi ve idari sistemi dört temel unsur üzerine kuruludur:\n\n**1. Öğrenci Temsilciliği:** Okulların siyasi iradesini temsil eder, talepleri ortaya koyar ve müzakereleri yürütür.\n\n**2. Uzman Jüriler:** Talepleri, projeleri ve anlaşmaları değerlendirir. Gerekli onayları verir veya reddeder.\n\n**3. Merkez İdaresi:** Kurumun idari düzenini, güvenliğini ve müzakere protokollerini denetler.\n\n**4. Devlet Otoritesi:** Merkezin bağlı olduğu üst makamdır. Kurumun imparatorluğun genel çıkarlarıyla uyumlu faaliyet göstermesini sağlar.\n\nBu dört unsurun birlikte çalışması, Hilalifiyet Merkezi'nin siyasi rekabet ile devlet denetimini aynı sistem içerisinde yürütmesini sağlar.\n\nHilalifiyet Merkezi, öğrencilere geniş bir siyasi hareket alanı sunar ancak bu alan sınırsız değildir. Başarı, liyakat, diplomatik yetenek, uzman onayı ve devlet düzenine bağlılık kurum içerisindeki güç kazanımının temel şartlarıdır.\n\n---\n\n## 17. Henüz Kesinleştirilmemiş Kurumsal Ayrıntılar\n\nAşağıdaki konular kurumun genel yapısından ayrı olarak daha sonra belirlenmelidir.\n\n- Hilalifiyet Hanı'nın müzakereleri durdurma, kararları iptal etme ve öğrenci müzakerelerine müdahale etme yetkilerinin kesin sınırları.\n    \n- Genel müzakere kararlarının bürokratik onay aşamasındaki ayrıntılı prosedürleri.\n    \n- Uzman jürilerinin görev süreleri ve üyelerin yenilenme usulleri.\n    \n- Jüri üyelerinin görevden alınması ve değiştirilmesi.\n    \n- Jüri kararlarına itiraz mekanizması.\n    \n- 5. ve 6. Kanat temsilcilerinin merkeze girişte ek sicil veya yeterlilik incelemesine tabi olup olmadığı.\n        \n- Okulların bağımsızlık kazanma ve blok değiştirme süreçlerinin resmi prosedürleri.\n    \n- Müzakere toplantılarının dönemsel takvimi.\n    \n- Farklı şehirlerdeki Hilalifiyet Merkezlerinin birbirleriyle idari ilişkileri.\n    \n- Merkez bütçesi ve kaynak dağıtımının ayrıntılı sistemi.\n    \n- Yüksek Kanat Konseyi'nin kurum içerisindeki kesin görev ve yetki alanı.\n    \n\nBu başlıklar, kurumun mevcut yapısını değiştirmeden daha sonra ayrıntılandırılacaktır.",
+          "summary": "Mekteplerin üst düzey öğrenci temsilcilerini buluşturan, okullar arası siyasî ilişkileri ve müzakere süreçlerini düzenleyen merkezî kurum.",
+          "content": "# Hilalifiyet Merkezi\n\n## Kurumun niteliği\nHilalifiyet Merkezi, Büyük Türk İmparatorluğu'ndaki mekteplerin üst düzey öğrenci temsilcilerini bir araya getiren merkezî müzakere kurumudur. Temsil edilen birimler devletler değil, mekteplerdir. Bu yönüyle diplomatik kuruluşlara benzer; ancak faaliyet alanı öğrenci blokları, okul ittifakları ve gençlik teşkilatlarıdır.\n\nİmparatorluğun her ilinde en az bir merkez bulunur. İstanbul ve Ankara gibi büyük şehirlerde birden fazla merkez faaliyet gösterebilir. Kurum, Kızıl Orda'ya ve Maarif ve Gençlik Nizamı'na bağlıdır.\n\n## İki otorite alanı\nMerkezde iki yetki alanı birlikte işler:\n- **Öğrenci temsili:** okul başkanları, müzakere heyetleri, ittifaklar ve öğrenci blokları.\n- **Devlet denetimi:** merkez bürokrasisi, atanmış uzman jüriler, hukukî denetim ve Ankara'nın gözetimi.\n\nBu nedenle öğrenci temsilcileri kendi aralarında karar ve ittifak geliştirebilir; ancak kararların yürürlüğe girmesi devletin belirlediği usule bağlıdır.\n\n## Karar süreci\nBir talep önce gerekçelendirilir, ardından jüri tarafından değerlendirilir. Uygun görülen karar idarî onaydan geçtikten sonra bağlayıcı hâle gelir. Nizam-1 bu süreçte analiz ve karşılaştırma desteği sunar; karar veren makam değildir.\n\n## Yetkiler ve yaptırımlar\nHilalifiyet Merkezi; ittifaklara katılma, liderlik tanıma, bütçe ve araştırma imtiyazları, yarışma hakları ve müzakere ayrıcalıkları gibi konuları düzenleyebilir. Temsilin askıya alınması, oy hakkının kısıtlanması veya bazı imtiyazların geri alınması da yaptırımlar arasındadır.\n\nRekabet serbesttir; fakat devlet güvenliğini tehdit ettiği kabul edilen eylemler bu serbestinin dışındadır. Böylece merkez, öğrencilere siyasî deneyim kazandırırken gençlik örgütlerini devlet denetimi altında tutar.\n\n## 1985 gündemi\n16 Eylül 1985'te düzenlenen Mektepler Arası Teknoloji Tasarım Yarışması, kurumun o yılki en görünür faaliyetlerinden biridir. Üsküdar ve Şarkın mektepleri arasındaki rekabet, öğrenci liderlerinin güç dengelerini ve devletin gençlik politikasını aynı sahnede buluşturur.",
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [
-            {
-              "categoryId": "institutions",
-              "id": "institutions-kuruluslar-kamuya-acik-kizil-orda-yerleske-md",
-              "title": "Kızıl Orda — Merkez Yerleşke Profili",
-              "date": "1985"
-            },
-            {
-              "categoryId": "personal-records",
-              "id": "personal-records-genc-karakterler-alper-ulac-altayli-index-md",
-              "title": "Alper Ulaç Altaylı",
-              "date": ""
-            },
-            {
-              "categoryId": "characters",
-              "id": "characters-ismail-yagiz-aslan",
-              "title": "İsmail Yağız Aslan",
-              "date": "1968 · 17 yaş"
-            },
-            {
-              "categoryId": "characters",
-              "id": "characters-tomris-ilter",
-              "title": "Tomris İlter",
-              "date": "1968 · 17 yaş"
-            },
-            {
-              "categoryId": "characters",
-              "id": "characters-asena-korkut",
-              "title": "Asena Korkut",
-              "date": "1968 · 17 yaş"
-            }
-          ],
+          "links": [],
           "country": "turkish",
           "categoryId": "institutions",
           "ancestors": []
@@ -3491,8 +3846,8 @@
           "sourceName": "ta-85-gokkanat-tarihce",
           "title": "TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi",
           "date": "1943",
-          "summary": "1943 prototip dönemine uzanan, Türk uçan kanat havacılık projesi; 1946'daki kıtalararası siyasî kırılma döneminin teknoloji tarihine bağlanan simgelerinden biri.",
-          "content": "# TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi\n\n## Proje kimliği\n\n- Proje adı: TA-85 Gökkanat.\n- Ülke: Türkiye / Büyük Türk İmparatorluğu'nun önceki yönetim dönemi.\n- Sınıf: Uçan kanat tipi havacılık projesi.\n- Prototip dönemi: 1943.\n- Genel tarihî bağlam: 1940'lı yılların stratejik havacılık ve teknoloji programları.\n\n## Tarihçe\n\nTA-85 Gökkanat, evrenin teknoloji arşivinde Türk uçan kanat projelerinin başlıca örneklerinden biri olarak yer alır. Projenin prototip dönemi 1943'e tarihlenir. Daha sonraki tarih anlatısında, 1946'da Amerika ile yaşanan atom çağı kırılmasına hazırlanan uzun menzilli havacılık programının sembollerinden biri hâline gelir.\n\n## Tasarımın evrendeki yeri\n\nGökkanat, dönemin havacılık düşüncesinde alışılmış gövde ve kuyruk düzeninden farklı bir uçan kanat yaklaşımını temsil eder. Bu kayıt, projeyi tarihsel ve kültürel bağlamıyla tanımlar; tasarım, üretim, performans, silahlandırma veya operasyonel kullanıma yönelik uygulanabilir teknik ayrıntı vermez.\n\n## Kamuya açık görsel arşiv\n\nProjenin yayımlanabilir çizimleri ve görselleri, kaynak ve kullanım hakkı bilgileri kesinleştirildikçe bu kayda bağlanabilir. Henüz tarih ve kaynak künyesi doğrulanmamış görseller burada belirli bir prototip fotoğrafı gibi sunulmaz.\n\n## Kanon sınırı\n\n1943 prototip dönemi ve uçan kanat sınıflandırması mevcut proje notlarında yer alan bilgilerdir. Teknik özellikler, üretim serisi, kesin test tarihleri, personel listesi ve hizmete giriş takvimi için ayrı ve onaylı kaynak gerekir.\n\n## İlgili kayıtlar\n\n- Türk Uçan Kanat\n- [[1945 — Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı]]\n- [[1946 — Amerika'nın Tam Çöküşü]]",
+          "summary": "Türk uçan kanat havacılığının gelişim çizgisi: 1958'de Ta 70, 1965'te Gökkanat programının önemli hangar olayı ve 1975'te TA-85'in seri üretime geçmesi.",
+          "content": "# Ta 70 ve TA-85 Gökkanat — Kamuya Açık Tarihçe\n\n## Projenin yeri\nGökkanat, Büyük Türk İmparatorluğu'nun uçan kanat havacılık çizgisinin en tanınan projelerinden biridir. Sadece bir uçak modeli olarak değil, Necdet Atalay'ın kuşağından başlayıp Cengiz Atalay ve sonraki mühendislerle devam eden uzun bir mühendislik geleneğinin parçası olarak değerlendirilir.\n\n## Gelişim çizgisi\n- **1958 — Ta 70:** Türk uçan kanat tasarımının ilk prototip aşaması. Necdet Atalay bu dönemin mühendisleri arasındadır.\n- **1965 — Hangar olayı:** Gökkanat programının geçmişinde önemli bir kırılma yaşanır. Olayın nedeni, sorumluları ve teknik ayrıntıları bu kamusal tarihçede açıklanmaz.\n- **1975 — TA-85 Gökkanat:** Yeni seri üretim dönemi başlar. 1985'te Gökkanat, imparatorluğun havacılık kimliğinin başlıca simgelerinden biridir.\n\n## Aile belleği\nNecdet Atalay'ın çalışmaları, oğlu Cengiz'in askerî uçak mühendisliği kariyeri ve torunu Oğuz'un pilot olma isteği arasında kuşaklar boyunca süren bir bağ kurar. Necdet ve Cengiz uçakların geliştirilmesiyle, Oğuz ise onları uçurmak arzusuyla bu mirasın farklı halkalarını temsil eder.\n\n## Kamusal kapsam\nBu kayıt projenin tarihsel gelişimini ve evrendeki yerini açıklar. Tasarım, üretim, performans, silahlandırma veya operasyonel kullanıma yönelik uygulanabilir teknik ayrıntı içermez.",
           "order": 1,
           "aliases": [
             "TA-85",
@@ -3500,20 +3855,7 @@
             "Gök Kanat"
           ],
           "children": [],
-          "links": [
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1945-turk-atom-projesi-ve-uzun-menzilli-bombardiman-programi-md",
-              "title": "1945 — Türk Atom Projesi ve Uzun Menzilli Bombardıman Programı",
-              "date": "1945"
-            },
-            {
-              "categoryId": "chronology",
-              "id": "chronology-tarihi-olaylar-olaylar-1946-amerika-nin-tam-cokusu-md",
-              "title": "1946 — Amerika'nın Tam Çöküşü",
-              "date": "1946"
-            }
-          ],
+          "links": [],
           "country": "turkish",
           "categoryId": "technology",
           "ancestors": []
@@ -3534,49 +3876,12 @@
           "sourceName": "B-3 Sınıf Profili",
           "title": "B-3 Sınıf Profili",
           "date": "1985 · EĞİTİM",
-          "summary": " Temel Bilgiler\n- Sınıf: 3. sınıf\n- Şube: B\n- Kod: B-3\n- Ana karakter: [[Oğuz Kağan Atalay]]\n- Dönem: 1985 eğitim yılı\n- Okul adı: [[İstanbul Şarkın İlim ve Teknoloji Mektebi]] (kesinleşmiş ad)\n- Bağlı dosya: [[B-3 Ders Programı]]",
-          "content": "## Temel Bilgiler\n- **Sınıf:** 3. sınıf\n- **Şube:** B\n- **Kod:** B-3\n- **Ana karakter:** [[Oğuz Kağan Atalay]]\n- **Dönem:** 1985 eğitim yılı\n- **Okul adı:** İstanbul Şarkın İlim ve Teknoloji Mektebi (kesinleşmiş ad)\n- **Bağlı dosya:** [[B-3 Ders Programı]]\n\n## Sınıfın Genel Karakteri\nB-3, akademik seviyesi ortalamanın üzerinde olan fakat tek tip öğrencilerden oluşmayan bir sınıftır. Teknik merakı güçlü öğrenciler, sosyal becerileri gelişmiş öğrenciler, siyasete ve hukuka ilgi duyanlar, sanat ve sporla kendini gösterenler aynı sınıfta bulunur. Bu nedenle sınıf yalnızca sınav başarısıyla değil, konuşma, ikna, grup çalışması ve sorumluluk alma davranışlarıyla da dikkat çeker.\n\n## Öne Çıkan Öğrenciler\n- [[Oğuz Kağan Atalay]]: Üç kanatlı, disiplinli, teknik zekâsı ve askerî pilot hedefiyle öne çıkar.\n- [[İsmail Yağız Aslan]]: Beş kanatlı, esprili ve siyasete yatkın; dağınık görünse de doğru konuda güçlü odaklanabilir.\n- [[Muhammed Mete]]: Dört kanatlı, sakin ve uzlaşmacı; sivil pilotluk hedefi vardır.\n- [[Aylin Aksoy]]: Üç kanatlı, planlı, gözlemci; avukatlık hedefi ve Sosyolojik Eğitim ilgisi güçlüdür.\n- [[Alev Acar]]: İki kanatlı, enerjik, uyumlu; sivil pilotluk hedefi vardır.\n\n## Sosyal Yapı\nSınıfın merkezinde Oğuz, İsmail, Alper ve çevrelerine katılan öğrencilerden oluşan güçlü bir arkadaş grubu bulunur. Bu grup sınıfta doğal ağırlık taşır; ancak öğretmenler bu ağırlığı resmî yetki gibi görmez. B-3'ün sağlıklı işlemesi için yüksek Kanatlı öğrencilerin sınıfı baskılamak yerine toparlaması gerekir.\n\n## Akademik Atmosfer\nSınıfta matematik, fizik ve teknoloji derslerine ilgi yüksektir; ancak hukuk, hitabet, tarih ve yurttaşlık gibi alanlar da karakter gelişimi açısından önemlidir. Öğrencilerin bazıları belirli derslerde zorlanır: örneğin [[Aylin Aksoy]] matematikten fazla hoşlanmaz, [[Alev Acar]] edebiyatı sevmez, [[Muhammed Mete]] edebiyattan uzak durabilir. Bu farklılıklar ders sahnelerinde doğal gerilim ve gelişim alanı verir.\n\n## Kanat Sistemiyle İlişki\nB-3, Kanat sisteminin görünür olduğu bir sınıftır. Bir sınıfta iki, üç, dört, beş ve altı kanatlı öğrencilerin bir arada bulunması sosyal dengeleri belirgin hâle getirir. Öğretmenlerin gözlemleri Kanat Konseyi için veri olabilir; fakat öğretmenler Kanat sayısını belirlemez.\n\n## Hikâyede Kullanım\nB-3, roman içinde okul hayatını yalnızca ders anlatımı olarak değil; arkadaşlık, liderlik, sorumluluk, rekabet, proje üretimi ve toplum önünde kendini ifade etme alanı olarak göstermek için kullanılabilir. Teknoloji ve Tasarım yarışması, Sosyolojik Eğitim sunumları ve Kanat sistemi üzerinden sınıf çok sayıda sahneye zemin hazırlar.",
+          "summary": "Oğuz, Alper, İsmail, Muhammed Mete, Aylin ve Alev'in 1985 yılında öğrenim gördüğü Üsküdar Milli İlim ve İrfan Mektebi sınıfı.",
+          "content": "# B-3 Sınıf Profili — Üsküdar Milli İlim ve İrfan Mektebi\n\n## Sınıfın yeri\nB-3, 1985 eğitim yılında Üsküdar Milli İlim ve İrfan Mektebi'nde bulunan 3. sınıf B şubesidir. Akademik seviyesi yüksek olmakla birlikte öğrencileri tek tip değildir; teknik merak, hukuk, siyaset, liderlik ve sosyal beceriler aynı sınıf çevresinde buluşur.\n\n## Öğrenci kadrosu\n- **Oğuz Kağan Atalay:** Üç kanatlıdır. Havacılığa ve teknik sistemlere ilgi duyar; askerî pilot olmak ister.\n- **Alper Ulaç Altaylı:** Altı kanatlı okul başkanıdır. Öğrenci ilişkilerini ve okul içindeki bilgi akışını yönetir.\n- **İsmail Yağız Aslan:** Beş kanatlı başkan yardımcısıdır. Rahat ve esprili tavrının altında güçlü bir pratik zekâ bulunur.\n- **Muhammed Mete:** Dört kanatlıdır. Sakin ve uyumlu yapısıyla grupta denge kurar; sivil pilotluğu hedefler.\n- **Aylin Aksoy:** Üç kanatlıdır. Gözlemci ve planlıdır; hukuk alanına yönelmek ister.\n- **Alev Acar:** İki kanatlıdır. Enerjik ve uyumludur; sivil pilot olmak ister.\n\n## Şarkın Mektebi ile ayrım\nTomris İlter ve Asena Korkut bu sınıfın öğrencileri değildir. İkisi de **İstanbul Şarkın İlim ve Teknoloji Mektebi**'nde öğrenim görür. Tomris o okulun altı kanatlı başkanı, Asena beş kanatlı başkan yardımcısıdır. İki mektep arasındaki rekabet ve öğrenci temsil ilişkileri genç karakterlerin hikâyelerini birbirine bağlar.\n\n## Kanat sistemi\nKanat sayısı öğrencinin okul içindeki sorumluluk ve temsil düzeyini gösterir. Öğretmenler ders, grup çalışması ve davranışları gözlemleyebilir; fakat Kanat seviyesini tek başlarına belirlemez. Nihai işleyiş Kanat Konseyi ve ilgili sistem kuralları üzerinden yürür.\n\n## Sınıfın hikâyedeki yeri\nB-3, farklı hedefleri olan gençleri aynı gündelik çevrede buluşturur. Arkadaşlık, rekabet, öğrenci siyaseti ve gelecek beklentileri burada iç içe geçer. Bu nedenle sınıf, romanın genç karakterlerinin birbirini tanıdığı ve kararlarının birbirini etkilediği temel sosyal alandır.",
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [
-            {
-              "categoryId": "characters",
-              "id": "characters-oguz-kagan-atalay",
-              "title": "Oğuz Kağan Atalay",
-              "date": "1968 · 17 yaş"
-            },
-            {
-              "categoryId": "society",
-              "id": "society-asli-olan-duzen-b-3-b-3-ders-programi-md",
-              "title": "B-3 — Haftalık Ders Düzeni",
-              "date": "1985 · HAFTALIK PROGRAM"
-            },
-            {
-              "categoryId": "characters",
-              "id": "characters-ismail-yagiz-aslan",
-              "title": "İsmail Yağız Aslan",
-              "date": "1968 · 17 yaş"
-            },
-            {
-              "categoryId": "characters",
-              "id": "characters-muhammed-mete",
-              "title": "Muhammed Mete",
-              "date": "1968 · 17 yaş"
-            },
-            {
-              "categoryId": "characters",
-              "id": "characters-aylin-aksoy",
-              "title": "Aylin Aksoy",
-              "date": "1968 · 17 yaş"
-            },
-            {
-              "categoryId": "characters",
-              "id": "characters-alev-acar",
-              "title": "Alev Acar",
-              "date": "1968 · 17 yaş"
-            }
-          ],
+          "links": [],
           "country": "turkish",
           "categoryId": "society",
           "ancestors": []
@@ -3644,8 +3949,8 @@
           "sourceName": "kanat-sistemi-uygulamasi",
           "title": "Kanat Sistemi — Kamusal Çerçeve",
           "date": "1985",
-          "summary": "Büyük Türk İmparatorluğu genelinde kullanılan, öğrencilerin sorumluluk, katkı, liderlik ve okul içi görevlerini kademelendiren altı seviyeli sistem.",
-          "content": "# Kanat Sistemi — Kamusal Çerçeve\n\n## Sistemin kapsamı\n\nKanat sistemi, yalnızca Oğuz Kağan Atalay'ın okuluna özgü değildir; Büyük Türk İmparatorluğu genelindeki öğrenci düzeninin parçasıdır. Öğrencilerin sorumluluk, katkı, liderlik ve okul içindeki görevleri altı seviyede tanımlanır.\n\nKanat sayısı, öğrencinin okul sistemi içindeki görev ve sorumluluk seviyesini gösterir. Bu kayıt, seviyelerin kamusal anlamını açıklar; kesinleşmemiş değerlendirme ölçütleri veya terfi prosedürleri eklemez.\n\n## Bilinen seviyeler\n\n| Seviye | Kamusal karşılığı |\n|---|---|\n| 1 Kanat | Başlangıç ve temel sorumluluk seviyesi. |\n| 2 Kanat | Saygılı, yardımcı ve uyumlu davranışları kanıtlanmış öğrenci. |\n| 3 Kanat | Grup liderliği ve görev sorumluluğu üstlenebilen öğrenci. |\n| 4 Kanat | Üç Kanat seviyesindeki öğrencilerin daha geniş organizasyonuna ve okul işleyişine katkı sağlayan seviye. |\n| 5 Kanat | Okul başkan yardımcılığı düzeyindeki üst öğrenci görevi. |\n| 6 Kanat | Okul başkanlığı ve sistemdeki en yüksek öğrenci görevi. |\n\n## Öğretmenlerin rolü\n\nÖğretmenler öğrencilerin ders, grup çalışması, sunum, görev paylaşımı ve davranışlarını gözlemler. Bu gözlemler sistem için değerlendirme bilgisi oluşturabilir; öğretmenler Kanat seviyesini tek başına belirlemez.\n\n## Kanat Konseyi ve karar süreci\n\nMevcut okul kanonunda nihai Kanat işleyişinin Kanat Konseyi ve kendi kuralları üzerinden yürüdüğü belirtilir. Konseyin ayrıntılı yapısı, üyelik ölçütleri, değerlendirme takvimi, yükselme ve itiraz prosedürü henüz kamuya açık kaynaklarda ayrıntılandırılmamıştır.\n\n## B-3 sınıfından bilinen örnekler\n\n- Oğuz Kağan Atalay: 3 Kanat.\n- Alev Acar: 2 Kanat.\n- Aylin Aksoy: 3 Kanat.\n- Muhammed Mete: 4 Kanat.\n- İsmail Yağız Aslan: 5 Kanat.\n- Alper: 6 Kanat.\n\nBu örnekler karakter dosyalarındaki mevcut sınıf bilgilerini yansıtır; genel terfi ölçütlerinin yerine geçmez.\n\n## Açık kalan bilgiler\n\n- Kanat Konseyinin üyeleri ve görev süresi.\n- Seviye yükseltme/değerlendirme aralıkları.\n- Puanlama veya gözlem ölçütleri.\n- İtiraz ve yeniden değerlendirme usulü.\n- Okullar arasında uygulamanın standartlaştırılması.\n\n## Kaynaklar\n\n- [[Kanat]]\n- [[B-3 Sınıf Profili]]\n- [[B-3 Ders Programı]]\n- İstanbul Şarkın İlim ve Teknoloji Mektebi",
+          "summary": "İmparatorluk genelinde öğrencilerin okul içindeki sorumluluk, temsil ve görev kapsamını altı seviyede düzenleyen sistem.",
+          "content": "# Kanat Sistemi — Kamusal Çerçeve\n\n## Sistemin anlamı\nKanat, öğrencinin zekâsını, servetini veya dokunulmazlığını gösteren bir rütbe değildir. Okul içinde üstlendiği sorumluluğun ve temsil ettiği öğrenci çevresinin kapsamını belirtir. Seviye yükseldikçe yalnızca yetki değil, sorumlu olunan insan sayısı ve hesap verme yükü de artar.\n\n## Altı seviye\n| Kanat | Anlamı | Tipik sorumluluk |\n|---|---|---|\n| 1 | Başlangıç | Kendi görevlerini düzenli yerine getirmek |\n| 2 | Güvenilir katkı | Yardım, küçük grup desteği ve temsil |\n| 3 | Grup liderliği | Küçük ekipleri yönlendirmek ve sunum yapmak |\n| 4 | Organizasyon | Üç kanatlı öğrencilerin koordinasyonuna ve okul işleyişine katkı |\n| 5 | Başkan yardımcılığı | Okul temsili ve müzakere heyetinde görev |\n| 6 | Okul başkanlığı | Okulun öğrenci siyaseti, temsil ve ittifak kararları |\n\n## Kim belirler?\nÖğretmenler öğrencilerin davranış, katkı, grup çalışması ve sorumluluklarını gözlemler; bu gözlemler değerlendirme sürecine bilgi sağlar. Kanat seviyesini öğretmenler tek başına vermez. Karar, öğrenciler ve danışman öğretmenin yer aldığı Kanat Konseyi'nin kuralları üzerinden yürür. Maarif ve Gençlik Nizamı ile Hilalifiyet sicil düzeni sistemi denetler.\n\n## Sınırlar\nKanat sayısı ayrıcalık veya dokunulmazlık sağlamaz. En yüksek seviyedeki okul başkanı da ağır ihlal durumunda görevden alınabilir. Sistem resmî söylemde liyakat ve sorumluluk ilkelerine dayanır; uygulamada kayırmacılık ve oy ilişkileri etrafında tartışmalar yaşanabilir.",
           "order": 2,
           "aliases": [
             "Kanat",
@@ -3653,20 +3958,7 @@
             "Kanat seviyeleri"
           ],
           "children": [],
-          "links": [
-            {
-              "categoryId": "society",
-              "id": "society-asli-olan-duzen-b-3-b-3-sinif-profili-md",
-              "title": "B-3 Sınıf Profili",
-              "date": "1985 · EĞİTİM"
-            },
-            {
-              "categoryId": "society",
-              "id": "society-asli-olan-duzen-b-3-b-3-ders-programi-md",
-              "title": "B-3 — Haftalık Ders Düzeni",
-              "date": "1985 · HAFTALIK PROGRAM"
-            }
-          ],
+          "links": [],
           "country": "both",
           "categoryId": "society",
           "ancestors": []
