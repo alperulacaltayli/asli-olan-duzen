@@ -1075,6 +1075,19 @@ Japonya Pasifik'te varlığını ve bölgesel etkisini korur; ancak 1985 dünya 
             record["summary"], record["content"] = override
 
     records += public_folder_nodes("geography", "Alternatif Tarih/Dünya/Coğrafya")
+    for record in records:
+        if normalize(record.get("title", "")) == "istanbul 1985 sehir profili":
+            record["summary"] = "İstanbul, 1985 anlatısındaki iki ayrı mektebin ve öğrenci çevresinin bulunduğu şehirdir; B-3 Üsküdar Mektebi'ndedir."
+            record["content"] = """# İstanbul — 1985 Şehir Profili
+
+İstanbul, romanın genç karakterlerinin okul ve aile yaşamının geçtiği başlıca şehirdir. Anlatıda iki ayrı mektep önem taşır:
+
+- **Üsküdar Milli İlim ve İrfan Mektebi:** Oğuz Kağan Atalay ve B-3 sınıfının bulunduğu okul. Alper Ulaç Altaylı okul başkanı, İsmail Yağız Aslan başkan yardımcısıdır.
+- **İstanbul Şarkın İlim ve Teknoloji Mektebi:** Tomris İlter ve Asena Korkut'un öğrenim gördüğü ayrı okul. Tomris okul başkanı, Asena başkan yardımcısıdır.
+
+Bu iki okulun öğrenci kadroları birbirine karıştırılmamalıdır. Aralarındaki rekabet ve Hilalifiyet çevresindeki ilişkiler, gençlerin hikâyelerini birbirine bağlar.
+
+İstanbul'un alternatif evrendeki 1985 idarî bölünümü, okul kampüslerinin kesin adresleri ve ayrıntılı ulaşım bağlantıları mevcut kamusal kayıtlarda bütünüyle sabitlenmemiştir. Bu nedenle doğrulanmamış ilçe veya adres bilgisi eklenmez."""
     return {
         "id":"geography",
         "title":"Dünya Atlası",
@@ -1106,6 +1119,25 @@ def import_technology():
     existing = scan_public_archive_nodes(technology_root, technology_root, "technology")
     public_records = public_folder_nodes("technology", "Alternatif Tarih/Teknoloji/Kamuya Açık")
     records = _merge_public_records(existing, public_records)
+    for record in records:
+        if normalize(record.get("title", "")).startswith("ta 85 gokkanat"):
+            record["summary"] = "Türk uçan kanat havacılığının gelişim çizgisi: 1958'de Ta 70, 1965'te Gökkanat hangarı olayı ve 1975'te TA-85'in seri üretime geçmesi."
+            record["content"] = """# Ta 70 ve TA-85 Gökkanat — Kamuya Açık Tarihçe
+
+## Projenin yeri
+Gökkanat, Büyük Türk İmparatorluğu'nun uçan kanat havacılık çizgisinin en tanınan projelerinden biridir. Sadece bir uçak modeli olarak değil, Necdet Atalay'ın kuşağından başlayıp Cengiz Atalay ve sonraki mühendislerle devam eden uzun bir mühendislik geleneğinin parçası olarak değerlendirilir.
+
+## Gelişim çizgisi
+- **1958 — Ta 70:** Türk uçan kanat tasarımının ilk prototip aşaması. Necdet Atalay bu dönemin mühendisleri arasındadır.
+- **1965 — Hangar olayı:** Gökkanat programının geçmişinde önemli bir kırılma yaşanır. Bir prototip kaybolur ve bir mühendisin adı kayıtlardan silinir. Olayın bütün ayrıntıları bu kamusal tarihçede açıklanmaz.
+- **1975 — TA-85 Gökkanat:** Yeni seri üretim dönemi başlar. 1985'te Gökkanat, imparatorluğun havacılık kimliğinin başlıca simgelerinden biridir.
+
+## Aile belleği
+Necdet Atalay'ın çalışmaları, oğlu Cengiz'in askerî uçak mühendisliği kariyeri ve torunu Oğuz'un pilot olma isteği arasında kuşaklar boyunca süren bir bağ kurar. Necdet ve Cengiz uçakların geliştirilmesiyle, Oğuz ise onları uçurmak arzusuyla bu mirasın farklı halkalarını temsil eder.
+
+## Kamusal kapsam
+Bu kayıt projenin tarihsel gelişimini ve evrendeki yerini açıklar. Tasarım, üretim, performans, silahlandırma veya operasyonel kullanıma yönelik uygulanabilir teknik ayrıntı içermez."""
+            record["country"] = "turkish"
     apply_default_leaf_country(records, "turkish")
     return {
         "id":"technology",
@@ -1153,6 +1185,29 @@ Bu kayıt yalnızca B-3 sınıfının programını gösterir; okulun tüm sını
     public_records = public_folder_nodes("society", "Aslı Olan Düzen/Toplum ve Gündelik Hayat")
     records = _merge_public_records(records, public_records)
     for record in records:
+        if normalize(record.get("title", "")) == "b 3 sinif profili":
+            record["summary"] = "Oğuz, Alper, İsmail, Muhammed Mete, Aylin ve Alev'in 1985 yılında öğrenim gördüğü Üsküdar Milli İlim ve İrfan Mektebi sınıfı."
+            record["content"] = """# B-3 Sınıf Profili — Üsküdar Milli İlim ve İrfan Mektebi
+
+## Sınıfın yeri
+B-3, 1985 eğitim yılında Üsküdar Milli İlim ve İrfan Mektebi'nde bulunan 3. sınıf B şubesidir. Akademik seviyesi yüksek olmakla birlikte öğrencileri tek tip değildir; teknik merak, hukuk, siyaset, liderlik ve sosyal beceriler aynı sınıf çevresinde buluşur.
+
+## Öğrenci kadrosu
+- **Oğuz Kağan Atalay:** Üç kanatlıdır. Havacılığa ve teknik sistemlere ilgi duyar; askerî pilot olmak ister.
+- **Alper Ulaç Altaylı:** Altı kanatlı okul başkanıdır. Öğrenci ilişkilerini ve okul içindeki bilgi akışını yönetir.
+- **İsmail Yağız Aslan:** Beş kanatlı başkan yardımcısıdır. Rahat ve esprili tavrının altında güçlü bir pratik zekâ bulunur.
+- **Muhammed Mete:** Dört kanatlıdır. Sakin ve uyumlu yapısıyla grupta denge kurar; sivil pilotluğu hedefler.
+- **Aylin Aksoy:** Üç kanatlıdır. Gözlemci ve planlıdır; hukuk alanına yönelmek ister.
+- **Alev Acar:** İki kanatlıdır. Enerjik ve uyumludur; sivil pilot olmak ister.
+
+## Şarkın Mektebi ile ayrım
+Tomris İlter ve Asena Korkut bu sınıfın öğrencileri değildir. İkisi de **İstanbul Şarkın İlim ve Teknoloji Mektebi**'nde öğrenim görür. Tomris o okulun altı kanatlı başkanı, Asena beş kanatlı başkan yardımcısıdır. İki mektep arasındaki rekabet ve öğrenci temsil ilişkileri genç karakterlerin hikâyelerini birbirine bağlar.
+
+## Kanat sistemi
+Kanat sayısı öğrencinin okul içindeki sorumluluk ve temsil düzeyini gösterir. Öğretmenler ders, grup çalışması ve davranışları gözlemleyebilir; fakat Kanat seviyesini tek başlarına belirlemez. Nihai işleyiş Kanat Konseyi ve ilgili sistem kuralları üzerinden yürür.
+
+## Sınıfın hikâyedeki yeri
+B-3, farklı hedefleri olan gençleri aynı gündelik çevrede buluşturur. Arkadaşlık, rekabet, öğrenci siyaseti ve gelecek beklentileri burada iç içe geçer. Bu nedenle sınıf, romanın genç karakterlerinin birbirini tanıdığı ve kararlarının birbirini etkilediği temel sosyal alandır."""
         record_path = normalize(record.get("path", ""))
         if record_path == "kanat" or "kanat sistemi" in normalize(record.get("title", "")):
             record["country"] = "both"
