@@ -263,7 +263,7 @@ def import_characters():
             "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
             "role":"Öğrenci · 2. Kanat · sivil pilotluk hedefi",
             "appearance":"Düz kızıl saçlı ve ela gözlü.",
-            "personality":"Neşeli, konuşkan, uyumlu ve arkadaşlarına bağlı.",
+            "personality":"Neşeli, konuşkan, uyumlu ve çözüm odaklı.",
             "aliases":["Alev Acar"]
         },
         {
@@ -317,7 +317,7 @@ def import_characters():
         {
             "key":"aysel-atalay", "path":main_base+"Aysel Atalay.md", "name":"Aysel Atalay",
             "date":"1947 · 38 yaş", "birth":"1947", "age":"38",
-            "role":"Atalay ailesinin annesi",
+            "role":"Ev hanımı",
             "appearance":"Sade ve zarif bir giyim tarzını tercih eder.",
             "personality":"Sakin, sabırlı, anlayışlı ve koruyucu.",
             "aliases":["Aysel Atalay"]
@@ -357,7 +357,7 @@ def import_characters():
         {
             "key":"sabiha-atalay", "path":main_base+"Sabiha Atalay.md", "name":"Sabiha Atalay",
             "date":"1923 · 62 yaş", "birth":"1923", "age":"62",
-            "role":"Atalay ailesinin büyüğü",
+            "role":"Ev hanımı",
             "appearance":"Sade ve klasik kıyafetler tercih eder.",
             "personality":"Sakin, sabırlı, anlayışlı ve aile odaklı.",
             "aliases":["Sabiha Atalay"]
@@ -365,7 +365,7 @@ def import_characters():
         {
             "key":"naciye-kaya", "path":main_base+"Naciye Kaya.md", "name":"Naciye Kaya",
             "date":"1920 · 65 yaş", "birth":"1920", "age":"65",
-            "role":"Kaya ailesinin büyüğü",
+            "role":"Ev hanımı",
             "appearance":"Sade ve geleneksel bir giyim tarzına sahiptir.",
             "personality":"Girişken, konuşkan, açık sözlü ve pratik zekâlı.",
             "aliases":["Naciye Kaya"]
@@ -373,7 +373,7 @@ def import_characters():
         {
             "key":"riza-kaya", "path":main_base+"Rıza Kaya.md", "name":"Rıza Kaya",
             "date":"1916 · 69 yaş", "birth":"1916", "age":"69",
-            "role":"Kaya ailesinin büyüğü",
+            "role":"Mesleği kaynakta belirtilmemiştir",
             "appearance":"Sade ve düzenli giyinir.",
             "personality":"Sakin, ağırbaşlı, geleneklerine bağlı ve sorumluluk sahibi.",
             "aliases":["Rıza Kaya"]
@@ -652,7 +652,7 @@ Neşeli, hareketli ve konuşkandır. Yeni ortamlara çabuk uyum sağlar; planlar
 ## Eğitim ve ilgi alanları
 Dersleri genel olarak ortalamanın üzerindedir. En sevdiği ders matematiktir; problem çözmekten ve farklı çözüm yolları denemekten hoşlanır. Türk Dili ve Edebiyatı'nı ise uzun metinler ve ezber ağırlığı nedeniyle daha az sever.
 
-Boş zamanlarında örgü örer ve küçük karakter çizimleri yapar. Çizimleri çoğunlukla defter kenarlarına veya eline geçen kâğıtlara yaptığı kısa karalamalardır. Ailesiyle vakit geçirmekten de hoşlanır.
+Boş zamanlarında örgü örer ve küçük karakter çizimleri yapar. Çizimleri çoğunlukla defter kenarlarına veya eline geçen kâğıtlara yaptığı kısa karalamalardır.
 
 ## Duygusal tepkileri
 Eleştiriye ilk anda savunmacı yaklaşabilir; biraz zaman geçince haklı eleştiriyi kabul edebilir. Öfkelendiğinde bağırmaktan çok sert konuşur. Üzgün olduğunda çoğunlukla yalnız kalıp uyumayı tercih eder. En büyük korkusu değer verdiği insanları kaybetmektir.
