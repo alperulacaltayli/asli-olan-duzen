@@ -232,7 +232,7 @@ def make_public_character(category, spec):
     if spec.get("personality"):
         fields.append(f"**Kişilik:** {spec['personality']}")
 
-    content = "\n\n".join(fields)
+    content = spec.get("profile") or "\n\n".join(fields)
     summary = spec.get("summary") or spec.get("personality", "")
     return {
         "id": category + "-" + slug(spec["key"]),
@@ -310,7 +310,7 @@ def import_characters():
             "key":"oguz-kagan-atalay", "path":main_base+"Oğuz Kağan Atalay.md", "name":"Oğuz Kağan Atalay",
             "date":"1968 · 17 yaş", "birth":"3 Ocak 1968 · İstanbul, Üsküdar", "age":"17",
             "role":"Öğrenci · 3. Kanat · Üsküdar Mektebi · askerî pilotluk hedefi",
-            "appearance":"Belirgin yüz hatlarına, kızıl saçlara ve düzenli bir görünüme sahiptir.",
+            "appearance":"Dik duruşlu, düzenli ve bakımlı bir görünüme sahiptir.",
             "personality":"Sakin, soğukkanlı, disiplinli, gözlemci ve teknik konulara meraklı.",
             "aliases":["Oğuz Kağan Atalay"]
         },
@@ -324,7 +324,7 @@ def import_characters():
         },
         {
             "key":"cengiz-atalay", "path":main_base+"Cengiz Atalay.md", "name":"Cengiz Atalay",
-            "date":"1942 · 43 yaş", "birth":"1942", "age":"43",
+            "date":"1945 · 40 yaş", "birth":"1945", "age":"40",
             "role":"Askerî uçak mühendisi · Gökkanat programı",
             "appearance":"Düzenli ve klasik giyinir; resmî ve hafif askerî çizgileri tercih eder.",
             "personality":"Özgüvenli, enerjik, meraklı ve çalışkan.",
@@ -332,7 +332,7 @@ def import_characters():
         },
         {
             "key":"meliha-atalay", "path":main_base+"Meliha Atalay.md", "name":"Meliha Atalay",
-            "date":"1985 · 9 yaş (doğum yılı türetilmiş)",
+            "date":"1975 · 10 yaş", "birth":"1975", "age":"10",
             "role":"Öğrenci",
             "appearance":"Yaşına uygun, sade ve rahat kıyafetler tercih eder.",
             "personality":"Çalışkan, kararlı, inatçı ve azimli.",
@@ -340,7 +340,7 @@ def import_characters():
         },
         {
             "key":"muhammed-atalay", "path":main_base+"Muhammed Atalay.md", "name":"Muhammed Atalay",
-            "date":"1985 · 11 yaş (doğum yılı türetilmiş)",
+            "date":"1973 · 12 yaş", "birth":"1973", "age":"12",
             "role":"Öğrenci · mühendisliğe ilgi duyuyor",
             "appearance":"Yaşına uygun, sade ve rahat giyinir.",
             "personality":"Meraklı, hareketli ve teknik konulara ilgili.",
@@ -423,23 +423,23 @@ def import_characters():
         },
         {
             "key":"alperen-keser", "path":political_base+"Alperen.md", "name":"Alperen Keser",
-            "date":"1899 doğumlu (türetilmiş) · 29 Kasım 1938'de yönetimi devraldı", "birth":"1899 · Giresun, Kuşköy (türetilmiş)",
+            "date":"1888 doğumlu · 29 Kasım 1938'de yönetimi devraldı", "birth":"1888 · Giresun, Kuşköy",
             "role":"Asker ve devlet adamı · 1938'de yönetimi devralan lider",
             "personality":"Disiplinli, kararlı, milliyetçi ve sanayileşme yanlısı.",
             "aliases":["Alperen","Alperen Keser"]
         },
         {
             "key":"ismail-karaslan", "path":political_base+"İsmail Karaslan.md", "name":"İsmail Karaslan",
-            "date":"1915 doğumlu (türetilmiş) · Alperen Keser sonrasındaki lider",
-            "birth":"1915 · Hatay (türetilmiş)",
+            "date":"1904 doğumlu · 1960–1975 dönemi",
+            "birth":"1904 · Hatay",
             "role":"Asker ve devlet adamı",
             "personality":"Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
             "aliases":["İsmail Karaslan"]
         },
         {
             "key":"selim-arkan", "path":political_base+"Selim Arkan.md", "name":"Selim Arkan",
-            "date":"1939 doğumlu · 1985'te Ulu Han",
-            "birth":"1939 · Ankara",
+            "date":"1935 doğumlu · 1985'te 50 yaşında",
+            "birth":"1935 · Ankara",
             "role":"Siyasetçi ve devlet adamı",
             "personality":"Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
             "aliases":["Selim Arkan"]
@@ -453,7 +453,7 @@ def import_characters():
             "role":"Öğrenci · 6. Kanat · Üsküdar Milli İlim ve İrfan Mektebi okul başkanı",
             "appearance":"Düzenli, ölçülü ve sade giyinir; bulunduğu ortamda dikkat çekmekten çok kontrolü elinde tutmayı tercih eder.",
             "personality":"Sakin, hesapçı, stratejik ve kontrol ihtiyacı yüksek.",
-            "summary":"Üsküdar Mektebi'nin altı kanatlı başkanı; otoritesini kürsüden çok bilgi, gözlem ve ilişkileri yöneterek kurar.",
+            "summary":"Üsküdar Mektebi'nin altı kanatlı okul başkanı; sakin, kontrollü ve stratejik düşünmesiyle tanınır.",
             "profile_only":True, "country":"turkish", "aliases":["Alper","Alper Ulaç Altaylı"]
         }
     ]
@@ -604,105 +604,479 @@ def import_characters():
         if rec:
             teacher_nodes[spec["key"]] = rec
 
-    expansions = {
-        "oguz-kagan-atalay": (
-            "Üçüncü kanatlı Oğuz, iki kuşaktır uçak mühendisi yetiştiren Atalay ailesinin havacılık mirasını kokpitte sürdürmek ister. Dedesi Necdet ve babası Cengiz uçakları tasarlayan ve geliştiren insanlardır; Oğuz'un kendi arzusu ise onları uçurmaktır. Teknik bilgisi ve teorik hazırlığı güçlüdür, ancak 1985'te henüz gerçek uçuş eğitimi almamıştır.\n\nSoğukkanlılığı, düzenli çalışması ve bağımsız hareket etme isteği onu güvenilir kılar. Buna karşılık başarısızlığı kişisel bir kusur gibi algılaması, duygularını bastırması ve aynı anda çok fazla konuya yönelmesi zayıf yanlarıdır. Başlangıçta güçlü devlet ve emir-komuta düşüncesine yakındır; yaşadıkları, disiplin ile vicdanı birbirinden ayırıp ayıramayacağını sorgulamasına yol açar.\n\nİsmail'le ortaokul yıllarından beri süren dostluğu, Aylin'le gelişen yakınlığı ve Alper'le benzer görünen fakat ahlaken ayrışan rekabeti, Oğuz'un kişisel dünyasını şekillendirir. Babası Cengiz'in hayatında açıklayamadığı boşluklar bulunması da aile geçmişini sorgulamasına neden olur."
-        ),
-        "alper-ulac-altayli": (
-            "Alper, Üsküdar Milli İlim ve İrfan Mektebi'nin altı kanatlı okul başkanı ve Üsküdar Bloğu'nun lideridir. Yetkisini yalnızca resmî makamından almaz; okul içindeki insanları, ilişkileri ve bilgi akışını dikkatle izler. Panosu, notları ve dosyaları onun yönetim anlayışının uzantısıdır: kim hangi konuda yetenekli, kimin kiminle bağı var, hangi gelişme yaklaşan bir soruna dönüşebilir? Bu sorulara cevap arayarak çevresini düzenler.\n\nSakin konuşur ve nadiren sesini yükseltir. Otoritesini açık cezadan çok, karşısındakine ne bildiğini göstererek kurar. İnsanları çoğu zaman kabiliyetleri üzerinden değerlendirir; hedefi için yöntemlerini esnetebilmesi, onu etkili olduğu kadar ahlaken tartışmalı da kılar. Buna rağmen İsmail'e ve bir ölçüde Oğuz'a karşı gerçek bağlar taşır. Oğuz'la rekabetleri, benzer disiplin ve dış görünüşün ardında farklı ahlak anlayışlarının bulunmasından kaynaklanır. Tomris'le geçmişte Hilalifiyet çevresinde yaşanan yenilgi de iki okul yöneticisi arasındaki gerilimin önemli zeminidir."
-        ),
-        "ismail-yagiz-aslan": (
-            "İsmail, beş kanatlı okul başkan yardımcısıdır ve gelecekte siyasete girmeyi ister. Arkadaş çevresinde mizahı, rahat tavrı ve samimiyetiyle tanınır. İlgisini çekmeyen işlerde üşengeç davranabilir; ancak bir meseleyi gerçekten önemsediğinde uzun süre odaklanır ve çevresindekilerin beklemediği kadar pratik çözümler üretebilir. Bu nedenle onu yalnızca sınıfın şakacısı olarak görmek yanıltıcıdır.\n\nOğuz'la ortaokulun altıncı sınıfında tanışmış, yıllar içinde güçlü bir arkadaşlık kurmuştur. Oğuz'un ona taktığı İso lakabı, aralarındaki rahat ve samimi dili yansıtır. Alper'in yardımcısı olarak okul yönetiminde yer alması, onu dostluk çevresi ile öğrenci siyaseti arasında tutar. İsmail'in mizahı çoğu zaman gerginliği dağıtır; fakat konu ciddileştiğinde aynı rahatlığın altında kararlı bir taraf bulunduğu görülür."
-        ),
-        "muhammed-mete": (
-            "Muhammed Mete, dördüncü kanatlı bir öğrenci ve sivil pilot adayıdır. İlk karşılaşmada ağırbaşlı ve mesafeli görünse de güvendiği insanların yanında konuşkan, neşeli ve enerjik olabilir. Farklı ortamlara hızlı uyum sağlaması, arkadaş grubunda çatışmayı büyütmek yerine denge kurmasına yardımcı olur.\n\nPilotluk onun için yalnızca bir meslek değildir; yeni yerler görmek, aynı noktaya bağlı kalmamak ve kendi hayatının yönünü seçebilmek anlamına gelir. Sadakat, samimiyet ve güvene önem verir. Sevdiği insanları kaybetmekten ve onları hayal kırıklığına uğratmaktan çekindiği için önemli kararlarında kendisini gereğinden fazla sorgulayabilir. Oğuz, Alev ve diğer arkadaşlarıyla kurduğu bağ, sınıfın daha sakin ama güvenilir damarını oluşturur. Oğuz'un kardeşi Muhammed Atalay ile aynı kişi değildir."
-        ),
-        "aylin-aksoy": (
-            "Üç kanatlı Aylin, hukuk alanında ilerlemek isteyen, çevresini önce gözlemleyip sonra karar veren bir öğrencidir. İnsanlara kolayca güvenmez; fakat tanıdığı birini peşinen yargılamaz. Küçük ayrıntıları fark etmesi ve olayları uzun süre zihninde tartması, onu iyi bir gözlemci yapar. Bunun bedeli bazen fazla düşünerek karar vermeyi geciktirmesidir.\n\nSadakat, dürüstlük ve güven onun için temel değerlerdir. Bir arkadaşının yanlışını sırf yakın oldukları için savunmaz; gerçeği söylemenin de dostluğun parçası olduğuna inanır. Alev'le çocukluktan gelen arkadaşlığı bu iki karakterin birbirini tamamlamasını sağlar: Aylin düşünür ve ölçer, Alev daha çabuk harekete geçer. Oğuz'u ilk gördüğünde Alper'e benzetir; zamanla ikisinin sakinliğinin ve karar verme biçimlerinin farklı olduğunu fark eder. Tomris ve Asena'yla ilişkisi ise kişisel yakınlık ile kendisine verilen görev arasında denge kurmasını gerektirir."
-        ),
-        "alev-acar": (
-            "İki kanatlı Alev, sınıfın hareketli ve iletişimi güçlü öğrencilerindendir. Yeni bir ortama girdiğinde uzun süre sessiz kalmaz; planlar değiştiğinde kolayca uyum sağlar ve yeni bir yol bulur. Bu canlı tavrı gerektiğinde ciddileşmesine engel değildir. Sivil pilotluk hedefi, hareket ve keşif isteğiyle birleşir.\n\nAlev için sadakat çok önemlidir; birine gerçekten bağlandıktan sonra onu yarı yolda bırakmayı kendine yakıştırmaz. Bununla birlikte güveni ilk anda bütünüyle vermez, karşısındaki insanı zaman içinde tanır. Aylin'le çocukluk arkadaşıdır: Aylin daha çok düşünürken Alev harekete geçer. Oğuz'u başlangıçta iyi niyetli ve güvenilir bulur; Muhammed Mete'yle de aynı arkadaş çevresinde yer alır."
-        ),
-        "tomris-ilter": (
-            "Tomris, İstanbul Şarkın İlim ve Teknoloji Mektebi'nin altı kanatlı okul başkanıdır. Yönetmek onun için yalnızca bir görev değil, dünyayı anlaşılır ve denetlenebilir tutmanın yoludur. İnsanların davranışlarını, hafızalarını ve aralarındaki güç ilişkilerini dikkatle izler; birkaç adım sonrasını düşünerek hareket eder. Doğrudan konuşur, kendine güvenir ve kararsız görünmekten hoşlanmaz.\n\nTomris'in temel korkusu yenilmekten çok kontrolü kaybetmektir. Bu yüzden gerektiğinde kuralı esnetebilir, gerçeği saklayabilir veya insanları kendi planına göre yönlendirebilir. Düzenin korunmasını önemserken, aynı düzeni korumak için kendi koyduğu ilkeleri çiğneyebilmesi karakterinin ana çelişkisidir. Gelecekte millî istihbarat ve askerî güvenlik alanında görev almak ister. Asena'yı çocukluğundan beri en güvendiği kişi olarak görür. Alper'le Hilalifiyet'te yaşanan eski yenilgiye dayanan rekabeti ise kişisel bir hesap hâline gelmiştir. Oğuz'la henüz tanışmamıştır."
-        ),
-        "asena-korkut": (
-            "Asena, Şarkın Mektebi'nin beş kanatlı başkan yardımcısıdır ve istihbarat alanında, özellikle saha görevlerinde ilerlemek ister. Tomris kadar kontrol odaklı değildir; insanları anlamak, konuşmalarından ve davranışlarından güven ilişkisi kurmak onun güçlü yanıdır. Sosyal, hareketli ve kolay iletişim kuran biri görünür; buna karşılık kendi yeterliliğini sık sık sorgular ve başarısız olduğunda bunu kişisel değeriyle karıştırabilir.\n\nTomris'le çocukluktan beri süren yakınlığı, onun en büyük gücü ve zayıflığıdır. Tomris'in kararlarını düşünmeden kabul etmez; tartar, fakat çoğu zaman onun yanında kalır. Bu bağlılık kör itaat değildir: Tomris'in yanlış yaptığını fark ettiğinde onu durdurabilecek ender kişilerden biri Asena'dır. Aylin ve Alev'le, Tomris'e kıyasla daha rahat ve doğal bir iletişim kurar. Bu nedenle iki okul arasındaki görev ilişkilerinde insanî bağları ve kişisel sadakati sürekli karşı karşıya gelir."
-        ),
-        "cengiz-atalay": (
-            "Cengiz, Gökkanat programında çalışan askerî uçak mühendisidir. Meraklı, enerjik ve üretkendir; mekanik sorunları çözmek, mevcut sistemleri geliştirmek ve bir tasarımın zayıf noktasını bulmak onu motive eder. İşine duyduğu ilgi zaman zaman aile hayatındaki sorumluluklarının önüne geçebilir. 1942 doğumlu olması, Oğuz'un 1968'de doğduğu sırada yirmi altı yaşında olduğunu gösterir.\n\nOğuz'la güçlü bir ilişkisi vardır. Ona çalışma disiplini, sorumluluk alma ve teknik konulara sabırla yaklaşma alışkanlığı kazandırmıştır. Oğlunun askerî pilot olmasını ister; böylece ailedeki mühendislik geleneğinin başka bir biçimde sürmesini bekler. Aysel'le birbirini tamamlayan bir aile düzeni kurmuştur. Cengiz'in mesleki hayatındaki bazı boşluklar ve içine kapanması, Oğuz'un babasını yalnızca bir mühendis olarak değil, geçmişi olan bir insan olarak anlamaya çalışmasına yol açar."
-        ),
-        "aysel-atalay": (
-            "Aysel, Atalay ailesinin ev içindeki duygusal dengesini koruyan kişidir. Sakin, sabırlı ve gözlemcidir; Cengiz'in işine yoğunlaşmasını ve Oğuz'un giderek ağırlaşan hedeflerini anlayışla karşılamaya çalışır. Ancak anlayışlı olması kaygı duymadığı anlamına gelmez. Özellikle Oğuz'un kendisini fazla zorlamasından ve tehlikeli bir mesleğe yönelmesinden endişelenir.\n\nAile içinde çoğu zaman doğrudan sorgulamak yerine küçük değişiklikleri fark eder ve doğru zamanı bekler. Cengiz'in başarılarıyla gurur duyar, Oğuz'a ise duygularını rahatça gösterebileceği güvenli bir alan sunar. Kendi isteklerini ailesinin gerisine atması, koruyucu yönünün aynı zamanda zayıflığıdır."
-        ),
-        "nec-det-atalay": (
-            "Necdet, Atalay ailesinin havacılık geleneğinin ilk önemli halkası olan emekli askerî uçak mühendisidir. 1940'lı yıllardan itibaren askerî havacılık ve uzun menzilli uçak projelerinde çalışmıştır. Oğuz'a uçakları, kanat biçimlerini ve mühendisliğin gerektirdiği sabrı çocukluğundan itibaren anlatmıştır. Sevgisini uzun konuşmalarla değil, bilgi ve deneyim aktararak gösterir.\n\nSert, suskun ve disiplinlidir. Geçmişi anlatırken bazı ayrıntıları seçerek paylaşır; kimi meseleleri hiç açmaması, Oğuz'un tarih ve aile hafızasına yaklaşımını etkiler. Necdet'in meslek hayatında yaşadığı bazı gelişmeler aile içinde tam olarak konuşulmaz. Bu suskunluk, Oğuz'un aile geçmişini anlamaya çalışırken karşılaştığı belirsizliklerden biridir."
-        ),
-        "muhammed-atalay": (
-            "Muhammed Atalay, Oğuz'un on bir yaşındaki küçük kardeşidir. Oyun oynamayı ve televizyon izlemeyi sever; hareketli tavrı evin gündelik sesini ve neşesini oluşturur. Ağabeyine hayranlık duyar ve onunla vakit geçirmek ister. Büyüklerin siyasî veya meslekî meselelerinden çok kendi çocukluk dünyasına yakındır.\n\nMuhammed'in hikâyedeki önemi, Oğuz'un yalnızca idealler veya devlet meseleleri için değil, ailesinin sıradan hayatını korumak için de mücadele ettiğini hatırlatmasıdır. Sınıf arkadaşı olan Muhammed Mete ile karıştırılmamalıdır."
-        ),
-        "meliha-atalay": (
-            "Meliha, Atalay ailesinin dokuz yaşındaki en küçük çocuğudur. Ağabeyleri Muhammed ve Oğuz'un arasında büyür; evin hareketli gündelik hayatına neşe katar. Henüz büyüklerin dünyasındaki siyasî ve meslekî sorunları anlamlandıracak yaşta değildir.\n\nOğuz için Meliha, evin korunması gereken sade ve güvenli tarafını temsil eder. Onun çocukça merakı ve aile içindeki varlığı, Oğuz'un dış dünyadaki gerilimlerden bağımsız olarak önem verdiği hayatı görünür kılar."
-        ),
-        "alperen-keser": (
-            "Alperen Keser, Atatürk'ün 10 Kasım 1938'deki vefatından sonra 29 Kasım 1938'de yönetimi devralan asker ve devlet adamıdır. Merkezî devlet yapısını güçlendirmeyi, sanayileşmeyi hızlandırmayı ve askerî hazırlığı artırmayı hedefler. Türkiye'nin savaş yıllarındaki yönelişinde ve daha sonra Büyük Türk İmparatorluğu'na dönüşecek devlet anlayışının oluşmasında belirleyici rol oynar.\n\nDisiplinli, kararlı ve milliyetçi bir yönetici olarak güçlü devlet fikrini siyasetin merkezine yerleştirir. Bu program devleti hızla güçlendirirken otoriter yönetim biçiminin, güvenlikçi politikaların ve savaş yıllarındaki ağır kararların da temelini oluşturur. Ölüm yılı Vault'ta türetilmiş karar olarak işaretlendiği için bu tanıtımda kesin tarih verilmez."
-        ),
-        "ismail-karaslan": (
-            "İsmail Karaslan, Alperen Keser'den sonra devletin merkezî yönetimini sürdüren asker kökenli devlet adamıdır. Disiplinli, temkinli ve kurumların devamlılığına önem veren bir yönetici olarak tanımlanır. Onunla ilişkilendirilen dönem, yeni genişlemelerden çok mevcut imparatorluk yapısının yerleşmesi, eğitim düzeninin yayılması ve idarenin sağlamlaştırılmasıyla anılır.\n\nBu dönem, dışarıya doğru büyümenin ardından devletin kendi iç işleyişini düzenlemeye çalıştığı bir geçiş evresidir. Karaslan'ın görev süresinin kesin tarihleri Vault'ta türetilmiş olarak işaretlendiğinden, kamuya açık tanıtımda yalnızca Alperen sonrasındaki liderlik konumu belirtilir."
-        ),
-        "selim-arkan": (
-            "Selim Arkan, 1985 yılında Büyük Türk İmparatorluğu'nun Ulu Hanı ve Ankara'daki merkezî yönetimin başındaki isimdir. Teknik ve bürokratik kökeni, onu askerî çevrelerin alışık olduğu gösterişli komuta tarzından ayırır. Karar vermeden önce farklı değerlendirmeleri dinler; ardından kısa ve kesin emirler verir. Yetkisi geniş olsa da imparatorluğun her bölgesini tek tek yönetemeyeceğini, bürokrasinin kararları geciktirebileceğini bilir.\n\nDevletin güçlü ve disiplinli kalmasını ister. Bununla birlikte geçmişte işlenmiş devlet suçlarının gelecekte ağır bir siyasî ve ahlakî borç olarak geri dönebileceğinin farkındadır. Reich kaynaklı bir krizin, imparatorluk hazırlıksızken patlaması en büyük kaygılarındandır. Selim'in soğukkanlı görünüşünün altında, devletin geleceği ve kendi yönetiminin sınırları hakkında sürekli hesap yapan bir hükümdar bulunur."
-        ),
-        "kaan-demirsoy": (
-            "Kaan Demirsoy, Ulu Han'ın kararlarını bağlayıcı devlet emirlerine dönüştüren Başbuyruk makamını yürütür. Kararnamelerin hazırlanması, resmî metinlerin geçerliliği ve merkezî emirlerin doğru biçimde kayda geçirilmesi onun sorumluluğundadır. Bu nedenle devlet içinde yalnızca yazan değil, hangi metnin hüküm taşıdığını bilen kişidir.\n\nSessiz, sabırlı ve titizdir. İnsanlarla arasına mesafe koyar; konuştuğunda konuyu maddeler hâlinde ele alır. Sabiha Erten'le birlikte kararname nüshalarını ve gizli tutanakları takip eder. Kayıtların güvenilirliği onun için bürokratik bir ayrıntı değil, devletin hafızasının temelidir."
-        ),
-        "sabiha-erten": (
-            "Sabiha Erten, Başbuyruk Kalemi'nde kararname sürümlerini, mühür sırasını ve gizli toplantı tutanaklarını takip eder. Bir kararın alınmış olması kadar, hangi metinle ve hangi tarihte yürürlüğe girdiğinin doğru kaydedilmesi de önemlidir. Bu ayrıntılar üzerindeki dikkati, onu devletin belge düzeninde vazgeçilmez kılar.\n\nSessiz ve titizdir; ancak kuruma bağlılığı kör itaat anlamına gelmez. Bir mührün veya belgenin tutarsız olduğunu fark ettiğinde bunu dile getirebilir. Kimin ne zaman neyi imzaladığını bilmesi, onu hem güvenilir bir bürokrat hem de önemli bir tanık hâline getirir."
-        ),
-        "mete-kutlu": (
-            "Mete Kutlu, İmparatorluk İstihbarat Başkanı olarak dış ve stratejik istihbarat alanını, özellikle Reich masasıyla ilgili çalışmaları yönetir. Yabancı temsilcilikler, diplomatik temaslar ve devlet adına yürütülen hassas bilgi ilişkileri onun sorumluluk alanındadır. Bilgi toplamak kadar, hangi bilginin kime ve ne zaman aktarılacağını belirlemek de görevinin parçasıdır.\n\nSakin ve ölçülü konuşur; karşısındakini acele ettirmeden dinler. Korku yaratmaya çalışmaz, fakat bildiklerinin bir kısmını sakladığını hissettirir. Kendi teşkilatının içinde de denetlendiğinin farkındadır. Bu nedenle istihbarat dünyasında güven ve şüpheyi aynı anda yönetmek zorundadır."
-        ),
-        "rana-tozun": (
-            "Rana Tözün, imparatorluğun bilim ve gök araştırmaları alanındaki üst yöneticisidir. Gök Kutup, sensör sistemleri ve üniversitelerle yürütülen araştırma programları onun çalışma alanına girer. Bilimsel sonuçların kişisel kanaatle değil, gözlem ve ölçümle desteklenmesi gerektiğine inanır.\n\nGenç araştırmacılara karşı koruyucu, bürokratik engellere karşı serttir. Verilerin açıklayamadığı bir durumla karşılaştığında acele bir sonuca varmak yerine ölçümleri yeniden incelemeyi tercih eder. Bu yaklaşım onu hem bilimsel titizliğin hem de araştırmanın doğurabileceği bilinmezlik karşısındaki kaygının temsilcisi yapar."
-        ),
-        "ziya-arat": (
-            "Ziya Arat, Maarif ve Gençlik Nazırı olarak mekteplerin, müfredatın ve imparatorluk genelindeki Kanat sisteminin işleyişinden sorumludur. Öğrenci temsil mekanizmaları, okullar arası yarışmalar ve gençlerin ileride yönlendirileceği akademi ve kurumlar da onun görev alanına girer. Bu nedenle okullardaki gelişmeleri yalnızca eğitim meselesi olarak değil, devletin gelecekteki insan kaynağını ilgilendiren bir konu olarak görür.\n\nEnerjik ve ikna edicidir. Canlı konuşma tarzı, taşıdığı makamın denetim gücünü bazen olduğundan hafif gösterebilir. Oysa hangi öğrencinin hangi imkâna erişeceği ve hangi kurumun gençlik çevresinde ne ölçüde etkili olacağı onun sorumluluğundadır."
-        ),
-        "haluk-sancar": (
-            "Haluk Sancar, imparatorluğun Afrika Umumi Valisi olarak geniş bir coğrafyadaki idarî düzenin sorumluluğunu taşır. Raporlarında eğitim, sağlık ve vergi reformlarını öne çıkarır; ancak taşradaki bazı yöneticilerin keyfî uygulamaları, merkezde ilan edilen ilkelerle sahadaki gerçeklik arasında ciddi bir mesafe doğurur. Sancar bu çelişkinin farkındadır.\n\nEnerjik ve ikna edici bir yöneticidir; fakat reformu hızlandırmak yerel güç odaklarıyla çatışma yaratırken mevcut düzeni korumak halkın devlete duyduğu güveni zedeler. Bu nedenle onun görevi yalnızca emir vermek değil, imparatorluğun uzak bölgelerinde yönetim ile sorumluluk arasındaki farkla yüzleşmektir."
-        ),
-        "reinhard-falkenhorst": (
-            "Reinhard Falkenhorst, 1985 yılında Großdeutsches Reich'ın Führer und Reichskanzler makamındadır. Parti, SS, ordu ve sanayi arasındaki rekabeti birbirine karşı dengeleyerek merkezî otoriteyi korur. Bu yöntem rejimin devamını sağlarken karar alma süreçlerini ağırlaştırır.\n\nAğır ve soğuk konuşur; kelimelerini seçerek kullanır. İnsanlardan çok dosyalara ve kayıtlara güvenir. Kendi liderlik mitini korumak zorunda olduğu için hata kabul etmekte zorlanır. Reich'ın Türkiye ile ilişkilerinde teknoloji rekabetini ve savaş sonrası düzenin devamını yakından izler."
-        ),
-        "martin-kessler": (
-            "Martin Kessler, Führer yardımcısı ve Parti Kanzelleyi Başkanı olarak üst düzey atamaları, parti disiplinini ve kurumlar arası siyasî dengeyi yönetir. Ordu ile SS arasındaki rekabette arabulucu rolü üstlenmesi, ona resmî unvanının ötesinde geniş bir nüfuz sağlar.\n\nİlk bakışta nazik ve sıcak görünür; insanların adlarını ve aile bağlarını hatırlaması, görüşmelerde güven kurmasına yardımcı olur. Ancak bu yakınlık her zaman samimiyet değildir. Kessler ideolojik coşkudan çok rejimin devamlılığına ve Führer sonrası iktidar dengesine odaklanır."
-        ),
-        "ulrich-von-havel": (
-            "Ulrich von Havel, Reich Dışişleri Bakanı olarak Türkiye ile yürütülen diplomatik temaslarda Reich'ın çıkarlarını gözetir. Açık çatışma yerine pazarlık, nüfuz ve karşılıklı bağımlılık araçlarını kullanır. Türk tarafını küçümsememesi, onu daha dikkatli bir muhatap hâline getirir.\n\nKonuşması nazik ve ölçülüdür; ancak sunduğu her teklifin içinde bir koşul bulunur. Nezaketi, karşı tarafın hareket alanını daraltan diplomatik hesabın bir parçasıdır. Kişisel duygulardan çok sonuçları ve güç dengesini önemser."
-        ),
-        "friedrich-wulfhart": (
-            "Friedrich Wulfhart, Reichsführer-SS ve Reich güvenlik teşkilatının başıdır. SS'nin, siyasî güvenliğin ve rejimin iç denetim düzeninin en üst sorumlularındandır. Nazi ideolojisine katı biçimde bağlıdır; uygulamada ise farklı kurumları birbirine karşı kullanabilecek kadar hesaplıdır.\n\nBağırarak otorite kurmaz. Soru sorar, cevapları bekler ve ayrıntıları kayda geçirir. Onun temsil ettiği Reich düzeninde gözetim ve baskı, istisna değil yönetim anlayışının temel parçalarıdır."
-        ),
-        "konrad-weissmann": (
-            "Konrad Weissmann, Reich'ın yüksek enerji fiziği ve özel teknoloji programlarında çalışan baş nükleer fizikçidir; SFA-P Polaris'teki araştırmaların bilimsel yüzlerinden biridir. İnsan ilişkilerinden çok ölçümlere ve sonuçlara önem verir. Kibirli ve sabırsız tavrı, çevresindekilerle mesafe yaratır.\n\nWeissmann bilinmeyen bir olguyu yalnızca açıklamakla yetinmek istemez; ondan yararlanma ihtimaline de yönelir. Bilimsel merak ile siyasî ve askerî güç arzusunun birbirine karışması, onu Türk bilim çevrelerinin daha temkinli yaklaşımından ayırır."
-        ),
-        "nihat-karaca": (
-            "Nihat Karaca, okulun günlük düzeni ve disiplininden sorumlu müdür başyardımcısıdır. Koridorda duyulan tok sesi öğrencileri kendiliğinden dikkatli olmaya yöneltir; ancak otoritesini bağırarak kurmaz. Bir öğrenciyle ilgili sorun çıktığında önce kayıtları açar, tarih ve saatleri gösterir, ardından kararını kısa ve kesin biçimde bildirir.\n\nTurgut Aksoy'la aynı yönetim alanında çalışır. Turgut dış ilişkileri ve temsil işlerini yürütürken Nihat okulun iç işleyişinin ve disiplininin aksamamasını sağlar. Alper ve İsmail'in müdürlük odasına çağrıldığı görüşmeler, okul yönetiminin öğrenciler üzerindeki etkisini gösteren önemli örneklerdendir."
-        ),
-        "turgut-aksoy": (
-            "Turgut Aksoy, okulun organizasyon, temsil ve dış ilişkiler müdürüdür. Nazik ve sakin üslubuyla öğretmenler, veliler, Hilalifiyet Merkezi ve dış heyetlerle iletişim kurar. Konuşmaları yumuşak olsa da önerdiği her düzenlemenin arkasında okulun çıkarlarını gözeten bir hesap bulunur.\n\nYarışma hazırlıkları, kurumlar arası temaslar ve okulun dışarıya nasıl temsil edileceği onun görev alanındadır. Alman heyetinin İstanbul'daki varlığı ve okullara yaklaşan gönüllü koordinatör meselesi de bu nedenle doğrudan ilgilendiği konular arasındadır. Nihat Karaca'yla birlikte okul yönetiminin iki farklı yüzünü temsil eder: iç düzen ve dış temsil."
-        ),
-        "jale-deniz": (
-            "Jale Deniz, Sanat ve Kültür öğretmeni olarak okulun atölye ortamını yönetir. Sınıfta sesini yükseltmeden düzen kurabilir; öğrencinin ortaya çıkardığı çalışmanın teknik yönü kadar, o çalışmayı yapmasına neden olan duyguyu da anlamaya çalışır. Sorularını doğrudan cevap almak için değil, öğrencinin kendi düşüncesini açığa çıkarması için sorar.\n\nOğuz'un uçan kanat çizimleri, Alev'in küçük karakter taslakları ve Aylin'in defter kenarına yaptığı çizimler onun dikkatini çeker. Atölye bu nedenle yalnızca ders yapılan bir yer değildir; gençlerin söylemekte zorlandıkları şeylerin çizim, eskiz ve sessizlik aracılığıyla görünür olduğu bir alandır."
-        ),
-        "huseyin-kutlu": (
-            "Hüseyin Kutlu, tarih dersini yalnızca hükümdarlar ve savaşların sıralandığı bir anlatı olarak görmez. Olayları tarih sırasıyla işler; fakat her dönemin sonunda öğrencilerin önüne bir ahlak ve sorumluluk sorusu bırakır. Derse başlarken acele etmemesi, tarihi tahtaya yazdıktan sonra susması ve öğrencilerin düşünmesine alan açması onun öğretim tarzının parçasıdır.\n\n10 Kasım 1940'taki Ankara ziyareti ile 1941–1946 savaş yıllarını anlatırken resmî tarih bilgisini aktarır; ancak her ayrıntıyı aynı açıklıkta söylemez. Bu suskunluk, özellikle Oğuz'un aileden öğrendiği tarih ile okulda duyduğu anlatıyı karşılaştırmasına neden olur. Kutlu, öğrencilerin yalnızca ne bildiğini değil, anlatılanların dışında neyi sorgulamaya başladığını da etkiler."
-        )
+    personal_profiles = {
+        "oguz-kagan-atalay": """## Temel bilgiler
+**Doğum:** 3 Ocak 1968, İstanbul / Üsküdar  
+**Yaş:** 17 (1985)  
+**Boy:** 180 cm  
+**Fiziksel yapı:** Yapılı, hafif kaslı ve atletik  
+**Kanat:** 3  
+**Hedef meslek:** Askerî pilot  
+**En sevdiği renk:** Kızıl
+
+## Görünüş
+Oğuz dik duruşlu, bakımlı ve düzenli görünümüne önem veren bir gençtir. Kaynak karakter dosyasında saç ve göz rengi ile ayrıntılı günlük kıyafet tercihleri kesin olarak belirtilmediğinden bu alanlara ek özellik yüklenmez.
+
+## Kişilik
+Sakin, soğukkanlı, disiplinli ve kararlıdır. Gereksiz yere öne çıkmayı sevmez; önce gözlem yapar, sonra hareket eder. Bağımsız çalışmaktan hoşlanır ve başladığı işi tamamlamaya önem verir. Övünmeyi ve yeteneklerini gösteriş için kullanmayı tercih etmez.
+
+Mükemmeliyetçiliği zaman zaman kusursuz sonuç aramasına neden olur. Başarısız olmaktan çekinir ve duygularını açıkça ifade etmek yerine geri planda tutabilir. Aynı anda çok fazla konuyla ilgilendiğinde dikkati dağılabilir.
+
+## İlgi alanları
+Askerî havacılık, savaş uçakları, uçak teknolojisi, mekanik sistemler, teknik üretim, tasarım ve geliştirme başlıca ilgi alanlarıdır. Özellikle uçan kanat biçimindeki uçaklara merak duyar. Teknik sistemleri anlamak, parçaları incelemek ve çalışma mantıklarını öğrenmekten hoşlanır.
+
+## Eğitim ve hedef
+Havacılık konusunda yaşıtlarının üzerinde teorik bilgiye sahiptir; ancak hikâyenin başlangıcında gerçek pilotluk deneyimi yoktur. En büyük hedefi askerî pilot olmaktır. Disiplinli çalışma, teknik merak ve soğukkanlılık bu hedefe yaklaşırken öne çıkan kişisel özellikleridir.
+
+## Kişisel tercih
+En sevdiği renk için özellikle **kızıl** kelimesini kullanır. Birisi buna kırmızı dediğinde kelimeyi düzeltmesi, kendine özgü küçük alışkanlıklarından biridir.""",
+
+        "alev-acar": """## Temel bilgiler
+**Doğum yılı:** 1968  
+**Yaş:** 17 (1985)  
+**Boy:** 168 cm  
+**Saç:** Düz, kızıl  
+**Göz:** Ela  
+**Kanat:** 2  
+**Hedef meslek:** Sivil pilot  
+**En sevdiği renk:** Kırmızı
+
+## Görünüş ve giyim
+Alev'in görünümünde rahatlık ve sportif ayrıntılar öne çıkar. Okulda bol kesimli, pileli siyah kumaş pantolon ve pantolonun içine düzgünce soktuğu siyah forma giyer. Siyah-kırmızı ayrıntılı kemerini ve kemerinin yanındaki zinciri kullanır. Spor ayakkabı tercih eder. Giyiminde gösterişten çok rahat hareket edebilmek ve kendine ait küçük ayrıntılar kullanmak önemlidir.
+
+## Kişilik
+Neşeli, hareketli ve konuşkandır. Yeni ortamlara çabuk uyum sağlar; planlar değiştiğinde uzun süre aynı noktada kalmak yerine yeni bir çözüm arar. Gerektiğinde ciddileşebilir ve önemli bir meseleyle karşılaştığında şakayı bırakıp dikkatini konuya verebilir.
+
+İnsanlarla ilk iletişimi kolay kurar, ancak gerçek güvenini kazanmak zaman ister. Sadakat onun için önemli bir değerdir. Kendini hızlı uyum sağlama özelliğiyle beğenir; fazla bağlanmasını ve hayalperestliğini ise zayıf tarafları arasında görür.
+
+## Eğitim ve ilgi alanları
+Dersleri genel olarak ortalamanın üzerindedir. En sevdiği ders matematiktir; problem çözmekten ve farklı çözüm yolları denemekten hoşlanır. Türk Dili ve Edebiyatı'nı ise uzun metinler ve ezber ağırlığı nedeniyle daha az sever.
+
+Boş zamanlarında örgü örer ve küçük karakter çizimleri yapar. Çizimleri çoğunlukla defter kenarlarına veya eline geçen kâğıtlara yaptığı kısa karalamalardır. Ailesiyle vakit geçirmekten de hoşlanır.
+
+## Duygusal tepkileri
+Eleştiriye ilk anda savunmacı yaklaşabilir; biraz zaman geçince haklı eleştiriyi kabul edebilir. Öfkelendiğinde bağırmaktan çok sert konuşur. Üzgün olduğunda çoğunlukla yalnız kalıp uyumayı tercih eder. En büyük korkusu değer verdiği insanları kaybetmektir.
+
+## Meslek hedefi
+Çocukluğundan beri uçakları izlemeye ve uçuşları merak etmeye ilgi duyar. Sivil pilotluk, gökyüzüne duyduğu ilgiyi mesleğe dönüştürme isteğidir.""",
+
+        "aylin-aksoy": """## Temel bilgiler
+**Doğum yılı:** 1968  
+**Yaş:** 17 (1985)  
+**Boy:** 167 cm  
+**Saç:** Uzun, kıvırcık, kumral  
+**Göz:** Koyu renkli  
+**Kanat:** 3  
+**Hedef meslek:** Avukat  
+**En sevdiği renk:** Mor
+
+## Görünüş ve giyim
+Aylin sade ve sportif giyinir. Okul kıyafetinde bol kesimli, uzun ve dökümlü siyah kumaş pantolon, siyah okul forması, beyaz kemer ve spor ayakkabı tercih eder. Gösterişli parçalardan hoşlanmaz; siyah kıyafetle beyaz kemerin oluşturduğu sade zıtlık, tarzının belirgin ayrıntısıdır.
+
+## Kişilik
+Sakin, kontrollü ve gözlemcidir. Bir ortama girdiğinde önce çevresini anlamaya çalışır. İnsanlar hakkında acele hüküm vermez; ayrıntıları fark eder ve bir konuyu farklı ihtimaller üzerinden değerlendirmeyi sever.
+
+Planlı olması kendisinde en sevdiği özelliklerden biridir. Buna karşılık fazla düşünmek bazen karar vermesini zorlaştırır. Yanlış anlaşılmaktan ve kontrolü kaybetmekten hoşlanmaz. Eleştiriye açıktır; haklı bir eleştiriyi değerlendirip kabul edebilir. Öfkelendiğinde çoğunlukla sesini yükseltmek yerine sessizleşir.
+
+## Eğitim ve ilgi alanları
+Dersleri iyidir. Özellikle müzakere ve savunma uygulamalarının bulunduğu Sosyolojik Eğitim dersini sever. Matematik ise en sevmediği derstir. Bir konuyu tartışmak, farklı görüşlere cevap hazırlamak ve düşüncelerini gerekçelendirmek ilgisini çeker.
+
+Boş zamanlarında müzik dinler, yürüyüş yapar ve bazen kâğıda gelişigüzel çizimler karalar. Düşünürken saçlarıyla oynaması sık görülen küçük bir alışkanlığıdır.
+
+## Hedef
+Başarılı bir avukat olmak ister. Mesleğinde yalnızca başarı değil, dürüstlük, güvenilirlik ve işini iyi bilmek sayesinde saygı kazanmayı önemser.""",
+
+        "asena-korkut": """## Temel bilgiler
+**Doğum yılı:** 1968  
+**Yaş:** 17 (1985)  
+**Boy:** 163 cm  
+**Saç:** Siyah, hafif kızıla çalan, orta-uzun  
+**Göz:** Kahverengi  
+**Gözlük:** Kullanır  
+**Kanat:** 5  
+**Okul:** İstanbul Şarkın İlim ve Teknoloji Lisesi  
+**En sevdiği renk:** Turkuaz  
+**Hedef meslek:** İstihbarat uzmanı / saha istihbarat subayı
+
+## Görünüş
+Asena gözlük kullanır. Siyah saçlarında hafif kızıl ton bulunur; saçları orta-uzun uzunluktadır. Kahverengi gözlüdür. Kaynak notlarında günlük ve okul kıyafetlerinin ayrıntılı tarifi bulunmadığından belirli bir giyim tarzı eklenmemiştir.
+
+## Kişilik
+Neşeli, konuşkan ve hareketlidir. İnsanları dinlemeyi ve karşısındaki kişinin ne düşündüğünü anlamaya çalışmayı sever. Sosyal ortamlarda rahattır; buna rağmen herkese aynı yakınlığı göstermez ve özellikle erkeklere karşı daha mesafeli davranır.
+
+Dışarıdan rahat ve kendinden emin görünse de kendisini sık sık sorgular. Bir görevde başarısız olmaktan ve yetersiz görülmekten çekinir. Hata yaptığını kabul edebilir; eleştiriye tamamen kapanmaz. Öfkelendiğinde veya kırıldığında içine kapanabilir, ağlayabilir ya da konuşmayı bırakabilir.
+
+## Yetenekleri ve hedefi
+İnsanları dinleme, doğal konuşma kurma ve dikkat çekmeden bilgi edinme konularında başarılıdır. İleride Millî İstihbarat ve Askerî Güvenlik Teşkilatı'nda istihbarat uzmanı veya saha istihbarat subayı olmak ister. Bu hedef, gözlem ve iletişim becerilerini kullanabileceği bir meslek arzusunu yansıtır.
+
+## Kişisel eğilimleri
+Kendi ayakları üzerinde durmak ister; ancak özgüveninin zaman zaman zayıflaması kararlarını yeniden sorgulamasına neden olabilir. Kendini geliştirmek ve yeterliliğini kanıtlamak onun için önemlidir.""",
+
+        "tomris-ilter": """## Temel bilgiler
+**Doğum yılı:** 1968  
+**Yaş:** 17 (1985)  
+**Boy:** 170 cm  
+**Saç:** Uzun, siyah, düz-dalgalı  
+**Göz:** Koyu renkli  
+**Kanat:** 6  
+**Okul:** İstanbul Şarkın İlim ve Teknoloji Lisesi  
+**En sevdiği renk:** Siyah  
+**Hedef meslek:** Millî İstihbarat ve Askerî Güvenlik Başkanı
+
+## Görünüş
+Tomris uzun, siyah ve düz ile dalgalı arasında görünen saçlara, koyu renk gözlere sahiptir. Kaynak profilde okul dışındaki günlük kıyafetleri hakkında kesin bir tarif bulunmadığı için ayrıca bir giyim tarzı varsayılmaz.
+
+## Kişilik
+Ciddi olmasına rağmen konuşkandır; düşüncelerini doğrudan ifade eder ve bulunduğu ortamda doğal bir otorite kurabilir. Özgüveni yüksektir. Yönetmeyi, karar almayı ve düzeni kontrol altında tutmayı sever. Belirsizlikten hoşlanmaz; emir, hiyerarşi ve düzen kavramlarına önem verir.
+
+Stratejik düşünür, bilgileri hızlı sınıflandırır ve ayrıntıları uzun süre hatırlar. İnsanların sözleriyle davranışları arasındaki çelişkileri fark edebilir. Kontrolü kaybetmek en büyük korkularından biridir. Kontrolün elinden çıktığını hissettiğinde sertleşebilir ve öfkesini yönetmekte zorlanabilir.
+
+## Değerleri ve davranış biçimi
+Düzenin korunmasını kişisel tercihlerden üstün tutmaya eğilimlidir. Bununla birlikte hedefi için kuralları esnetebilir, gerçeği saklayabilir veya manipülatif davranabilir. Kendi yöntemlerini çoğu zaman ulaşmak istediği sonuç üzerinden gerekçelendirir.
+
+## Hedef
+Millî İstihbarat ve Askerî Güvenlik Başkanlığına yükselmek ister. Yalnızca verilen emirleri uygulamak değil, devlet mekanizmasının kararlarını belirleyen makamda bulunmak onun temel meslek hedefidir.""",
+
+        "ismail-yagiz-aslan": """## Temel bilgiler
+**Doğum yılı:** 1968  
+**Yaş:** 17 (1985)  
+**Doğum yeri:** İstanbul / Üsküdar  
+**Boy:** 178 cm  
+**Fiziksel yapı:** İri yapılı, hafif kilolu  
+**Saç:** Siyah  
+**Göz:** Kahverengi  
+**Kanat:** 5  
+**Hedef:** Siyasete atılmak
+
+## Görünüş ve giyim
+İsmail siyah saçlı ve kahverengi gözlüdür. İri yapılı bir fiziği vardır. Gündelik ve rahat kıyafetleri tercih eder; eşofman, şort ve tişört sık kullandığı parçalardır. Ayakkabı olarak terlik veya spor ayakkabı giyer.
+
+## Kişilik
+Sakin ve neşelidir. Mizahı güçlüdür; çoğu zaman eğlenceli, şakacı ve biraz da laubali davranabilir. Gereksiz gördüğü işlerde üşengeçlik eder, dağınık ve zaman zaman disiplinsiz olabilir. Ancak gerçekten önemsediği bir konuya odaklandığında kararlı biçimde çalışır ve başladığı işi bitirmeye uğraşır.
+
+Bazen düşünmeden hareket ediyormuş gibi görünür; buna rağmen ihtiyaç duyulduğunda pratik ve beklenmedik çözümler üretebilir. Büyüklerine karşı saygılı, günlük konuşmalarında ise rahat ve samimidir.
+
+## Eğitim ve ilgi alanları
+Akademik başarısı genel olarak yüksek değildir. Kimya ve matematik, diğer derslere göre daha fazla ilgisini çeken alanlardır. Boş zamanının önemli bölümünü sosyal ortamlarda ve arkadaşlarıyla vakit geçirerek değerlendirir.
+
+## Hedef
+İleride siyasete atılmak ister. Siyasi meseleler ve ülkenin geleceği hakkında söz sahibi olma isteği, kişisel hedefleri arasında yer alır.""",
+
+        "muhammed-mete": """## Temel bilgiler
+**Doğum yılı:** 1968  
+**Yaş:** 17 (1985)  
+**Boy:** 182 cm  
+**Saç:** Siyah, hafif kıvırcık  
+**Göz:** Kahverengi  
+**Kanat:** 4  
+**Hedef meslek:** Sivil pilot  
+**En sevdiği renkler:** Kırmızı ve siyah
+
+## Görünüş
+Muhammed Mete uzun boylu, siyah ve hafif kıvırcık saçlı, kahverengi gözlüdür. İlk bakışta sakin ve ağırbaşlı görünür; fazla dikkat çekmeye çalışmaz.
+
+## Kişilik
+Ölçülü ve soğukkanlıdır. Kendini rahat hissettiği ortamlarda neşeli, enerjik ve konuşkan bir hâle gelir. Yeni ortamlara ve değişen şartlara hızlı uyum sağlayabilir. İnsanlara genellikle güvenle yaklaşır; ancak kendi yetenekleri söz konusu olduğunda zaman zaman özgüvenini sorgular.
+
+Bir hedef belirlediğinde kolay vazgeçmez ve istediği sonucu elde edemediğinde başka bir yol denemeye çalışır. Eleştirilerden etkilenir; haklı bulduğu eleştiriyi kabul eder, haksız bulduğunda ise düşüncesini gerekçelendirmek ister. Öfkelendiğinde çoğunlukla sessizleşir ve soğuklaşır.
+
+## Eğitim ve ilgi alanları
+Dersleri iyidir. En sevdiği ders biyoloji, en az sevdiği ders edebiyattır. Boş zamanlarında resim çizer, kitap okur ve müzik dinler. Düşünürken elini çenesiyle burnu arasındaki bölgeye götürmesi sık tekrarladığı küçük bir alışkanlıktır.
+
+## Hedef
+Sivil pilot olmak ister. Pilotluğu farklı yerleri görmek, yeni bölgeler keşfetmek ve özgür hissetmekle ilişkilendirir. Başarı onun için kişisel olduğu kadar kendini geliştirme ve hedeflerine ulaşma anlamı da taşır.""",
+
+        "cengiz-atalay": """## Temel bilgiler
+**Doğum yılı:** 1945  
+**Yaş:** 40 (1985)  
+**Boy:** 182 cm  
+**Fiziksel yapı:** Yapılı ve atletik  
+**Meslek:** Askerî uçak mühendisi  
+**En sevdiği renk:** Su yeşili
+
+## Görünüş ve giyim
+Cengiz yapılı ve atletik bir görünüme sahiptir. Saçları hafif seyrektir ve genellikle arkaya doğru tarar. Resmî, klasik ve hafif askerî çizgileri sever. Takım elbise ile beyaz veya gri mühendis önlüğü en sık kullandığı kıyafetler arasındadır.
+
+## Kişilik
+Özgüvenli, enerjik, meraklı ve çalışmayı seven biridir. Yaptığı işe yüksek ilgi duyar; çalışmalarının fark edilmesinden ve gerektiğinde ön plana çıkmaktan hoşlanır. El becerisi, analitik düşünme ve problem çözme konusunda güçlüdür. Var olan sistemlerdeki eksikleri fark edip onları geliştirmekten keyif alır.
+
+İşine fazla yoğunlaştığında diğer sorumluluklarını aksatabilir. Duygusal yönü belirgindir ve zor durumda kısa süreli telaşa kapılabilir.
+
+## Mesleki ilgi alanları
+Askerî havacılık, uçak mühendisliği, teknik tasarım ve mevcut sistemleri geliştirmek temel uğraş alanlarıdır. Bir sorunu yalnızca tespit etmekle kalmayıp daha iyi çalışan bir çözüm üretmeye odaklanır.
+
+## Dünya görüşü
+Birlikçi fakat özgürlükçü bir anlayışa sahiptir. Devlet ve toplum birliğini önemserken bireysel özgürlüklerin de korunması gerektiğine inanır.""",
+
+        "aysel-atalay": """## Temel bilgiler
+**Doğum yılı:** 1947  
+**Yaş:** 38 (1985)  
+**Meslek:** Ev hanımı
+
+## Görünüş ve giyim
+Aysel sade ve zarif bir görünümü tercih eder. Genellikle elbise, etek-bluz, sade gömlek, örgü ve kazak gibi klasik ve dönemine uygun kıyafetler giyer. Giyiminde gösterişten çok düzen ve zarafete önem verir.
+
+## Kişilik
+Sakin, sabırlı, anlayışlı ve şefkatlidir. Ev hayatında huzuru önemser; insanları dikkatle gözlemler ve zor zamanlarda soğukkanlı kalabilir. Bazen fazla endişelenebilir ve kendi ihtiyaçlarını başkalarının ihtiyaçlarının gerisine atabilir.
+
+## Değerleri
+Güven, huzur, anlayış ve insanların güven içinde yaşayabilmesi onun için önemlidir. Askerî veya siyasî meselelerden çok günlük hayatın düzenine ve insanların iyiliğine odaklanır.""",
+
+        "nec-det-atalay": """## Temel bilgiler
+**Doğum yılı:** 1918  
+**Yaş:** 67 (1985)  
+**Meslek:** Askerî uçak mühendisi  
+**Mesleki çalışması:** TA-85 Gökkanat projesinde görev aldı
+
+## Kişilik
+Ağırbaşlı, disiplinli, otoriter ve az konuşan bir adamdır. Düzeni, sorumluluğu ve çalışmayı ön planda tutar. Zor durumda kolay paniğe kapılmaz; sakinliğini korur ve kararlarını kararlılıkla uygular. Geleneklerine bağlıdır. Duygularını sözle ifade etmekte zorlanabilir.
+
+## Görünüş ve giyim
+Gençliğinde gömlek, kumaş pantolon ve kundura gibi sade ve resmî kıyafetler tercih eder. Yaşlandıkça daha rahat parçalara yönelir; kazakları daha sık kullanır. Genel görünümünde temizlik ve düzen önemlidir.
+
+## Dünya görüşü
+Güçlü, otoriter ve merkezî bir devlet yapısının gerekli olduğuna inanır. Devlet otoritesinin zayıflamasının toplumsal düzeni bozacağını düşünür. Birlik ve beraberliği temel değerler arasında görür.""",
+
+        "sabiha-atalay": """## Temel bilgiler
+**Doğum yılı:** 1923  
+**Yaş:** 62 (1985)  
+**Meslek:** Ev hanımı
+
+## Kişilik
+Sakin, sabırlı, şefkatli ve anlayışlıdır. İnsanları iyi gözlemler, kriz anlarında soğukkanlı kalabilir ve fedakâr davranır. Geleneklerine bağlıdır. Kendi ihtiyaçlarını geri plana atması ve sevdikleri için fazla endişelenmesi zayıf yönleridir.
+
+## Görünüş ve giyim
+Gençliğinde sade ve dönemine uygun giyinir. Yaşlandıkça rahat ve klasik kıyafetleri tercih eder. Elbise, etek-bluz, hırka, kazak ve sade ev kıyafetleri gardırobunun temel parçalarıdır. Temiz ve bakımlı görünmeye önem verir.
+
+## Değerleri
+Aile huzuru, sadakat, güven, sevgi ve gelenekler onun için önemlidir. Günlük hayatında gösterişten çok düzen ve sakinliği tercih eder.""",
+
+        "naciye-kaya": """## Temel bilgiler
+**Doğum yılı:** 1920  
+**Yaş:** 65 (1985)  
+**Meslek:** Ev hanımı
+
+## Kişilik
+Konuşkan, girişken, hareketli ve açık sözlüdür. Düşündüğünü söylemekten çekinmez; gerektiğinde sert biçimde karşı çıkabilir. Pratik zekâlıdır ve günlük sorunlara hızlı çözümler bulur. Kolay pes etmez ve zor kararlar almaktan kaçınmaz.
+
+Bazen düşünmeden konuşabilir, fazla müdahaleci veya inatçı davranabilir. Korumacı tavrı zaman zaman ağır basabilir.
+
+## Görünüş ve giyim
+Yaşına uygun, sade ve geleneksel kıyafetler tercih eder. Elbise, etek-bluz, hırka, kazak, sade başörtüsü ve ev kıyafetleri kullanır. Rahatlık ve düzen, görünüşünde gösterişten daha önemlidir.
+
+## Dünya görüşü
+Dayanışmaya, sorumluluğa ve geleneklere değer verir. İnsanların kendi kararlarını verebilmesini önemser; ancak korumacı ve müdahaleci tarafı zaman zaman ağır basabilir.""",
+
+        "riza-kaya": """## Temel bilgiler
+**Doğum yılı:** 1916  
+**Yaş:** 69 (1985)
+
+## Kişilik
+Sakin, ağırbaşlı, sabırlı ve geleneklerine bağlıdır. Sorumluluklarını önemser; kolay öfkelenmez ve kararlarını düşünerek vermeyi tercih eder. Güvenilir ve sağduyulu bir karaktere sahiptir. Duygularını açıkça ifade etmekte zorlanabilir ve bazen fazla korumacı davranabilir.
+
+## Görünüş ve giyim
+Gençliğinde gömlek, kumaş pantolon ve kundura gibi klasik kıyafetler giyer. Yaşlandıkça koyu renk ceketler, kazaklar ve kumaş pantolonlar gibi daha rahat ve sade parçalara yönelir. Bakımlı ve ağırbaşlı bir görünümü vardır.
+
+## Dünya görüşü
+Aile, düzen, gelenek ve toplumun birlik içinde olması önem verdiği değerlerdir. Hayatının merkezine siyasî veya askerî düşünceleri değil, gündelik hayatın huzurunu koyar.""",
+
+        "meliha-atalay": """## Temel bilgiler
+**Doğum yılı:** 1975  
+**Yaş:** 10 (1985)  
+**Boy:** 138 cm  
+**Fiziksel yapı:** İnce yapılı  
+**Hedef meslek:** Avukat  
+**En sevdiği renk:** Mor
+
+## Görünüş ve giyim
+Meliha ince yapılıdır. Özel veya gösterişli bir giyim tarzı yoktur; yaşına uygun, rahat ve gündelik kıyafetler giyer. Tişört, gömlek, etek, pantolon, kazak, mont ve spor ayakkabı tercih eder.
+
+## Kişilik
+Çalışkan, kararlı, inatçı ve disiplinlidir. Bir şeyi kafasına koyduğunda uzun süre uğraşır ve kolay vazgeçmez. Özgüvenli, zeki ve adalet duygusu güçlüdür; düşündüğünü açıkça söyler ve tartışmaktan çekinmez.
+
+Aşırı inatçılık, sabırsızlık ve zaman zaman gereğinden sert konuşmak zayıf yanlarıdır. Haklı olduğuna inandığında fikrini değiştirmesi kolay değildir.
+
+## Hedef ve değerler
+Avukat olmak ister. Hukuka, adalete ve insanların haklarını savunma düşüncesine ilgi duyar. Haksızlık gördüğünde sessiz kalmamayı ve doğru bildiği düşünceyi savunmayı önemser.""",
+
+        "muhammed-atalay": """## Temel bilgiler
+**Doğum yılı:** 1973  
+**Yaş:** 12 (1985)  
+**Boy:** 150 cm  
+**Fiziksel yapı:** Hafif kilolu  
+**Hedef meslek:** Askerî mühendis  
+**En sevdiği renk:** Turkuaz
+
+## Görünüş ve giyim
+Muhammed çocuk yaşta, hafif kilolu bir yapıya sahiptir. Askerî veya klasik giyime özel bir ilgisi yoktur. Tişört, gömlek, pantolon, kazak, mont ve spor ayakkabı gibi sade, yaşına uygun kıyafetler giyer.
+
+## Kişilik
+Sakin, uyumlu ve meraklıdır. Teknik konulara ilgisi vardır; ancak uzun süre çalışmayı sevmez ve yapması gereken işleri erteleyebilir. Rahatına düşkün ve zaman zaman üşengeçtir. Kolay öfkelenmez, pratik yollar bulmayı sever.
+
+## İlgi alanları ve hedef
+Uçak motorları, mekanik sistemler, uçak yapıları, askerî teknoloji ve yeni tasarımlar ilgisini çeker. Askerî mühendis olmayı ister. Bu istek, teknik sistemlerin nasıl yapıldığını ve geliştirildiğini öğrenme merakından kaynaklanır.""",
+
+        "alper-ulac-altayli": """## Temel bilgiler
+**Doğum yılı:** 1968  
+**Yaş:** 17 (1985)  
+**Kanat:** 6  
+**Görev:** Üsküdar Milli İlim ve İrfan Mektebi okul başkanı
+
+## Kişilik
+Sakin, kontrollü ve stratejik düşünen bir öğrencidir. Okul yönetiminde bilgi toplama, gelişmeleri takip etme ve kararları planlı biçimde ele alma eğilimindedir. Otoritesini yüksek sesle değil, ölçülü ve kararlı davranarak kurar.
+
+## Bilinen kişisel bilgiler
+Mevcut eski karakter dosyalarında Alper'in boyu, saç ve göz rengi, sevdiği renk, hobileri ve günlük kıyafetleri hakkında doğrulanmış ayrıntı bulunmamaktadır. Bu nedenle bu alanlara tahminî özellik eklenmemiştir.""",
+
+        "abdullah-keser": """## Temel bilgiler
+**Doğum:** 1770 civarı, Giresun / Kuşköy  
+**Ölüm:** 1830'lar civarı  
+**Meslek:** Demirci ve köy zanaatkârı  
+**Köken ve inanç:** Türk, Müslüman
+
+## Kişilik
+Sert mizaçlı ve az konuşan biridir. Kendini sözle değil, yaptığı işle ve emeğiyle anlatır. Duygularını açıkça göstermese de sorumluluk duygusu güçlüdür. İnsanların değerini sözlerinden çok emekleri ve davranışları üzerinden değerlendirir.""",
+
+        "oguz-keser": """## Temel bilgiler
+**Doğum:** 1802, Giresun / Kuşköy  
+**Ölüm:** 1898  
+**Yaş:** 96  
+**Meslek:** Demirci  
+**Lakap:** Keser  
+**İnanç:** Müslüman
+
+## Kişilik
+Sarsılmaz psikolojili, dürüst, sevecen ve cana yakın bir insandır. Yanlış gördüğü bir şeyi, karşısındaki kim olursa olsun açıkça söylemekten çekinmez. Güçlü iradeye sahiptir; ancak sevdiklerine aşırı bağlılığı bazen kendi ihtiyaçlarını ikinci plana atmasına neden olabilir.
+
+## İlgi alanları ve dünya görüşü
+Boş zamanlarında demircilikle uğraşır ve metal oyuncaklar yapar. Devletin güçlü ve merkezî olmasını, toplumun birlik içinde kalmasını önemser. Savaşların yol açtığı can kayıplarından üzüntü duyar ve savaşı son çare olarak görür. Dini değerlerine bağlıdır.""",
+
+        "gul-keser": """## Temel bilgiler
+**Doğum:** 1810 civarı, Giresun çevresi
+
+## Kişilik
+Sabırlı, sezgileri güçlü ve insanları iyi okuyabilen biridir. Çevresindeki gerilimleri erken fark eder ve sakinleştirici bir yaklaşım sergiler. Kaynak dosyada dış görünüş, giyim, hobiler veya sevdiği renk gibi kişisel tercihler ayrıntılandırılmamıştır.""",
+
+        "kaan-keser": """## Temel bilgiler
+**Doğum:** 1846, Giresun / Kuşköy  
+**Ölüm:** 1904  
+**Yaş:** 58  
+**Meslek:** Demirci  
+**Lakap:** Keser  
+**İnanç:** Müslüman
+
+## Kişilik
+Sakin, tutkulu, azimli, güçlü ve erdemli bir karakterdir. Çalışkanlığı, başladığı işi sonuna kadar götürmesi ve sorumluluk duygusu güçlü yönleridir. Duygularının ve sorumluluklarının zaman zaman kararlarını etkilemesi zayıf yönü olabilir.
+
+## İlgi alanları ve değerleri
+Avlanmak ve demir aletler yapmak alışkanlıkları arasındadır. Din, kültür, aile ve millet temel değerleridir. Milliyetçiliği birlik fikrine dayanır; toplumdaki ayrılıkların devleti zayıflatacağına inanır. Savaşların getirdiği ölüm ve yıkımdan rahatsızlık duyar.""",
+
+        "ali-keser": """## Kişilik ve yaşam
+Tarım işleriyle uğraşır, dönem dönem demircilik işlerine yardım eder. Hareketli, meraklı ve bağımsız bir karakterdir. Çabuk öfkelenebilir; ancak öfkesi uzun sürmez ve kısa sürede yumuşar. Sürekli aynı düzen içinde kalmaktan hoşlanmaz.""",
+
+        "firuze-keser": """## Kişilik
+Sabırlı, içine kapanık ve duygularını çoğunlukla davranışlarıyla gösteren biridir. Duygularını konuşarak dışa vurmak yerine içinde tutma eğilimi vardır. Gerektiğinde dirençli ve kararlı davranabilir. Kaynak notlarda görünüşü, giyim tarzı ve kişisel zevkleri ayrıntılı olarak belirtilmemiştir.""",
+
+        "alperen-keser": """## Temel bilgiler
+**Doğum:** 1888, Giresun / Kuşköy  
+**Resmî doğum tarihi:** 1 Ocak 1888  
+**Meslek:** Demirci, asker ve devlet adamı  
+**Siyasi düşünce:** Türk milliyetçiliği ve güçlü merkezî devlet anlayışı  
+**İnanç:** Müslüman
+
+Köyde doğum kayıtları düzenli tutulmadığı için gerçek doğum günü ve ayı bilinmez. Harman biçildiği dönemde doğduğu aktarılır; daha sonraki resmî kayıtlarda 1 Ocak 1888 tarihi kullanılmıştır.
+
+## Kişilik ve dünya görüşü
+Disiplinli, sorumluluk sahibi, çalışkan ve kararlıdır. Çocukluk ve gençlik deneyimleri milliyetçi ve devletçi düşüncelerini şekillendirmiştir. Güçlü merkezî yönetim, teşkilatlı ordu ve sanayileşme onun devlet anlayışının temel unsurlarıdır.
+
+## Mesleki yaşam
+Demircilikten askerî hayata ve devlet yönetimine uzanan bir yaşam sürmüştür. 29 Kasım 1938'de yönetimi devralmıştır. Görünüşü, giyim tercihleri ve sevdiği renk gibi kişisel ayrıntılar eski karakter dosyasında kesin biçimde belirtilmemiştir.""",
+
+        "ismail-karaslan": """## Temel bilgiler
+**Doğum:** 1904, Hatay  
+**Meslek:** Asker ve devlet adamı  
+**Askerî köken:** Piyade  
+**İktidar dönemi:** 1960–1975  
+**1960'taki yaşı:** 56  
+**1975'teki yaşı:** 71
+
+## Kişilik
+Alperen Keser'den daha sakin, hesapçı ve sabırlı bir karakterdir. Toplantılarda önce dinlemeyi, farklı görüşleri toplamayı ve kararını verdikten sonra kararlılıkla uygulamayı tercih eder. Disiplinli, temkinli ve uzun vadeli düşünen bir yöneticidir.
+
+## Askerî ve idarî yaklaşım
+Askerî strateji, kriz yönetimi, teşkilatçılık ve uzun vadeli planlama güçlü yönleridir. Kurumların devamlılığına büyük önem verir. Devlet kurumlarına aşırı güvenmek ve mevcut düzeni fazla muhafazakâr biçimde korumak zayıf yönleri arasında sayılır.""",
+
+        "selim-arkan": """## Temel bilgiler
+**Doğum:** 1935, Ankara  
+**Yaş:** 50 (1985)  
+**Meslek:** Siyasetçi ve devlet adamı  
+**Askerî geçmiş:** Yok  
+**İktidara gelişi:** 1975  
+**Siyasi çizgi:** Milliyetçi, devletçi, merkeziyetçi; zamanla bağımsızlıkçı ve Nazi karşıtı
+
+## Kişilik
+Önceki liderlerden daha sosyal, konuşkan ve siyaseten hesapçı bir karakterdir. İnsanları ikna etmeyi sever; doğrudan emir vermek yerine karşısındakini kendi düşüncesinin doğruluğuna inandırmayı tercih eder.
+
+## Güçlü ve zayıf yönleri
+Siyasi zekâ, diplomasi, tarih ve ekonomi bilgisi, kriz yönetimi ve farklı çevrelerle iletişim kurabilme güçlü yanlarıdır. Fazla pragmatik davranması, siyasi hesapları kişisel yakınlıkların önüne koyması ve merkezî güce gereğinden fazla önem vermesi zayıf yanlarıdır.""",
+
+        "kaan-demirsoy": """## Kişisel profil
+1936 doğumlu Kaan Demirsoy, Başbuyruk makamını yürütür. Sessiz, titiz ve sabırlıdır. Resmî kararların doğru metinle kayda geçirilmesine, belgelerin geçerliliğine ve idarî düzenin tutarlılığına önem verir. Konuşurken ölçülü ve maddeler hâlinde ilerler. Eski karakter kaynaklarında fiziksel görünüşü ve kişisel hobileri belirtilmemiştir.""",
+
+        "sabiha-erten": """## Kişisel profil
+1945 doğumlu Sabiha Erten, Başbuyruk Kalemi Müsteşarıdır. Dikkatli, titiz ve sessiz çalışır. Kararname nüshaları, mühür düzeni ve toplantı tutanaklarındaki ayrıntıları takip eder. Bir belgedeki küçük tutarsızlığın idarî sonuçlarını önemser. Kaynaklarda fiziksel görünüşü veya kişisel hobileri hakkında bilgi verilmemiştir.""",
+
+        "mete-kutlu": """## Kişisel profil
+1931 doğumlu Mete Kutlu, İmparatorluk İstihbarat Başkanıdır. Sakin, sabırlı ve ölçülü bir dinleyicidir. Dış ve stratejik istihbarat konularında uzun vadeli değerlendirmeyi önemser. Bilgiyi toplamak kadar doğru zamanda ve doğru makamla paylaşılmasını da görev anlayışının parçası sayar. Fiziksel görünüşü ve kişisel hobileri kaynakta belirtilmemiştir.""",
+
+        "rana-tozun": """## Kişisel profil
+1938 doğumlu Rana Tözün, Bilim ve Gök Araştırmaları Başkanıdır. Sakin, kesin ve veriye bağlı bir çalışma tarzına sahiptir. Bilimsel sonuçların kişisel kanaatlerden önce gözlem ve ölçümle desteklenmesini ister. Genç araştırmacılara karşı koruyucu, bilimsel çalışmaları aksatan bürokratik engellere karşı kararlıdır. Dış görünüşü ve hobileri kaynakta belirtilmemiştir.""",
+
+        "ziya-arat": """## Kişisel profil
+1934 doğumlu Ziya Arat, Maarif ve Gençlik Nazırıdır. Enerjik ve ikna edici bir konuşma tarzı vardır. Eğitim, müfredat, mektepler ve gençlik politikası alanlarında çalışır. Okulların işleyişini ve gençlerin yetişmesini devletin uzun vadeli geleceği açısından değerlendirir. Fiziksel görünüşü ve kişisel zevkleri kaynaklarda belirtilmemiştir.""",
+
+        "haluk-sancar": """## Kişisel profil
+1927 doğumlu Haluk Sancar, Afrika Umumi Valisidir. Enerjik, konuşkan ve ikna edici bir yöneticidir. Siyasî dengeyi gözetir; reform hedefleri ile mevcut idarî uygulamalar arasında sonuç almaya çalışır. Fiziksel görünüşü ve hobileri hakkında doğrulanmış bilgi bulunmamaktadır.""",
+
+        "reinhard-falkenhorst": """## Kişisel profil
+1922 doğumlu Reinhard Falkenhorst, Großdeutsches Reich'ın Führer und Reichskanzler makamındadır. Ağır, soğuk, sabırlı ve hesapçı bir karaktere sahiptir. Kararlarında dosyalara, raporlara ve kurumsal dengeye önem verir. Fiziksel görünüşü ve kişisel hobileri mevcut kaynaklarda belirtilmemiştir.""",
+
+        "martin-kessler": """## Kişisel profil
+1930 doğumlu Martin Kessler, Führer Yardımcısı ve Parti Kanzelleyi Başkanıdır. Nazik görünür, sabırlıdır ve siyasî bağlantıları güçlüdür. Parti disiplini, üst düzey atamalar ve idarî devamlılık konularında etkilidir. Kişisel görünüşü ve hobileri hakkında kaynaklarda ayrıntı bulunmamaktadır.""",
+
+        "ulrich-von-havel": """## Kişisel profil
+1932 doğumlu Ulrich von Havel, Reich Dışişleri Bakanıdır. Kibar, sabırlı ve hesapçı bir diplomattır. Görüşmelerde nezaketini korurken tekliflerin şartlarını ve karşı tarafın hareket alanını dikkatle hesaplar. Görünüşü ve özel ilgi alanları kaynakta belirtilmemiştir.""",
+
+        "friedrich-wulfhart": """## Kişisel profil
+1925 doğumlu Friedrich Wulfhart, Reichsführer-SS ve Reich güvenlik teşkilatının başındaki isimdir. Sessiz, düzen takıntılı, ideolojik açıdan katı ve hesaplıdır. Otoritesini yüksek sesle değil, sorgulama ve kayıt düzeni üzerinden kurar. Fiziksel görünüşü ve hobileri hakkında kaynaklarda bilgi bulunmamaktadır.""",
+
+        "konrad-weissmann": """## Kişisel profil
+1933 doğumlu Konrad Weissmann, baş nükleer fizikçi olarak SFA-P Polaris araştırmalarıyla ilişkilidir. Sabırsız, keskin, kibirli ve veriye odaklıdır. İnsan ilişkilerinden çok ölçümlere ve bilimsel sonuçlara önem verir. Fiziksel görünüşü ve kişisel hobileri kaynakta belirtilmemiştir.""",
+
+        "nihat-karaca": """## Kişisel profil
+Nihat Karaca, mektebin Düzen, Disiplin ve Günlük İşleyiş Müdürü Başyardımcısıdır. Disiplinli, tok sesli ve sakindir. Karar verirken söylentilerden çok kayıtları ve somut bilgileri esas alır. Kaynaklarda fiziksel görünüşü ve özel ilgi alanları belirtilmemiştir.""",
+
+        "turgut-aksoy": """## Kişisel profil
+Turgut Aksoy, mektebin Organizasyon, Temsil ve Dış İlişkiler Müdürüdür. Nazik, sakin, diplomatik ve temkinlidir. Kurumlar arası görüşmelerde ölçülü bir dil kullanır ve temsil görevini dikkatle yürütür. Fiziksel görünüşü ve hobileri kaynaklarda belirtilmemiştir.""",
+
+        "jale-deniz": """## Kişisel profil
+Jale Deniz, Sanat ve Kültür öğretmenidir. Sessiz, dikkatli ve gözlemci bir öğretim tarzına sahiptir. Öğrenci çalışmalarını yalnızca teknik sonuçlarına göre değil, taşıdıkları düşünce ve ifade biçimine göre de değerlendirir. Fiziksel görünüşü ve kişisel hobileri kaynakta belirtilmemiştir.""",
+
+        "huseyin-kutlu": """## Kişisel profil
+Hüseyin Kutlu, tarih öğretmenidir. Ağırbaşlı ve dikkatli konuşur. Tarih dersinde olayların sırasını aktarmakla yetinmez; tarihî kararların nedenlerini ve sonuçlarını öğrencilerin düşünmesini ister. Görünüşü ve özel ilgi alanları kaynakta belirtilmemiştir."""
     }
-    for key, description in expansions.items():
-        record = main_nodes.get(key) or political_nodes.get(key) or state_nodes.get(key) or reich_nodes.get(key)
+
+    profile_sources = {}
+    profile_sources.update(main_nodes)
+    profile_sources.update(political_nodes)
+    profile_sources.update(state_nodes)
+    profile_sources.update(reich_nodes)
+    profile_sources.update(teacher_nodes)
+
+    for key, profile in personal_profiles.items():
+        record = profile_sources.get(key)
         if record:
-            record["content"] += "\n\n## Karakterin yapısı ve hikâyedeki yeri\n\n" + description
+            record["content"] = profile
 
     def collect(keys, source):
         return [source[key] for key in keys if key in source]
