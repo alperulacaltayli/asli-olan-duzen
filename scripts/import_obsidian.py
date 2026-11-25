@@ -522,6 +522,36 @@ def import_characters():
             "profile_only":True, "country":"turkish"
         }
     ]
+    teacher_specs = [
+        {
+            "key":"nihat-karaca", "name":"Nihat Karaca", "date":"1985 · Mektep yönetimi",
+            "role":"Düzen, Disiplin ve Günlük İşleyiş Müdürü Başyardımcısı",
+            "personality":"Disiplinli, tok sesli, sakin ve belgeye dayalı karar veren.",
+            "summary":"Okulun günlük düzeni ve disiplininden sorumlu yönetici; öğrencileri sözle değil kayıtlarla yüzleştirir.",
+            "profile_only":True, "country":"turkish"
+        },
+        {
+            "key":"turgut-aksoy", "name":"Turgut Aksoy", "date":"1985 · Mektep yönetimi",
+            "role":"Organizasyon, Temsil ve Dış İlişkiler Müdürü",
+            "personality":"Nazik, sakin, diplomatik ve temkinli.",
+            "summary":"Okulun dış ilişkilerini, yarışma organizasyonunu ve kurumlarla temasını yürüten yönetici.",
+            "profile_only":True, "country":"turkish"
+        },
+        {
+            "key":"jale-deniz", "name":"Jale Deniz", "date":"1985 · Öğretmen kadrosu",
+            "role":"Sanat ve Kültür Öğretmeni",
+            "personality":"Sessiz, dikkatli, öğrencinin çizdikleri kadar onları neden çizdiğine de önem veren.",
+            "summary":"Sanat atölyesinin sakin otoritesi; öğrencilerin ifade edemediklerini çalışmalarından okuyabilen öğretmen.",
+            "profile_only":True, "country":"turkish"
+        },
+        {
+            "key":"huseyin-kutlu", "name":"Hüseyin Kutlu", "date":"1985 · Öğretmen kadrosu",
+            "role":"Tarih Öğretmeni",
+            "personality":"Ağırbaşlı, yavaş konuşan, tarihsel ayrıntıları dikkatle tartan.",
+            "summary":"Tarihi yalnızca olay sırası olarak değil, alınan kararların ve ödenen bedellerin kaydı olarak anlatan öğretmen.",
+            "profile_only":True, "country":"turkish"
+        }
+    ]
     reich_specs = [
         {
             "key":"reinhard-falkenhorst", "name":"Reinhard Falkenhorst", "date":"1922 doğumlu · 63 yaş",
@@ -588,6 +618,12 @@ def import_characters():
         rec = make_public_character("characters", spec)
         if rec:
             reich_nodes[spec["key"]] = rec
+
+    teacher_nodes = {}
+    for spec in teacher_specs:
+        rec = make_public_character("characters", spec)
+        if rec:
+            teacher_nodes[spec["key"]] = rec
 
     expansions = {
         "oguz-kagan-atalay": (
@@ -670,6 +706,18 @@ def import_characters():
         ),
         "konrad-weissmann": (
             "Konrad Weissmann, Reich'ın yüksek enerji fiziği ve özel teknoloji programlarında çalışan baş nükleer fizikçidir; SFA-P Polaris'teki araştırmaların bilimsel yüzlerinden biridir. İnsan ilişkilerinden çok ölçümlere ve sonuçlara önem verir. Kibirli ve sabırsız tavrı, çevresindekilerle mesafe yaratır.\n\nWeissmann bilinmeyen bir olguyu yalnızca açıklamakla yetinmek istemez; ondan yararlanma ihtimaline de yönelir. Bilimsel merak ile siyasî ve askerî güç arzusunun birbirine karışması, onu Türk bilim çevrelerinin daha temkinli yaklaşımından ayırır."
+        ),
+        "nihat-karaca": (
+            "Nihat Karaca, okulun günlük düzeni ve disiplininden sorumlu müdür başyardımcısıdır. Koridorda duyulan tok sesi öğrencileri kendiliğinden dikkatli olmaya yöneltir; ancak otoritesini bağırarak kurmaz. Bir öğrenciyle ilgili sorun çıktığında önce kayıtları açar, tarih ve saatleri gösterir, ardından kararını kısa ve kesin biçimde bildirir.\n\nTurgut Aksoy'la aynı yönetim alanında çalışır. Turgut dış ilişkileri ve temsil işlerini yürütürken Nihat okulun iç işleyişinin ve disiplininin aksamamasını sağlar. Alper ve İsmail'in müdürlük odasına çağrıldığı görüşmeler, okul yönetiminin öğrenciler üzerindeki etkisini gösteren önemli örneklerdendir."
+        ),
+        "turgut-aksoy": (
+            "Turgut Aksoy, okulun organizasyon, temsil ve dış ilişkiler müdürüdür. Nazik ve sakin üslubuyla öğretmenler, veliler, Hilalifiyet Merkezi ve dış heyetlerle iletişim kurar. Konuşmaları yumuşak olsa da önerdiği her düzenlemenin arkasında okulun çıkarlarını gözeten bir hesap bulunur.\n\nYarışma hazırlıkları, kurumlar arası temaslar ve okulun dışarıya nasıl temsil edileceği onun görev alanındadır. Alman heyetinin İstanbul'daki varlığı ve okullara yaklaşan gönüllü koordinatör meselesi de bu nedenle doğrudan ilgilendiği konular arasındadır. Nihat Karaca'yla birlikte okul yönetiminin iki farklı yüzünü temsil eder: iç düzen ve dış temsil."
+        ),
+        "jale-deniz": (
+            "Jale Deniz, Sanat ve Kültür öğretmeni olarak okulun atölye ortamını yönetir. Sınıfta sesini yükseltmeden düzen kurabilir; öğrencinin ortaya çıkardığı çalışmanın teknik yönü kadar, o çalışmayı yapmasına neden olan duyguyu da anlamaya çalışır. Sorularını doğrudan cevap almak için değil, öğrencinin kendi düşüncesini açığa çıkarması için sorar.\n\nOğuz'un uçan kanat çizimleri, Alev'in küçük karakter taslakları ve Aylin'in defter kenarına yaptığı çizimler onun dikkatini çeker. Atölye bu nedenle yalnızca ders yapılan bir yer değildir; gençlerin söylemekte zorlandıkları şeylerin çizim, eskiz ve sessizlik aracılığıyla görünür olduğu bir alandır."
+        ),
+        "huseyin-kutlu": (
+            "Hüseyin Kutlu, tarih dersini yalnızca hükümdarlar ve savaşların sıralandığı bir anlatı olarak görmez. Olayları tarih sırasıyla işler; fakat her dönemin sonunda öğrencilerin önüne bir ahlak ve sorumluluk sorusu bırakır. Derse başlarken acele etmemesi, tarihi tahtaya yazdıktan sonra susması ve öğrencilerin düşünmesine alan açması onun öğretim tarzının parçasıdır.\n\n10 Kasım 1940'taki Ankara ziyareti ile 1941–1946 savaş yıllarını anlatırken resmî tarih bilgisini aktarır; ancak her ayrıntıyı aynı açıklıkta söylemez. Bu suskunluk, özellikle Oğuz'un aileden öğrendiği tarih ile okulda duyduğu anlatıyı karşılaştırmasına neden olur. Kutlu, öğrencilerin yalnızca ne bildiğini değil, anlatılanların dışında neyi sorgulamaya başladığını da etkiler."
         )
     }
     for key, description in expansions.items():
@@ -791,7 +839,14 @@ def import_characters():
         "reich-leadership"
     )
 
-    roots = [young_people, atalay_suyu, keser_soyu, state_leaders, reich_leadership]
+    school_staff = make_character_group(
+        "Mektep yönetimi ve öğretmenleri", "OKUL KADROSU",
+        "Öğrencilerin disiplin, temsil, sanat ve tarih eğitimiyle doğrudan ilişkili yetişkinler.",
+        collect(["nihat-karaca","turgut-aksoy","jale-deniz","huseyin-kutlu"], teacher_nodes),
+        "school-staff"
+    )
+
+    roots = [young_people, atalay_suyu, keser_soyu, state_leaders, reich_leadership, school_staff]
     roots = [item for item in roots if item.get("children")]
     if not roots:
         return None
@@ -799,7 +854,7 @@ def import_characters():
     return {
         "id":"characters",
         "title":"Karakterler",
-        "description":"Genç kuşak, Atalay ve Keser aileleri, imparatorluk yönetimi ve Reich kadrosu. Karakterlerin görevleri, hedefleri, kişilikleri ve birbirleriyle ilişkileri birlikte ele alınır.",
+        "description":"Genç kuşak, Atalay ve Keser aileleri, mektep kadrosu, imparatorluk yönetimi ve Reich çevresi. Karakterlerin görevleri, hedefleri, kişilikleri ve birbirleriyle ilişkileri birlikte ele alınır.",
         "view":"tree",
         "label":"KARAKTER VE SOY AĞAÇLARI",
         "order":3,
