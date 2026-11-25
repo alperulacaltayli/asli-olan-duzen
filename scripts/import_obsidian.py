@@ -943,6 +943,137 @@ def import_geography():
         doc = read_doc(rel)
         if doc:
             records.append(node("geography", doc, date))
+
+    # Reconcile legacy summaries with the updated 1985 canon. These reader-facing
+    # entries deliberately distinguish established facts from unresolved local detail.
+    world_overrides = {
+        "Genel Dünya": (
+            "1985'te dünya iki egemen karar merkezi çevresinde şekillenir: güneyde Büyük Türk İmparatorluğu, kuzeyde Großdeutsches Reich. Amerika Birleşik Devletleri 1946'da merkezî devlet olarak çökmüştür; üçüncü bir süper güç değildir.",
+            """# 1985 Dünya Düzeni
+
+## Tarihin ayrıldığı nokta
+Bu evrenin tarihi, 10 Kasım 1938'de Atatürk'ün vefatıyla farklı bir yola girer. 29 Kasım 1938'de Alperen Keser yönetimi devralır. Yeni yönetim merkezî idareyi, millî sanayiyi ve askerî hazırlığı güçlendirir. Türkiye'nin savaş yıllarındaki yönelişi, Sovyetler Birliği'nin 1943'te çöküşü ve 1946'daki dünya paylaşımı bu tek tarih kırılmasının sonuçlarıdır.
+
+## Savaş ve güç dengesi
+1940'ta Fransa ve İngiltere'nin düşmesi Avrupa'daki dengeyi değiştirir. 1941–1943 arasında Almanya ve Türkiye'nin Sovyetler Birliği'ne karşı yürüttüğü savaş, Sovyet merkezî bütünlüğünün sona ermesiyle sonuçlanır. 1946'da Amerika'nın çöküşüyle savaş sonrası güç boşluğu iki imparatorluk arasında paylaşılır.
+
+## İki egemen merkez
+1985'te dünya iki büyük karar merkezine ayrılmıştır:
+- **Büyük Türk İmparatorluğu:** Ankara merkezli güney düzeni. Anadolu, Balkanlar ve Viyana, Kafkasya, Türkistan, Ortadoğu, Afrika'nın bazı bölgeleri, Güney Amerika, Antarktika ve Ay programı bu nüfuz alanının parçalarıdır.
+- **Großdeutsches Reich:** Germania merkezli kuzey düzeni. Avrupa'nın büyük bölümü, Britanya, İskandinavya, Avrupa Rusyası, Sibirya ve Kuzey Amerika'nın kuzey kuşağı Reich'ın nüfuz alanındadır.
+
+Bu iki merkez dışındaki yapılar bağımsız üçüncü bir süper güç oluşturmaz. Bazı bölgeler doğrudan yönetilir, bazıları koloni veya işgal bölgesidir; bazılarıysa bağlı hanlık, tampon alan ya da eski devletlerden kalan yerel yönetimler biçiminde varlığını sürdürür.
+
+## Amerika'nın durumu
+Amerika Birleşik Devletleri 1985'te devlet olarak yoktur. 1946'daki iki atom saldırısı ve okyanus yenilgileri federal yapının çöküşüne yol açmıştır. Eski topraklar kuzey ve güney nüfuz alanlarına ayrılmış; şehirler, yerel topluluklar ve mülteci çevreleri eski Amerikan kimliğini farklı biçimlerde taşımaya devam etmiştir.
+
+## İki rejimin niteliği
+Büyük Türk İmparatorluğu otoriter-milliyetçi bir devlettir; Großdeutsches Reich ise Nazi rejimidir. Bu ayrım, Türk devletinin masum olduğu anlamına gelmez. İmparatorluğun da infaz, sürgün, zorla teslim ve taşrada keyfî yönetim gibi ağır sorumlulukları vardır. Romanın siyasî dünyası, iki rejimin gücünü olduğu kadar bu gücün insanlara yüklediği bedeli de gösterir.
+
+## Teknoloji ve gündelik hayat
+1985 teknolojisi kendi tarihimizin 1985'inden ileridir; ancak 2000'lerin başındaki tüketici teknolojisine ulaşmaz. Jet uçakları, bilgisayarlar, uydu haberleşmesi ve nükleer enerji kullanılır; internet ve yaygın cep telefonu yoktur. Türk araştırmaları sensör, uzay ve uçan kanat havacılığına; Reich araştırmaları füze, yüksek enerji fiziği ve antimadde alanlarına ağırlık verir.
+
+## Romanın anlatı odağı
+Dünya tarihi, Oğuz'un hayatından bağımsız bir arka plan değildir. Oğuz geçmişi büyük ölçüde ailesinden, özellikle dedesinin anlattıklarından öğrenir. Bu nedenle resmî tarih ile ev içinde aktarılan hatıralar zaman zaman birbirini tutmaz; okur dünyayı hem devlet kayıtlarından hem de karakterlerin yaşadıklarından tanır."""
+        ),
+        "Dünya Paylaşımı 1946": (
+            "Amerika'nın merkezî devlet olarak çökmesinden sonra Almanya ve Türkiye arasında kurulan kuzey-güney nüfuz paylaşımı. İlke: Kuzey Almanya'nın, güney Türkiye'nin.",
+            """# 1946 — Dünya Paylaşımı
+
+## Paylaşımın nedeni
+1946'da Amerika Birleşik Devletleri'nin merkezî yönetimi çöktüğünde, savaşın sonunda ortaya çıkan güç boşluğu Almanya ve Türkiye'nin etkisiyle yeniden düzenlendi. İki heyet, Germania'daki Große Halle'de eski Amerikan topraklarının ve diğer nüfuz alanlarının paylaşımını görüştü.
+
+## Temel ilke
+Paylaşımın kısa formülü **“Kuzey Almanya'nın, güney Türkiye'nin”** oldu. Sınırlar doğal, etnik veya tarihî bütünlüğe göre çizilmedi. Harita, iki imparatorluğun stratejik çıkarları ve güç dengesi temelinde cetvelle bölündü.
+
+## Reich'ın kuzey alanı
+Almanya; Kanada'yı, Alaska'yı, Grönland'ı, Kuzey Amerika'nın kuzey ve orta kuşağını, Avrupa'nın büyük bölümünü, Britanya'yı, İskandinavya'yı, Avrupa Rusyası'nı ve Sibirya hattını kendi düzenine bağladı.
+
+## Türk güney alanı
+Türkiye; Meksika, Orta Amerika, Karayip geçişleri ve Güney Amerika'nın yanı sıra Ortadoğu, Kafkasya, Türkistan, Balkanlar, Viyana, Afrika'nın doğu ve güney kuşakları ile güney deniz bağlantılarında nüfuz kazandı.
+
+## Bölünmüş ve ortak alanlar
+İtalya tek parça hâlinde bir tarafa bırakılmadı: kuzeyi Alman, güneyi ve Akdeniz adalarının bir bölümü Türk nüfuzunda kaldı; Roma ortak yönetim alanı olarak düzenlendi. Eski ABD'nin bazı güney bölgeleri ise tampon veya ortak ekonomik alan niteliği taşıdı. Bu statüler, doğrudan ilhakla aynı şey değildir.
+
+## Sonuç
+1946 paylaşımı yeni düzenin temelini kurdu; 1947–1950 arasında ilhaklar, bağlı yönetimler ve sınır düzenlemeleri devam etti. **1950'de İstanbul'da** Yeni Dünya Düzeni ilan edildi ve Büyük Türk İmparatorluğu ile Großdeutsches Reich adları resmîleşti."""
+        ),
+        "Türkiye": (
+            "Büyük Türk İmparatorluğu, 1950'de İstanbul'da resmen ilan edilen, Ankara merkezli otoriter-milliyetçi güney imparatorluğudur.",
+            """# Büyük Türk İmparatorluğu
+
+## Kuruluş çizgisi
+10 Kasım 1938'de Atatürk'ün vefatından sonra, 29 Kasım 1938'de Alperen Keser yönetimi devralır. Yeni yönetim merkezî devleti, sanayileşmeyi ve askerî hazırlığı ön plana çıkarır. 1946 dünya paylaşımıyla yeni nüfuz alanı şekillenir; 1950'de İstanbul'da Büyük Türk İmparatorluğu adı resmen ilan edilir.
+
+## Yönetim
+1985'te devletin başında Ulu Han Selim Arkan bulunur. Başkent Ankara'dır. Ulu Han'ın iradesini resmî ve bağlayıcı emirlere dönüştüren Başbuyruk makamı, merkezî bürokrasinin temel parçalarındandır. Nazırlıklar, askerî kurumlar ve istihbarat teşkilatları geniş imparatorluk alanını yönetir.
+
+## Toprakların yönetimi
+İmparatorluğun bütün bölgeleri aynı statüde değildir. Anadolu ve bazı çekirdek bölgeler doğrudan vilayet düzeniyle yönetilir. Uzak coğrafyalarda umumi valilikler bulunur. Buhara, Hive ve Hicaz gibi bağlı hanlıklar ise iç işlerinde belirli ölçüde serbest, dış ilişkilerinde Ankara'ya bağlıdır. Bu farklılıklar, geniş coğrafyayı tek merkezden yönetmenin siyasî ve idarî zorluklarını gösterir.
+
+## Toplum ve kurumlar
+Eğitim ve gençlik siyaseti devletin doğrudan ilgilendiği alanlardır. Kanat sistemi öğrencilerin okul içindeki sorumluluk ve temsil düzeylerini belirler; Hilalifiyet Merkezleri ise mektepler arasında müzakere ve öğrenci siyaseti için kurumsal alan oluşturur.
+
+## Devletin ahlakî yükü
+İmparatorluk kendisini Nazi Reich'ından farklı tanımlar ve ideolojik olarak otoriter-milliyetçi bir çizgidedir. Ancak bu fark onu masum kılmaz. Savaş yıllarında işlenen infazlar, sürgünler, zorla teslimler ve taşrada süren keyfî uygulamalar, devletin resmî düzen anlatısının altında duran gerçek sorumluluklardır."""
+        ),
+        "Almanya": (
+            "Großdeutsches Reich, 1985'te kuzey nüfuz alanını yöneten Nazi imparatorluğudur; merkezi Germania'dır.",
+            """# Großdeutsches Reich
+
+## Devletin konumu
+Großdeutsches Reich, 1985'te Avrupa ve kuzey nüfuz alanlarının merkezinde bulunan Nazi rejimidir. Yönetimin başında Führer und Reichskanzler Reinhard Falkenhorst yer alır. Reich'ın siyasî düzeni parti, SS, ordu ve sanayi çevrelerinin iç rekabeti üzerine kuruludur.
+
+## Yönetim ve baskı
+Parti teşkilatı atamaları ve ideolojik disiplini yürütür; SS ve güvenlik aygıtı rejimin gözetim ve baskı düzenini uygular; ordu ve sanayi ise devletin askerî ve ekonomik gücünü taşır. Bu kurumlar arasında rekabet bulunması, Reich'ın otoriter ve Nazi niteliğini değiştirmez.
+
+## Türkiye ile ilişkiler
+Türkiye ile geçmişteki ittifak, savaş sonrasında çıkar ve güç rekabetine dönüşmüştür. Diplomatik heyetler ve teknik temaslar sürse de iki taraf birbirinin havacılık, sensör, bilim ve stratejik kapasitesini yakından izler. Açık dostluk söyleminin altında karşılıklı güvensizlik bulunur.
+
+## Bilim ve teknoloji
+Reich füze, ağır zırh, yüksek enerji fiziği ve antimadde araştırmalarına ağırlık verir. SFA-P Polaris, bu araştırmaların önemli merkezlerinden biridir. Türk bilim çevreleriyle arasındaki fark yalnızca teknik önceliklerden değil, bilinmeyen doğa olaylarına yaklaşım biçiminden de kaynaklanır.
+
+## Koloniler ve bağlı alanlar
+Reich'ın Avrupa dışındaki nüfuz alanları tek tip değildir. Bazı bölgeler doğrudan yönetilir, bazıları koloni veya işgal düzenindedir. Yerel kimlikler ve direniş çevreleri varlığını sürdürür; geniş coğrafyanın idaresi rejim için sürekli bir yük oluşturur."""
+        ),
+        "Amerika": (
+            "Amerika Birleşik Devletleri 1946'da merkezî devlet olarak çökmüştür; 1985'te bağımsız Amerikan devleti veya üçüncü dünya kutbu yoktur.",
+            """# Eski Amerika Birleşik Devletleri
+
+## 1946 öncesi konum
+Avrupa'daki Mihver ilerleyişi, İngiltere'nin düşüşü ve Sovyetler Birliği'nin parçalanması Amerika'yı giderek yalnızlaştırdı. Buna rağmen Amerika, 1946'ya kadar denizaşırı büyük güç olarak varlığını sürdürdü.
+
+## Ağustos 1946
+**1 Ağustos 1946'da Washington, D.C. Türkiye'nin atom saldırısına uğradı.** Bu saldırı federal yönetimi ağır biçimde sarstı. **8 Ağustos 1946'da New York'a Almanya tarafından ikinci saldırı düzenlendi.** İki darbe, daha önceki okyanus yenilgileriyle birlikte merkezî devlet yapısının çöküşünü hızlandırdı.
+
+## Toprakların paylaşılması
+Amerika'nın kuzey ve orta bölgeleri Reich'ın nüfuz alanına; Meksika, Orta Amerika ve daha güneydeki alanlar Türk nüfuzuna girdi. Bazı eski eyaletler tampon veya ortak ekonomik alan olarak düzenlendi. Bu bölgelerin hepsi aynı idarî statüde değildir.
+
+## 1985'te Amerika ne demektir?
+1985 yılında Amerika Birleşik Devletleri bağımsız bir devlet olarak mevcut değildir. Eski Amerikan topraklarında koloniler, bağlı yönetimler, yerel topluluklar, direniş çevreleri ve göçmen hafızası bulunur. Washington ve New York tarihî önemlerini korur; ancak eski federal devletin işleyen başkentleri değildir."""
+        ),
+        "Diğer Devletler": (
+            "İtalya bölünmüş ve Roma ortak yönetimlidir; Japonya ikincil/bağlı aktördür. İngiltere, Fransa ve Sovyet sonrası bölgeler eski devlet statülerini kaybetmiştir.",
+            """# Diğer Devletler ve Eski Güçler
+
+## İtalya
+İtalya tek bir imparatorluğa bütünüyle bağlanmış değildir. Kuzey kesimi Alman, güneyi ve Akdeniz adalarının bir bölümü Türk nüfuzundadır. Roma ortak yönetim alanı olarak korunmuştur. Bu paylaşım, ülkenin siyasî bütünlüğünü ortadan kaldırırken sembolik başkent statüsünü ayrı tutar.
+
+## Japonya
+Japonya Pasifik'te varlığını ve bölgesel etkisini korur; ancak 1985 dünya düzeninin üçüncü egemen kutbu değildir. Yeni düzenin ana karar merkezleri Almanya ve Türkiye'dir.
+
+## İngiltere ve Fransa
+İngiltere'nin 1940'ta düşmesi Britanya İmparatorluğu'nun eski sömürge ağını parçalamıştır. Fransa da 1940 yenilgisinin ardından eski denizaşırı konumunu kaybetmiştir. Her iki halkın kimliği ve direniş hafızası devam eder; fakat eski küresel devlet güçleri ortadan kalkmıştır.
+
+## Sovyet sonrası coğrafya
+1943'te Sovyet merkezî yapısının çöküşünden sonra kuzey ve doğu bölgelerinde bağlı yönetimler, işgal alanları ve yerel direniş yapıları ortaya çıkmıştır. Bu bölgeler tek bir bağımsız Sovyet ardılı devlet altında birleşmez."""
+        )
+    }
+    for record in records:
+        override = world_overrides.get(record.get("title"))
+        if override:
+            record["summary"], record["content"] = override
+
     records += public_folder_nodes("geography", "Alternatif Tarih/Dünya/Coğrafya")
     return {
         "id":"geography",
