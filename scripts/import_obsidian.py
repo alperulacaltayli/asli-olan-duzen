@@ -178,6 +178,7 @@ def import_chronology():
         {
             "year":1985, "month":9, "day":10, "date":"10 Eylül 1985",
             "title":"10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti",
+            "path":"Tarihi Olaylar/1985 Alman Heyeti.md",
             "summary":"Reich heyeti, teknik işbirliği görüntüsü altında Türk havacılık ve sensör kapasitesini değerlendirmek üzere İstanbul'a geldi.",
             "content":"""# 10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti
 
@@ -190,6 +191,7 @@ Türk tarafı ziyaretin resmî nezaketini korurken Reich heyetinin temasları di
         {
             "year":1985, "month":9, "day":16, "date":"16 Eylül 1985",
             "title":"16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması",
+            "path":"Tarihi Olaylar/1985 Yarışma.md",
             "summary":"İstanbul'daki Üsküdar ve Şarkın mekteplerinin öne çıktığı, Hilalifiyet Merkezi'nin ev sahipliğinde düzenlenen büyük öğrenci yarışması.",
             "content":"""# 16 Eylül 1985 — Mektepler Arası Teknoloji Tasarım Yarışması
 
@@ -205,7 +207,7 @@ Yarışma yalnızca teknik ürünlerin karşılaştırılması değildir. Okulla
             continue
         doc = {
             "title":event["title"], "summary":event["summary"], "content":event["content"],
-            "path":"kanon-vault/" + slug(event["title"]) + ".md",
+            "path":event["path"],
             "sourceName":event["title"], "aliases":[], "country":"turkish"
         }
         rec = node("chronology", doc, event["date"])
@@ -459,7 +461,7 @@ def import_characters():
 
     extra_student_specs = [
         {
-            "key":"alper-ulac-altayli", "name":"Alper Ulaç Altaylı",
+            "key":"alper-ulac-altayli", "path":"Alternatif Tarih/Karakterler/Ana ve Destek Karakterler/Alper Ulaç Altaylı.md", "name":"Alper Ulaç Altaylı",
             "date":"1968 · 17 yaş", "birth":"1968", "age":"17",
             "role":"Öğrenci · 6. Kanat · Üsküdar Milli İlim ve İrfan Mektebi okul başkanı",
             "appearance":"Düzenli, ölçülü ve sade giyinir; bulunduğu ortamda dikkat çekmekten çok kontrolü elinde tutmayı tercih eder.",
@@ -470,42 +472,42 @@ def import_characters():
     ]
     state_specs = [
         {
-            "key":"kaan-demirsoy", "name":"Kaan Demirsoy", "date":"1936 doğumlu",
+            "key":"kaan-demirsoy", "path":"Alternatif Tarih/Karakterler/Devlet/Kaan Demirsoy.md", "name":"Kaan Demirsoy", "date":"1936 doğumlu",
             "birth":"1936", "role":"Başbuyruk · Ulu Han'ın iradesini bağlayıcı emre dönüştüren makam",
             "personality":"Sessiz, titiz, sabırlı ve kayıt düzenine bağlı.",
             "summary":"İmparatorluk yönetiminin emir, kararname ve kayıt düzenini ayakta tutan Başbuyruk.",
             "profile_only":True, "country":"turkish"
         },
         {
-            "key":"sabiha-erten", "name":"Sabiha Erten", "date":"1945 doğumlu · 40 yaş",
+            "key":"sabiha-erten", "path":"Alternatif Tarih/Karakterler/Devlet/Sabiha Erten.md", "name":"Sabiha Erten", "date":"1945 doğumlu · 40 yaş",
             "birth":"1945", "age":"40", "role":"Başbuyruk Kalemi Müsteşarı",
             "personality":"Sessiz, dikkatli, titiz ve gerektiğinde itiraz etmekten çekinmeyen.",
             "summary":"Kararname nüshalarının, mühür sırasının ve gizli tutanakların düzenini takip eden bürokrat.",
             "profile_only":True, "country":"turkish"
         },
         {
-            "key":"mete-kutlu", "name":"Mete Kutlu", "date":"1931 doğumlu · 54 yaş",
+            "key":"mete-kutlu", "path":"Alternatif Tarih/Karakterler/Devlet/Mete Kutlu.md", "name":"Mete Kutlu", "date":"1931 doğumlu · 54 yaş",
             "birth":"1931", "age":"54", "role":"İmparatorluk İstihbarat Başkanı",
             "personality":"Sakin, ölçülü, sabırlı ve dikkatli bir dinleyici.",
             "summary":"Dış istihbarat ve Reich masasını yöneten; bildiğini hemen açığa vurmayan istihbarat başkanı.",
             "profile_only":True, "country":"turkish"
         },
         {
-            "key":"rana-tozun", "name":"Rana Tözün", "date":"1938 doğumlu · 47 yaş",
+            "key":"rana-tozun", "path":"Alternatif Tarih/Karakterler/Devlet/Rana Tözün.md", "name":"Rana Tözün", "date":"1938 doğumlu · 47 yaş",
             "birth":"1938", "age":"47", "role":"Bilim ve Gök Araştırmaları Başkanı",
             "personality":"Sakin, kesin, sabırlı ve veriye bağlı.",
             "summary":"Gök Kutup, sensör çalışmaları ve imparatorluğun bilim programlarından sorumlu üst düzey yönetici.",
             "profile_only":True, "country":"turkish"
         },
         {
-            "key":"ziya-arat", "name":"Ziya Arat", "date":"1934 doğumlu · 51 yaş",
+            "key":"ziya-arat", "path":"Alternatif Tarih/Karakterler/Devlet/Ziya Arat.md", "name":"Ziya Arat", "date":"1934 doğumlu · 51 yaş",
             "birth":"1934", "age":"51", "role":"Maarif ve Gençlik Nazırı",
             "personality":"Enerjik, ikna edici ve siyasî açıdan dikkatli.",
             "summary":"Mekteplerin, müfredatın ve imparatorluk genelindeki Kanat sisteminin sorumlusu.",
             "profile_only":True, "country":"turkish"
         },
         {
-            "key":"haluk-sancar", "name":"Haluk Sancar", "date":"1927 doğumlu · 58 yaş",
+            "key":"haluk-sancar", "path":"Alternatif Tarih/Karakterler/Devlet/Haluk Sancar.md", "name":"Haluk Sancar", "date":"1927 doğumlu · 58 yaş",
             "birth":"1927", "age":"58", "role":"Afrika Umumi Valisi",
             "personality":"Enerjik, konuşkan, ikna edici ve siyasî denge gözeten.",
             "summary":"Afrika'daki reform hedefleri ile taşradaki keyfî uygulamalar arasındaki çelişkinin merkezindeki vali.",
@@ -514,28 +516,28 @@ def import_characters():
     ]
     teacher_specs = [
         {
-            "key":"nihat-karaca", "name":"Nihat Karaca", "date":"1985 · Mektep yönetimi",
+            "key":"nihat-karaca", "path":"Alternatif Tarih/Karakterler/Okul/Nihat Karaca.md", "name":"Nihat Karaca", "date":"1985 · Mektep yönetimi",
             "role":"Düzen, Disiplin ve Günlük İşleyiş Müdürü Başyardımcısı",
             "personality":"Disiplinli, tok sesli, sakin ve belgeye dayalı karar veren.",
             "summary":"Okulun günlük düzeni ve disiplininden sorumlu yönetici; öğrencileri sözle değil kayıtlarla yüzleştirir.",
             "profile_only":True, "country":"turkish"
         },
         {
-            "key":"turgut-aksoy", "name":"Turgut Aksoy", "date":"1985 · Mektep yönetimi",
+            "key":"turgut-aksoy", "path":"Alternatif Tarih/Karakterler/Okul/Turgut Aksoy.md", "name":"Turgut Aksoy", "date":"1985 · Mektep yönetimi",
             "role":"Organizasyon, Temsil ve Dış İlişkiler Müdürü",
             "personality":"Nazik, sakin, diplomatik ve temkinli.",
             "summary":"Okulun dış ilişkilerini, yarışma organizasyonunu ve kurumlarla temasını yürüten yönetici.",
             "profile_only":True, "country":"turkish"
         },
         {
-            "key":"jale-deniz", "name":"Jale Deniz", "date":"1985 · Öğretmen kadrosu",
+            "key":"jale-deniz", "path":"Alternatif Tarih/Karakterler/Okul/Jale Deniz.md", "name":"Jale Deniz", "date":"1985 · Öğretmen kadrosu",
             "role":"Sanat ve Kültür Öğretmeni",
             "personality":"Sessiz, dikkatli, öğrencinin çizdikleri kadar onları neden çizdiğine de önem veren.",
             "summary":"Sanat atölyesinin sakin otoritesi; öğrencilerin ifade edemediklerini çalışmalarından okuyabilen öğretmen.",
             "profile_only":True, "country":"turkish"
         },
         {
-            "key":"huseyin-kutlu", "name":"Hüseyin Kutlu", "date":"1985 · Öğretmen kadrosu",
+            "key":"huseyin-kutlu", "path":"Alternatif Tarih/Karakterler/Okul/Hüseyin Kutlu.md", "name":"Hüseyin Kutlu", "date":"1985 · Öğretmen kadrosu",
             "role":"Tarih Öğretmeni",
             "personality":"Ağırbaşlı, yavaş konuşan, tarihsel ayrıntıları dikkatle tartan.",
             "summary":"Tarihi yalnızca olay sırası olarak değil, alınan kararların ve ödenen bedellerin kaydı olarak anlatan öğretmen.",
@@ -544,35 +546,35 @@ def import_characters():
     ]
     reich_specs = [
         {
-            "key":"reinhard-falkenhorst", "name":"Reinhard Falkenhorst", "date":"1922 doğumlu · 63 yaş",
+            "key":"reinhard-falkenhorst", "path":"Alternatif Tarih/Karakterler/Reich/Reinhard Falkenhorst.md", "name":"Reinhard Falkenhorst", "date":"1922 doğumlu · 63 yaş",
             "birth":"1922", "age":"63", "role":"Führer und Reichskanzler des Großdeutschen Reiches",
             "personality":"Ağır, soğuk, sabırlı ve hesapçı.",
             "summary":"Reich'ın tepesindeki Führer; parti, SS, ordu ve sanayi arasındaki dengeyi kendi otoritesi altında tutar.",
             "profile_only":True, "country":"german"
         },
         {
-            "key":"martin-kessler", "name":"Martin Kessler", "date":"1930 doğumlu · 55 yaş",
+            "key":"martin-kessler", "path":"Alternatif Tarih/Karakterler/Reich/Martin Kessler.md", "name":"Martin Kessler", "date":"1930 doğumlu · 55 yaş",
             "birth":"1930", "age":"55", "role":"Führer Yardımcısı · Parti Kanzelleyi Başkanı",
             "personality":"Nazik görünen, sabırlı ve siyasî bağlantıları güçlü.",
             "summary":"Reich içindeki atamaları ve parti disiplinini yöneten etkili iktidar aracısı.",
             "profile_only":True, "country":"german"
         },
         {
-            "key":"ulrich-von-havel", "name":"Ulrich von Havel", "date":"1932 doğumlu · 53 yaş",
+            "key":"ulrich-von-havel", "path":"Alternatif Tarih/Karakterler/Reich/Ulrich von Havel.md", "name":"Ulrich von Havel", "date":"1932 doğumlu · 53 yaş",
             "birth":"1932", "age":"53", "role":"Reich Dışişleri Bakanı",
             "personality":"Kibar, sabırlı, hesapçı ve diplomatik baskı kurabilen.",
             "summary":"Türkiye ile ilişkilerde Reich'ın çıkarlarını nezaket ve koşullu teklifler üzerinden gözeten bakan.",
             "profile_only":True, "country":"german"
         },
         {
-            "key":"friedrich-wulfhart", "name":"Friedrich Wulfhart", "date":"1925 doğumlu · 60 yaş",
+            "key":"friedrich-wulfhart", "path":"Alternatif Tarih/Karakterler/Reich/Friedrich Wulfhart.md", "name":"Friedrich Wulfhart", "date":"1925 doğumlu · 60 yaş",
             "birth":"1925", "age":"60", "role":"Reichsführer-SS und Chef der Reichssicherheit",
             "personality":"Sessiz, düzen takıntılı, ideolojik açıdan katı ve hesaplı.",
             "summary":"Nazi rejiminin güvenlik ve baskı aygıtını yöneten SS lideri.",
             "profile_only":True, "country":"german"
         },
         {
-            "key":"konrad-weissmann", "name":"Konrad Weissmann", "date":"1933 doğumlu · 52 yaş",
+            "key":"konrad-weissmann", "path":"Alternatif Tarih/Karakterler/Reich/Konrad Weissmann.md", "name":"Konrad Weissmann", "date":"1933 doğumlu · 52 yaş",
             "birth":"1933", "age":"52", "role":"Baş Nükleer Fizikçi · SFA-P Polaris",
             "personality":"Sabırsız, keskin, kibirli ve veriye odaklı.",
             "summary":"Reich'ın yüksek enerji fiziği ve özel teknoloji programlarında öne çıkan bilim insanı.",
@@ -647,7 +649,7 @@ def import_characters():
             "Aysel, Atalay ailesinin ev içindeki duygusal dengesini koruyan kişidir. Sakin, sabırlı ve gözlemcidir; Cengiz'in işine yoğunlaşmasını ve Oğuz'un giderek ağırlaşan hedeflerini anlayışla karşılamaya çalışır. Ancak anlayışlı olması kaygı duymadığı anlamına gelmez. Özellikle Oğuz'un kendisini fazla zorlamasından ve tehlikeli bir mesleğe yönelmesinden endişelenir.\n\nAile içinde çoğu zaman doğrudan sorgulamak yerine küçük değişiklikleri fark eder ve doğru zamanı bekler. Cengiz'in başarılarıyla gurur duyar, Oğuz'a ise duygularını rahatça gösterebileceği güvenli bir alan sunar. Kendi isteklerini ailesinin gerisine atması, koruyucu yönünün aynı zamanda zayıflığıdır."
         ),
         "nec-det-atalay": (
-            "Necdet, Atalay ailesinin havacılık geleneğinin ilk önemli halkası olan emekli askerî uçak mühendisidir. 1940'lı yıllardan itibaren askerî havacılık ve uzun menzilli uçak projelerinde çalışmıştır. Oğuz'a uçakları, kanat biçimlerini ve mühendisliğin gerektirdiği sabrı çocukluğundan itibaren anlatmıştır. Sevgisini uzun konuşmalarla değil, bilgi ve deneyim aktararak gösterir.\n\nSert, suskun ve disiplinlidir. Geçmişi anlatırken bazı ayrıntıları seçerek paylaşır; kimi meseleleri hiç açmaması, Oğuz'un tarih ve aile hafızasına yaklaşımını etkiler. 1965 Gökkanat hangarı olayı, Necdet'in geçmişindeki önemli bir dönüm noktasıdır. Bu olayın ayrıntıları karakter tanıtımında açıklanmaz; okurun keşfedeceği tarihsel bir bağ olarak bırakılır."
+            "Necdet, Atalay ailesinin havacılık geleneğinin ilk önemli halkası olan emekli askerî uçak mühendisidir. 1940'lı yıllardan itibaren askerî havacılık ve uzun menzilli uçak projelerinde çalışmıştır. Oğuz'a uçakları, kanat biçimlerini ve mühendisliğin gerektirdiği sabrı çocukluğundan itibaren anlatmıştır. Sevgisini uzun konuşmalarla değil, bilgi ve deneyim aktararak gösterir.\n\nSert, suskun ve disiplinlidir. Geçmişi anlatırken bazı ayrıntıları seçerek paylaşır; kimi meseleleri hiç açmaması, Oğuz'un tarih ve aile hafızasına yaklaşımını etkiler. Necdet'in meslek hayatında yaşadığı bazı gelişmeler aile içinde tam olarak konuşulmaz. Bu suskunluk, Oğuz'un aile geçmişini anlamaya çalışırken karşılaştığı belirsizliklerden biridir."
         ),
         "muhammed-atalay": (
             "Muhammed Atalay, Oğuz'un on bir yaşındaki küçük kardeşidir. Oyun oynamayı ve televizyon izlemeyi sever; hareketli tavrı evin gündelik sesini ve neşesini oluşturur. Ağabeyine hayranlık duyar ve onunla vakit geçirmek ister. Büyüklerin siyasî veya meslekî meselelerinden çok kendi çocukluk dünyasına yakındır.\n\nMuhammed'in hikâyedeki önemi, Oğuz'un yalnızca idealler veya devlet meseleleri için değil, ailesinin sıradan hayatını korumak için de mücadele ettiğini hatırlatmasıdır. Sınıf arkadaşı olan Muhammed Mete ile karıştırılmamalıdır."
@@ -1018,7 +1020,7 @@ def import_institutions():
     institution_overviews = [
         {
             "title":"Mektepler — 1985 Eğitim Düzeni",
-            "path":"kanon-vault/04-kurumlar/mektepler.md",
+            "path":"Kuruluşlar/Mektepler - 1985 Eğitim Düzeni.md",
             "sourceName":"Mektepler",
             "summary":"Beş yıllık lise düzeyindeki mektepler, genel eğitimi Teknoloji ve Tasarım ağırlığıyla birleştirir; Üsküdar ve Şarkın iki ana öğrenci ekolünü temsil eder.",
             "country":"turkish",
@@ -1051,7 +1053,7 @@ Mektepler gençlerin gelecekteki meslek ve görev alanlarına hazırlandığı y
         },
         {
             "title":"İstihbarat ve İç Emniyet — İki Kurum",
-            "path":"kanon-vault/04-kurumlar/istihbarat-ve-emniyet.md",
+            "path":"Kuruluşlar/İstihbarat ve İç Emniyet.md",
             "sourceName":"İstihbarat ve Emniyet",
             "summary":"Dış tehditleri izleyen İmparatorluk İstihbarat Başkanlığı ile ülke içindeki gözetim ve güvenliği yürüten İç Emniyet Başdirektörlüğü ayrı görev ve kültürlere sahiptir.",
             "country":"turkish",
@@ -1075,7 +1077,7 @@ Bir yabancı devletin planını, elçilik temasını veya dışarıdaki ajan ağ
         },
         {
             "title":"Großdeutsches Reich Kurumları — Yönetim Yapısı",
-            "path":"kanon-vault/04-kurumlar/reich-kurumlari.md",
+            "path":"Kuruluşlar/Reich Kurumları.md",
             "sourceName":"Reich Kurumları",
             "summary":"Reich yönetimi parti, şansölyelik, dışişleri, ordu, SS ve sanayi çevreleri arasında kurulan sert bir güç dengesiyle işler.",
             "country":"german",
@@ -1344,7 +1346,7 @@ def import_technology():
     technology_overviews = [
         {
             "title":"Türk Teknolojileri — 1985 Genel Bakış",
-            "path":"kanon-vault/06-teknoloji/turk-teknolojileri.md",
+            "path":"Alternatif Tarih/Teknoloji/Türk teknolojileri/1985 Türk Teknolojileri.md",
             "sourceName":"Türk Teknolojileri",
             "summary":"İmparatorluğun güçlü olduğu alanlar havacılık, sensör füzyonu, ölçüm sistemleri ve uzay çalışmalarıdır; bazı ileri fizik ve malzeme alanlarında Reich'a bağımlılık sürer.",
             "country":"turkish",
@@ -1370,7 +1372,7 @@ Ay programı üç aşamada ilerlemiştir: ilk aşamada insansız görevler, ikin
         },
         {
             "title":"Alman Teknolojileri — 1985 Genel Bakış",
-            "path":"kanon-vault/06-teknoloji/alman-teknolojileri.md",
+            "path":"Alternatif Tarih/Teknoloji/Alman Teknolojileri/1985 Alman Teknolojileri.md",
             "sourceName":"Alman Teknolojileri",
             "summary":"Reich; füze ve roket sistemleri, ağır sanayi, yüksek enerji fiziği ve antimadde araştırmalarında güçlüdür; sensör füzyonu, yazılım ve uzay lojistiğinde Türkiye'nin gerisindedir.",
             "country":"german",
