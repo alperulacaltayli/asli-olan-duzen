@@ -1014,6 +1014,103 @@ def import_institutions():
         if doc:
             records.append(node("institutions", doc))
     records += public_folder_nodes("institutions", "Kuruluşlar/Kamuya Açık")
+
+    institution_overviews = [
+        {
+            "title":"Mektepler — 1985 Eğitim Düzeni",
+            "path":"kanon-vault/04-kurumlar/mektepler.md",
+            "sourceName":"Mektepler",
+            "summary":"Beş yıllık lise düzeyindeki mektepler, genel eğitimi Teknoloji ve Tasarım ağırlığıyla birleştirir; Üsküdar ve Şarkın iki ana öğrenci ekolünü temsil eder.",
+            "country":"turkish",
+            "content":"""# Mektepler — 1985 Eğitim Düzeni
+
+## Mektep nedir?
+Mektepler, imparatorlukta lise düzeyindeki beş yıllık eğitim kurumlarıdır. Genel derslerin yanında Teknoloji ve Tasarım alanına özel ağırlık verilir. Öğrenciler yalnızca sınav başarısıyla değil; grup çalışması, sorumluluk, temsil ve proje üretimi gibi alanlarda da değerlendirilir.
+
+Mektepler Maarif ve Gençlik Nizamı'na bağlıdır. Denetim; müfettişler, okul Kanat Konseyleri ve Hilalifiyet sistemi üzerinden yürür.
+
+## İstanbul'daki iki ana ekol
+**Üsküdar Milli İlim ve İrfan Mektebi**, Üsküdar Bloğu'nun merkez okuludur. İrfan ekolünü temsil eder; teknik merak ile edebiyat ve hukuk alanlarını birlikte önemser. Oğuz, Alper, İsmail, Muhammed Mete, Aylin ve Alev'in öğrenim gördüğü B-3 sınıfı bu okuldadır.
+
+**İstanbul Şarkın İlim ve Teknoloji Mektebi**, Şark Bloğu'nun merkez okuludur. Otorite ekolüyle, teknoloji ve istihbarat alanlarına verdiği ağırlıkla tanınır. Tomris ve Asena bu okulda öğrenim görür. Tomris okul başkanı, Asena başkan yardımcısıdır.
+
+Bu iki mektep aynı şehirde bulunur; ancak ayrı öğrenci çevrelerine, yönetim kadrolarına ve blok ilişkilerine sahiptir. Tomris ile Asena'yı Üsküdar'daki B-3 sınıfının öğrencisi olarak tanıtmak yanlıştır.
+
+## Blok okulları
+Üsküdar Bloğu'nun çevresinde Kadıköy İleri Sanayi ve Askeri İdadi, Beyoğlu Fen ve Havacılık Akademisi ve Ümraniye Anadolu İrfan Mektebi bulunur.
+
+Şark Bloğu'nun çevresinde Beşiktaş Siyasi ve Teknolojik Bilimler, Fatih Klasik Edebiyat ve Hukuk ve Bakırköy Teknik Araştırma İdadisi yer alır.
+
+Bu okullar arasındaki bağ yalnızca akademik değildir; öğrenci temsilciliği, ittifaklar, müzakere ve yıllık yarışmalar da blok ilişkilerinin parçasıdır.
+
+## Ortak okul hayatı
+Sabah törenleri, marşlar, Alp selamı, haftalık sicil, dönem sonu müzakereleri ve yıllık Teknoloji Tasarım Yarışması mektep hayatının ortak unsurlarıdır. Her okul kendi ekolünü ve temsil biçimini korurken imparatorluğun ortak eğitim düzenine bağlıdır.
+
+## 1985'teki önem
+Mektepler gençlerin gelecekteki meslek ve görev alanlarına hazırlandığı yerlerdir. B-3'ün hikâyedeki önemi, farklı ilgi alanlarına sahip öğrencileri aynı sınıfta buluşturmasıdır. Üsküdar ve Şarkın arasındaki rekabet ise kişisel arkadaşlıkları, öğrenci siyasetini ve devletin gençlik politikasını birbirine bağlar."""
+        },
+        {
+            "title":"İstihbarat ve İç Emniyet — İki Kurum",
+            "path":"kanon-vault/04-kurumlar/istihbarat-ve-emniyet.md",
+            "sourceName":"İstihbarat ve Emniyet",
+            "summary":"Dış tehditleri izleyen İmparatorluk İstihbarat Başkanlığı ile ülke içindeki gözetim ve güvenliği yürüten İç Emniyet Başdirektörlüğü ayrı görev ve kültürlere sahiptir.",
+            "country":"turkish",
+            "content":"""# İstihbarat ve İç Emniyet — İki Kurum
+
+## İmparatorluk İstihbarat Başkanlığı
+Mete Kutlu'nun yönettiği İmparatorluk İstihbarat Başkanlığı, dış ve stratejik istihbarattan sorumludur. Reich masası, yabancı başkentlerdeki kaynaklar, teknik istihbarat ve karşı istihbarat bu kurumun başlıca çalışma alanlarıdır.
+
+Kurumun çalışma kültürü sabır ve uzun vadeli değerlendirmeye dayanır. Bilgiyi toplamak tek başına yeterli sayılmaz; hangi bilginin ne zaman ve kime aktarılacağı da önemlidir.
+
+## İç Emniyet Başdirektörlüğü
+Selahattin Akgün'ün yönettiği İç Emniyet Başdirektörlüğü ülke içindeki gözetim, kayıt, kritik tesis güvenliği ve sansür faaliyetlerinden sorumludur. Okullar ve üniversiteler de bu denetim alanının içindedir.
+
+İç Emniyet'in yaklaşımı daha hızlı ve sicil merkezlidir: şüpheli görülen gelişmeler kayda alınır, kişiler ve kurumlar izlenir. Bu görev alanı, istihbarat başkanlığının dış odaklı çalışmasından farklıdır.
+
+## İki kurum arasındaki ilişki
+İki teşkilat aynı devlet adına çalışsa da birbirine bütünüyle güvenmez. İstihbarat dışarıdaki tehditlere odaklanırken İç Emniyet ülke içindeki düzeni korumayı önceler. Ulu Han'ın bu rekabeti denetim altında tutması, hiçbir kurumun tek başına bütün güvenlik alanını kontrol etmemesini sağlar.
+
+## Okur için ayrım
+Bir yabancı devletin planını, elçilik temasını veya dışarıdaki ajan ağını araştıran yapı İmparatorluk İstihbarat Başkanlığı'dır. Ülke içindeki bir okulun, tesisin veya kişinin sicilini izleyen yapı ise İç Emniyet Başdirektörlüğü'dür. İki kurumun yetkileri birbirine karıştırılmamalıdır."""
+        },
+        {
+            "title":"Großdeutsches Reich Kurumları — Yönetim Yapısı",
+            "path":"kanon-vault/04-kurumlar/reich-kurumlari.md",
+            "sourceName":"Reich Kurumları",
+            "summary":"Reich yönetimi parti, şansölyelik, dışişleri, ordu, SS ve sanayi çevreleri arasında kurulan sert bir güç dengesiyle işler.",
+            "country":"german",
+            "content":"""# Großdeutsches Reich Kurumları — Yönetim Yapısı
+
+## Parti-devlet
+Reich'ın başında Führer und Reichskanzler Reinhard Falkenhorst bulunur. Reich Şansölyeliği kararname ve protokol işlerini yürütür. Martin Kessler'in başındaki NSDAP Parti Kanzelleyi ise üst düzey atamalar, parti disiplini ve siyasî devamlılıkla ilgilenir.
+
+## Diplomasi ve propaganda
+Ulrich von Havel'in yönettiği Auswärtiges Amt dış ilişkileri ve diplomatik temasları yürütür. Basın ve radyo üzerindeki ideolojik denetim Propaganda Bakanlığı'nın görev alanıdır. Ekonomi ve ulaştırma kurumları ise sanayi tahsisi, demiryolu ve stratejik bağlantılar üzerinde etkilidir.
+
+## Silahlı kuvvetler ve güvenlik
+OKW, Heer, Luftwaffe ve Kriegsmarine Reich'ın askerî yapısını oluşturur. Friedrich Wulfhart'ın yönettiği SS-Reichssicherheitsapparat ise rejimin güvenlik ve baskı aygıtının merkezindedir. Gestapo ve dış istihbarat birimleri bu denetim yapısının farklı parçalarıdır.
+
+## Bilim ve özel teknoloji
+Reich Bilim ve Özel Teknoloji Dairesi ile Reich Yüksek Enerji Fiziği Enstitüsü, rejimin ileri araştırma alanlarında görev yapar. Konrad Weissmann yüksek enerji fiziği ve SFA-P Polaris araştırmalarıyla ilişkilidir.
+
+## Güç dengesi
+Reich'ta parti, SS, ordu ve sanayi birbirleriyle rekabet eder. Führer bu kurumların tamamını tek çizgide tutmaya çalışır. Bu yapı karar almayı yavaşlatabilir; buna karşılık rejimin cezalandırma ve güvenlik mekanizmaları son derece hızlı çalışır.
+
+Reich'ın kurumsal düzeni, sıradan bir bürokrasi değil, Nazi ideolojisi ve baskı üzerine kurulu bir parti-devlet yapısıdır."""
+        }
+    ]
+    institution_titles = {normalize(record.get("title", "")) for record in records}
+    for item in institution_overviews:
+        if normalize(item["title"]) in institution_titles:
+            continue
+        doc = {
+            "title":item["title"], "summary":item["summary"], "content":item["content"],
+            "path":item["path"], "sourceName":item["sourceName"], "aliases":[],
+            "country":item["country"]
+        }
+        records.append(node("institutions", doc))
+        records[-1]["country"] = item["country"]
+
     for record in records:
         if normalize(record.get("title", "")).startswith("hilalifiyet merkezi"):
             record["summary"] = "Mekteplerin üst düzey öğrenci temsilcilerini buluşturan, okullar arası siyasî ilişkileri ve müzakere süreçlerini düzenleyen merkezî kurum."
@@ -1286,7 +1383,7 @@ Horten 229, Reich'ın uçan kanat tasarım çizgisinin simgesidir. 1940'ların p
 Me 620 Überschall, Reich'ın süpersonik yolcu uçağı programıdır. Devlet prestijini ve yüksek hızlı sivil taşımacılık iddiasını temsil eder. Kanona göre askerî türevi bulunmaz; bu nedenle onu savaş uçağı olarak tanıtmak yanlıştır.
 
 ## Atom ve yüksek enerji fiziği
-Reich, atom çağında erken teknolojiye erişmiş ve bunu sınırlı sayıdaki stratejik kapasiteye dönüştürmüştür. SFA-P Polaris'teki halka deneyleri, yüksek enerji fiziği ile antimadde ve karanlık madde araştırmalarının bir arada yürütüldüğü bilimsel hattı temsil eder. Deneylerin sonuçları kesin ve güvenli değildir; Sapma araştırmalarıyla bağlantılı bilimsel riskler de bu başlığın parçasıdır.
+Reich, atom çağında erken teknolojiye erişmiş ve bunu sınırlı sayıdaki stratejik kapasiteye dönüştürmüştür. SFA-P Polaris'teki halka deneyleri, yüksek enerji fiziği ile antimadde ve karanlık madde araştırmalarının bir arada yürütüldüğü bilimsel hattı temsil eder. Deneylerin sonuçları kesin ve güvenli değildir; yüksek enerji araştırmaları önemli bilimsel riskler taşır.
 
 ## Füze ve roket araştırmaları
 Füze ve roket teknolojileri Reich'ın güçlü olduğu alanlardandır. Bu üstünlük, devletin kıtalararası erişim ve uzay çalışmaları konusundaki iddiasını destekler; ancak tek başına bütün teknoloji alanlarında üstünlük anlamına gelmez.
