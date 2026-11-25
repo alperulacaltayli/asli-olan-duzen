@@ -176,16 +176,6 @@ def import_chronology():
     # deliberately described without publishing its unresolved internal details.
     public_milestones = [
         {
-            "year":1965, "month":0, "day":0, "date":"1965",
-            "title":"1965 — Gökkanat Hangar Olayı",
-            "summary":"Atalay ailesinin havacılık geçmişinde ve Gökkanat programında önemli bir kırılma noktası.",
-            "content":"""# 1965 — Gökkanat Hangar Olayı
-
-1965 yılında Gökkanat programının geçmişinde, Necdet Atalay'la da bağlantılı önemli bir hangar olayı yaşandı. Bu olay, Atalay ailesinin havacılık hatıralarında ve daha sonraki mühendislik kayıtlarında iz bıraktı.
-
-Olayın teknik ve idarî ayrıntıları mevcut kamusal tarihçede kesinleştirilmiş değildir. Bu nedenle burada nedeni, sorumluları veya sonuçları hakkında doğrulanmamış bir açıklama yapılmaz. Olayın romandaki önemi, sonraki kuşakların Gökkanat'a ve aile geçmişine bakışını etkilemesidir."""
-        },
-        {
             "year":1985, "month":9, "day":10, "date":"10 Eylül 1985",
             "title":"10 Eylül 1985 — Alman Teknik Heyetinin İstanbul Ziyareti",
             "summary":"Reich heyeti, teknik işbirliği görüntüsü altında Türk havacılık ve sensör kapasitesini değerlendirmek üzere İstanbul'a geldi.",
@@ -1253,9 +1243,72 @@ def import_technology():
     existing = scan_public_archive_nodes(technology_root, technology_root, "technology")
     public_records = public_folder_nodes("technology", "Alternatif Tarih/Teknoloji/Kamuya Açık")
     records = _merge_public_records(existing, public_records)
+
+    technology_overviews = [
+        {
+            "title":"Türk Teknolojileri — 1985 Genel Bakış",
+            "path":"kanon-vault/06-teknoloji/turk-teknolojileri.md",
+            "sourceName":"Türk Teknolojileri",
+            "summary":"İmparatorluğun güçlü olduğu alanlar havacılık, sensör füzyonu, ölçüm sistemleri ve uzay çalışmalarıdır; bazı ileri fizik ve malzeme alanlarında Reich'a bağımlılık sürer.",
+            "country":"turkish",
+            "content":"""# Türk Teknolojileri — 1985 Genel Bakış
+
+## Havacılık
+Türk uçan kanat çizgisi 1958'deki Ta 70 prototipinden 1975'te seri üretime geçen Ta 85 Gökkanat'a uzanır. Gökkanat, yalnızca bir uçak projesi değil, imparatorluğun stratejik havacılık kimliğinin simgesidir. Atalay ailesinin üç kuşağı da bu programla farklı biçimlerde bağlantılıdır: Necdet ve Cengiz mühendislik tarafında, Oğuz ise pilotluk hedefiyle yer alır.
+
+## Zırhlı araçlar ve arşiv teknolojisi
+Türk Panzeri, ağır ve dayanıklı zırhlı araç serisini temsil eder. Tarih Bombası adı verilen program ise fiziksel bir patlayıcıdan ziyade belge ve arşiv kayıtlarının değiştirilmesiyle ilgilidir. Bu nedenle programın etkisi cepheden çok devlet hafızası, tarih yazımı ve güvenilir kayıtlar üzerinde hissedilir.
+
+## Sensör ve ölçüm
+Gök Kutup'un araştırma çizgisi, farklı ölçüm türlerini bir araya getirerek çevresel ve fiziksel değişimleri izlemeye dayanır. Öte-İz Ölçeri, Tunç Halka ve Dokuma gibi sistemler bu araştırma dünyasının adlarıdır. Bu araçların okur açısından önemi, imparatorluğun bilimsel gözlem ve ölçüm kapasitesini temsil etmeleridir.
+
+## Hesaplama ve karar desteği
+Nizam-1, Hilalifiyet Merkezi'nde kullanılan mantık ve karar destek bilgisayarıdır. Verileri karşılaştırır ve analiz sunar; ancak siyasî veya idarî kararı kendisi vermez. Ana Beyin ise daha geniş araştırma ve uzay programlarının hesaplama altyapısını temsil eder. Bu iki sistem birbirinin yerine geçmez.
+
+## Uzay programı
+Ay programı üç aşamada ilerlemiştir: ilk aşamada insansız görevler, ikinci aşamada geri dönüşlü kapsül çalışmaları, üçüncü aşamada ise mürettebatlı dönüş ve kalıcı üs hedefi öne çıkar. 1985, bu üçüncü aşamanın devam ettiği dönemdir.
+
+## Sınırlar ve bağımlılıklar
+İmparatorluk sensör sistemleri, yazılım ve uzay araştırmalarında Reich'ı bazı alanlarda geride bırakmıştır. Buna karşılık ileri fizik, belirli malzemeler ve motor ömrü gibi konularda eksikleri sürer. Bu nedenle iki devlet arasındaki teknoloji ilişkisi tek yönlü bir üstünlük değil, alanlara göre değişen rekabet ve bağımlılık ilişkisidir."""
+        },
+        {
+            "title":"Alman Teknolojileri — 1985 Genel Bakış",
+            "path":"kanon-vault/06-teknoloji/alman-teknolojileri.md",
+            "sourceName":"Alman Teknolojileri",
+            "summary":"Reich; füze ve roket sistemleri, ağır sanayi, yüksek enerji fiziği ve antimadde araştırmalarında güçlüdür; sensör füzyonu, yazılım ve uzay lojistiğinde Türkiye'nin gerisindedir.",
+            "country":"german",
+            "content":"""# Alman Teknolojileri — 1985 Genel Bakış
+
+## Havacılık
+Horten 229, Reich'ın uçan kanat tasarım çizgisinin simgesidir. 1940'ların prototiplerinden 1960'lardaki modernizasyonlara, oradan 1980'lerin B/C serisine uzanan bir gelişim hattı vardır. Gökkanat ile aynı tasarım ailesi fikrini paylaşsa da iki projenin tarihî ve kurumsal geçmişi farklıdır.
+
+## Sivil havacılık
+Me 620 Überschall, Reich'ın süpersonik yolcu uçağı programıdır. Devlet prestijini ve yüksek hızlı sivil taşımacılık iddiasını temsil eder. Kanona göre askerî türevi bulunmaz; bu nedenle onu savaş uçağı olarak tanıtmak yanlıştır.
+
+## Atom ve yüksek enerji fiziği
+Reich, atom çağında erken teknolojiye erişmiş ve bunu sınırlı sayıdaki stratejik kapasiteye dönüştürmüştür. SFA-P Polaris'teki halka deneyleri, yüksek enerji fiziği ile antimadde ve karanlık madde araştırmalarının bir arada yürütüldüğü bilimsel hattı temsil eder. Deneylerin sonuçları kesin ve güvenli değildir; Sapma araştırmalarıyla bağlantılı bilimsel riskler de bu başlığın parçasıdır.
+
+## Füze ve roket araştırmaları
+Füze ve roket teknolojileri Reich'ın güçlü olduğu alanlardandır. Bu üstünlük, devletin kıtalararası erişim ve uzay çalışmaları konusundaki iddiasını destekler; ancak tek başına bütün teknoloji alanlarında üstünlük anlamına gelmez.
+
+## Güçlü ve zayıf alanlar
+Reich ağır sanayi, füze sistemleri ve yüksek enerji fiziğinde güçlüdür. Buna karşılık sensör füzyonu, yazılım, sistemlerin küçültülmesi ve uzay lojistiği alanlarında Türk araştırmaları öne geçmiştir. İki tarafın rekabeti bu nedenle tek bir “ileri teknoloji” sıralamasına indirgenemez."""
+        }
+    ]
+    existing_titles = {normalize(record.get("title", "")) for record in records}
+    for item in technology_overviews:
+        if normalize(item["title"]) in existing_titles:
+            continue
+        doc = {
+            "title":item["title"], "summary":item["summary"], "content":item["content"],
+            "path":item["path"], "sourceName":item["sourceName"], "aliases":[],
+            "country":item["country"]
+        }
+        records.append(node("technology", doc, "1985 · TEKNOLOJİ GENEL BAKIŞI"))
+
     for record in records:
         if normalize(record.get("title", "")).startswith("ta 85 gokkanat"):
-            record["summary"] = "Türk uçan kanat havacılığının gelişim çizgisi: 1958'de Ta 70, 1965'te Gökkanat programının önemli hangar olayı ve 1975'te TA-85'in seri üretime geçmesi."
+            record["summary"] = "Türk uçan kanat havacılığının gelişim çizgisi: 1958'de Ta 70 prototipi ve 1975'te TA-85 Gökkanat'ın seri üretime geçmesi."
             record["content"] = """# Ta 70 ve TA-85 Gökkanat — Kamuya Açık Tarihçe
 
 ## Projenin yeri
@@ -1263,11 +1316,10 @@ Gökkanat, Büyük Türk İmparatorluğu'nun uçan kanat havacılık çizgisinin
 
 ## Gelişim çizgisi
 - **1958 — Ta 70:** Türk uçan kanat tasarımının ilk prototip aşaması. Necdet Atalay bu dönemin mühendisleri arasındadır.
-- **1965 — Hangar olayı:** Gökkanat programının geçmişinde önemli bir kırılma yaşanır. Olayın nedeni, sorumluları ve teknik ayrıntıları bu kamusal tarihçede açıklanmaz.
 - **1975 — TA-85 Gökkanat:** Yeni seri üretim dönemi başlar. 1985'te Gökkanat, imparatorluğun havacılık kimliğinin başlıca simgelerinden biridir.
 
 ## Aile belleği
-Necdet Atalay'ın çalışmaları, oğlu Cengiz'in askerî uçak mühendisliği kariyeri ve torunu Oğuz'un pilot olma isteği arasında kuşaklar boyunca süren bir bağ kurar. Necdet ve Cengiz uçakların geliştirilmesiyle, Oğuz ise onları uçurmak arzusuyla bu mirasın farklı halkalarını temsil eder.
+Necdet Atalay'ın çalışmaları, oğlu Cengiz'in askerî uçak mühendisliği kariyeri ve torunu Oğuz'un pilot olma isteği arasında kuşaklar boyunca süren bir bağ kurar. Necdet ve Cengiz uçakların geliştirilmesiyle, Oğuz ise onları uçurmak arzusuyla bu mirasın farklı halkalarını temsil eder. Programın aile içindeki geçmişine ilişkin bazı kayıtlar ise kamuya açık tarihçenin dışında tutulur.
 
 ## Kamusal kapsam
 Bu kayıt projenin tarihsel gelişimini ve evrendeki yerini açıklar. Tasarım, üretim, performans, silahlandırma veya operasyonel kullanıma yönelik uygulanabilir teknik ayrıntı içermez."""
