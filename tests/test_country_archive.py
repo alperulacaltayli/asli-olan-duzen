@@ -50,10 +50,19 @@ class ArchiveCountryClassificationTests(unittest.TestCase):
         self.assertEqual(press_records[0]["country"], "both")
 
     def test_current_turkish_records_are_tagged_turkish(self):
-        for category_id in ("institutions", "technology"):
+        for category_id in ("institutions",):
             leaves = [node for node in walk(self.categories[category_id]["nodes"]) if not node.get("children")]
             self.assertTrue(leaves, category_id)
             self.assertTrue(all(node["country"] == "turkish" for node in leaves), category_id)
+
+    def test_technology_archive_contains_turkish_and_german_overviews(self):
+        leaves = [
+            node for node in walk(self.categories["technology"]["nodes"])
+            if not node.get("children")
+        ]
+        by_title = {node["title"]: node for node in leaves}
+        self.assertEqual(by_title["Türk Teknolojileri — 1985 Genel Bakış"]["country"], "turkish")
+        self.assertEqual(by_title["Alman Teknolojileri — 1985 Genel Bakış"]["country"], "german")
 
     def test_character_archive_keeps_turkish_and_reich_profiles_separate(self):
         leaves = [
