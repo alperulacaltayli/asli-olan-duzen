@@ -914,6 +914,13 @@
     activeCategory = activeCountry
       ? { ...sourceCategory, nodes: filterNodesForCountry(sourceCategory.nodes, activeCountry) }
       : sourceCategory;
+    if (window.history.state?.aodArchive) {
+      window.history.replaceState(
+        { ...window.history.state, aodArchiveCategory: categoryId },
+        "",
+        window.location.href
+      );
+    }
     pendingCountryCategoryId = null;
     if (countryStage) countryStage.hidden = true;
     if (archiveWorkspace) archiveWorkspace.hidden = false;
