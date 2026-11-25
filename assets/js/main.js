@@ -1035,6 +1035,21 @@
     };
 
     const sceneIsOpen = !explorer.hidden && explorer.classList.contains("is-immersive");
+
+    // Keep the archive inside the browser's history so Android's system Back
+    // button closes the archive instead of navigating away from the site.
+    if (!sceneIsOpen && !window.history.state?.aodArchive &&
+        !new URLSearchParams(window.location.search).has("record")) {
+      const archiveUrl = new URL(window.location.href);
+      archiveUrl.searchParams.delete("record");
+      archiveUrl.hash = "arsiv";
+      window.history.pushState(
+        { ...(window.history.state || {}), aodArchive: true, aodArchiveCategory: categoryId },
+        "",
+        archiveUrl
+      );
+    }
+
     if (sceneIsOpen && activeCategory?.id === categoryId) {
       if (targetNodeId) {
         if (categoryId === "chronology" && chronologyMode !== "normal") setChronologyMode("normal", targetNodeId);
@@ -1272,8 +1287,15 @@
   };
   enablePictureFallbacks();
 
-  const closeArchiveScene = () => {
+  const closeArchiveScene = (fromPopState = false) => {
     if (explorer.hidden || !explorer.classList.contains("is-immersive")) return;
+
+    // A normal close (button, Escape, or country chooser return) consumes the
+    // archive history entry. The popstate handler performs the visual close.
+    if (!fromPopState && window.history.state?.aodArchive) {
+      window.history.back();
+      return;
+    }
     window.clearTimeout(sceneSwitchTimer);
     window.clearTimeout(sceneSwitchSettleTimer);
     window.clearTimeout(layerFlashTimer);
@@ -1313,16 +1335,25 @@
 
   if (backButton) backButton.addEventListener("click", closeArchiveScene);
 
-  window.addEventListener("popstate", () => {
+  window.addEventListener("popstate", (event) => {
     const requestedRecord = new URLSearchParams(window.location.search).get("record");
-    if (!requestedRecord) {
-      if (!explorer.hidden && explorer.classList.contains("is-immersive")) closeArchiveScene();
+    const archiveState = event.state?.aodArchive === true;
+
+    if (!archiveState) {
+      if (!explorer.hidden && explorer.classList.contains("is-immersive")) closeArchiveScene(true);
       return;
     }
-    const separator = requestedRecord.indexOf(":");
-    if (separator > 0 && categories.length) {
-      openCategory(requestedRecord.slice(0, separator), requestedRecord.slice(separator + 1));
+
+    if (requestedRecord) {
+      const separator = requestedRecord.indexOf(":");
+      if (separator > 0 && categories.length) {
+        openCategory(requestedRecord.slice(0, separator), requestedRecord.slice(separator + 1));
+        return;
+      }
     }
+
+    const categoryId = event.state?.aodArchiveCategory;
+    if (categoryId && categories.length) openCategory(categoryId);
   });
 
   document.addEventListener("keydown", (event) => {
