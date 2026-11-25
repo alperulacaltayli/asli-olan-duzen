@@ -444,15 +444,15 @@ def import_characters():
         },
         {
             "key":"alperen-keser", "path":political_base+"Alperen.md", "name":"Alperen Keser",
-            "date":"1899 doğumlu · 1938'de yönetimi devraldı", "birth":"1899 · Giresun, Kuşköy",
+            "date":"1899 doğumlu (türetilmiş) · 29 Kasım 1938'de yönetimi devraldı", "birth":"1899 · Giresun, Kuşköy (türetilmiş)",
             "role":"Asker ve devlet adamı · 1938'de yönetimi devralan lider",
             "personality":"Disiplinli, kararlı, milliyetçi ve sanayileşme yanlısı.",
             "aliases":["Alperen","Alperen Keser"]
         },
         {
             "key":"ismail-karaslan", "path":political_base+"İsmail Karaslan.md", "name":"İsmail Karaslan",
-            "date":"1915 doğumlu · Alperen Keser sonrasındaki lider", 
-            "birth":"1915 · Hatay",
+            "date":"1915 doğumlu (türetilmiş) · Alperen Keser sonrasındaki lider",
+            "birth":"1915 · Hatay (türetilmiş)",
             "role":"Asker ve devlet adamı",
             "personality":"Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
             "aliases":["İsmail Karaslan"]
