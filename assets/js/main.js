@@ -701,7 +701,11 @@
     const url = new URL(window.location.href);
     url.searchParams.set("record", activeCategory.id + ":" + node.id);
     url.hash = "arsiv";
-    window.history.replaceState({ ...(window.history.state || {}), aodRecord: node.id }, "", url);
+    window.history.replaceState({
+      ...(window.history.state || {}),
+      aodRecord: node.id,
+      ...(window.history.state?.aodArchive ? { aodArchiveCategory: activeCategory.id } : {})
+    }, "", url);
   };
 
   const attachArchiveRecordActions = (node) => {
