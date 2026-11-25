@@ -327,14 +327,24 @@
 
 
   const renderCharacterFacts = (source) => {
-    const facts = String(source || "").split(/\r?\n/).map((line) => {
+    const lines = String(source || "").split(/\r?\n/);
+    const facts = [];
+    const narrative = [];
+    for (const line of lines) {
       const match = line.trim().match(/^\*\*(.+?):\*\*\s*(.+)$/);
-      return match ? [match[1].replace(/\s*\(1985\)/i, ""), match[2]] : null;
-    }).filter(Boolean);
-    if (!facts.length) return '<div class="detail-body character-detail-body">' + renderMarkdown(source || "") + '</div>';
-    return '<dl class="character-facts">' + facts.map((fact) =>
-      '<div class="character-fact"><dt>' + escapeHtml(fact[0]) + '</dt><dd>' + escapeHtml(fact[1]) + '</dd></div>'
-    ).join("") + '</dl>';
+      if (match) facts.push([match[1].replace(/\s*\(1985\)/i, ""), match[2]]);
+      else narrative.push(line);
+    }
+    const factsMarkup = facts.length
+      ? '<dl class="character-facts">' + facts.map((fact) =>
+          '<div class="character-fact"><dt>' + escapeHtml(fact[0]) + '</dt><dd>' + escapeHtml(fact[1]) + '</dd></div>'
+        ).join("") + '</dl>'
+      : "";
+    const narrativeText = narrative.join("\n").trim();
+    const narrativeMarkup = narrativeText
+      ? '<div class="detail-body character-detail-body">' + renderMarkdown(narrativeText) + '</div>'
+      : "";
+    return factsMarkup + narrativeMarkup;
   };
 
   const renderCharacterHierarchy = (node) => {
