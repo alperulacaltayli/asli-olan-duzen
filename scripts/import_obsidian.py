@@ -172,8 +172,7 @@ def import_chronology():
             else:
                 years.setdefault(year, []).append((month,day,doc["title"],rec))
             seen_titles.add(normalize(doc["title"]))
-    # Public milestones from the revised canon vault. The 1965 incident is
-    # deliberately described without publishing its unresolved internal details.
+    # Only approved, reader-facing dates are added to the public chronology.
     public_milestones = [
         {
             "year":1985, "month":9, "day":10, "date":"10 Eylül 1985",
