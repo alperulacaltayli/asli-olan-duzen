@@ -429,10 +429,7 @@
       : "";
 
     const unmatchedHeadings = sections.filter((section) => classifySection(section.heading) === "other");
-    const groupedOther = unmatchedHeadings.length && cards
-      ? cards
-      : "";
-    const otherMarkup = unmatchedHeadings.length && !groupedOther
+    const otherMarkup = unmatchedHeadings.length
       ? '<section class="character-profile-card character-profile-card--other">' +
         '<div class="character-profile-section-heading"><span>08</span><b>DİĞER KAYITLAR</b></div>' +
         '<h4>Diğer Bilgiler</h4>' +
