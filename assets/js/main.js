@@ -764,6 +764,16 @@
     });
   };
 
+  const scrollArchiveTargetIntoView = (target) => {
+    if (!target || !window.matchMedia("(max-width: 760px)").matches) return;
+    window.requestAnimationFrame(() => {
+      target.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start"
+      });
+    });
+  };
+
   const selectNode = (nodeId) => {
     let node = activeCategory ? findNode(activeCategory.nodes, nodeId) : null;
     if (activeCategory?.id === "chronology" && chronologyMode !== "normal" && node?.children?.length) {
@@ -787,17 +797,8 @@
         });
       }
       detailHost.setAttribute("tabindex", "-1");
-      window.requestAnimationFrame(() => {
-        detailHost.focus({ preventScroll: true });
-        // On phones, bring the newly opened record into view automatically.
-        // Keep desktop navigation unchanged and respect reduced-motion settings.
-        if (window.matchMedia("(max-width: 760px)").matches) {
-          detailHost.scrollIntoView({
-            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-            block: "start"
-          });
-        }
-      });
+      window.requestAnimationFrame(() => detailHost.focus({ preventScroll: true }));
+      scrollArchiveTargetIntoView(detailHost);
       return;
     }
 
@@ -814,6 +815,9 @@
     renderDetail(node);
     attachArchiveRecordActions(node);
     syncArchiveRecordAddress(node);
+    // Apply the same mobile detail jump to characters, institutions,
+    // technology, society and every other selectable archive record.
+    scrollArchiveTargetIntoView(detailHost);
   };
 
   const renderCatalogue = () => {
@@ -1267,6 +1271,11 @@
       if (expandedNodes.has(id)) expandedNodes.delete(id);
       else expandedNodes.add(id);
       syncNavigationState();
+      if (expandedNodes.has(id)) {
+        const owner = toggleButton.closest("li");
+        const childPanel = owner?.querySelector(":scope > .chronology-children, :scope > .character-tree-children, :scope > .archive-tree-children");
+        scrollArchiveTargetIntoView(childPanel);
+      }
       return;
     }
     const selectButton = event.target.closest("[data-select-node]");
