@@ -7904,3 +7904,168 @@ body.archive-scene-closing .archive-explorer.is-immersive.scene-leaving {
         display: none;
     }
 }
+
+
+/* Character dossiers: stable information hierarchy shared by every profile. */
+.character-profile-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 13px;
+    margin: 20px 0 28px;
+}
+
+.character-profile-facts,
+.character-profile-card {
+    min-width: 0;
+    padding: 19px 20px;
+    border: 1px solid rgba(215, 171, 198, .19);
+    background: linear-gradient(145deg, rgba(174, 112, 163, .075), rgba(16, 14, 23, .2));
+}
+
+.character-profile-facts,
+.character-profile-card--intro,
+.character-profile-card--personality,
+.character-profile-card--background,
+.character-profile-card--other {
+    grid-column: 1 / -1;
+}
+
+.character-profile-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 10px;
+    color: #bd95b7;
+}
+
+.character-profile-section-heading span {
+    display: grid;
+    width: 23px;
+    height: 23px;
+    flex: 0 0 23px;
+    place-items: center;
+    border: 1px solid rgba(215, 171, 198, .32);
+    border-radius: 50%;
+    color: #f0cce9;
+    font: 8px var(--mono);
+}
+
+.character-profile-section-heading b {
+    font: 8px var(--mono);
+    font-weight: 400;
+    letter-spacing: .14em;
+}
+
+.character-profile-facts .character-facts {
+    margin: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.character-profile-facts .character-fact {
+    padding: 11px 13px;
+    border-color: rgba(215, 171, 198, .13);
+    background: rgba(9, 8, 14, .24);
+}
+
+.character-profile-facts .character-fact dd {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.character-profile-card > h4,
+.character-profile-facts > h4 {
+    margin: 0 0 13px;
+    color: #fff0f8;
+    font: 500 21px/1.2 var(--display);
+}
+
+.character-profile-subsection + .character-profile-subsection {
+    margin-top: 15px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(215, 171, 198, .12);
+}
+
+.character-profile-subsection h5 {
+    margin: 0 0 8px;
+    color: #eac8df;
+    font: 500 16px/1.3 var(--display);
+}
+
+.character-profile-section-copy {
+    color: #d9cbd8;
+    font: 16px/1.65 var(--serif);
+}
+
+.character-profile-section-copy p {
+    margin: 0 0 11px;
+}
+
+.character-profile-section-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.character-profile-section-copy ul,
+.character-profile-section-copy ol {
+    margin: 8px 0 12px;
+    padding-left: 21px;
+}
+
+.character-profile-section-copy li {
+    margin: 0 0 6px;
+    padding-left: 3px;
+}
+
+.character-profile-section-copy strong {
+    color: #f2cce2;
+    font-weight: 500;
+}
+
+.character-profile-card--appearance {
+    background: linear-gradient(145deg, rgba(124, 91, 136, .09), rgba(16, 14, 23, .2));
+}
+
+.character-profile-card--role {
+    background: linear-gradient(145deg, rgba(135, 105, 151, .075), rgba(16, 14, 23, .2));
+}
+
+.character-profile-card--interests {
+    background: linear-gradient(145deg, rgba(174, 112, 163, .065), rgba(16, 14, 23, .2));
+}
+
+.character-profile-card--relationships {
+    background: linear-gradient(145deg, rgba(148, 92, 123, .08), rgba(16, 14, 23, .2));
+}
+
+@media (max-width: 760px) {
+    .character-profile-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .character-profile-facts,
+    .character-profile-card {
+        grid-column: 1;
+        padding: 15px;
+    }
+
+    .character-profile-facts .character-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .character-profile-card > h4 {
+        font-size: 19px;
+    }
+
+    .character-profile-section-copy {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 420px) {
+    .character-profile-facts .character-facts {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
