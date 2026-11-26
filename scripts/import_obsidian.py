@@ -1571,7 +1571,12 @@ Reich'ta parti, SS, ordu ve sanayi birbirleriyle rekabet eder. Führer bu kuruml
 Reich'ın kurumsal düzeni, sıradan bir bürokrasi değil, Nazi ideolojisi ve baskı üzerine kurulu bir parti-devlet yapısıdır."""
         }
     ]
-    institution_titles = {normalize(record.get("title", "")) for record in records}
+    institution_titles = {
+        normalize(value)
+        for record in records
+        for value in [record.get("title", ""), record.get("sourceName", "")] + record.get("aliases", [])
+        if value
+    }
     for item in institution_overviews:
         if normalize(item["title"]) in institution_titles:
             continue
@@ -1867,7 +1872,12 @@ Füze ve roket teknolojileri Reich'ın güçlü olduğu alanlardandır. Bu üst�
 Reich ağır sanayi, füze sistemleri ve yüksek enerji fiziğinde güçlüdür. Buna karşılık sensör füzyonu, yazılım, sistemlerin küçültülmesi ve uzay lojistiği alanlarında Türk araştırmaları öne geçmiştir. İki tarafın rekabeti bu nedenle tek bir “ileri teknoloji” sıralamasına indirgenemez."""
         }
     ]
-    existing_titles = {normalize(record.get("title", "")) for record in records}
+    existing_titles = {
+        normalize(value)
+        for record in records
+        for value in [record.get("title", ""), record.get("sourceName", "")] + record.get("aliases", [])
+        if value
+    }
     for item in technology_overviews:
         if normalize(item["title"]) in existing_titles:
             continue
