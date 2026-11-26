@@ -1381,12 +1381,59 @@ def public_folder_nodes(category, relative_folder):
             records.append(record)
     return records
 
+def _load_canon_public_data():
+    """Load editor-curated public summaries derived from the priority canon vault."""
+    path = ROOT / "content" / "archives" / "canon_public_records.json"
+    if not path.is_file():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def _canon_records(category):
+    data = _load_canon_public_data()
+    records = []
+    for index, item in enumerate(data.get(category, []), 1):
+        path = item.get("path", f"kanon-vault/{category}/{slug(item.get('title', index))}.md")
+        doc = {
+            "title": item["title"],
+            "summary": item["summary"],
+            "content": item["content"],
+            "aliases": item.get("aliases", []),
+            "sourceName": item.get("title", ""),
+            "path": path,
+            "country": item.get("country", "both"),
+        }
+        record = node(category, doc, item.get("date", ""))
+        record["order"] = item.get("order", index)
+        records.append(record)
+    return records
+
+
 def public_repo_archive_nodes(category):
-    """Read approved reader-facing records stored under the repository's archive tree."""
-    archive_root = ROOT / "content" / "archives" / category
-    if not archive_root.is_dir():
-        return []
-    return scan_public_archive_nodes(archive_root, archive_root, category)
+    """Return canon-vault entries prepared for the public-facing archive."""
+    return _canon_records(category)
+
+
+def public_repo_custom_archive_categories():
+    data = _load_canon_public_data()
+    categories = []
+    for category_id, cfg in data.get("_custom_categories", {}).items():
+        records = _canon_records(category_id)
+        if not records:
+            continue
+        categories.append({
+            "id": category_id,
+            "title": cfg.get("title", category_id.title()),
+            "description": cfg.get("description", ""),
+            "view": cfg.get("view", "catalogue"),
+            "label": cfg.get("label", "ARŞİV"),
+            "order": cfg.get("order", 99),
+            "nodes": records,
+        })
+    return categories
 
 
 def overlay_public_archive_records(existing, overlays, category):
@@ -2100,6 +2147,7 @@ def discover_archives():
         cat=fn()
         if cat: cats.append(cat)
     cats += manual_categories()
+    cats += public_repo_custom_archive_categories()
     cats.sort(key=lambda c:(c.get("order",99),c["title"].casefold()))
     attach_links(cats)
     return {"categories":cats}
