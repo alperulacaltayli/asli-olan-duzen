@@ -16,7 +16,9 @@
       "country": "turkish",
       "date": "1950 · İstanbul ilanı",
       "order": 2,
-      "aliases": []
+      "aliases": [
+        "Türkiye"
+      ]
     },
     {
       "title": "Großdeutsches Reich",
@@ -25,7 +27,9 @@
       "country": "german",
       "date": "1985",
       "order": 3,
-      "aliases": []
+      "aliases": [
+        "Almanya"
+      ]
     },
     {
       "title": "1946 Dünya Paylaşımı",
@@ -34,7 +38,9 @@
       "country": "both",
       "date": "1946 sonbaharı",
       "order": 4,
-      "aliases": []
+      "aliases": [
+        "Dünya Paylaşımı 1946"
+      ]
     },
     {
       "title": "Vilayetler ve İdari Coğrafya",
@@ -129,7 +135,10 @@
       "country": "turkish",
       "date": "1985",
       "order": 3,
-      "aliases": []
+      "aliases": [
+        "Mektepler — 1985 Eğitim Düzeni",
+        "Mektepler"
+      ]
     },
     {
       "title": "Hilalifiyet Merkezi ve Nizam-1",
@@ -138,7 +147,10 @@
       "country": "turkish",
       "date": "1982",
       "order": 4,
-      "aliases": []
+      "aliases": [
+        "Hilalifiyet Merkezi",
+        "Hilalifiyet Merkezi - İstanbul"
+      ]
     },
     {
       "title": "Reich Parti-Devlet Kurumları",
@@ -158,7 +170,9 @@
       "country": "turkish",
       "date": "1958–1985",
       "order": 1,
-      "aliases": []
+      "aliases": [
+        "Türk Teknolojileri — 1985 Genel Bakış"
+      ]
     },
     {
       "title": "Reich Teknolojileri ve Araştırma Programları",
@@ -167,7 +181,9 @@
       "country": "german",
       "date": "1940'lar–1985",
       "order": 2,
-      "aliases": []
+      "aliases": [
+        "Alman Teknolojileri — 1985 Genel Bakış"
+      ]
     },
     {
       "title": "Ana Beyin ve Nizam-1",
@@ -194,7 +210,10 @@
       "country": "turkish",
       "date": "1958–1985",
       "order": 5,
-      "aliases": []
+      "aliases": [
+        "TA-85 Gökkanat",
+        "Ta 85 Gökkanat"
+      ]
     },
     {
       "title": "Horten 229 ve Me 620 Überschall",
@@ -250,7 +269,11 @@
       "country": "turkish",
       "date": "1985",
       "order": 4,
-      "aliases": []
+      "aliases": [
+        "Kanat",
+        "Kanat Sistemi",
+        "B-3 Sınıf Profili"
+      ]
     }
   ],
   "characters": [
