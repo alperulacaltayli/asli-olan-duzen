@@ -337,7 +337,7 @@ def import_characters():
         },
         {
             "key":"cengiz-atalay", "path":main_base+"Cengiz Atalay.md", "name":"Cengiz Atalay",
-            "date":"1945 · 40 yaş", "birth":"1945", "age":"40",
+            "date":"1942 · 43 yaş", "birth":"1942", "age":"43",
             "role":"Askerî uçak mühendisi · Gökkanat programı",
             "appearance":"Düzenli ve klasik giyinir; resmî ve hafif askerî çizgileri tercih eder.",
             "personality":"Özgüvenli, enerjik, meraklı ve çalışkan.",
@@ -386,7 +386,7 @@ def import_characters():
         {
             "key":"riza-kaya", "path":main_base+"Rıza Kaya.md", "name":"Rıza Kaya",
             "date":"1916 · 69 yaş", "birth":"1916", "age":"69",
-            "role":"Mesleği kaynakta belirtilmemiştir",
+            "role":"",
             "appearance":"Sade ve düzenli giyinir.",
             "personality":"Sakin, ağırbaşlı, geleneklerine bağlı ve sorumluluk sahibi.",
             "aliases":["Rıza Kaya"]
@@ -436,23 +436,23 @@ def import_characters():
         },
         {
             "key":"alperen-keser", "path":political_base+"Alperen.md", "name":"Alperen Keser",
-            "date":"1888 doğumlu · 29 Kasım 1938'de yönetimi devraldı", "birth":"1888 · Giresun, Kuşköy",
+            "date":"1899 doğumlu · 29 Kasım 1938'de yönetimi devraldı", "birth":"1899 · Giresun, Kuşköy",
             "role":"Asker ve devlet adamı · 1938'de yönetimi devralan lider",
             "personality":"Disiplinli, kararlı, milliyetçi ve sanayileşme yanlısı.",
             "aliases":["Alperen","Alperen Keser"]
         },
         {
             "key":"ismail-karaslan", "path":political_base+"İsmail Karaslan.md", "name":"İsmail Karaslan",
-            "date":"1904 doğumlu · 1960–1975 dönemi",
-            "birth":"1904 · Hatay",
+            "date":"1915 doğumlu · 1968–1981 dönemi",
+            "birth":"1915 · Hatay",
             "role":"Asker ve devlet adamı",
             "personality":"Disiplinli, devletçi, temkinli ve güçlü merkezi yönetim yanlısı.",
             "aliases":["İsmail Karaslan"]
         },
         {
             "key":"selim-arkan", "path":political_base+"Selim Arkan.md", "name":"Selim Arkan",
-            "date":"1935 doğumlu · 1985'te 50 yaşında",
-            "birth":"1935 · Ankara",
+            "date":"1939 doğumlu · 1985'te 46 yaşında",
+            "birth":"1939 · Ankara",
             "role":"Siyasetçi ve devlet adamı",
             "personality":"Soğukkanlı, pragmatik, devletçi ve stratejik düşünen.",
             "aliases":["Selim Arkan"]
@@ -1214,6 +1214,7 @@ Hüseyin Kutlu, tarih öğretmenidir. Ağırbaşlı ve dikkatli konuşur. Tarih 
 
     roots = [young_people, atalay_suyu, keser_soyu, state_leaders, reich_leadership, school_staff]
     roots = [item for item in roots if item.get("children")]
+    roots = overlay_public_archive_records(roots, public_repo_archive_nodes("characters"), "characters")
     if not roots:
         return None
 
@@ -1380,6 +1381,50 @@ def public_folder_nodes(category, relative_folder):
             records.append(record)
     return records
 
+def public_repo_archive_nodes(category):
+    """Read approved reader-facing records stored under the repository's archive tree."""
+    archive_root = ROOT / "content" / "archives" / category
+    if not archive_root.is_dir():
+        return []
+    return scan_public_archive_nodes(archive_root, archive_root, category)
+
+
+def overlay_public_archive_records(existing, overlays, category):
+    """Replace older short records with curated canon profiles while keeping their tree positions."""
+    overlay_keys = {}
+    for record in overlays:
+        for value in [record.get("title", ""), record.get("sourceName", "")] + record.get("aliases", []):
+            if value:
+                overlay_keys[normalize(value)] = record
+
+    used = set()
+
+    def apply(nodes):
+        for current in nodes:
+            values = [current.get("title", ""), current.get("sourceName", "")] + current.get("aliases", [])
+            replacement = next((overlay_keys[normalize(value)] for value in values
+                                if value and normalize(value) in overlay_keys), None)
+            if replacement:
+                current["title"] = replacement["title"]
+                current["summary"] = replacement["summary"]
+                current["content"] = replacement["content"]
+                current["date"] = replacement.get("date", current.get("date", ""))
+                current["country"] = replacement.get("country", current.get("country", "both"))
+                current["aliases"] = list(dict.fromkeys(current.get("aliases", []) + replacement.get("aliases", [])))
+                used.add(replacement["id"])
+            apply(current.get("children", []))
+
+    apply(existing)
+    added = [record for record in overlays if record["id"] not in used]
+    if added:
+        existing.append(group(
+            category, "Ek kanon kayıtları", "KAMUYA AÇIK DOSYALAR",
+            f"Yeni kanon vault'undan derlenmiş {len(added)} ek kayıt.", added,
+            "canon-additions"
+        ))
+    return existing
+
+
 def import_institutions():
     specs = [
         "Kuruluşlar/Hilalifiyet Merkezi - İstanbul.md",
@@ -1514,11 +1559,12 @@ Rekabet serbesttir; fakat devlet güvenliğini tehdit ettiği kabul edilen eylem
 
 ## 1985 gündemi
 16 Eylül 1985'te düzenlenen Mektepler Arası Teknoloji Tasarım Yarışması, kurumun o yılki en görünür faaliyetlerinden biridir. Üsküdar ve Şarkın mektepleri arasındaki rekabet, öğrenci liderlerinin güç dengelerini ve devletin gençlik politikasını aynı sahnede buluşturur."""
+    records += public_repo_archive_nodes("institutions")
     apply_default_leaf_country(records, "turkish")
     return {
         "id":"institutions",
         "title":"Kurumlar",
-        "description":"Kamuya açık kurumsal kayıtlar. Taslak, öneri veya gizli dosyalar bu kataloğa aktarılmaz.",
+        "description":"İmparatorluğun merkezî yönetimi, kurulları, bakanlıkları, eğitim ve güvenlik kurumları ile Reich'ın parti-devlet yapılanması.",
         "view":"catalogue",
         "label":"KURUM DOSYALARI",
         "order":4,
@@ -1685,10 +1731,11 @@ Japonya Pasifik'te varlığını ve bölgesel etkisini korur; ancak 1985 dünya 
 Bu iki okulun öğrenci kadroları birbirine karıştırılmamalıdır. Aralarındaki rekabet ve Hilalifiyet çevresindeki ilişkiler, gençlerin hikâyelerini birbirine bağlar.
 
 İstanbul'un alternatif evrendeki 1985 idarî bölünümü, okul kampüslerinin kesin adresleri ve ayrıntılı ulaşım bağlantıları mevcut kamusal kayıtlarda bütünüyle sabitlenmemiştir. Bu nedenle doğrulanmamış ilçe veya adres bilgisi eklenmez."""
+    records += public_repo_archive_nodes("geography")
     return {
         "id":"geography",
         "title":"Dünya Atlası",
-        "description":"1985 dünya düzeni, 1946 paylaşımı, ülke profilleri ve şehir/tarih kayıtları. Kesin sınır çizgileri ve ulaşım katmanları kaynak geldikçe genişler.",
+        "description":"1985 dünya düzeni, 1946 paylaşımı, ülke profilleri, idari bölgeler ve stratejik şehirler.",
         "view":"catalogue",
         "label":"COĞRAFYA VE SİYASİ ATLAS",
         "order":2,
@@ -1801,7 +1848,7 @@ Bu kayıt projenin tarihsel gelişimini ve evrendeki yerini açıklar. Tasarım,
     return {
         "id":"technology",
         "title":"Teknoloji",
-        "description":"TA-85 Gökkanat ve diğer projelere ait yalnızca onaylanmış, genel ve tarihsel teknoloji kayıtları.",
+        "description":"Türk ve Alman teknoloji programları, havacılık tarihi, bilimsel araştırma altyapısı ve iki ülke arasındaki teknoloji dengesi.",
         "view":"catalogue",
         "label":"TEKNOLOJİ KATALOĞU",
         "order":5,
@@ -1892,11 +1939,12 @@ Kanat, öğrencinin zekâsını, servetini veya dokunulmazlığını gösteren b
 ## Sınırlar
 Kanat sayısı ayrıcalık veya dokunulmazlık sağlamaz. En yüksek seviyedeki okul başkanı da ağır ihlal durumunda görevden alınabilir. Sistem resmî söylemde liyakat ve sorumluluk ilkelerine dayanır; uygulamada kayırmacılık ve oy ilişkileri etrafında tartışmalar yaşanabilir."""
 
+    records += public_repo_archive_nodes("society")
     apply_default_leaf_country(records, "turkish")
     return {
         "id":"society",
         "title":"Toplum ve Gündelik Hayat",
-        "description":"Okul profili, B-3 haftalık programı ve Kanat sisteminin bilinen kamusal çerçevesi. Genel gündelik yaşam ve ekonomi kayıtları ayrıca hazırlanmalıdır.",
+        "description":"1985'te eğitim, okul yaşamı, Kanat düzeni, gündelik hayat, hukuk ve imparatorluğun ekonomik yapısı.",
         "view":"catalogue",
         "label":"TOPLUMSAL YAŞAM KAYITLARI",
         "order":6,
@@ -1908,22 +1956,23 @@ def import_media():
     source = read_doc("Tarihi Olaylar/Olaylar/10 KASIM 1940.md")
     if source:
         press_doc = {
-            "title":"10 Kasım 1940 — Ankara Ziyareti ve Dünya Basını",
-            "summary":"Ankara ziyareti, Anıtkabir töreni ve olayın Amerikan basınında yarattığı yankıya ilişkin mevcut kronoloji notlarından derlenen basın bağlamı.",
-            "content":"""10 Kasım 1940 tarihli kronoloji kaydı, Adolf Hitler'in Ankara'ya gelişi ve Anıtkabir ziyaretinin Türk kamuoyunda ve uluslararası basında yankı bulduğunu belirtir.
+            "title":"10 Kasım 1940 — Ankara Ziyaretinin Basındaki Yankısı",
+            "summary":"Hitler'in Ankara ziyareti ve Anıtkabir töreni, Avrupa'daki güç dengesinin değiştiğini gösteren siyasî bir gelişme olarak yorumlandı.",
+            "content":"""# Ankara Ziyaretinin Basındaki Yankısı
 
-## Mevcut kayıt
-Kanon notunda Amerikan basınının ziyareti, Avrupa'daki güç dengesinin değiştiğine dair bir uyarı işareti olarak değerlendirdiği aktarılır. Bu arşiv girdisi, söz konusu bilgiyi kataloglar; henüz özgün gazete nüshası, yayın adı, muhabir, sayfa numarası veya tam metin mevcut değildir.
+10 Kasım 1940'ta Adolf Hitler'in Ankara'ya gelişi ve Anıtkabir'deki tören, yalnızca ikili diplomatik temas olarak görülmedi. Ziyaret, Avrupa'da Fransa ve İngiltere'nin yenilmesinden sonra ortaya çıkan yeni güç düzeninin görünür işaretlerinden biri hâline geldi.
+
+Amerikan basınında olay, Avrupa'daki güç dengesinin hızla değiştiğine ve Türkiye'nin bu değişimde giderek daha belirleyici bir aktör olduğuna dair bir uyarı olarak değerlendirildi. Böylece Ankara'daki tören, iki devletin resmî yakınlaşmasının ötesinde uluslararası siyasetin konusu oldu.
+
+## Tarihsel bağlam
+Ziyaret, Türkiye'nin askerî ve diplomatik ağırlığının arttığı; Almanya ile ilişkilerin ise işbirliği kadar karşılıklı çıkar hesabı üzerinden yürüdüğü bir dönemde gerçekleşti.
 
 ## Bağlantılı kayıt
-[[10 KASIM 1940]]
-
-## Dosya durumu
-Site malzemeleri arasında Ankara ziyareti haberine ayrılmış bir görsel dosya bulunur. Görselin yayın künyesi ve özgün kaynağı ayrıca tamamlanmalıdır."""
+[[10 KASIM 1940]]"""
         }
         press_doc["sourceName"] = "10 KASIM 1940"
         press_doc["path"] = source["path"]
-        press_doc["aliases"] = ["Ankara ziyareti basını", "Dünya basını"]
+        press_doc["aliases"] = ["Ankara ziyareti basını", "Dünya basını", "10 Kasım 1940 — Ankara Ziyareti ve Dünya Basını"]
         press_doc["country"] = "both"
         records.append(node("media", press_doc, "10 KASIM 1940"))
     records += public_folder_nodes("media", "Medya ve Basın")
@@ -1931,7 +1980,7 @@ Site malzemeleri arasında Ankara ziyareti haberine ayrılmış bir görsel dosy
     return {
         "id":"media",
         "title":"Basın ve Yayın Arşivi",
-        "description":"Basın yansımaları ve yayın kayıtları. Mevcut tarih notlarının ötesindeki gazete nüshaları, yayın akışları ve künye bilgileri henüz hazırlanmayı bekliyor.",
+        "description":"Alternatif tarih çizgisindeki önemli olayların basın dili, kamuoyu tepkileri ve yayın düzeni.",
         "view":"catalogue",
         "label":"BASIN VE YAYIN KAYITLARI",
         "order":7,
@@ -1944,7 +1993,7 @@ def import_documents():
     return {
         "id":"documents",
         "title":"Belge Arşivi",
-        "description":"Kamuya açık resmî kararlar, yazışmalar, toplantı tutanakları ve tarihî dosyalar. Yayımlanmaya onaylanmış belgeler eklendikçe katalog dolar.",
+        "description":"Kamu yönetimine, diplomatik ilişkilere ve tarihî gelişmelere ait resmî kayıtların arşivi.",
         "view":"catalogue",
         "label":"BELGE VE EVRAK KATALOĞU",
         "order":8,
