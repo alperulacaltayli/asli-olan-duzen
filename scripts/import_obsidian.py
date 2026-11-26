@@ -1411,6 +1411,7 @@ def _canon_records(category):
         }
         record = node(category, doc, item.get("date", ""))
         record["order"] = item.get("order", index)
+        record["sourceFile"] = "content/archives/canon_public_records.json"
         records.append(record)
     return records
 
