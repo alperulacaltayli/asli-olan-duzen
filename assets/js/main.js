@@ -787,7 +787,17 @@
         });
       }
       detailHost.setAttribute("tabindex", "-1");
-      window.requestAnimationFrame(() => detailHost.focus({ preventScroll: true }));
+      window.requestAnimationFrame(() => {
+        detailHost.focus({ preventScroll: true });
+        // On phones, bring the newly opened record into view automatically.
+        // Keep desktop navigation unchanged and respect reduced-motion settings.
+        if (window.matchMedia("(max-width: 760px)").matches) {
+          detailHost.scrollIntoView({
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+            block: "start"
+          });
+        }
+      });
       return;
     }
 
