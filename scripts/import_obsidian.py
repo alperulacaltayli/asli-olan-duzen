@@ -163,7 +163,7 @@ def import_chronology():
         if not doc: continue
         year,month,day,label=parse_event_date(path.stem,doc["title"])
         if "Akşam yemeği" in doc["title"] and year is None:
-            year,month,day,label=1940,11,0,"Kasım 1940 · gün belirtilmemiş"
+            year,month,day,label=1940,11,0,"Kasım 1940"
         rec=node("chronology",doc,label)
         seen_titles.add(normalize(doc["title"]))
         if year is None: undated.append(rec)
@@ -221,7 +221,7 @@ Türk tarafı ziyaretin resmî nezaketini korurken Reich heyetinin temasları di
         events=[x[3] for x in sorted(years[year],key=lambda x:(x[0],x[1],x[2].casefold()))]
         roots.append(group("chronology",str(year),"YIL",f"{year} yılına ait {len(events)} tarihsel kayıt.",events,"year-"+str(year)))
     if undated:
-        roots.append(group("chronology","Tarihi belirtilmeyen kayıtlar","TARİHİ BELİRTİLMEMİŞ","Kaynak notlarda kesin tarih verilmeyen olaylar.",undated,"undated-events"))
+        roots.append(group("chronology","Tarihsel Arka Plan","DÖNEM VE BAĞLAM","Ana kronoloji kayıtlarını tamamlayan tarihsel bağlam notları.",undated,"undated-events"))
     return {"id":"chronology","title":"Kronoloji","description":"1938'den başlayarak alternatif tarih çizgisindeki olaylar. Yıl düğümlerini aç, olayları seç ve kayıtlar arasındaki bağlantıları izle.","view":"tree","label":"DALLANAN OLAY AĞACI","order":1,"nodes":roots}
 
 def make_public_character(category, spec):
@@ -939,7 +939,7 @@ Uçak motorları, mekanik sistemler, uçak yapıları, askerî teknoloji ve yeni
 Sakin, kontrollü ve stratejik düşünen bir öğrencidir. Okul yönetiminde bilgi toplama, gelişmeleri takip etme ve kararları planlı biçimde ele alma eğilimindedir. Otoritesini yüksek sesle değil, ölçülü ve kararlı davranarak kurar.
 
 ## Bilinen kişisel bilgiler
-Mevcut eski karakter dosyalarında Alper'in boyu, saç ve göz rengi, sevdiği renk, hobileri ve günlük kıyafetleri hakkında doğrulanmış ayrıntı bulunmamaktadır. Bu nedenle bu alanlara tahminî özellik eklenmemiştir.""",
+Alper sakin ve ölçülü konuşur. Dosya, not panosu ve raporları kullanarak okul içindeki bilgi akışını düzenler; liderliğini hazırlık ve gözlem üzerine kurar.""",
 
         "abdullah-keser": """## Temel bilgiler
 **Doğum:** 1770 civarı, Giresun / Kuşköy  
@@ -1037,7 +1037,7 @@ Siyasi zekâ, diplomasi, tarih ve ekonomi bilgisi, kriz yönetimi ve farklı çe
 1936 doğumlu Kaan Demirsoy, Başbuyruk makamını yürütür. Sessiz, titiz ve sabırlıdır. Resmî kararların doğru metinle kayda geçirilmesine, belgelerin geçerliliğine ve idarî düzenin tutarlılığına önem verir. Konuşurken ölçülü ve maddeler hâlinde ilerler.""",
 
         "sabiha-erten": """## Kişisel profil
-1945 doğumlu Sabiha Erten, Başbuyruk Kalemi Müsteşarıdır. Dikkatli, titiz ve sessiz çalışır. Kararname nüshaları, mühür düzeni ve toplantı tutanaklarındaki ayrıntıları takip eder. Bir belgedeki küçük tutarsızlığın idarî sonuçlarını önemser. Kaynaklarda fiziksel görünüşü veya kişisel hobileri hakkında bilgi verilmemiştir.""",
+1945 doğumlu Sabiha Erten, Başbuyruk Kalemi Müsteşarıdır. Dikkatli, titiz ve sessiz çalışır. Kararname nüshaları, mühür düzeni ve toplantı tutanaklarındaki ayrıntıları takip eder. Bir belgedeki küçük tutarsızlığın idarî sonuçlarını önemser. """,
 
         "mete-kutlu": """## Kişisel profil
 1931 doğumlu Mete Kutlu, İmparatorluk İstihbarat Başkanıdır. Sakin, sabırlı ve ölçülü bir dinleyicidir. Dış ve stratejik istihbarat konularında uzun vadeli değerlendirmeyi önemser. Bilgiyi toplamak kadar doğru zamanda ve doğru makamla paylaşılmasını da görev anlayışının parçası sayar.""",
@@ -1049,19 +1049,19 @@ Siyasi zekâ, diplomasi, tarih ve ekonomi bilgisi, kriz yönetimi ve farklı çe
 1934 doğumlu Ziya Arat, Maarif ve Gençlik Nazırıdır. Enerjik ve ikna edici bir konuşma tarzı vardır. Eğitim, müfredat, mektepler ve gençlik politikası alanlarında çalışır. Okulların işleyişini ve gençlerin yetişmesini devletin uzun vadeli geleceği açısından değerlendirir.""",
 
         "haluk-sancar": """## Kişisel profil
-1927 doğumlu Haluk Sancar, Afrika Umumi Valisidir. Enerjik, konuşkan ve ikna edici bir yöneticidir. Siyasî dengeyi gözetir; reform hedefleri ile mevcut idarî uygulamalar arasında sonuç almaya çalışır. Fiziksel görünüşü ve hobileri hakkında doğrulanmış bilgi bulunmamaktadır.""",
+1927 doğumlu Haluk Sancar, Afrika Umumi Valisidir. Enerjik, konuşkan ve ikna edici bir yöneticidir. Siyasî dengeyi gözetir; reform hedefleri ile mevcut idarî uygulamalar arasında sonuç almaya çalışır. """,
 
         "reinhard-falkenhorst": """## Kişisel profil
 1922 doğumlu Reinhard Falkenhorst, Großdeutsches Reich'ın Führer und Reichskanzler makamındadır. Ağır, soğuk, sabırlı ve hesapçı bir karaktere sahiptir. Kararlarında dosyalara, raporlara ve kurumsal dengeye önem verir.""",
 
         "martin-kessler": """## Kişisel profil
-1930 doğumlu Martin Kessler, Führer Yardımcısı ve Parti Kanzelleyi Başkanıdır. Nazik görünür, sabırlıdır ve siyasî bağlantıları güçlüdür. Parti disiplini, üst düzey atamalar ve idarî devamlılık konularında etkilidir. Kişisel görünüşü ve hobileri hakkında kaynaklarda ayrıntı bulunmamaktadır.""",
+1930 doğumlu Martin Kessler, Führer Yardımcısı ve Parti Kanzelleyi Başkanıdır. Nazik görünür, sabırlıdır ve siyasî bağlantıları güçlüdür. Parti disiplini, üst düzey atamalar ve idarî devamlılık konularında etkilidir. """,
 
         "ulrich-von-havel": """## Kişisel profil
 1932 doğumlu Ulrich von Havel, Reich Dışişleri Bakanıdır. Kibar, sabırlı ve hesapçı bir diplomattır. Görüşmelerde nezaketini korurken tekliflerin şartlarını ve karşı tarafın hareket alanını dikkatle hesaplar.""",
 
         "friedrich-wulfhart": """## Kişisel profil
-1925 doğumlu Friedrich Wulfhart, Reichsführer-SS ve Reich güvenlik teşkilatının başındaki isimdir. Sessiz, düzen takıntılı, ideolojik açıdan katı ve hesaplıdır. Otoritesini yüksek sesle değil, sorgulama ve kayıt düzeni üzerinden kurar. Fiziksel görünüşü ve hobileri hakkında kaynaklarda bilgi bulunmamaktadır.""",
+1925 doğumlu Friedrich Wulfhart, Reichsführer-SS ve Reich güvenlik teşkilatının başındaki isimdir. Sessiz, düzen takıntılı, ideolojik açıdan katı ve hesaplıdır. Otoritesini yüksek sesle değil, sorgulama ve kayıt düzeni üzerinden kurar. """,
 
         "konrad-weissmann": """## Kişisel profil
 1933 doğumlu Konrad Weissmann, baş nükleer fizikçi olarak SFA-P Polaris araştırmalarıyla ilişkilidir. Sabırsız, keskin, kibirli ve veriye odaklıdır. İnsan ilişkilerinden çok ölçümlere ve bilimsel sonuçlara önem verir.""",
