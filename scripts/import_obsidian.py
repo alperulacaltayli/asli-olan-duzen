@@ -1809,6 +1809,7 @@ def import_technology():
     technology_root = ROOT / "content" / "archives" / "technology"
     existing = scan_public_archive_nodes(technology_root, technology_root, "technology")
     public_records = public_folder_nodes("technology", "Alternatif Tarih/Teknoloji/Kamuya Açık")
+    public_records += public_repo_archive_nodes("technology")
     records = _merge_public_records(existing, public_records)
 
     technology_overviews = [
