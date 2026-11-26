@@ -1396,7 +1396,10 @@ def _canon_records(category):
     data = _load_canon_public_data()
     records = []
     for index, item in enumerate(data.get(category, []), 1):
-        path = item.get("path", f"kanon-vault/{category}/{slug(item.get('title', index))}.md")
+        # Curated records live in the structured canon registry; this virtual
+        # locator keeps each record identifiable without pretending it is a
+        # standalone Markdown source file.
+        path = item.get("path", f"Öncelikli Kanon Vault / {category} / {item.get('title', index)}")
         doc = {
             "title": item["title"],
             "summary": item["summary"],
