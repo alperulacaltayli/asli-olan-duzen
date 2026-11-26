@@ -628,7 +628,7 @@ def import_characters():
 **En sevdiği renk:** Kızıl
 
 ## Görünüş
-Oğuz dik duruşlu, bakımlı ve düzenli görünümüne önem veren bir gençtir. Kaynak karakter dosyasında saç ve göz rengi ile ayrıntılı günlük kıyafet tercihleri kesin olarak belirtilmediğinden bu alanlara ek özellik yüklenmez.
+Oğuz dik duruşlu, bakımlı ve düzenli görünümüne önem veren bir gençtir.
 
 ## Kişilik
 Sakin, soğukkanlı, disiplinli ve kararlıdır. Gereksiz yere öne çıkmayı sevmez; önce gözlem yapar, sonra hareket eder. Bağımsız çalışmaktan hoşlanır ve başladığı işi tamamlamaya önem verir. Övünmeyi ve yeteneklerini gösteriş için kullanmayı tercih etmez.
@@ -712,7 +712,7 @@ Başarılı bir avukat olmak ister. Mesleğinde yalnızca başarı değil, dür�
 **Hedef meslek:** İstihbarat uzmanı / saha istihbarat subayı
 
 ## Görünüş
-Asena gözlük kullanır. Siyah saçlarında hafif kızıl ton bulunur; saçları orta-uzun uzunluktadır. Kahverengi gözlüdür. Kaynak notlarında günlük ve okul kıyafetlerinin ayrıntılı tarifi bulunmadığından belirli bir giyim tarzı eklenmemiştir.
+Asena gözlük kullanır. Siyah saçlarında hafif kızıl ton bulunur; saçları orta-uzun uzunluktadır. Kahverengi gözlüdür.
 
 ## Kişilik
 Neşeli, konuşkan ve hareketlidir. İnsanları dinlemeyi ve karşısındaki kişinin ne düşündüğünü anlamaya çalışmayı sever. Sosyal ortamlarda rahattır; buna rağmen herkese aynı yakınlığı göstermez ve özellikle erkeklere karşı daha mesafeli davranır.
@@ -968,7 +968,7 @@ Boş zamanlarında demircilikle uğraşır ve metal oyuncaklar yapar. Devletin g
 **Doğum:** 1810 civarı, Giresun çevresi
 
 ## Kişilik
-Sabırlı, sezgileri güçlü ve insanları iyi okuyabilen biridir. Çevresindeki gerilimleri erken fark eder ve sakinleştirici bir yaklaşım sergiler. Kaynak dosyada dış görünüş, giyim, hobiler veya sevdiği renk gibi kişisel tercihler ayrıntılandırılmamıştır.""",
+Sabırlı, sezgileri güçlü ve insanları iyi okuyabilen biridir. Çevresindeki gerilimleri erken fark eder ve sakinleştirici bir yaklaşım sergiler.""",
 
         "kaan-keser": """## Temel bilgiler
 **Doğum:** 1846, Giresun / Kuşköy  
@@ -988,7 +988,7 @@ Avlanmak ve demir aletler yapmak alışkanlıkları arasındadır. Din, kültür
 Tarım işleriyle uğraşır, dönem dönem demircilik işlerine yardım eder. Hareketli, meraklı ve bağımsız bir karakterdir. Çabuk öfkelenebilir; ancak öfkesi uzun sürmez ve kısa sürede yumuşar. Sürekli aynı düzen içinde kalmaktan hoşlanmaz.""",
 
         "firuze-keser": """## Kişilik
-Sabırlı, içine kapanık ve duygularını çoğunlukla davranışlarıyla gösteren biridir. Duygularını konuşarak dışa vurmak yerine içinde tutma eğilimi vardır. Gerektiğinde dirençli ve kararlı davranabilir. Kaynak notlarda görünüşü, giyim tarzı ve kişisel zevkleri ayrıntılı olarak belirtilmemiştir.""",
+Sabırlı, içine kapanık ve duygularını çoğunlukla davranışlarıyla gösteren biridir. Duygularını konuşarak dışa vurmak yerine içinde tutma eğilimi vardır. Gerektiğinde dirençli ve kararlı davranabilir.""",
 
         "alperen-keser": """## Temel bilgiler
 **Doğum:** 1888, Giresun / Kuşköy  
@@ -1003,7 +1003,7 @@ Köyde doğum kayıtları düzenli tutulmadığı için gerçek doğum günü ve
 Disiplinli, sorumluluk sahibi, çalışkan ve kararlıdır. Çocukluk ve gençlik deneyimleri milliyetçi ve devletçi düşüncelerini şekillendirmiştir. Güçlü merkezî yönetim, teşkilatlı ordu ve sanayileşme onun devlet anlayışının temel unsurlarıdır.
 
 ## Mesleki yaşam
-Demircilikten askerî hayata ve devlet yönetimine uzanan bir yaşam sürmüştür. 29 Kasım 1938'de yönetimi devralmıştır. Görünüşü, giyim tercihleri ve sevdiği renk gibi kişisel ayrıntılar eski karakter dosyasında kesin biçimde belirtilmemiştir.""",
+Demircilikten askerî hayata ve devlet yönetimine uzanan bir yaşam sürmüştür. 29 Kasım 1938'de yönetimi devralmıştır.""",
 
         "ismail-karaslan": """## Temel bilgiler
 **Doğum:** 1904, Hatay  
@@ -1034,49 +1034,49 @@ Askerî strateji, kriz yönetimi, teşkilatçılık ve uzun vadeli planlama gü�
 Siyasi zekâ, diplomasi, tarih ve ekonomi bilgisi, kriz yönetimi ve farklı çevrelerle iletişim kurabilme güçlü yanlarıdır. Fazla pragmatik davranması, siyasi hesapları kişisel yakınlıkların önüne koyması ve merkezî güce gereğinden fazla önem vermesi zayıf yanlarıdır.""",
 
         "kaan-demirsoy": """## Kişisel profil
-1936 doğumlu Kaan Demirsoy, Başbuyruk makamını yürütür. Sessiz, titiz ve sabırlıdır. Resmî kararların doğru metinle kayda geçirilmesine, belgelerin geçerliliğine ve idarî düzenin tutarlılığına önem verir. Konuşurken ölçülü ve maddeler hâlinde ilerler. Eski karakter kaynaklarında fiziksel görünüşü ve kişisel hobileri belirtilmemiştir.""",
+1936 doğumlu Kaan Demirsoy, Başbuyruk makamını yürütür. Sessiz, titiz ve sabırlıdır. Resmî kararların doğru metinle kayda geçirilmesine, belgelerin geçerliliğine ve idarî düzenin tutarlılığına önem verir. Konuşurken ölçülü ve maddeler hâlinde ilerler.""",
 
         "sabiha-erten": """## Kişisel profil
 1945 doğumlu Sabiha Erten, Başbuyruk Kalemi Müsteşarıdır. Dikkatli, titiz ve sessiz çalışır. Kararname nüshaları, mühür düzeni ve toplantı tutanaklarındaki ayrıntıları takip eder. Bir belgedeki küçük tutarsızlığın idarî sonuçlarını önemser. Kaynaklarda fiziksel görünüşü veya kişisel hobileri hakkında bilgi verilmemiştir.""",
 
         "mete-kutlu": """## Kişisel profil
-1931 doğumlu Mete Kutlu, İmparatorluk İstihbarat Başkanıdır. Sakin, sabırlı ve ölçülü bir dinleyicidir. Dış ve stratejik istihbarat konularında uzun vadeli değerlendirmeyi önemser. Bilgiyi toplamak kadar doğru zamanda ve doğru makamla paylaşılmasını da görev anlayışının parçası sayar. Fiziksel görünüşü ve kişisel hobileri kaynakta belirtilmemiştir.""",
+1931 doğumlu Mete Kutlu, İmparatorluk İstihbarat Başkanıdır. Sakin, sabırlı ve ölçülü bir dinleyicidir. Dış ve stratejik istihbarat konularında uzun vadeli değerlendirmeyi önemser. Bilgiyi toplamak kadar doğru zamanda ve doğru makamla paylaşılmasını da görev anlayışının parçası sayar.""",
 
         "rana-tozun": """## Kişisel profil
-1938 doğumlu Rana Tözün, Bilim ve Gök Araştırmaları Başkanıdır. Sakin, kesin ve veriye bağlı bir çalışma tarzına sahiptir. Bilimsel sonuçların kişisel kanaatlerden önce gözlem ve ölçümle desteklenmesini ister. Genç araştırmacılara karşı koruyucu, bilimsel çalışmaları aksatan bürokratik engellere karşı kararlıdır. Dış görünüşü ve hobileri kaynakta belirtilmemiştir.""",
+1938 doğumlu Rana Tözün, Bilim ve Gök Araştırmaları Başkanıdır. Sakin, kesin ve veriye bağlı bir çalışma tarzına sahiptir. Bilimsel sonuçların kişisel kanaatlerden önce gözlem ve ölçümle desteklenmesini ister. Genç araştırmacılara karşı koruyucu, bilimsel çalışmaları aksatan bürokratik engellere karşı kararlıdır.""",
 
         "ziya-arat": """## Kişisel profil
-1934 doğumlu Ziya Arat, Maarif ve Gençlik Nazırıdır. Enerjik ve ikna edici bir konuşma tarzı vardır. Eğitim, müfredat, mektepler ve gençlik politikası alanlarında çalışır. Okulların işleyişini ve gençlerin yetişmesini devletin uzun vadeli geleceği açısından değerlendirir. Fiziksel görünüşü ve kişisel zevkleri kaynaklarda belirtilmemiştir.""",
+1934 doğumlu Ziya Arat, Maarif ve Gençlik Nazırıdır. Enerjik ve ikna edici bir konuşma tarzı vardır. Eğitim, müfredat, mektepler ve gençlik politikası alanlarında çalışır. Okulların işleyişini ve gençlerin yetişmesini devletin uzun vadeli geleceği açısından değerlendirir.""",
 
         "haluk-sancar": """## Kişisel profil
 1927 doğumlu Haluk Sancar, Afrika Umumi Valisidir. Enerjik, konuşkan ve ikna edici bir yöneticidir. Siyasî dengeyi gözetir; reform hedefleri ile mevcut idarî uygulamalar arasında sonuç almaya çalışır. Fiziksel görünüşü ve hobileri hakkında doğrulanmış bilgi bulunmamaktadır.""",
 
         "reinhard-falkenhorst": """## Kişisel profil
-1922 doğumlu Reinhard Falkenhorst, Großdeutsches Reich'ın Führer und Reichskanzler makamındadır. Ağır, soğuk, sabırlı ve hesapçı bir karaktere sahiptir. Kararlarında dosyalara, raporlara ve kurumsal dengeye önem verir. Fiziksel görünüşü ve kişisel hobileri mevcut kaynaklarda belirtilmemiştir.""",
+1922 doğumlu Reinhard Falkenhorst, Großdeutsches Reich'ın Führer und Reichskanzler makamındadır. Ağır, soğuk, sabırlı ve hesapçı bir karaktere sahiptir. Kararlarında dosyalara, raporlara ve kurumsal dengeye önem verir.""",
 
         "martin-kessler": """## Kişisel profil
 1930 doğumlu Martin Kessler, Führer Yardımcısı ve Parti Kanzelleyi Başkanıdır. Nazik görünür, sabırlıdır ve siyasî bağlantıları güçlüdür. Parti disiplini, üst düzey atamalar ve idarî devamlılık konularında etkilidir. Kişisel görünüşü ve hobileri hakkında kaynaklarda ayrıntı bulunmamaktadır.""",
 
         "ulrich-von-havel": """## Kişisel profil
-1932 doğumlu Ulrich von Havel, Reich Dışişleri Bakanıdır. Kibar, sabırlı ve hesapçı bir diplomattır. Görüşmelerde nezaketini korurken tekliflerin şartlarını ve karşı tarafın hareket alanını dikkatle hesaplar. Görünüşü ve özel ilgi alanları kaynakta belirtilmemiştir.""",
+1932 doğumlu Ulrich von Havel, Reich Dışişleri Bakanıdır. Kibar, sabırlı ve hesapçı bir diplomattır. Görüşmelerde nezaketini korurken tekliflerin şartlarını ve karşı tarafın hareket alanını dikkatle hesaplar.""",
 
         "friedrich-wulfhart": """## Kişisel profil
 1925 doğumlu Friedrich Wulfhart, Reichsführer-SS ve Reich güvenlik teşkilatının başındaki isimdir. Sessiz, düzen takıntılı, ideolojik açıdan katı ve hesaplıdır. Otoritesini yüksek sesle değil, sorgulama ve kayıt düzeni üzerinden kurar. Fiziksel görünüşü ve hobileri hakkında kaynaklarda bilgi bulunmamaktadır.""",
 
         "konrad-weissmann": """## Kişisel profil
-1933 doğumlu Konrad Weissmann, baş nükleer fizikçi olarak SFA-P Polaris araştırmalarıyla ilişkilidir. Sabırsız, keskin, kibirli ve veriye odaklıdır. İnsan ilişkilerinden çok ölçümlere ve bilimsel sonuçlara önem verir. Fiziksel görünüşü ve kişisel hobileri kaynakta belirtilmemiştir.""",
+1933 doğumlu Konrad Weissmann, baş nükleer fizikçi olarak SFA-P Polaris araştırmalarıyla ilişkilidir. Sabırsız, keskin, kibirli ve veriye odaklıdır. İnsan ilişkilerinden çok ölçümlere ve bilimsel sonuçlara önem verir.""",
 
         "nihat-karaca": """## Kişisel profil
-Nihat Karaca, mektebin Düzen, Disiplin ve Günlük İşleyiş Müdürü Başyardımcısıdır. Disiplinli, tok sesli ve sakindir. Karar verirken söylentilerden çok kayıtları ve somut bilgileri esas alır. Kaynaklarda fiziksel görünüşü ve özel ilgi alanları belirtilmemiştir.""",
+Nihat Karaca, mektebin Düzen, Disiplin ve Günlük İşleyiş Müdürü Başyardımcısıdır. Disiplinli, tok sesli ve sakindir. Karar verirken söylentilerden çok kayıtları ve somut bilgileri esas alır.""",
 
         "turgut-aksoy": """## Kişisel profil
-Turgut Aksoy, mektebin Organizasyon, Temsil ve Dış İlişkiler Müdürüdür. Nazik, sakin, diplomatik ve temkinlidir. Kurumlar arası görüşmelerde ölçülü bir dil kullanır ve temsil görevini dikkatle yürütür. Fiziksel görünüşü ve hobileri kaynaklarda belirtilmemiştir.""",
+Turgut Aksoy, mektebin Organizasyon, Temsil ve Dış İlişkiler Müdürüdür. Nazik, sakin, diplomatik ve temkinlidir. Kurumlar arası görüşmelerde ölçülü bir dil kullanır ve temsil görevini dikkatle yürütür.""",
 
         "jale-deniz": """## Kişisel profil
-Jale Deniz, Sanat ve Kültür öğretmenidir. Sessiz, dikkatli ve gözlemci bir öğretim tarzına sahiptir. Öğrenci çalışmalarını yalnızca teknik sonuçlarına göre değil, taşıdıkları düşünce ve ifade biçimine göre de değerlendirir. Fiziksel görünüşü ve kişisel hobileri kaynakta belirtilmemiştir.""",
+Jale Deniz, Sanat ve Kültür öğretmenidir. Sessiz, dikkatli ve gözlemci bir öğretim tarzına sahiptir. Öğrenci çalışmalarını yalnızca teknik sonuçlarına göre değil, taşıdıkları düşünce ve ifade biçimine göre de değerlendirir.""",
 
         "huseyin-kutlu": """## Kişisel profil
-Hüseyin Kutlu, tarih öğretmenidir. Ağırbaşlı ve dikkatli konuşur. Tarih dersinde olayların sırasını aktarmakla yetinmez; tarihî kararların nedenlerini ve sonuçlarını öğrencilerin düşünmesini ister. Görünüşü ve özel ilgi alanları kaynakta belirtilmemiştir."""
+Hüseyin Kutlu, tarih öğretmenidir. Ağırbaşlı ve dikkatli konuşur. Tarih dersinde olayların sırasını aktarmakla yetinmez; tarihî kararların nedenlerini ve sonuçlarını öğrencilerin düşünmesini ister."""
     }
 
     profile_sources = {}
@@ -1606,7 +1606,7 @@ Rekabet serbesttir; fakat devlet güvenliğini tehdit ettiği kabul edilen eylem
 
 ## 1985 gündemi
 16 Eylül 1985'te düzenlenen Mektepler Arası Teknoloji Tasarım Yarışması, kurumun o yılki en görünür faaliyetlerinden biridir. Üsküdar ve Şarkın mektepleri arasındaki rekabet, öğrenci liderlerinin güç dengelerini ve devletin gençlik politikasını aynı sahnede buluşturur."""
-    records += public_repo_archive_nodes("institutions")
+    records = _merge_public_records(records, public_repo_archive_nodes("institutions"))
     apply_default_leaf_country(records, "turkish")
     return {
         "id":"institutions",
@@ -1764,7 +1764,7 @@ Japonya Pasifik'te varlığını ve bölgesel etkisini korur; ancak 1985 dünya 
         if override:
             record["summary"], record["content"] = override
 
-    records += public_folder_nodes("geography", "Alternatif Tarih/Dünya/Coğrafya")
+    records = _merge_public_records(records, public_folder_nodes("geography", "Alternatif Tarih/Dünya/Coğrafya"))
     for record in records:
         if normalize(record.get("title", "")).replace("—", "").strip() == "istanbul 1985 sehir profili":
             record["summary"] = "İstanbul, 1985 anlatısındaki iki ayrı mektebin ve öğrenci çevresinin bulunduğu şehirdir; B-3 Üsküdar Mektebi'ndedir."
@@ -1777,8 +1777,8 @@ Japonya Pasifik'te varlığını ve bölgesel etkisini korur; ancak 1985 dünya 
 
 Bu iki okulun öğrenci kadroları birbirine karıştırılmamalıdır. Aralarındaki rekabet ve Hilalifiyet çevresindeki ilişkiler, gençlerin hikâyelerini birbirine bağlar.
 
-İstanbul'un alternatif evrendeki 1985 idarî bölünümü, okul kampüslerinin kesin adresleri ve ayrıntılı ulaşım bağlantıları mevcut kamusal kayıtlarda bütünüyle sabitlenmemiştir. Bu nedenle doğrulanmamış ilçe veya adres bilgisi eklenmez."""
-    records += public_repo_archive_nodes("geography")
+İstanbul'un 1985 şehir yaşamında okul çevreleri, ulaşım, kamu kurumları ve mahalle kültürü genç karakterlerin gündelik hayatını belirler. Üsküdar ile Şarkın mektepleri farklı öğrenci bloklarının merkezleridir."""
+    records = _merge_public_records(records, public_repo_archive_nodes("geography"))
     return {
         "id":"geography",
         "title":"Dünya Atlası",
@@ -1987,7 +1987,7 @@ Kanat, öğrencinin zekâsını, servetini veya dokunulmazlığını gösteren b
 ## Sınırlar
 Kanat sayısı ayrıcalık veya dokunulmazlık sağlamaz. En yüksek seviyedeki okul başkanı da ağır ihlal durumunda görevden alınabilir. Sistem resmî söylemde liyakat ve sorumluluk ilkelerine dayanır; uygulamada kayırmacılık ve oy ilişkileri etrafında tartışmalar yaşanabilir."""
 
-    records += public_repo_archive_nodes("society")
+    records = _merge_public_records(records, public_repo_archive_nodes("society"))
     apply_default_leaf_country(records, "turkish")
     return {
         "id":"society",
