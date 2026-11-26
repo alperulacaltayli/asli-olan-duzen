@@ -135,8 +135,8 @@ class SiteIntegrityTests(unittest.TestCase):
         payload = import_obsidian.discover_archives()
         def visit(category_id: str, nodes: list[dict]) -> None:
             for node in nodes:
-                reference = str(node.get("path", ""))
-                if reference.lower().endswith((".md", ".txt")):
+                reference = str(node.get("sourceFile") or node.get("path", ""))
+                if reference.lower().endswith((".md", ".txt", ".json")):
                     candidates = (
                         ROOT / reference,
                         VAULT / reference,
