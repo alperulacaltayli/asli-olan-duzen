@@ -124,7 +124,7 @@ def parse_event_date(filename,title):
     pat="|".join(re.escape(x) for x in names)
     # A period such as "Ocak-Mart 1942" belongs at the end of its
     # stated range, not at the beginning of January before later events.
-    range_match = re.search(r"\\b("+pat+r")\\s*[-–]\\s*("+pat+r")\\s+(19\\d{2}|20\\d{2})\\b", text)
+    range_match = re.search(r"\b("+pat+r")\s*[-–]\s*("+pat+r")\s+(19\d{2}|20\d{2})\b", text)
     range_label = ""
     if range_match:
         start_name, end_name = range_match.group(1), range_match.group(2)
@@ -134,15 +134,15 @@ def parse_event_date(filename,title):
         tr={1:"Ocak",2:"Şubat",3:"Mart",4:"Nisan",5:"Mayıs",6:"Haziran",7:"Temmuz",8:"Ağustos",9:"Eylül",10:"Ekim",11:"Kasım",12:"Aralık"}
         range_label = f"{tr[MONTHS[start_name]]}-{tr[month]} {year}"
     else:
-        m=re.search(r"\\b(\\d{1,2})\\s+("+pat+r")\\b",text)
+        m=re.search(r"\b(\d{1,2})\s+("+pat+r")\b",text)
         if m:
             day,month=int(m.group(1)),MONTHS[m.group(2)]
         else:
-            m=re.search(r"\\b("+pat+r")\\s+(\\d{1,2})\\b",text)
+            m=re.search(r"\b("+pat+r")\s+(\d{1,2})\b",text)
             if m:
                 month,day=MONTHS[m.group(1)],int(m.group(2))
             else:
-                m=re.search(r"\\b("+pat+r")\\b",text)
+                m=re.search(r"\b("+pat+r")\b",text)
                 if m: month=MONTHS[m.group(1)]
     tr={1:"Ocak",2:"Şubat",3:"Mart",4:"Nisan",5:"Mayıs",6:"Haziran",7:"Temmuz",8:"Ağustos",9:"Eylül",10:"Ekim",11:"Kasım",12:"Aralık"}
     if range_label: label = range_label
