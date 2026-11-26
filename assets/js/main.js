@@ -327,24 +327,125 @@
 
 
   const renderCharacterFacts = (source) => {
-    const lines = String(source || "").split(/\r?\n/);
+    const lines = String(source || "").replace(/\r/g, "").split("\n");
     const facts = [];
-    const narrative = [];
+    const sections = [];
+    const introduction = [];
+    let activeSection = null;
+    let startedSections = false;
+
+    const addFactsFromLine = (line) => {
+      const matches = [...line.matchAll(/\*\*([^*]+?):\*\*/g)];
+      if (!matches.length || !line.trim().startsWith("**")) return false;
+      matches.forEach((match, index) => {
+        const start = match.index + match[0].length;
+        const end = index + 1 < matches.length ? matches[index + 1].index : line.length;
+        const label = match[1].replace(/\s*\(1985\)/i, "").trim();
+        const value = line.slice(start, end).replace(/^[\s·|,;•]+|[\s·|,;•]+$/g, "").trim();
+        if (label && value) facts.push({ label, value, order: facts.length });
+      });
+      return true;
+    };
+
     for (const line of lines) {
-      const match = line.trim().match(/^\*\*(.+?):\*\*\s*(.+)$/);
-      if (match) facts.push([match[1].replace(/\s*\(1985\)/i, ""), match[2]]);
-      else narrative.push(line);
+      const trimmed = line.trim();
+      if (/^#\s+/.test(trimmed)) continue;
+
+      const heading = trimmed.match(/^#{2,3}\s+(.+)$/);
+      if (heading) {
+        startedSections = true;
+        activeSection = { heading: heading[1].trim(), lines: [] };
+        sections.push(activeSection);
+        continue;
+      }
+
+      if (!startedSections && addFactsFromLine(line)) continue;
+      if (activeSection) activeSection.lines.push(line);
+      else introduction.push(line);
     }
+
+    const factOrder = [
+      "doğum", "yaş", "boy", "kanat", "meslek", "görev", "makam",
+      "eğitim", "okul", "hedef", "aile", "sevdiği renk", "lakap",
+      "ölüm", "diğer"
+    ];
+    facts.sort((a, b) => {
+      const ai = factOrder.findIndex((key) => normalizeWikiTarget(a.label).includes(normalizeWikiTarget(key)));
+      const bi = factOrder.findIndex((key) => normalizeWikiTarget(b.label).includes(normalizeWikiTarget(key)));
+      return (ai < 0 ? factOrder.length : ai) - (bi < 0 ? factOrder.length : bi) || a.order - b.order;
+    });
+
     const factsMarkup = facts.length
-      ? '<dl class="character-facts">' + facts.map((fact) =>
-          '<div class="character-fact"><dt>' + escapeHtml(fact[0]) + '</dt><dd>' + escapeHtml(fact[1]) + '</dd></div>'
-        ).join("") + '</dl>'
+      ? '<section class="character-profile-facts" aria-label="Temel bilgiler">' +
+        '<div class="character-profile-section-heading"><span>01</span><b>TEMEL BİLGİLER</b></div>' +
+        '<dl class="character-facts">' + facts.map((fact) =>
+          '<div class="character-fact"><dt>' + escapeHtml(fact.label) + '</dt><dd>' + escapeHtml(fact.value) + '</dd></div>'
+        ).join("") + '</dl></section>'
       : "";
-    const narrativeText = narrative.join("\n").trim();
-    const narrativeMarkup = narrativeText
-      ? '<div class="detail-body character-detail-body">' + renderMarkdown(narrativeText) + '</div>'
+
+    const groups = [
+      { id: "personality", title: "Kişilik", label: "KARAKTER ÖZELLİKLERİ" },
+      { id: "appearance", title: "Görünüş ve Tarz", label: "FİZİKSEL ÖZELLİKLER" },
+      { id: "role", title: "Eğitim ve Görev", label: "EĞİTİM / MESLEK / SORUMLULUK" },
+      { id: "interests", title: "Hedefler ve İlgi Alanları", label: "HEDEFLER / UĞRAŞLAR" },
+      { id: "relationships", title: "Aile ve İlişkiler", label: "AİLE / SOSYAL ÇEVRE" },
+      { id: "background", title: "Geçmiş ve Deneyim", label: "YAŞAM / GEÇMİŞ" },
+      { id: "other", title: "Diğer Bilgiler", label: "DİĞER KAYITLAR" }
+    ];
+    const classifySection = (heading) => {
+      const value = normalizeWikiTarget(heading);
+      if (/kisilik|mizac|degerler|tepkiler|otorite|stratejik yaklasim|davranis/.test(value)) return "personality";
+      if (/gorunus|giyim|kiyafet|tarz|fiziksel|dis gorunum/.test(value)) return "appearance";
+      if (/aile|arkadas|iliski|cevres|baglari|baglanti/.test(value)) return "relationships";
+      if (/gecmis|cocukluk|donem|tarihsel|yasam|hayati/.test(value)) return "background";
+      if (/hedef|ilgi|hobi|ugras|tercih|havacilik|calisma bicimi|calisma tarzi/.test(value)) return "interests";
+      if (/okul|egitim|meslek|gorev|makam|yonetim|yetki|sorumluluk|kurum|komuta|kurumsal|konum|devir|kariyer/.test(value)) return "role";
+      return "other";
+    };
+
+    const cards = groups.map((group, index) => {
+      const matching = sections.filter((section) => classifySection(section.heading) === group.id);
+      if (!matching.length) return "";
+      const content = matching.map((section) => {
+        const body = section.lines.join("\n").trim();
+        if (!body) return "";
+        const headingIsGroup = normalizeWikiTarget(section.heading) === normalizeWikiTarget(group.title);
+        return '<div class="character-profile-subsection">' +
+          (headingIsGroup ? "" : '<h5>' + escapeHtml(section.heading) + '</h5>') +
+          '<div class="character-profile-section-copy">' + renderMarkdown(body) + '</div></div>';
+      }).join("");
+      if (!content) return "";
+      const number = String(index + 2).padStart(2, "0");
+      return '<section class="character-profile-card character-profile-card--' + group.id + '">' +
+        '<div class="character-profile-section-heading"><span>' + number + '</span><b>' + group.label + '</b></div>' +
+        '<h4>' + group.title + '</h4>' + content + '</section>';
+    }).join("");
+
+    const introductionText = introduction.join("\n").trim();
+    const introductionMarkup = introductionText
+      ? '<section class="character-profile-card character-profile-card--intro">' +
+        '<div class="character-profile-section-heading"><span>00</span><b>GENEL TANITIM</b></div>' +
+        '<h4>Genel Tanıtım</h4><div class="character-profile-section-copy">' + renderMarkdown(introductionText) + '</div></section>'
       : "";
-    return factsMarkup + narrativeMarkup;
+
+    const unmatchedHeadings = sections.filter((section) => classifySection(section.heading) === "other");
+    const groupedOther = unmatchedHeadings.length && cards
+      ? cards
+      : "";
+    const otherMarkup = unmatchedHeadings.length && !groupedOther
+      ? '<section class="character-profile-card character-profile-card--other">' +
+        '<div class="character-profile-section-heading"><span>08</span><b>DİĞER KAYITLAR</b></div>' +
+        '<h4>Diğer Bilgiler</h4>' +
+        unmatchedHeadings.map((section) => {
+          const body = section.lines.join("\n").trim();
+          return body ? '<div class="character-profile-subsection"><h5>' + escapeHtml(section.heading) +
+            '</h5><div class="character-profile-section-copy">' + renderMarkdown(body) + '</div></div>' : "";
+        }).join("") + '</section>'
+      : "";
+
+    return '<div class="character-profile-content">' +
+      factsMarkup + introductionMarkup + cards + otherMarkup +
+      '</div>';
   };
 
   const renderCharacterHierarchy = (node) => {
