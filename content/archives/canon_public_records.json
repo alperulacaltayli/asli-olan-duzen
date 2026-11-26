@@ -129,7 +129,7 @@
       "aliases": []
     },
     {
-      "title": "Mektepler ve Maarif Düzeni",
+      "title": "Mektepler — 1985 Eğitim Düzeni",
       "summary": "Mektepler beş yıllık lise düzeyindeki kurumlardır; genel eğitim ile Teknoloji ve Tasarım ağırlığını, Kanat ve Hilalifiyet sistemiyle birleştirir.",
       "content": "# Mektepler ve Maarif Düzeni\n\nMektepler, imparatorluğun lise düzeyindeki beş yıllık eğitim kurumlarıdır. Genel derslerin yanında Teknoloji ve Tasarım alanı öne çıkar. Eğitim sistemi, Maarif ve Gençlik Nizamı tarafından yürütülür; müfettişler, okul Kanat Konseyleri ve Hilalifiyet Merkezi tarafından denetlenir.\n\n## İstanbul'daki iki merkez okul\n**Üsküdar Milli İlim ve İrfan Mektebi**, İrfan ekolünün merkezidir. Teknik merak ile edebiyat ve hukuk alanlarını birlikte önemser. B-3 sınıfı bu okulda bulunur.\n\n**İstanbul Şarkın İlim ve Teknoloji Mektebi**, Otorite ekolünün merkezidir. Teknoloji ve istihbarat alanlarına ağırlık verir. Tomris İlter okul başkanı, Asena Korkut başkan yardımcısıdır.\n\n## Blok okulları\nÜsküdar Bloğu çevresinde Kadıköy İleri Sanayi ve Askeri İdadi, Beyoğlu Fen ve Havacılık Akademisi ve Ümraniye Anadolu İrfan Mektebi bulunur. Şark Bloğu çevresinde Beşiktaş Siyasi ve Teknolojik Bilimler, Fatih Klasik Edebiyat ve Hukuk ve Bakırköy Teknik Araştırma İdadisi yer alır.\n\n## Okul yaşamı\nSabah törenleri, marşlar, Alp selamı, haftalık sicil, dönem sonu müzakeresi ve yıllık Teknoloji Tasarım Yarışması ortak okul hayatının parçalarıdır. Bu kurumlar akademik öğretimin yanında öğrenci temsili ve okul siyaseti de üretir.",
       "country": "turkish",
@@ -164,25 +164,29 @@
   ],
   "technology": [
     {
-      "title": "Türk Teknolojileri ve Havacılık Programı",
+      "title": "Türk Teknolojileri — 1985 Genel Bakış",
       "summary": "Türk teknoloji çizgisi Ta serisi uçan kanat programını, sensör ve ölçüm sistemlerini, uzay altyapısını ve Ana Beyin ağını bir araya getirir.",
       "content": "# Türk Teknolojileri ve Havacılık Programı\n\n1985'te Büyük Türk İmparatorluğu'nun teknoloji politikası havacılık, sensör, ölçüm, yazılım ve uzay araştırmalarına ağırlık verir. Bu alanlardaki ilerleme, Reich ile yürütülen rekabetin temel unsurlarındandır.\n\n## Ta serisi\nTürk uçan kanat programı 1958'de Ta 70 prototipinin ilk uçuşuyla görünür hâle geldi. Program daha sonra Ta 75 üzerinden ilerledi ve Ta 85 Gökkanat'ın 1975'te seri üretime girmesiyle yeni aşamaya geçti. Gökkanat imparatorluğun stratejik havacılık kimliğinin ana projelerinden biridir.\n\n## Sensör ve ölçüm\nSensör birleştirme, atmosfer ve fiziksel ölçüm araştırmaları Türk tarafının öne çıktığı alanlardır. Gök Kutup'un araştırma altyapısı bu çalışmaları farklı ölçüm türleriyle bir araya getirir.\n\n## Hesaplama ve uzay\nNizam-1, Hilalifiyet Merkezi'nde kullanılan analiz ve karar destek sistemidir. Ana Beyin ise Gök Kutup ile Ay programının ortak sunucu ağıdır. Ay programı üç aşamada gelişmiş; 1985'te kalıcı üs ve mürettebatlı dönüş hedefini içeren üçüncü aşamaya ulaşmıştır.\n\n## Sınırlar\nİmparatorluk sensör, yazılım ve uzay lojistiğinde güçlüdür. Buna karşılık motor ömrü, optik, malzeme yorulması ve yüksek enerji fiziği gibi alanlarda Reich'tan teknik girdiye ihtiyaç duyar. İki tarafın teknoloji düzeyi bu nedenle tek yönlü bir üstünlük olarak açıklanamaz.",
       "country": "turkish",
       "date": "1958–1985",
       "order": 1,
       "aliases": [
-        "Türk Teknolojileri — 1985 Genel Bakış"
+        "Türk Teknolojileri — 1985 Genel Bakış",
+        "Türk Teknolojileri",
+        "Gökkanat teknolojileri"
       ]
     },
     {
-      "title": "Reich Teknolojileri ve Araştırma Programları",
+      "title": "Alman Teknolojileri — 1985 Genel Bakış",
       "summary": "Reich füze, roket, yüksek enerji fiziği ve ağır sanayide öne çıkarken sensör füzyonu, yazılım ve uzay lojistiğinde Türk araştırmalarının gerisindedir.",
       "content": "# Reich Teknolojileri ve Araştırma Programları\n\nGroßdeutsches Reich 1985'te füze ve roket araştırmaları, ağır sanayi ve yüksek enerji fiziğinde güçlü bir araştırma altyapısına sahiptir. Bu alanlar, Reich'ın teknik üstünlük iddiasının temelini oluşturur.\n\n## Horten 229\nHorten 229, Reich'ın uçan kanat çizgisindeki askerî uçaktır. 1940'ların prototip aşamasından 1960'lardaki modernizasyonlara ve 1980'lerin B/C serisine uzanan bir gelişim süreci vardır. Yüksek hız ve tırmanma kabiliyeti öne çıkarken motor ömrü ve bakım yükü zayıf yönleridir.\n\n## Me 620 Überschall\nMe 620 Überschall, süpersonik yolcu uçağı ve prestij programıdır. Devlet adamlarının taşınması ve rejimin teknoloji iddiasının gösterilmesi amacı taşır. Kanon tanımında askerî türevi bulunan bir savaş uçağı değildir.\n\n## Yüksek enerji fiziği\nReich'ın özel araştırmaları arasında SFA-P Polaris ve yüksek enerji fiziği programları bulunur. Bu araştırma hattı, Türkiye'nin Gök Kutup ve uzay altyapısıyla rekabet eder.\n\n## Teknoloji dengesi\nReich füze, roket, ağır sanayi ve ileri fizikte güçlüdür. Sensör füzyonu, yazılım, sistemleri küçültme ve uzay lojistiğinde Türk tarafı daha ileridedir.",
       "country": "german",
       "date": "1940'lar–1985",
       "order": 2,
       "aliases": [
-        "Alman Teknolojileri — 1985 Genel Bakış"
+        "Alman Teknolojileri — 1985 Genel Bakış",
+        "Alman Teknolojileri",
+        "Reich teknolojileri"
       ]
     },
     {
@@ -266,7 +270,7 @@
       "title": "Mektep Hayatı ve Kanat Sistemi",
       "summary": "Mektep sistemi beş yıllık eğitimi, B-3'ün haftalık ders düzenini ve öğrencilerin sorumluluk ile temsil düzeyini gösteren altı basamaklı Kanat sistemini birleştirir.",
       "content": "# Mektep Hayatı ve Kanat Sistemi\n\nMektepler lise düzeyinde beş yıllık eğitim kurumlarıdır. Genel eğitim, Teknoloji ve Tasarım ağırlığıyla birlikte yürütülür. Öğrenciler sınav başarısının yanında grup çalışması, temsil ve okul sorumluluklarıyla değerlendirilir.\n\n## Kanat basamakları\nKanat sistemi zekâ veya ekonomik durum ölçüsü değil, sorumluluk ve temsil basamağıdır. Birinci Kanat öğrencinin kendi işini düzgün yapmasını; ikinci Kanat güvenilirlik ve yardımı; üçüncü Kanat küçük grup liderliğini; dördüncü Kanat okul işleyişi ve organizasyonu; beşinci Kanat başkan yardımcılığını; altıncı Kanat okul başkanlığını temsil eder.\n\nÖğretmenler not vermek yerine davranış ve katkıya ilişkin gözlem raporu hazırlar. Terfi kararı okulun Kanat Konseyi tarafından alınır; Maarif ve Gençlik Nizamı ile Hilalifiyet sicil denetimi yürütür.\n\n## B-3 haftalık düzeni\nB-3, Üsküdar Milli İlim ve İrfan Mektebi'nin 1985 eğitim yılında öğrenim gören üçüncü sınıf B şubesidir. Haftada beş gün, günde sekiz ders ve toplam kırk ders saati bulunur. Dersler 09.00–17.40 arasında yürütülür. Her ders 40 dakika, normal teneffüsler 20 dakika, öğle arası 12.40–14.00 arasındadır.\n\n## Ders alanları\nTürk Dili ve Edebiyatı, Matematik, Fizik, Kimya, Biyoloji, Tarih, Coğrafya, Yabancı Dil, Felsefe ve Mantık, Toplum ve Yurttaşlık, Teknoloji ve Tasarım, Beden Eğitimi, Sosyolojik Eğitim, Sanat ve Kültür dersleri programı oluşturur.\n\n## İki İstanbul okulu\nÜsküdar Milli İlim ve İrfan Mektebi ile İstanbul Şarkın İlim ve Teknoloji Mektebi ayrı kurumlardır. Oğuz, Alper, İsmail, Muhammed Mete, Aylin ve Alev B-3 çevresindedir. Tomris ile Asena Şarkın Mektebi'nde görev alır; B-3 öğrencisi değildir.",
-      "country": "turkish",
+      "country": "both",
       "date": "1985",
       "order": 4,
       "aliases": [
