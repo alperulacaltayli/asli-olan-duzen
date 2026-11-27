@@ -37,3 +37,26 @@ body.site-search-open{overflow:hidden}
 @media(max-width:980px){.global-search-trigger{min-height:36px;padding:0 10px}.global-search-trigger kbd{display:none}}
 @media(max-width:680px){.global-search-trigger{width:38px;min-width:38px;padding:0}.global-search-trigger span{display:none}.site-search-overlay{padding:5vh 10px 14px}.site-search-dialog{max-height:90vh}.site-search-top,.site-search-field-wrap{padding-left:14px;padding-right:14px}.site-search-hints,.site-search-filters,.site-search-status{padding-left:14px;padding-right:14px}.site-search-results{padding-left:14px;padding-right:14px}.site-search-result strong{font-size:16px}.archive-record-tools{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Use the novel cover as the navigation mark throughout the site. */
+.brand-mark {
+    width: 32px;
+    height: 46px;
+    flex: 0 0 32px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 240, 220, .58);
+    background: #17110e;
+}
+.brand-mark picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.brand-mark img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
+}
