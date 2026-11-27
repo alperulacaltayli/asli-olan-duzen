@@ -26,6 +26,13 @@ def normalize(text):
     text = re.sub(r"[_-]+", " ", text)
     return re.sub(r"\s+", " ", text).strip()
 
+def normalize_plain(text):
+    """Strip HTML and collapse a public record's text for mention matching."""
+    text = re.sub(r"<[^>]+>", " ", str(text or ""))
+    text = text.replace("&nbsp;", " ")
+    return normalize(text)
+
+
 def normalize_country(value):
     key = normalize(value)
     aliases = {
@@ -2101,6 +2108,92 @@ def attach_links(categories):
 
     for cat in categories:
         clear_unpublished_links(cat.get("nodes", []))
+
+    derive_mention_links(categories)
+
+
+GENERIC_LINK_TERMS = {
+    # Names that appear in almost every record; matching on them would create noise
+    # instead of a meaningful relation.
+    "ankara", "istanbul", "turkiye", "almanya", "amerika", "savas", "ordu",
+    "devlet", "imparatorluk", "turk", "alman", "nazi", "avrupa", "asya",
+}
+
+
+def derive_mention_links(categories, max_links=6):
+    """Link records that name each other, without adding any new content.
+
+    Approved public notes are short and rarely contain explicit ``[[wikilinks]]``,
+    so the archive looked like a set of isolated cards. This pass connects records
+    whose established titles or aliases appear in another record's own text. It only
+    uses text that is already published, and skips aliases that appear in most
+    records (too generic to be a meaningful relation).
+    """
+    leaves = []
+
+    def collect(nodes):
+        for node in nodes or []:
+            children = node.get("children") or []
+            if children:
+                collect(children)
+            else:
+                leaves.append(node)
+
+    for category in categories:
+        collect(category.get("nodes", []))
+
+    if len(leaves) < 2:
+        return
+
+    entries = []
+    for node in leaves:
+        names = [node.get("title", ""), node.get("sourceName", "")]
+        names += list(node.get("aliases") or [])
+        for name in names:
+            key = normalize(name)
+            if len(key) >= 5 and key not in GENERIC_LINK_TERMS:
+                entries.append((key, node))
+    # Longest aliases first so "Kızıl Orda" wins over "Orda".
+    entries.sort(key=lambda item: len(item[0]))
+
+    texts = {}
+    for node in leaves:
+        text = " ".join([node.get("title", ""), node.get("summary", ""), node.get("content", "")])
+        texts[node["id"]] = normalize_plain(text)
+
+    frequency = {}
+    for key, _ in entries:
+        if key in frequency:
+            continue
+        frequency[key] = sum(1 for node in leaves if key in texts[node["id"]])
+    generic_limit = max(6, int(len(leaves) * 0.35))
+
+    for node in leaves:
+        existing = {(link.get("categoryId"), link.get("id")) for link in node.get("links") or []}
+        text = texts[node["id"]]
+        found = []
+        for key, target in entries:
+            if target is node:
+                continue
+            if frequency.get(key, 0) > generic_limit:
+                continue
+            if key not in text:
+                continue
+            identity = (target.get("categoryId"), target.get("id"))
+            if identity in existing:
+                continue
+            existing.add(identity)
+            found.append({
+                "categoryId": target.get("categoryId", ""),
+                "id": target.get("id", ""),
+                "title": target.get("title", ""),
+                "date": target.get("date", ""),
+            })
+            if len(found) >= max_links:
+                break
+        if found:
+            node['content'] = node.get("content", "")
+            node["links"] = list(node.get("links") or []) + found
 
 
 def inherit_archive_context(nodes, inherited=None):
