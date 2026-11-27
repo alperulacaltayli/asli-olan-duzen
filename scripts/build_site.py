@@ -553,16 +553,37 @@ def build() -> None:
     (ROOT / "gallery.json").write_text(gallery_encoded, encoding="utf-8")
     (DIST / "gallery.json").write_text(gallery_encoded, encoding="utf-8")
 
-    # Publish responsive WebP derivatives instead of the untouched originals.
-    # The repository keeps the full-resolution sources; the website only ships a
-    # 1920px viewing copy and a 720px card copy, which keeps page weight low.
+    # Publish responsive derivatives instead of the untouched originals.
+    # The repository keeps the full-resolution sources and the root manifest keeps
+    # pointing at them; the website ships a 1920px WebP, a 720px card WebP and a
+    # 1920px JPEG fallback for browsers without WebP support.
+    published_gallery = {"images": []}
     for image in gallery_data["images"]:
         source = ROOT / image["src"]
+        source_path = Path(image["src"])
         viewing = DIST / image["webp_src"]
         card = DIST / image["card_webp"]
+        fallback = DIST / source_path.with_suffix(".jpg")
         viewing.parent.mkdir(parents=True, exist_ok=True)
         create_webp(source, viewing, max_edge=1920)
         create_webp(source, card, max_edge=720)
+        with Image.open(source) as opened:
+            picture = ImageOps.exif_transpose(opened)
+            if picture.mode not in {"RGB", "L"}:
+                picture = picture.convert("RGB")
+            if max(picture.size) > 1920:
+                scale = 1920 / float(max(picture.size))
+                picture = picture.resize(
+                    (max(1, round(picture.width * scale)), max(1, round(picture.height * scale))),
+                    Image.LANCZOS,
+                )
+            picture.save(fallback, "JPEG", quality=82, optimize=True, progressive=True)
+        published = dict(image)
+        published["src"] = str(fallback.relative_to(DIST)).replace("\\", "/")
+        published["fallback_src"] = published["src"]
+        published_gallery["images"].append(published)
+    gallery_published_encoded = json.dumps(published_gallery, ensure_ascii=False, indent=2) + "\n"
+    (DIST / "gallery.json").write_text(gallery_published_encoded, encoding="utf-8")
 
     video_data = discover_videos()
     video_encoded = json.dumps(video_data, ensure_ascii=False, indent=2) + "\n"
