@@ -68,14 +68,41 @@ def parse_scalar(value: str) -> Any:
     return value
 
 
-def create_webp(source: Path, destination: Path) -> None:
-    """Create a compressed WebP copy while preserving transparency and orientation."""
+def create_webp(source: Path, destination: Path, max_edge: int | None = None) -> None:
+    """Create a compressed WebP copy while preserving transparency and orientation.
+
+    ``max_edge`` caps the longest side so that multi-megapixel scans do not ship at
+    full resolution to the browser. Aspect ratio is preserved and images are never
+    upscaled.
+    """
+    try:
+        if destination.is_file() and destination.stat().st_mtime >= source.stat().st_mtime:
+            return
+    except OSError:
+        pass
     with Image.open(source) as opened:
         image = ImageOps.exif_transpose(opened)
+        if max_edge:
+            longest = max(image.size)
+            if longest > max_edge:
+                scale = max_edge / float(longest)
+                target = (max(1, round(image.width * scale)), max(1, round(image.height * scale)))
+                image = image.resize(target, Image.LANCZOS)
         has_alpha = "A" in image.getbands() or "transparency" in image.info
         if image.mode not in {"RGB", "RGBA"}:
             image = image.convert("RGBA" if has_alpha else "RGB")
         image.save(destination, "WEBP", quality=82, method=6)
+
+
+def image_dimensions(path: Path) -> tuple[int, int]:
+    """Return the (width, height) of an image without keeping it open."""
+    try:
+        with Image.open(path) as opened:
+            return opened.size
+    except OSError:
+        return (0, 0)
+
+
 
 
 def split_document(path: Path) -> tuple[dict[str, Any], str]:
@@ -288,9 +315,13 @@ def discover_gallery() -> dict[str, Any]:
             metadata = {}
         date = str(metadata.get("date", "")).strip()
         year_match = re.search(r"\b(19\d{2}|20\d{2})\b", date)
+        width, height = image_dimensions(image_path)
         images.append({
             "src": f"{GALLERY_ROOT.name}/{image_path.name}",
             "webp_src": f"{GALLERY_ROOT.name}/{image_path.stem}.webp",
+            "card_webp": f"{GALLERY_ROOT.name}/{image_path.stem}-card.webp",
+            "width": width,
+            "height": height,
             "title": str(metadata.get("title") or title),
             "number": len(images) + 1,
             "category": str(metadata.get("category") or gallery_default_category(image_path.stem)),
@@ -515,20 +546,44 @@ def build() -> None:
             material_target.mkdir(parents=True, exist_ok=True)
             destination = material_target / filename
             shutil.copy2(source, destination)
-            create_webp(destination, destination.with_suffix(".webp"))
+            create_webp(destination, destination.with_suffix(".webp"), max_edge=1920)
 
     gallery_data = discover_gallery()
     gallery_encoded = json.dumps(gallery_data, ensure_ascii=False, indent=2) + "\n"
     (ROOT / "gallery.json").write_text(gallery_encoded, encoding="utf-8")
     (DIST / "gallery.json").write_text(gallery_encoded, encoding="utf-8")
 
-    # Copy only the images included in the public gallery catalogue.
+    # Publish responsive derivatives instead of the untouched originals.
+    # The repository keeps the full-resolution sources and the root manifest keeps
+    # pointing at them; the website ships a 1920px WebP, a 720px card WebP and a
+    # 1920px JPEG fallback for browsers without WebP support.
+    published_gallery = {"images": []}
     for image in gallery_data["images"]:
         source = ROOT / image["src"]
-        destination = DIST / image["src"]
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, destination)
-        create_webp(destination, destination.with_suffix(".webp"))
+        source_path = Path(image["src"])
+        viewing = DIST / image["webp_src"]
+        card = DIST / image["card_webp"]
+        fallback = DIST / source_path.with_suffix(".jpg")
+        viewing.parent.mkdir(parents=True, exist_ok=True)
+        create_webp(source, viewing, max_edge=1920)
+        create_webp(source, card, max_edge=720)
+        with Image.open(source) as opened:
+            picture = ImageOps.exif_transpose(opened)
+            if picture.mode not in {"RGB", "L"}:
+                picture = picture.convert("RGB")
+            if max(picture.size) > 1920:
+                scale = 1920 / float(max(picture.size))
+                picture = picture.resize(
+                    (max(1, round(picture.width * scale)), max(1, round(picture.height * scale))),
+                    Image.LANCZOS,
+                )
+            picture.save(fallback, "JPEG", quality=82, optimize=True, progressive=True)
+        published = dict(image)
+        published["src"] = str(fallback.relative_to(DIST)).replace("\\", "/")
+        published["fallback_src"] = published["src"]
+        published_gallery["images"].append(published)
+    gallery_published_encoded = json.dumps(published_gallery, ensure_ascii=False, indent=2) + "\n"
+    (DIST / "gallery.json").write_text(gallery_published_encoded, encoding="utf-8")
 
     video_data = discover_videos()
     video_encoded = json.dumps(video_data, ensure_ascii=False, indent=2) + "\n"

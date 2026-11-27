@@ -30,7 +30,20 @@
               "order": 1,
               "aliases": [],
               "children": [],
-              "links": [],
+              "links": [
+                {
+                  "categoryId": "chronology",
+                  "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
+                  "date": "10 Kasım 1940"
+                },
+                {
+                  "categoryId": "media",
+                  "id": "media-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Ankara Ziyaretinin Basındaki Yankısı",
+                  "date": "10 KASIM 1940"
+                }
+              ],
               "categoryId": "chronology",
               "ancestors": [
                 "chronology-year-1938"
@@ -71,6 +84,24 @@
                   "id": "chronology-tarihi-olaylar-olaylar-1941-22-haziran-sscb-savasi-basladi-md",
                   "title": "22 Haziran 1941 — SSCB Savaşı Başladı",
                   "date": "22 Haziran 1941"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alper-ulac-altayli",
+                  "title": "Alper Ulaç Altaylı",
+                  "date": "1968 · 17 yaş"
+                },
+                {
+                  "categoryId": "society",
+                  "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                  "title": "Mektep Hayatı ve Kanat Sistemi",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "media",
+                  "id": "media-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Ankara Ziyaretinin Basındaki Yankısı",
+                  "date": "10 KASIM 1940"
                 }
               ],
               "categoryId": "chronology",
@@ -123,6 +154,24 @@
                   "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
                   "title": "Büyük Türk İmparatorluğu",
                   "date": "1950 · İstanbul ilanı"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alper-ulac-altayli",
+                  "title": "Alper Ulaç Altaylı",
+                  "date": "1968 · 17 yaş"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alperen-keser",
+                  "title": "Alperen Keser",
+                  "date": "1899–1968"
+                },
+                {
+                  "categoryId": "media",
+                  "id": "media-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Ankara Ziyaretinin Basındaki Yankısı",
+                  "date": "10 KASIM 1940"
                 }
               ],
               "categoryId": "chronology",
@@ -165,6 +214,18 @@
                   "id": "chronology-tarihi-olaylar-olaylar-1940-16-eylul-ingiltere-dustu-md",
                   "title": "16 Eylül 1940 — İngiltere'nin Düşüşü",
                   "date": "16 Eylül 1940"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-fransa-md",
+                  "title": "Fransa — Ülke Profili",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+                  "title": "İngiltere — Ülke Profili",
+                  "date": "1985"
                 }
               ],
               "categoryId": "chronology",
@@ -207,6 +268,24 @@
                   "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
                   "title": "Genel Dünya",
                   "date": "1985 · DÜNYA DÜZENİ"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-fransa-md",
+                  "title": "Fransa — Ülke Profili",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-italya-md",
+                  "title": "İtalya — Ülke Profili",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+                  "title": "İngiltere — Ülke Profili",
+                  "date": "1985"
                 }
               ],
               "categoryId": "chronology",
@@ -243,6 +322,18 @@
                   "id": "characters-alperen-keser",
                   "title": "Alperen Keser",
                   "date": "1899–1968"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alper-ulac-altayli",
+                  "title": "Alper Ulaç Altaylı",
+                  "date": "1968 · 17 yaş"
+                },
+                {
+                  "categoryId": "media",
+                  "id": "media-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Ankara Ziyaretinin Basındaki Yankısı",
+                  "date": "10 KASIM 1940"
                 }
               ],
               "categoryId": "chronology",
@@ -285,6 +376,24 @@
                   "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
                   "title": "Großdeutsches Reich",
                   "date": "1985"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alper-ulac-altayli",
+                  "title": "Alper Ulaç Altaylı",
+                  "date": "1968 · 17 yaş"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+                  "title": "İngiltere — Ülke Profili",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "media",
+                  "id": "media-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Ankara Ziyaretinin Basındaki Yankısı",
+                  "date": "10 KASIM 1940"
                 }
               ],
               "categoryId": "chronology",
@@ -321,6 +430,12 @@
                   "id": "geography-alternatif-tarih-dunya-genel-dunya-md",
                   "title": "Genel Dünya",
                   "date": "1985 · DÜNYA DÜZENİ"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-italya-md",
+                  "title": "İtalya — Ülke Profili",
+                  "date": "1985"
                 }
               ],
               "categoryId": "chronology",
@@ -1483,6 +1598,12 @@
                   "id": "chronology-tarihi-olaylar-olaylar-1946-1-agustos-washington-atom-bombardimani-md",
                   "title": "1 Ağustos 1946 — Washington Atom Bombardımanı",
                   "date": "1 Ağustos 1946"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+                  "title": "Washington, D.C. — 1946 Tarihî Durum",
+                  "date": "1946"
                 }
               ],
               "categoryId": "chronology",
@@ -1541,6 +1662,18 @@
                   "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
                   "title": "Büyük Türk İmparatorluğu",
                   "date": "1950 · İstanbul ilanı"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+                  "title": "New York — 1946 Tarihî Durum",
+                  "date": "1946"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+                  "title": "Washington, D.C. — 1946 Tarihî Durum",
+                  "date": "1946"
                 }
               ],
               "categoryId": "chronology",
@@ -1589,6 +1722,12 @@
                   "id": "chronology-tarihi-olaylar-olaylar-1946-atlantik-ve-pasifik-deniz-hava-savaslari-md",
                   "title": "1946 — Atlantik ve Pasifik Deniz-Hava Savaşları",
                   "date": "1946"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+                  "title": "İngiltere — Ülke Profili",
+                  "date": "1985"
                 }
               ],
               "categoryId": "chronology",
@@ -1647,6 +1786,36 @@
                   "id": "geography-oncelikli-kanon-vault-geography-1946-dunya-paylasimi",
                   "title": "1946 Dünya Paylaşımı",
                   "date": "1946 sonbaharı"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-italya-md",
+                  "title": "İtalya — Ülke Profili",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-japonya-md",
+                  "title": "Japonya — Ülke Profili",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+                  "title": "New York — 1946 Tarihî Durum",
+                  "date": "1946"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+                  "title": "Washington, D.C. — 1946 Tarihî Durum",
+                  "date": "1946"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-diger-devletler-md",
+                  "title": "Diğer Devletler",
+                  "date": "DİĞER GÜÇLER"
                 }
               ],
               "categoryId": "chronology",
@@ -1701,6 +1870,30 @@
                   "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
                   "title": "Büyük Türk İmparatorluğu",
                   "date": "1950 · İstanbul ilanı"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-japonya-md",
+                  "title": "Japonya — Ülke Profili",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+                  "title": "New York — 1946 Tarihî Durum",
+                  "date": "1946"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+                  "title": "İngiltere — Ülke Profili",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+                  "title": "Washington, D.C. — 1946 Tarihî Durum",
+                  "date": "1946"
                 }
               ],
               "categoryId": "chronology",
@@ -1797,6 +1990,18 @@
                   "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
                   "title": "Großdeutsches Reich",
                   "date": "1985"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alper-ulac-altayli",
+                  "title": "Alper Ulaç Altaylı",
+                  "date": "1968 · 17 yaş"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alperen-keser",
+                  "title": "Alperen Keser",
+                  "date": "1899–1968"
                 }
               ],
               "categoryId": "chronology",
@@ -1845,6 +2050,18 @@
                   "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
                   "title": "Büyük Türk İmparatorluğu",
                   "date": "1950 · İstanbul ilanı"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+                  "title": "New York — 1946 Tarihî Durum",
+                  "date": "1946"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+                  "title": "Washington, D.C. — 1946 Tarihî Durum",
+                  "date": "1946"
                 }
               ],
               "categoryId": "chronology",
@@ -1893,6 +2110,18 @@
                   "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
                   "title": "Büyük Türk İmparatorluğu",
                   "date": "1950 · İstanbul ilanı"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+                  "title": "New York — 1946 Tarihî Durum",
+                  "date": "1946"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+                  "title": "Washington, D.C. — 1946 Tarihî Durum",
+                  "date": "1946"
                 }
               ],
               "categoryId": "chronology",
@@ -1927,7 +2156,20 @@
               "order": 999,
               "aliases": [],
               "children": [],
-              "links": [],
+              "links": [
+                {
+                  "categoryId": "geography",
+                  "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
+                  "title": "Großdeutsches Reich",
+                  "date": "1985"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+                  "title": "Büyük Türk İmparatorluğu",
+                  "date": "1950 · İstanbul ilanı"
+                }
+              ],
               "country": "turkish",
               "categoryId": "chronology",
               "ancestors": [
@@ -1985,6 +2227,24 @@
                   "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
                   "title": "Großdeutsches Reich",
                   "date": "1985"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alper-ulac-altayli",
+                  "title": "Alper Ulaç Altaylı",
+                  "date": "1968 · 17 yaş"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alperen-keser",
+                  "title": "Alperen Keser",
+                  "date": "1899–1968"
+                },
+                {
+                  "categoryId": "geography",
+                  "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+                  "title": "İngiltere — Ülke Profili",
+                  "date": "1985"
                 }
               ],
               "categoryId": "chronology",
@@ -2021,6 +2281,18 @@
                   "id": "characters-alperen-keser",
                   "title": "Alperen Keser",
                   "date": "1899–1968"
+                },
+                {
+                  "categoryId": "characters",
+                  "id": "characters-alper-ulac-altayli",
+                  "title": "Alper Ulaç Altaylı",
+                  "date": "1968 · 17 yaş"
+                },
+                {
+                  "categoryId": "media",
+                  "id": "media-tarihi-olaylar-olaylar-10-kasim-1940-md",
+                  "title": "10 Kasım 1940 — Ankara Ziyaretinin Basındaki Yankısı",
+                  "date": "10 KASIM 1940"
                 }
               ],
               "categoryId": "chronology",
@@ -2054,7 +2326,44 @@
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-alper-ulac-altayli",
+              "title": "Alper Ulaç Altaylı",
+              "date": "1968 · 17 yaş"
+            },
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-fransa-md",
+              "title": "Fransa — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-alperen-keser",
+              "title": "Alperen Keser",
+              "date": "1899–1968"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+              "title": "İngiltere — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-29-kasim-1938-md",
+              "title": "29 Kasım 1938 — Alperen Keser'in İktidarı İlanı",
+              "date": "29 Kasım 1938"
+            }
+          ],
           "categoryId": "geography",
           "ancestors": []
         },
@@ -2069,7 +2378,26 @@
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+              "title": "New York — 1946 Tarihî Durum",
+              "date": "1946"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+              "title": "İngiltere — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+              "title": "Washington, D.C. — 1946 Tarihî Durum",
+              "date": "1946"
+            }
+          ],
           "categoryId": "geography",
           "ancestors": []
         },
@@ -2084,7 +2412,32 @@
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-fransa-md",
+              "title": "Fransa — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-italya-md",
+              "title": "İtalya — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-japonya-md",
+              "title": "Japonya — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+              "title": "İngiltere — Ülke Profili",
+              "date": "1985"
+            }
+          ],
           "categoryId": "geography",
           "ancestors": []
         },
@@ -2138,6 +2491,42 @@
               "id": "geography-alternatif-tarih-dunya-diger-devletler-md",
               "title": "Diğer Devletler",
               "date": "DİĞER GÜÇLER"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-alper-ulac-altayli",
+              "title": "Alper Ulaç Altaylı",
+              "date": "1968 · 17 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-fransa-md",
+              "title": "Fransa — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-italya-md",
+              "title": "İtalya — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-japonya-md",
+              "title": "Japonya — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-alperen-keser",
+              "title": "Alperen Keser",
+              "date": "1899–1968"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+              "title": "New York — 1946 Tarihî Durum",
+              "date": "1946"
             }
           ],
           "categoryId": "geography",
@@ -2175,6 +2564,30 @@
               "id": "chronology-tarihi-olaylar-olaylar-1940-mart-anitkabir-tamamlandi-md",
               "title": "Mart 1940 — Anıtkabir'in Tamamlanması",
               "date": "Mart 1940"
+            },
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-kuruluslar-kamuya-acik-kizil-orda-yerleske-md",
+              "title": "Kızıl Orda — Merkez Yerleşke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "media",
+              "id": "media-tarihi-olaylar-olaylar-10-kasim-1940-md",
+              "title": "10 Kasım 1940 — Ankara Ziyaretinin Basındaki Yankısı",
+              "date": "10 KASIM 1940"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
             }
           ],
           "categoryId": "geography",
@@ -2211,6 +2624,18 @@
               "id": "society-asli-olan-duzen-b-3-b-3-ders-programi-md",
               "title": "B-3 — Haftalık Ders Düzeni",
               "date": "1985 · HAFTALIK PROGRAM"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-oguz-kagan-atalay",
+              "title": "Oğuz Kağan Atalay",
+              "date": "3 Ocak 1968 · 17 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-oguz-keser",
+              "title": "Oğuz Kağan Atalay",
+              "date": "3 Ocak 1968 · 17 yaş"
             }
           ],
           "categoryId": "geography",
@@ -2254,6 +2679,18 @@
               "id": "geography-alternatif-tarih-dunya-amerika-md",
               "title": "Amerika",
               "date": "DEVLET DOSYASI"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+              "title": "Washington, D.C. — 1946 Tarihî Durum",
+              "date": "1946"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-1946-dunya-paylasimi",
+              "title": "1946 Dünya Paylaşımı",
+              "date": "1946 sonbaharı"
             }
           ],
           "categoryId": "geography",
@@ -2297,6 +2734,12 @@
               "id": "geography-alternatif-tarih-dunya-amerika-md",
               "title": "Amerika",
               "date": "DEVLET DOSYASI"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+              "title": "New York — 1946 Tarihî Durum",
+              "date": "1946"
             }
           ],
           "categoryId": "geography",
@@ -2470,7 +2913,44 @@
           "order": 1,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-japonya-md",
+              "title": "Japonya — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+              "title": "İngiltere — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-selim-arkan",
+              "title": "Selim Arkan",
+              "date": "1939 doğumlu · 46 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
+              "title": "Großdeutsches Reich",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-reinhard-falkenhorst",
+              "title": "Reinhard Falkenhorst",
+              "date": "1922 doğumlu · 63 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "both",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2489,7 +2969,44 @@
             "Türkiye"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-alper-ulac-altayli",
+              "title": "Alper Ulaç Altaylı",
+              "date": "1968 · 17 yaş"
+            },
+            {
+              "categoryId": "personal-records",
+              "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+              "title": "Günlük",
+              "date": ""
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-alperen-keser",
+              "title": "Alperen Keser",
+              "date": "1899–1968"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-selim-arkan",
+              "title": "Selim Arkan",
+              "date": "1939 doğumlu · 46 yaş"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-29-kasim-1938-md",
+              "title": "29 Kasım 1938 — Alperen Keser'in İktidarı İlanı",
+              "date": "29 Kasım 1938"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-1938-ataturkun-vefati-md",
+              "title": "Atatürk'ün vefatı",
+              "date": "10 Kasım 1938"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2508,7 +3025,20 @@
             "Almanya"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+              "title": "İngiltere — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-reinhard-falkenhorst",
+              "title": "Reinhard Falkenhorst",
+              "date": "1922 doğumlu · 63 yaş"
+            }
+          ],
           "country": "german",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2527,7 +3057,26 @@
             "Dünya Paylaşımı 1946"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-italya-md",
+              "title": "İtalya — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
+              "title": "Großdeutsches Reich",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "both",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2544,7 +3093,20 @@
           "order": 5,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "personal-records",
+              "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+              "title": "Günlük",
+              "date": ""
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-haluk-sancar",
+              "title": "Haluk Sancar",
+              "date": "1927 doğumlu · 58 yaş"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2564,7 +3126,20 @@
             "Kızıl Orda"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "institutions",
+              "id": "institutions-kuruluslar-kamuya-acik-kizil-orda-yerleske-md",
+              "title": "Kızıl Orda — Merkez Yerleşke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2581,7 +3156,20 @@
           "order": 7,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-mektepler-1985-egitim-duzeni",
+              "title": "Mektepler — 1985 Eğitim Düzeni",
+              "date": "1985"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-hilalifiyet-merkezi-ve-nizam-1",
+              "title": "Hilalifiyet Merkezi ve Nizam-1",
+              "date": "1982"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2598,7 +3186,20 @@
           "order": 8,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-rana-tozun",
+              "title": "Rana Tözün",
+              "date": "1938 doğumlu · 47 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2615,7 +3216,14 @@
           "order": 9,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2632,7 +3240,14 @@
           "order": 10,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
+              "title": "Großdeutsches Reich",
+              "date": "1985"
+            }
+          ],
           "country": "german",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2649,7 +3264,20 @@
           "order": 11,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-konrad-weissmann",
+              "title": "Konrad Weissmann",
+              "date": "1933 doğumlu · 52 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
+              "title": "Großdeutsches Reich",
+              "date": "1985"
+            }
+          ],
           "country": "german",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "geography",
@@ -2701,7 +3329,26 @@
                     "Oğuz"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-aysel-atalay",
+                      "title": "Aysel Atalay",
+                      "date": "1947 · 38 yaş"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-nec-det-atalay",
+                      "title": "Necdet Atalay",
+                      "date": "1918 doğumlu"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -2723,7 +3370,20 @@
                     "Alper Ulaç Altaylı"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-ismail-yagiz-aslan",
+                      "title": "İsmail Yağız Aslan",
+                      "date": "1968 · 17 yaş"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -2745,7 +3405,38 @@
                     "İso"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-alper-ulac-altayli",
+                      "title": "Alper Ulaç Altaylı",
+                      "date": "1968 · 17 yaş"
+                    },
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "personal-records",
+                      "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+                      "title": "Günlük",
+                      "date": ""
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-oguz-kagan-atalay",
+                      "title": "Oğuz Kağan Atalay",
+                      "date": "3 Ocak 1968 · 17 yaş"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-oguz-keser",
+                      "title": "Oğuz Kağan Atalay",
+                      "date": "3 Ocak 1968 · 17 yaş"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -2766,7 +3457,20 @@
                     "Muhammed Mete"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-muhammed-atalay",
+                      "title": "Muhammed Atalay",
+                      "date": "1974 · 11 yaş"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -2787,7 +3491,14 @@
                     "Aylin Aksoy"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -2808,7 +3519,14 @@
                     "Alev Acar"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -2848,7 +3566,20 @@
                     "TOMRİS İLTER"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "personal-records",
+                      "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+                      "title": "Günlük",
+                      "date": ""
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -2869,7 +3600,14 @@
                     "Asena Korkut"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -2924,7 +3662,32 @@
                     "Necdet Atalay"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-cengiz-atalay",
+                      "title": "Cengiz Atalay",
+                      "date": "1942 · 43 yaş"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-oguz-kagan-atalay",
+                      "title": "Oğuz Kağan Atalay",
+                      "date": "3 Ocak 1968 · 17 yaş"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-oguz-keser",
+                      "title": "Oğuz Kağan Atalay",
+                      "date": "3 Ocak 1968 · 17 yaş"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -2945,7 +3708,14 @@
                     "Sabiha Atalay"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "personal-records",
+                      "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+                      "title": "Günlük",
+                      "date": ""
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3005,7 +3775,14 @@
                     "Naciye Kaya"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "personal-records",
+                      "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+                      "title": "Günlük",
+                      "date": ""
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3065,7 +3842,26 @@
                     "Cengiz Atalay"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "technology",
+                      "id": "technology-alternatif-tarih-teknoloji-kamuya-acik-ta-85-gokkanat-tarihce-md",
+                      "title": "TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi",
+                      "date": "1943"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-nec-det-atalay",
+                      "title": "Necdet Atalay",
+                      "date": "1918 doğumlu"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3105,7 +3901,26 @@
                     "Oğuz"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-aysel-atalay",
+                      "title": "Aysel Atalay",
+                      "date": "1947 · 38 yaş"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-nec-det-atalay",
+                      "title": "Necdet Atalay",
+                      "date": "1918 doğumlu"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3126,7 +3941,14 @@
                     "Muhammed Atalay"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-muhammed-mete",
+                      "title": "Muhammed Mete",
+                      "date": "1968 · 17 yaş"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3243,7 +4065,26 @@
                     "Oğuz Keser"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-aysel-atalay",
+                      "title": "Aysel Atalay",
+                      "date": "1947 · 38 yaş"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-nec-det-atalay",
+                      "title": "Necdet Atalay",
+                      "date": "1918 doğumlu"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3350,7 +4191,14 @@
                     "Furize"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "personal-records",
+                      "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+                      "title": "Günlük",
+                      "date": ""
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3390,7 +4238,26 @@
                     "Alperen Keser"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-alper-ulac-altayli",
+                      "title": "Alper Ulaç Altaylı",
+                      "date": "1968 · 17 yaş"
+                    },
+                    {
+                      "categoryId": "chronology",
+                      "id": "chronology-tarihi-olaylar-olaylar-29-kasim-1938-md",
+                      "title": "29 Kasım 1938 — Alperen Keser'in İktidarı İlanı",
+                      "date": "29 Kasım 1938"
+                    },
+                    {
+                      "categoryId": "geography",
+                      "id": "geography-oncelikli-kanon-vault-geography-1946-dunya-paylasimi",
+                      "title": "1946 Dünya Paylaşımı",
+                      "date": "1946 sonbaharı"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3446,7 +4313,26 @@
                     "Alperen Keser"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-alper-ulac-altayli",
+                      "title": "Alper Ulaç Altaylı",
+                      "date": "1968 · 17 yaş"
+                    },
+                    {
+                      "categoryId": "chronology",
+                      "id": "chronology-tarihi-olaylar-olaylar-29-kasim-1938-md",
+                      "title": "29 Kasım 1938 — Alperen Keser'in İktidarı İlanı",
+                      "date": "29 Kasım 1938"
+                    },
+                    {
+                      "categoryId": "geography",
+                      "id": "geography-oncelikli-kanon-vault-geography-1946-dunya-paylasimi",
+                      "title": "1946 Dünya Paylaşımı",
+                      "date": "1946 sonbaharı"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3467,7 +4353,32 @@
                     "İsmail Karaslan"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-alper-ulac-altayli",
+                      "title": "Alper Ulaç Altaylı",
+                      "date": "1968 · 17 yaş"
+                    },
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-alperen-keser",
+                      "title": "Alperen Keser",
+                      "date": "1899–1968"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-selim-arkan",
+                      "title": "Selim Arkan",
+                      "date": "1939 doğumlu · 46 yaş"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3488,7 +4399,44 @@
                     "Selim Arkan"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-alper-ulac-altayli",
+                      "title": "Alper Ulaç Altaylı",
+                      "date": "1968 · 17 yaş"
+                    },
+                    {
+                      "categoryId": "geography",
+                      "id": "geography-oncelikli-kanon-vault-geography-kizil-orda-ve-ulugah",
+                      "title": "Kızıl Orda ve Uluğâh",
+                      "date": "Ankara · 1985"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-alperen-keser",
+                      "title": "Alperen Keser",
+                      "date": "1899–1968"
+                    },
+                    {
+                      "categoryId": "institutions",
+                      "id": "institutions-kuruluslar-kamuya-acik-kizil-orda-yerleske-md",
+                      "title": "Kızıl Orda — Merkez Yerleşke Profili",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-ismail-karaslan",
+                      "title": "İsmail Karaslan",
+                      "date": "1915–1981"
+                    },
+                    {
+                      "categoryId": "geography",
+                      "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+                      "title": "Büyük Türk İmparatorluğu",
+                      "date": "1950 · İstanbul ilanı"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3527,7 +4475,14 @@
                     "Kaan Demirsoy"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-sabiha-erten",
+                      "title": "Sabiha Erten",
+                      "date": "1945 doğumlu · 40 yaş"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3548,7 +4503,20 @@
                     "Sabiha Erten"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "personal-records",
+                      "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+                      "title": "Günlük",
+                      "date": ""
+                    },
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-kaan-demirsoy",
+                      "title": "Kaan Demirsoy",
+                      "date": "1936 doğumlu"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3569,7 +4537,14 @@
                     "Mete Kutlu"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "characters",
+                      "id": "characters-oncelikli-kanon-vault-characters-selahattin-akgun",
+                      "title": "Selahattin Akgün",
+                      "date": "1932 doğumlu"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3611,7 +4586,32 @@
                     "Ziya Arat"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "society",
+                      "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+                      "title": "Mektep Hayatı ve Kanat Sistemi",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "institutions",
+                      "id": "institutions-oncelikli-kanon-vault-institutions-mektepler-1985-egitim-duzeni",
+                      "title": "Mektepler — 1985 Eğitim Düzeni",
+                      "date": "1985"
+                    },
+                    {
+                      "categoryId": "geography",
+                      "id": "geography-oncelikli-kanon-vault-geography-hilalifiyet-merkezi",
+                      "title": "Hilalifiyet Merkezi",
+                      "date": "İstanbul · 1985"
+                    },
+                    {
+                      "categoryId": "institutions",
+                      "id": "institutions-oncelikli-kanon-vault-institutions-hilalifiyet-merkezi-ve-nizam-1",
+                      "title": "Hilalifiyet Merkezi ve Nizam-1",
+                      "date": "1982"
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3632,7 +4632,14 @@
                     "Haluk Sancar"
                   ],
                   "children": [],
-                  "links": [],
+                  "links": [
+                    {
+                      "categoryId": "personal-records",
+                      "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+                      "title": "Günlük",
+                      "date": ""
+                    }
+                  ],
                   "country": "turkish",
                   "categoryId": "characters",
                   "ancestors": [
@@ -3676,7 +4683,14 @@
                 "Reinhard Falkenhorst"
               ],
               "children": [],
-              "links": [],
+              "links": [
+                {
+                  "categoryId": "geography",
+                  "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
+                  "title": "Großdeutsches Reich",
+                  "date": "1985"
+                }
+              ],
               "country": "german",
               "categoryId": "characters",
               "ancestors": [
@@ -3756,7 +4770,14 @@
                 "Konrad Weissmann"
               ],
               "children": [],
-              "links": [],
+              "links": [
+                {
+                  "categoryId": "geography",
+                  "id": "geography-oncelikli-kanon-vault-geography-sfa-p-polaris",
+                  "title": "SFA-P Polaris",
+                  "date": "1985"
+                }
+              ],
               "country": "german",
               "categoryId": "characters",
               "ancestors": [
@@ -3792,7 +4813,14 @@
                 "Nihat Karaca"
               ],
               "children": [],
-              "links": [],
+              "links": [
+                {
+                  "categoryId": "personal-records",
+                  "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+                  "title": "Günlük",
+                  "date": ""
+                }
+              ],
               "country": "turkish",
               "categoryId": "characters",
               "ancestors": [
@@ -3907,7 +4935,14 @@
               "order": 24,
               "aliases": [],
               "children": [],
-              "links": [],
+              "links": [
+                {
+                  "categoryId": "characters",
+                  "id": "characters-mete-kutlu",
+                  "title": "Mete Kutlu",
+                  "date": "1931 doğumlu · 54 yaş"
+                }
+              ],
               "country": "turkish",
               "sourceFile": "content/archives/canon_public_records.json",
               "categoryId": "characters",
@@ -3956,6 +4991,18 @@
               "id": "geography-alternatif-tarih-dunya-cografya-sehir-ankara-md",
               "title": "Ankara — 1985 Şehir Profili",
               "date": "1985"
+            },
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-kizil-orda-ve-ulugah",
+              "title": "Kızıl Orda ve Uluğâh",
+              "date": "Ankara · 1985"
             }
           ],
           "country": "turkish",
@@ -3973,7 +5020,26 @@
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-mete-kutlu",
+              "title": "Mete Kutlu",
+              "date": "1931 doğumlu · 54 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-oncelikli-kanon-vault-characters-selahattin-akgun",
+              "title": "Selahattin Akgün",
+              "date": "1932 doğumlu"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-istihbarat-ve-ic-emniyet",
+              "title": "İstihbarat ve İç Emniyet",
+              "date": "1985"
+            }
+          ],
           "country": "turkish",
           "categoryId": "institutions",
           "ancestors": []
@@ -3989,7 +5055,44 @@
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-sfa-p-polaris",
+              "title": "SFA-P Polaris",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-martin-kessler",
+              "title": "Martin Kessler",
+              "date": "1930 doğumlu · 55 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-ulrich-von-havel",
+              "title": "Ulrich von Havel",
+              "date": "1932 doğumlu · 53 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-konrad-weissmann",
+              "title": "Konrad Weissmann",
+              "date": "1933 doğumlu · 52 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-friedrich-wulfhart",
+              "title": "Friedrich Wulfhart",
+              "date": "1925 doğumlu · 60 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
+              "title": "Großdeutsches Reich",
+              "date": "1985"
+            }
+          ],
           "country": "german",
           "categoryId": "institutions",
           "ancestors": []
@@ -4005,7 +5108,44 @@
           "order": 1,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-mektepler-1985-egitim-duzeni",
+              "title": "Mektepler — 1985 Eğitim Düzeni",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-kizil-orda-ve-ulugah",
+              "title": "Kızıl Orda ve Uluğâh",
+              "date": "Ankara · 1985"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-kuruluslar-kamuya-acik-kizil-orda-yerleske-md",
+              "title": "Kızıl Orda — Merkez Yerleşke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-selim-arkan",
+              "title": "Selim Arkan",
+              "date": "1939 doğumlu · 46 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-sabiha-erten",
+              "title": "Sabiha Erten",
+              "date": "1945 doğumlu · 40 yaş"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "institutions",
@@ -4022,7 +5162,44 @@
           "order": 2,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-mektepler-1985-egitim-duzeni",
+              "title": "Mektepler — 1985 Eğitim Düzeni",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-kizil-orda-ve-ulugah",
+              "title": "Kızıl Orda ve Uluğâh",
+              "date": "Ankara · 1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-mete-kutlu",
+              "title": "Mete Kutlu",
+              "date": "1931 doğumlu · 54 yaş"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-kuruluslar-kamuya-acik-kizil-orda-yerleske-md",
+              "title": "Kızıl Orda — Merkez Yerleşke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-oncelikli-kanon-vault-characters-selahattin-akgun",
+              "title": "Selahattin Akgün",
+              "date": "1932 doğumlu"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "institutions",
@@ -4042,7 +5219,38 @@
             "Mektepler"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-tomris-ilter",
+              "title": "Tomris İlter",
+              "date": "1968 · 17 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-asena-korkut",
+              "title": "Asena Korkut",
+              "date": "1968 · 17 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-hilalifiyet-merkezi",
+              "title": "Hilalifiyet Merkezi",
+              "date": "İstanbul · 1985"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-hilalifiyet-merkezi-ve-nizam-1",
+              "title": "Hilalifiyet Merkezi ve Nizam-1",
+              "date": "1982"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "institutions",
@@ -4062,7 +5270,20 @@
             "Hilalifiyet Merkezi - İstanbul"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-mektepler-1985-egitim-duzeni",
+              "title": "Mektepler — 1985 Eğitim Düzeni",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-hilalifiyet-merkezi",
+              "title": "Hilalifiyet Merkezi",
+              "date": "İstanbul · 1985"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "institutions",
@@ -4079,7 +5300,32 @@
           "order": 5,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-martin-kessler",
+              "title": "Martin Kessler",
+              "date": "1930 doğumlu · 55 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-ulrich-von-havel",
+              "title": "Ulrich von Havel",
+              "date": "1932 doğumlu · 53 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-friedrich-wulfhart",
+              "title": "Friedrich Wulfhart",
+              "date": "1925 doğumlu · 60 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
+              "title": "Großdeutsches Reich",
+              "date": "1985"
+            }
+          ],
           "country": "german",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "institutions",
@@ -4110,7 +5356,38 @@
             "Gök Kanat"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-nec-det-atalay",
+              "title": "Necdet Atalay",
+              "date": "1918 doğumlu"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-cengiz-atalay",
+              "title": "Cengiz Atalay",
+              "date": "1942 · 43 yaş"
+            },
+            {
+              "categoryId": "technology",
+              "id": "technology-oncelikli-kanon-vault-technology-ta-70-ten-ta-85-gokkanat-a",
+              "title": "Ta 70'ten Ta 85 Gökkanat'a",
+              "date": "1958–1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "turkish",
           "categoryId": "technology",
           "ancestors": []
@@ -4130,7 +5407,44 @@
             "Gökkanat teknolojileri"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "technology",
+              "id": "technology-alternatif-tarih-teknoloji-kamuya-acik-ta-85-gokkanat-tarihce-md",
+              "title": "TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi",
+              "date": "1943"
+            },
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "technology",
+              "id": "technology-oncelikli-kanon-vault-technology-ta-70-ten-ta-85-gokkanat-a",
+              "title": "Ta 70'ten Ta 85 Gökkanat'a",
+              "date": "1958–1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-hilalifiyet-merkezi",
+              "title": "Hilalifiyet Merkezi",
+              "date": "İstanbul · 1985"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-hilalifiyet-merkezi-ve-nizam-1",
+              "title": "Hilalifiyet Merkezi ve Nizam-1",
+              "date": "1982"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "technology",
@@ -4151,7 +5465,14 @@
             "Reich teknolojileri"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-sfa-p-polaris",
+              "title": "SFA-P Polaris",
+              "date": "1985"
+            }
+          ],
           "country": "german",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "technology",
@@ -4168,7 +5489,20 @@
           "order": 3,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-hilalifiyet-merkezi",
+              "title": "Hilalifiyet Merkezi",
+              "date": "İstanbul · 1985"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-hilalifiyet-merkezi-ve-nizam-1",
+              "title": "Hilalifiyet Merkezi ve Nizam-1",
+              "date": "1982"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "technology",
@@ -4185,7 +5519,14 @@
           "order": 4,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "technology",
@@ -4205,7 +5546,44 @@
             "Ta 85 Gökkanat"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "technology",
+              "id": "technology-alternatif-tarih-teknoloji-kamuya-acik-ta-85-gokkanat-tarihce-md",
+              "title": "TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi",
+              "date": "1943"
+            },
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-nec-det-atalay",
+              "title": "Necdet Atalay",
+              "date": "1918 doğumlu"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-cengiz-atalay",
+              "title": "Cengiz Atalay",
+              "date": "1942 · 43 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-oguz-kagan-atalay",
+              "title": "Oğuz Kağan Atalay",
+              "date": "3 Ocak 1968 · 17 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-oguz-keser",
+              "title": "Oğuz Kağan Atalay",
+              "date": "3 Ocak 1968 · 17 yaş"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "technology",
@@ -4222,7 +5600,26 @@
           "order": 6,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "technology",
+              "id": "technology-alternatif-tarih-teknoloji-kamuya-acik-ta-85-gokkanat-tarihce-md",
+              "title": "TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi",
+              "date": "1943"
+            },
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "technology",
+              "id": "technology-oncelikli-kanon-vault-technology-ta-70-ten-ta-85-gokkanat-a",
+              "title": "Ta 70'ten Ta 85 Gökkanat'a",
+              "date": "1958–1985"
+            }
+          ],
           "country": "german",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "technology",
@@ -4239,7 +5636,38 @@
           "order": 7,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "technology",
+              "id": "technology-alternatif-tarih-teknoloji-kamuya-acik-ta-85-gokkanat-tarihce-md",
+              "title": "TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi",
+              "date": "1943"
+            },
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+              "title": "New York — 1946 Tarihî Durum",
+              "date": "1946"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-sfa-p-polaris",
+              "title": "SFA-P Polaris",
+              "date": "1985"
+            },
+            {
+              "categoryId": "technology",
+              "id": "technology-oncelikli-kanon-vault-technology-ta-70-ten-ta-85-gokkanat-a",
+              "title": "Ta 70'ten Ta 85 Gökkanat'a",
+              "date": "1958–1985"
+            }
+          ],
           "country": "both",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "technology",
@@ -4284,6 +5712,12 @@
               "id": "characters-oguz-kagan-atalay",
               "title": "Oğuz Kağan Atalay",
               "date": "3 Ocak 1968 · 17 yaş"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-oguz-keser",
+              "title": "Oğuz Kağan Atalay",
+              "date": "3 Ocak 1968 · 17 yaş"
             }
           ],
           "country": "turkish",
@@ -4301,7 +5735,14 @@
           "order": 999,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "personal-records",
+              "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+              "title": "Günlük",
+              "date": ""
+            }
+          ],
           "country": "turkish",
           "categoryId": "society",
           "ancestors": []
@@ -4317,7 +5758,14 @@
           "order": 1,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "personal-records",
+              "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+              "title": "Günlük",
+              "date": ""
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "society",
@@ -4334,7 +5782,26 @@
           "order": 2,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "personal-records",
+              "id": "personal-records-genc-karakterler-asena-korkut-gunluk-index-md",
+              "title": "Günlük",
+              "date": ""
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-kizil-orda-ve-ulugah",
+              "title": "Kızıl Orda ve Uluğâh",
+              "date": "Ankara · 1985"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-kuruluslar-kamuya-acik-kizil-orda-yerleske-md",
+              "title": "Kızıl Orda — Merkez Yerleşke Profili",
+              "date": "1985"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "society",
@@ -4351,7 +5818,26 @@
           "order": 3,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "technology",
+              "id": "technology-alternatif-tarih-teknoloji-kamuya-acik-ta-85-gokkanat-tarihce-md",
+              "title": "TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi",
+              "date": "1943"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "society",
@@ -4372,7 +5858,26 @@
             "B-3 Sınıf Profili"
           ],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-alper-ulac-altayli",
+              "title": "Alper Ulaç Altaylı",
+              "date": "1968 · 17 yaş"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-mektepler-1985-egitim-duzeni",
+              "title": "Mektepler — 1985 Eğitim Düzeni",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-muhammed-mete",
+              "title": "Muhammed Mete",
+              "date": "1968 · 17 yaş"
+            }
+          ],
           "country": "both",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "society",
@@ -4409,6 +5914,18 @@
               "id": "chronology-tarihi-olaylar-olaylar-10-kasim-1940-md",
               "title": "10 Kasım 1940 — Hitler'in Anıtkabir Ziyareti",
               "date": "10 Kasım 1940"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-fransa-md",
+              "title": "Fransa — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+              "title": "İngiltere — Ülke Profili",
+              "date": "1985"
             }
           ],
           "country": "both",
@@ -4445,7 +5962,14 @@
           "order": 1,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "chronology",
+              "id": "chronology-1938-ataturkun-vefati-md",
+              "title": "Atatürk'ün vefatı",
+              "date": "10 Kasım 1938"
+            }
+          ],
           "country": "both",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "history-periods",
@@ -4462,7 +5986,44 @@
           "order": 2,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-alper-ulac-altayli",
+              "title": "Alper Ulaç Altaylı",
+              "date": "1968 · 17 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-fransa-md",
+              "title": "Fransa — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-alperen-keser",
+              "title": "Alperen Keser",
+              "date": "1899–1968"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-ulke-profilleri-ingiltere-md",
+              "title": "İngiltere — Ülke Profili",
+              "date": "1985"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-tarihi-olaylar-olaylar-29-kasim-1938-md",
+              "title": "29 Kasım 1938 — Alperen Keser'in İktidarı İlanı",
+              "date": "29 Kasım 1938"
+            },
+            {
+              "categoryId": "chronology",
+              "id": "chronology-1938-ataturkun-vefati-md",
+              "title": "Atatürk'ün vefatı",
+              "date": "10 Kasım 1938"
+            }
+          ],
           "country": "turkish",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "history-periods",
@@ -4496,7 +6057,20 @@
           "order": 4,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-sehir-new-york-md",
+              "title": "New York — 1946 Tarihî Durum",
+              "date": "1946"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-alternatif-tarih-dunya-cografya-sehir-washington-md",
+              "title": "Washington, D.C. — 1946 Tarihî Durum",
+              "date": "1946"
+            }
+          ],
           "country": "both",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "history-periods",
@@ -4513,7 +6087,20 @@
           "order": 5,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-grossdeutsches-reich",
+              "title": "Großdeutsches Reich",
+              "date": "1985"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "both",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "history-periods",
@@ -4530,7 +6117,38 @@
           "order": 6,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "technology",
+              "id": "technology-alternatif-tarih-teknoloji-kamuya-acik-ta-85-gokkanat-tarihce-md",
+              "title": "TA-85 Gökkanat — Kamuya Açık Proje Tarihçesi",
+              "date": "1943"
+            },
+            {
+              "categoryId": "society",
+              "id": "society-oncelikli-kanon-vault-society-mektep-hayati-ve-kanat-sistemi",
+              "title": "Mektep Hayatı ve Kanat Sistemi",
+              "date": "1985"
+            },
+            {
+              "categoryId": "technology",
+              "id": "technology-oncelikli-kanon-vault-technology-ta-70-ten-ta-85-gokkanat-a",
+              "title": "Ta 70'ten Ta 85 Gökkanat'a",
+              "date": "1958–1985"
+            },
+            {
+              "categoryId": "characters",
+              "id": "characters-ismail-karaslan",
+              "title": "İsmail Karaslan",
+              "date": "1915–1981"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-buyuk-turk-imparatorlugu",
+              "title": "Büyük Türk İmparatorluğu",
+              "date": "1950 · İstanbul ilanı"
+            }
+          ],
           "country": "both",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "history-periods",
@@ -4547,7 +6165,26 @@
           "order": 7,
           "aliases": [],
           "children": [],
-          "links": [],
+          "links": [
+            {
+              "categoryId": "characters",
+              "id": "characters-selim-arkan",
+              "title": "Selim Arkan",
+              "date": "1939 doğumlu · 46 yaş"
+            },
+            {
+              "categoryId": "geography",
+              "id": "geography-oncelikli-kanon-vault-geography-hilalifiyet-merkezi",
+              "title": "Hilalifiyet Merkezi",
+              "date": "İstanbul · 1985"
+            },
+            {
+              "categoryId": "institutions",
+              "id": "institutions-oncelikli-kanon-vault-institutions-hilalifiyet-merkezi-ve-nizam-1",
+              "title": "Hilalifiyet Merkezi ve Nizam-1",
+              "date": "1982"
+            }
+          ],
           "country": "both",
           "sourceFile": "content/archives/canon_public_records.json",
           "categoryId": "history-periods",

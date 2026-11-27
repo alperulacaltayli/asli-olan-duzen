@@ -57,7 +57,7 @@
       const item=entry.item,number=String(entry.index+1).padStart(2,"0");
       const meta=[item.category,item.date].filter(Boolean).join(" · ")||"EK BİLGİ BEKLENİYOR";
       return '<button class="gallery-card" type="button" data-gallery-index="'+entry.index+'" aria-label="'+escapeHtml(item.title)+' fotoğrafını aç">'+
-        '<span class="gallery-card-image"><picture><source srcset="'+escapeHtml(item.webp_src||"")+'" type="image/webp"><img src="'+escapeHtml(item.src)+'" alt="'+escapeHtml(item.title)+'" loading="lazy" decoding="async"></picture></span>'+
+        '<span class="gallery-card-image"><picture><source srcset="'+escapeHtml(item.card_webp||item.webp_src||"")+'" type="image/webp"><img src="'+escapeHtml(item.webp_src||item.src)+'" alt="'+escapeHtml(item.title)+'"'+(item.width?' width="'+Number(item.width)+'"':'')+(item.height?' height="'+Number(item.height)+'"':'')+' loading="lazy" decoding="async"></picture></span>'+
         '<span class="gallery-card-caption"><span class="gallery-card-number">'+number+'</span><span class="gallery-card-title">'+escapeHtml(item.title)+
         '<span class="gallery-card-meta">'+escapeHtml(meta)+'</span></span><span class="gallery-card-arrow" aria-hidden="true">↗</span></span></button>';
     }).join("");
@@ -98,7 +98,7 @@
   const showImage=index=>{
     if(!images.length)return;activeIndex=(index+images.length)%images.length;const item=images[activeIndex];
     if(lightboxWebp){if(item.webp_src)lightboxWebp.srcset=item.webp_src;else lightboxWebp.removeAttribute("srcset");}
-    lightboxImage.src=item.src;lightboxImage.alt=item.title;lightboxTitle.textContent=item.title;
+    lightboxImage.src=item.webp_src||item.src;lightboxImage.alt=item.title;lightboxTitle.textContent=item.title;
     lightboxNumber.textContent=String(activeIndex+1).padStart(2,"0")+" / "+String(images.length).padStart(2,"0");showMetadata(item);
     const address=new URL(window.location.href);address.searchParams.set("image",item.src);address.searchParams.delete("video");window.history.replaceState({...(window.history.state||{}),aodImage:item.src},"",address);
   };
