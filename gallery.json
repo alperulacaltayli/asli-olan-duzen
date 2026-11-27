@@ -3,6 +3,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/Baküdüştü.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/Baküdüştü.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/Baküdüştü-card.webp",
+      "width": 1408,
+      "height": 768,
       "title": "Bakü'nün Düşüşü",
       "number": 1,
       "category": "Cephe kayıtları",
@@ -16,6 +19,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/BeyazSarayTr.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/BeyazSarayTr.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/BeyazSarayTr-card.webp",
+      "width": 2160,
+      "height": 3064,
       "title": "Beyaz Saray — Washington, D.C.",
       "number": 2,
       "category": "Diplomasi ve şehirler",
@@ -29,6 +35,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/Hainler2.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/Hainler2.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/Hainler2-card.webp",
+      "width": 1920,
+      "height": 1080,
       "title": "Hainler2",
       "number": 3,
       "category": "Diğer kayıtlar",
@@ -42,6 +51,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/Hainler.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/Hainler.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/Hainler-card.webp",
+      "width": 1920,
+      "height": 1080,
       "title": "Hainler",
       "number": 4,
       "category": "Diğer kayıtlar",
@@ -55,6 +67,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/HitlerAtatürkZiyareti.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/HitlerAtatürkZiyareti.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/HitlerAtatürkZiyareti-card.webp",
+      "width": 1380,
+      "height": 752,
       "title": "Hitler'in Anıtkabir Ziyareti",
       "number": 5,
       "category": "Diplomasi ve şehirler",
@@ -68,6 +83,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/KievDüşüş.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/KievDüşüş.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/KievDüşüş-card.webp",
+      "width": 1408,
+      "height": 768,
       "title": "Kiev'in Düşüşü",
       "number": 6,
       "category": "Cephe kayıtları",
@@ -81,6 +99,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/LeningradDüşüş.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/LeningradDüşüş.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/LeningradDüşüş-card.webp",
+      "width": 1408,
+      "height": 768,
       "title": "Leningrad'ın Düşüşü",
       "number": 7,
       "category": "Cephe kayıtları",
@@ -94,6 +115,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/MoskovaDüşüş.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/MoskovaDüşüş.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/MoskovaDüşüş-card.webp",
+      "width": 1408,
+      "height": 768,
       "title": "Moskova'nın İşgali",
       "number": 8,
       "category": "Cephe kayıtları",
@@ -107,6 +131,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/Sevatipoolçıkarması.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/Sevatipoolçıkarması.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/Sevatipoolçıkarması-card.webp",
+      "width": 1536,
+      "height": 1024,
       "title": "Sivastopol Çıkarması",
       "number": 9,
       "category": "Cephe kayıtları",
@@ -120,6 +147,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/SivastipolDüşüş.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/SivastipolDüşüş.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/SivastipolDüşüş-card.webp",
+      "width": 1408,
+      "height": 768,
       "title": "Sivastopol'un Düşüşü",
       "number": 10,
       "category": "Cephe kayıtları",
@@ -133,6 +163,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/StalingGradDÜşüş.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/StalingGradDÜşüş.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/StalingGradDÜşüş-card.webp",
+      "width": 1408,
+      "height": 768,
       "title": "Stalingrad'ın Düşüşü",
       "number": 11,
       "category": "Cephe kayıtları",
@@ -146,6 +179,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/TürklerAyda.jpg",
       "webp_src": "AlternatifTarihfotoarşiv/TürklerAyda.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/TürklerAyda-card.webp",
+      "width": 1376,
+      "height": 768,
       "title": "Türkler Ay'da",
       "number": 12,
       "category": "Uzay ve keşif",
@@ -159,6 +195,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/TürlerinAtombombası.jpeg",
       "webp_src": "AlternatifTarihfotoarşiv/TürlerinAtombombası.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/TürlerinAtombombası-card.webp",
+      "width": 1373,
+      "height": 768,
       "title": "Türlerin Atom Bombası",
       "number": 13,
       "category": "Bilim ve teknoloji",
@@ -172,6 +211,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/Üsküdar1.png",
       "webp_src": "AlternatifTarihfotoarşiv/Üsküdar1.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/Üsküdar1-card.webp",
+      "width": 5504,
+      "height": 3072,
       "title": "Üsküdar — Kayıt 01",
       "number": 14,
       "category": "Şehir ve mimari",
@@ -185,6 +227,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/Üsküdar2.png",
       "webp_src": "AlternatifTarihfotoarşiv/Üsküdar2.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/Üsküdar2-card.webp",
+      "width": 6912,
+      "height": 12384,
       "title": "Üsküdar — Kayıt 02",
       "number": 15,
       "category": "Şehir ve mimari",
@@ -198,6 +243,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/Üsküdar4.png",
       "webp_src": "AlternatifTarihfotoarşiv/Üsküdar4.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/Üsküdar4-card.webp",
+      "width": 5632,
+      "height": 3072,
       "title": "Üsküdar — Kayıt 04",
       "number": 16,
       "category": "Şehir ve mimari",
@@ -211,6 +259,9 @@
     {
       "src": "AlternatifTarihfotoarşiv/Üsküddar3.png",
       "webp_src": "AlternatifTarihfotoarşiv/Üsküddar3.webp",
+      "card_webp": "AlternatifTarihfotoarşiv/Üsküddar3-card.webp",
+      "width": 5632,
+      "height": 3072,
       "title": "Üsküdar — Kayıt 03",
       "number": 17,
       "category": "Şehir ve mimari",
