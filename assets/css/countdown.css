@@ -1,0 +1,28 @@
+/* Standalone cosmic anomaly countdown. Deliberately separate from the archive's visual language. */
+.cosmic-countdown{position:relative;isolation:isolate;min-height:clamp(520px,74vw,760px);display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 48%,rgba(72,34,119,.38),transparent 35%),radial-gradient(ellipse at 18% 22%,rgba(23,72,137,.25),transparent 34%),radial-gradient(ellipse at 82% 76%,rgba(132,22,53,.2),transparent 32%),#05040d;color:#f5f0ff}
+.cosmic-countdown::before,.cosmic-countdown::after{content:"";position:absolute;inset:0;pointer-events:none}
+.cosmic-countdown::before{z-index:-1;background:linear-gradient(115deg,transparent 15%,rgba(67,92,184,.08) 48%,transparent 72%),radial-gradient(ellipse at center,transparent 35%,rgba(0,0,0,.72) 100%)}
+.cosmic-countdown::after{z-index:3;opacity:.17;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");mix-blend-mode:screen}
+.cosmic-countdown-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.cosmic-countdown-nebula{position:absolute;z-index:0;width:65vw;height:48vw;max-height:620px;filter:blur(70px);opacity:.2;border-radius:50%;pointer-events:none}
+.cosmic-countdown-nebula-a{left:-24%;top:-20%;background:radial-gradient(ellipse,#244bba 0%,#492477 38%,transparent 72%);transform:rotate(-24deg)}
+.cosmic-countdown-nebula-b{right:-25%;bottom:-30%;background:radial-gradient(ellipse,#a31e4c 0%,#3c1d83 42%,transparent 72%);transform:rotate(28deg)}
+.cosmic-countdown-rift{position:absolute;z-index:2;left:50%;top:50%;width:min(48vw,520px);height:120%;transform:translate(-50%,-50%);pointer-events:none;opacity:.9;filter:drop-shadow(0 0 18px rgba(118,117,255,.38))}
+.cosmic-countdown-rift::before{content:"";position:absolute;left:50%;top:-8%;width:2px;height:116%;transform:translateX(-50%);background:linear-gradient(transparent,rgba(110,153,255,.1) 14%,#9bbcff 43%,#f1b8ff 50%,#9b4bff 58%,rgba(105,80,230,.1) 88%,transparent);box-shadow:0 0 12px 3px rgba(120,135,255,.7),0 0 45px 12px rgba(95,55,200,.28)}
+.cosmic-countdown-rift::after{content:"";position:absolute;left:50%;top:50%;width:70%;height:75%;transform:translate(-50%,-50%) rotate(-4deg);background:linear-gradient(90deg,transparent,rgba(76,100,231,.07),rgba(211,139,255,.16),rgba(72,37,143,.06),transparent);clip-path:polygon(48% 0,55% 9%,49% 17%,58% 25%,47% 36%,55% 45%,46% 55%,54% 67%,44% 77%,53% 89%,48% 100%,52% 100%,57% 89%,49% 77%,59% 67%,51% 55%,61% 45%,53% 36%,64% 25%,55% 17%,62% 9%,53% 0)}
+.rift-core{position:absolute;left:50%;top:50%;width:36%;height:42%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(5,4,16,.12),rgba(3,3,12,.82) 68%,transparent 74%);filter:blur(10px)}
+.rift-edge{position:absolute;top:7%;height:86%;width:24%;opacity:.6;background:linear-gradient(180deg,transparent,rgba(132,160,255,.55),rgba(231,172,255,.88),rgba(93,90,255,.45),transparent);clip-path:polygon(68% 0,91% 8%,58% 17%,100% 26%,49% 37%,83% 48%,35% 59%,76% 70%,26% 83%,54% 92%,38% 100%,32% 90%,11% 82%,54% 70%,9% 59%,58% 48%,19% 37%,65% 26%,28% 17%,57% 8%)}
+.rift-edge-left{left:27%;transform:rotate(2deg)}
+.rift-edge-right{right:27%;transform:scaleX(-1) rotate(-3deg);opacity:.4}
+.cosmic-countdown-content{position:relative;z-index:4;width:min(920px,calc(100% - 36px));padding:40px 20px;text-align:center}
+.cosmic-countdown-values{display:flex;align-items:center;justify-content:center;gap:clamp(7px,2.5vw,28px);font-family:"Roboto Mono",monospace;font-variant-numeric:tabular-nums}
+.cosmic-time-unit{display:flex;min-width:0;flex-direction:column;align-items:center;gap:12px}
+.cosmic-time-value{font-size:clamp(2.3rem,8.4vw,6.6rem);font-weight:400;line-height:1;letter-spacing:-.09em;color:#f7f3ff;text-shadow:0 0 14px rgba(158,161,255,.8),0 0 42px rgba(111,82,255,.55),0 0 90px rgba(194,73,255,.22)}
+.cosmic-time-label{font-size:clamp(8px,1.1vw,11px);letter-spacing:.22em;color:rgba(221,220,255,.72)}
+.cosmic-time-separator{align-self:flex-start;margin-top:clamp(5px,1.2vw,15px);font-size:clamp(1.4rem,4vw,3.4rem);font-weight:300;color:rgba(193,179,255,.62);text-shadow:0 0 18px rgba(131,112,255,.8);animation:cosmic-pulse 2.8s ease-in-out infinite}
+.cosmic-countdown-coordinate{position:absolute;z-index:4;bottom:24px;color:rgba(180,184,225,.42);font:9px/1.4 "Roboto Mono",monospace;letter-spacing:.16em}
+.cosmic-coordinate-left{left:clamp(18px,4vw,54px)}
+.cosmic-coordinate-right{right:clamp(18px,4vw,54px);text-align:right}
+@keyframes cosmic-pulse{0%,100%{opacity:.45}50%{opacity:1}}
+@media(max-width:560px){.cosmic-countdown{min-height:540px}.cosmic-countdown-values{gap:7px}.cosmic-time-unit{gap:10px}.cosmic-time-value{font-size:clamp(2rem,10vw,3.6rem);letter-spacing:-.1em}.cosmic-time-label{font-size:7px;letter-spacing:.12em}.cosmic-countdown-rift{width:85vw}.cosmic-countdown-coordinate{bottom:17px;font-size:7px;letter-spacing:.08em}}
+@media(prefers-reduced-motion:reduce){.cosmic-time-separator{animation:none}}
