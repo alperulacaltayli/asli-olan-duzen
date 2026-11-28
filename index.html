@@ -25,6 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="assets/css/style.css?v=20261123-personal-archive-lock">
   <link rel="stylesheet" href="assets/css/site-enhancements.css?v=20261121-aod2">
+  <link rel="stylesheet" href="assets/css/countdown.css?v=20261128-cosmic-rift">
   <link rel="stylesheet" href="assets/css/audio.css?v=20261122-shared-country-ui">
   <script type="application/ld+json">
   {
@@ -104,6 +105,28 @@
       </div>
       <a class="scroll-cue" href="#roman"><span class="scroll-cue-line"></span><span>AŞAĞI İN</span></a>
       <div class="welcome-coordinates" aria-hidden="true">AOD // 1985</div>
+    </section>
+
+    <section class="cosmic-countdown" id="cosmic-countdown" aria-label="Geri sayım">
+      <canvas class="cosmic-countdown-canvas" id="cosmic-countdown-canvas" aria-hidden="true"></canvas>
+      <div class="cosmic-countdown-nebula cosmic-countdown-nebula-a" aria-hidden="true"></div>
+      <div class="cosmic-countdown-nebula cosmic-countdown-nebula-b" aria-hidden="true"></div>
+      <div class="cosmic-countdown-rift" aria-hidden="true">
+        <span class="rift-core"></span><span class="rift-edge rift-edge-left"></span><span class="rift-edge rift-edge-right"></span>
+      </div>
+      <div class="cosmic-countdown-content">
+        <div class="cosmic-countdown-values" role="timer" aria-live="off" aria-label="Geri sayım">
+          <div class="cosmic-time-unit"><span class="cosmic-time-value" id="cosmic-days">--</span><span class="cosmic-time-label">GÜN</span></div>
+          <span class="cosmic-time-separator" aria-hidden="true">:</span>
+          <div class="cosmic-time-unit"><span class="cosmic-time-value" id="cosmic-hours">--</span><span class="cosmic-time-label">SAAT</span></div>
+          <span class="cosmic-time-separator" aria-hidden="true">:</span>
+          <div class="cosmic-time-unit"><span class="cosmic-time-value" id="cosmic-minutes">--</span><span class="cosmic-time-label">DAKİKA</span></div>
+          <span class="cosmic-time-separator" aria-hidden="true">:</span>
+          <div class="cosmic-time-unit"><span class="cosmic-time-value" id="cosmic-seconds">--</span><span class="cosmic-time-label">SANİYE</span></div>
+        </div>
+      </div>
+      <span class="cosmic-countdown-coordinate cosmic-coordinate-left" aria-hidden="true">Δ / 18.12.2026</span>
+      <span class="cosmic-countdown-coordinate cosmic-coordinate-right" aria-hidden="true">SIGNAL // UNSTABLE</span>
     </section>
 
     <section class="roman-layer" id="roman">
@@ -370,6 +393,7 @@
   <script type="application/json" id="archive-access">
   {"personal-records": false}
   </script>
+  <script src="assets/js/countdown.js?v=20261128-cosmic-rift" defer></script>
   <script src="assets/js/main.js?v=20261126-expanded-lore" defer></script>
   <script src="assets/js/site-search.js?v=20261121-aod2" defer></script>
 </body>
